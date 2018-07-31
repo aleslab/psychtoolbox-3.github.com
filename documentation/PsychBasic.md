@@ -1,7 +1,3 @@
----
-layout: default
----
-
 ## [[Psychtoolbox]] &#8250; [[PsychBasic]]
 
   

@@ -46,3 +46,19 @@ mark "?". E.g. for 'OpenSerialPort', try either of these equivalent forms:
   <code>Psychtoolbox/PsychBasic/IOPort.m</code>
 </div>
 
+ases of  
+  the driver.  
+   
+  Usage: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+   
+  [IOPort](IOPort) has many functions; type "[IOPort](IOPort)" for a list:  
+    [IOPort](IOPort)  
+   
+  For explanation of any particular [IOPort](IOPort) function, just add a question  
+  mark "?". E.g. for 'OpenSerialPort', try either of these equivalent forms:  
+    [IOPort](IOPort)('OpenSerialPort?')  
+    [IOPort](IOPort) [OpenSerialPort](OpenSerialPort)?  
+   
+  
+
+

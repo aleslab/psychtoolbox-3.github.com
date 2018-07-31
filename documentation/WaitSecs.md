@@ -73,3 +73,11 @@ See also: [GetSecs](GetSecs), [GetSecsTick](GetSecsTick), [GetTicks](GetTicks), 
   <code>Psychtoolbox/PsychBasic/WaitSecs.m</code>
 </div>
 
+realtime kernel like [RTLinux](RTLinux) or RTAI. This is  
+  as easy as a few mouse clicks and waiting a few minutes!  
+  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+    
+  See also: [GetSecs](GetSecs), [GetSecsTick](GetSecsTick), [GetTicks](GetTicks), [WaitTicks](WaitTicks), PAUSE.  
+  
+
+

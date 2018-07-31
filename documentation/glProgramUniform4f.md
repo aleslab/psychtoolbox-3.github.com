@@ -1,0 +1,20 @@
+## [[Psychtoolbox]] &#8250; [[PsychOpenGL]] &#8250; [[MOGL]] &#8250; [[wrap]]
+
+glProgramUniform4f  Interface to [OpenGL](OpenGL) function glProgramUniform4f  
+  
+usage:  glProgramUniform4f( program, location, v0, v1, v2, v3 )  
+  
+C function:  void glProgramUniform4f[(GLuint]((GLuint) program, [GLint](GLint) location, [GLfloat](GLfloat) v0, [GLfloat](GLfloat) v1, [GLfloat](GLfloat) v2, [GLfloat](GLfloat) v3)  
+
+
+
+
+<div class="code_header" style="text-align:right;">
+  <span style="float:left;">Path&nbsp;&nbsp;</span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOpenGL/MOGL/wrap/glProgramUniform4f.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOpenGL/MOGL/wrap/glProgramUniform4f.m">changelog</a></span>
+</div>
+<div class="code">
+  <code>Psychtoolbox/PsychOpenGL/MOGL/wrap/glProgramUniform4f.m</code>
+</div>
+
