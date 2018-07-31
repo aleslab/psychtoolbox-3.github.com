@@ -1,0 +1,25 @@
+<h2 id="psychtoolbox-psychtests">[[Psychtoolbox]] › [[PsychTests]]</h2>
+<p><a href="DatapixxGPUDitherpatternTest" class="uri">DatapixxGPUDitherpatternTest</a>([fullscreen=1])</p>
+<p>Low level diagnostic for GPU dithering via a <a href="VPixx" class="uri">VPixx</a><br />
+devices like Datapixx/<a href="ViewPixx" class="uri">ViewPixx</a>/Propixx, or a CRS<br />
+device like the Bits# - but *not* the original Bits+.</p>
+<p>Steps through all 256 grayscale levels and uses<br />
+Datapixx et al. scanline readback to check what<br />
+the GPU actually outputs. Plots it and prints<br />
+the first 10 pixels of the topmost output scanline.</p>
+<p>This is meant to facilitate low-level diagnosis<br />
+of GPU dithering bugs if our regular test script<br />
+<a href="BitsPlusIdentityClutTest" class="uri">BitsPlusIdentityClutTest</a>.m reports dithering trouble<br />
+and can’t fix the problem automatically.</p>
+<p>‘fullscreen’ Defaults to 1 for fullscreen windows.<br />
+0 = Use a windowed window at top of screen for<br />
+display to also diagnose possible compositor<br />
+interference.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychTests/DatapixxGPUDitherpatternTest.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychTests/DatapixxGPUDitherpatternTest.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychTests/DatapixxGPUDitherpatternTest.m</code></p>
+</div>

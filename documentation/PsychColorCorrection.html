@@ -1,0 +1,362 @@
+<h2 id="psychtoolbox-psychglimageprocessing">[[Psychtoolbox]] › [[PsychGLImageProcessing]]</h2>
+<p>varargout = <a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(cmd, varargin)</p>
+<p>This function is used to setup and control the built-in color correction<br />
+and transformation mechanisms of PTB’s imaging pipeline. It allows to choose<br />
+among different methods of color correction (for calibrated output of<br />
+stimuli) and to change parameters of the chosen method. This only works<br />
+when the imaging pipeline is enabled and with certain output devices.</p>
+<p>This functions are mostly meant to provide fast color correction, e.g.,<br />
+gamma correction, when PTB is used with special high precision / HDR<br />
+output devices, e.g., CRS Bits++ in Mono++ or Color++ mode, or video<br />
+attenuators. When operating such devices, the standard gamma correction<br />
+mechanisms of your graphics card can’t be used, so PTB must do it itself.</p>
+<p>With a standard 8bpc framebuffer, you won’t need this function for simple<br />
+gamma correction or color correction.<br />
+Instead you’d use the <a href="Screen" class="uri">Screen</a>(‘LoadNormalizedGammaTable’) command to<br />
+perform gamma correction with the graphics cards built-in gamma tables.<br />
+Same applies to Bits++ box in Bits++ mode, using the built-in tables of<br />
+the Bits++ device, also controlled via <a href="Screen" class="uri">Screen</a>(‘LoadNormalizedGammaTable’).</p>
+<p>For more complex correction schemes than a lookup table transform you can<br />
+still use this function, even with a normal 8 bit framebuffer, as long as<br />
+the imaging pipeline is enabled. It’s just important to note that you<br />
+don’t need to use it for a standard framebuffer in the simple case – the<br />
+gfx cards gamma tables are more efficient for the simple case.</p>
+<h3 id="how-to-use">How to use:</h3>
+<ol type="1">
+<li>Before opening an onscreen window, you use the following<br />
+<a href="PsychImaging" class="uri">PsychImaging</a>() setup call to specify the method of display color correction<br />
+to apply, and the view channel to apply it to (in case there are multiple<br />
+like in many stereo display setups):</li>
+</ol>
+<p><a href="PsychImaging" class="uri">PsychImaging</a>(‘AddTask’, whichChannel, ‘DisplayColorCorrection’, methodname);<br />
+- where whichChannel can be ‘LeftView’ or ‘RightView’ for the left- or<br />
+right display output channel/device of a stereo setup, or<br />
+‘FinalFormatting’ if you have a single display monoscopic setup or want<br />
+to apply the same color correction to both channels of a stereo setup.<br />
+The parameter ‘methodname’ is a name string with the name of one of the<br />
+supported methods - See overview below for supported methods.</p>
+<p>CAUTION: The order of specifications matters! If you use multiple color<br />
+correction methods or other image processing operations simultaneously,<br />
+make sure to specify them in the order in which they should be executed.<br />
+The system tries to order operations in a reasonable way, but it is not<br />
+fool-proof!</p>
+<ol start="2" type="1">
+<li><p>Then, after you’ve specified all other window parameters via the<br />
+<a href="PsychImaging" class="uri">PsychImaging</a>() subcommands, you open the onscreen window via the usual<br />
+win = <a href="PsychImaging" class="uri">PsychImaging</a>(‘OpenWindow’, ….); call, as always when you use the<br />
+imaging pipeline. This will open the window and apply the chosen color<br />
+correction method, choosing reasonable default parameters for the method<br />
+at hand.</p></li>
+<li><p>At any time in your script you can change the operating parameters of<br />
+the chosen color correction method via the <a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>()<br />
+subfunctions mentioned below. You’ll have to specify the window handle<br />
+for the onscreen window whose parameters should be changed, and - in a<br />
+stereo display setup with separate color correction parameters for each<br />
+of the display channels - the name ‘whichChannel’ of the display channel<br />
+to change, e.g., ‘LeftView’. Changes take effect at next <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’).</p></li>
+</ol>
+<h1 id="supported-display-color-correction-methods">Supported display color correction methods:</h1>
+<p>These are the method names that can be passed as ‘methodname’ parameter to<br />
+<a href="PsychImaging" class="uri">PsychImaging</a>(‘DisplayColorCorrection’, ….., methodname):</p>
+<h3 id="methodname-is-the-name-string-of-one-of-the-supported-methods">‘methodname’ is the name string of one of the supported methods:</h3>
+<p>* ‘None’: Don’t do anything. Fastest, but not safest.</p>
+<p>If your stimulus contains (by accident) color or luminance values outside<br />
+the displayable range, the corresponding pixels may show undefined output<br />
+color – Likely not what you want. This mode is about 10% faster than<br />
+‘ClampOnly’. This mode is the default if no method is selected, unless<br />
+you use Bits++ in Mono++ or Color++ mode, where ‘ClampOnly’ is the<br />
+default.</p>
+<p>* ‘ClampOnly’: Do not apply any color transformation. Default for Bits++<br />
+in Mono++ or Color++ mode:</p>
+<p>In this mode, values are clamped against the limits set via<br />
+‘SetColorClampingRange’ (see below) to always keep them in the<br />
+requested range set via <a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘SetColorClampingRange’),<br />
+nothing else.</p>
+<p>* ‘CheckOnly’: Do not apply any color transformation.</p>
+<p>In this mode, values are checked against the limits set via<br />
+<a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘SetColorClampingRange’). Values outside that<br />
+range are visually coded, so you should be able to see troublesome<br />
+areas via visual inspection: All values are first clamped, then<br />
+inverted, in the hope that this creates clearly detectable artifacts in<br />
+your stimulus. We may change the “marker” method in the future if we<br />
+happen to find a better visual marker. This mode is meant for debugging<br />
+your stimulation scripts, not for running them on your subjects!</p>
+<h3 id="simplegamma-apply-some-power-law-based-gamma-correction">* ‘SimpleGamma’ : Apply some power-law based gamma correction:</h3>
+<p>Simple gamma correction means: Apply a power-law to incoming<br />
+values: outcolor = incolor ^ <a href="EncodingGamma" class="uri">EncodingGamma</a>. incolor is the uncorrected<br />
+input color or intensity, outcolor the corrected one, <a href="EncodingGamma" class="uri">EncodingGamma</a> is<br />
+encoding gamma value to apply. See <a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘SetEncodingGamma’)<br />
+for how to set the gamma values. After gamma correction, output values<br />
+are clamped against the range set via <a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘SetColorClampingRange’).</p>
+<p>See <a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘SetExtendedGammaParameters’) on how to supply<br />
+additional parameters for use of a more complex gamma correction function.</p>
+<h3 id="matrixmultiply4-multiply-with-4x4-color-transformation-matrix">* ‘MatrixMultiply4’ : Multiply with 4x4 color transformation matrix:</h3>
+<p>Extend RGB component of color by a fourth “constant 1” component,<br />
+multiply by specified 4-by-4 matrix, normalize by dividing result by<br />
+4’th component, return transformed rgb components as output color. Pass<br />
+through alpha-channel unmodified.</p>
+<p>rgbw’ = M * [r,g,b,1]’<br />
+out.rgb = [r’, g’, b’] / w’<br />
+out.a = a</p>
+<p>* ‘SensorToPrimary’ : Implement the same conversion as <a href="SensorToPrimary" class="uri">SensorToPrimary</a>.m</p>
+<p>This can convert from XYZ sensor tristimulus values to standard RGB<br />
+primary color values. This is the right thing to do if your display<br />
+device is linearized via use of a proper gamma correction method.</p>
+<p>Use the function <a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘SetSensorToPrimary’) below to<br />
+assign the ’cal’ibration struct to use for actual conversion from XYZ<br />
+color values to RGB primaries.</p>
+<p>* ‘<a href="xyYToXYZ" class="uri">xyYToXYZ</a>’ : Implement the same conversion as <a href="xyYToXYZ" class="uri">xyYToXYZ</a>.m</p>
+<p>This can convert to tristimulus XYZ color coordinates from<br />
+chromaticity (x,y) and luminance (Y) color coordinates xyY. It performs<br />
+the same color space conversion as the M-Function XYZ = <a href="xyYToXYZ" class="uri">xyYToXYZ</a>(xyY).</p>
+<p>* ‘LookupTable’ : Apply color correction by color table lookup, ie. a CLUT.</p>
+<p>This will allow to pass in a color lookup table of selectable<br />
+granularity (ie., number of slots) and range, which is later on used to<br />
+lookup corresponding corrected color values for given framebuffer input<br />
+values.</p>
+<p>* ‘LookupTable3D’ : Apply color correction by a 3D color table lookup.</p>
+<p>This will allow to pass in a 3D color lookup table of selectable<br />
+granularity (ie., number of slots per dimension) and range, which is<br />
+later on used to lookup corresponding corrected color values for given<br />
+framebuffer input values.</p>
+<p>* ‘GainMatrix’ : Apply color gain correction by 2D gain matrix lookup.</p>
+<p>This allows to apply a 2D matrix G which stores luminance- or color gain<br />
+correction factors for each single output pixel of the display. For<br />
+each 2D display pixel location (x,y), the stimulus image I(x,y) will be<br />
+multiplied with the corresponding gain factor G(x,y) of the gain matrix<br />
+and the result O(x,y) used for further processing and display. G(x,y)<br />
+can be a single scalar for luminance correction, or - if G is a 3-layer<br />
+matrix - a RGB vector with individual gains for each color channel and<br />
+pixel location.</p>
+<p>O(x,y) = I(x,y) * G(x,y).</p>
+<p>If you want to combine this with one of the other correction methods,<br />
+e.g., gamma correction, you should issue this command first, because<br />
+the non-linear gamma correction should apply to the output of this<br />
+method for correct results.</p>
+<p>After you’ve opened your onscreen ‘window’, you’ll need to define the 2D<br />
+gain ‘matrix’ via a call to …</p>
+<p><a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘SetGainMatrix’, …);</p>
+<p>See below for description of ‘SetGainMatrix’.</p>
+<p>* ‘AnaglyphStereo’ : Apply anaglyph stereo algorithm.</p>
+<p>This loads a similar anaglyph shader as the one used in stereoModes 6<br />
+to 9 when the function <a href="SetAnaglyphStereoParameters" class="uri">SetAnaglyphStereoParameters</a>(‘ColorAnaglyphMode’)<br />
+or its siblings was used. This is useful if you want to employ anaglyph<br />
+stereo presentation, but not by rendering a full anaglyph image into<br />
+one single framebuffer for output to a single display or projector, but<br />
+if you want to direct the “left-eye” anaglyph image to a different<br />
+display or projector than the “right-eye” anaglyph image. An example<br />
+would be having two video projectors attached to two video outputs of a<br />
+graphics card. One projector shall project the left-eye image, the<br />
+other one the right-eye image. In this case you’d choose a stereoMode<br />
+of 4 or 5 (typically on Linux or Windows) for desktop spanning stereo<br />
+output, or 10 (on OSX) for dual-window stereo output. Then you’d use …<br />
+<a href="PsychImaging" class="uri">PsychImaging</a>(‘AddTask’, ‘LeftView’, ‘DisplayColorCorrection’, ‘AnaglyphStereo’)<br />
+… and …<br />
+<a href="PsychImaging" class="uri">PsychImaging</a>(‘AddTask’, ‘RightView’, ‘DisplayColorCorrection’, ‘AnaglyphStereo’)<br />
+… to add an anaglyph shader to the end of each view channel.</p>
+<p>After adding individual shaders for each image processing channel and opening<br />
+the onscreen window(s), you can use <a href="SetAnaglyphStereoParameters" class="uri">SetAnaglyphStereoParameters</a>() to<br />
+parameterize the anaglyph stereo presentation as if it were created via<br />
+regular anaglyph stereo setup in stereomoded 6-9.</p>
+<h1 id="supported-runtime-subfunctions">Supported runtime Subfunctions:</h1>
+<p>oldlevel = <a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘Verbosity’ [, newlevel]);<br />
+Return current level of verbosity in optional ‘oldlevel’, optionally set<br />
+new level of verbosity via ‘newlevel’. The level of verbosity affects how<br />
+much status output is printed in some routines: 0 = Nothing, 1 = Only<br />
+errors, 2 = Errors and warnings, 3 = Errors + Warnings + Some info.</p>
+<p>The following routines must be called *after* opening a window for which color<br />
+correction is enabled. They can be called anytime and changed settings<br />
+will apply at the next <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’). If your ‘window’ is actually a<br />
+stereo display window, you may want or need to provide the optional<br />
+‘viewId’ parameter to tell PTB which of the two stereo view channels<br />
+shall be changed in its settings. If both stereo views are displayed on<br />
+the same physical display device, this is not needed. If the separate<br />
+views go to separate physical displays, you may need to calibrate them<br />
+separately. Allowable values for viewId are ‘AllViews’, ‘LeftView’ and<br />
+‘RightView’, corresponding to the ‘whichChannel’ setting that you used<br />
+when setting up the window with <a href="PsychImaging" class="uri">PsychImaging</a>().</p>
+<p><a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘SetColorClampingRange’, window, min, max [,viewId]);<br />
+- Set the range of allowable output color or luminance intensity values<br />
+to the interval [min; max] for onscreen window ‘window’. Values outside<br />
+that range get either clamped to the ‘min’imum or ’max’imum value, or -<br />
+in ’CheckOnly’ mode - will be visually marked as out of range. The default<br />
+range is [0.0 ; 1.0] – The range that your display device can really<br />
+display.</p>
+<p><a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘SetEncodingGamma’, window, gamma [,viewId]);<br />
+- Set the gamma value to use for gamma correction on window ‘window’.<br />
+‘gamma’ can be either a single scalar if the same gamma should apply to<br />
+all color channels (or single luminance channel), or it can be a<br />
+three-component [gammaRed, gammaGreen, gammaBlue] vector, if each color<br />
+channel should be gamma corrected with an individual gamma value.</p>
+<p>How the value gets applied depends on the chosen method of color<br />
+correction (see above). The simplest method (‘SimpleGamma’) performs a<br />
+simple power-law mapping of input values to output values: out = in ^ gamma.<br />
+‘in’ must be greater than zero, and ‘gamma’ must be greater than zero,<br />
+otherwise results may be undefined, depending on your graphics hardware.<br />
+However, usually only encoding ‘gamma’ values in the range of about<br />
+0.33 - 1.0 are meaningful.</p>
+<p>Example: If your monitor has a “decoding gamma” of 1.8, the proper<br />
+setting for ‘gamma’ would be gamma = 1/1.8. For a decoding gamma of 2.2,<br />
+you’d choose gamma = 1/2.2 …</p>
+<p><a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘SetExtendedGammaParameters’, window, minL, maxL, gain, bias [,viewId]);<br />
+- Set the additional (optional) parameters to fine-tune gamma correction on<br />
+window ‘window’. All these parameters have reasonable defaults. All<br />
+parameters can be supplied as a scalar value if the same setting shall<br />
+apply to all color channels (or a single luminance channel), or you can<br />
+provide 3-component vectors with one component for each color channel:</p>
+<p>After this function has been called at least once, the following formula<br />
+will be used to map input values to output values [‘gamma’ is as set by<br />
+the ‘SetEncodingGamma’ function, ‘in’ is input, ‘out’ is output value]:</p>
+<p>out = bias + gain * ( ((in-minL) / (maxL-minL)) ^ gamma )</p>
+<p>Required parameters:<br />
+‘minL’ Minimum expected input luminance/intensity value (Default is 0.0).<br />
+‘maxL’ Maximum expected input luminance/intensity value (Default is 1.0).<br />
+‘gain’ Gain factor to apply after power-law mapping (Default is 1.0).<br />
+‘bias’ Bias/Offset to apply to final result before output (Default is 0.0).</p>
+<p><a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘SetMultMatrix4’, window, matrix [, viewId]);<br />
+- Set the 4-by-4 color transformation matrix to use for the ‘MatrixMultiply4’<br />
+color correction method. ‘matrix’ must be the 2D 4 rows by 4 columns<br />
+matrix to use. By default, the matrix is set to an identity matrix.</p>
+<p><a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘SetSensorToPrimary’, window, cal [, viewId]);<br />
+- Set the ‘cal’ibration struct to use for the ’SensorToPrimary’ color<br />
+correction method. ‘cal’ must be the same input format as used for the<br />
+M-Function <a href="SensorToPrimary" class="uri">SensorToPrimary</a>(). By default, the transformation is a “no<br />
+operation”.</p>
+<p><a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘SetLookupTable’, window, clut [, viewId][, maxinput=1][, scalefactor]);<br />
+- Assign color lookup table ‘clut’ for use with color correction method<br />
+‘LookupTable’. ‘clut’ must be a 1 column vector for pure luminance lookup<br />
+tables, or a 3 column matrix for RGB color lookup tables with one column<br />
+per color channel, ie., [1,2,3] = [Red, Green, Blue]. clut must have at<br />
+least 1 row, but usually will have way more than 2 rows, typically almost<br />
+as many rows as n = 2^bpc for a given output device bitdepths bpc. For a<br />
+10 bit output device, n would be usually 2^10 = 1024 rows for a perfect<br />
+one-to-one mapping. At runtime, color correction will be performed by the<br />
+following formula: Be Rin, Gin, Bin the input red, green and blue color<br />
+components, and Rout, Gout, Bout the final output value for the<br />
+framebuffer. First Rin, Gin and Bin are clamped individually to the range<br />
+0.0 - ‘maxinput’ (maxinput is 1.0 by default), scalefactor is chosen by<br />
+default as scalefactor = [number of rows in clut - 1] / maxinput, ie., it<br />
+maps the possible input range 0 - maxinput to the full range of row<br />
+indices 1 - rowcount to cover the full range of entries stored in the<br />
+clut. This is the most reasonable default, but can be changed by the<br />
+optional ‘scalefactor’ and ‘maxinput’ arguments.</p>
+<p>Then the output color for each component is looked up in the proper slot<br />
+(= row index) of the passed clut:</p>
+<p>Rout = clut(Rin * scalefactor,1);<br />
+Gout = clut(Gin * scalefactor,2);<br />
+Bout = clut(Bin * scalefactor,3);</p>
+<p>Color values for fractional indices inbetween reference values in the<br />
+clut are interpolated linearly between the two nearest neighbour<br />
+reference values –&gt; linear interpolation.</p>
+<p>Finally, Rout, Gout and Bout are clamped to the valid output range as set<br />
+by the function <a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘SetColorClampingRange’, …); by<br />
+default to the range 0.0 - 1.0.</p>
+<p><a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘SetLookupTable3D’, window, clut [, viewId][, maxinput=1][, scalefactor][, precision=0][, interpolate=1]);<br />
+- Assign 4D color lookup table ‘clut’ for use with color correction method<br />
+‘LookupTable3D’. ‘clut’ must be a 4D 3-by-m-by-n-by-p matrix. The first dimension encodes the<br />
+output color values to use:<br />
+clut(1,r,g,b) == Corrected red color value for input color [r,g,b].<br />
+clut(2,r,g,b) == Corrected green color value for input color [r,g,b].<br />
+clut(3,r,g,b) == Corrected blue color value for input color [r,g,b].</p>
+<p>clut must have at least one element in each color index dimension, ie., m, n<br />
+and p must be &gt;= 1, but usually will have more elements in each dimension<br />
+for a meaningful lookup color correction. In theory you would need m, n<br />
+and p to be == 2^bpc for a given output device bitdepths bpc, e.g, for a<br />
+8 bit output device, m,n,p would need to be 2^8 = 256 elements for a perfect<br />
+one-to-one mapping. In reality you likely don’t want to use such large<br />
+sizes, as such a huge and dense 3D CLUT would take up considerable<br />
+amounts of graphics memory and cause large slowdowns of all drawing<br />
+operations. For good performance and portability of your code to older<br />
+graphics cards, choose modest sizes, as small as possible.</p>
+<p>At runtime, color correction will be performed by the following 3D table<br />
+lookup procedure: Let Rin, Gin, Bin be the input red, green and blue<br />
+color components, and Rout, Gout, Bout the final output values for the<br />
+framebuffer. First Rin, Gin and Bin are clamped individually to the range<br />
+0.0 - ‘maxinput’ (maxinput is 1.0 by default), scalefactor is chosen by<br />
+default as scalefactor = (1.0 / maxinput), ie., it maps the possible<br />
+input range 0 - ‘maxinput’ to the range 0.0 - 1.0, which covers the full<br />
+range of entries stored in the clut. This is the most reasonable default,<br />
+but can be changed by the optional ‘scalefactor’ and ‘maxinput’<br />
+arguments.</p>
+<p>Then the output color for each component is looked up in the proper 3D<br />
+slot of the passed clut:</p>
+<p>Rout = clut(1, Rin * scalefactor, Gin * scalefactor, Bin * scalefactor);<br />
+Gout = clut(2, Rin * scalefactor, Gin * scalefactor, Bin * scalefactor);<br />
+Bout = clut(3, Rin * scalefactor, Gin * scalefactor, Bin * scalefactor);</p>
+<p>Color values (Rin, Gin, Bin) == (0,0,0) map to the first elements in the<br />
+cluts dimensions, ie., clut(:,1,1,1). Maximum values (maxinput, maxinput,<br />
+maxinput) map - after scaling with the default scalefactor - to<br />
+coordinates (1.0, 1.0, 1.0) in the normalized 3D color coordinate space<br />
+and are looked up in the maximal clut element indices of each dimension,<br />
+ie., clut(:,m,n,p) for our 3-by-m-by-n-by-p clut. Intermediate values are<br />
+mapped accordingly to proper clut element indices.</p>
+<p>By default, color values for fractional indices inbetween reference<br />
+values in the clut are interpolated linearly between the eight nearest<br />
+neighbour reference values in the 3 dimensional space –&gt; This is<br />
+trilinear interpolation across all 3 color dimensions of the CLUT. If you<br />
+set the optional parameter ‘interpolate’ to zero, then simple nearest<br />
+neighbour sampling is performed instead.</p>
+<p>The optional ‘precision’ flag controls the precision with which entries<br />
+in the CLUT should be stored and processed: precision = 0 is the default<br />
+and stores values with 8 bit precision for 256 different intensity levels<br />
+for Rout, Gout and Bout. A setting of 1 will store values with 16 bpc<br />
+floating point precision to resolve up to 10 bits or 1024 levels of<br />
+linear precision. A setting of 2 will store values with 32 bpc floating<br />
+point precision for up to 23 bits of linear precision. Be aware that<br />
+precision values &gt; 0 will increase memory consumption by a factor of 2x<br />
+or 4x, which can be significant for lookup tables of non-trivial size.</p>
+<p>Final looked up, Rout, Gout and Bout are clamped to the valid output range as set<br />
+by the function <a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘SetColorClampingRange’, …); by<br />
+default to the range 0.0 - 1.0.</p>
+<p>Essentially, this color correction allows to define arbitrary mappings of<br />
+RGB input triplets to RGB output triplets, providing a large amount of<br />
+flexibility. Be aware though that strongly discontinuous mappings of input<br />
+colors to output colors can have a significant negative impact on the<br />
+drawing performance of your graphics card. Define your clut’s wisely!</p>
+<p><a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘SetGainMatrix’, window, matrix [, viewId][, precision=2]);</p>
+<ul>
+<li>Set gain matrix for method ‘GainMatrix’.<br />
+If matrix is a 2D matrix, the gain will be applied to all color<br />
+channels equally. If matrix is a 3D matrix, matrix(y,x,1) will define<br />
+the red channel gain, matrix(y,x,2) will define the green channel gain,<br />
+and matrix(y,x,3) will define the blue channel gain.</li>
+</ul>
+<p>The optional ‘precision’ parameter defines the numerical precision with<br />
+which the gain factors are stored. The default setting of 2 stores with<br />
+32 bit floating point precision - about 6 digits behind the decimal<br />
+point. A Setting of 1 stores with 16 bit float precision, about 3 digits.<br />
+A Setting of 0 stores with 256 levels, about 2 digits. A lower precision<br />
+is less precise but allows for faster processing and higher redraw rates<br />
+if needed.</p>
+<h1 id="internal-commands-usually-not-meant-for-direct-use-by-pure-mortals">Internal commands, usually not meant for direct use by pure mortals:</h1>
+<p>All these methods are usually called from within <a href="PsychImaging" class="uri">PsychImaging</a>() to do the<br />
+dirty setup work…</p>
+<h3 id="call-this-before-opening-a-window">Call this *before* opening a window:</h3>
+<p><a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘ChooseColorCorrection’, methodname);<br />
+- Specify the method to be used for color correction for the next<br />
+onscreen window that will be opened. This needs to be called *before* the<br />
+window is opened, however its usually done automatically at the right<br />
+moment by routines like <a href="PsychImaging" class="uri">PsychImaging</a>() or <a href="BitsPlusPlus" class="uri">BitsPlusPlus</a>() if you use these<br />
+to open windows.</p>
+<h3 id="called-after-screenopenwindow-during-shader-and-pipeline-setup">Called after <a href="Screen" class="uri">Screen</a>(‘OpenWindow’) during shader and pipeline setup:</h3>
+<p>[shader, idstring, configString, overrideMain] = <a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘GetCompiledShaders’, window, debuglevel);<br />
+- Compile corresponding shaders for chosen color correction method,<br />
+return shaderhandles and idstring to calling routine. That routine will<br />
+link the returned shaders with other shader code to produce the final<br />
+GLSL program object for color conversion and output formatting. ‘shader’<br />
+is the GLSL shader handle, idstring the name string for the shader,<br />
+configString the shader option string for the ‘Hookfunction’ call, e.g.,<br />
+to bind additional LUT textures, etc.</p>
+<p>Called after linking and attaching the final processing GLSL program<br />
+objects and slots to the imaging pipelines hook chain(s):</p>
+<p><a href="PsychColorCorrection" class="uri">PsychColorCorrection</a>(‘ApplyPostGLSLLinkSetup’, window, viewId);<br />
+- Perform whatever setup work is needed after final GLSL program object<br />
+has been created and attached to imaging pipeline.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychGLImageProcessing/PsychColorCorrection.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychGLImageProcessing/PsychColorCorrection.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychGLImageProcessing/PsychColorCorrection.m</code></p>
+</div>

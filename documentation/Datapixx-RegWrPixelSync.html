@@ -1,0 +1,28 @@
+<h1 id="datapixxregwrpixelsync"><a href="Datapixx-RegWrPixelSync">Datapixx(‘RegWrPixelSync’)</a></h1>
+<h2 id="psychtoolbox-datapixx.mexdll-subfunction">[[Psychtoolbox]] › [[Datapixx]].{mex*,dll} subfunction</h2>
+<p>Write local register cache modifications to Datapixx when the specified pixel<br />
+sequence appears on the video display. This is a good way to write Datapixx<br />
+registers with microsecond synchronization to a specific location in a video<br />
+frame. All Datapixx Set* functions do fast writes to a local register cache on<br />
+the host, and all Datapixx Get* functions do fast reads from this local register<br />
+cache. <a href="RegWrPixelSync" class="uri">RegWrPixelSync</a> writes these cached register modifications back to the<br />
+Datapixx over USB. The cache writeback USB message is sent immediately and this<br />
+function returns quickly, but the Datapixx itself waits until the specified<br />
+pixel sequence is received before writing the registers.<br />
+-pixelSequence is a two dimensional array of 8-bit pixel values. Each column<br />
+contains the RGB values for one pixel in the sequence. The sequence can contain<br />
+from 1 to 8 pixels. The array must contain 3 rows; one row for each of the red,<br />
+green, and blue pixel components. For example, passing [255 0; 0 255; 0 0] would<br />
+wait until a red-green pixel pair is displayed.<br />
+Note that a display’s gamma setting can transform pixel values between the frame<br />
+buffer and the display. Use the <a href="GetVideoLine" class="uri">GetVideoLine</a> function to read back which pixel<br />
+values are really sent to the display when a pixel sequence is drawn in the<br />
+frame buffer. The pixel values returned by <a href="GetVideoLine" class="uri">GetVideoLine</a> are the values which<br />
+should be used in pixelSequence.<br />
+-timeout is the maximum number of video frames (0-65535) which the Datapixx<br />
+should wait before continuing to process USB traffic. If the timeout is reached<br />
+without the specified pixel sequence having been displayed, then the<br />
+pixelSyncTimeout field returned by <a href="GetVideoStatus" class="uri">GetVideoStatus</a> will return true after the<br />
+next <a href="RegWrRd" class="uri">RegWrRd</a>* command.<br />
+See <a href="DatapixxDacSyncDemo" class="uri">DatapixxDacSyncDemo</a>.m for examples.</p>
+<p>&lt;&lt;=====See also:===== RegWr, RegWrVideoSync, RegWrRdPixelSync, GetVideoStatus &lt;&lt;</p>

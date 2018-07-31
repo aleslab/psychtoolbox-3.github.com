@@ -1,0 +1,10 @@
+<h1 id="datapixxenabledoutbuttonschedules"><a href="Datapixx-EnableDoutButtonSchedules">Datapixx(‘EnableDoutButtonSchedules’)</a></h1>
+<h2 id="psychtoolbox-datapixx.mexdll-subfunction">[[Psychtoolbox]] › [[Datapixx]].{mex*,dll} subfunction</h2>
+<p>Normally digital output schedules are initiated via calls to <a href="StartDoutSchedule" class="uri">StartDoutSchedule</a>.<br />
+<a href="EnableDoutButtonSchedules" class="uri">EnableDoutButtonSchedules</a> causes the <a href="DATAPixx" class="uri">DATAPixx</a> to automatically initiate a<br />
+digital output schedule whenever a falling edge on one of the digital inputs has<br />
+been detected. Transitions on the 16 different button inputs (DIN0-DIN15) will<br />
+initiate 16 different schedules. Transitions on DIN0 will use the schedule<br />
+buffer specified in the call to <a href="SetDoutSchedule" class="uri">SetDoutSchedule</a>. Transitions on DIN1-DIN15 will<br />
+automatically use higher address buffers at 4kB increments.</p>
+<p>&lt;&lt;=====See also:===== DisableDoutButtonSchedules, GetDoutStatus &lt;&lt;</p>

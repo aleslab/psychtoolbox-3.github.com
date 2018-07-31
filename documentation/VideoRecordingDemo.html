@@ -1,0 +1,53 @@
+<h2 id="psychtoolbox-psychdemos">[[Psychtoolbox]] › [[PsychDemos]]</h2>
+<p><a href="VideoRecordingDemo" class="uri">VideoRecordingDemo</a>(moviename [, codec=0] [, withsound=1] [, showit=1] [, windowed=1])</p>
+<p>Demonstrates simple video capture and recording to a movie file.</p>
+<p>Supports [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) on all systems, and DC1394 engine on Linux and OSX.</p>
+<p>Please look at the source code of the demo carefully! Both <a href="MacOSX" class="uri">MacOSX</a> and<br />
+MS-Windows often need special treatment in terms of codec and parameter<br />
+selection to work reliably (or to be honest: To work at all).</p>
+<p>The demo starts the videocapture engine, recording video from the default<br />
+video source and (optionally) sound from the default audio source. It<br />
+encodes the video+audio data with the selected ‘codec’ and writes it to the<br />
+‘moviename’ movie file. Optionally it previews the recorded<br />
+video onscreen (often at a much lower framerate to keep system load low<br />
+enough for reliable recording). Recording ends if any key is pressed on<br />
+the keyboard.</p>
+<h3 id="arguments-and-their-meaning">Arguments and their meaning:</h3>
+<p>‘moviename’ name of output movie file. The file must not exist at start<br />
+of recording, otherwise it is overwritten.</p>
+<p>‘codec’ Indicate the type of video codec you want to use.<br />
+Defaults to “whatever the system default is”. Some codecs are very fast,<br />
+i.e., high framerates and low system load, others provide high compression<br />
+rates, i.e., small video files at good quality. Usually there’s a tradeoff<br />
+between encoding speed, quality and compression ratio, so you’ll have to try<br />
+out different ones to find one suitable for your purpose. Some codecs only<br />
+work at specific framerates or for specific image sizes.</p>
+<p>The supported codecs and settings with [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) can be found in the code<br />
+and are explained in ‘help VideoRecording’.</p>
+<p>Empirically, the MPEG-4 or H264 codecs seem to provide a good tradeoff<br />
+between quality, compression, speed and cpu load. They allow to reliably<br />
+record drop-free sound and video with a resolution of 640x480 pixels at<br />
+30 frames per second.</p>
+<p>H.264 has better quality and higher compression, but is able to nearly<br />
+saturate a <a href="MacBookPro" class="uri">MacBookPro</a>, so reliable recording at 30 fps may be difficult<br />
+to achieve or needs more powerful machines.</p>
+<p>Some of the other codecs may provide the highest image quality and lowest<br />
+cpu load, but they also produce huge files, e.g., all the <a href="DVxxx" class="uri">DVxxx</a> codecs<br />
+for PAL and NTSC video capture, as well as the component video codecs.</p>
+<p>‘withsound’ If set to non-zero, sound will be recorded as well. This is<br />
+the default.</p>
+<p>‘showit’ If non-zero, video will be shown onscreen during recording<br />
+(default: Show it). Not showing the video during recording will<br />
+significantly reduce system load, so this may help to sustain a skip free<br />
+recording on lower end machines.</p>
+<p>‘windowed’ If set to non-zero, show captured video in a window located at<br />
+the top-left corner of the screen, instead of fullscreen. Windowed<br />
+display is the default.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/VideoRecordingDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/VideoRecordingDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/VideoRecordingDemo.m</code></p>
+</div>

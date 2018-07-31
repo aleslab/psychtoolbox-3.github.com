@@ -1,0 +1,28 @@
+<h1 id="psychoculusvrcore">[[PsychOculusVRCore]]</h1>
+<h2 id="psychtoolbox-psychoculusvrcore.mexdll-subfunction">[[Psychtoolbox]] › [[PsychOculusVRCore]].{mex*,dll} subfunction</h2>
+<p>PsychOculusVRCore - A Psychtoolbox driver for Oculus VR hardware.</p>
+<p>This driver allows to control Oculus Rift DK1/DK2 and hopefully in the future also future Oculus devices.</p>
+<p>The PsychOculusVRCore driver is licensed to you under the terms of the MIT license.<br />
+See ‘help License.txt’ in the Psychtoolbox root folder for more details.</p>
+<p>The driver currently requires the Oculus VR runtime version 0.5.0.1 to work.</p>
+<p>Usage:</p>
+<p>Functions used by regular user scripts:</p>
+<p>oldVerbosity = PsychOculusVRCore(‘<a href="PsychOculusVRCore-Verbosity">Verbosity</a>’ [, verbosity]);<br />
+numHMDs = PsychOculusVRCore(‘<a href="PsychOculusVRCore-GetCount">GetCount</a>’);<br />
+[oculusPtr, modelName] = PsychOculusVRCore(‘<a href="PsychOculusVRCore-Open">Open</a>’ [, deviceIndex=0]);<br />
+PsychOculusVRCore(‘<a href="PsychOculusVRCore-Close">Close</a>’ [, oculusPtr]);<br />
+showHSW = PsychOculusVRCore(‘<a href="PsychOculusVRCore-GetHSWState">GetHSWState</a>’, oculusPtr [, dismiss]);<br />
+oldPersistence = PsychOculusVRCore(‘<a href="PsychOculusVRCore-SetLowPersistence">SetLowPersistence</a>’, oculusPtr [, lowPersistence]);<br />
+oldDynamicPrediction = PsychOculusVRCore(‘<a href="PsychOculusVRCore-SetDynamicPrediction">SetDynamicPrediction</a>’, oculusPtr [, dynamicPrediction]);<br />
+PsychOculusVRCore(‘<a href="PsychOculusVRCore-Start">Start</a>’, oculusPtr);<br />
+PsychOculusVRCore(‘<a href="PsychOculusVRCore-Stop">Stop</a>’, oculusPtr);<br />
+state = PsychOculusVRCore(‘<a href="PsychOculusVRCore-GetTrackingState">GetTrackingState</a>’, oculusPtr [, predictionTime=0]);<br />
+[projL, projR] = PsychOculusVRCore(‘<a href="PsychOculusVRCore-GetStaticRenderParameters">GetStaticRenderParameters</a>’, oculusPtr [, clipNear=0.01][, clipFar=10000.0]);<br />
+[eyePoseL, eyePoseR, tracked, frameTiming] = PsychOculusVRCore(‘<a href="PsychOculusVRCore-StartRender">StartRender</a>’, oculusPtr);<br />
+[eyePose, eyeIndex] = PsychOculusVRCore(‘<a href="PsychOculusVRCore-GetEyePose">GetEyePose</a>’, oculusPtr, renderPass);</p>
+<p>Functions usually only used internally by Psychtoolbox:</p>
+<p>[width, height, fovPort] = PsychOculusVRCore(‘<a href="PsychOculusVRCore-GetFovTextureSize">GetFovTextureSize</a>’, oculusPtr, eye [, fov=[HMDRecommended]][, pixelsPerDisplay=1]);<br />
+[width, height, viewPx, viewPy, viewPw, viewPh, pptax, pptay, hmdShiftx, hmdShifty, hmdShiftz, meshVertices, meshIndices, uvScaleX, uvScaleY, uvOffsetX, uvOffsetY] = PsychOculusVRCore(‘<a href="PsychOculusVRCore-GetUndistortionParameters">GetUndistortionParameters</a>’, oculusPtr, eye [, inputWidth][, inputHeight][, fov]);<br />
+[eyeRotStartMatrix, eyeRotEndMatrix] = PsychOculusVRCore(‘<a href="PsychOculusVRCore-GetEyeTimewarpMatrices">GetEyeTimewarpMatrices</a>’, oculusPtr, eye [, waitForTimewarpPoint=0]);<br />
+PsychOculusVRCore(‘<a href="PsychOculusVRCore-EndFrameTiming">EndFrameTiming</a>’, oculusPtr);<br />
+result = PsychOculusVRCore(‘<a href="PsychOculusVRCore-LatencyTester">LatencyTester</a>’, oculusPtr, cmd);</p>

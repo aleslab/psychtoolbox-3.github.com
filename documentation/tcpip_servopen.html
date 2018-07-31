@@ -1,0 +1,33 @@
+<h2 id="psychtoolbox-psychhardware-iviewxtoolbox-tcp_udp_ip-tcpip">[[Psychtoolbox]] › [[PsychHardware]] › [[iViewXToolbox]] › [[tcp_udp_ip]] › [[tcpip]]</h2>
+<p>TCPIP_SERVOPEN opens a blocking TCPIP server socket.</p>
+<h3 id="call-with">Call with:</h3>
+<p>fid = tcpip_servopen(port)</p>
+<h3 id="where">where:</h3>
+<p>port is the port number of the socket you wish to open.</p>
+<p>fid is the retuned handle to the socket, if successful,<br />
+-1 if unsuccessful.</p>
+<p>This function is obsolete. It has been replaced with TCPIP_SERVSOCKET<br />
+and TCPIP_LISTEN. It is only included for backward compatibility.</p>
+<p>TCPIP_SERVOPEN opens a TCPIP server socket with the requested PORT<br />
+number. This function blocks (waits) until a client socket has<br />
+established a connection before returning FID.</p>
+<h3 id="example">EXAMPLE:</h3>
+<pre><code>disp(&#39;Waiting for someone to connect to port 4444...&#39;);  
+fid = tcpip\_servopen(4444);  
+if fid = -1  
+  error(&#39;TCP/IP Connection error!&#39;);  
+end  
+disp(&#39;Connection! :-)&#39;);  
+disp(&#39;Now sending a message and closing!&#39;)  
+tcpip\_write(&#39;Hello!!&#39;,string(10)); %string(10) generates newline  
+tcpip\_close(fid);  </code></pre>
+<p>See also: TCPIP_SERVSPCKET, TCPIP_LISTEN, TCPIP_OPEN<br />
+TCPIP_CLOSE</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/iViewXToolbox/tcp_udp_ip/tcpip/tcpip_servopen.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/iViewXToolbox/tcp_udp_ip/tcpip/tcpip_servopen.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/iViewXToolbox/tcp_udp_ip/tcpip/tcpip_servopen.m</code></p>
+</div>

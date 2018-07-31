@@ -1,0 +1,51 @@
+<h1 id="datapixxsetdoutschedule"><a href="Datapixx-SetDoutSchedule">Datapixx(‘SetDoutSchedule’)</a></h1>
+<h2 id="psychtoolbox-datapixx.mexdll-subfunction">[[Psychtoolbox]] › [[Datapixx]].{mex*,dll} subfunction</h2>
+<p>Configure a schedule for autonomous TTL digital output waveform playback.<br />
+Digital output schedules drive bits DOUT0-DOUT15 on the “Digital OUT” db-25<br />
+connector. Digital output waveforms can be used to generate complex triggering<br />
+sequences and any other arbitrary digital waveforms.<br />
+-“scheduleOnset” is the desired delay (in double precision seconds) between<br />
+schedule initiation, and when the first waveform sample is sent to the digital<br />
+outputs.<br />
+-“scheduleRate” is the rate at which successive waveform samples are sent to the<br />
+digital outputs. scheduleRate has two formats. It can be a single number, or a<br />
+2 element array. If it is a single number, then it specifies integer<br />
+samples/second. If it is a 2 element array, then the first element specifies the<br />
+rate, and the second element specifies the units of the rate.<br />
+If units = 1, then the rate is interpreted as integer samples/second.<br />
+If units = 2, then the rate is interpreted as integer samples/video frame.<br />
+If units = 3, then the rate is interpreted as double precision seconds/sample<br />
+(sample period).<br />
+Regardless of the actual format chosen, the resulting update rate cannot exceed<br />
+10 <a href="MHz" class="uri">MHz</a>.<br />
+-“maxScheduleFrames” has two modes, depending on whether the full waveform has a<br />
+fixed known length. If the waveform length is known (eg: 100000 samples), then<br />
+just pass 100000 to maxScheduleFrames. In this mode, once the digital waveform<br />
+schedule is started with <a href="StartDoutSchedule" class="uri">StartDoutSchedule</a>, the schedule will terminate<br />
+automatically when maxScheduleFrames has been reached. If the waveform length is<br />
+not known in advance, then pass 0 to maxScheduleFrames. In this mode, the<br />
+waveform will continue until the schedule is manually stopped using<br />
+<a href="StopDoutSchedule" class="uri">StopDoutSchedule</a>.<br />
+-“bufferBaseAddress” specifies the start of the RAM buffer which holds the<br />
+waveform data inside the Datapixx. Use <a href="WriteDoutBuffer" class="uri">WriteDoutBuffer</a> to download the waveform<br />
+data to this address before calling <a href="StartDoutSchedule" class="uri">StartDoutSchedule</a>.<br />
+-“numBufferFrames” specifies the size of the waveform buffer in the Datapixx<br />
+RAM. For many applications, the Datapixx has enough RAM for <a href="WriteDoutBuffer" class="uri">WriteDoutBuffer</a> to<br />
+download multiple complete waveforms before initiating playback. In these cases,<br />
+numBufferFrames could be left at its default value of maxScheduleFrames. If<br />
+maxScheduleFrames is larger than numBufferFrames (or 0), then each time the<br />
+waveform frame counter reaches a multiple of numBufferFrames, the waveform<br />
+buffer address automatically wraps back to bufferBaseAddress. This circular<br />
+buffer effect can be used for streaming arbitrarily long waveforms into a<br />
+digital output schedule. Simply monitor freeBufferFrames returned by<br />
+<a href="GetDoutStatus" class="uri">GetDoutStatus</a>, and use <a href="WriteDoutBuffer" class="uri">WriteDoutBuffer</a> in streaming mode to append new waveform<br />
+data into buffer space which has already been played. The circular buffer effect<br />
+can also be used to implement periodic waveforms very efficiently. A periodic<br />
+clock output could be generated with a buffer filled with only 2 samples; one<br />
+high and one low. The resulting clock output will run continuously.<br />
+Note that every call to <a href="StartDoutSchedule" class="uri">StartDoutSchedule</a> must be preceeded by a call to<br />
+<a href="SetDoutSchedule" class="uri">SetDoutSchedule</a> (ie: multiple calls to <a href="StartDoutSchedule" class="uri">StartDoutSchedule</a> each require their own<br />
+call to <a href="SetDoutSchedule">SetDoutSchedule)</a>).<br />
+Note that schedule timing is implemented in hardware with microsecond precision.<br />
+See <a href="DatapixxDout" class="uri">DatapixxDout</a>*Demo files for examples.</p>
+<p>&lt;&lt;=====See also:===== WriteDoutBuffer, StartDoutSchedule, StopDoutSchedule, GetDoutStatus &lt;&lt;</p>

@@ -1,0 +1,26 @@
+<h2 id="psychtoolbox-psychtests">[[Psychtoolbox]] › [[PsychTests]]</h2>
+<p><a href="TextInOffscreenWindowTest" class="uri">TextInOffscreenWindowTest</a></p>
+<p>Compare text drawn into an offscreen window to text drawn into an<br />
+onscreen window.</p>
+<p><a href="Screen" class="uri">Screen</a> currently fails this test; <a href="Screen" class="uri">Screen</a>(‘DrawText’) draws slightly<br />
+differently into onscreen and offscreen windows. Visual examination of<br />
+the difference between onscreen and offscreen text shows that the<br />
+onscreen texts is larger by about two pixels.</p>
+<p>Until this is resolved, we recommend not mixing onscreen and offscreen<br />
+text rendering if you require exact matching between text.</p>
+<p>We don’t yet know why this fails. The problem seems to have to do with<br />
+differences between how textures are rendered into onscreen and offscreen<br />
+windows. That could be either because of a bug in <a href="Screen" class="uri">Screen</a>, or because the<br />
+<a href="OpenGL" class="uri">OpenGL</a> software renderer used for offscreen windows rasterizes textures<br />
+slightly differently than the hardware renderer used for onscreen<br />
+windows. We don’t yet have a way to compare textures in onscreen and<br />
+offscreen windows indepently of drawing text because ‘DrawTexture’ still<br />
+uses <a href="OpenGL" class="uri">OpenGL</a> extensions not provided in offscreen contexts.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychTests/TextInOffscreenWindowTest.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychTests/TextInOffscreenWindowTest.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychTests/TextInOffscreenWindowTest.m</code></p>
+</div>

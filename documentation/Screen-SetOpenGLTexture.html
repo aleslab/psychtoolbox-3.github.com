@@ -1,0 +1,34 @@
+<h1 id="screensetopengltexture"><a href="Screen-SetOpenGLTexture">Screen(‘SetOpenGLTexture’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Provides information about an external <a href="OpenGL" class="uri">OpenGL</a> texture to make it acessible for<br />
+PTB as PTB texture.“windowPtr” is the handle of the onscreen window to which<br />
+texture should be attached. ‘textureHandle’ is either the Psychtoolbox handle<br />
+for an existing PTB texture, or the special value zero or [] if a completely new<br />
+PTB texture should be created for this <a href="OpenGL" class="uri">OpenGL</a> texture. glTexid is the <a href="OpenGL" class="uri">OpenGL</a><br />
+texture id of a valid <a href="OpenGL" class="uri">OpenGL</a> texture object. ‘target’ is the type of texture<br />
+(e.g., GL_TEXTURE_2D) Optionally you can pass in the intended width and height<br />
+as well as pixeldepth of the texture if they should be different from the values<br />
+that PTB can autodetect from the given texture object.<br />
+‘textureShader’ - optional: If you provide the handle of an <a href="OpenGL" class="uri">OpenGL</a> GLSL shader<br />
+program, then this shader program will be executed (bound) during drawing of<br />
+this texture via the <a href="Screen" class="uri">Screen</a>(‘DrawTexture’,…); command – The normal texture<br />
+drawing operation is replaced by your customized algorithm. This is useful for<br />
+two purposes: a) Very basic on-the-fly image processing on the texture. b)<br />
+Procedural shading: Your texture matrix doesn’t encode an image, but only<br />
+per-pixel parameters is input for some formula to compute the real image during<br />
+drawing. E.g., instead of defining a gabor patch as image or other standard<br />
+stimulus, one could define it as a mathematical formula to be evaluated at<br />
+draw-time. The <a href="Screen" class="uri">Screen</a>(‘SetOpenGLTexture’) command allows you to create purely<br />
+virtual textures, that only consist of such a shader and some virtual size, but<br />
+don’t have any real data matrix associated with it – all content is generated<br />
+on the fly. Create such a texture by providing a textureShader that will<br />
+algorithmically generate the texture content, and the virtual size of the<br />
+texture in glWidth, glHeight and glDepth, but set the glTexid texture handle to<br />
+zero.<br />
+‘specialFlags’ Special optional texture flags, see help for<br />
+<a href="Screen" class="uri">Screen</a>(‘MakeTexture’).<br />
+The function returns (optionally) the textureHandle of the PTB texture and its<br />
+defining rectangle. This routine allows external <a href="OpenGL" class="uri">OpenGL</a> code to inject textures<br />
+into PTB for use with it. For more info about <a href="OpenGL" class="uri">OpenGL</a> textures, read an <a href="OpenGL" class="uri">OpenGL</a><br />
+book.</p>
+<p>&lt;&lt;=====See also:===== GetOpenGLTexture &lt;&lt;</p>

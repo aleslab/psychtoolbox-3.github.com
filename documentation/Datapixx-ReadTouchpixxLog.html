@@ -1,0 +1,24 @@
+<h1 id="datapixxreadtouchpixxlog"><a href="Datapixx-ReadTouchpixxLog">Datapixx(‘ReadTouchpixxLog’)</a></h1>
+<h2 id="psychtoolbox-datapixx.mexdll-subfunction">[[Psychtoolbox]] › [[Datapixx]].{mex*,dll} subfunction</h2>
+<p>Upload <a href="TOUCHPixx" class="uri">TOUCHPixx</a> touch panel activity from a Datapixx internal log buffer to the<br />
+local host.<br />
+-“numFrames” is the number of frames to upload, and should not exceed<br />
+newLogFrames returned by <a href="GetTouchpixxStatus" class="uri">GetTouchpixxStatus</a>. If numFrames argument is missing,<br />
+<a href="ReadTouchpixxLog" class="uri">ReadTouchpixxLog</a> will return all remaining logged data.<br />
+-“logCoords” is a 2D array with 2 rows containing x/y touch coordinates, and one<br />
+column for each touch datum. Each of the x/y coordinates ranges from 0 to 1. The<br />
+coordinate space origin is the top-left corner of the touch panel. When the<br />
+panel stops being touched, (0,0) will be returned.<br />
+-“logTimetags” is a row vector of acquisition timetags, indicating when the<br />
+corresponding touch or release in logData occurred. The timetags are in double<br />
+precision seconds since Datapixx powerup. Response times can be calculated by<br />
+calling <a href="SetMarker" class="uri">SetMarker</a>() at stimulus onset, then subtracting <a href="GetMarker" class="uri">GetMarker</a>() from the<br />
+logged timetags.<br />
+-“underflow” is set to 1 if calls to <a href="ReadTouchpixxLog" class="uri">ReadTouchpixxLog</a> read too many frames. The<br />
+newLogFrames field returned by <a href="GetTouchpixxStatus" class="uri">GetTouchpixxStatus</a> indicates the maximum number<br />
+of frames which can be read by <a href="ReadTouchpixxLog" class="uri">ReadTouchpixxLog</a>. If more than this number of<br />
+frames is read, an underflow occurs and there will be errors in the logged data.<br />
+In addition to returning an underflow flag, the numLogUnderflows field returned<br />
+by <a href="GetTouchpixxStatus" class="uri">GetTouchpixxStatus</a> will be incremented.<br />
+See Touchpixx*Demo files for examples.</p>
+<p>&lt;&lt;=====See also:===== EnableTouchpixx, GetTouchpixxCoordinates, SetTouchpixxLog, StartTouchpixxLog, StopTouchpixxLog, EnableTouchpixxLogContinuousMode, GetTouchpixxStatus &lt;&lt;</p>

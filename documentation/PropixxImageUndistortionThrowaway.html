@@ -1,0 +1,54 @@
+<h2 id="psychtoolbox-psychalpha">[[Psychtoolbox]] › [[PsychAlpha]]</h2>
+<p><a href="PropixxImageUndistortionThrowaway" class="uri">PropixxImageUndistortionThrowaway</a>(calibfilename [, flipmethod=0][, corrmethod=0][, imagefilename])</p>
+<p>A preliminary throwaway demo of how to use <a href="PropPixx" class="uri">PropPixx</a> in fast 4x or 12x<br />
+display mode. This demo is EXPERIMENTAL and subject to change<br />
+without warning, potentially even removal, in future Psychtoolbox<br />
+releases. Make a private copy of it and the <a href="PsychProPixx" class="uri">PsychProPixx</a>.m file<br />
+if you want to keep it as is for production use!</p>
+<p>You will need a powerful, fast graphics card and a well configured<br />
+operating system and machine for this to work reliably at 12x mode.</p>
+<p>The demo can be stopped via the ESCAPE key.</p>
+<h3 id="parameters-and-their-meaning">Parameters and their meaning:</h3>
+<p>‘calibfilename’ mandatory name of a display geometry calibration file<br />
+created via <a href="DisplayUndistortionBVL" class="uri">DisplayUndistortionBVL</a>() iff corrmethod is &gt;= 0.</p>
+<p>flipmethod = 0 -&gt; Sync flips. [ Slow but easy ]<br />
+flipmethod = 1 -&gt; Async flips for some sort of triplebuffering. [ Potentially faster but more difficult ]<br />
+flipmethod = 2 -&gt; Fastest method, but only available on Linux with open-source graphics drivers.</p>
+<p>corrmethod = -1 -&gt; No correction.<br />
+corrmethod = 0 -&gt; Global correction for whole image. [Fastest and default]<br />
+corrmethod = 1 -&gt; Separate correction for each quadrant.</p>
+<p>‘imagefilename’ optional name of image file to display - see code.</p>
+<h3 id="performancestability-tips">Performance/Stability tips:</h3>
+<p>On Linux with the open-source graphics drivers, flipmethod 2 will<br />
+increase stability due to the ability to do non-blocking but still<br />
+vsynced flips without the overhead of <a href="AsyncFlipBegin" class="uri">AsyncFlipBegin</a> et al. If you<br />
+can enable triplebuffering in the graphics driver (intel or nouveau)<br />
+that will give another boost on Linux. If you can use DRI3/Present,<br />
+even better (Requires <a href="XOrg" class="uri">XOrg</a> 1.16.3 or later, Mesa 10.3.4 or later, iow.<br />
+a Ubuntu 15.04 distro or later for ease of setup).</p>
+<p>On Linux with the proprietary graphics drivers, or on OSX or Windows,<br />
+‘AsyncFlipBegin’ flips should get you a bit of extra stability if you<br />
+are lucky, albeit not as good as with Linux + FOSS drivers.</p>
+<p>On Linux with proprietary drivers or on Windows you may be able to get<br />
+a bit more stability if your graphics driver supports triplebuffering.<br />
+However, time stamping and other correctness tests wouldn’t work anymore,<br />
+so you’d need some other means to verify timing.</p>
+<p>Another method to get reliability and proper timestamping on any<br />
+operating system without much tweaking or configuration is of course<br />
+to simply buy the fastest graphics card money can buy and then make<br />
+your stimuli simple enough so it can cope with them.</p>
+<p>In general your graphics card must be able to do all processing within<br />
+much less than 8.33 msecs for Propixx fast modes to work, so reasonable<br />
+stimulus design and a fast graphics card is important. Above special<br />
+flipmethod’s or the use of properly setup Linux can buy you a few msecs<br />
+of extra safety margin to compensate for occassional timing glitches, ie.,<br />
+if the graphics card occassionally overshoots its 8.3 msecs budget, but is<br />
+capable of meeting it on average - in such cases those tricks help.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychAlpha/PropixxImageUndistortionThrowaway.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychAlpha/PropixxImageUndistortionThrowaway.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychAlpha/PropixxImageUndistortionThrowaway.m</code></p>
+</div>

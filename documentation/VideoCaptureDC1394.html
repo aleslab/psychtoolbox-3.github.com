@@ -1,0 +1,43 @@
+<h2 id="psychtoolbox-psychvideocapture">[[Psychtoolbox]] › [[PsychVideoCapture]]</h2>
+<p><a href="VideoCaptureDC1394" class="uri">VideoCaptureDC1394</a> - Setup instructions for IEEE-1394 firewire video<br />
+capture.</p>
+<p>Psychtoolbox on GNU/Linux and <a href="MacOSX" class="uri">MacOSX</a> supports a special video capture<br />
+engine for IIDC compliant machine vision cameras connected via IEEE-1394<br />
+firewire bus or via USB bus and Firewire-over-USB protocol.</p>
+<p>This engine with engineID 1, as selectable via …<br />
+<a href="Screen" class="uri">Screen</a>(‘<a href="Preference" class="uri">Preference</a>’, ‘DefaultVideocaptureEngine’, 1)<br />
+… provides especially precise low-level control over the cameras, high<br />
+framerates, low-latency and high timing precision.</p>
+<p>The engine is based on the open-source library libdc1394. For more info<br />
+about it see ‘help VideoCapture’ in the section about professional class<br />
+video capture engines.</p>
+<h3 id="installation">INSTALLATION:</h3>
+<p>On Linux, usually no installation is required if you use the Psychtoolbox<br />
+provided by Debian or Ubuntu via the Debian main package archive or the<br />
+<a href="NeuroDebian" class="uri">NeuroDebian</a> project. If you have a different Linux distribution, you’ll<br />
+need to install the “libdc1394” package via your distributions software<br />
+manager, e.g., via “sudo apt-get install libdc1394” on a Debian based<br />
+system.</p>
+<p>The software manager on Linux will keep your system up to date with the<br />
+latest stable version of the library.</p>
+<p>On <a href="MacOS" class="uri">MacOS</a>/X for 64-Bit Matlab &amp; Octave: <a href="Screen" class="uri">Screen</a>() links dynamically against<br />
+a system-installed .dylib version of the library, if such a version is<br />
+installed on your system. A precompiled library can be found in the<br />
+Psychtoolbox/<a href="PsychVideoCapture" class="uri">PsychVideoCapture</a>/ subfolder as libdc1394.22.dylib. Copy it<br />
+into the /usr/local/lib/ folder via executing this function<br />
+‘VideoCaptureDC1394’ and entering your administrator password on request.<br />
+The corresponding source code of this library can be found in the source<br />
+code distribution of Psychtoolbox (see “help <a href="UseTheSource" class="uri">UseTheSource</a>”) under:<br />
+<a href="PsychSourceGL" class="uri">PsychSourceGL</a>/Cohorts/libDC1394/ as libdc1394-2.2.0.tar at the moment of<br />
+this writing. However, you can download the most recent copies of the<br />
+libraries from libDC’s sourceforge website anytime and install it instead<br />
+to get access to the latest features and bugfixes. Another way to get the<br />
+library installed is via Homebrew: “brew install libdc1394”.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychVideoCapture/VideoCaptureDC1394.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychVideoCapture/VideoCaptureDC1394.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychVideoCapture/VideoCaptureDC1394.m</code></p>
+</div>

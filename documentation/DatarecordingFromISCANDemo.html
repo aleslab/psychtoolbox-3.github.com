@@ -1,0 +1,73 @@
+<h2 id="psychtoolbox-psychdemos">[[Psychtoolbox]] › [[PsychDemos]]</h2>
+<p>Template for asynchronous data collection and timestamping from serial port.</p>
+<p><a href="DatarecordingFromSerialPortDemo" class="uri">DatarecordingFromSerialPortDemo</a>([portSpec=auto-detect][, sampleFreq=240][maxComponents=2][, baudRate=115200][, specialSettings=None])</p>
+<p>This demo shows how to perform efficient data recording of data from an<br />
+ISCAN eyetracker which is connected to the serial port or a USB-Serial<br />
+converter. The device is assumed to stream data in packets of at most<br />
+‘maxComponents’ gaze sample components in ASCII streaming mode.</p>
+<p>The demo connects to the first found serial port, or optionally the port<br />
+given by the ‘portSpec’ parameter, e.g., ‘COM5’. It connects at a<br />
+baudrate of ‘baudRate’ Baud, by default without flow-control, with 8<br />
+databits, 1 stopbit and no parity, but you can set arbitrary settings via<br />
+the optional ‘specialSettings’ string (see <a href="IOPort" class="uri">IOPort</a> <a href="OpenSerialPort" class="uri">OpenSerialPort</a>?<br />
+online-help for possible parameters).</p>
+<p>Then it allocates receivebufferspace for up to 1 hour of uninterrupted<br />
+recording, then starts background recording of data.</p>
+<p>Datapackets can be read out in realtime, as demonstrated in the main<br />
+while loop here, or offline at end of a session. Each packet is padded to<br />
+be ‘maxReadQuantum’ bytes in size (zeros are added for shorter packets).<br />
+Each packet comes with a <a href="GetSecs" class="uri">GetSecs</a>() timestamp of when the first byte of a<br />
+packet was received.</p>
+<p>Of course you’ll need to understand the code of this demo and then<br />
+customize it for your needs. We don’t know what kind of weird stuff<br />
+you’re going to connect, but the default parameter settings may work on<br />
+some simple devices like eyetrackers.</p>
+<p>For accurate timestamping and data reception with low latency, make sure<br />
+that you’ve configured your serial ports properly. Search the<br />
+Psychtoolbox forum for posts on that topic, e.g., message 9873.</p>
+<p>The following setup has to be performed in the ISCAN DQW software,<br />
+citing ISCAN software documentation:</p>
+<p>To enable the serial output capability in DQW: In the DQW “System<br />
+Configuration” dialog, select the “Serial I/O” tab. Of the available COM<br />
+channels, specify the COM port to be used as “Data I/O”, the baud rate to<br />
+match the receiving system, and select “Output” as active. Click on “OK”<br />
+to register changes to the system configuration. Click on the “Options”<br />
+button until the “Auxiliary Output Controls” panel appears as the lower<br />
+left DQW screen. Then click on the “Serial” tab if this is not already in<br />
+the foreground. Choose “Raw Binary” or “Raw ASCII” as the output type<br />
+depending on your preference. Two parameter banks with six parameters<br />
+each, for a total of up to 12 parameters may be output with each data<br />
+sample. To begin, select “Param Bank” 1 and fill the channels (01 -&gt; 06)<br />
+with the desired parameters by selecting from the pop up list activated<br />
+by clicking on the “…” button to the right of each channel. Fill the<br />
+channels in order and be sure that unused channels have parameter<br />
+“…………….” selected to minimize data transmission time. If more<br />
+than 6 parameters are desired, select “Param Bank” 2 and proceed as above<br />
+to fill in channels 07 -&gt; 12. With the above steps completed, whenever<br />
+“Track Active” is enabled a data packet will be output via the specified<br />
+COM port for each system data sample. The data packet will consist of<br />
+each of the non-blank channel data values for the parameters specified in<br />
+channel order (01 -&gt; 12).</p>
+<p>To enable the serial input capability in DQW: In the DQW “System<br />
+Configuration” dialog, select the “Serial I/O” tab. Of the available COM<br />
+channels, specify the COM port to be used as “Data I/O”, the baud rate to<br />
+match the remote data sending system, and select “Input” as active. Click<br />
+on “OK” to register changes to the system configuration. With the above<br />
+steps completed, the DQW system is ready to receive serial commands from<br />
+a remote source. All DQW remote serial commands are single bytes between<br />
+128 and 255 (80 -&gt; FF Hex). Whenever “Track Active” is enabled, the DQW<br />
+system can receive and record any single serial byte between 0 and 127<br />
+(00 and 7F Hex) as a synchronizing data marker. These bytes are<br />
+represented as parameter “<a href="SerIn0" class="uri">SerIn0</a>” wherever parameter selections are made<br />
+for display or recording in the DQW program. To trigger data recording<br />
+via the serial port, in the DQW “System Configuration” dialog, select the<br />
+?Recording? tab and set the recording ?Trigger? to ?Serial.?</p>
+<p>Thanks to Sebastian Moeller for finding this out.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/DatarecordingFromISCANDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/DatarecordingFromISCANDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/DatarecordingFromISCANDemo.m</code></p>
+</div>

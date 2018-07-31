@@ -1,0 +1,26 @@
+<h2 id="psychtoolbox-psychoneliners">[[Psychtoolbox]] › [[PsychOneliners]]</h2>
+<p><a href="SortCell" class="uri">SortCell</a> Sort a cell array in ascending order.</p>
+<p>Description: <a href="SortCell" class="uri">SortCell</a> sorts the input cell array according to the<br />
+dimensions (columns) specified by the user.</p>
+<p>Usage: [Y,NDX] = <a href="SortCell" class="uri">SortCell</a>(X, DIM)</p>
+<p>Input:<br />
+X: the cell array to be sorted.<br />
+DIM: (optional) one or more column numbers. Simply an array of one or<br />
+more column numbers. The first number is the primary column on<br />
+which to sort. Extra column numbers may be supplied if secondary<br />
+sorting is required. The default value is 1, if no dimension<br />
+array is supplied.</p>
+<p>Output:<br />
+Y: the sorted cell array.<br />
+NDX: indices such that Y = X(NDX,:).</p>
+<p>Example: Y = <a href="SortCell" class="uri">SortCell</a>(X, [3 2])</p>
+<p>Note that this function has only been tested on mixed cell arrays<br />
+containing character strings and numeric values.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOneliners/SortCell.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOneliners/SortCell.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOneliners/SortCell.m</code></p>
+</div>

@@ -1,0 +1,26 @@
+<h2 id="psychtoolbox-psychdemos-gpgpudemos">[[Psychtoolbox]] › [[PsychDemos]] › [[GPGPUDemos]]</h2>
+<p><a href="GPUFFTDemo1" class="uri">GPUFFTDemo1</a>([fwidth=11]) - Demonstrate use of GPGPU computing for 2D-FFT.</p>
+<p>This demo makes use of the FOSS <a href="GPUmat" class="uri">GPUmat</a> toolbox to perform a GPU<br />
+accelerated 2D FFT + filtering in frequency space + 2D inverse FFT on our<br />
+favourite bunnies. <a href="GPUmat" class="uri">GPUmat</a> allows to use NVidia’s CUDA gpu computing<br />
+framework on supported <a href="NVidia" class="uri">NVidia</a> gpu’s <a href="(GeForce)-8000%20series%20and%20later,%20aka%20%5BDirect3D%5D(Direct3D)-10%20or%20%5BOpenGL%5D(OpenGL)-3%20capable">(GeForce</a>.</p>
+<p>It shows how a Psychtoolbox floating point texture (with our bunnies<br />
+inside) can be efficiently passed to <a href="GPUmat" class="uri">GPUmat</a> as a matrix of <a href="GPUsingle" class="uri">GPUsingle</a> data<br />
+type, which is stored and processed on the GPU. Then it uses GPUmat’s fft<br />
+routines for forward/inverse fft’s and matrix manipulation. Then it<br />
+returns the final image to Psychtoolbox as a new floating point texture<br />
+for display. The same steps are carried out with Matlab/Octave’s regular<br />
+fft routines on the cpu for reference.</p>
+<p>Requires the freely downloadable <a href="NVidia" class="uri">NVidia</a> CUDA-5.0 SDK/Runtime and the free<br />
+and open-source <a href="GPUmat" class="uri">GPUmat</a> toolbox as well as a compute capable <a href="NVidia" class="uri">NVidia</a><br />
+graphics card.</p>
+<h3 id="parameters">Parameters:</h3>
+<p>‘fwidth’ = Width of low-pass filter kernel in frequency space units.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/GPGPUDemos/GPUFFTDemo1.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/GPGPUDemos/GPUFFTDemo1.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/GPGPUDemos/GPUFFTDemo1.m</code></p>
+</div>

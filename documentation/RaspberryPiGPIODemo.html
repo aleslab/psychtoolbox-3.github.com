@@ -1,0 +1,41 @@
+<h2 id="psychtoolbox-psychdemos">[[Psychtoolbox]] › [[PsychDemos]]</h2>
+<p><a href="RaspberryPiGPIODemo" class="uri">RaspberryPiGPIODemo</a> - Show basic use of GPIO’s on <a href="RaspberryPi" class="uri">RaspberryPi</a>.</p>
+<p>Demos full access to the Pi <a href="GPIOs" class="uri">GPIOs</a> when running as root,<br />
+slightly more limited access when running as a regular user,<br />
+and also the different setup steps required.</p>
+<p>Accessing the <a href="GPIOs" class="uri">GPIOs</a> as non-root requires the user account<br />
+to be a member of the Unix group ‘gpio’. <a href="PsychLinuxConfiguration" class="uri">PsychLinuxConfiguration</a><br />
+should take care of adding your account if you let it do that<br />
+setup for you. The ‘gpio’ command line utility allows to configure<br />
+aspects of the <a href="GPIOs" class="uri">GPIOs</a> which your code can’t control as non-root,<br />
+therefore you’ll see multiple system() callouts in this script<br />
+to that helper utility. If the <a href="RPiGPIOMex" class="uri">RPiGPIOMex</a> mex file doesn’t work<br />
+then you will need to install the ‘wiringPi’ package to provide<br />
+the required libwiringPi runtime library.</p>
+<p>Shows digital i/o by flashing/alternating the two<br />
+<a href="LEDs" class="uri">LEDs</a> on the <a href="RPi" class="uri">RPi</a> 2B, Red power, and green status.</p>
+<p>Shows how to efficiently wait for a rising edge<br />
+trigger on Broadcom pin 17, a real GPIO pin on the<br />
+connector. To avoid the need to actually connect<br />
+a switch to the connector, uses internal programmable<br />
+pullup and pulldown resistors to simulate external<br />
+trigger input to the pin.</p>
+<p>Please note that the <a href="RPiGPIOMex" class="uri">RPiGPIOMex</a> file is just meant as<br />
+a temporary stop-gap solution to get things going, until<br />
+PTB gains a universal I/O driver. Development and support<br />
+of <a href="RPiGPIOMex" class="uri">RPiGPIOMex</a> may cease at a future point in time, it may<br />
+even get removed from the distro! Plan accordingly, maybe<br />
+use a M-File wrapper around it to simplify transition to a<br />
+future better I/O driver.</p>
+<p>All pin numbers used with <a href="RPiGPIOMex" class="uri">RPiGPIOMex</a> are Broadcom GPIO pin<br />
+numbers, not pin numbers on the connector or wiringPi pin numbers!</p>
+<p>A nice translation table between connector pins and Broadcom GPIO<br />
+pins can be found on the following website: https://pinout.xyz</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/RaspberryPiGPIODemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/RaspberryPiGPIODemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/RaspberryPiGPIODemo.m</code></p>
+</div>

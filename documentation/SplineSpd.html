@@ -1,0 +1,36 @@
+<h2 id="psychtoolbox-psychcolorimetric">[[Psychtoolbox]] › [[PsychColorimetric]]</h2>
+<p>[spd_out] = <a href="SplineSpd" class="uri">SplineSpd</a>(wls_in, spd_in, wls_out, [extend])</p>
+<p>Convert the wavelength representation of a spectral power distribution.<br />
+Takes change of deltaLambda into account to keep matrix computations<br />
+consistent across wavelength samplings.</p>
+<p>Handling of out of range values:<br />
+extend == 0: Cubic spline, extends with zeros [default]<br />
+extend == 1: Cubic spline, extends with last value in that direction<br />
+extend == 2: Linear interpolation, linear extrapolation</p>
+<p>spd_in may have multiple columns, in which case spd_out does as well.</p>
+<p>wls_in and wls_out may be specified as a column vector of<br />
+wavelengths or as a [start delta n] description.</p>
+<p>If wls_out is passed as a vector of wavelengths with just one sample, we don’t<br />
+know what the wavelength sampling is, and we can’t do the conversion of<br />
+power per wavelength band. This condition is checked for and an error is<br />
+thrown. The fix is to pass the wavelengths as an S vector<br />
+S = [theWavelength wavelengthBandWidth 1].<br />
+This forces an explicit value for the wavelength band width.</p>
+<p>5/6/98 dhb Change normalization method so that sum is constant.<br />
+This is a little closer to the desired result for<br />
+functions with big derivatives.<br />
+12/7/98 dhb Remove 5/6/98 change, as it produces the wrong power<br />
+when you spline across different wavelength regions.<br />
+7/26/03 dhb Add extend argument and pass to <a href="SplineRaw" class="uri">SplineRaw</a>.<br />
+8/13/11 dhb Update comment to reflect changes in <a href="SplineRaw" class="uri">SplineRaw</a>.<br />
+5/10/12 dhb Small comment fix<br />
+1/15/18 dhb Can’t believe I wrote this more than 20 years ago!<br />
+dhb Put in error check for single wavelength value pass.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychColorimetric/SplineSpd.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychColorimetric/SplineSpd.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychColorimetric/SplineSpd.m</code></p>
+</div>

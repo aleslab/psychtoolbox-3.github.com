@@ -1,0 +1,31 @@
+<h2 id="psychtoolbox-psychglimageprocessing">[[Psychtoolbox]] › [[PsychGLImageProcessing]]</h2>
+<p>rval = kPsychNeedTwiceWidthWindow</p>
+<p>Return a flag that you can pass to the ‘imagingmode’ parameter of<br />
+<a href="Screen" class="uri">Screen</a>(‘OpenWindow’) in order to request use of twice-width windows.<br />
+These onscreen windows are treated by all drawing functions (and geometry<br />
+query functions like <a href="Screen" class="uri">Screen</a>(‘Rect’, window); or <a href="Screen" class="uri">Screen</a>(‘WindowSize’,<br />
+window); as if they have twice the width of the underlying framebuffer in<br />
+pixels.</p>
+<p>This is used for special packed-pixel display modes, where the content of<br />
+two visual stimulus pixels is packed into one single output framebuffer<br />
+pixel for video scanout. E.g., certain special medical displays for use<br />
+in Radiology (cfe. “Eizo <a href="RadiForce" class="uri">RadiForce</a> GS-520”) are able to display<br />
+calibrated pure luminance images with a luminance precision of 12 bits<br />
+per grayscale pixel at 5 Megapixels resolution. These displays are driven<br />
+over a single-link DVI-D interface with a special pixel data transmission<br />
+format: Two horizontally adjacent 12-bit luminance pixels are encoded<br />
+into one 24-bit RGB pseudo-color pixel. This requires a framebuffer<br />
+encoding two luminance pixels in a single RGB8 output pixel, ie. the<br />
+stimulus image in its “natural” representation is twice as wide as the<br />
+underlying scanout framebuffer of the stimulus window. For such use cases<br />
+we need the ability to have twice-width windows.</p>
+<p>Usually user scripts won’t pass this flag, but only special setup<br />
+routines that are part of the Psychtoolbox itself.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychGLImageProcessing/kPsychNeedTwiceWidthWindow.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychGLImageProcessing/kPsychNeedTwiceWidthWindow.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychGLImageProcessing/kPsychNeedTwiceWidthWindow.m</code></p>
+</div>

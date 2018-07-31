@@ -1,0 +1,148 @@
+<h2 id="psychtoolbox-psychcolorimetricdata">[[Psychtoolbox]] › [[PsychColorimetricData]]</h2>
+<p>[T_quantalAbsorptionsNormalized,T_quantalAbsorptions,T_quantalIsomerizations,adjIndDiffParams,params,staticParams] = …<br />
+<a href="ComputeCIEConeFundamentals" class="uri">ComputeCIEConeFundamentals</a>(S,fieldSizeDegrees,ageInYears,pupilDiameterMM,[lambdaMax],[whichNomogram],[<a href="LserWeight" class="uri">LserWeight</a>], …<br />
+[DORODS],[rodAxialDensity],[fractionPigmentBleached],indDiffParams)</p>
+<p>Function to compute normalized cone quantal sensitivities<br />
+from underlying pieces, as specified in CIE 170-1:2006.</p>
+<p>IMPORTANT: This routine returns quantal sensitivities. You<br />
+may want energy sensitivities. In that case, use <a href="EnergyToQuanta" class="uri">EnergyToQuanta</a> to convert<br />
+T_energy = <a href="EnergyToQuanta" class="uri">EnergyToQuanta</a>(S,T_quantal’)’<br />
+and then renormalize. (You call <a href="EnergyToQuanta" class="uri">EnergyToQuanta</a> because you’re converting<br />
+sensitivities, which go the opposite direction from spectra.)<br />
+The routine also returns two quantal sensitivity functions. The first gives<br />
+the probability that a photon will be absorbed. The second is the probability<br />
+that the photon will cause a photopigment isomerization. It is the latter<br />
+that is what you want to compute isomerization rates from retinal illuminance.<br />
+See note at the end of function <a href="FillInPhotoreceptors" class="uri">FillInPhotoreceptors</a> for some information about<br />
+convention. In particular, this routine takes pre-retinal absorption into<br />
+account in its computation of probability of absorptions and isomerizations,<br />
+so that the relevant retinal illuminant is one computed without accounting for<br />
+those factors. This routine does not account for light attenuation due to<br />
+the pupil, however. The only use of pupil size here is becuase of its<br />
+slight effect on lens density as accounted for in the CIE standard.</p>
+<p>This standard allows customizing the fundamentals for<br />
+field size, observer age, and pupil size in mm.</p>
+<p>To get the Stockman-Sharpe/CIE 2-deg fundamentals, use<br />
+fieldSizeDegrees = 2;<br />
+ageInYears = 32;<br />
+pupilDiameterMM = 3;<br />
+and don’t pass the rest of the arguments.</p>
+<p>To get the Stockman-Sharpe/CIE 10-deg fundamentals, use<br />
+fieldSizeDegrees = 10;<br />
+ageInYears = 32;<br />
+pupilDiameterMM = 3;<br />
+and don’t pass the rest of the arguments.</p>
+<p>Although this routine will compute something over any wavelength<br />
+range, I’d (DHB) recommend not going lower than 390 or above about 780 without<br />
+thinking hard about how various pieces were extrapolated out of the range<br />
+that they are specified in the standard. Indeed, the lens optical<br />
+density measurements only go down to 400 nm and these are extropolated<br />
+to go below 400.</p>
+<p>This routine will compute from tabulated absorbance or absorbance based on a nomogram, where<br />
+whichNomogram can be any source understood by the routine <a href="PhotopigmentNomogram" class="uri">PhotopigmentNomogram</a>. To obtain<br />
+the nomogram behavior, pass a lambdaMax vector. You can then also optionally pass a nomogram<br />
+source (default: <a href="StockmanSharpe">StockmanSharpe)</a>). This option (using shifted nomograms) is not part of the<br />
+CIE standard. See NOTE below for another way to handle individual differences</p>
+<p>The nominal values of lambdaMax to fit the CIE 2-degree fundamentals with the<br />
+Stockman-Sharpe nomogram are 558.9, 530.3, and 420.7 nm for the LMS cones respectively.<br />
+These in fact do a reasonable job of reconstructing the CIE 2-degree fundamentals, although<br />
+there are small deviations from what you get if you simply read in the tabulated cone<br />
+absorbances. Thus starting with these as nominal values and shifting is one way to<br />
+produce fundamentals tailored to observers with different known photopigments.</p>
+<p>If you pass lambaMax and its length is 4, then first two values are treated as<br />
+the peak wavelengths of the ser/ala variants of the L cone pigment, and these<br />
+are then weighted according to <a href="LserWeight" class="uri">LserWeight</a> and (1-<a href="LserWeight">LserWeight)</a>). The default<br />
+for <a href="LserWeight" class="uri">LserWeight</a> is 0.56. After travelling it for a distance to try to get better<br />
+agreement between the nomogram based fundamentals and the tabulated fundamentals<br />
+I (DHB) gave up and decided that using a single lambdaMax is as good as anything<br />
+else I could come up with. If you are interested, see <a href="FitConeFundamentalsTest" class="uri">FitConeFundamentalsTest</a>.</p>
+<p>NOTE 1: When we first implemented the CIE standard, adding this shifting feature<br />
+seemed like a good idea to allow exploration of individual differences in photopigments.<br />
+But, with 0 shift, none of the nomograms exactly reproduce the tabulated photopigment absorbance<br />
+spectral sensitivities, and this is not so good. We are phasing out our<br />
+use of this feature in favor of simply shifting the tabulated<br />
+photopigment absorbances, and indeed in favor of adopting the method<br />
+published by Asano, Fairchild, &amp; Blonde (2016), PLOS One, doi: 10.1371/journal.pone.0145671<br />
+to tailor the CIE fundamentals to individual observers. This is done by<br />
+passing the argument indDiffParams, which is a structure as follows.<br />
+‘linear’ gets the Asano et al. behavior<br />
+indDiffParams.dlens - deviation in % from CIE computed peak lens density<br />
+indDiffParams.dmac - deviation in % from CIE peak macular pigment<br />
+density<br />
+indDiffParams.dphotopigment - vector of deviations in % from CIE<br />
+photopigment peak density.<br />
+indDiffParams.lambdaMaxShift - vector of values (in nm) to shift lambda max of<br />
+each photopigment absorbance by.<br />
+indDiffParams.shiftType - ‘linear’ (default) or ‘log’.</p>
+<p>You also can shift the absorbances along a wavenumber axis after you have<br />
+obtained them. To do this, pass argument lambdaMaxShift with the same<br />
+number of entries as the number of absorbances that are used.</p>
+<p>The adjIndDiffParams outputsis a struct which is populated by <a href="ComputeRawConeFundamentals" class="uri">ComputeRawConeFundamentals</a>.<br />
+It contains the actual parameter values for the parameters adjusted using the indDiffParams<br />
+input. It contains the following fields:<br />
+adjIndDiffParams.mac - the adjusted macular pigment transmittance as a function of wavelength<br />
+as calculated in line 151 of <a href="ComputeRawConeFundamentals" class="uri">ComputeRawConeFundamentals</a>.<br />
+adjIndDiffParams.lens - the adjusted lens transmittance as a function of wavelength as calculated<br />
+in line 41 of <a href="ComputeRawConeFundamentals" class="uri">ComputeRawConeFundamentals</a>.<br />
+adjIndDiffParams.dphotopigment - 3-vector of the adjusted photopigment axial density for<br />
+L, M and S cones (in that order), as calculated in lines<br />
+200-202 of <a href="ComputeRawConeFundamentals" class="uri">ComputeRawConeFundamentals</a>; or rods, as calculated<br />
+in line 216 of <a href="ComputeRawConeFundamentals" class="uri">ComputeRawConeFundamentals</a> if params.DORODS is true.<br />
+adjIndDiffParams.absorbance - Photopigment absorbance as given in line 188 of <a href="ComputeRawConeFundamentals" class="uri">ComputeRawConeFundamentals</a><br />
+adjIndDiffParams.absorptance - Photopigment absorptance as given in line 230 of <a href="ComputeRawConeFundamentals" class="uri">ComputeRawConeFundamentals</a></p>
+<p>For both adjIndDiffParams.mac and adjIndDiffParams.lens, the wavelength<br />
+spacing is the same as in the S input variable of this function.</p>
+<p>The params and staticParams outputs are the argument strucutures that<br />
+were passed to <a href="ComputeRawConeFundamentals" class="uri">ComputeRawConeFundamentals</a> by this routine to do the work.<br />
+These can be useful if you’d like, say, to susequently use<br />
+<a href="ComputeRawConeFundamentals" class="uri">ComputeRawConeFundamentals</a> to produce estimates for (e.g.) melanopsin or<br />
+the rods, where you keep everything else as consistent as possible to<br />
+what this routine does. Note that this is all a bit klugy for historical<br />
+reasons, as there is redundancy between what you can/might do with<br />
+adjIndDiffParams and with these two return outputs. In particular, these<br />
+two return outputs would let you call <a href="ComputeRawConeFundamentals" class="uri">ComputeRawConeFundamentals</a> and get<br />
+adjIndDiffParams directly from there.</p>
+<p>This function also has an option to compute rod spectral sensitivities, using<br />
+the pre-retinal values that come from the CIE standard. Set DORODS to true on<br />
+call. You then need to explicitly pass a single lambdaMax value. You can<br />
+also pass an optional rodAxialDensity value. If you don’t pass that, the<br />
+routine uses the ‘Alpern’ estimate for ‘Human’/‘Rod’ embodied in routine<br />
+<a href="PhotopigmentAxialDensity" class="uri">PhotopigmentAxialDensity</a>. The default nomogram for the rod spectral<br />
+absorbance is ‘StockmanSharpe’, but you can override with any of the<br />
+others available in routine <a href="PhotopigmentNomogram" class="uri">PhotopigmentNomogram</a>. Use of this requires<br />
+good choices for lambdaMax, rodAxialDensity, and the nomogram. We are<br />
+working on identifying those values more precisely.</p>
+<p>Finally, you can adjust the returned spectral sensitivities to account for<br />
+the possibility that some of the pigment in the cones is bleached. Pass<br />
+a column vector with same length as number of spectral sensitivities beingt<br />
+computed. You need to estimate the fraction elsewhere.</p>
+<p>Relevant to individual differences, S &amp; S (2000) estimate the wavelength difference<br />
+between the ser/ala variants to be be 2.7 nm (ser longer).</p>
+<p>NOTE 2. The CIE standard is specified for field sizes between 1 and 10<br />
+degrees. Our code will extrapolate using the given formulae to larger<br />
+field sizes without complaining. We think this is reasonable; see<br />
+<a href="CIEConeFundamentalsFieldSizeTest" class="uri">CIEConeFundamentalsFieldSizeTest</a> and its header comments, but be aware<br />
+that you have sailed into little charted territory if you do this.</p>
+<p>See also: <a href="ComputeRawConeFundamentals" class="uri">ComputeRawConeFundamentals</a>, <a href="CIEConeFundamentalsTest" class="uri">CIEConeFundamentalsTest</a>, <a href="CIEConeFundamentalsFieldSizeTest" class="uri">CIEConeFundamentalsFieldSizeTest</a>,<br />
+<a href="FitConeFundamentalsTest" class="uri">FitConeFundamentalsTest</a>, <a href="FitConeFundamentalsWithNomogram" class="uri">FitConeFundamentalsWithNomogram</a>, <a href="StockmanSharpeNomogram" class="uri">StockmanSharpeNomogram</a>,<br />
+<a href="ComputePhotopigmentBleaching" class="uri">ComputePhotopigmentBleaching</a>.</p>
+<p>8/13/11 dhb Wrote it.<br />
+8/14/11 dhb Clean up a little.<br />
+12/16/12 dhb, ms Add rod option.<br />
+08/10/13 dhb Test for consistency between what’s returned by <a href="FillInPhotoreceptors" class="uri">FillInPhotoreceptors</a> and<br />
+what’s returned by <a href="ComputeRawConeFundamentals" class="uri">ComputeRawConeFundamentals</a>.<br />
+05/24/14 dhb Add fractionPigmentBleached optional arg.<br />
+05/26/14 dhb Comment improvements.<br />
+02/08/16 dhb, ms Add lambdaMaxShift argument.<br />
+ms Don’t do two way check when lambdaMax is shifted.<br />
+02/24/16 dhb, ms Started to implement Asano et al. individual difference model<br />
+3/30/17 ms Added output argument returning adjusted ind differences<br />
+8/1/17 dhb, ms Added return of params and staticParams.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychColorimetricData/ComputeCIEConeFundamentals.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychColorimetricData/ComputeCIEConeFundamentals.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychColorimetricData/ComputeCIEConeFundamentals.m</code></p>
+</div>

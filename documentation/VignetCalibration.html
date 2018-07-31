@@ -1,0 +1,47 @@
+<h2 id="psychtoolbox-psychglimageprocessing">[[Psychtoolbox]] › [[PsychGLImageProcessing]]</h2>
+<p>s = <a href="VignetCalibration" class="uri">VignetCalibration</a>([filename] [, screenId])</p>
+<p>Vignetted Luminance calibration procedure for undistortion of distorted<br />
+display luminance.</p>
+<p>This code was created by Jorrit S. Montijn of the Laboratoire Psychologie<br />
+de la Perception at Universite Paris Descartes.</p>
+<p>This function allows the user to create a calibration for a vignetted<br />
+luminance distortion. It enables the user to choose from either a<br />
+Gaussian or Exponential approximation of the luminance vignetting. Users<br />
+can change the position and steepness of the luminance fall-off in<br />
+horizontal and vertical direction independently. It is also possible to<br />
+adjust the minimal luminance.</p>
+<p>Once the calibration procedure is finished, the gain matrix (and other<br />
+possibly useful parameters and variables) are saved to disk for use by a<br />
+vignetting compensation program (see ‘VignettingCorrectionDemo’ for an<br />
+example of how to do this).</p>
+<h3 id="how-to-use">How to use:</h3>
+<h3 id="start-the-script-providing-a-filename-and-screennumber">Start the script, providing a filename and screennumber:</h3>
+<p>‘filename’ is the name of the file to which calibration results will be<br />
+saved. If none is provided, a default name will be used. The default file<br />
+will be stored in the directory returned by <a href="PsychtoolboxConfigDir" class="uri">PsychtoolboxConfigDir</a>(‘ShadingCalibration’).</p>
+<p>‘screenId’ is the optional index of the screen that you want to<br />
+calibrate. If only one screen is present, it is not necessary to include<br />
+this parameter.</p>
+<p>When started, the program will show either a gaussian or exponential<br />
+approximation of the required gain function. You can adjust the<br />
+parameters so that the screen will look approximately isoluminant. It is<br />
+recommended to use a photometer, since human eyes are far from perfect when<br />
+doing this.</p>
+<h3 id="you-can-use-the-following-keys-to-issue-commands">You can use the following keys to issue commands:</h3>
+<p>Escape - use this key to save and exit<br />
+Tab - show/hide help text<br />
+Space - change the parameter you wish to adjust<br />
+‘&lt;’ and ‘&gt;’ - use these keys to change the increment size of the<br />
+parameter adjustments<br />
+Arrow Keys - adjust parameters (depending on selected parameter)<br />
+1. Luminance/Function type<br />
+2. Width/Steepness of function<br />
+3. Position of centre</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychGLImageProcessing/VignetCalibration.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychGLImageProcessing/VignetCalibration.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychGLImageProcessing/VignetCalibration.m</code></p>
+</div>

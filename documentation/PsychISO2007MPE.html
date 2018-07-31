@@ -1,0 +1,85 @@
+<h2 id="psychtoolbox-psychradiometric-psychiso2007mpe">[[Psychtoolbox]] › [[PsychRadiometric]] › [[PsychISO2007MPE]]</h2>
+<p>Psychtoolbox:<a href="PsychISO2007MPE" class="uri">PsychISO2007MPE</a>.</p>
+<p>Partial and in progress implementation of ISO 2007 standard for computing<br />
+maximum permissable exposure to broadband lights.</p>
+<p>*****************************************************************</p>
+<h3 id="important">IMPORTANT</h3>
+<p>Individuals using these routines must accept full responsibility<br />
+for light exposures they implement. We recommend that values computed<br />
+with these routines be carefully checked against independent calculations.<br />
+We have done our best to follow the standard, but it is very complex and<br />
+there may be errors.</p>
+<p>*****************************************************************</p>
+<h3 id="notes">NOTES:</h3>
+<ol type="a">
+<li><p>As of June, 2013, these routines are still very much a work<br />
+in progress and should thus be treated with special caution. See<br />
+<a href="ISO2007MPEBasicTest" class="uri">ISO2007MPEBasicTest</a>. If someone has some worked out test cases<br />
+it would be great to check those against the computations done<br />
+by this suite of routines. Please contact me (brainard@psych.upenn.edu)<br />
+if you can help.</p></li>
+<li><p>Only the Type 1 limits are computed. My impression is that these are<br />
+more conservative, and that if you stay below them you good wrt the<br />
+standard content. I believe that technically, a Type 1 instrument is<br />
+one that *cannot* produce more light than the Type 1 limits, but it seems<br />
+to me that for research purposes the main point is to stay below those limits<br />
+independent of what the instrument could in principle produce.</p></li>
+</ol>
+<p>In addition, for exposure durations of less than 2 hours (7200) seconds, the<br />
+Type 2 limits are more lenient than the Type 1 limits, except for 5.5.1.5b versus<br />
+5.4.1.6b, where the worst case Type 2 limit is a little lower (5.88 W/[sr-cm2]<br />
+than the Type 1 limit (6 W/[sr-cm2]). To be conservative, I used the 5.88 value<br />
+in the relevant routine.</p>
+<p>If someone knows more or has a different view, please let me (DHB, brainard@psych.upenn.edu) know.</p>
+<ol start="3" type="a">
+<li><p>There is a limit (Table 2, 5.4.1.5) for convergent beams, which I think is what<br />
+a Maxwellian view produces. I wrote a placeholder routine for this limit, but since<br />
+I am not currently using such a rig I don’t have any application for it and have<br />
+not tested it.</p></li>
+<li><p>The standard uses cm^2 based units for radiance, irradiance, etc. It switches<br />
+between uWatts, mWatts, and Watts depending on which limit is being considered.<br />
+For uniformity, these routines return all quantities and limits in uWatts, cm^2<br />
+based units.</p></li>
+</ol>
+<p>For input, we typically measure radiance in Watts/[sr-m^22] and all the routines take<br />
+radiance as input and convert as necessary (with the help of passed ancilliary arguments).<br />
+To match the measurement instrumentation we use, the radiance units are kept in<br />
+units of Watts/[sr-m^22], and the routines do the appropriate converstions.<br />
+these are the input units expected. The one exception on the input is the convergent beam limit,<br />
+where the input is irradiance and should be passed in uWatts/cm^2. The help text is pretty<br />
+clear about what is desired for each routine.</p>
+<ol start="5" type="a">
+<li>For computations of retinal illumiance, these routines used a default eye length of 17 mm.<br />
+This does not seem to be specified in the standard, but is the number given in the Landry et.<br />
+al (2011) paper.</li>
+</ol>
+<p>REFERENCES.<br />
+Ansi ISO 15004-2 (2007). Ophthalmic instruments - Fundamental requirements and test methods -<br />
+Part 2: Light hazard protection. [The standard document. Tables listed below are in<br />
+this document.]</p>
+<p>Landry, R. J. et al. (2011). Retinal phototoxicity: A review of standard methodology for evaluating retinal optical<br />
+radiation hazards. Health Physics, 100(4), pp. 417-434. [This review paper unpacks the standard<br />
+a bit and is a helpful source.]</p>
+<p><a href="ISO2007MPEBasicTest" class="uri">ISO2007MPEBasicTest</a> - Test the suite of routines. Generates many figures that should match those in the standard.<br />
+<a href="ISO2007MPECheckType1ContinuousRadiance" class="uri">ISO2007MPECheckType1ContinuousRadiance</a> - Wrapper function for comparing a measured radiance to MPE limits.<br />
+<a href="ISO2007MPEComputeType1ContinuousAntConvrgUnweightedValue" class="uri">ISO2007MPEComputeType1ContinuousAntConvrgUnweightedValue</a> - Placeholder (not tested) for convergent beam limit. Table 2, 5.4.1.5.<br />
+<a href="ISO2007MPEComputeType1ContinuousCornealIRUnweightedValue" class="uri">ISO2007MPEComputeType1ContinuousCornealIRUnweightedValue</a> - As the name indicates. Table 2, 5.4.1.4.<br />
+<a href="ISO2007MPEComputeType1ContinuousCornealUVUnweightedValue" class="uri">ISO2007MPEComputeType1ContinuousCornealUVUnweightedValue</a> - As the name indicates. Table 2, 5.4.1.2.<br />
+<a href="ISO2007MPEComputeType1ContinuousCornealUVWeightedValue" class="uri">ISO2007MPEComputeType1ContinuousCornealUVWeightedValue</a> - As the name indicates. Table 2, 5.4.1.1.<br />
+<a href="ISO2007MPEComputeType1ContinuousRadiancePCWeightedValue" class="uri">ISO2007MPEComputeType1ContinuousRadiancePCWeightedValue</a> - As the name indicates. Table 2, 5.4.1.3.b<br />
+<a href="ISO2007MPEComputeType1ContinuousRadianceTHWeightedValue" class="uri">ISO2007MPEComputeType1ContinuousRadianceTHWeightedValue</a> - As the name indicates. Table 2, 5.4.1.6.b<br />
+<a href="ISO2007MPEComputeType1ContinuousRetIrradiancePCWeightedValue" class="uri">ISO2007MPEComputeType1ContinuousRetIrradiancePCWeightedValue</a> - As the name indicates. Table 2, 5.4.1.3.a<br />
+<a href="ISO2007MPEComputeType1ContinuousRetIrradianceTHWeightedValue" class="uri">ISO2007MPEComputeType1ContinuousRetIrradianceTHWeightedValue</a> - As the name indicates. Table 2, 5.4.1.6.a<br />
+<a href="ISO2007MPEGetWeigthtings" class="uri">ISO2007MPEGetWeigthtings</a> - Get the spectral weighting functions needed by the standard.<br />
+<a href="ISO2007MPEPrintAnalysis" class="uri">ISO2007MPEPrintAnalysis</a> - Formatted print of output returned by <a href="ISO2007MPECheckType1ContinuousRadiance" class="uri">ISO2007MPECheckType1ContinuousRadiance</a>.</p>
+<p><a href="ISO2007MPETableA1" class="uri">ISO2007MPETableA1</a>.txt - Table A1 of the standard as tab delimited text.<br />
+<a href="ISO2007MPETableA2" class="uri">ISO2007MPETableA2</a>.txt - Table A2 of the standard as tab delimited text.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychRadiometric/PsychISO2007MPE/Contents.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychRadiometric/PsychISO2007MPE/Contents.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychRadiometric/PsychISO2007MPE/Contents.m</code></p>
+</div>
+<p>{{category}}</p>

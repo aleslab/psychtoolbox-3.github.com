@@ -1,0 +1,30 @@
+<h2 id="psychtoolbox-psychhardware-eyelinktoolbox">[[Psychtoolbox]] › [[PsychHardware]] › [[EyelinkToolbox]]</h2>
+<p>% compatability notes<br />
+%<br />
+with the version released in July 2010, comes a small backward compatibility issue.<br />
+To enable new functionality, much to the toolbox changed under the hood.<br />
+Most important and most often requested feature has been added, namely<br />
+the eye on the subject PC. Note that it is presently being shown without the<br />
+yellow eye cursor.<br />
+This requires a little different ordering of initializations, setting defaults and<br />
+opening windows. Please check the supplied demo’s to see how this is done.<br />
+To make everything work how it used to do ,<br />
+you’ll need to add a parameter to <a href="EyelinkInit" class="uri">EyelinkInit</a>.<br />
+So, use:<br />
+<a href="EyelinkInit" class="uri">EyelinkInit</a>(0,1);</p>
+<p>USAGE: [result dummy]=<a href="EyelinkInit" class="uri">EyelinkInit</a>([dummy=0][enableCallbacks=0])</p>
+<h3 id="initialize-eyelink-system-and-connection.-optional-arguments">Initialize Eyelink system and connection. Optional arguments:</h3>
+<p>dummy: Omit, or set to 0 to attempt real initialization,</p>
+<p>enableCallbacks: Omit, or set to 0 for operation without callbacks and<br />
+without display of eye camera images on the Subject PC.</p>
+<p>With these set, things should work as they used to (but you’ll loose the eye-image!).</p>
+<p>Frans Cornelissen,<br />
+Santa Barbara, 29th July 2010</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/EyelinkToolbox/compatibility.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/EyelinkToolbox/compatibility.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/EyelinkToolbox/compatibility.m</code></p>
+</div>

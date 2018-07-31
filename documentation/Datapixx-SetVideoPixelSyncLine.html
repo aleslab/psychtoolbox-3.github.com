@@ -1,0 +1,17 @@
+<h1 id="datapixxsetvideopixelsyncline"><a href="Datapixx-SetVideoPixelSyncLine">Datapixx(‘SetVideoPixelSyncLine’)</a></h1>
+<h2 id="psychtoolbox-datapixx.mexdll-subfunction">[[Psychtoolbox]] › [[Datapixx]].{mex*,dll} subfunction</h2>
+<p>Configure pixel sync raster line operation.<br />
+Register cache writes to the Datapixx can be delayed until a user-specified<br />
+pixel sequence occurs. This allows signal input or output to be synchronized to<br />
+video with microsecond precision. Datapixx reset behaviour is to recognize the<br />
+pixel sequence anywhere within a video frame. <a href="SetVideoPixelSyncLine" class="uri">SetVideoPixelSyncLine</a> configures<br />
+whether the pixel sequence should only be recognized on a single raster line.<br />
+-“rasterLine” specifies the raster line.<br />
+-“singleLine” default value of 1 means that pixel sync will only be recognized<br />
+on rasterLine. Passing a value of 0 to singleLine will allow the pixel sequences<br />
+to be recognized on any raster line.<br />
+-“blankLine” default value of 1 means that rasterLine will always be displayed<br />
+black. This effectively hides the presence of the pixel sequence from the<br />
+display viewer. Passing a value of 0 to blankLine will display rasterLine as<br />
+normal video.</p>
+<p>&lt;&lt;=====See also:===== RegWrPixelSync, GetVideoStatus &lt;&lt;</p>

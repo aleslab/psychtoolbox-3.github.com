@@ -1,0 +1,38 @@
+<h2 id="psychtoolbox-psychtests">[[Psychtoolbox]] › [[PsychTests]]</h2>
+<p><a href="DrawTextFontSwitchSpeedTest" class="uri">DrawTextFontSwitchSpeedTest</a> - Test font settings switching speed.</p>
+<p>This is a benchmark of the speed with which <a href="Screen" class="uri">Screen</a>(‘DrawText’) et<br />
+al. can handle switching between different font settings between text<br />
+drawing. Specifically it tests switching between different text sizes, text<br />
+styles and font families. It also performs non-switched drawing to establish<br />
+a baseline.</p>
+<p>After running for a thousand repetitions for each conditon, it prints a<br />
+summary of drawing speed and then exits.</p>
+<h3 id="background">Background:</h3>
+<p>In an ideal world, changing text settings should not slow down text drawing.<br />
+In the real world, each time you change a text setting, <a href="Screen" class="uri">Screen</a>() needs to<br />
+recompute various things, e.g., it needs to load new font data from the<br />
+filesystem, rasterize glyphs into little images, convert them into <a href="OpenGL" class="uri">OpenGL</a><br />
+textures and upload them into the graphics card. This takes time and slows<br />
+down text drawing after each change of settings.</p>
+<p>The Linux text renderer can cache the precomputed data for multiple different<br />
+sets of text settings. This means that if you alternate repeatedly between a limited<br />
+number of different text settings, e.g., drawing text strings of different font, size or<br />
+style within one stimulus frame, then this will be only slow on the first stimulus frame.<br />
+Linux ptb will remember the computed font data in a cache and recycle it in successive<br />
+repetitions of those text settings. Therefore any repetition of a previously used text<br />
+setting is “free” and fast. The number of cacheable settings is limited, as it consumes<br />
+memory, currently to about 40 different settings. If you exceed that number, <a href="Screen" class="uri">Screen</a><br />
+will expunge the least used settings and be intelligent about what to recycle and what<br />
+not. If you use non-repetitive settings then of course no caching in the world will help<br />
+you. If no caching can be used - or at first use of a setting - subsequent text drawing will<br />
+be about 10 - 15 times slower.</p>
+<p>On other operating systems, nothing will be cached or recycled, resulting in generally<br />
+much slower text drawing speeds, even with constant text settings.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychTests/DrawTextFontSwitchSpeedTest.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychTests/DrawTextFontSwitchSpeedTest.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychTests/DrawTextFontSwitchSpeedTest.m</code></p>
+</div>

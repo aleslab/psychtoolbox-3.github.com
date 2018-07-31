@@ -1,0 +1,37 @@
+<h2 id="psychtoolbox-psychoneliners">[[Psychtoolbox]] › [[PsychOneliners]]</h2>
+<p>Method to override a MATLAB built-in function with a user-supplied function<br />
+with the same name. The way this works is that it replaces the built-in function<br />
+with a function handle parameter whose name matches that of the overriden<br />
+function.</p>
+<p>Usage:<br />
+functionName = overrideBuiltInFunction(‘functionName’, overridingFunctionPath);</p>
+<pre><code>  where the overridingFunctionPath string can be the full path to the overriding  
+  function or a uniquely-identifying subset of the full path.  
+
+  This call must be done in the script where you will use the override.   
+  To use across several scripts, make it a global function handle:  
+
+  global functionName  
+  functionName = overrideBuiltInFunction(&#39;functionName&#39;, overridingFunctionPath);  </code></pre>
+<p>Example Usage:<br />
+Override Matlab’s built-in function lab2xyz with the one supplied by ISETBIO<br />
+located in ‘/Users/Shared/Matlab/Toolboxes/ISETBIO/isettools/color/transforms’</p>
+<pre><code>  lab2xyz = overrideBuiltInFunction(&#39;lab2xyz&#39;, &#39;isetbio&#39;);  </code></pre>
+<p>Test that it works:<br />
+clear all<br />
+functions(<span class="citation" data-cites="lab2xyz">@lab2xyz</span>)<br />
+lab2xyz = overrideBuiltInFunction(‘lab2xyz’, ‘isetbio’);<br />
+functions(lab2xyz)</p>
+<p>Undoing the override:<br />
+To ‘unoverride’, simply clear the function handle. This should bring back<br />
+the built-in function, e.g.:</p>
+<pre><code>  clear lab2xyz  </code></pre>
+<p>10/9/2014 NPC Wrote it.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOneliners/overrideBuiltInFunction.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOneliners/overrideBuiltInFunction.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOneliners/overrideBuiltInFunction.m</code></p>
+</div>

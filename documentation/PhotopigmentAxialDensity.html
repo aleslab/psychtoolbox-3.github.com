@@ -1,0 +1,46 @@
+<h2 id="psychtoolbox-psychcolorimetricdata">[[Psychtoolbox]] › [[PsychColorimetricData]]</h2>
+<p>densities = <a href="PhotopigmentAxialDensity" class="uri">PhotopigmentAxialDensity</a>(receptorTypes,[species],[source],[fieldSizeDegrees])</p>
+<p>Return estimates of photopigment axial density, sometimes called peak<br />
+absorbance.</p>
+<p>Allowable receptor types depend on species and source, but the general<br />
+list is:<br />
+<a href="SCone" class="uri">SCone</a>, <a href="MCone" class="uri">MCone</a>, <a href="LCone" class="uri">LCone</a>, <a href="FovealSCone" class="uri">FovealSCone</a>, <a href="FovealMCone" class="uri">FovealMCone</a>, <a href="FovealLCone" class="uri">FovealLCone</a>, Rod.</p>
+<p>The type argument may be a single string or a cell array of strings. If it<br />
+is an array, a column vector of values is returned.</p>
+<p>The foveal version of cone types is sensible only for primates. Not all<br />
+estimate sources support all receptor types.</p>
+<p>Note that the following three numbers are overdetermined: photopigment<br />
+specific density (sd), photopigment axial density (ad), and outer segment<br />
+length osl. In particular, ad = sd*osl. Depending on the measurement<br />
+method, different sources provide different pairs of these numbers.<br />
+We have attempted to enforce this consistency in the set of routines<br />
+<a href="PhotopigmentSpecificDensity" class="uri">PhotopigmentSpecificDensity</a>, <a href="PhotopigmentAxialDensity" class="uri">PhotopigmentAxialDensity</a>, and <a href="PhotoreceptorDimensions" class="uri">PhotoreceptorDimensions</a>.<br />
+That is to say, for the same source, species, and cone type, you should get<br />
+a consistent triplet of numbers.</p>
+<p>Supported species:<br />
+Human (Default).</p>
+<p>Supported sources:<br />
+Rodieck (Human) (Default).<br />
+<a href="StockmanSharpe" class="uri">StockmanSharpe</a> (Human).<br />
+CIE (Human).<br />
+Tsujimura (Human; melanopsin-containing <a href="RGCs">RGCs)</a>)</p>
+<p>The CIE method takes a field size argument. This<br />
+overrides the specified foveal or not part of the<br />
+cone string. If the field type is not passed and<br />
+the method is CIE, it is set to 10-degrees for <a href="SCone" class="uri">SCone</a>, <a href="MCone" class="uri">MCone</a>,<br />
+and <a href="LcCne" class="uri">LcCne</a>, and to 2-degrees for <a href="FovealSCone" class="uri">FovealSCone</a>, <a href="FovealMCone" class="uri">FovealMCone</a>, and<br />
+<a href="FovealLCone" class="uri">FovealLCone</a>.</p>
+<p>The fieldSizeDegrees argument is ignored for sources other than<br />
+CIE.</p>
+<p>7/11/03 dhb Wrote it.<br />
+8/12/11 dhb Added CIE source, and allow passing of fieldSizeDegrees.<br />
+4/20/12 dhb Add Tsujimura’s estimate of melanopsin optical density in human.<br />
+12/16/12 dhb, ms Add Alpern’s rod estimates from CVRL table.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychColorimetricData/PhotopigmentAxialDensity.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychColorimetricData/PhotopigmentAxialDensity.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychColorimetricData/PhotopigmentAxialDensity.m</code></p>
+</div>

@@ -1,0 +1,38 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p>tonset = <a href="PredictVisualOnsetForTime" class="uri">PredictVisualOnsetForTime</a>(window, when [, refreshinterval])</p>
+<p>Map a specific requested ‘when’ visual onset time, as you would pass it as<br />
+‘when’ parameter to <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’, window, when); to the estimated onset<br />
+time of the “flipped” stimulus.</p>
+<p>By default, the refresh interval from <a href="Screen" class="uri">Screen</a>(‘GetFlipInterval’, window);<br />
+is used for calculation, but you can provide an optional<br />
+‘refreshinterval’ to override this choice.</p>
+<p>This function predicts the real onset time of your “flipped” stimulus,<br />
+taking into account that <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) will not show your stimulus at<br />
+exactly the requested ‘when’ time, but it will synchronize stimulus onset<br />
+to the display refresh cycle of your monitor, ie, it will wait for onset<br />
+of the closest vertical blanking interval equal or later than ‘when’.</p>
+<p>You can use the predicted ‘tonset’ to synchronize other modalities to<br />
+visual stimulus onset. E.g., our sound driver <a href="PsychPortAudio" class="uri">PsychPortAudio</a> can accept<br />
+such a time as sound onset deadline in order to synch sound onset with<br />
+visual stimulus onset…</p>
+<p>Of course if your stimulus is too complex to be finished with drawing<br />
+until ‘when’ then <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) will miss the deadline and this<br />
+prediction will be wrong.</p>
+<h3 id="accuracy-of-prediction">Accuracy of prediction:</h3>
+<p>On Linux with FOSS graphics drivers on Intel, AMD and <a href="NVidia" class="uri">NVidia</a> hardware,<br />
+and some dedicated SoC’s, precision should be accurate to the low usecs<br />
+range.</p>
+<p>On other systems that support timing via beamposition queries, the prediction<br />
+should be accurate to better than 200 microseconds. On systems without<br />
+beamposition queries, the prediction may be off by up to a millisecond<br />
+worst case. On such systems we can’t determine and correct for the<br />
+duration of the vertical blanking interval, so the prediction will be a<br />
+bit too early.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/PredictVisualOnsetForTime.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/PredictVisualOnsetForTime.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/PredictVisualOnsetForTime.m</code></p>
+</div>

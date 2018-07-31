@@ -1,0 +1,24 @@
+<h2 id="psychtoolbox-psychtests">[[Psychtoolbox]] › [[PsychTests]]</h2>
+<p><a href="TextBug" class="uri">TextBug</a><br />
+Demonstrates an off-by-one bug in <a href="Screen" class="uri">Screen</a>(‘Drawtext’). The rendered text<br />
+is drawn +1 pixel to the right of where it should be. This leaves the<br />
+leftmost pixel unused, and clips off the rightmost pixel of the string.<br />
+The bug is demonstrated here by drawing a letter twice, first in green as<br />
+part of a string that has a space added (so no clipping occurs) and is<br />
+then overwritten in black, without the added space. A green right edge is<br />
+apparent in many rendered characters, at least in the Sloan font whose<br />
+characters have no built-in spacing. The program also finds the bounding<br />
+box of each character. For Sloan, the top bound is always zero, which is<br />
+correct, but the left bound is always 1, which should also be zero.</p>
+<p>Denis Pelli March 21, 2007<br />
+denis.pelli@…<br />
+The Sloan font may be downloaded from here:<br />
+http://psych.nyu.edu/pelli/software.html</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychTests/TextOffByOneBugTest.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychTests/TextOffByOneBugTest.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychTests/TextOffByOneBugTest.m</code></p>
+</div>

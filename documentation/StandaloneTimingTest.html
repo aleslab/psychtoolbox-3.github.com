@@ -1,0 +1,19 @@
+<h2 id="psychtoolbox-psychtests">[[Psychtoolbox]] › [[PsychTests]]</h2>
+<p><a href="StandaloneTimingTest" class="uri">StandaloneTimingTest</a>(use_sigsetjmp, savemask)</p>
+<p>run a timing loop in a separate process, indepenent of MATLAB. plot the results.</p>
+<p>use_sigsetmask specifies whether the <a href="StandaloneTimingTest" class="uri">StandaloneTimingTest</a> program will<br />
+call sigsetjmp() within the timing loop. If sigsetmask is set, then<br />
+<a href="StandaloneTimingTest" class="uri">StandaloneTimingTest</a> passes savemask to sigsetjmp in the second argument.</p>
+<p>comparing results of <a href="StandaloneTimingTest" class="uri">StandaloneTimingTest</a> with and without<br />
+sigsetjmp shows that calling sigsetjmp with the savemask<br />
+argument set causes OS X to suspend execution of the <a href="StandaloneTimingTest" class="uri">StandaloneTimingTest</a><br />
+application for up to 13 ms.</p>
+<p>SEE ALSO: <a href="StandaloneTimingTest" class="uri">StandaloneTimingTest</a>.c</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychTests/StandaloneTimingTest.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychTests/StandaloneTimingTest.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychTests/StandaloneTimingTest.m</code></p>
+</div>

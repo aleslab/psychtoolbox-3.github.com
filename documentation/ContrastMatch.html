@@ -1,0 +1,39 @@
+<h2 id="psychtoolbox-psychcal">[[Psychtoolbox]] › [[PsychCal]]</h2>
+<p>weight=<a href="ContrastMatch" class="uri">ContrastMatch</a>(device,dimWeight,[foreColor],[backColor])</p>
+<p>Displays two gratings. The bright grating alternates white and weight*white,<br />
+producing luminances <a href="LMax" class="uri">LMax</a> and <a href="LBright" class="uri">LBright</a>.<br />
+The dim grating alternates dimWeight*white and black, producing luminances<br />
+<a href="LDim" class="uri">LDim</a> and <a href="LMin" class="uri">LMin</a>.<br />
+When the grating contrasts match, <a href="LMax" class="uri">LMax</a>/<a href="LBright" class="uri">LBright</a>=<a href="LDim" class="uri">LDim</a>/<a href="LMin" class="uri">LMin</a>.<br />
+In a more compact notation, L1/Lb=Ld/L0. We set the weight wd that produces<br />
+Ld, and the observer adjusts the weight wb that produces Lb. They are related<br />
+by the gamma function, y=g(w), where y is the normalized luminance,<br />
+y=(L-L0)/(L1-L0). We know wb and wd, and we have access to the gamma function,<br />
+so we can compute yb and yd. Solving for L, we have<br />
+L=y*(L1-L0)+L0<br />
+Our relation at match can be rewritten as<br />
+L1*L0=Ld*Lb<br />
+0=Ld*Lb-L1*L0<br />
+=(yd*(L1-L0)+L0)*(yb*(L1-L0)+L0)-L1*L0<br />
+Let’s divide by L1^2, and define r=L0/L1.<br />
+=(yd*(1-r)+r)*(yb*(1-r)+r)-r<br />
+This is a quadratic equation in r<br />
+=(yd+(1-yd)*r)*(yb+(1-yb)*r)-r<br />
+=yd*yb+(yb*(1-yd)+yd*(1-yb)-1)*r+(1-yd)*(1-yb)*r^2<br />
+c=[(1-yd)*(1-yb) yb*(1-yd)+yd*(1-yb)-1 yd*yb]; % coefficients of quadratic polynomial<br />
+r=roots(c)<br />
+The answer, r, is the desired ratio of L0/L1.</p>
+<p>5/28/96 dgp Wrote it.<br />
+5/28/96 dgp Updated to use new <a href="GetMouse" class="uri">GetMouse</a>, that flushes mouse events.<br />
+8/4/96 dhb Changed name to <a href="ContrastMatch" class="uri">ContrastMatch</a>.<br />
+8/16/97 dgp Changed “text” to “theText” to avoid conflict with TEXT function.<br />
+7/19/98 dgp Removed obsolete TIMER.<br />
+6/30/03 dgp Updated <a href="Screen" class="uri">Screen</a> <a href="OpenScreen" class="uri">OpenScreen</a> to <a href="Screen" class="uri">Screen</a> <a href="OpenWindow" class="uri">OpenWindow</a>.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychCal/ContrastMatch.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychCal/ContrastMatch.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychCal/ContrastMatch.m</code></p>
+</div>

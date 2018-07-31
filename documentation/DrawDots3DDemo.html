@@ -1,0 +1,54 @@
+<h2 id="psychtoolbox-psychdemos-opengl4matlabdemos">[[Psychtoolbox]] › [[PsychDemos]] › [[OpenGL4MatlabDemos]]</h2>
+<p><a href="DrawDots3DDemo" class="uri">DrawDots3DDemo</a> – Show fast drawing of 3D dots.</p>
+<p>Usage: <a href="DrawDots3DDemo" class="uri">DrawDots3DDemo</a>([stereoMode=0][, multiSample=0]);</p>
+<p>This demo shows how to use the moglDrawDots3D() function to draw 3D dots<br />
+in <a href="OpenGL" class="uri">OpenGL</a> 3D mode. The function is mostly equivalent to<br />
+<a href="Screen" class="uri">Screen</a>(‘DrawDots’) for drawing of 2D dots in regular 2D mode.</p>
+<p>The first subdemo simply fills the whole 3D scene with uniformly sampled<br />
+random 3D dots, using the special sampling procedure<br />
+<a href="CreateUniformDotsIn3DFrustum" class="uri">CreateUniformDotsIn3DFrustum</a>() which was contributed by Diederick<br />
+Niehorster.</p>
+<p>The second subdemo shows how to use a GLSL vertex shader on modern GPU’s<br />
+to speed up complex drawing of complex 3D dot fields. It shows a nicely<br />
+shaded, slowly rotating “Utah Teapot”. Below the teapot is a primitive<br />
+“sparkling fire” of 100 3D dots, which are lit by <a href="OpenGL" class="uri">OpenGL</a> and whose<br />
+positions are computed in Matlab/Octave on the CPU. The teapot also emits<br />
+a fountain of colorful particles from its nozzle. This fountain consists<br />
+of 10000 particles, and the particle trajectories are computed on the GPU<br />
+by use of a GLSL vertex shader. Please note that this subdemo may be<br />
+pretty boring, not showing the magic fountain, if your GPU doesn’t<br />
+support shaders.</p>
+<p>The 3rd subdemo is a speed shootout: It draws the same fountain as demo<br />
+2, but as fast as it can, with sync of display updates to the vertical<br />
+retrace disabled. The fountain is drawn 3 times a 20 seconds duration.<br />
+First with purely Matlab computed trajectories, then with the same shader<br />
+as in demo 2, then again with the shader, but additionally applying<br />
+<a href="OpenGL" class="uri">OpenGL</a> display lists to store all data in the fast VRAM of the GPU to<br />
+gain an additional speedup. At the end of these three benchmark runs, the<br />
+demo will end and print out the average redraw rates attainable by the<br />
+three methods. On a modern system with a modern graphics card, you should<br />
+observe quite drastic speedups of GPU+VRAM vs. GPU vs. Matlab/CPU.</p>
+<p>The 4th subdemo simulates a “warp-flight” by creating a particle fountain<br />
+that approaches the viewer, expanding while doing so.</p>
+<p>Btw. if you are a proud owner of a good 3D stereo setup, or at least of<br />
+some anaglyph glasses, you should try the stereo display option as well,<br />
+e.g., stereoMode == 8 for red-blue anaglyphs.</p>
+<p>Pressing the <a href="ESCape" class="uri">ESCape</a> key continues the demo and progresses to next<br />
+subdemo. Mouse clicks will pause some demos, until another mouse click<br />
+continues the demo.</p>
+<h3 id="optional-parameter">Optional parameter:</h3>
+<p>‘stereoMode’ if set to a non-zero value, will render at lest the 2nd demo<br />
+in a binocular stereo presentation mode, using the method specified in<br />
+the ‘stereoMode’ flag. See for example <a href="ImagingStereoDemo" class="uri">ImagingStereoDemo</a> for available<br />
+modes.</p>
+<p>‘multiSample’ if set to a non-zero value will enable multi-sample<br />
+anti-aliasing. This however usually doesn’t give good results with<br />
+smoothed 3D dots.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/OpenGL4MatlabDemos/DrawDots3DDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/OpenGL4MatlabDemos/DrawDots3DDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/OpenGL4MatlabDemos/DrawDots3DDemo.m</code></p>
+</div>

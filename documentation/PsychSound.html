@@ -1,0 +1,111 @@
+<h2 id="psychtoolbox-psychsound">[[Psychtoolbox]] › [[PsychSound]]</h2>
+<p>Psychtoolbox:<a href="PsychSound" class="uri">PsychSound</a> – Psychtoolbox sound functions, based on <a href="OpenAL" class="uri">OpenAL</a><br />
+and <a href="PsychPortAudio" class="uri">PsychPortAudio</a>.</p>
+<p>If you need “traditional” support for audio capture or output as most do,<br />
+see “help <a href="PsychPortAudio" class="uri">PsychPortAudio</a>” and “help <a href="InitializePsychSound" class="uri">InitializePsychSound</a>” for info about<br />
+our excellent <a href="PsychPortAudio" class="uri">PsychPortAudio</a> driver.</p>
+<p>If you need 3D spatialized sound output, read on!</p>
+<p>Psychtoolbox allows you to directly call low-level <a href="OpenAL" class="uri">OpenAL</a> commands from<br />
+the Matlab environment in nearly the same way as you could do from native<br />
+C or C++ code. This way you can code and use sound recording<br />
+algorithms and 3D sound output algorithms in Matlab, utilizing the power of<br />
+modern sound hardware by calling <a href="OpenAL" class="uri">OpenAL</a> functions.</p>
+<p>Access to <a href="OpenAL" class="uri">OpenAL</a> from Matlab is provided by the “Matlab <a href="OpenAL" class="uri">OpenAL</a> toolbox”<br />
+(MOAL) which was derived from the MOGL toolbox for <a href="OpenGL" class="uri">OpenGL</a>.</p>
+<p><a href="OpenAL" class="uri">OpenAL</a> is a free (free software), cross-platform (Windows, Macintosh, Linux),<br />
+highly efficient, easy to learn, flexible audio library which incorporates<br />
+advanced features like 3D spatialized sound, multi-channel support, streaming,<br />
+audio capture, special effects like echo, reverb, attenuation, doppler effects<br />
+and other stuff. Its programming model and API closely resembles <a href="OpenGL" class="uri">OpenGL</a>, so<br />
+<a href="OpenGL" class="uri">OpenGL</a> programmers will find themselves immediatels at home with this library,<br />
+and its very easy to extend 3D graphics code with corresponding 3D sound.</p>
+<p>MOAL provides one Matlab wrapper M-File for each corresponding <a href="OpenAL" class="uri">OpenAL</a><br />
+function. The wrapper file calls into a special MEX file (moalcore) which<br />
+implements the C-language interface to <a href="OpenAL" class="uri">OpenAL</a>. The syntax of a Matlab<br />
+<a href="OpenAL" class="uri">OpenAL</a> command is mostly identical to its C counterpart with a few<br />
+small exceptions that are imposed to us by the design of Matlab:</p>
+<ol type="1">
+<li>Return values are returned in Matlab-style, as left-hand side<br />
+arguments of the calls, instead of being right-hand side arguments as in<br />
+C:</li>
+</ol>
+<p>E.g., the C language call alGetIntegerv<a href="(GLenum)%20pname,%20%5BGLint%5D(GLint)*%20params">(GLenum</a>;<br />
+becomes params = alGetIntegerv(pname); in Matlab, because ‘params’ is a<br />
+return argument of alGetIntegerv.</p>
+<ol start="2" type="1">
+<li>Commands that don’t take arguments don’t have empty braces, because<br />
+Matlab doesn’t allow this:</li>
+</ol>
+<p>E.g., the C language call alEnd(); becomes alEnd; in Matlab.</p>
+<ol start="3" type="1">
+<li>All AL, ALU and ALC constants start with prefix AL. instead of AL_<br />
+E.g., AL_TRUE becomes AL.TRUE …</li>
+</ol>
+<p>Each subroutine that intends to use AL constants needs to define the<br />
+variable AL as global: Example<br />
+function myOpenALSubroutine()<br />
+global AL; % Define AL variable as global.<br />
+…rest of function implementation…<br />
+return;</p>
+<p>If you want to use ALC constants, then ‘global ALC’ is also needed.</p>
+<ol start="4" type="1">
+<li>In your main Matlab script or M-File you need to call the function<br />
+<a href="InitializeMatlabOpenAL" class="uri">InitializeMatlabOpenAL</a>; This command initializes the <a href="OpenAL" class="uri">OpenAL</a> for Matlab toolbox and<br />
+sets up Psychtoolbox to play nicely with Matlab-<a href="OpenAL" class="uri">OpenAL</a> and other <a href="OpenAL" class="uri">OpenAL</a><br />
+toolboxes.</li>
+</ol>
+<h3 id="support-for-3rd-party-openal-mex-files">Support for 3rd party <a href="OpenAL" class="uri">OpenAL</a> MEX-Files:</h3>
+<p>You can also code up <a href="OpenAL" class="uri">OpenAL</a> algorithms in the C programming language and<br />
+compile them into Matlab-MEX files if you have “need for speed”. Your Mex<br />
+files will just contain the mixture of ANSI C code and <a href="OpenAL" class="uri">OpenAL</a> calls, but<br />
+no code to setup the <a href="OpenAL" class="uri">OpenAL</a> rendering context. You just need to call the<br />
+<a href="InitializeMatlabOpenAL" class="uri">InitializeMatlabOpenAL</a>; function. After that call, an audio device will<br />
+be set up and the associated <a href="OpenAL" class="uri">OpenAL</a> rendering context will be active. All<br />
+commands in your MEX-File will apply to that rendering context.</p>
+<p>If you want to write <a href="OpenAL" class="uri">OpenAL</a> mex-files that are portable across different<br />
+operating systems (OS-X, Windows, Linux) then have a look at:<br />
+‘Psychtoolbox/<a href="PsychSound" class="uri">PsychSound</a>/MOAL/source’ for how to do this. This folder<br />
+contains the source code and Makefiles for our own moalcore mex-file…</p>
+<h3 id="known-limitations">KNOWN LIMITATIONS:</h3>
+<p>Depending on your specific code, rendering speed in Matlab may be<br />
+slightly lower than when executing the same code from C or C++. This<br />
+is the price you’ll have to pay for using Matlab, but our abstraction<br />
+layer is very thin, so most applications won’t be really affected.</p>
+<p>Some <a href="OpenAL" class="uri">OpenAL</a> functions are not yet implemented in the toolbox, because<br />
+these functions can’t get automatically generated, so their wrappers need<br />
+to be coded manually. Our goal is to provide full support for the<br />
+<a href="OpenAL" class="uri">OpenAL</a>-API but finalizing all functions may take some time. Mostly some<br />
+of the query-functions - functions that don’t set <a href="OpenAL" class="uri">OpenAL</a> state or execute<br />
+some operation, but query the current settings of <a href="OpenAL" class="uri">OpenAL</a>, are missing.<br />
+Also, some of the more exotic <a href="OpenAL" class="uri">OpenAL</a> extensions are not yet supported.</p>
+<p>Apart from these limitations that will get removed in the future, there<br />
+are limitations imposed by your operating system and sound hardware.</p>
+<p>Support for <a href="OpenAL" class="uri">OpenAL</a> functions varies between different sound hardware,<br />
+so if you want to use the latest and greatest <a href="OpenAL" class="uri">OpenAL</a> functions, you’ll<br />
+need to buy and install the latest and greatest sound hardware.</p>
+<p>Typical limitations of low-end versus high-end hardware:<br />
+- Number of sound sources / channels that can be played back simultaneously.<br />
+- Complexity of audio processing that can be performed.<br />
+- Latency in sound processing.<br />
+- Quality of 3D spatial audio rendering.</p>
+<h3 id="contents">CONTENTS:</h3>
+<p>* All supported <a href="OpenAL" class="uri">OpenAL</a> low-level functions can be found in the folder<br />
+‘Psychtoolbox/<a href="PsychSound" class="uri">PsychSound</a>/MOAL/wrap/’. Functions prefixed with _ are not<br />
+yet implemented.</p>
+<p>* High-level helper functions can be found in ‘Psychtoolbox/<a href="PsychSound" class="uri">PsychSound</a>/’<br />
+and its subfolders.</p>
+<p>* Demos can be found in ‘Psychtoolbox/<a href="PsychDemos" class="uri">PsychDemos</a>/SoundDemos’</p>
+<p>Lot’s of documentation, tutorials, code samples and news about <a href="OpenAL" class="uri">OpenAL</a> can<br />
+be found by following links at:</p>
+<p>http://www.openal.org</p>
+<p>Googling for <a href="OpenAL" class="uri">OpenAL</a> is also a option.</p>
+<p>Enjoy!</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychSound/Contents.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychSound/Contents.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychSound/Contents.m</code></p>
+</div>
+<p>{{category}}</p>

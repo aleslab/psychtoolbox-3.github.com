@@ -1,0 +1,23 @@
+<h2 id="psychtoolbox-psychhardware-bitsplustoolbox-bitsplustests">[[Psychtoolbox]] › [[PsychHardware]] › [[BitsPlusToolbox]] › [[BitsPlusTests]]</h2>
+<p><a href="BitsPlusImagingMonoTest" class="uri">BitsPlusImagingMonoTest</a>([testdrawingcmds])</p>
+<p>Test of built-in Mono++ output conversion shader of PTB<br />
+imaging pipeline. This is meant to test Bits++ Mono++<br />
+conversion of GPU against reference implementation of<br />
+Matlab <a href="BitsPlus" class="uri">BitsPlus</a> toolbox.</p>
+<p>First the stimulus is generated via Matlab conversion routine.<br />
+Then it is drawn via PTB imaging pipeline conversion.<br />
+Then the PTB imaging result is read back and compared against<br />
+the result of the Matlab implementation and the maximum error<br />
+is returned. This error should be zero.</p>
+<p>The optional parameter ‘testdrawingcmds’ specs if pure texture<br />
+mapping should be tested, or if a combo of texture mapping and<br />
+<a href="Screen" class="uri">Screen</a> 2D drawing commands gets tested (1).</p>
+<p>THIS TEST IS NOT FINISHED. EARLY BETA.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/BitsPlusToolbox/BitsPlusTests/BitsPlusImagingMonoTest.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/BitsPlusToolbox/BitsPlusTests/BitsPlusImagingMonoTest.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/BitsPlusToolbox/BitsPlusTests/BitsPlusImagingMonoTest.m</code></p>
+</div>

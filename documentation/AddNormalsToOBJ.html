@@ -1,0 +1,24 @@
+<h2 id="psychtoolbox-psychopengl">[[Psychtoolbox]] › [[PsychOpenGL]]</h2>
+<p>obj = <a href="AddNormalsToOBJ" class="uri">AddNormalsToOBJ</a>(obj [, flipDir=0]);<br />
+Adds surface normal vectors to the vertices of the given input ‘obj’ 3D<br />
+object representation, returns the new ‘obj’ with added vertex normal<br />
+vectors. If the input ‘obj’ already has normal vectors assigned, these<br />
+are overwritten!</p>
+<p>The optional parameter ‘flipDir’ defines if the direction of the computed<br />
+normal vectors should be flipped by 180 degrees. Effectively, it selects<br />
+which side of the triangle is considered to be the “outside” - the direction<br />
+into which the normal vector should point.</p>
+<p>The employed algorithm only works on triangles, not on quads. It computes<br />
+a per-triangle normal vector via normalized cross-product computation among<br />
+the edges of the triangle. Then it distributes those normals to the 3<br />
+vertices that define the triangle, accumulating contributions of all<br />
+triangles that share a vertex. At the end, the accumulated normals are<br />
+normalized and assigned as per-vertex normals.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOpenGL/AddNormalsToOBJ.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOpenGL/AddNormalsToOBJ.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOpenGL/AddNormalsToOBJ.m</code></p>
+</div>

@@ -1,0 +1,32 @@
+<h1 id="psychoculusvrcoregetundistortionparameters"><a href="PsychOculusVRCore-GetUndistortionParameters">PsychOculusVRCore(‘GetUndistortionParameters’)</a></h1>
+<h2 id="psychtoolbox-psychoculusvrcore.mexdll-subfunction">[[Psychtoolbox]] › [[PsychOculusVRCore]].{mex*,dll} subfunction</h2>
+<p>Return parameters needed for rendering and undistortion for Oculus device<br />
+‘oculusPtr’.<br />
+‘eye’ which eye to provide the data: 0 = Left, 1 = Right.<br />
+‘inputWidth’ = Width of the rendered input image buffer in pixels.<br />
+‘inputHeight’ = Height of the rendered input image buffer in pixels.<br />
+‘fov’ Optional field of view in degrees, from line of sight: [leftdeg, rightdeg,<br />
+updeg, downdeg]. You can pass in the ‘fovPort’ value returned from<br />
+<a href="PsychOculusVR" class="uri">PsychOculusVR</a>(‘GetFovTextureSize’); Defaults to whatever has been set for the<br />
+given eye in the last call to <a href="PsychOculusVR" class="uri">PsychOculusVR</a>(‘GetFovTextureSize’); if omitted.</p>
+<p>Return values:<br />
+[width, height] = Width and height of client renderbuffers in pixels. Same as<br />
+the provided ‘inputWidth’ and ‘inputHeight’.<br />
+[viewPx, viewPy, viewPw, viewPh] Render viewport [x,y,w,h] start (x,y) position,<br />
+width and height. Mostly useless atm., as viewPx and viewPy are always zero,<br />
+viewPw and viewPh are identical to width and height in the current driver<br />
+design.<br />
+[pptax pptay] = Pixels per tangens angle at display center in x direction and y<br />
+direction.<br />
+[hmdShiftx, hmdShifty, hmdShiftz] = <a href="HmdToEyeViewOffset" class="uri">HmdToEyeViewOffset</a> 3D translation vector.<br />
+Defines the location of the optical center of the eye relative to the origin of<br />
+the local head reference frame, ie. the tracked head position.<br />
+[meshVertices meshIndices] = Matrices with the definitions of the geometric<br />
+undistortion triangle meshes. ‘meshIndices’ is a vector of 0-based indices into<br />
+the vertex mesh ‘meshVertices’ for building a mesh out of triangles.<br />
+‘meshVertices’ is a matrix with as many columns as mesh vertices, each column<br />
+encoding one vertex. Each row encodes for one vertex property. See the Oculus<br />
+developers manual for explanation of the format.<br />
+[uvScaleX, uvScaleY, uvOffsetX, uvOffsetY] Scaling factors and offsets for<br />
+texture coordinates in normalized device coordinates.</p>
+<p>&lt;&lt;=====See also:===== GetFovTextureSize &lt;&lt;</p>

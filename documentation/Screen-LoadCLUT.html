@@ -1,0 +1,34 @@
+<h1 id="screenloadclut"><a href="Screen-LoadCLUT">Screen(‘LoadCLUT’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Load or query the hardware gamma table of the specified screen. If you pass a<br />
+new ‘clut’ hardware gamma table, then ‘clut’ needs to be a matrix with 1 to<br />
+(256-startEntry) rows and 3 columns. Each row corresponds to a single color<br />
+index value and contains the Red- green- and blue values to use for output of a<br />
+pixel of that color. If you provide ‘startEntry’ then the hardware clut is<br />
+overwritten by your table starting at color index ‘startEntry’ instead of<br />
+starting at index 0. You are free to provide a clut with only a few rows if you<br />
+only want to update a subset of the color indices in the hardware clut. Column 1<br />
+is the red value, column 2 is the green value and column 3 is the blue value<br />
+that you want to load into the hardware clut for a specific index. Values in the<br />
+table have to be in range between 0 (for dark pixel) and ‘max’ (for maximum DAC<br />
+output intensity), where ‘max’ depends on the number of bits that the RAMDAC of<br />
+your graphics hardware supports. Psychtoolbox currently has no way of knowing<br />
+the bit-resolution of your RAMDAC, so you have to provide it in the optional<br />
+argument ‘bits’. If you don’t provide a ‘bits’ setting, it defaults to a safe<br />
+default of 8-Bits. Some examples for ‘bits’ vs. ‘max’: 8 bits (default) –&gt; max<br />
+= 255. 9 bits –&gt; max=511. 10 bits –&gt; max=1023. 12 bits –&gt; max = 4095. On<br />
+<a href="MacOS" class="uri">MacOS</a>-X and Linux, this function takes arbitrary clut-tables which makes it<br />
+suitable for fast CLUT animation. On Microsoft Windows, only tables with<br />
+monotonically increasing values are considered valid. Other tables get rejected<br />
+by the operating system – there’s nothing we can do about this incredibly wise<br />
+decision of the Microsoft system designers :( , so this function is not suitable<br />
+for CLUT animation, but only for linearizing or calibrating display devices.<br />
+PLEASE NOTE: <a href="LoadCLUT" class="uri">LoadCLUT</a> is only provided to keep old code from OS-9 PTB and old<br />
+Windows PTB working. It is just a wrapper around ‘LoadNormalizedGammaTable’. Use<br />
+‘LoadNormalizedGammaTable’ for new code. That function is independent of DAC<br />
+resolution as it takes values in a normalized range between 0.0 and 1.0 and<br />
+always gives you the highest possible resolution for your gamma table, despite<br />
+not knowing the real DAC resolution. This function returns the old CLUT as<br />
+optional return argument. If you don’t pass a clut, then it only returns the old<br />
+CLUT.</p>
+<p>&lt;&lt;=====See also:===== LoadNormalizedGammaTable ReadNormalizedGammaTable &lt;&lt;</p>

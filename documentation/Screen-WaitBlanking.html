@@ -1,0 +1,20 @@
+<h1 id="screenwaitblanking"><a href="Screen-WaitBlanking">Screen(‘WaitBlanking’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Wait for specified number of monitor refresh intervals, stopping PTB’s execution<br />
+until then. Select waitFrames=1 (or omit it, since that’s the default) to wait<br />
+for the beginning of the next frame. “windowPtr” is the pointer to the onscreen<br />
+window for which we should wait for. framesSinceLastWait contains the number of<br />
+video refresh intervals from the last time <a href="Screen" class="uri">Screen</a>(‘WaitBlanking’) or<br />
+<a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) returned until return from this call to <a href="WaitBlanking" class="uri">WaitBlanking</a>. Please note<br />
+that this function is only provided to keep old code from OS-9 PTB running. Use<br />
+the <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) command for all new code as this allows for much higher<br />
+accuracy and reliability of stimulus timing and enables a huge number of new and<br />
+very useful features! COMPATIBILITY TO OS-9 PTB: If you absolutely need to run<br />
+old code for the old <a href="MacOS" class="uri">MacOS</a>-9 or Windows Psychtoolbox, you can switch into a<br />
+compatibility mode by adding the command <a href="Screen" class="uri">Screen</a>(‘<a href="Preference" class="uri">Preference</a>’, ‘EmulateOldPTB’,<br />
+1) at the very top of your script. This will restore Offscreen windows and<br />
+<a href="WaitBlanking" class="uri">WaitBlanking</a> functionality, but at the same time disable most of the new<br />
+features of the <a href="OpenGL" class="uri">OpenGL</a> Psychtoolbox. Please do not write new experiment code in<br />
+the old style! Emulation mode is pretty new and may contain significant bugs, so<br />
+use with great caution!</p>
+<p>&lt;&lt;=====See also:===== OpenWindow Flip Screen(‘Preference’, ‘EmulateOldPTB’, 1) &lt;&lt;</p>

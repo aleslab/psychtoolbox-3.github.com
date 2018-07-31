@@ -1,0 +1,36 @@
+<h2 id="psychtoolbox-psychtests">[[Psychtoolbox]] › [[PsychTests]]</h2>
+<p>[times, badOut, misses]=<a href="CheckFrameTiming" class="uri">CheckFrameTiming</a>([rectSize=128][, scale=1][, dur=30][, thresh=0.05][, runPriority=<a href="MaxPriority" class="uri">MaxPriority</a>(‘KbCheck’)][, useWhen=0][,useDrawingFinished=1])</p>
+<p>based on <a href="FastMaskedNoiseDemo" class="uri">FastMaskedNoiseDemo</a>, <a href="CheckFrameTiming" class="uri">CheckFrameTiming</a> collects and displays<br />
+timing info</p>
+<p>rectSize = Size of the generated random noise image: rectSize by rectSize<br />
+pixels. This is also the size of the Psychtoolbox noise<br />
+texture.</p>
+<p>scale = Scalefactor to apply to texture during drawing: E.g. if you’d set<br />
+scale = 2, then each noise pixel would be replicated to draw an image<br />
+that is twice the width and height of the input noise image. In this<br />
+demo, a nearest neighbour filter is applied, i.e., pixels are just<br />
+replicated, not bilinearly filtered – Important to preserve statistical<br />
+independence of the random pixel values!</p>
+<p>dur = seconds to display</p>
+<p>thresh = percent deviation to report as a miss (specify 5% as 0.05)</p>
+<p>runPriority = the priority at which to run</p>
+<p>useWhen = 0 for no when parameter sent to <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) (seems to give<br />
+better timing. any other value sends lastVbl + .5*ifi</p>
+<p>useDrawingFinished = 0 to use <a href="Screen" class="uri">Screen</a>(‘DrawingFinished’). mario’s comment<br />
+suggets it may slow thigns down, but edf thinks it is supposed to speed<br />
+things up and only printing its return value would slow things down.</p>
+<p>return vals:<br />
+times is a vector of inter-vbl-times as measured by <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’)<br />
+badOut is 3 x N, with one column for each frame whose time deviates by more than thresh % from the ifi<br />
+row 1 is the frame number<br />
+row 2 is the measured frame time<br />
+row 3 is the % deviation from ifi<br />
+misses are the frame numbers that <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) noticed it missed</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychTests/CheckFrameTiming.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychTests/CheckFrameTiming.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychTests/CheckFrameTiming.m</code></p>
+</div>

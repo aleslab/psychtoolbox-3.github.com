@@ -1,0 +1,10 @@
+<h1 id="screenendopengl"><a href="Screen-EndOpenGL">Screen(‘EndOpenGL’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Finish <a href="OpenGL" class="uri">OpenGL</a> rendering by external <a href="OpenGL" class="uri">OpenGL</a> code, prepare 2D drawing into window<br />
+‘windowPtr’.<br />
+This is the counterpart to <a href="Screen" class="uri">Screen</a>(‘BeginOpenGL’). Whenever you used<br />
+<a href="Screen" class="uri">Screen</a>(‘BeginOpenGL’) to enable external <a href="OpenGL" class="uri">OpenGL</a> drawing from Matlab, you *must*<br />
+call <a href="Screen" class="uri">Screen</a>(‘EndOpenGL’) when you’re finished with a window, either because you<br />
+want to draw into a different window, or you want to use a <a href="Screen" class="uri">Screen</a> command.<br />
+Psychtoolbox will abort your script if you omit this command.</p>
+<p>&lt;&lt;=====See also:===== BeginOpenGL SetOpenGLTexture GetOpenGLTexture moglcore &lt;&lt;</p>

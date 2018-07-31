@@ -1,0 +1,122 @@
+<h1 id="screengetwindowinfo"><a href="Screen-GetWindowInfo">Screen(‘GetWindowInfo’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Returns a struct with miscellaneous info for the specified onscreen window.</p>
+<p>“windowPtr” is the handle of the onscreen window for which info should be<br />
+returned.</p>
+<p>“infoType” If left out or set to zero, all available information for the<br />
+‘windowPtr’ is returned.</p>
+<p>If set to 1, only the rasterbeam position of the associated display device is<br />
+returned (or -1 if unsupported).</p>
+<p>If set to 2, information about the window server is returned (or -1 if<br />
+unsupported).</p>
+<p>If set to 3, low-level window server settings are changed according to<br />
+‘auxArg1’. Do *not* use, unless you really know what you’re doing and have read<br />
+the relevant PTB source code!</p>
+<p>If set to 4, returns a single value with the current activity status of<br />
+asynchronous flips. 1 if a <a href="Screen" class="uri">Screen</a>(‘AsyncFlipBegin’) was called and the flip is<br />
+still active, ie., hasn’t been finished with a matching <a href="Screen" class="uri">Screen</a>(‘AsyncFlipEnd’)<br />
+or <a href="Screen" class="uri">Screen</a>(‘AsyncFlipCheckEnd’);, zero otherwise.You can call this function with<br />
+an infoType of zero only if no async flips are active, or if the imaging<br />
+pipeline is fully enabled. This is why you need to use the special infoType 4 to<br />
+find out if async flips are active.</p>
+<p>If set to 5, will start measurement of GPU time for render operations. The clock<br />
+will start on the next drawing command after this call. The clock will by<br />
+default stop at the next call to <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’), <a href="Screen" class="uri">Screen</a>(‘AsyncFlipBegin’), or<br />
+<a href="Screen" class="uri">Screen</a>(‘DrawingFinished’). Measured time will include all the time spent by the<br />
+GPU for preparing the final visual stimulus image for the next flip, including<br />
+all post-processing operations performed by the imaging pipeline.</p>
+<p>If you want to exclude time spent in image post-processing or just measure the<br />
+time spent for a defined set of drawing commands, you can stop the clock earlier<br />
+by calling this function with infoType set to 6. In that case, only GPU time<br />
+spent between the infoType=5 call and the infoType=6 call will be reported,<br />
+excluding any later drawing commands or imaging pipeline post-processing.</p>
+<p>After the measured GPU operations complete, the elapsed rendertime will be<br />
+returned in the ‘GPULastFrameRenderTime’ field of the struct that you get when<br />
+calling with infoType=0.<br />
+Due to the asynchronous nature of GPU rendering, the measured time may not be<br />
+immediately available after the clock is stopped. In this case,<br />
+‘GPULastFrameRenderTime’ will be zero and you will need to repeat the infoType=0<br />
+query later.<br />
+Please note that not all GPU’s and operating systems support this function. If<br />
+the function is unsupported, a value of zero will be returned in the info struct<br />
+and by any call with ‘infoType’ of 5 or 6.</p>
+<p>An ‘infoType’ of 7 does return the same information as the default ‘infoType’ 0,<br />
+but does not set the window ‘windowPtr’ as drawing target, does not activate its<br />
+<a href="OpenGL" class="uri">OpenGL</a> context and only returns information that is safe to return without<br />
+setting the window as drawing target.</p>
+<p>The info struct contains all kinds of information. Just check its output to see<br />
+what is returned. Most of this info is not interesting for normal users, mostly<br />
+provided for internal use by M-Files belonging to Psychtoolbox itself, e.g.,<br />
+display tests.</p>
+<h1 id="the-info-struct-contains-the-following-fields">The info struct contains the following fields</h1>
+<p><a href="BeamPosition" class="uri">BeamPosition</a>: Current rasterbeam position of the video scanout cycle.<br />
+<a href="LastVBLTimeOfFlip" class="uri">LastVBLTimeOfFlip</a>: VBL timestamp of last finished <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) operation.<br />
+<a href="TimeAtSwapRequest" class="uri">TimeAtSwapRequest</a>: Timestamp taken prior to submission of the low-level swap<br />
+command. Useful for micro-benchmarking.<br />
+<a href="TimePostSwapRequest" class="uri">TimePostSwapRequest</a>: Timestamp taken after submission of the low-level swap<br />
+command. Useful for micro-benchmarking.<br />
+<a href="VBLTimePostFlip" class="uri">VBLTimePostFlip</a>: Optional flip completion timestamp from VBLANK timestamping.<br />
+Useful for micro-benchmarking.<br />
+<a href="OSSwapTimestamp" class="uri">OSSwapTimestamp</a>: Optional flip completion timestamp from OS-Builtin<br />
+timestamping. Useful for micro-benchmarking.<br />
+<a href="GPULastFrameRenderTime" class="uri">GPULastFrameRenderTime</a>: Duration of all rendering operations, as measured by<br />
+GPU, if infoType=5 was used.<br />
+<a href="RawSwapTimeOfFlip" class="uri">RawSwapTimeOfFlip</a>: Raw (uncorrected by high-precision timestamping) timestamp of<br />
+last finished <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) operation.<br />
+<a href="LastVBLTime" class="uri">LastVBLTime</a>: System time when last vertical blank happened, or the same as<br />
+<a href="LastVBLTimeOfFlip" class="uri">LastVBLTimeOfFlip</a> if the system doesn’t support queries of this property<br />
+(currently only OS/X does.)<br />
+<a href="VBLCount" class="uri">VBLCount</a>: Running count of vertical blank intervals since (graphics)system<br />
+startup. Or zero if notsupported by system. Currently only OS/X and Linux do<br />
+support this with some GPU’s.<br />
+<a href="VideoRefreshFromBeamposition" class="uri">VideoRefreshFromBeamposition</a>: Estimate of video refresh cycle from beamposition<br />
+measurement method.<br />
+<a href="GLVendor" class="uri">GLVendor</a>, <a href="GLRenderer" class="uri">GLRenderer</a>, <a href="GLVersion" class="uri">GLVersion</a>: Vendor name, renderer name and version of the<br />
+<a href="OpenGL" class="uri">OpenGL</a> implementation.<br />
+<a href="StereoMode" class="uri">StereoMode</a>: Currently selected stereomode, as requested in call to<br />
+<a href="Screen" class="uri">Screen</a>(‘OpenWindow’, …);<br />
+<a href="StereoDrawBuffer" class="uri">StereoDrawBuffer</a>: Current drawbuffer for stereo display (0 = left eye, 1 = right<br />
+eye, 2 = None in mono mode).<br />
+<a href="ImagingMode" class="uri">ImagingMode</a>: Currently selected imging pipeline mode, as requested in call to<br />
+<a href="Screen" class="uri">Screen</a>(‘OpenWindow’, …);<br />
+<a href="MultiSampling" class="uri">MultiSampling</a>: Currently selected multisample anti-aliasing mode, as requested<br />
+in call to <a href="Screen" class="uri">Screen</a>(‘OpenWindow’, …);<br />
+<a href="MissedDeadlines" class="uri">MissedDeadlines</a>: Number of missed <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) stimulus onset deadlines,<br />
+according to internal skip detector.<br />
+<a href="FlipCount" class="uri">FlipCount</a>: Total number of flip command executions, ie., of stimulus updates.<br />
+<a href="GuesstimatedMemoryUsageMB" class="uri">GuesstimatedMemoryUsageMB</a>: Estimated memory usage of window or texture in<br />
+Megabytes. Can be very inaccurate or unavailable!<br />
+<a href="VBLStartLine" class="uri">VBLStartLine</a>, <a href="VBLEndline" class="uri">VBLEndline</a>: Start/Endline of vertical blanking interval. The<br />
+<a href="VBLEndline" class="uri">VBLEndline</a> value is not available/valid on all GPU’s.<br />
+<a href="SwapGroup" class="uri">SwapGroup</a>: Swap group id of the swap group to which this window is assigned.<br />
+Zero for none.<br />
+<a href="SwapBarrier" class="uri">SwapBarrier</a>: Swap barrier id of the swap barrier to which this windows swap<br />
+group is assigned. Zero for none.</p>
+<p>The following settings are derived from a builtin detection heuristic, which<br />
+works on most common GPU’s:</p>
+<p><a href="GPUCoreId" class="uri">GPUCoreId</a>: Symbolic name string that roughly describes the name of the GPU core<br />
+of the graphics card. This string is arbitrarily<br />
+chosen to roughly group the cores by common capabilities (and quirks). Currently<br />
+defined are:<br />
+R100 = Very old ATI <a href="GPUs" class="uri">GPUs</a>, R300 = GPU’s roughly starting at Radeon 9000, R500 =<br />
+Radeon X1000 or later, R600 = Radeon HD2000 or later.<br />
+NV10 = Very old <a href="NVidia" class="uri">NVidia</a> <a href="GPUs" class="uri">GPUs</a>, NV30 = NV30 or later, NV40 = Geforce6000/7000 or<br />
+later, G80 = Geforce8000 or later.<br />
+An empty <a href="GPUCoreId" class="uri">GPUCoreId</a> string means a different, unspecified core.</p>
+<p><a href="BitsPerColorComponent" class="uri">BitsPerColorComponent</a>: Effective color depths of window/framebuffer in bits per<br />
+color channel component (bpc).<br />
+<a href="GLSupportsFBOUpToBpc" class="uri">GLSupportsFBOUpToBpc</a>: 0 = No support for framebuffer objects. Otherwise maximum<br />
+supported bpc (8, 16, 32).<br />
+<a href="GLSupportsBlendingUpToBpc" class="uri">GLSupportsBlendingUpToBpc</a>: Maximum supported bpc for hardware accelerated<br />
+framebuffer blending (alpha blending).<br />
+<a href="GLSupportsTexturesUpToBpc" class="uri">GLSupportsTexturesUpToBpc</a>: Maximum supported bpc for textures (8, 16, 32).<br />
+<a href="GLSupportsFilteringUpToBpc" class="uri">GLSupportsFilteringUpToBpc</a>: Maximum supported bpc for hardware accelerated<br />
+linear filtering of textures (8, 16, 32).<br />
+<a href="GLSupportsPrecisionColors" class="uri">GLSupportsPrecisionColors</a>: 1 = Hardware can be fully trusted to rasterize<br />
+perfect 32 bpc colors in floating point color mode without special support of<br />
+PTB. 0 = Needs special (slower) support from PTB to work.<br />
+<a href="GLSupportsFP32Shading" class="uri">GLSupportsFP32Shading</a>: 1 = All internal caculations of the GPU are done with<br />
+IEEE single precision 32 bit floating point, i.e., very accurate.<br />
+<a href="GPUMinorType" class="uri">GPUMinorType</a>: Numeric vendor specific gpu id. Chip family on <a href="NVidia" class="uri">NVidia</a>, display<br />
+engine revision on AMD atm. -1 if unknown. Subject to change without notice!</p>
+<p>&lt;&lt;=====See also:===== OpenWindow, Flip, NominalFrameRate &lt;&lt;</p>

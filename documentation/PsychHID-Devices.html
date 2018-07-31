@@ -1,0 +1,15 @@
+<h1 id="psychhiddevices"><a href="PsychHID-Devices">PsychHID(‘Devices’)</a></h1>
+<h2 id="psychtoolbox-psychhid.mexdll-subfunction">[[Psychtoolbox]] › [[PsychHID]].{mex*,dll} subfunction</h2>
+<p>Return a struct array describing each connected USB HID device.<br />
+‘deviceClass’ optionally selects for the class of input device. This is not<br />
+supported on all operating systems and will be silently ignored if unsupported.<br />
+On Linux you can select the following classes of input devices: 1 =<br />
+<a href="MasterPointer" class="uri">MasterPointer</a>, 2 = <a href="MasterKeyboard" class="uri">MasterKeyboard</a>, 3 = <a href="SlavePointer" class="uri">SlavePointer</a> 4 = <a href="SlaveKeyboard" class="uri">SlaveKeyboard</a>, 5 =<br />
+Floating slave device.</p>
+<p>deviceClass -1 returns the numeric deviceIndex of the default keyboard device<br />
+for keyboard queues.</p>
+<p>Not all device properties are returned on all operating systems. A zero, empty<br />
+or -1 value for a property in the returned structs can mean that the information<br />
+could not be returned.</p>
+<p>&lt;&lt;=====See also:=====</p>
+<p>&lt;&lt;</p>

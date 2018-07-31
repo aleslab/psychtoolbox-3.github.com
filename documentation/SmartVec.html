@@ -1,0 +1,47 @@
+<h2 id="psychtoolbox-psychoneliners">[[Psychtoolbox]] › [[PsychOneliners]]</h2>
+<p>vect = <a href="SmartVec" class="uri">SmartVec</a>(start,slength,step,mode)<br />
+makes sequence that satisfies certain conditions.</p>
+<p>START is a scalar or vector with starting values of an sequence<br />
+SLENGTH is a scalar or vector (with the same length as START) and<br />
+indicates the length of all sequences or the length of the<br />
+corresponding sequence in START.<br />
+STEP is optional and indicates the stepsize of the series. Default is 1<br />
+STEP can be a scalar and indicate the stepsize for all segments, or it<br />
+can be the same lenght as START if you want to provide a different<br />
+stepsize for each segment<br />
+MODE is optional and has two options:<br />
+‘neg’ : the produced sequence will satisfy : diff([n n+1]) = -1<br />
+‘flat’ : the produced sequence will satisfy : diff([n n+1]) = 0<br />
+if no mode, the produced sequence will satisfy : diff([n n+1]) = 1<br />
+MODE can be the third input to the function if you do not wish to<br />
+override the default stepsize</p>
+<p>examples:<br />
+<a href="SmartVec" class="uri">SmartVec</a>([1 5],3)<br />
+ans =<br />
+1 2 3 5 6 7<br />
+<a href="SmartVec" class="uri">SmartVec</a>([1 5],[3 5])<br />
+ans =<br />
+1 2 3 5 6 7 8 9<br />
+<a href="SmartVec" class="uri">SmartVec</a>([1 5],[3 5],‘neg’)<br />
+ans =<br />
+1 0 -1 5 4 3 2 1<br />
+<a href="SmartVec" class="uri">SmartVec</a>([1 5],[3 5],2,‘neg’)<br />
+ans =<br />
+1 -1 -3 5 3 1 -1 -3<br />
+<a href="SmartVec" class="uri">SmartVec</a>([1 5],3,‘neg’)<br />
+ans =<br />
+1 0 -1 5 4 3<br />
+<a href="SmartVec" class="uri">SmartVec</a>([1 5],[3 5],‘flat’)<br />
+ans =<br />
+1 1 1 5 5 5 5 5<br />
+<a href="SmartVec" class="uri">SmartVec</a>([1 5],3,‘flat’)<br />
+ans =<br />
+1 1 1 5 5 5</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOneliners/SmartVec.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOneliners/SmartVec.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOneliners/SmartVec.m</code></p>
+</div>

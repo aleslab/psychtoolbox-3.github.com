@@ -1,0 +1,24 @@
+<h2 id="psychtoolbox-psychalphablending">[[Psychtoolbox]] › [[PsychAlphaBlending]]</h2>
+<p>newDestinationMat=<a href="AlphaDestinationTerm" class="uri">AlphaDestinationTerm</a>(destinationFactorStr, sourceMatrix, destinationMatrix)</p>
+<p><a href="AlphaDestinationTerm" class="uri">AlphaDestinationTerm</a> simuluates the step of multplying an alpha factor with the<br />
+destination image in <a href="OpenGL" class="uri">OpenGL</a> alpha blending.</p>
+<p>Apply an <a href="OpenGL" class="uri">OpenGL</a> source factor rule such as ‘GL_ZERO’ to the image matrix<br />
+‘destinationMat’, returing the dot product of destinationMat and the<br />
+alpha factor selected by string ‘sourceFactor’.</p>
+<p>The source image matrix ‘sourceMat’ is required because destination<br />
+factor strings may select alpha values from the source image.</p>
+<p><a href="AlphaDestinationTerm" class="uri">AlphaDestinationTerm</a> calculates with double-precision (64-bit) floating<br />
+point arithmatitic whereas the precision of an <a href="OpenGL" class="uri">OpenGL</a> renderer which it<br />
+simulates is unspecified, except that <a href="OpenGL" class="uri">OpenGL</a> guarantees perfect precision<br />
+for alpha values 0 and 1 (255 via <a href="Screen" class="uri">Screen</a>). Comparison of<br />
+<a href="AlphaDestinationTerm" class="uri">AlphaDestinationTerm</a> with the <a href="OpenGL" class="uri">OpenGL</a> renderer shows that alpha<br />
+multiplicaion discards up to one bit of precision.</p>
+<p>see also: <a href="AlphaSourceTerm" class="uri">AlphaSourceTerm</a>, <a href="PsychAlphaBlending" class="uri">PsychAlphaBlending</a></p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychAlphaBlending/AlphaDestinationTerm.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychAlphaBlending/AlphaDestinationTerm.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychAlphaBlending/AlphaDestinationTerm.m</code></p>
+</div>

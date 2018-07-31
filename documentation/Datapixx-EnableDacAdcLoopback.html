@@ -1,0 +1,15 @@
+<h1 id="datapixxenabledacadcloopback"><a href="Datapixx-EnableDacAdcLoopback">Datapixx(‘EnableDacAdcLoopback’)</a></h1>
+<h2 id="psychtoolbox-datapixx.mexdll-subfunction">[[Psychtoolbox]] › [[Datapixx]].{mex*,dll} subfunction</h2>
+<p>Enable an internal loopback from the DAC outputs to the ADC inputs. This causes<br />
+voltages programmed into the DAC output channels to appear on the ADC input<br />
+channels. This convenient feature can be useful when developing analog<br />
+acquisition and analysis routines. Your routines can be tested using simulated<br />
+analog waveforms which play on the DAC scheduler.<br />
+Because there are more ADC channels than DAC channels in the system, the<br />
+following loopback mapping used:<br />
+-DAC0 drives ADC0/2/4/6/8/10/12/14<br />
+-DAC1 drives ADC1/3/5/7/9/11/13/15<br />
+-DAC2 drives REF0<br />
+-DAC3 drives REF1<br />
+See <a href="DatapixxAdc" class="uri">DatapixxAdc</a>*Demo files for examples.</p>
+<p>&lt;&lt;=====See also:===== DisableDacAdcLoopback, GetAdcStatus &lt;&lt;</p>

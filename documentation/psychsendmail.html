@@ -1,0 +1,31 @@
+<h2 id="psychtoolbox-psychhardware-iviewxtoolbox-cbase64">[[Psychtoolbox]] › [[PsychHardware]] › [[iViewXToolbox]] › [[cbase64]]</h2>
+<p>SENDMAIL Send Internet e-mail<br />
+Using SENDMAIL (which needs the TCP/UDP/IP toolbox, freely available from<br />
+http://petrydpc.ite.mh.se/tools/) it is possible to send e-mail messages<br />
+from the Matlab prompt. This can be useful when you want to be notified<br />
+when large jobs terminate on remote machines.</p>
+<p>Usage<br />
+[RETCODE] = SENDMAIL(FROM, TO, SUBJ, MESG [, FILENAME]) send an e-mail with<br />
+subject SUBJ and contents MESG to the email address in TO, with<br />
+the From: field set to FROM.</p>
+<p>FROM, TO and SUBJ are Matlab strings. MESG can be either a<br />
+string, or a cell array of strings.</p>
+<p>RETCODE is 0 if the message was sent succesfully, otherwise it<br />
+has the value -1.</p>
+<p>The optional argument FILENAME is a string containing the<br />
+filename of the file to be attached to the message. It may<br />
+contain path information.</p>
+<p>Examples<br />
+sendmail(‘me@some.where.com’,‘me@else.where.org’,‘Job Finished!’,‘It took 4 days, 12 hours,6 minutes.’)</p>
+<p>sendmail(‘me@some.where.com’,‘me@else.where.org’,‘Job Finished!’,‘Finaly…’, ‘results.mat’)</p>
+<p>Installation<br />
+1. Make sure the TCP/UDP/IP toolbox is somewhere in your PATH<br />
+2. Adjust the SMTPSERVER, SMTPSERVERPORT and CLIENTIP variables to reflect your situation.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/iViewXToolbox/cbase64/psychsendmail.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/iViewXToolbox/cbase64/psychsendmail.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/iViewXToolbox/cbase64/psychsendmail.m</code></p>
+</div>

@@ -1,0 +1,20 @@
+<h2 id="psychtoolbox-psychopengl-mogl-wrap">[[Psychtoolbox]] › [[PsychOpenGL]] › [[MOGL]] › [[wrap]]</h2>
+<p>ptr = moglmalloc(nrbytes) – Allocate a memory buffer inside mogl.<br />
+This function allocates an internal memory buffer inside mogl for use<br />
+with <a href="OpenGL" class="uri">OpenGL</a> functions that use buffers for passing data forth and back<br />
+between Matlab and <a href="OpenGL" class="uri">OpenGL</a>, e.g., glFeedbackBuffer() or glSelectBuffer().</p>
+<p>nrbytes = The number of bytes to allocate.</p>
+<p>On successfull allocation, ptr will be a handle for the memory buffer.<br />
+You can think of ptr as a memory pointer in the C-language.</p>
+<p>moglmalloc()’ed memory buffers can be released - one by one - via<br />
+moglfree(ptr), all at once via moglfreeall, and they are automatically<br />
+released when moglcore is clear’ed via clear moglcore, clear mex or<br />
+clear all.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOpenGL/MOGL/wrap/moglmalloc.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOpenGL/MOGL/wrap/moglmalloc.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOpenGL/MOGL/wrap/moglmalloc.m</code></p>
+</div>

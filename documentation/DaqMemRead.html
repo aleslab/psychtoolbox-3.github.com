@@ -1,0 +1,21 @@
+<h2 id="psychtoolbox-psychhardware-daq">[[Psychtoolbox]] › [[PsychHardware]] › [[Daq]]</h2>
+<p>[data,[errorstructure]]=<a href="DaqMemRead" class="uri">DaqMemRead</a><a href="(DeviceIndex),address,bytes">(DeviceIndex</a><br />
+USB-1208FS: Read memory. This command reads data from the configuration<br />
+memory (EEPROM). All of the memory may be read.<br />
+“<a href="DeviceIndex" class="uri">DeviceIndex</a>” is a small integer, the array index specifying which HID<br />
+device in the array returned by <a href="PsychHID" class="uri">PsychHID</a>(‘Devices’) is interface 0<br />
+of the desired USB-1208FS box.<br />
+“address” is the 16-bit start address for the read.<br />
+“bytes” is the number of bytes to be read, up to a maximum of 62.</p>
+<p>Several functions called by this function may produce errors, so<br />
+errorstructure is a vector. It is only returned if the function is called<br />
+with two output arguments.<br />
+See also <a href="DaqWriteCode" class="uri">DaqWriteCode</a>, <a href="DaqMemWrite" class="uri">DaqMemWrite</a>, Daq, <a href="DaqTest" class="uri">DaqTest</a>, <a href="PsychHidTest" class="uri">PsychHidTest</a>.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/Daq/DaqMemRead.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/Daq/DaqMemRead.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/Daq/DaqMemRead.m</code></p>
+</div>

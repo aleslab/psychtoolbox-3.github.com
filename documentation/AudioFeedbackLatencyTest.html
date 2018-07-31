@@ -1,0 +1,28 @@
+<h2 id="psychtoolbox-psychtests">[[Psychtoolbox]] › [[PsychTests]]</h2>
+<p><a href="AudioFeedbackLatencyTest" class="uri">AudioFeedbackLatencyTest</a>([trigger=0.1] [, nrtrials=10] [, freq=44100][, freqout=44100][, runmode=1])</p>
+<p>Tries to test sound onset accuracy of <a href="PsychPortAudio" class="uri">PsychPortAudio</a> without need for<br />
+external measurement equipment: Sound signals are played back via<br />
+<a href="PsychPortAudio" class="uri">PsychPortAudio</a> at well defined points in time, using low-latency mode. At<br />
+the same time, sound is captured via PsychPortAudio’s capture facilities.<br />
+The idea is that the microphone or line-in connector should pick up and<br />
+capture the sound signals emitted through line-out (via a line-out -&gt;<br />
+line-in feedback cable) or emitted through the speakers. We measure and<br />
+compare timing of emitted vs. captured sound spikes.</p>
+<p>Results on <a href="MacbookPro" class="uri">MacbookPro</a> suggest that the method works, but with a not 100%<br />
+accuracy, so its still better to use external measurement equipment to<br />
+test!!!</p>
+<p>EARLY BETA CODE: DON’T USE OR USE WITH GREAT CAUTION!</p>
+<p>Optional parameters:<br />
+‘trigger’ = Trigger level for detection of sound onset in captured sound.</p>
+<p>‘ntrials’ = Number of measurement trials to perform.</p>
+<p>‘freq’ = Samplerate of capture device.</p>
+<p>‘freqout’ = Samplerate of playback device.</p>
+<p>Obviously this test function can only be used in a very silent room!</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychTests/AudioFeedbackLatencyTest.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychTests/AudioFeedbackLatencyTest.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychTests/AudioFeedbackLatencyTest.m</code></p>
+</div>

@@ -1,0 +1,56 @@
+<h1 id="screencolorrange"><a href="Screen-ColorRange">Screen(‘ColorRange’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Set or return the maximum color component value that PTB should allow for<br />
+provided color values when drawing into a window ‘windowPtr’ or its associated<br />
+Offscreen windows. ‘maximumvalue’ is the optional new setting for the maximum<br />
+allowed color component value: PTB expects the values of provided color<br />
+components (red, green, blue, alpha or intensity) to be in the range 0 to<br />
+maximumvalue. 0 is mapped to minimum output intensity, maximumvalue is mapped to<br />
+maximum output intensity, values outside the range 0-maximumvalue are<br />
+automatically saturated (clamped) at zero or maximumvalue if clamping is<br />
+enabled. Initially color range clamping is enabled and the maximumvalue defaults<br />
+to the biggest integral number displayable by your video hardware, e.g., 255 for<br />
+a standard 8 bit per color component framebuffer as present on most consumer<br />
+graphics hardware.<br />
+A maximumvalue == 1.0 has special meaning: A maximumvalue of 1.0 will enable PTB<br />
+to pass color values in OpenGL’s native floating point color range of 0.0 to<br />
+1.0: This has two advantages: First, your color values are independent of<br />
+display device depth, i.e. no need to rewrite your code when running it on<br />
+higher resolution hardware. Second, PTB can skip any color range remapping<br />
+operations - this can speed up drawing significantly in some cases.<br />
+‘clampcolors’: By default, <a href="OpenGL" class="uri">OpenGL</a> clamps colors to the range 0-maximumvalue.<br />
+Negative colors are clamped to zero, color values greater than maximumvalue are<br />
+clamped to maximumvalue. If you set the optional flag ‘clampcolors’ to 0, PTB<br />
+will disable color clamping on hardware that supports unclamped colors. This<br />
+allows to pass arbitrary (even negative) floating point numbers as color values.<br />
+This is useful in conjunction with special high dynamic range display devices<br />
+and for certain image processing operations when using PTB’s image processing<br />
+pipeline. If your hardware/operating system does support shaders, but not<br />
+unclamped colors, <a href="Screen" class="uri">Screen</a> will try to use a shader-based workaround to enable<br />
+unclamped color processing despite missing hardware capabilities - This comes at<br />
+some performance penalty. You can also force <a href="Screen" class="uri">Screen</a> to always use its own<br />
+unclamped color implementation by setting ‘clampcolors’ to a value of -1. On<br />
+some graphics hardware, this may increase the precision with which the color of<br />
+drawn objects is handled, but again at some speed penalty.<br />
+CAUTION: If you change the color range or clamping of an onscreen window with<br />
+this function, the change will only affect textures and offscreen windows<br />
+created *after* this function call, not ones created before. It’s therefore<br />
+recommended to execute this function immediately after creating an onscreen<br />
+window to guarantee consistent behaviour of your code. Color values provided as<br />
+uint8 arrays or as textures, e.g., from video capture, movies or<br />
+<a href="Screen" class="uri">Screen</a>(‘MakeTexture’) are not rescaled, asthey are (expected) to be in a proper<br />
+format for the given color depth already. However, the <a href="Screen" class="uri">Screen</a>(‘MakeTexture’)<br />
+command has an optional flag ‘floatprecision’ that allows you to pass image<br />
+matrices unclamped and with either 16 bpc or 32 bpc floating point color<br />
+precision if you want.<br />
+Additionally you can force <a href="Screen" class="uri">Screen</a>(‘MakeTexture’) to apply the ‘maximumvalue’<br />
+setting to regular textures which are provided as Matlab double type matrices by<br />
+setting the optional parameter ‘applyToDoubleInputMakeTexture’ to 1. This will<br />
+allow an input range of double values between zero and ‘maximumvalue’ to make<br />
+your code more consistent, but it will still limit the range of valid values to<br />
+that range and will represent that range only with 8 bit for 256 different<br />
+levels, ie., the description of the ‘clampcolors’ setting do not apply to such<br />
+uint8 low-precision textures! For full precision unconstrained textures, you’ll<br />
+still need to set the ‘floatprecision’ flag accordingly, as such textures<br />
+require more memory and processing resources.</p>
+<p>&lt;&lt;=====See also:===== OpenWindow OpenOffscreenWindow &lt;&lt;</p>

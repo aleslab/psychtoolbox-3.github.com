@@ -1,0 +1,41 @@
+<h2 id="psychtoolbox-psychcal">[[Psychtoolbox]] › [[PsychCal]]</h2>
+<p>[gammaTable1, gammaTable2, displayBaseline, displayRange. displayGamma, maxLevel ] = <a href="CalibrateMonitorPhotometer" class="uri">CalibrateMonitorPhotometer</a>([numMeasures=9][, screenid=max])</p>
+<p>A simple calibration script for analog photometers.</p>
+<p>Use <a href="CalibrateMonSpd" class="uri">CalibrateMonSpd</a>() if you want to do more fancy calibration with<br />
+different types of photometers or special devices like Bits+ or <a href="DataPixx" class="uri">DataPixx</a>,<br />
+assuming you know how to operate <a href="CalibrateMonSpd" class="uri">CalibrateMonSpd</a>() that is…</p>
+<p>numMeasures (default: 9) readings are taken manually, and the readings<br />
+are fit with a gamma function and piecewise cubic splines. numMeasures -<br />
+1 should be a power of 2, ideally (9, 17, 33, etc.). The corresponding<br />
+linearized gamma tables (1 -&gt; gamma, 2 -&gt; splines) are returned, as well<br />
+as the display baseline, display range in cd/m^2 and display gamma. Plots<br />
+of the two fits are created as well. Requires fit tools.</p>
+<p>If the normalized gamma table is not loaded, then the cd/m^2 value of a<br />
+screen value can be figured out by the formula: cdm2 =<br />
+displayRange*(screenval/maxLevel).^(1/displayGamma) + displayBaseline.</p>
+<p>Generally, you will want to load the normalized gamma tables and use them<br />
+in <a href="Screen" class="uri">Screen</a>(‘LoadNormalizedGammaTable’). For example:</p>
+<p>[gammaTable1, gammaTable2] = <a href="CalibrateMonitorPhotometer" class="uri">CalibrateMonitorPhotometer</a>;<br />
+%Look at the outputted graphs to see which one gives a better fit<br />
+%Then save the corresponding gamma table for later use<br />
+gammaTable = gammaTable1;<br />
+save <a href="MyGammaTable" class="uri">MyGammaTable</a> gammaTable</p>
+<p>%Then when you’re ready to use the gamma table:<br />
+load <a href="MyGammaTable" class="uri">MyGammaTable</a><br />
+<a href="Screen" class="uri">Screen</a>(‘LoadNormalizedGammaTable’, win, gammaTable*[1 1 1]);</p>
+<p>History:<br />
+Version 1.0: Patrick Mineault (patrick.mineault@gmail.com)<br />
+22.10.2010 mk Switch numeric input from use of input() to use of<br />
+<a href="GetNumber" class="uri">GetNumber</a>(). Restore gamma table after measurement. Make<br />
+more robust.<br />
+19.08.2012 mk Some cleanup.<br />
+4.09.2012 mk Use <a href="Screen" class="uri">Screen</a>(‘ColorRange’) to adapt number/max of intensity<br />
+level to given range of framebuffer.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychCal/CalibrateMonitorPhotometer.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychCal/CalibrateMonitorPhotometer.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychCal/CalibrateMonitorPhotometer.m</code></p>
+</div>

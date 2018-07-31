@@ -1,0 +1,123 @@
+<h2 id="psychtoolbox-psychdemos-psychtutorials">[[Psychtoolbox]] › [[PsychDemos]] › [[PsychTutorials]]</h2>
+<p><a href="AdditiveBlendingForLinearSuperpositionTutorial" class="uri">AdditiveBlendingForLinearSuperpositionTutorial</a>([outputdevice=‘None’] [, overlay=1] [, colorclut=0] [, doGainCorrection=0]);</p>
+<p>Illustrates use of floating point textures in combination with<br />
+source-weighted additive alpha blending to create linear superpositions<br />
+of image patches, in this case of two superimposed gratings. Due to the<br />
+use of additive alpha-blending, you’ll see that the two gratings will<br />
+superimpose onto each other in a mathematically correct way – pixel-wise<br />
+addition/subtraction of luminance values. The demo uses a 32 bit floating<br />
+point framebuffer on the latest hardware. This allows for an effective 23<br />
+bits of precision in all math done and in the final stimuli - more than<br />
+any display device in existence could resolve. On previous generation<br />
+hardware (older than <a href="NVidia" class="uri">NVidia</a> Geforce 88000 or ATI Radeon HD2000), alpha<br />
+blending isn’t supported in 32 bpc float precision. Therefore the demo<br />
+will select 16 bpc floating point precision, where alpha blending works.<br />
+This way the effective precision is 11 bits, a bit less than what special<br />
+display devices can resolve. However, final gamma correction is done in<br />
+full 23 bits precision, so you can make use of the extra bits for proper<br />
+display linearization.</p>
+<p>The demo also demonstrates Psychtoolbox support for high precision<br />
+display output devices, ie., display extenders, graphics cards and<br />
+display modes that allow for luminance display with more than the<br />
+standard 8 bits precision. By default the standard 8 bit framebuffer of<br />
+standard graphics cards is demonstrated.</p>
+<p>However, by providing the first optional parameter ‘outputdevice’, you<br />
+can select amongst all devices supported by PTB:</p>
+<p>‘NoneNoGamma’ - Same as ‘None’: Use standard 8 bit framebuffer, but<br />
+disable the gamma correction provided by PTB’s imaging pipeline. This is<br />
+usually not what you want, but it allows to test how much faster the<br />
+display runs without gamma correction.</p>
+<p>‘PseudoGray’ - <a href="PseudoGray" class="uri">PseudoGray</a> display, also known as “Bit stealing”. This<br />
+technique allows to create the perception of up to 1786 different<br />
+luminance levels on standard 8 bit graphics hardware by use of some<br />
+clever color rendering trick. See “help <a href="CreatePseudoGrayLUT" class="uri">CreatePseudoGrayLUT</a>” for<br />
+references and details.</p>
+<p>‘Native10Bit’ - Enables the native 10 bpc framebuffer support on ATI<br />
+Radeon X1xxx / <a href="HDxxx" class="uri">HDxxx</a> GPU’s when used under Linux or OS/X with the<br />
+<a href="PsychtoolboxKernelDriver" class="uri">PsychtoolboxKernelDriver</a> loaded (see “help <a href="PsychtoolboxKernelDriver" class="uri">PsychtoolboxKernelDriver</a>” on<br />
+how to do that). These GPU’s do support 10 bits per color channel when<br />
+this special mode is used. This also works with properly configured <a href="NVidia" class="uri">NVidia</a><br />
+GPU’s under Linux, and with <a href="NVidia" class="uri">NVidia</a> Quadro and AMD Fire gpu’s under<br />
+some versions of MS-Windows.</p>
+<p>‘Native11Bit’ - Enables the native ~11 bpc framebuffer support on ATI<br />
+Radeon X1xxx / <a href="HDxxx" class="uri">HDxxx</a> GPU’s when used under Linux or OS/X with the<br />
+<a href="PsychtoolboxKernelDriver" class="uri">PsychtoolboxKernelDriver</a> loaded (see “help <a href="PsychtoolboxKernelDriver" class="uri">PsychtoolboxKernelDriver</a>” on<br />
+how to do that). These GPU’s do support ~11 bits per color channel when<br />
+this special mode is used (11 bits red, 11 bits green, 10 bits blue).</p>
+<p>‘Native16Bit’ - Enables the native up to 16 bpc framebuffer support on AMD<br />
+GPU’s when used under Linux . While this activates a 16 bpc framebuffer,<br />
+the precision of the video output signal depends on the specific gpu, connection<br />
+and display. As of 2014, the “Sea Islands” AMD gpu family can output at most<br />
+12 bpc precision to suitable displays over HDMI or <a href="DisplayPort" class="uri">DisplayPort</a>. This mode needs<br />
+special configuration of your system and use of the Linux open-source graphics<br />
+drivers. If you can do with 10 bpc or 11 bpc, ‘Native10Bit’ or ‘Native11Bit’ are<br />
+much easier to use and setup and provide higher performance.</p>
+<p>‘VideoSwitcher’ - Enable the Xiangrui Li et al. <a href="VideoSwitcher" class="uri">VideoSwitcher</a>, a special<br />
+type of video attenuator (see “help <a href="PsychVideoSwitcher" class="uri">PsychVideoSwitcher</a>”) in standard<br />
+“simple” mode.</p>
+<p>‘VideoSwitcherCalibrated’ - Enable the Xiangrui Li et al. <a href="VideoSwitcher" class="uri">VideoSwitcher</a>,<br />
+but use the more complex (and more accurate?) mode with calibrated lookup<br />
+tables (see “help <a href="PsychVideoSwitcher" class="uri">PsychVideoSwitcher</a>”).</p>
+<p>‘Attenuator’ - Enable support for standard Pelli &amp; Zhang style video<br />
+attenuators by use of lookup tables.</p>
+<p>Then we have support for the different modes of operation of the<br />
+Cambridge Research Systems Bits++ box:</p>
+<p>‘Mono++’ - Use 14 bit mono output mode, either with color index overlay<br />
+(if the optional 2nd ‘overlay’ flag is set to 1, which is the default),<br />
+or without color index overlay.</p>
+<p>‘Color++’ - User 14 bits per color component mode.</p>
+<p>Then we have support for the different modes of operation of the<br />
+<a href="VPixx" class="uri">VPixx</a> Technologies <a href="DPixx" class="uri">DPixx</a> <a href="(DataPixx)" class="uri">(DataPixx)</a> box:</p>
+<p>‘M16’ - Use 16 bit mono output mode, either with color index overlay<br />
+(if the optional 2nd ‘overlay’ flag is set to 1, which is the default),<br />
+or without color index overlay.</p>
+<p>‘C48’ - User 16 bits per color component mode.</p>
+<p>‘BrightSide’ - Enable drivers for BrightSide’s HDR display. This only<br />
+works if you have a <a href="BrightSide" class="uri">BrightSide</a> HDR display + the proper driver libraries<br />
+installed on MS-Windows. On other operating systems it just uses a simple<br />
+dummy emulation of the display with less than spectacular results.</p>
+<p>‘DualPipeHDR’ - Use experimental output to dual-pipeline HDR display<br />
+device.</p>
+<p>The third optional parameter ‘colorclut’ if provided, will use color<br />
+lookup table based color correction / mapping, ie., mapping of luminance<br />
+values to RGB values in the framebuffer - or intensity values if<br />
+applicable. Any non-zero number will select a different CLUT. Look into<br />
+the code for description. This just to demonstrate that you can use CLUT<br />
+based color/intensity correction instead of simple power-law gamma<br />
+correction if you want.</p>
+<p>The fourth optional parameter ‘doGainCorrection’ if provided and set to<br />
+1, will demonstrate use of display per-pixel gain correction, aka<br />
+vignetting correction. It will modulate the brightness of each pixel with<br />
+a gain factor, the gains increasing linearly from the left border to the<br />
+right border of the display. See “help <a href="VignettingCorrectionDemo" class="uri">VignettingCorrectionDemo</a>” for more<br />
+details of this feature.</p>
+<p>Please note: Most of these modes only show expected results when the<br />
+proper devices are attached and calibrated. All modes will work even on<br />
+standard graphics without special devices, but you’ll just see a false<br />
+color image, as the standard GPU’s can’t interpret the special<br />
+framebuffer encodings.</p>
+<p>The demo shows two superimposed sine wave gratings in the center of the<br />
+screen. You can shift the 2nd grating up and down in subpixel steps by<br />
+use of the cursor up-/down keys. You can change the contrast of the 2nd<br />
+grating by use of the cursor left-/right keys. You can move the 2nd<br />
+grating with the mouse, and rotate it clockwise or counterclockwise by<br />
+pressing the mouse buttons. The keys ‘i’ and ‘d’ allow to change the<br />
+“encoding gamma” factor used for the gamma correction algorithm. The ESC<br />
+ape key ends the demo. Actually the demo performs some benchmark run for<br />
+a few seconds after you’ve pressed ESC key, just to measure the speed of<br />
+your graphics card in stimulus conversion.</p>
+<p>In ‘VideoSwitcher’ mode, it also draws some vertically moving greenish<br />
+sync line just to show how to generate trigger signals on the<br />
+<a href="VideoSwitcher" class="uri">VideoSwitcher</a> device.</p>
+<p>Needs hardware with support for imaging pipeline (GLSL shaders and<br />
+floating point framebuffers). Should work well on ATI Radeon X1000 and<br />
+later, Geforce 6000 and later and even better on <a href="DirectX10" class="uri">DirectX10</a> hardware like<br />
+Radeon HD series and <a href="NVidia" class="uri">NVidia</a> Geforce 8 / 9 series and later.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/PsychTutorials/AdditiveBlendingForLinearSuperpositionTutorial.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/PsychTutorials/AdditiveBlendingForLinearSuperpositionTutorial.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/PsychTutorials/AdditiveBlendingForLinearSuperpositionTutorial.m</code></p>
+</div>

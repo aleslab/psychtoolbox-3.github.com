@@ -1,0 +1,21 @@
+<h2 id="psychtoolbox-quest">[[Psychtoolbox]] › [[Quest]]</h2>
+<p>intensity=<a href="QuestQuantile" class="uri">QuestQuantile</a>(q,[quantileOrder])</p>
+<p>Gets a quantile of the pdf in the struct q. You may specify the desired<br />
+quantileOrder, e.g. 0.5 for median, or, making two calls, 0.05 and 0.95<br />
+for a 90% confidence interval. If the “quantileOrder” argument is not<br />
+supplied, then it’s taken from the “q” struct. <a href="QuestCreate" class="uri">QuestCreate</a> uses<br />
+<a href="QuestRecompute" class="uri">QuestRecompute</a> to compute the optimal quantileOrder and saves that in the<br />
+“q” struct; this quantileOrder yields a quantile that is the most<br />
+informative intensity for the next trial.</p>
+<p>This is based on work presented at a conference, but otherwise<br />
+unpublished: Pelli, D. G. (1987). The ideal psychometric procedure.<br />
+Investigative Ophthalmology &amp; Visual Science, 28(Suppl), 366.</p>
+<p>See Quest.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/Quest/QuestQuantile.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/Quest/QuestQuantile.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/Quest/QuestQuantile.m</code></p>
+</div>

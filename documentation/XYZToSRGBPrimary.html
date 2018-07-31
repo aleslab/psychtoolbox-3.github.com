@@ -1,0 +1,29 @@
+<h2 id="psychtoolbox-psychcolorimetric">[[Psychtoolbox]] › [[PsychColorimetric]]</h2>
+<p>[rgb,M] = <a href="XYZToSRGBPrimary" class="uri">XYZToSRGBPrimary</a>(XYZ)</p>
+<p>Convert between CIE XYZ to sRGB primary<br />
+coordinates. These are linear device<br />
+coordinates for the primaries of the sRGB<br />
+standard. If your input is scaled in the<br />
+gamut of the monitor, the numbers will come<br />
+out in the range 0-1. You may want to scale<br />
+the result into the range 0-1 before applying<br />
+sRGB gamma correction.</p>
+<p>Originally implemented from conversion matrix as specified at:<br />
+http://www.srgb.com/basicsofsrgb.htm<br />
+It turns out this was the draft standard. The site above is gone<br />
+You can still find the draft standard at:<br />
+http://www.colour.org/tc8-05/Docs/colorspace/61966-2-1.pdf</p>
+<p>I can’t find the official technical standard on the web, but<br />
+there is pretty good agreement across web sources. Wikipedia<br />
+seems fine, as does.<br />
+http://www.w3.org/Graphics/Color/sRGB</p>
+<p>5/1/04 dhb Wrote it.<br />
+7/8/10 dhb Updated to match standard I can now find on the web.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychColorimetric/XYZToSRGBPrimary.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychColorimetric/XYZToSRGBPrimary.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychColorimetric/XYZToSRGBPrimary.m</code></p>
+</div>

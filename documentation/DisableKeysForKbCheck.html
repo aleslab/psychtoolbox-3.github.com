@@ -1,0 +1,28 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p>olddisabledkeys = <a href="DisableKeysForKbCheck" class="uri">DisableKeysForKbCheck</a>([disablekeys])</p>
+<p>Specify a vector of keycodes for keys which should be<br />
+ignored by <a href="KbCheck" class="uri">KbCheck</a> and <a href="KbWait" class="uri">KbWait</a>. This is useful to<br />
+disable specific keys, e.g., if they are stuck. The function<br />
+returns the old set of disabled keys.</p>
+<p>Example: To disable the keys with keycodes 4, 6 and 7, do<br />
+<a href="DisableKeysForKbCheck" class="uri">DisableKeysForKbCheck</a>([4, 6, 7]);</p>
+<p>Caution: This setting is reset to “empty” during a “clear all” command!</p>
+<h3 id="background-info">Background info:</h3>
+<p>Some users of Laptops experienced the problem of “stuck keys”: Some keys<br />
+are always reported as “down”, so <a href="KbWait" class="uri">KbWait</a> returns immediately and <a href="KbCheck" class="uri">KbCheck</a><br />
+always reports keyIsDown == 1. This is often due to special function keys.<br />
+These keys or system functionality are assigned vendor specific<br />
+key codes, e.g., the status of the Laptop lid (opened/closed) could be<br />
+reported by some special keycode. Whenever the Laptop lid is open, this key<br />
+will be reported as pressed. You can work around this problem by passing<br />
+a list of keycodes to be ignored by <a href="KbCheck" class="uri">KbCheck</a> and <a href="KbWait" class="uri">KbWait</a>.<br />
+_________________________________________________________________________</p>
+<p>See also: <a href="FlushEvents" class="uri">FlushEvents</a>, <a href="KbName" class="uri">KbName</a>, <a href="KbDemo" class="uri">KbDemo</a>, <a href="KbWait" class="uri">KbWait</a>, <a href="KbCheck" class="uri">KbCheck</a>, <a href="GetChar" class="uri">GetChar</a>, <a href="CharAvail" class="uri">CharAvail</a>.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/DisableKeysForKbCheck.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/DisableKeysForKbCheck.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/DisableKeysForKbCheck.m</code></p>
+</div>

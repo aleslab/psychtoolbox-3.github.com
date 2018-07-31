@@ -1,0 +1,43 @@
+<h2 id="psychtoolbox-psychdemos">[[Psychtoolbox]] › [[PsychDemos]]</h2>
+<p>function <a href="DriftDemo6" class="uri">DriftDemo6</a>(angle, cyclespersecond, f)<br />
+___________________________________________________________________</p>
+<p>This demo demonstrates how to use <a href="Screen" class="uri">Screen</a>(‘DrawTexture’) in combination<br />
+with GLSL texture draw shaders to efficiently combine two drifting<br />
+gratings with each other.</p>
+<p>The demo shows a drifting sine grating through a circular aperture. The<br />
+drifting grating is surrounded by an annulus (a ring) that shows a second<br />
+drifting grating with a different orientation.</p>
+<p>The demo ends after a key press or after 60 seconds have elapsed.</p>
+<p>The demo needs modern graphics hardware with shading support, otherwise<br />
+it will abort.</p>
+<p>Compared to previous demos, we apply the aperture to the grating texture<br />
+while drawing the grating texture, ie. in a single drawing pass, instead<br />
+of applying it in a 2nd pass after the grating has been drawn already.<br />
+This is simpler and faster than the dual-pass method. For this, we store<br />
+the grating pattern in the luminance channel of a single texture, and the<br />
+alpha-mask in the alpha channel of *the same texture*. During drawing, we<br />
+apply a special texture filter shader (created via<br />
+<a href="MakeTextureDrawShader" class="uri">MakeTextureDrawShader</a>()). This shader allows to treat the alpha channel<br />
+separate from the luminance or rgb channels of a texture: It applies the<br />
+alpha channel “as is”, but applies some shift to the luminance or rgb<br />
+channels of the texture.</p>
+<p>The procedure is repeated with a 2nd masked texture to create two<br />
+different drifting gratings, superimposed to each other.</p>
+<p>Please note that the same effect can be achieved by clever alpha blending<br />
+on older hardware, e.g., see <a href="DriftDemo5" class="uri">DriftDemo5</a>. The point of this demo is to<br />
+demonstrate how to use GLSL shaders for more efficient ways of<br />
+manipulating textures during drawing.</p>
+<h3 id="parameters">Parameters:</h3>
+<p>angle = Angle of the gratings with respect to the vertical direction.<br />
+cyclespersecond = Speed of gratings in cycles per second.<br />
+f = Frequency of gratings in cycles per pixel.</p>
+<p>_________________________________________________________________________</p>
+<p>see also: <a href="PsychDemos" class="uri">PsychDemos</a>, <a href="MovieDemo" class="uri">MovieDemo</a></p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/DriftDemo6.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/DriftDemo6.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/DriftDemo6.m</code></p>
+</div>

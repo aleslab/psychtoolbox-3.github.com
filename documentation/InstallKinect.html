@@ -1,0 +1,126 @@
+<h2 id="psychtoolbox-psychdocumentation">[[Psychtoolbox]] › [[PsychDocumentation]]</h2>
+<p><a href="InstallKinect" class="uri">InstallKinect</a> - Kinect driver installation instructions.</p>
+<h1 id="ms-windows">MS-Windows</h1>
+<p>Psychtoolbox on Windows currently only supports the original XBOX-360 Kinect,<br />
+not the more recent versions of “Kinect for Windows”. Use GNU/Linux if you want<br />
+to use those.</p>
+<ol type="1">
+<li><p>Unzip the file Psychtoolbox/<a href="PsychContributed" class="uri">PsychContributed</a>/Kinect-v16-<a href="WindowsDrivers" class="uri">WindowsDrivers</a>.zip<br />
+into a temporary folder, e.g., C:[KinectDrivers](KinectDrivers).</p></li>
+<li><p>Plug in your Kinect box into a USB port via the interface cable.</p></li>
+<li><p>The Windows hardware setup assistant will start, tell you about new<br />
+detected hardware and ask you for drivers. Say “No” to the<br />
+“automatically search for drivers” option, but select to “provide your<br />
+own drivers”. In the next tab, select “browse for drivers”, and then<br />
+select the temporary folder with the unzipped file (from step 1) as<br />
+driver folder. Press ok.</p></li>
+<li><p>The driver will be installed from the zip file, the device manager<br />
+will notifiy you of the new device, then prompt you for installation<br />
+of another device. Repeat the same procedure from step 3 until no more<br />
+devices need to be installed. This procedure will repeat three to four<br />
+times until all drivers are installed, as the Kinect shows up as<br />
+multiple separate devices (Video camera, Audio soundcard and<br />
+Kinect motor).</p></li>
+<li><p>The setup assistant will tell you that your new device is fully<br />
+operational. Quit the assistant.</p></li>
+<li><p>Unplug the Kinect, wait a few seconds, plug it in again, just to be<br />
+sure it is correctly detected.</p></li>
+<li><p>Now you can start Matlab or Octave and use the Kinect! Try <a href="KinectDemo" class="uri">KinectDemo</a><br />
+and <a href="Kinect3DDemo" class="uri">Kinect3DDemo</a> for a start, then delve into your own Kinect adventures.</p></li>
+</ol>
+<p>The current Kinect low level drivers are still early prototypes, so<br />
+expect occassional bugs or weird behaviour.</p>
+<h1 id="gnulinux">GNU/Linux</h1>
+<p>If you use the Psychtoolbox distribution provided by the <a href="NeuroDebian" class="uri">NeuroDebian</a><br />
+project (http://neuro.debian.net) there’s nothing to do. It should “just<br />
+work(tm)”, well almost: Skip to step 2. Otherwise the following step 1<br />
+is required:</p>
+<ol type="1">
+<li><p>If you have Ubuntu Linux 10.04 LTS or later installed, open a terminal<br />
+window and type this sequence of commands, providing your administrator<br />
+password as requested. (Same procedure for Debian 4.0 or later)</p>
+<ol type="a">
+<li>Add the <a href="NeuroDebian" class="uri">NeuroDebian</a> repository to your software sources, as described<br />
+at http://neuro.debian.net#how-to-use-this-repository<br />
+</li>
+<li>sudo apt-get update<br />
+</li>
+<li>sudo apt-get install freenect<br />
+</li>
+<li>sudo adduser YOURNAME video<br />
+–&gt; (YOURNAME) is your user login name!<br />
+</li>
+<li>Log out and Log in again.</li>
+</ol></li>
+</ol>
+<p>For non-Debian or non-Ubuntu Linux distributions, you’ll need to install<br />
+a version of libfreenect that is compatible to version 0.1.2 via whatever<br />
+means your system provides to do this. If you want to also use the Kinect for<br />
+Windows, instead of only the “original” XBOX-360 kinect, then you will need<br />
+libfreenect version 0.2 or later. Using version 0.2 or later of libfreenect<br />
+will also allow you to skip the following setup step 2:</p>
+<ol start="2" type="1">
+<li><p>Kinect is now useable from within Matlab or Octave. Well almost.<br />
+Systems with Linux kernel version 3.0 or later can use the video camera<br />
+and microphones of the Kinect as regular sound and video devices, e.g.,<br />
+for use by the Psychtoolbox videocapture and recording functions or other<br />
+video apps (Skype, etc.). This however blocks use of the Kinect by our<br />
+<a href="PsychKinect" class="uri">PsychKinect</a>() driver. If you want the Kinect as 3D depths camera with<br />
+our driver or other Kinect-specific software, you need to disable the<br />
+standard Linux kinect driver “gspca_kinect” by black-listing it. On<br />
+Ubuntu Linux (and probably most other distributions) you can do this<br />
+by copying the file linux_blacklist_kinectvideo from Psychtoolboxs<br />
+<a href="PsychContributed" class="uri">PsychContributed</a> folder to Linux /etc/modprobe.d/ directory as a root<br />
+user. This is most simply done by executing this function <a href="InstallKinect" class="uri">InstallKinect</a>,<br />
+and blindly entering your password while logged in as a user with<br />
+administrator rights (as the script calls the sudo command).</p></li>
+<li><p>After this procedure, the Kinect should be fully useable by Psychtoolbox.</p></li>
+</ol>
+<h1 id="mac-osx">Mac OS/X</h1>
+<p>See the OS/X section at http://openkinect.org/wiki/Getting_Started<br />
+You will need libfreenect version 0.1.2 or compatible for this to work.</p>
+<p>The easiest way to get these libraries on OSX is via Homebrew.<br />
+Get it at: http://mxcl.github.com/homebrew</p>
+<p>Once Homebrew is installed, one first needs to “brew install automake”,<br />
+and “brew install autoconfig”, and potentially cmake before one can<br />
+“brew install libfreenect”.</p>
+<p>If you want to also use the Kinect for Windows, instead of only the<br />
+“original” XBOX-360 kinect, then you will need libfreenect version 0.3 or<br />
+later.</p>
+<p><a href="PsychKinectCore" class="uri">PsychKinectCore</a> links dynamically against those two libraries. We don’t<br />
+distribute them for now, as that would require us to distribute the<br />
+corresponding source code of libusb-1.0.0 as well due to <a href="LGPLv2" class="uri">LGPLv2</a><br />
+requirements.</p>
+<h1 id="caveats">CAVEATS</h1>
+<p>This is still early prototype software, expect bugs, bumps and hickups.</p>
+<p>The Kinect driver has been successfully tested with “Microsoft <a href="XBox" class="uri">XBox</a><br />
+Kinect”. This version doesn’t yet work with “Microsoft Kinect for<br />
+Windows”, due to lack of support in the libfreenect-0.1.2 library.</p>
+<p>Further installation instructions for other systems can be found at<br />
+http://openkinect.org/wiki/Getting_Started</p>
+<p>Licenses: The driver consists of multiple components, which are licensed<br />
+under different free software / open source licenses. The drivers are<br />
+developed and licensed to you by their respective developers, the members<br />
+of the <a href="OpenKinect" class="uri">OpenKinect</a> community. See the respective web sites and licenses<br />
+for copyright, authors, credits etc.:</p>
+<p>libusb - The underlying USB communication library is licensed under LGPL.<br />
+libfreenect - The Kinect driver is dual-licensed (at your option) under<br />
+<a href="GPLv2" class="uri">GPLv2</a> or Apache license.</p>
+<p>The source code of the Windows version of the Kinect driver and libusb<br />
+can be found after checking out Psychtoolbox’s C source code from our GIT<br />
+repository (see “help <a href="UseTheSource" class="uri">UseTheSource</a>” for instructions) as a zip file<br />
+under:</p>
+<p>Psychtoolbox-3/<a href="PsychSourceGL" class="uri">PsychSourceGL</a>/Cohorts/Kinect-v16-withsource.zip</p>
+<p>The source code for libfreenect (Unix aka Linux / <a href="MacOS" class="uri">MacOS</a>/X) can be found<br />
+under:</p>
+<p>web: http://openkinect.org/wiki/Contributing_Code</p>
+<h3 id="the-source-code-of-libusb-1.0-can-be-found-at">The source code of libusb-1.0 can be found at:</h3>
+<p>web: http://www.libusb.org/</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDocumentation/InstallKinect.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDocumentation/InstallKinect.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDocumentation/InstallKinect.m</code></p>
+</div>

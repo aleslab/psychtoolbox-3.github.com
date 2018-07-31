@@ -1,0 +1,78 @@
+<h2 id="psychtoolbox-psychdocumentation">[[Psychtoolbox]] › [[PsychDocumentation]]</h2>
+<p><a href="RetinaDisplay" class="uri">RetinaDisplay</a> - How to deal with <a href="HiDPI" class="uri">HiDPI</a> “Retina” displays.</p>
+<p>On Linux with the standard X11 display system, no special measures are<br />
+needed and <a href="HiDPI" class="uri">HiDPI</a> “Retina” displays should just work like regular displays<br />
+as far as Psychtoolbox is concerned.</p>
+<p>On Apple OSX, Psychtoolbox by default will emulate a standard resolution<br />
+display when used on a Retina display to keep old user code working which<br />
+was written before the era of Retina displays, or with Psychtoolbox<br />
+3.0.11 or earlier versions. If you want to make full use of the native<br />
+high resolution of your Retina display, use the imaging pipeline task<br />
+<a href="PsychImaging" class="uri">PsychImaging</a>(‘AddTask’, ‘General’, ‘UseRetinaResolution’);. This will<br />
+expose the full resolution but also require more graphics performance<br />
+from your graphics card.</p>
+<p>On MS-Windows the situation can be difficult, depending on the Windows<br />
+version and Matlab version in use, and potentially on what other<br />
+applications are running and their status with respect to <a href="HiDPI" class="uri">HiDPI</a> Retina<br />
+displays:</p>
+<p>On Windows XP and earlier versions, stuff will just work, but your<br />
+application windows will look tiny when displayed on a Retina display.</p>
+<p>On Windows Vista and Windows 7, Psychtoolbox disables the DWM (Desktop<br />
+Window Manager) by default for fullscreen onscreen windows. This will<br />
+ensure optimal display timing precision and avoid Retina display trouble,<br />
+essentially turning your system into a Windows XP system. DPI aware<br />
+applications will continue to display correctly in such a configuration,<br />
+but non DPI aware apps may appear tiny and difficult to use on Retina<br />
+displays. All versions of Matlab older than R2015b are not DPI aware and<br />
+will likely suffer from this problems.</p>
+<p>On Windows 8 and later, Psychtoolbox can not disable the DWM. If you<br />
+display a Psychtoolbox window on a standard resolution display, stuff<br />
+will probably work. If you try to display on a <a href="HiDPI" class="uri">HiDPI</a> Retina display then<br />
+you will need to make sure that you either use GNU/Octave, or you use a<br />
+Matlab version that is DPI aware, ie., at least R2015b. You will probably<br />
+also have to make sure that no other non-DPI aware application is running<br />
+or at least not displaying on your stimulus monitor, as such applications<br />
+would trigger use of the DWM and thereby cause stimulus timing problems.</p>
+<p>Additionally, on Windows 8 you must make sure that the stimulation<br />
+display is the designated “primary display”, so Windows 8 DPI settings,<br />
+which always apply to the primary display, thereby apply to your stimulus<br />
+display. Applications displayed on other than the primary display will be<br />
+subject to DWM scaling if those other displays do not have the same DPI<br />
+setting as the primary display. A running Matlab or Octave would trigger<br />
+harmful use of the DWM on such a non-matching display. In general it is a<br />
+good idea for timing precision to make your stimulus display the<br />
+designated primary display (this can be set in the display settings<br />
+control display, maybe via a “Make this my main display” checkbox).</p>
+<p>If you must use a system setup with Retina display and a version of<br />
+Matlab, or of Windows 8 or later, that does not allow you to circumvent<br />
+or solve these problems, then there exists also the option to either<br />
+override Windows DPI settings (somewhere under display control panel,<br />
+advanced settings or “Make text appear bigger or smaller” - Try a Google<br />
+search to find it) - this would get rid of DPI related timing problems at<br />
+the expense of applications that display too small on your Retina<br />
+display. Another option is to disable DPI scaling for all applications<br />
+(including Matlab!) which are supposed to display on the <a href="HiDPI" class="uri">HiDPI</a> / Retina<br />
+display. This will avoid rescaling and triggering the DWM, at the expense<br />
+of a too small appearance of those applications <a href="GUIs" class="uri">GUIs</a> on the Retina<br />
+display. You can do this by right-clicking on the applications icon, then<br />
+selecting the “Properties” item from the context menu, then selecting the<br />
+“Compatibility” tab in the property dialog. In that tab, check the field<br />
+called “Disable display scaling on high DPI settings”, then click “OK” to<br />
+apply the new settings and restart the application.</p>
+<p>Windows is not only troublesome for proper visual stimulation and<br />
+stimulation timing in itself, it can be especially troublesome when used<br />
+with <a href="HiDPI" class="uri">HiDPI</a> / Retina displays. Therefore it might be a good idea to switch<br />
+to Linux, or if you have to use Windows, to stick to Windows-7, or if you<br />
+have to use a later Windows version, upgrade to Windows 10. It is<br />
+probably also a good idea to then limit yourself to a single display<br />
+setup and/or make sure that only DPI aware applications are running on<br />
+this setup.</p>
+<p>Good luck!</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDocumentation/RetinaDisplay.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDocumentation/RetinaDisplay.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDocumentation/RetinaDisplay.m</code></p>
+</div>

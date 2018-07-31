@@ -1,0 +1,36 @@
+<h2 id="psychtoolbox-psychhardware">[[Psychtoolbox]] › [[PsychHardware]]</h2>
+<p>[gamepadIndices, productNames, allInfos] = <a href="GetGamepadIndices" class="uri">GetGamepadIndices</a>([productName][, serialNumber][, locationID])</p>
+<p><a href="PsychHID" class="uri">PsychHID</a> assigns each USB HID device connected to you computer a<br />
+unique index. <a href="GetGamepadIndices" class="uri">GetGamepadIndices</a> returns the indices for those HID devices<br />
+which are gamepads. The product names of each gamepad are returned in a<br />
+second argument which is useful to identify the gamepad associated with<br />
+an index. The third return argument is a cell-array with complete<br />
+information about the gamepad device, e.g., allInfos{1} returns<br />
+all known info about the 1st detected gamepad.</p>
+<p>If you have multiple gamepads connected you can restrict the set of<br />
+returned gamepads by specifying the following optional match-critera:</p>
+<p>product = Product name of target devices, as returned in ‘productNames’.</p>
+<p>serialNumber = Serial number of target devices. This is a text string,<br />
+not a number!</p>
+<p>locationID = Numeric id of where the device is connected to the<br />
+computer. The number is supposed to be unique for a given<br />
+connection port. E.g., the same number will be returned<br />
+whenever the device is connected to the same USB port of<br />
+the computer. The value should be persistent across<br />
+reboots of the machine, but may not be persistent across<br />
+operating system upgrades - or may not be persistent at<br />
+all in case of os bugs. Your mileage may vary…<br />
+On Linux X11 this is currently remapped to interfaceID,<br />
+as locationID is not meaningful in the current implementation.</p>
+<p>WINDOWS: ________________________________________________________________<br />
+<a href="GetGamepadIndices" class="uri">GetGamepadIndices</a> does not work on Windows.<br />
+_________________________________________________________________________</p>
+<p>see also: <a href="GetKeyboardIndices" class="uri">GetKeyboardIndices</a></p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/GetGamepadIndices.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/GetGamepadIndices.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/GetGamepadIndices.m</code></p>
+</div>

@@ -1,0 +1,24 @@
+<h2 id="psychtoolbox-psychglimageprocessing">[[Psychtoolbox]] › [[PsychGLImageProcessing]]</h2>
+<p>Build a mip-map image resolution pyramid for given texture.</p>
+<p><a href="CreateResolutionPyramid" class="uri">CreateResolutionPyramid</a>(tex [, glsl=0][, usebilinear=0])</p>
+<p>‘tex’ must be the <a href="Screen" class="uri">Screen</a>() texture or offscreen window handle of a<br />
+texture or offscreen window of type GL_TEXTURE_2D, ie., created with<br />
+‘specialFlags’ setting 1. The function will create a <a href="OpenGL" class="uri">OpenGL</a> mip-map<br />
+resolution pyramid by successive downsampling of ‘tex’ image content down<br />
+to a image of 1x1 pixels. If ‘glsl’ is provided as handle to a shader, it<br />
+will use that shader to do the downsampling, otherwise it will use<br />
+bilinear filtering for successive pyramid levels. If ‘usebilinear’ is set<br />
+to 1 it will feed the shader with linear interpolated samples, otherwise<br />
+with nearest neighbour samples.</p>
+<p>You will likely also want to set ‘specialFlags’ flag 8 or 16 to prevent<br />
+<a href="Screen" class="uri">Screen</a>(‘DrawTexture’) from overwriting the image pyramid with its own<br />
+auto-generated one.</p>
+<p>This needs a modern GLSL shading capable graphics card to work.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychGLImageProcessing/CreateResolutionPyramid.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychGLImageProcessing/CreateResolutionPyramid.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychGLImageProcessing/CreateResolutionPyramid.m</code></p>
+</div>

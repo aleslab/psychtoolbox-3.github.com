@@ -1,0 +1,33 @@
+<h2 id="psychtoolbox-psychcolorimetricdata">[[Psychtoolbox]] › [[PsychColorimetricData]]</h2>
+<p>[params] = <a href="ValetonVanNorrenParams" class="uri">ValetonVanNorrenParams</a>(logIsoRate,[photoreceptors],[trolandType],[<a href="LMRatio" class="uri">LMRatio</a>])</p>
+<p>Return a structure containting the parameters of the<br />
+Valeton and <a href="VanNorren" class="uri">VanNorren</a> model of cone adaptation<br />
+as a function of the number of isomerizations per cone per<br />
+second. The structure also contains the table of trolands<br />
+and corresponding isomerization rates used to spline the<br />
+published numbers.</p>
+<p>Valeton and Van Norren (1983, Vision Research, pp. 1539-1547)<br />
+provide their parameters as a function of the number of trolands<br />
+incident on their monkey retina. We convert this to isomerizations<br />
+per cone, so that we can work in more interesting physical units.</p>
+<p>The conversion involves making assumptions about a lot of constants.<br />
+The assumptions are encapsulated by the photoreceptors structure<br />
+and the passed eye length source and troland type.</p>
+<p>photoreceptors - structure interpreted by <a href="RetIrradianceToIsoRecSec" class="uri">RetIrradianceToIsoRecSec</a>.<br />
+eyeLengthSource - string or value interpreted by <a href="EyeLength" class="uri">EyeLength</a>.<br />
+trolandType - string interpreted by <a href="TrolandsToRetIrradiance" class="uri">TrolandsToRetIrradiance</a>.<br />
+<a href="LMRatio" class="uri">LMRatio</a> - value of L to M cone ratio to assume for original measurements (Default 2).</p>
+<p>The parameters are provided in Table 1 of the paper, for a range<br />
+of troland values. The model parameters are sigmaL and gamma.<br />
+and gamma.</p>
+<p>See also: <a href="TrolandsToRetIrradiance" class="uri">TrolandsToRetIrradiance</a>, <a href="RetIrradianceToIsoRecSec" class="uri">RetIrradianceToIsoRecSec</a>, <a href="EyeLength" class="uri">EyeLength</a>,<br />
+<a href="DefaultPhotoreceptors" class="uri">DefaultPhotoreceptors</a>, <a href="FillInPhotoreceptors" class="uri">FillInPhotoreceptors</a>.</p>
+<p>7/18/03 dhb Started writing it.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychColorimetricData/ValetonVanNorrenParams.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychColorimetricData/ValetonVanNorrenParams.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychColorimetricData/ValetonVanNorrenParams.m</code></p>
+</div>

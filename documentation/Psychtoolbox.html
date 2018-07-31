@@ -1,0 +1,85 @@
+<h2 id="psychtoolbox">[[Psychtoolbox]]</h2>
+<p>Psychtoolbox.<br />
+Version 3.0.14 30 December 2016</p>
+<p>The Psychophysics Toolbox is a collection of Octave and Matlab functions<br />
+that extend the language to give you exquisite control of your computer<br />
+to test observers with research-grade dynamic stimuli.</p>
+<p>Every Psychtoolbox function has its own documentation available through<br />
+the Matlab HELP command, and, in the case of MEX files, through the<br />
+function itself. We’ve tried hard to make these individual bits of<br />
+documentation clear, accurate, and complete. We’re grateful to receive<br />
+corrections.</p>
+<p>We’ve mostly followed Mathworks’s help-text conventions, but note that in<br />
+our help text we designate optional arguments to function calls by<br />
+embracing them with square brackets. You’re not meant to include these<br />
+brackets when you actually call the function. For example, “help <a href="Snd" class="uri">Snd</a>”<br />
+will tell you this:</p>
+<pre><code> err = [Snd](Snd)(command,[sig],[rate])  </code></pre>
+<p>meaning that the “command” argument is required and the “sig” and “rate”<br />
+arguments are optional. A typical call to <a href="Snd" class="uri">Snd</a> looks like this:</p>
+<pre><code> [Snd](Snd)(&#39;Play&#39;, mysoundsignal)  </code></pre>
+<p>The most important and generally useful functions, especially <a href="Screen" class="uri">Screen</a>, are<br />
+in <a href="PsychBasic" class="uri">PsychBasic</a>. The <a href="PsychDemos" class="uri">PsychDemos</a> will show you how to do useful things in<br />
+Matlab with the Psychtoolbox. Try these:</p>
+<pre><code> help [PsychDemos](PsychDemos)       % Triple-click me &amp; hit enter.  
+ help [PsychBasic](PsychBasic)  
+ help [Screen](Screen)  
+ [Screen](Screen) [OpenWindow](OpenWindow)?  </code></pre>
+<p>The folder <a href="PsychDocumentation" class="uri">PsychDocumentation</a> contains bits of documentation about<br />
+technical implementation details, how to solve specific tasks and how to<br />
+troubleshoot common problems.</p>
+<p>To read more, look at the “intro” and “docs” pages at the web site. The<br />
+web site also has advice about getting help, the Psychtoolbox forum, and<br />
+the latest information about bugs and new releases:</p>
+<p>Peter Scarfe has written a large set of nice and beginner friendly<br />
+Psychtoolbox tutorial scripts.</p>
+<p>You can find them at http://peterscarfe.com/ptbtutorials.html</p>
+<p>If you want to acknowledge use of this software when you publish your<br />
+research, you might say something like this, “We wrote our experiments in<br />
+Matlab, using the Psychophysics Toolbox extensions (Kleiner et al, 2007)”</p>
+<p>Kleiner M, Brainard D, Pelli D, 2007, “What’s new in Psychtoolbox-3?”<br />
+Perception 36 ECVP Abstract Supplement.</p>
+<p>If you find this software useful then please consider donating some money<br />
+to support its ongoing maintenance and development. See:</p>
+<p>http://psychtoolbox.org/donations</p>
+<h3 id="folders-and-their-contents">Folders and their contents:</h3>
+<p><a href="PsychAlpha" class="uri">PsychAlpha</a> - Under development. Experimental, risky, undocumented.<br />
+<a href="PsychAlphaBlending" class="uri">PsychAlphaBlending</a> - <a href="OpenGL" class="uri">OpenGL</a> alpha-channel blending utilities and constants.<br />
+<a href="PsychBasic" class="uri">PsychBasic</a> - Basic support routines for psychophysics.<br />
+<a href="PsychCal" class="uri">PsychCal</a> - Calibrate your video monitors.<br />
+<a href="PsychCalDemoData" class="uri">PsychCalDemoData</a> - Demo calibration data.<br />
+<a href="PsychColorimetric" class="uri">PsychColorimetric</a> - Colorimetric calculations.<br />
+<a href="PsychColorimetricData" class="uri">PsychColorimetricData</a> - Standard colorimetric data.<br />
+<a href="PsychContributed" class="uri">PsychContributed</a> - Contributed programs.<br />
+<a href="PsychDemos" class="uri">PsychDemos</a> - Show how to use the Psychtoolbox.<br />
+<a href="PsychDocumentation" class="uri">PsychDocumentation</a> - Documentation about specific topics.<br />
+<a href="PsychFiles" class="uri">PsychFiles</a> - Process text files.<br />
+<a href="PsychGamma" class="uri">PsychGamma</a> - Fit monitor gamma functions.<br />
+<a href="PsychGLImageProcessing" class="uri">PsychGLImageProcessing</a> - Built-in image processing via graphics hardware.<br />
+<a href="PsychGPGPU" class="uri">PsychGPGPU</a> - General purpose accelerated computing on <a href="GPUs" class="uri">GPUs</a>.<br />
+<a href="PsychHardware" class="uri">PsychHardware</a> - Interface to plug-in hardware.<br />
+<a href="PsychInitialize" class="uri">PsychInitialize</a> - Initialize and deinitialize MATLAB<br />
+<a href="PsychMatlabTests" class="uri">PsychMatlabTests</a> - Document the few bugs in Matlab 5.2.1.<br />
+<a href="PsychObsolete" class="uri">PsychObsolete</a> - Obsolete routines, still present for compatibility.<br />
+<a href="PsychOpenGL" class="uri">PsychOpenGL</a> - Routines for low-level access to <a href="OpenGL" class="uri">OpenGL</a> 3D graphics.<br />
+<a href="Psychometric" class="uri">Psychometric</a> - <a href="Psychometric" class="uri">Psychometric</a> function fitting.<br />
+<a href="PsychOneliners" class="uri">PsychOneliners</a> - Trivial, but handy, functions.<br />
+<a href="PsychOptics" class="uri">PsychOptics</a> - Optics calculations, mostly for human optics.<br />
+<a href="PsychPriority" class="uri">PsychPriority</a> - <a href="Priority" class="uri">Priority</a> and <a href="Rush" class="uri">Rush</a>. (formerly within <a href="PsychBasic">PsychBasic)</a>)<br />
+<a href="PsychProbability" class="uri">PsychProbability</a> - Probability and statistics.<br />
+<a href="PsychRadiometric" class="uri">PsychRadiometric</a> - Radiometric/photometric calculations and conversions.<br />
+<a href="PsychRects" class="uri">PsychRects</a> - Manipulate rectangles for drawing.<br />
+<a href="PsychSignal" class="uri">PsychSignal</a> - Signal processing and math routines.<br />
+<a href="PsychStairCase" class="uri">PsychStairCase</a> - Adaptive staircase procedure.<br />
+<a href="PsychTests" class="uri">PsychTests</a> - Evaluate performance of software and hardware.<br />
+<a href="PsychVideoCapture" class="uri">PsychVideoCapture</a> - Functions for realtime video capture.<br />
+Quest - Threshold estimation procedure.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/Contents.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/Contents.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/Contents.m</code></p>
+</div>
+<p>{{category}}</p>

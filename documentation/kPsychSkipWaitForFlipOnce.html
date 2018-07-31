@@ -1,0 +1,22 @@
+<h2 id="psychtoolbox-psychglimageprocessing">[[Psychtoolbox]] › [[PsychGLImageProcessing]]</h2>
+<p>rval = kPsychSkipWaitForFlipOnce</p>
+<p>Return a flag that you can pass as part of the flipFlags for a call to<br />
+<a href="Screen" class="uri">Screen</a>(‘Hookfunction’, windowPtr, ‘SetOneshotFlipFlags’, flipFlags);</p>
+<p>This flag will skip the wait until the ‘when’ deadline during execution<br />
+of the next <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’, window, when) operation. It is useful if an<br />
+external display output client/provider, e.g., a VR headset, is active<br />
+and attached to an onscreen window, and the visual stimulus onset<br />
+scheduling should be performed by the dedicated display output provider,<br />
+e.g., if our standard scheduling won’t do for such a special purpose device.<br />
+The imaging pipeline provides the special variable “IMAGINGPIPE_FLIPTWHEN”<br />
+which can be used when calling Octave/Matlab runtime function from within<br />
+an imaging pipeline processing chain to pass the ‘when’ time to the runtime<br />
+function, e.g., for scheduling.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychGLImageProcessing/kPsychSkipWaitForFlipOnce.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychGLImageProcessing/kPsychSkipWaitForFlipOnce.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychGLImageProcessing/kPsychSkipWaitForFlipOnce.m</code></p>
+</div>

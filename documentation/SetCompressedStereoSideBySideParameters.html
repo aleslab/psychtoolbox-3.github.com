@@ -1,0 +1,50 @@
+<h2 id="psychtoolbox-psychglimageprocessing">[[Psychtoolbox]] › [[PsychGLImageProcessing]]</h2>
+<p><a href="SetCompressedStereoSideBySideParameters" class="uri">SetCompressedStereoSideBySideParameters</a>(win, [0, 0], [0.5, 1], [0.5, 0], [0.5, 1]);</p>
+<p>Change parameters for over-under stereo to side-by-side stereo so that<br />
+the imaging mode will work in a display that horizontally stretches left<br />
+and right frames to fill the full res window.</p>
+<p>This routine is called automatically by <a href="PsychImaging" class="uri">PsychImaging</a>() during onscreen<br />
+window creation with its default parameters if …</p>
+<p><a href="PsychImaging" class="uri">PsychImaging</a>(‘AddTask’, ‘General’, ‘SideBySideCompressedStereo’);</p>
+<p>… is called during window setup.</p>
+<p>You can call the function yourself after <a href="PsychImaging" class="uri">PsychImaging</a>(‘OpenWindow’, …);<br />
+if you want to use non-default composition parameters for side-by-side<br />
+stereo presentation.</p>
+<h3 id="this-is-how-compressed-side-by-side-stereo-works">This is how compressed side-by-side stereo works:</h3>
+<ol type="1">
+<li><p>Usercode draws stimuli into the left-eye and righ-eye framebuffers at<br />
+full display resolution.</p></li>
+<li><p><a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) compresses those stimuli horizontally into the output<br />
+framebuffer.</p></li>
+<li><p>At display time, the display stretches half frames to full width:<br />
+_________ _________ _________<br />
+| L | R | —&gt; | &lt;-L-&gt; | + | &lt;-R-&gt; |<br />
+——— ———- ———-</p></li>
+</ol>
+<p>Side-by-side compressed images are one of several popular stereo HDMI<br />
+formats.</p>
+<p>The stereo mode must have been set to 2 or 3 for this to work, or the<br />
+above mentioned <a href="PsychImaging" class="uri">PsychImaging</a>() function must have been called for setup.</p>
+<h3 id="example-function-call">Example function call:</h3>
+<p><a href="SetCompressedStereoSideBySideParameters" class="uri">SetCompressedStereoSideBySideParameters</a>(win, [0, 0], [0.5, 1], [0.5, 0], [0.5, 1])</p>
+<p>Call this function after the win = <a href="PsychImaging" class="uri">PsychImaging</a>(‘OpenWindow’,…); call<br />
+on an onscreen window in Top/Bottom stereo mode to change the parameters<br />
+of drawing the stereo views.</p>
+<p>All parameters except the onscreen ’win’dowhandle are optional and have<br />
+reasonable builtin defaults:</p>
+<p>‘leftOffset’ = Top-Left [x,y] offset of left eye framebuffer in relative<br />
+coordinates [0,0] == top-left of framebuffer, [1,0] == 1 display window<br />
+width to the right, [2,0] == 2 display window widths to the right etc.</p>
+<p>‘leftScale’ = Scaling of left eye image buffer. E.g., [1,1] == Don’t<br />
+scale. [0.75, 0.5] scale to 75% of original width, 50% of original<br />
+height.</p>
+<p>‘rightOffset’, ‘rightScale’ == Ditto for right eye image.</p>
+<p>This function was inspired and co-implemented by David Hoffman.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychGLImageProcessing/SetCompressedStereoSideBySideParameters.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychGLImageProcessing/SetCompressedStereoSideBySideParameters.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychGLImageProcessing/SetCompressedStereoSideBySideParameters.m</code></p>
+</div>

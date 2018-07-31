@@ -1,0 +1,110 @@
+<h1 id="screenhookfunction"><a href="Screen-HookFunction">Screen(‘HookFunction’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Manage <a href="Screen" class="uri">Screen</a> processing hook chains. Hook chains are a way to extend <a href="PTBs" class="uri">PTBs</a><br />
+behaviour with plugins for generic processing or fast image processing. They<br />
+should allow to interface PTB seamlessly with 3rd party special response<br />
+collection devices or stimulus display devices. They also allow to perform high<br />
+performance image processing, utilizing modern graphics hardwares huge<br />
+computational bandwidth. Read ‘help PsychGLImageProcessing’ for more infos.</p>
+<h3 id="subsubcommands-and-their-syntax">Subsubcommands and their syntax:</h3>
+<p><a href="Screen" class="uri">Screen</a>(‘HookFunction’, [windowPtr], ‘ListAll’);<br />
+Print out a listing of all supported ‘HookName’ hook points, including a short<br />
+synopsis on what they do, to the Matlab console in a human readable format -<br />
+Useful as a reference for coding. The ‘windowPtr’ argument is optional. If left<br />
+out (replaced by empty [] brackets) it prints all implemented chains.</p>
+<p>[slot idstring blittercfg voidptr glslid luttexid insertString] =<br />
+<a href="Screen" class="uri">Screen</a>(‘HookFunction’, windowPtr, ‘Query’, hookname, slotnameOrIndex);<br />
+Query information about a specific command slot in a specific hook processing<br />
+chain: ‘hookname’ is the name of the chain to query, e.g.,<br />
+‘StereoCompositingBlit’ for the stereo processing chain. Use the subcommand<br />
+‘ListAll’ for a printout of all available processing hooks and a short help on<br />
+them. ‘slotnameOrIndex’, either the symbolic name of the requested slot or the<br />
+index in the hook-chain: Indices start with 0. Names can be assigned to slots<br />
+when you add a processing slot with the ‘Append’ or ‘Prepend’ command, or they<br />
+are system assigned names like , e.g., ‘StereoCompositingShader’ for builtin<br />
+shaders that are needed for stereo processing.</p>
+<p>Return arguments, all optional: ‘slot’ is the index of the named slot in the<br />
+chain to which the queried subfunction is assigned, or -1 if no such slot exists<br />
+in the chain. ‘glslid’ numeric GLSL handle of the <a href="OpenGL" class="uri">OpenGL</a> GLSL shader object if<br />
+the slot contains a GLSL shader for image processing on the GPU, 0 otherwise.<br />
+‘luttexid’ <a href="OpenGL" class="uri">OpenGL</a> texture handle of the first assigned lookup texture, 0 if none<br />
+assigned. ‘voidptr’ Memory pointer (encoded as double) to a C callback function,<br />
+if one is assigned to this slot, 0 otherwise. ‘blittercfg’ either a parameter<br />
+string with a meaning dependent of slot type, or the string ‘NONE’ if none<br />
+assigned. ‘idstring’ The symbolic name of this slot if any assigned, ‘NONE’<br />
+otherwise. ‘insertString’ the subcommand to use for reinserting this slot at the<br />
+place it was after a deletion.</p>
+<p><a href="Screen" class="uri">Screen</a>(‘HookFunction’, windowPtr, ‘AppendShader’, hookname, idString, glslid [,<br />
+blittercfg] [luttexid1]);<br />
+Append a new instruction slot to the end of hook processing chain ‘hookname’,<br />
+assign the symbolic name ‘idString’ for later query by the ‘Query’ command.<br />
+‘glslid’ must be the name of a valid GLSL program object which defines the<br />
+algorithm to apply on the GPU. ‘blittercfg’ optional string with configuration<br />
+commands for the shader. ‘luttexid’ Optional handle to an <a href="OpenGL" class="uri">OpenGL</a> texture which<br />
+is used to encode lookup tables for the shader.</p>
+<p><a href="Screen" class="uri">Screen</a>(‘HookFunction’, windowPtr, ‘PrependShader’, hookname idString, glslid [,<br />
+blittercfg] [luttexid1]);<br />
+Same as ‘AppendShader’ but add shader slot to beginning of the hook chain. It’s<br />
+recommended that you prepend slots instead of appending them, because PTB itself<br />
+may add special slots at the end of a chain.</p>
+<p><a href="Screen" class="uri">Screen</a>(‘HookFunction’, windowPtr, ‘AppendCFunction’, hookname, idString,<br />
+voidfunctionptr);<br />
+<a href="Screen" class="uri">Screen</a>(‘HookFunction’, windowPtr, ‘PrependCFunction’, hookname, idString,<br />
+voidfunctionptr);<br />
+Attach a C callable function to the chain. voidfunctionptr is a double value<br />
+which encodes a memory pointer to the function in memory. Encoding of the<br />
+pointer and requirements to the function are non-trivial, so this is for expert<br />
+developers only!</p>
+<p><a href="Screen" class="uri">Screen</a>(‘HookFunction’, windowPtr, ‘AppendMFunction’, hookname, idString,<br />
+fevalstring);<br />
+<a href="Screen" class="uri">Screen</a>(‘HookFunction’, windowPtr, ‘PrependMFunction’, hookname, idString,<br />
+fevalstring);<br />
+Add a Matlab callable function to the chain. ‘fevalstring’ is the function call<br />
+string: It will be passed to and evaluated by Matlabs or Octaves feval()<br />
+function, so it has to work with that function. It is not allowed to return any<br />
+return arguments. Some special names in the string will be replaced by PTB with<br />
+internal settings, think of it as a macro replacement. Caution: The called<br />
+function is not allowed to call any <a href="Screen" class="uri">Screen</a>() commands or you’ll likely get<br />
+undefined behaviour or a crash – <a href="Screen" class="uri">Screen</a> is not reentrant!</p>
+<p><a href="Screen" class="uri">Screen</a>(‘HookFunction’, windowPtr, ‘AppendBuiltin’, hookname, idString,<br />
+builtincmd);<br />
+<a href="Screen" class="uri">Screen</a>(‘HookFunction’, windowPtr, ‘PrependBuiltin’, hookname, idString,<br />
+builtincmd);<br />
+Add a call to a PTB built-in function ‘builtincmd’.</p>
+<p>You can also insert a hook function somewhere at a specific slot index via:<br />
+<a href="Screen" class="uri">Screen</a>(‘HookFunction’, windowPtr, ‘InsertAtXXXYYY’, …);<br />
+where XXX is a numeric slot id and YYY is the type specifier. Example: Insert a<br />
+Builtin function<br />
+at index 4 in hook ‘UserDefinedBlit’:<br />
+<a href="Screen" class="uri">Screen</a>(‘HookFunction’, windowPtr, ‘InsertAt4Builtin’, ‘UserDefinedBlit’, …);</p>
+<p><a href="Screen" class="uri">Screen</a>(‘Hookfunction’, windowPtr, ‘Remove’, hookname, slotindex);<br />
+Remove slot at index ‘slotindex’ in hookchain ‘hookname’. The slot after this<br />
+slot will move up by one.</p>
+<p><a href="Screen" class="uri">Screen</a>(‘HookFunction’, windowPtr, ‘Enable’, hookname);<br />
+<a href="Screen" class="uri">Screen</a>(‘HookFunction’, windowPtr, ‘Disable’, hookname);<br />
+Enable or disable a specific hook chain. Chains are disabled until you enable<br />
+them, with the exception of a few internal chains that get initialized and<br />
+enabled by PTB itself, e.g., stereo algorithm chain. Disabled chains are not<br />
+processed.</p>
+<p><a href="Screen" class="uri">Screen</a>(‘HookFunction’, windowPtr, ‘Reset’, hookname);<br />
+Reset a processing hook chain: All slots are deleted, resetting the chain to its<br />
+startup state. Seldomly needed.</p>
+<p><a href="Screen" class="uri">Screen</a>(‘HookFunction’, windowPtr, ‘Dump’, hookname);<br />
+Print out the full chain for hook ‘hookname’ to the Matlab console in a human<br />
+readable format - Useful for debugging.</p>
+<p><a href="Screen" class="uri">Screen</a>(‘HookFunction’, windowPtr, ‘DumpAll’);<br />
+Print out all chains for the given onscreen window ‘windowPtr’ to the Matlab<br />
+console in a human readable format - Useful for debugging.</p>
+<p>oldImagingMode = <a href="Screen" class="uri">Screen</a>(‘HookFunction’, proxyPtr, ‘ImagingMode’ [,<br />
+imagingMode]);<br />
+Change or query imagingMode flags of provided proxy window ‘proxyPtr’ to<br />
+‘imagingMode’. Proxy windows are used to define image processing operations,<br />
+mostly for <a href="Screen" class="uri">Screen</a>(‘TransformTexture’). Returns old imaging mode.</p>
+<h3 id="general-notes">General notes:</h3>
+<p>* Hook chains are per onscreen window, so each window can have a different<br />
+configuration and enable state.<br />
+* Read all available documentation on the Psychtoolbox imaging pipeline in ‘help<br />
+PsychGLImageprocessing’, the <a href="PsychDocumentation" class="uri">PsychDocumentation</a> folder and on the Wiki before<br />
+you make use of this function. Its way to complex to use it by guessing ;)</p>
+<p>&lt;&lt;=====See also:=====</p>
+<p>&lt;&lt;</p>

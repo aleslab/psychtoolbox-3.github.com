@@ -1,0 +1,55 @@
+<h1 id="screenconfiguredisplay"><a href="Screen-ConfigureDisplay">Screen(‘ConfigureDisplay’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Query or change ‘setting’ for display output ‘outputId’ of screen<br />
+‘screenNumber’.<br />
+This function allows you to configure the different attached display outputs of<br />
+a virtual screen.<br />
+Optionally sets new settings for that output.<br />
+Possible values for subfunction parameter ‘setting’:<br />
+‘Brightness’: Return or set brightness of an attached display device. Many<br />
+displays and systems don’t support this function. brightness values are in the<br />
+range 0.0 to 1.0 from darkest to brightest. Returns old brightness setting.<br />
+‘NumberOutputs’: Return number of active separate display outputs for given<br />
+screen ‘screenNumber’.<br />
+‘Capture’: Capture output ‘outputId’ of a screen ‘screenNumber’ for exclusive<br />
+use by Psychtoolbox.<br />
+‘Release’: Release output ‘outputId’ of a screen ‘screenNumber’ from exclusive<br />
+use by Psychtoolbox.<br />
+Please note that ‘Capture’ and ‘Release’ are automatically applied to a display<br />
+output as appropriate whenever a fullscreen onscreen window is opened or closed<br />
+on a display. You usually don’t need to call these functions yourself, in fact,<br />
+you even shouldn’t call them yourself usually, as wrong use of the functions can<br />
+cause graphics malfunctions or even a freeze of the display or GUI, forcing you<br />
+to kill Matlab or Octave as a last resort to regain control over your displays.<br />
+The main purpose of these functions is to temporarily block all graphics<br />
+operations or display updates on displays that are not used for visual<br />
+stimulation, ie., not covered by fullscreen onscreen windows. This prevents<br />
+other running applications from interfering with your experiment script by<br />
+preventing them to take up valuable resources on the graphics card. Display<br />
+capture is not supported on all operating systems in all modes of operation. If<br />
+the functions get called on an unsupported configuration, they silently return<br />
+and simply do nothing.</p>
+<p>‘Dithering’ Control digital display dithering on supported <a href="GPUs" class="uri">GPUs</a>. This is<br />
+currently only supported on AMD graphics cards under Linux and OSX.<br />
+‘screenNumber’ will apply the setting on all video outputs connected to screen<br />
+‘screenNumber’. The next setting is the ‘ditherEnable’ flag: A value of zero<br />
+will disable dithering. A non-zero value will reenable dithering if it was<br />
+previous disabled by Psychtoolbox. If dithering wasn’t disabled, then instead<br />
+the given value will be written into the dither control register to modify<br />
+dithering settings. The meaning of specific values is GPU and vendor specific<br />
+and only useful for experts.<br />
+Example call: <a href="Screen" class="uri">Screen</a>(‘ConfigureDisplay’, ‘Dithering’, screenNumber,<br />
+ditherEnable);</p>
+<p>‘Scanout’: Retrieve or set scanout parameters for a given output ‘outputId’ of<br />
+screen ‘screenNumber’. Returns a struct ‘oldSettings’ with the current settings<br />
+for that output. Only supported on Linux.<br />
+It returns and accepts the following optional parameters:</p>
+<p>* Display resolution “newwidth” x “newheight”, and nominal refresh rate “newHz”.<br />
+* Panning (‘newX’,‘newY’) - The location of the top-left corner of the display<br />
+in the framebuffer.<br />
+Readonly properties:</p>
+<p>* Display size “displayWidthMM” x “displayHeightMM” in millimeters, as reported<br />
+by attached display.<br />
+* Video output name “name”.</p>
+<p>Providing invalid or incompatible settings will raise an error.</p>
+<p>&lt;&lt;=====See also:===== Screen(‘Resolutions’), Screen(‘Resolution’); &lt;&lt;</p>

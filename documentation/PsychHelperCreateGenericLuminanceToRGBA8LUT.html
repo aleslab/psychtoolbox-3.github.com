@@ -1,0 +1,28 @@
+<h2 id="psychtoolbox-psychglimageprocessing">[[Psychtoolbox]] › [[PsychGLImageProcessing]]</h2>
+<p>luttex = <a href="PsychHelperCreateGenericLuminanceToRGBA8LUT" class="uri">PsychHelperCreateGenericLuminanceToRGBA8LUT</a>(lut);</p>
+<p>Helper function for <a href="PsychImaging" class="uri">PsychImaging</a>() - Don’t call from usercode!</p>
+<p>Used by <a href="PsychImaging" class="uri">PsychImaging</a>(….,‘EnableGenericHighPrecisionLuminanceOutput’, lut);<br />
+Converts a luminance -&gt; RGB8 or RGBA8 LUT as provided in the 3- or 4 rows<br />
+by n columns matrix ‘lut’ into an equivalent RGBA8 lookup table texture,<br />
+then returns the texture handle to the calling routine.</p>
+<p>‘lut’ = 3 rows by nslots columns uint8 matrix for LUT’s that map the<br />
+input luminance value range [0.0 - 1.0] to the integral 0 - nslots range,<br />
+then lookup the corresponding RGB8 output pixel in the lut. If ‘lut’ has<br />
+4 rows, then the 4th row encodes alpha-channel - This is only useful for<br />
+debugging, as teh alpha channel can’t be output to the external device.</p>
+<h3 id="implementation-details">Implementation details:</h3>
+<p>The lut texture is built as a 256x256 2D rectangle texture, allowing for<br />
+luts with up to 2^16 luminance slots that work on all supported graphics<br />
+hardware. One could extend the size of the texture to up to 8192x8192 on<br />
+latest hardware, allowing for up to 2^26 bits, but that is likely not<br />
+that useful, given that internal GPU precision is restricted to 23 bits<br />
+(floating point single precision) and there doesn’t exist a single output<br />
+device with more than 16 bits of output resolution anyway.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychGLImageProcessing/PsychHelperCreateGenericLuminanceToRGBA8LUT.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychGLImageProcessing/PsychHelperCreateGenericLuminanceToRGBA8LUT.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychGLImageProcessing/PsychHelperCreateGenericLuminanceToRGBA8LUT.m</code></p>
+</div>

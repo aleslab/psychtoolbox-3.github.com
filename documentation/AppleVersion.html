@@ -1,0 +1,30 @@
+<h2 id="psychtoolbox-psychoneliners">[[Psychtoolbox]] › [[PsychOneliners]]</h2>
+<p>versionString=<a href="AppleVersion" class="uri">AppleVersion</a>(gestaltString)</p>
+<p>WARNING: This function is deprecated and will likely cease to work<br />
+in a future Psychtoolbox release. This is due to Apple deprecating<br />
+their <a href="Gestalt" class="uri">Gestalt</a>() function from their operating system. While <a href="Gestalt" class="uri">Gestalt</a>,<br />
+and thereby this function, still works on OSX 10.10, no guarantees<br />
+can be made about future OSX versions.</p>
+<p>Adapt your code accordingly to do without this function.</p>
+<p>OS 9 and OS X: __________________________________________________________</p>
+<p><a href="AppleVersion" class="uri">AppleVersion</a>(‘qtim’) % <a href="QuickTime" class="uri">QuickTime</a><br />
+<a href="AppleVersion" class="uri">AppleVersion</a>(‘atkv’) % <a href="AppleTalk" class="uri">AppleTalk</a><br />
+Uses <a href="Gestalt" class="uri">Gestalt</a> to retrieve Apple version information and returns a string.<br />
+Apple has a “standard” format for versions, e.g. 3.0f7 or 8.0.1, that<br />
+they use for some of their software components. APPLEVERSION uses GESTALT<br />
+to retrieve the information. However, this is only useful for the few<br />
+<a href="Gestalt" class="uri">Gestalt</a> selectors that return information in this “standard” format.<br />
+If the selector is undefined (possibly because that software is<br />
+not present) APPLEVERSION returns an empty string.</p>
+<p>WINDOWS: ________________________________________________________________</p>
+<p><a href="AppleVersion" class="uri">AppleVersion</a> does not exist in Windows.</p>
+<p>_________________________________________________________________________</p>
+<p>see also: <a href="Gestalt" class="uri">Gestalt</a>, <a href="Screen" class="uri">Screen</a>(‘Computer?’), <a href="MacModelName" class="uri">MacModelName</a></p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOneliners/AppleVersion.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOneliners/AppleVersion.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOneliners/AppleVersion.m</code></p>
+</div>

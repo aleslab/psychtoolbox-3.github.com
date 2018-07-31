@@ -1,0 +1,21 @@
+<h2 id="psychtoolbox-psychoneliners">[[Psychtoolbox]] › [[PsychOneliners]]</h2>
+<p>svnpath = <a href="GetSubversionPath" class="uri">GetSubversionPath</a> – Return auto-detected installation path<br />
+for svn client, if any. Return empty string if auto-detection not<br />
+possible. Typical usage is like this:</p>
+<p>mysvncommand = [<a href="GetSubversionPath" class="uri">GetSubversionPath</a> ‘svn status’]; system(mysvncommand);</p>
+<p><a href="GetSubversionPath" class="uri">GetSubversionPath</a> will return the path to be prefixed in front of the svn<br />
+executable. If none can be found, the svn executable will be executed<br />
+without path spec. If it is installed in the system executable search<br />
+path, it will then still work.</p>
+<p>The function simply checks if the svn executable is in the Matlab path<br />
+and returns a proper path-spec. If it isn’t found in the Matlab path, it<br />
+tries default path locations for OS-X and Windows. If that doesn’t work,<br />
+it returns an empty string.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOneliners/GetSubversionPath.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOneliners/GetSubversionPath.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOneliners/GetSubversionPath.m</code></p>
+</div>

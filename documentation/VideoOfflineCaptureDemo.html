@@ -1,0 +1,34 @@
+<h2 id="psychtoolbox-psychdemos">[[Psychtoolbox]] › [[PsychDemos]]</h2>
+<p>Demonstrate use of built-in [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) video capture engine to capture first<br />
+into memory, then retrieve corresponding video textures after end of capture.</p>
+<p><a href="VideoOfflineCaptureDemo" class="uri">VideoOfflineCaptureDemo</a>([fullscreen=0][, fullsize=0][, roi=[0 0 640 480]][,deviceId=0])</p>
+<p><a href="VideoOfflineCaptureDemo" class="uri">VideoOfflineCaptureDemo</a> initializes the first attached and supported camera on<br />
+your computer (e.g, the built-in iSight of Apple Macintosh computers),<br />
+then records video from it into memory until you press a key. It then<br />
+fetches and displays all previously recorded images, then quits. Abort<br />
+display by pressing any key on the keyboard.</p>
+<p>By default, the maximum supported framerate is requested and the<br />
+timecode and interframe interval of each captured image is displayed in<br />
+the top-left corner of the display.</p>
+<p>See also <a href="ImagingVideoCaptureDemo" class="uri">ImagingVideoCaptureDemo</a>, <a href="VideoDelayloopMiniDemo" class="uri">VideoDelayloopMiniDemo</a> and a few other<br />
+nice demos.</p>
+<h3 id="optional-parameters">Optional parameters:</h3>
+<p>‘fullscreen’ If set to non-zero value, the image is displayed in a<br />
+fullscreen window, as usual, otherwise a normal GUI window is used.</p>
+<p>‘fullsize’ If set to 1, the cameras image is scaled up to full screen<br />
+resolution, ie. so it fills the maximum amount of display area, but<br />
+preserving the original aspect ratio.</p>
+<p>‘roi’ Selects a rectangular subregion of the camera for display. By<br />
+default, it selects a [0 0 640 480] rectangle, ie. the full are of a<br />
+camera with 640 x 480 pixels resolution. This parameter may need tweaking<br />
+for some cameras, as some drivers have bugs and don’t work well with all<br />
+settings.</p>
+<p>‘deviceId’ Device index of video capture device. Defaults to system default.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/VideoOfflineCaptureDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/VideoOfflineCaptureDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/VideoOfflineCaptureDemo.m</code></p>
+</div>

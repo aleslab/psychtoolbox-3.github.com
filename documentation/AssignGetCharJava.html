@@ -1,0 +1,24 @@
+<h2 id="psychtoolbox-psychjava">[[Psychtoolbox]] › [[PsychJava]]</h2>
+<p><a href="AssignGetCharJava" class="uri">AssignGetCharJava</a> - Helper function for Java based <a href="GetChar" class="uri">GetChar</a>.</p>
+<p>This routine is called during initialization from <a href="ListenChar" class="uri">ListenChar</a>,<br />
+<a href="CharAvail" class="uri">CharAvail</a>, <a href="GetChar" class="uri">GetChar</a> and <a href="FlushEvents" class="uri">FlushEvents</a>. It tries as hard as possible<br />
+instantiate a Java object of the <a href="GetCharJava" class="uri">GetCharJava</a> class and returns it<br />
+if successfull. Different versions of Matlab use different versions<br />
+of the Java virtual machine. Matlab can only load versions of<br />
+<a href="GetCharJava" class="uri">GetCharJava</a>.class that were compiled with the same Java version as<br />
+the one that Matlab uses. Therefore we provide multiple versions of<br />
+the <a href="GetCharJava" class="uri">GetCharJava</a>.class, each compiled against a different Java version.<br />
+We try to instantiate the newest version. If that fails, we try the<br />
+2nd newest version, and so on. If all versions bundled with PTB failed<br />
+to instantiate, the behaviour depends on the availability of an installed<br />
+Java compiler. If a “javac” compiler is available, as on <a href="MacOS" class="uri">MacOS</a>-X, we invoke<br />
+it on the source code to built a customized version of <a href="GetCharJava" class="uri">GetCharJava</a> for that<br />
+machine. Otherwise we give up and fail.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychJava/AssignGetCharJava.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychJava/AssignGetCharJava.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychJava/AssignGetCharJava.m</code></p>
+</div>

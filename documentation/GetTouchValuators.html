@@ -1,0 +1,49 @@
+<h2 id="psychtoolbox-psychhardware">[[Psychtoolbox]] › [[PsychHardware]]</h2>
+<p>event = <a href="GetTouchValuators" class="uri">GetTouchValuators</a>(event, deviceInfo)</p>
+<p>Return ‘event’, an augmented version of the input ‘event’, ie. event extended<br />
+with info about additional semantic meaning of the specified touch input event,<br />
+using device specific semantic mapping info provided in ‘deviceInfo’.</p>
+<h3 id="typical-use">Typical use:</h3>
+<ol type="1">
+<li><p>Get ‘deviceInfo’ at script startup:<br />
+deviceInfo = <a href="GetTouchDeviceInfo" class="uri">GetTouchDeviceInfo</a>(deviceIndex);</p></li>
+<li><p>For each retrieved touch event evt = <a href="TouchEventGet" class="uri">TouchEventGet</a>(…):<br />
+evt = <a href="GetTouchValuators" class="uri">GetTouchValuators</a>(evt, deviceInfo)</p></li>
+</ol>
+<p>Which information is available on a given operating system/display system and<br />
+device combo is variable, but the returned event struct potentially has the<br />
+following additional fields:</p>
+<p>.<a href="RawX" class="uri">RawX</a> = Raw device x position of touch.</p>
+<p>.<a href="RawY" class="uri">RawY</a> = Raw device y position of touch.</p>
+<p>.<a href="ToolX" class="uri">ToolX</a> = Raw device x position of approaching tool, if detectable.</p>
+<p>.<a href="ToolY" class="uri">ToolY</a> = Raw device y position of approaching tool, if detectable.</p>
+<p>.<a href="ToolType" class="uri">ToolType</a> = Type of tool used on the surface. There are numbers for finger,<br />
+palm, and different type of styluses.</p>
+<p>.Pressure = Pressure which the touch applies to the touch device surface,<br />
+normalized to 0.0 - 1.0 range.</p>
+<p>.Distance = Distance from the touch surface, normalized to 0.0 - 1.0 range,<br />
+with 0.0 = contact, 1.0 = Maximally far away while still being<br />
+detectable, iow. hovering over the surface.</p>
+<p>.<a href="TouchMajor" class="uri">TouchMajor</a> = Length of major axis of an ellipse which approximates the shape<br />
+of the touch area, in device units.</p>
+<p>.<a href="TouchMinor" class="uri">TouchMinor</a> = Length of minor axis of an ellipse which approximates the shape<br />
+of the touch area, in device units.</p>
+<p>.<a href="WidthMajor" class="uri">WidthMajor</a> and .<a href="WidthMinor" class="uri">WidthMinor</a> are major/minor width of an ellipse approximating<br />
+the complete object approaching the screen. The ratio <a href="TouchMajor" class="uri">TouchMajor</a> / <a href="WidthMajor" class="uri">WidthMajor</a><br />
+and <a href="TouchMinor" class="uri">TouchMinor</a> / <a href="WidthMinor" class="uri">WidthMinor</a> can be used to approximate how close/strong a touch<br />
+is, in the absence of .Pressure or .Distance information.</p>
+<p>.Orientation = If the touch contact area isn’t circular and the hardware can<br />
+detect the orientation of a touch area, then this stores orientation<br />
+in degrees. 0 degrees = Upward pointing - aligned with positive<br />
+y-axis of the touch surface. &gt; 0 degress = clock-wise turn, &lt; 0<br />
+degrees = counter clock-wise turn. Many devices can not find out<br />
+orientation at all, or only if a contact is more vertical (0 deg.)<br />
+rather more horizontal (90 deg.).</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/GetTouchValuators.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/GetTouchValuators.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/GetTouchValuators.m</code></p>
+</div>

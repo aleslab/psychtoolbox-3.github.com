@@ -1,0 +1,10 @@
+<h1 id="datapixxgetaudiogroupdelay"><a href="Datapixx-GetAudioGroupDelay">Datapixx(‘GetAudioGroupDelay’)</a></h1>
+<h2 id="psychtoolbox-datapixx.mexdll-subfunction">[[Psychtoolbox]] › [[Datapixx]].{mex*,dll} subfunction</h2>
+<p>Returns Datapixx Audio OUT group delay in seconds.<br />
+This is the time between when a schedule sends a data sample to the CODEC, and<br />
+when that sample has greatest output at the “Audio OUT” jack of the Datapixx.<br />
+Due to the way in which <a href="CODECs" class="uri">CODECs</a> operate, this delay is a function of the sample<br />
+rate. For greatest precision in audio stimulus timing, this value could be<br />
+subtracted from the scheduleOnset parameter before calling <a href="SetAudioSchedule" class="uri">SetAudioSchedule</a>.<br />
+See <a href="DatapixxAudioFeedbackDemo" class="uri">DatapixxAudioFeedbackDemo</a> for an example.</p>
+<p>&lt;&lt;=====See also:===== InitAudio, SetAudioSchedule &lt;&lt;</p>

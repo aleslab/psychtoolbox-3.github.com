@@ -1,0 +1,32 @@
+<h2 id="psychtoolbox-psychcal">[[Psychtoolbox]] › [[PsychCal]]</h2>
+<p>values = <a href="SearchGammaTable" class="uri">SearchGammaTable</a>(targets, input, table)</p>
+<p>Return the [0-1] entry from the passed table that produces<br />
+output closest to the [0-1] target.</p>
+<p>The targets are assumed to be a row vector.<br />
+The table is assumed to be a column vector.<br />
+The returned indices and values are are row vectors.</p>
+<p>Works by using Matlab’s interp1, with the output as the x values and<br />
+the input as the f(x) values.</p>
+<p>I suspect that this is a fast Matlab implementation, but those who want<br />
+to try are welcome to try to do better. (Remember, though, that this<br />
+routine gains in efficiency the more searches are done at once.<br />
+This is because it contains no dreaded loops.)</p>
+<p>4/2/94 dhb Added code that checks for special case of zero output.<br />
+4/4/94 dhb Fixed code added on 4/2.<br />
+4/5/94 jms Fixed code added on 4/2.<br />
+1/21/95 dhb Write search as a loop. Loses time and elegance,<br />
+but prevents allocation of arrays that may be huge.<br />
+11/16/06 dhb Renamed as <a href="SearchGammaTable" class="uri">SearchGammaTable</a>.<br />
+dhb Start work on converting to [0-1] universe. Change<br />
+name and interface.<br />
+11/20/06 dhb Finish update by calling through MATLAB’s interpolation function.<br />
+9/15/08 dhb Handle case where there are a bunch of zeros at the beginning of gamma table.<br />
+5/26/12 dhb Improve comment. This was not doing exhaustive search.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychCal/SearchGammaTable.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychCal/SearchGammaTable.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychCal/SearchGammaTable.m</code></p>
+</div>

@@ -1,0 +1,31 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p>wheelDelta = <a href="GetMouseWheel" class="uri">GetMouseWheel</a>([mouseIndex])</p>
+<p>Return change of mouse wheel position of a wheel mouse (in “wheel clicks”)<br />
+since last query. ‘mouseIndex’ is the device index of the wheel mouse to<br />
+query. The argument is optional: If left out, the first detected real wheel<br />
+mouse is queried.</p>
+<p>OS X: _____________________________________________________________________</p>
+<p>Uses <a href="PsychHID" class="uri">PsychHID</a> for low-level access to mice with mouse wheels. If wheel<br />
+state is not queried frequent enough, the internal queue may overflow and<br />
+some mouse wheel movements may get lost, resulting in a smaller reported<br />
+‘wheelDelta’ than the real delta since last query. On OS X 10.4.11 the<br />
+operating system can store at most 10 discrete wheel movements before it<br />
+discards movement events. This uses low-level code which may not work on<br />
+all wheel mice.</p>
+<p>Linux: ____________________________________________________________________</p>
+<p>Uses <a href="GetMouse" class="uri">GetMouse</a>() extra valuators to check if one of the valuators represents<br />
+a mouse wheel, then translates the valuators absolute wheel position into<br />
+wheel delta by keeping track of old values.</p>
+<p>MS-Windows: _______________________________________________________________</p>
+<p>This function is not supported and will fail with an error.</p>
+<p>___________________________________________________________________________<br />
+See also: <a href="GetClicks" class="uri">GetClicks</a>, <a href="GetMouseIndices" class="uri">GetMouseIndices</a>, <a href="GetMouse" class="uri">GetMouse</a>, <a href="SetMouse" class="uri">SetMouse</a>, <a href="ShowCursor" class="uri">ShowCursor</a>,<br />
+<a href="HideCursor" class="uri">HideCursor</a></p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/GetMouseWheel.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/GetMouseWheel.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/GetMouseWheel.m</code></p>
+</div>

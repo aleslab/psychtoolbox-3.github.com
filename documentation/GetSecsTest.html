@@ -1,0 +1,67 @@
+<h2 id="psychtoolbox-psychtests">[[Psychtoolbox]] › [[PsychTests]]</h2>
+<p><a href="GetSecsTest" class="uri">GetSecsTest</a>([n=100000])</p>
+<p>This test is meant for Microsoft Windows only!</p>
+<p>Performs a reliability test of your systems timing hardware. This script<br />
+tries to find out if your systems clock works correctly, ie., if<br />
+<a href="GetSecs" class="uri">GetSecs</a>(), <a href="WaitSecs" class="uri">WaitSecs</a>(), <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) and the <a href="PsychPortAudio" class="uri">PsychPortAudio</a> functions<br />
+for timed stimulus onset and clock queries will work correctly.</p>
+<p>The optional parameter ‘n’ specifies how many samples to use for each<br />
+test run. A larger number means longer runtime, but higher accuracy of<br />
+the results. Default is 100000 samples.</p>
+<p>The test shows a lot of different data plots, but you should focus on the<br />
+results printed to the Matlab command window. If they sound ok then you<br />
+can probably ignore the plots.</p>
+<p>The test exercises your timing hardware: It takes ‘n’ time samples in a<br />
+loop which repeatedly asks <a href="GetSecs" class="uri">GetSecs</a> for the time. <a href="GetSecs" class="uri">GetSecs</a> is used in a<br />
+special debug-mode which also provides time readings from an alternative<br />
+hardware clock. After sampling, the script compares timestamps from the<br />
+normally used high precision timer against samples taken from the low<br />
+precision reference timer. In an ideal world on a well working system,<br />
+both timers should deliver roughly the same time readings. A fixed offset<br />
+between the two clocks is normal - they both count time from system<br />
+bootup or reset, but they are started with a slight offset at system<br />
+start. A slowly drifting offset is not uncommon on lower quality<br />
+hardware, this is considered ok as long as the drift is small. Important<br />
+is that time is monotonically increasing on both clocks and that the<br />
+ratio of elapsed time in both clocks is nearly the same: Dividing elapsed<br />
+time as reported by the high-res timer by the elapsed time reported by<br />
+the low-res timer should yield a ratio of very close to 1.0. The test<br />
+also checks for regular low-res timer ticks, if pause()’ing Matlabs<br />
+execution for multiple seconds affects the clocks in some worrying<br />
+manner (e.g., time slowing down) or if quick switching between multiple<br />
+cpu cores of a multi-core machine causes time inconsistencies, e.g., time<br />
+going backwards.</p>
+<p>The test first runs a block of trials with <a href="PTBs" class="uri">PTBs</a> timing in “normal mode”,<br />
+where PTB applies a couple of fixes for broken hardware.</p>
+<p>Then it disables those fixes and retests, to assess how earlier PTB<br />
+versions worked on your system - when no such special workarounds were<br />
+available.</p>
+<p>Please note that this test is not 100% water-proof, it could<br />
+theoretically have ‘false negatives’, as many problems with the clocks<br />
+are associated with the behaviour of system power management, which<br />
+itself is influenced by all kind of factors, e.g., what other<br />
+applications are running in parallel to Matlab, if there is any network<br />
+traffic, what kind of hardware is connected to the system…</p>
+<p>We will try to improve the test as we learn more about possible causes of<br />
+trouble.</p>
+<p>Starting with PTB releases as of ‘beta’ from 26th November 2007, PTB also<br />
+performs a couple of runtime checks to spot more timer problems. These<br />
+checks are performed all the time while your scripts are executing, so if<br />
+you see some “CRITICAL-WARNING” messages about timer problems at the<br />
+Matlab prompt while your scripts are executing, better take them serious!</p>
+<p>For more (up to date) information about system configurations that might<br />
+suffer from clock problems, background information and troubleshooting<br />
+tips, visit the Psychtoolbox Wiki’s FAQ section, specifically:</p>
+<p>http://psychtoolbox.org/wikka.php?wakka=<a href="FaqGetSecsTestFails" class="uri">FaqGetSecsTestFails</a></p>
+<p>Btw. Currently there are no known problems with timers and clocks on PC<br />
+hardware running recent Linux distributions or on any Apple Macintosh<br />
+computers running <a href="MacOS" class="uri">MacOS</a>/X ;-) – That’s why first versions of this test<br />
+are only targeted at MS-Windows.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychTests/GetSecsTest.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychTests/GetSecsTest.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychTests/GetSecsTest.m</code></p>
+</div>

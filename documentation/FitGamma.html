@@ -1,0 +1,40 @@
+<h2 id="psychtoolbox-psychgamma">[[Psychtoolbox]] › [[PsychGamma]]</h2>
+<p>[fit_out,x,fitComment] = …<br />
+<a href="FitGamma" class="uri">FitGamma</a>(values_in,measurements,values_out,[fitType])</p>
+<p>Fit a gamma function. This essentially a driver function.<br />
+It has two main purposes.</p>
+<p>First it tries several different<br />
+underlying parametric forms for the fit and chooses the best<br />
+for a particular data set.</p>
+<p>Second, it does the bookkeeping for fitting each column of<br />
+input measurements. (Each of the underlying fit functions expects<br />
+only vector input.)</p>
+<p>To a large extent, the interface to the underlying fit functions<br />
+(e.g. <a href="FitGammaPow" class="uri">FitGammaPow</a>, <a href="FitGammaSig" class="uri">FitGammaSig</a>, …) is uniform. However, this routine<br />
+does have to know a little bit about initial value dimension and choice.<br />
+We have tried to localize this information in the initialization routines<br />
+(e.g. <a href="InitialXPow" class="uri">InitialXPow</a>, <a href="InitialXSig" class="uri">InitialXSig</a>, …) as much as possible, but some<br />
+caution is advised.</p>
+<p>Optional argument fitType allows you to force the return of a particular<br />
+paramtetric form. Currently:<br />
+fitType == 1: Power function<br />
+fitType == 2: Extended power function<br />
+fitType == 3: Sigmoid<br />
+fitType == 4: Weibull<br />
+fitType == 5: Modified polynomial<br />
+fitType == 6: Linear interpolation<br />
+fitType == 7: Cubic spline</p>
+<p>All fit types are in a form such that the fit is forced through the<br />
+origin for 0 input. This is because our convention is that gamma<br />
+correction happens after subtraction of the ambient light.</p>
+<p>NOTE: <a href="FitGammaPow" class="uri">FitGammaPow</a> (and perhaps other subroutines) uses CONSTR, which is part of the<br />
+Mathworks Optimization Toolbox.</p>
+<p>Also see <a href="FitGammaDemo" class="uri">FitGammaDemo</a>.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychGamma/FitGamma.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychGamma/FitGamma.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychGamma/FitGamma.m</code></p>
+</div>

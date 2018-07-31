@@ -1,0 +1,36 @@
+<h2 id="psychtoolbox-psychometric">[[Psychtoolbox]] › [[Psychometric]]</h2>
+<p>[alpha,beta,thresh50]=<a href="FitWeibYN" class="uri">FitWeibYN</a>(inputs,nYes,nNo,[alpha0],[beta0],[numFunCalls])</p>
+<p>Fits a Weibull function to the passed yes-no data.</p>
+<p>Requires the optimization toolbox. Doesn’t work with Octave yet.</p>
+<h3 id="inputs">INPUTS:</h3>
+<p>inputs Input levels<br />
+nYes Number of yes responses at<br />
+the corresponding input level<br />
+nNo Number of no responses at<br />
+the corresponding input level<br />
+alpha0 Initial guess for alpha (optional)<br />
+beta0 Initial guess for beta (optional)<br />
+OUTPUTS:<br />
+alpha<br />
+beta<br />
+thresh50 50% threshold</p>
+<p>See also: <a href="FitWeibTAFC" class="uri">FitWeibTAFC</a>, <a href="FitFitWeibAlphTAFC" class="uri">FitFitWeibAlphTAFC</a>, <a href="FitCumNormYN" class="uri">FitCumNormYN</a>, <a href="FitLogitYN" class="uri">FitLogitYN</a></p>
+<p>9/15/93 jms Added a pre-fit to get a better initial.<br />
+jms Made ‘options’ a parameter so that printing could<br />
+be disabled higher up.<br />
+9/23/93 jms Test the slope of the linear pre-fit to set the upper<br />
+and lower bounds on the fit.<br />
+2/5/97 dhb Rewrote to parallel TAFC version but kept slope test.<br />
+dhb Check for optimization toolbox.<br />
+4/18/00 mpr Added an option to set the number of allowed function calls<br />
+10/13/00 dhb Improve initial guess for alpha. Thanks to Duje Tadin<br />
+for identifying the need for this.<br />
+3/5/05 dhb Update for optimization toolbox version 2.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/Psychometric/FitWeibYN.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/Psychometric/FitWeibYN.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/Psychometric/FitWeibYN.m</code></p>
+</div>

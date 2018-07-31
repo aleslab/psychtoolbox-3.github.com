@@ -1,0 +1,19 @@
+<h1 id="ioportread"><a href="IOPort-Read">IOPort(‘Read’)</a></h1>
+<h2 id="psychtoolbox-ioport.mexdll-subfunction">[[Psychtoolbox]] › [[IOPort]].{mex*,dll} subfunction</h2>
+<p>Read data from device, specified by ‘handle’.<br />
+Returned ‘data’ will be a row vector of read data bytes. ‘when’ will be a<br />
+receive timestamp of when the data read was complete. ‘errmsg’ will be a human<br />
+readable char string with an error message if any error occured, otherwise an<br />
+empty string. The optional flag ‘blocking’ if set to 0 will ask the read<br />
+function to not block, but return immediately: The read function will return<br />
+whatever amount of data is currently available in the internal input queue, but<br />
+at most ‘amount’ bytes if ‘amount’ is specified. If no data is available, it<br />
+will return an empty matrix. This is the default.<br />
+If ‘blocking’ is set to 1, you must specify the ‘amount’ of bytes to receive and<br />
+the function will wait until that exact amount of data is available, then return<br />
+it.Even in blocking mode, the function will return if no data becomes available<br />
+within the time period specified by the configuration setting ‘ReadTimeout’ (see<br />
+help for ‘OpenSerialPort’ for description). In some situations, the read<br />
+function may return less data than requested, e.g., in specific error cases,<br />
+where a read could only get partially satisfied.</p>
+<p>&lt;&lt;=====See also:===== ‘Write’, ‘OpenSerialPort’, ‘ConfigureSerialPort’ &lt;&lt;</p>

@@ -1,0 +1,30 @@
+<h2 id="psychtoolbox-psychdemos">[[Psychtoolbox]] › [[PsychDemos]]</h2>
+<p><a href="BasicSoundFeedbackDemo" class="uri">BasicSoundFeedbackDemo</a>([reqlatency=7.5 ms] [,duplex=0])</p>
+<p>Demonstrates very basic usage of the new Psychtoolbox sound driver<br />
+<a href="PsychPortAudio" class="uri">PsychPortAudio</a>() for audio feedback. For a more complex solution<br />
+which provides much more precise audio feedback timing for control<br />
+of audio feedback delay, look at <a href="DelayedSoundFeedbackDemo" class="uri">DelayedSoundFeedbackDemo</a> instead.</p>
+<p>Sound is captured from the default recording device and then - with a<br />
+selectable delay - played back via the default output device.</p>
+<p>By default, feedback is tried with a latency of 7.5 ms plus hardware and<br />
+system inherent delay, but you can ask for a specific latency in msecs by<br />
+providing the optional parameter ‘reqlatency’. Achievable latency will be<br />
+constrained by the capabilities of your hardware. Choosing too low of a<br />
+value will create audible artifacts in the sound and the driver may<br />
+output warning about ‘buffer underflows during streaming refill…’.</p>
+<p>Depending on your sound hardware you’ll have to either leave ‘duplex’ at<br />
+its default of zero (2 times half-duplex mode) or set it to 1<br />
+(full-duplex mode): ASIO driven hardware – typically on MS-Windows –<br />
+will usually need full-duplex mode. On Macintosh OS/X it depends on the<br />
+sound hardware. <a href="IntelMacs" class="uri">IntelMacs</a> are happy with half-duplex mode, some <a href="PowerMacs" class="uri">PowerMacs</a><br />
+may need full-duplex mode.</p>
+<p>If you need low-latency, make sure to read “help <a href="InitializePsychSound" class="uri">InitializePsychSound</a>”<br />
+carefully or contact the forum.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/BasicSoundFeedbackDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/BasicSoundFeedbackDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/BasicSoundFeedbackDemo.m</code></p>
+</div>

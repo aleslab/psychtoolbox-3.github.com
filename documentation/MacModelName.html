@@ -1,0 +1,21 @@
+<h2 id="psychtoolbox-psychoneliners">[[Psychtoolbox]] › [[PsychOneliners]]</h2>
+<p>modelName=<a href="MacModelName" class="uri">MacModelName</a><br />
+Return the model name of the Macintosh.</p>
+<p>OSX: Get the computer identifier as reported by open firmware. In the<br />
+OSX Psychtoolbox that is provided in the struct returned by<br />
+<a href="Screen" class="uri">Screen</a>(‘Computer’). Convert that identifier to Apple’s marketing<br />
+name for the computer. To do that we use the mapping of identifier to<br />
+product names found in:<br />
+/System/Library/<a href="SystemProfiler" class="uri">SystemProfiler</a>/<a href="SPPlatformReporter" class="uri">SPPlatformReporter</a>.spreporter/Contents/<br />
+Resources/English.lproj/Localizable.strings.<br />
+There is no official Apple-recommended way to uncover the marketing<br />
+name. However, this method works and should be reasonably robust.</p>
+<p>See also: <a href="Screen" class="uri">Screen</a>(‘Computer?’), [<a href="OSName" class="uri">OSName</a>][(OSName)]((OSName)), <a href="AppleVersion" class="uri">AppleVersion</a></p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOneliners/MacModelName.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOneliners/MacModelName.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOneliners/MacModelName.m</code></p>
+</div>

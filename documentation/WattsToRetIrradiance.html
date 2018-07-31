@@ -1,0 +1,38 @@
+<h2 id="psychtoolbox-psychradiometric">[[Psychtoolbox]] › [[PsychRadiometric]]</h2>
+<p>[irradiance, irradianceS] =…<br />
+<a href="WattsToRetIrradiance" class="uri">WattsToRetIrradiance</a>(relativeSpectrum, relativeSpectrumS, readingInWatts, [radiometer])</p>
+<p>The assumption underlying this routine is that the relative spectrum of a light<br />
+is available, as well as the total power of the light passing through an aperture<br />
+of known size. This is the situation in the apparatus we use in Sterling’s lab.<br />
+The routine computes the irradiance (watts/um^2-wlinterval) from the relative spectrum<br />
+(relative power, not relative quanta) and a measurement of the total power in watts,<br />
+given the radiometer properties specified.</p>
+<p>Radiometers do not typically have an ideal flat spectral response, and the actual<br />
+spectral response is often provided as part of the instrument calibration. In addition,<br />
+the instruments are typically calibrated to provide an accurate reading for one<br />
+particular reference spectrum, which is also specified. This routine is set up<br />
+to use this calibration information together with the known relative spectrum to<br />
+provide a correct result. The radiometer properties may be passed in the radiometer<br />
+structure. A default structure is set up that describes the radiometer used in<br />
+the Sterling lab. This structure also describes the collecting area of the measurement<br />
+configuration.</p>
+<p>This routine could be easily modified to deal with a photometric head.</p>
+<p>Input variables: relativeSpectrum is the relative power as a function of wavelength.<br />
+relativeSpectrumS is the wavelength sampling information for the relativeSpectrum.<br />
+readingInWatts is the total power measured.<br />
+radiometer is a structure describing the radiometer. (default = Sterling Lab’s IL1400A).</p>
+<p>04/29/03 lyin Wrote it with advice from DHB<br />
+05/06/03 lyin Put wls into variable: lightSource<br />
+05/06/03 lyin Correction for wavelength sampling interval<br />
+06/12/03 lyin Change the way, variable being passed<br />
+6/26/03 dhb Change some names, also compute power per wavelength interval, not per nm.<br />
+6/30/03 dhb Lots more changes.<br />
+7/08/03 dhb Monochromatic ref spectrum default, as per manual.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychRadiometric/WattsToRetIrradiance.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychRadiometric/WattsToRetIrradiance.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychRadiometric/WattsToRetIrradiance.m</code></p>
+</div>

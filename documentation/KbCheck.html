@@ -1,0 +1,101 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p>[keyIsDown, secs, keyCode, deltaSecs] = <a href="KbCheck" class="uri">KbCheck</a>([deviceNumber])</p>
+<p>Return keyboard status (keyIsDown), time (secs) of the status check, and<br />
+keyboard scan code (keyCode).</p>
+<p>keyIsDown 1 if any key, including modifiers such as &lt;shift&gt;,<br />
+&lt;control&gt; or &lt;caps lock&gt; is down. 0 otherwise.</p>
+<p>secs Time of keypress as returned by <a href="GetSecs" class="uri">GetSecs</a>.</p>
+<p>keyCode A 256-element logical array. Each bit<br />
+within the logical array represents one keyboard key.<br />
+If a key is pressed, its bit is set, othewise the bit<br />
+is clear. To convert a keyCode to a vector of key<br />
+numbers use FIND(keyCode). To find a key’s keyNumber<br />
+use <a href="KbName" class="uri">KbName</a> or <a href="KbDemo" class="uri">KbDemo</a>.</p>
+<p>deltaSecs Time in seconds since this <a href="KbCheck" class="uri">KbCheck</a> query and the most<br />
+recent previous query (if any). This value is in some<br />
+sense a confidence interval, e.g., for reaction time<br />
+measurements. If <a href="KbCheck" class="uri">KbCheck</a> returns the information that a<br />
+key is pressed by the subject, then the subject could<br />
+have pressed the key down anytime between this<br />
+invocation of <a href="KbCheck" class="uri">KbCheck</a> at time ‘secs’ and the most<br />
+recent previous invocation. Therefore, ‘deltaSecs’<br />
+tells you about the interval in which depression of the<br />
+key(s) might have happened: [secs - deltaSecs; secs].<br />
+for practical purpose this means that “measured” RT’s<br />
+can’t be more accurate than ‘deltaSecs’ seconds - the<br />
+interval between the two most recent keyboard checks.<br />
+Please note however, that standard computer keyboards<br />
+can incur additional delays and timing uncertainty of<br />
+up to 50 msecs, so the real uncertainty can be higher<br />
+than ‘deltaSecs’ – ‘deltaSecs’ is just a lower bound!</p>
+<p><a href="KbCheck" class="uri">KbCheck</a> and <a href="KbWait" class="uri">KbWait</a> determine whether any key is down now, including the<br />
+meta keys: &lt;caps lock&gt;, &lt;shift&gt;, &lt;command&gt;, &lt;control&gt;, and &lt;option&gt;. The<br />
+only key not reported is the start key (triangle) used to power on your<br />
+computer.</p>
+<p>Some users of Laptops experienced the problem of “stuck keys”: Some keys<br />
+are always reported as “down”, so <a href="KbWait" class="uri">KbWait</a> returns immediately and <a href="KbCheck" class="uri">KbCheck</a><br />
+always reports keyIsDown == 1. This is often due to special function keys.<br />
+These keys or system functionality are assigned vendor specific<br />
+key codes, e.g., the status of the Laptop lid (opened/closed) could be<br />
+reported by some special keycode. Whenever the Laptop lid is open, this key<br />
+will be reported as pressed. You can work around this problem by passing<br />
+a list of keycodes to be ignored by <a href="KbCheck" class="uri">KbCheck</a> and <a href="KbWait" class="uri">KbWait</a>. See<br />
+“help <a href="DisableKeysForKbCheck" class="uri">DisableKeysForKbCheck</a>” on how to do this.</p>
+<p>Keys pressed by the subject often show up in the Matlab command window as<br />
+well, cluttering that window with useless character junk. You can prevent<br />
+this from happening by disabling keyboard input to Matlab: Add a<br />
+<a href="ListenChar" class="uri">ListenChar</a>(2); command at the beginning of your script and a<br />
+<a href="ListenChar" class="uri">ListenChar</a>(0); to the end of your script to enable/disable transmission of<br />
+keypresses to Matlab. If your script should abort and your keyboard is<br />
+dead, press CTRL+C to reenable keyboard input – It is the same as<br />
+<a href="ListenChar" class="uri">ListenChar</a>(0). See ‘help ListenChar’ for more info.</p>
+<p><a href="GetChar" class="uri">GetChar</a> and <a href="CharAvail" class="uri">CharAvail</a> are character-oriented (and slow), whereas <a href="KbCheck" class="uri">KbCheck</a><br />
+and <a href="KbWait" class="uri">KbWait</a> are keypress-oriented (and fast). If only a meta key was hit,<br />
+<a href="KbCheck" class="uri">KbCheck</a> will return true, because a key was pressed, but <a href="CharAvail" class="uri">CharAvail</a> will<br />
+return false, because no character was generated. See <a href="GetChar" class="uri">GetChar</a>.</p>
+<p><a href="KbCheck" class="uri">KbCheck</a> and <a href="KbWait" class="uri">KbWait</a> are MEX files, which take time to load when they’re<br />
+first called. They’ll then stay loaded until you flush them (e.g. by<br />
+changing directory or calling CLEAR MEX).</p>
+<p><a href="KbCheck" class="uri">KbCheck</a> uses the <a href="PsychHID" class="uri">PsychHID</a> function, a general purpose function for<br />
+reading from the Human Interface Device (HID) class of USB devices.</p>
+<p><a href="KbCheck" class="uri">KbCheck</a> queries the first USB-HID keyboard device by default. Optionally,<br />
+when multiple keyboards are attached to your machine, you can pass in a<br />
+‘deviceNumber’: When ‘deviceNumber’ is -1, <a href="KbCheck" class="uri">KbCheck</a> will query all<br />
+keyboard devices and return their “merged state” - The ‘keyCode’ vector<br />
+will represent the state of all keys of all keyboards, and the<br />
+‘keyIsDown’ flag will be equal to one if at least one key on any of the<br />
+keyboards is pressed. When ‘deviceNumber’ is -2, <a href="KbCheck" class="uri">KbCheck</a> will query all<br />
+keypad devices (if any) and return their “merged state”, and when<br />
+‘deviceNumber’ is -3, <a href="KbCheck" class="uri">KbCheck</a> will query all keyboard and keypad devices<br />
+and return their “merged state”. When ‘deviceNumber’ is greater than 0, it<br />
+will query only the specified HID keyboard device corresponding to that<br />
+‘deviceNumber’. The function <a href="GetKeyboardIndices" class="uri">GetKeyboardIndices</a>() allows to query the<br />
+device numbers of all attached keyboards, or keyboards matching specific<br />
+criteria, and the function <a href="GetKeypadIndices" class="uri">GetKeypadIndices</a>() allows the same for keypads.</p>
+<p>On MS-Windows 2000 and earlier, <a href="KbCheck" class="uri">KbCheck</a> can address individual keyboards.<br />
+On Windows-XP and later, it can’t.</p>
+<p>To save time, <a href="PsychHID" class="uri">PsychHID</a> and <a href="KbCheck" class="uri">KbCheck</a> enumerate the devices and count keyboards<br />
+only once, and cache the answer. If you add or remove a keyboard during a<br />
+running experiment session, you must flush their caches. Otherwise the new<br />
+keyboard won’t noticed or <a href="KbCheck" class="uri">KbCheck</a> may issue a fatal error trying to access<br />
+a non-existent keyboard. However, in general it is a rather bad idea to allow<br />
+addition or removal of devices during a running session, as various other<br />
+Psychtoolbox functions may also cache devices and device settings and get<br />
+confused by such surprising changes in hardware configuration.</p>
+<p>clear <a href="PsychHID" class="uri">PsychHID</a>; % Force new enumeration of devices.<br />
+clear <a href="KbCheck" class="uri">KbCheck</a>; % Clear persistent cache of keyboard devices.</p>
+<p>As a little bonus, <a href="KbCheck" class="uri">KbCheck</a> can also query other HID human input devices<br />
+which have keys or buttons as if they were keyboards. If you pass in the<br />
+deviceIndex of a mouse <a href="(GetMouseIndices)%20will%20provide%20with%20them">(GetMouseIndices</a>, it will<br />
+report mouse button state as keyboard state. Similar behaviour usually<br />
+works with Joysticks, Gamepads and other input controllers.<br />
+_________________________________________________________________________</p>
+<p>See also: <a href="FlushEvents" class="uri">FlushEvents</a>, <a href="KbName" class="uri">KbName</a>, <a href="KbDemo" class="uri">KbDemo</a>, <a href="KbWait" class="uri">KbWait</a>, <a href="GetChar" class="uri">GetChar</a>, <a href="CharAvail" class="uri">CharAvail</a>.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/KbCheck.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/KbCheck.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/KbCheck.m</code></p>
+</div>

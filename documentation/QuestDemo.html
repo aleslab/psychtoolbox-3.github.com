@@ -1,0 +1,108 @@
+<h2 id="psychtoolbox-quest">[[Psychtoolbox]] › [[Quest]]</h2>
+<p><a href="QuestDemo" class="uri">QuestDemo</a>.m</p>
+<p>One of the great contributions of psychophysics to psychology is the<br />
+notion of measuring threshold, i.e. the signal strength required for a<br />
+criterion level of response by the observer (Pelli &amp; Farell, 1994;<br />
+Farell &amp; Pelli, 1999). Watson and Pelli (1983) described a maximum<br />
+likelihood procedure, which they called QUEST, for estimating threshold.<br />
+The Quest toolbox in the Psychtoolbox is a set of MATLAB functions<br />
+that implement all the original QUEST functions, plus several others.<br />
+You can think of it as a Bayesian toolbox for testing observers and<br />
+estimating their thresholds. This QUEST toolbox is self-contained,<br />
+and runs on any computer with MATLAB 5 or better.<br />
+web http://psychtoolbox.org/<br />
+web http://psych.nyu.edu/pelli/software.html#quest</p>
+<p>By commenting and uncommenting five lines below, you can use this file<br />
+to implement three QUEST-related procedures for measuring threshold.</p>
+<p><a href="QuestMode" class="uri">QuestMode</a>: In the original algorithm of Watson &amp; Pelli (1983), each<br />
+trial is at the MODE of the posterior pdf. Their final estimate is<br />
+maximum likelihood, which is the MODE of the posterior pdf after<br />
+dividing out the prior pdf. (Subsequent experience has shown that it’s<br />
+better not to divide out the prior, simply using MODE of posterior pdf<br />
+throughout.)</p>
+<p><a href="QuestMean" class="uri">QuestMean</a>: In the improved algorithm of King-Smith et al. (1994), each<br />
+trial and the final estimate are at the MEAN of the posterior pdf.</p>
+<p><a href="QuestQuantile" class="uri">QuestQuantile</a> &amp; <a href="QuestMean" class="uri">QuestMean</a>: In the ideal algorithm of Pelli (1987), each<br />
+trial is at the best QUANTILE, and the final estimate is at the MEAN of<br />
+the posterior pdf.</p>
+<p>You begin by calling <a href="QuestCreate" class="uri">QuestCreate</a>, telling Quest what is your prior<br />
+knowledge, i.e. a guess and associated sd for threshold. Then you run<br />
+some number of trials, typically 40. For each trial you ask Quest to<br />
+recommend a test intensity. Then you actually test the observer at some<br />
+intensity, not necessarily what Quest recommended, and then you call<br />
+<a href="QuestUpdate" class="uri">QuestUpdate</a> to report to Quest the actual intensity used and whether the<br />
+observer got it right. Quest saves this information in your Quest struct,<br />
+which we usually call “q”. This cycle is repeated for each trial. Finally,<br />
+at the end, when you’re done, you ask Quest to provide a final threshold<br />
+estimate, usually the mean and sd (of the posterior pdf).</p>
+<p>It is important to realize that Quest is merely a friendly adviser,<br />
+cataloging your data in your q structure, and making statistical<br />
+analyses of it, but never giving you orders. You’re still in charge. On<br />
+each trial, you ask Quest (by calling <a href="QuestMode" class="uri">QuestMode</a>, or <a href="QuestMean" class="uri">QuestMean</a>, or<br />
+<a href="QuestQuantile">QuestQuantile)</a>) to suggest the best intensity for the next trial. Taking<br />
+that as advice, in your experiment you should then select the intensity<br />
+yourself for the next trial, taking into account the limitations of your<br />
+equipment and experiment. Typically you’ll impose a maximum and a<br />
+minimum, but your equipment may also restrict you to particular discrete<br />
+values, and you might have some reason for not repeating a value.<br />
+Typically you’ll choose the available intensity closest to what Quest<br />
+recommended. In some cases the process of producing the stimulus is so<br />
+involved that the exact stimulus intensity is known only after it’s been<br />
+shown. Having run the trial, you then report the new datum,<br />
+the actual intensity tested and the observer’s response, asking Quest to<br />
+add it to the database in q.</p>
+<p>To use Quest you must provide an estimated value for beta. Beta<br />
+controls the steepness of the Weibull function. Many vision studies use<br />
+Michelson contrast to control the visibility of the stimulus. It turns<br />
+out that psychometric functions for 2afc detection as a function of<br />
+contrast have a beta of roughly 3 for a remarkably wide range of targets<br />
+and conditions (Nachmias, 1981). However, you may want to estimate beta<br />
+for the particular conditions of your experiment. <a href="QuestBetaAnalysis" class="uri">QuestBetaAnalysis</a> is<br />
+provided for that purpose, but please think of it as a limited optional<br />
+feature. It allows only two free parameters, threshold and beta. You may<br />
+prefer to use a general-purpose maximum likelihood fitting program to<br />
+allow more degrees of freedom in fitting a Weibull function to your<br />
+psychometric data. However, once you’ve done that it’s likely that<br />
+you’ll settle on fixed values for all but threshold and use Quest to<br />
+estimate that.</p>
+<p>Note that data collected to estimate threshold usually are not<br />
+good for estimating beta. The psychometric function is sigmoidal, with a<br />
+flat floor, a rise, and a flat ceiling. To estimate threshold you want<br />
+all your trials near the steepest (roughly speaking) part of the rise.<br />
+To estimate beta, the steepness of the rise, you want to have most of<br />
+your trials at the corners, where the rise begins and where it ends. The<br />
+usual way to achieve this is to first estimate threshold and then to<br />
+collect a large number of trials (e.g. 100) at each of several<br />
+intensities chosen to span the domain of the rise. These data can<br />
+be plotted, making a nice graph of the psychometric function and<br />
+they can be fed to <a href="QuestBetaAnalysis" class="uri">QuestBetaAnalysis</a>, to estimate threshold and beta.</p>
+<p>References</p>
+<p>Farell, B., &amp; Pelli, D. G. (1999). Psychophysical methods, or how to<br />
+measure threshold, and why. In J. G. Robson &amp; R. H. S. Carpenter (Eds.),<br />
+A Practical Guide to Vision Research (pp. 129-136). New York: Oxford<br />
+University Press.</p>
+<p>King-Smith, P. E., Grigsby, S. S., Vingrys, A. J., Benes, S. C., and<br />
+Supowit, A. (1994) Efficient and unbiased modifications of the QUEST<br />
+threshold method: theory, simulations, experimental evaluation and<br />
+practical implementation. Vision Res, 34 (7), 885-912.</p>
+<p>Nachmias, J. (1981). On the psychometric function for contrast detection.<br />
+Vision Res, 21(2), 215-223.</p>
+<p>Pelli, D. G. (1987) The ideal psychometric procedure. Investigative<br />
+Ophthalmology &amp; Visual Science, 28 (Suppl), 366.</p>
+<p>Pelli, D. G., &amp; Farell, B. (1994). Psychophysical methods. In M. Bass,<br />
+E. W. Van Stryland, D. R. Williams &amp; W. L. Wolfe (Eds.), Handbook of<br />
+Optics, 2nd ed. (Vol. I, pp. 29.21-29.13). New York: <a href="McGraw" class="uri">McGraw</a>-Hill.</p>
+<p>Watson, A. B. and Pelli, D. G. (1983) QUEST: a Bayesian adaptive<br />
+psychometric method. Percept Psychophys, 33 (2), 113-20.</p>
+<p>All the papers of which I’m an author can be downloaded as PDF files<br />
+from my web site:<br />
+web http://psych.nyu.edu/pelli/</p>
+<p>Try “help Quest”.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/Quest/QuestDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/Quest/QuestDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/Quest/QuestDemo.m</code></p>
+</div>

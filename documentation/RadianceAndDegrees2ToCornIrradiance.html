@@ -1,0 +1,20 @@
+<h2 id="psychtoolbox-psychradiometric">[[Psychtoolbox]] › [[PsychRadiometric]]</h2>
+<p>cornealIrradiance_PowerPerArea = <a href="RadianceAndDegrees2ToCornIrradiance" class="uri">RadianceAndDegrees2ToCornIrradiance</a>(radiance_PowerPerSrArea,stimulusAreaDegrees2)</p>
+<p>Convert the radiance of a stimulus to corneal irradiance, given that we know the area of the stimulus in degrees2.<br />
+The routine assumes that the stimulus is rectangular with linear subtense sqrt(stimulusAreaDegrees2).</p>
+<p>Light power can be in your favorite units (Watts, quanta/sec) as can distance (m, cm, mm). The units for<br />
+area in the returned irradiance match those used for area in the passed radiance.</p>
+<p>So, if radiance is in Watts/[cm2-sr] then distance needs to be in cm and irradiance will be in Watts/cm2.</p>
+<p>This conversion, I believe, is correct for the case where the eye is viewing the surface along its<br />
+surface normal, if we are thinking about a surface of fixed area. For off axis viewing there will be<br />
+a correction for the Lambertian dropoff in light with cos(theta). This differs from computing retinal<br />
+irradiance from radiance, where the area of the surface seen by a fixed retinal area increases exactly<br />
+so as to compensate for that dropoff.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychRadiometric/RadianceAndDegrees2ToCornIrradiance.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychRadiometric/RadianceAndDegrees2ToCornIrradiance.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychRadiometric/RadianceAndDegrees2ToCornIrradiance.m</code></p>
+</div>

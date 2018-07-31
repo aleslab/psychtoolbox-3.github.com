@@ -1,0 +1,18 @@
+<h1 id="screenfillrect"><a href="Screen-FillRect">Screen(‘FillRect’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Fill “rect”. “color” is the clut index (scalar or [r g b] triplet or [r g b a]<br />
+quadruple) that you want to poke into each pixel; default produces white with<br />
+the standard CLUT for this window’s pixelSize. Default “rect” is entire window,<br />
+so you can use this function to clear the window. Please note that clearing the<br />
+entire window will set the background color of the window to the clear color,<br />
+ie., future <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) commands will clear to the new background clear color<br />
+specified in <a href="Screen" class="uri">Screen</a>(‘FillRect’).<br />
+Instead of filling one rectangle, you can also specify a list of multiple<br />
+rectangles to be filled - this is much faster when you need to draw many<br />
+rectangles per frame. To fill n rectangles, provide “rect” as a 4 rows by n<br />
+columns matrix, each column specifying one rectangle, e.g., rect(1,5)=left<br />
+border of 5th rectange, rect(2,5)=top border of 5th rectangle, rect(3,5)=right<br />
+border of 5th rectangle, rect(4,5)=bottom border of 5th rectangle. If the<br />
+rectangles should have different colors, then provide “color” as a 3 or 4 row by<br />
+n column matrix, the i’th column specifiying the color of the i’th rectangle.</p>
+<p>&lt;&lt;=====See also:===== FrameRect &lt;&lt;</p>

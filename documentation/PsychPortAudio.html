@@ -1,0 +1,94 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p><a href="PsychPortAudio" class="uri">PsychPortAudio</a> - High precision sound driver for Psychtoolbox-3.</p>
+<p><a href="PsychPortAudio" class="uri">PsychPortAudio</a> is a special sounddriver for PTB-3. It is a replacement<br />
+for all other Matlab based sound drivers and PTB’s old SND() function.</p>
+<h3 id="psychportaudio-provides-the-following-features"><a href="PsychPortAudio" class="uri">PsychPortAudio</a> provides the following features:</h3>
+<ul>
+<li><p>Allows instant start of sound playback with a very low onset latency<br />
+compared to other sound drivers (on well working hardware).</p></li>
+<li><p>Allows start of playback at a scheduled future system time: E.g.,<br />
+schedule sound onset for a specific time in the future (e.g., visual<br />
+stimulus onset time), then do other things in your Matlab code.<br />
+Scheduled start of playback can be accurate to the sub-millisecond level<br />
+on some system setups.</p></li>
+<li><p>Wait for sound onset, or continue with execution of your code<br />
+immediately.</p></li>
+<li><p>Asynchronous operation: Sound playback works in the background while<br />
+your code continues to do other things.</p></li>
+<li><p>Infinitely repeating playback, or playback of a sound for ‘n’ times.</p></li>
+<li><p>Returns timestamps and status for all crucial events.</p></li>
+<li><p>Support multi-channel devices, e.g., 8-channel sound cards.</p></li>
+<li><p>Supports multi-channel sound capture and full-duplex capture<br />
+and playback of sound on some systems.</p></li>
+<li><p>Enumerate, open and use multiple sound cards in parallel.</p></li>
+<li><p>Reliable (compared to Matlabs sound facilities).</p></li>
+<li><p>Efficient, causes only very low cpu load.</p></li>
+</ul>
+<p>See the “help <a href="InitializePsychSound" class="uri">InitializePsychSound</a>” for more info on low-latency<br />
+configurations. See “help <a href="BasicSoundOutputDemo" class="uri">BasicSoundOutputDemo</a>” for a very basic demo of<br />
+sound output (without special emphasis on low-latency). See<br />
+“<a href="BasicSoundInputDemo" class="uri">BasicSoundInputDemo</a>” for a basic demo of sound capture.<br />
+“<a href="BasicSoundFeedbackDemo" class="uri">BasicSoundFeedbackDemo</a>” shows how to implement a simple audio feedback<br />
+loop with controllable delay.</p>
+<p>“<a href="PsychPortAudioTimingTest" class="uri">PsychPortAudioTimingTest</a>” is a script that we used for testing PA’s<br />
+sound onset latency and accuracy. It also serves as an example on how to<br />
+get perfectly synched audio-visual stimulus onsets.</p>
+<p>Type “<a href="PsychPortAudio" class="uri">PsychPortAudio</a>” for an overview of supported subfunctions and<br />
+“<a href="PsychPortAudio" class="uri">PsychPortAudio</a> Subfunctionname?” for help on a specific subfunction.</p>
+<p>CAUTION: You *must* call <a href="InitializePsychSound" class="uri">InitializePsychSound</a> before first invocation of<br />
+<a href="PsychPortAudio" class="uri">PsychPortAudio</a>(), at least on MS-Windows, but possibly also on OS/X! If<br />
+you omit that call, initialization of the driver may fail with some<br />
+“Invalid MEX file” error from Matlab!</p>
+<p><a href="PsychPortAudio" class="uri">PsychPortAudio</a> is built around a modified version of the free, open-source<br />
+<a href="PortAudio" class="uri">PortAudio</a> sound library for portable realtime sound: http://www.portaudio.com</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/PsychPortAudio.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/PsychPortAudio.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/PsychPortAudio.m</code></p>
+</div>
+<p>Handle=0][, repetitions=1][, startSample=0][, endSample=max][, UnitIsSeconds=0][, specialFlags=0]);</p>
+<p><a href="PsychPortAudio" class="uri">PsychPortAudio</a> - High precision sound driver for Psychtoolbox-3.</p>
+<p><a href="PsychPortAudio" class="uri">PsychPortAudio</a> is a special sounddriver for PTB-3. It is a replacement<br />
+for all other Matlab based sound drivers and PTB’s old SND() function.</p>
+<p><a href="PsychPortAudio" class="uri">PsychPortAudio</a> provides the following features:</p>
+<ul>
+<li><p>Allows instant start of sound playback with a very low onset latency<br />
+compared to other sound drivers (on well working hardware).</p></li>
+<li><p>Allows start of playback at a scheduled future system time: E.g.,<br />
+schedule sound onset for a specific time in the future (e.g., visual<br />
+stimulus onset time), then do other things in your Matlab code.<br />
+Scheduled start of playback can be accurate to the sub-millisecond level<br />
+on some system setups.</p></li>
+<li><p>Wait for sound onset, or continue with execution of your code<br />
+immediately.</p></li>
+<li><p>Asynchronous operation: Sound playback works in the background while<br />
+your code continues to do other things.</p></li>
+<li><p>Infinitely repeating playback, or playback of a sound for ‘n’ times.</p></li>
+<li><p>Returns timestamps and status for all crucial events.</p></li>
+<li><p>Support multi-channel devices, e.g., 8-channel sound cards.</p></li>
+<li><p>Supports multi-channel sound capture and full-duplex capture<br />
+and playback of sound on some systems.</p></li>
+<li><p>Enumerate, open and use multiple sound cards in parallel.</p></li>
+<li><p>Reliable (compared to Matlabs sound facilities).</p></li>
+<li><p>Efficient, causes only very low cpu load.</p></li>
+</ul>
+<p>See the “help <a href="InitializePsychSound" class="uri">InitializePsychSound</a>” for more info on low-latency<br />
+configurations. See “help <a href="BasicSoundOutputDemo" class="uri">BasicSoundOutputDemo</a>” for a very basic demo of<br />
+sound output (without special emphasis on low-latency). See<br />
+“<a href="BasicSoundInputDemo" class="uri">BasicSoundInputDemo</a>” for a basic demo of sound capture.<br />
+“<a href="BasicSoundFeedbackDemo" class="uri">BasicSoundFeedbackDemo</a>” shows how to implement a simple audio feedback<br />
+loop with controllable delay.</p>
+<p>“<a href="PsychPortAudioTimingTest" class="uri">PsychPortAudioTimingTest</a>” is a script that we used for testing PA’s<br />
+sound onset latency and accuracy. It also serves as an example on how to<br />
+get perfectly synched audio-visual stimulus onsets.</p>
+<p>Type “<a href="PsychPortAudio" class="uri">PsychPortAudio</a>” for an overview of supported subfunctions and<br />
+“<a href="PsychPortAudio" class="uri">PsychPortAudio</a> Subfunctionname?” for help on a specific subfunction.</p>
+<p>CAUTION: You *must* call <a href="InitializePsychSound" class="uri">InitializePsychSound</a> before first invocation of<br />
+<a href="PsychPortAudio" class="uri">PsychPortAudio</a>(), at least on MS-Windows, but possibly also on OS/X! If<br />
+you omit that call, initialization of the driver may fail with some<br />
+“Invalid MEX file” error from Matlab!</p>
+<p><a href="PsychPortAudio" class="uri">PsychPortAudio</a> is built around a modified version of the free, open-source<br />
+<a href="PortAudio" class="uri">PortAudio</a> sound library for portable realtime sound: http://www.portaudio.com</p>

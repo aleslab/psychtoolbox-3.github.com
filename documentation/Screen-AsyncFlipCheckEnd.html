@@ -1,0 +1,16 @@
+<h1 id="screenasyncflipcheckend"><a href="Screen-AsyncFlipCheckEnd">Screen(‘AsyncFlipCheckEnd’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Check if a previously scheduled asynchronous flip operation has completed (see<br />
+<a href="Screen" class="uri">Screen</a> <a href="AsyncFlipBegin" class="uri">AsyncFlipBegin</a>? for help).<br />
+This command will check for completion on onscreen window “windowPtr”, then<br />
+return the result of the operation, ie. all the stimulus onset timestamps and<br />
+other diagnostic information. See help for <a href="Screen" class="uri">Screen</a> <a href="Flip" class="uri">Flip</a>? for explanation of the<br />
+returned info. If the operation hasn’t completed yet, it will return a<br />
+‘VBLTimestamp’ of zero and you’ll have to retry later. If you call this function<br />
+without having called ‘AsyncFlipBegin’ before, it will return the results of the<br />
+last completed flip, regardless if it was a synchronous <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) or an<br />
+asynchronous flip long finished ago.<br />
+<a href="Screen" class="uri">Screen</a>(‘AsyncFlipEnd’) provides a blocking version of this command – one that<br />
+pauses until the operation completes if the referenced operation hasn’t<br />
+completed yet.</p>
+<p>&lt;&lt;=====See also:===== DrawingFinished WaitUntilAsyncFlipCertain AsyncFlipBegin AsyncFlipCheckEnd AsyncFlipEnd Flip &lt;&lt;</p>

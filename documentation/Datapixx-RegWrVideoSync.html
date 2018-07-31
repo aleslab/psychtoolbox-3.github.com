@@ -1,0 +1,17 @@
+<h1 id="datapixxregwrvideosync"><a href="Datapixx-RegWrVideoSync">Datapixx(‘RegWrVideoSync’)</a></h1>
+<h2 id="psychtoolbox-datapixx.mexdll-subfunction">[[Psychtoolbox]] › [[Datapixx]].{mex*,dll} subfunction</h2>
+<p>Write local register cache modifications to Datapixx at leading edge of next<br />
+video vertical sync pulse. This is a good way to write Datapixx registers with<br />
+microsecond synchronization to the start of a video frame. All Datapixx Set*<br />
+functions do fast writes to a local register cache on the host, and all Datapixx<br />
+Get* functions do fast reads from this local register cache. <a href="RegWrVideoSync" class="uri">RegWrVideoSync</a><br />
+writes these cached register modifications back to the Datapixx over USB. The<br />
+cache writeback USB message is sent immediately and this function returns<br />
+quickly, but the Datapixx itself waits until the next vertical sync pulse before<br />
+writing the registers.<br />
+This call could be followed by a <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’, win) command to synchronize<br />
+register writes to presentation of a new video image.<br />
+Note that if the <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’, win, when) form is used, the new video image may<br />
+be delayed many frames after the register cache is written.<br />
+See <a href="DatapixxDacSyncDemo" class="uri">DatapixxDacSyncDemo</a>.m and <a href="DatapixxAdcAcquireDemo" class="uri">DatapixxAdcAcquireDemo</a>.m for examples.</p>
+<p>&lt;&lt;=====See also:===== RegWr, RegWrRdVideoSync, RegWrPixelSync &lt;&lt;</p>

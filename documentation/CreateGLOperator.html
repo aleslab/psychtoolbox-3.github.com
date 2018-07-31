@@ -1,0 +1,35 @@
+<h2 id="psychtoolbox-psychglimageprocessing">[[Psychtoolbox]] › [[PsychGLImageProcessing]]</h2>
+<p>gloperator = <a href="CreateGLOperator" class="uri">CreateGLOperator</a>(windowPtr [, imagingmode] [, shaderhandle] [, opname] [,..shader options])</p>
+<p>Creates an image processing operator for use with the <a href="Screen" class="uri">Screen</a>(‘TransformTexture’)<br />
+function (to be passed as ‘transformProxy’ argument) and returns<br />
+a handle ‘gloperator’ to it. The operator should be destroyed via <a href="Screen" class="uri">Screen</a>(‘<a href="Close" class="uri">Close</a>’, gloperator);<br />
+when its not needed anymore. It gets automatically disposed when its associated onscreen window is closed.</p>
+<p>‘windowPtr’ is the window handle of the parent onscreen window.<br />
+‘imagingmode’ (optional) to set a specifc combination of imaging flags<br />
+that affect how this operator works. Most useful flags are:<br />
+kPsychNeedDualPass if this operator should contain exactly two<br />
+operations, e.g., if it defines a separable convolution which consists of<br />
+two 1-D convolution passes, or kPsychNeedMultiPass if this operator should<br />
+contain more than two operations. Also useful are kPsychNeed16BPCFloat or<br />
+kPsychNeed32BPCFloat if you expect results of the operator to be signed<br />
+or to require floating point resolution. You can use ‘mor’ to combine<br />
+multiple of these flags, e.g., mor(kPsychNeedDualPass,kPsychNeed32BPCFloat)<br />
+to create an operator suitable for high precision processing with<br />
+possibly signed results and two processing passes.</p>
+<p>If you want to immediately assign a single image processing operation,<br />
+you can do so by assigning an <a href="OpenGL" class="uri">OpenGL</a> GLSL shader ‘shaderhandle’. You can<br />
+give this shader an unique name ‘opname’ (for debugging purpose) and<br />
+provide possible additional arguments for it.</p>
+<p>If you want to add multiple operations to the operator, you can use the<br />
+<a href="AddToGLOperator" class="uri">AddToGLOperator</a>() command.</p>
+<p><a href="GLOperators" class="uri">GLOperators</a> can also get assigned to the builtin stimulus post-processing<br />
+pipeline if they should affect all created visual stimuli. See ‘help<br />
+PsychImaging’ - the section about ‘AddGLOperator’</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychGLImageProcessing/CreateGLOperator.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychGLImageProcessing/CreateGLOperator.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychGLImageProcessing/CreateGLOperator.m</code></p>
+</div>

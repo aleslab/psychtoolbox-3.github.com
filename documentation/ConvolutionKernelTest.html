@@ -1,0 +1,54 @@
+<h2 id="psychtoolbox-psychtests">[[Psychtoolbox]] › [[PsychTests]]</h2>
+<p>[passed difference speedup] = <a href="ConvolutionKernelTest" class="uri">ConvolutionKernelTest</a>(win, nrinchannels, nroutchannels, kernel1, kernel2, imgsize, shadertype, debug)</p>
+<p>Test Psychtoolbox imaging pipeline’s 2D convolution shaders for<br />
+correctness and accuracy, perform speed benchmark, return fastest setup,<br />
+when using a specific (pair) of kernel(s) and parameters.</p>
+<p>This routine builds and tests a set of convolution shaders from the given<br />
+convolution kernel (or pair of kernels for separable dual-pass<br />
+convolution). Each shader is compared against the results of<br />
+Matlabs/Octaves conv2 function, applied to a random noise luminance image<br />
+matrix. The shader is tagged as working correctly if the conv2 result and<br />
+PTB’s result do not disagree by more than 1 unit at any location in the<br />
+convolved output images. Accuracy (maximum difference) is reported. All<br />
+correctly working shaders are then benchmarked for speed during a test<br />
+period of 10 seconds and the speedup of the GPU vs. Matlab (CPU) is<br />
+determined and reported. At the end, the best configuration (wrt.<br />
+correctness, accuracy and speed) is reported/recommended for use with the<br />
+given kernel.</p>
+<p>The routine takes at least 10 seconds per tested shader, so a full test<br />
+run will take at least 4*10 = 40 seconds, probably a bit more for setup<br />
+and shutdown. Status messages will tell you about progress of the<br />
+operation. You shouldn’t use your machine and don’t run any other<br />
+applications during benchmarking, otherwise the measured speedup numbers<br />
+may be wrong due to GPU or CPU overload.</p>
+<h3 id="optional-parameters-and-their-defaults">Optional parameters and their defaults:</h3>
+<p>‘win’ Window handle of the onscreen window to test on. If none provided,<br />
+will open a suitable one by itself on screen 0.</p>
+<p>‘nrinchannels’ number of image color channels in test image: Default is 1<br />
+for pure luminance convolution. This script always only tests the first<br />
+channel (red/luminance) for correctness/accuracy, even on multi-channel<br />
+images, but choice of channels will affect overall correctness and speed.</p>
+<p>‘nroutchannels’ number of image output channels from convolution: By<br />
+default 1 == convolve, replicate result to RGB channels, pass alpha<br />
+through. 3 == Convolve RGB separately, pass through alpha. 4 == Convolve<br />
+RGBA separately.</p>
+<p>‘kernel1’ == 2D kernel or first 1D kernel in separable mode.<br />
+‘kernel2’ == 1D kernel for 2nd pass in separable convolution test.</p>
+<p>‘imgsize’ == Either size of the random noise test image (default =<br />
+512x512), or a Matlab image matrix to test on.</p>
+<p>‘shadertype’ == Vector of mode ids: Tests all modes in the vector. By<br />
+default all shadertypes are tested ie shadertype = [0 1 2 3]. PTB<br />
+provides different implementations of convolution (0,1,2,3) which may<br />
+have different accuracy and performance for a given hardware and kernel.<br />
+The shaders provided in this vector will be tested against each other.</p>
+<p>’debug’Defaults to zero (no output): Amount of debug output to write to<br />
+Matlab window.</p>
+<p>THIS SCRIPT IS NOT COMPLETELY FINISHED YET.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychTests/ConvolutionKernelTest.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychTests/ConvolutionKernelTest.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychTests/ConvolutionKernelTest.m</code></p>
+</div>

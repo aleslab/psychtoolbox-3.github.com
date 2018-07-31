@@ -1,0 +1,113 @@
+<h1 id="ioportopenserialport"><a href="IOPort-OpenSerialPort">IOPort(‘OpenSerialPort’)</a></h1>
+<h2 id="psychtoolbox-ioport.mexdll-subfunction">[[Psychtoolbox]] › [[IOPort]].{mex*,dll} subfunction</h2>
+<p>Open a serial port device, return a ‘handle’ to it.<br />
+If a port can’t be opened, the function will abort with error, unless the level<br />
+of verbosity is set to zero, in which case the function will silently fail, but<br />
+return an invalid (negative) handle to signal the failure to the calling script.<br />
+The optional return argument ‘errmsg’ contains a text string which is either<br />
+empty on success, or contains a descriptive error message.<br />
+‘port’ is usually a name string that defines the serial port device to open. On<br />
+MS-Windows this could be, e.g., ‘COM1’ or ‘COM2’ etc. On Apple OS/X, it is the<br />
+path to a BSD device file, e.g., ‘/dev/cu.usbserial-FT3Z95V5’ for a<br />
+serial-over-USB device with unique id FT3Z95V5. On GNU/Linux it could be<br />
+‘/dev/ttyS0’ for the first real serial port, or ‘/dev/ttyUSB0’ for the first<br />
+serial-over-USB device.</p>
+<p>The optional string ‘configString’ is a string with pairs of<br />
+paramName=paramValue tokens, separated by a delimiter, e.g., a space. It allows<br />
+to specify specific values ‘paramValue’ to specific serial port parameters<br />
+‘paramName’. Not all parameters are supported by all operating systems, and all<br />
+settings have reasonable defaults. Settings unknown to a specific operating<br />
+system are ignored.<br />
+The following is a list of (possibly) supported parameters with their defaults:</p>
+<p>Lenient – If this keyword is present, then the driver will carry on on certain<br />
+error conditions instead of aborting. This is sometimes neccessary for some<br />
+special cases like virtual com ports or other non-standard setups.</p>
+<p><a href="BaudRate" class="uri">BaudRate</a>=9600 – The baud transmission rate of the connection. Standard baud<br />
+rates include 110, 300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 38400, 57600,<br />
+115200, 128000 and 256000 bits per second. Not all values may be supported by<br />
+all operating systems and drivers.</p>
+<p>Parity=None – Type of parity checking: None, Even, Odd.</p>
+<p><a href="DataBits" class="uri">DataBits</a>=8 – Number of data bits per packet: 5,6,7 or 8, on Windows also 16.</p>
+<p><a href="StopBits" class="uri">StopBits</a>=1 – Number of stop bits per packet: 1 or 2.</p>
+<p><a href="FlowControl" class="uri">FlowControl</a>=None – Type of flow control: None, Hardware (RTS/CTS lines),<br />
+Software (XON/XOFF characters).</p>
+<p><a href="ReceiverEnable" class="uri">ReceiverEnable</a>=1 – A non-zero setting will enable the serial receiver, a zero<br />
+setting will disable the receiver. This setting may not be supported by all<br />
+operating systems and hardware. In such a case, the receiver will always be<br />
+enabled, irrespective of this setting. On MS-Windows, this setting is not<br />
+available at all.</p>
+<p>Terminator=os default – Type of terminator, given as ASCII character value,<br />
+e.g., 13 for char(13) aka CR or 10 for LF. Currently only used in async read<br />
+mode (see ‘StartBackgroundRead’ below) if the ‘ReadFilterFlags’ are set to<br />
+include value 4, or on OS/X and Linux in ‘Cooked’ processing mode as line<br />
+delimiter. A setting of -1 will try to disable the line terminator.</p>
+<p>DTR=os default – Setting for ‘Data Terminal Ready’ pin: 0 or 1.</p>
+<p>RTS=os default – Setting for ‘Request To Send’ pin: 0 or 1.</p>
+<p><a href="BreakBehaviour" class="uri">BreakBehaviour</a>=Ignore – Behaviour if a ‘Break Condition’ is detected on the<br />
+line: Ignore, Flush, Zero. On Windows, this setting is ignored.</p>
+<p><a href="OutputBufferSize" class="uri">OutputBufferSize</a>=4096 – Size of output buffer in bytes.</p>
+<p><a href="InputBufferSize" class="uri">InputBufferSize</a>=4096 – Size of input buffer in bytes. You can’t read more than<br />
+that amount per read command.</p>
+<p><a href="HardwareBufferSizes" class="uri">HardwareBufferSizes</a>=input,output – Set size of the hardware driver internal<br />
+input and output buffers in bytes. E.g., <a href="HardwareBufferSizes" class="uri">HardwareBufferSizes</a>=32768,8192 would<br />
+set the input buffer to 32768 bytes and the output buffer to 8192 bytes. This<br />
+function is currently only supported on Windows, ignored on other systems. It is<br />
+only a polite hint to the driver, the serial port driver is free to ignore the<br />
+request and choose any buffer sizes or buffering strategy it finds appropriate.<br />
+By default, this parameter is not set by <a href="IOPort" class="uri">IOPort</a> and the hardware driver uses<br />
+some built-in reasonable setting.</p>
+<p>The following timeout values are inter-byte timeouts. You specify how much time<br />
+reception or transmission of a single byte is allowed to take. Timeout occurs if<br />
+more than that time elapses between send/reception of two consecutive bytes or<br />
+if the total amount of time exceeds the number of bytes, times the interbyte<br />
+timeout value. A value of zero means not to use any timeout, in which case a<br />
+blocking read or write may take forever. If a timeout occurs, the read or write<br />
+operation will be aborted.<br />
+Granularity of timeout settings is 100 msecs on OS/X and Linux, 1 msec on<br />
+Windows, all values are rounded to the closest value matching that granularity.<br />
+The minimal timeout is 100 msecs on OS/X and Linux, about 6 msecs on Windows.</p>
+<p><a href="SendTimeout" class="uri">SendTimeout</a>=1.0 – Interbyte send timeout in seconds. Only used on Windows.</p>
+<p><a href="ReceiveTimeout" class="uri">ReceiveTimeout</a>=1.0 – Interbyte receive timeout in seconds.</p>
+<p><a href="ReceiveLatency" class="uri">ReceiveLatency</a> – Latency in seconds for processing of new input bytes. Only<br />
+used on OS/X and Linux for some devices.</p>
+<p><a href="PollLatency" class="uri">PollLatency</a>=0.0005 (0.001 on Windows) – Latency between polls in seconds for<br />
+polling in some ‘Read’ operations.</p>
+<p><a href="ProcessingMode" class="uri">ProcessingMode</a>=Raw – Mode of input/output processing: Raw or Cooked. On<br />
+Windows, only Raw (binary) mode is supported.</p>
+<p><a href="DontFlushOnWrite" class="uri">DontFlushOnWrite</a>=0 – Do not flush the serial port write buffer at device close<br />
+time or during blocking writes. This can be set to 1 to work around broken<br />
+serial port drivers, but it may disrupt any kind of timing sensitive algorithms<br />
+that interact with the serial port! Only use if you really know what you’re<br />
+doing!</p>
+<p><a href="StartBackgroundRead" class="uri">StartBackgroundRead</a>=readGranularity – Enable asynchronous background read<br />
+operations on the port. A parallel background thread is started which tries to<br />
+fetch ‘readGranularity’ bytes of data, polling the port every ‘PollLatency’<br />
+seconds for at least ‘readGranularity’ bytes of data. ‘InputBufferSize’ must be<br />
+an integral multiple of ‘readGranularity’ for this to work. Later <a href="IOPort" class="uri">IOPort</a>(‘Read’)<br />
+commands will pull collected data from the <a href="InputBuffer" class="uri">InputBuffer</a> in quanta of at most<br />
+‘readGranularity’ bytes per invocation. This function is useful for background<br />
+data collection from devices that stream some data at a constant rate. You set<br />
+up background read, let the parallel thread do all data collection in the<br />
+background and collect the data at the end of a session with a sequence of<br />
+<a href="IOPort" class="uri">IOPort</a>(‘Read’) calls. This way, data collection doesn’t clutter your main<br />
+experiment script.</p>
+<p><a href="BlockingBackgroundRead" class="uri">BlockingBackgroundRead</a>=0 – Perform blocking background reads instead of polling<br />
+reads, if set to 1.</p>
+<p><a href="StopBackgroundRead" class="uri">StopBackgroundRead</a> – Stop running background read operation, discard all<br />
+pending data.</p>
+<p><a href="ReadFilterFlags" class="uri">ReadFilterFlags</a>=0 – Special flags to specify certain post-processing operations<br />
+on read input data.<br />
+* A setting of 1 will enable special filtering for serial input data from the<br />
+CMU or PST response button boxes. Redundant data bytes received will be<br />
+discarded - only bytes that are different from their predecessor are stored.<br />
+All read data has a 4-Byte 32 bit count of total bytes read and a 4-Byte count<br />
+of sampling delta in microseconds attached. You should set ‘readGranularity’ =<br />
+9 for best effect with the CMU or PST button boxes or compatible devices.<br />
+* A setting of 2 will filter out CR and LF character codes 10 and 13 from the<br />
+inputstream.<br />
+* A setting of 4 will implement simple line-buffering for async reads: Read up<br />
+to ‘readGranularity’ bytes per iteration, or until ‘Terminator’ character<br />
+encountered, whatever comes first. Zero-Pad to full ‘readGranularity’ bytes in<br />
+any case. Read timestamps in this line-buffered mode correspond to the<br />
+reception of the first byte of a line, not the last one!</p>
+<p>&lt;&lt;=====See also:===== ‘CloseAll’ &lt;&lt;</p>

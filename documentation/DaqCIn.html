@@ -1,0 +1,25 @@
+<h2 id="psychtoolbox-psychhardware-daq">[[Psychtoolbox]] › [[PsychHardware]] › [[Daq]]</h2>
+<p>count=<a href="DaqCIn" class="uri">DaqCIn</a><a href="(DeviceIndex)" class="uri">(DeviceIndex)</a><br />
+USB-1208FS: Read counter.<br />
+This function reads the 32-bit event counter in the device. This counter<br />
+tallies the transitions of an external input attached to the CTR pin on<br />
+the screw terminal of the device.<br />
+“count” is the 32-bit value.<br />
+“<a href="DeviceIndex" class="uri">DeviceIndex</a>” is a small integer, the array index specifying which HID<br />
+device in the array returned by <a href="PsychHID" class="uri">PsychHID</a>(‘Devices’) is interface 0<br />
+of the desired USB-1208FS box.<br />
+See also Daq, <a href="DaqFunctions" class="uri">DaqFunctions</a>, <a href="DaqPins" class="uri">DaqPins</a>, <a href="DaqTest" class="uri">DaqTest</a>, <a href="PsychHIDTest" class="uri">PsychHIDTest</a>.</p>
+<p>4/15/05 dgp Wrote it.<br />
+12/20/07 mpr tested it on a 1608FS and made input argument optional<br />
+1/13/08 mpr swept through and tried to make terminology consistent<br />
+with that of other daq functions<br />
+5/22/08 mk Add (untested!) support for USB-1024LS box.<br />
+5/23/08 mk Add caching for HID device list.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/Daq/DaqCIn.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/Daq/DaqCIn.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/Daq/DaqCIn.m</code></p>
+</div>

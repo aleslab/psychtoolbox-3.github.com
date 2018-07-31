@@ -1,0 +1,69 @@
+<h2 id="psychtoolbox-psychdemos-psychtutorials">[[Psychtoolbox]] › [[PsychDemos]] › [[PsychTutorials]]</h2>
+<p><a href="ImageMixingTutorial" class="uri">ImageMixingTutorial</a>([mode=1][, ms=200][, myimgfile])</p>
+<p><a href="ImageMixingTutorial" class="uri">ImageMixingTutorial</a> shows how to use a combination of alpha blending,<br />
+offscreen windows and some basic image processing shaders to mix two<br />
+images together, using a “mix weight mask” (aka alpha mask) which itself<br />
+is dynamically updated via <a href="Screen" class="uri">Screen</a>() drawing commands like <a href="DrawTexture" class="uri">DrawTexture</a>,<br />
+<a href="DrawTexture" class="uri">DrawTexture</a> with shaders, <a href="FillRect" class="uri">FillRect</a> etc. This allows for interesting<br />
+new gaze contingent displays or dynamically changing binocular rivalry<br />
+stimuli.</p>
+<h3 id="the-basic-working-principle">The basic working principle:</h3>
+<ol type="1">
+<li><p>An offscreen window is created which stores the alpha blend mask<br />
+with per-pixel mixing weights. (“masktex” in the code).</p></li>
+<li><p>The offscreen window stores the mix weights in its *luminance* channel,<br />
+(which is the same as the red channel for technical reasons). This way,<br />
+grayscale “luminance” values (luminance == red == green == blue) directly<br />
+encode “mixing weights”. As we use a normalized 0-1 color range in this<br />
+demo (“<a href="PsychDefaultSetup" class="uri">PsychDefaultSetup</a>(2)”), a grayscale value from 0 - 1 (aka from<br />
+black to white) directly corresponds to a mix weight from 0 - 1. This<br />
+allows us to use standard <a href="Screen" class="uri">Screen</a>() 2D drawing commands as usual to draw<br />
+a mix weight mask as a grayscale image into the offscreen window without<br />
+any deeper knowledge or thought about alpha blending. We can use all<br />
+drawing commands to quickly and dynamically update or redraw the grayscale<br />
+image in the offscreen window to create a dynamically changing mix weight<br />
+mask.</p></li>
+<li><p>A shader is used to convert the grayscale image in the offscreen window<br />
+into a alpha mask and draw that alpha mask into the framebuffer of the<br />
+onscreen window, thereby setting the alpha channel of the onscreen window<br />
+to the desired mix weight mask for mixing the actual stimulus images.</p></li>
+<li><p>Alpha blending is used to draw the two target stimulus images, mixing<br />
+them together according to the alpha channel created in step 3 from the<br />
+grayscale weight mask dynamically created in step 2.</p></li>
+<li><p>The final mixed stimulus, e.g., a binocular rivalry stimulus, is shown<br />
+to the subject, rinse wash, repeat with step 2.</p></li>
+</ol>
+<p>This demo shows how to use normalized color ranges from 0 - 1 as a more<br />
+natural representation of such alpha mix weights. It shows how to use the<br />
+‘WeightedColorComponentSum’ shader to both morph up to 4 masks together into<br />
+one weight mask, and as an alternate use, how to move the content of the<br />
+red channel of a window (== luminance/grayscale channel in a grayscale image)<br />
+into the alpha channel, allowing to implement step 3 above. It also uses<br />
+alpha blending in combination with a separate offscreen window in a non-usual<br />
+way to allow to logically separate the process of creating/updating a mix weight<br />
+mask from the process of actually applying that mask to a pair of stimulus images.<br />
+This approach is not neccessary for simple gaze-contingent displays or rivalry<br />
+stimuli (cfe. <a href="GazeContingentDemo" class="uri">GazeContingentDemo</a> / <a href="GazeContingentTutorial" class="uri">GazeContingentTutorial</a> / <a href="BubbleDemo" class="uri">BubbleDemo</a> for simpler<br />
+approaches). It is beneficial for stimuli which require complex mix masks, or<br />
+complex dynamically updated mix masks, as it allows to implement an approach that<br />
+reduces implementation complexity and is more natural or easier on the brain of<br />
+the implementer of the stimulus, with less potential for coding errors or confusion<br />
+about side effects of alpha blending.</p>
+<p>The tutorial allows you to switch between different stages of the processing<br />
+involved in this approach and see their effects “live”, by use of different<br />
+keys on the keyboard, and to draw a dynamic mask via use of the mousecursor<br />
+as a paint brush. It also shows some automatically running use of procedural<br />
+shaders, texture animation and other <a href="Screen" class="uri">Screen</a> drawing primitives.</p>
+<p>This tutorial is powerful in its potential use cases, but requires significant<br />
+customization for specific paradigms, and a good and careful reading of the code.</p>
+<p>For a much more simple demo and application of the technique, have a look at<br />
+the <a href="SimpleImageMixingDemo" class="uri">SimpleImageMixingDemo</a>.m, written and contributed by Natalia Zaretskaya.<br />
+___________________________________________________________________</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/PsychTutorials/ImageMixingTutorial.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/PsychTutorials/ImageMixingTutorial.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/PsychTutorials/ImageMixingTutorial.m</code></p>
+</div>

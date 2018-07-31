@@ -1,0 +1,38 @@
+<h2 id="psychtoolbox-psychcal">[[Psychtoolbox]] › [[PsychCal]]</h2>
+<p>directory=<a href="CalDataFolder" class="uri">CalDataFolder</a>([forceDemo],[calFileName],[calDir])</p>
+<p>Get the path to the <a href="CalData" class="uri">CalData</a> folder.</p>
+<p>If “forceDemo” is true (false by default), then force use of<br />
+<a href="PsychCalDemoData" class="uri">PsychCalDemoData</a>. Otherwise return location of <a href="PsychCalLocalData" class="uri">PsychCalLocalData</a><br />
+if it exists, and <a href="PsychCalDemoData" class="uri">PsychCalDemoData</a> if it <a href="PsychCalLocalData" class="uri">PsychCalLocalData</a> does<br />
+not exist.</p>
+<p>If calFileName is passed, it checks if the specified file exists<br />
+in the top level of the directory it located. If so, it returns<br />
+that directory. If not, it searches the first level subdirectories<br />
+of the top level directories and if the specfied file is in one of<br />
+them, returns that. Skips subdirs called ‘xOld’, ‘Plots’, and those<br />
+that begin with ‘.’.</p>
+<p>calFileName can either have .mat postpended or not.</p>
+<p>If calDir is passed as a string, that is used as the directory, with<br />
+the subdir searching as above.</p>
+<p>See also <a href="LoadCalFile" class="uri">LoadCalFile</a>, <a href="SaveCalFile" class="uri">SaveCalFile</a>.</p>
+<p>Denis Pelli 7/25/96<br />
+Denis Pelli 2/28/98 change “<a href="CalDat" class="uri">CalDat</a>” to “<a href="PsychCalData" class="uri">PsychCalData</a>”<br />
+8/14/00 dhb Add alternate name, change names.<br />
+4/1/07 dhb Fix subtle bug in error message when there are duplicate cal<br />
+folders on path.<br />
+3/7/08 mpr changed documentation to make it consistent (apparently<br />
+“forceDemo” used to be “alt”<br />
+4/2/13 dhb Add calFileName and associated behavior.<br />
+6/2/13 dhb Make this properly return subfolder containing calibration file<br />
+if .mat is not postpended.<br />
+6/10/13 dhb Fix buglet introduced 6/2/13 – need to handle empty calFileName (thanks to MS for<br />
+identifying the problem and the fix.<br />
+3/29/16 dhb Allow multiple <a href="PsychCalDemo" class="uri">PsychCalDemo</a> data on path, but issue a warning printout.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychCal/CalDataFolder.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychCal/CalDataFolder.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychCal/CalDataFolder.m</code></p>
+</div>

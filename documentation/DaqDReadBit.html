@@ -1,0 +1,39 @@
+<h2 id="psychtoolbox-psychhardware-daq">[[Psychtoolbox]] › [[PsychHardware]] › [[Daq]]</h2>
+<p><a href="BitValue" class="uri">BitValue</a>=<a href="DaqDReadBit" class="uri">DaqDReadBit</a><a href="(DeviceIndex),%5BBitNumber">(DeviceIndex</a>](BitNumber))<br />
+USB-1608FS: Write digital port. This command writes data to the DIO port<br />
+bits that are configured as outputs.<br />
+“<a href="DeviceIndex" class="uri">DeviceIndex</a>” is a small integer, the array index specifying which HID<br />
+device in the array returned by <a href="PsychHID" class="uri">PsychHID</a>(‘Devices’) is interface 0<br />
+of the desired USB-1608FS box.<br />
+“<a href="BitNumber" class="uri">BitNumber</a>” an integer from 0 to 8 specifying which bit to read<br />
+See also Daq, <a href="DaqFunctions" class="uri">DaqFunctions</a>, <a href="DaqPins" class="uri">DaqPins</a>, <a href="DaqTest" class="uri">DaqTest</a>, <a href="PsychHIDTest" class="uri">PsychHIDTest</a>.<br />
+<a href="DaqDeviceIndex" class="uri">DaqDeviceIndex</a>, <a href="DaqDIn" class="uri">DaqDIn</a>, <a href="DaqDOut" class="uri">DaqDOut</a>, <a href="DaqAIn" class="uri">DaqAIn</a>, <a href="DaqAOut" class="uri">DaqAOut</a>, <a href="DaqAInScan" class="uri">DaqAInScan</a>,<a href="DaqAOutScan" class="uri">DaqAOutScan</a>.</p>
+<p>******************************************************************************<br />
+* *<br />
+* If your Daq is a USB-1208FS or USB-1408FS, this code has not been tested; *<br />
+* it probably will not run on your device. The USB-1608FS has only one DIO *<br />
+* port and that is what this code was written to expect. To make it run on *<br />
+* a 12 or 14 bit device, you should fix this to take an additional input *<br />
+* (the portnumber) and to continue to behave as is for the 16-bit device. *<br />
+* An example of how to do that can be found in <a href="DaqDConfigPort" class="uri">DaqDConfigPort</a>. – mpr *<br />
+* *<br />
+******************************************************************************</p>
+<p>I suspect that to get this code to work for a 1208FS or 1408FS you would have<br />
+to modify the <a href="SetReport" class="uri">SetReport</a> call to add the port number (0 or 1) before<br />
+<a href="BitNumber" class="uri">BitNumber</a>. Hopefully that would be all it would take, but since I don’t<br />
+have one of those devices to test, I have not implemented that fix. Look at<br />
+the code in <a href="DaqDOut" class="uri">DaqDOut</a> to see how you might code something that tested for<br />
+whether your Daq has two DIO ports, and how you’d handle input and report to<br />
+accommodate the added port.</p>
+<p><a href="BitNumber" class="uri">BitNumber</a> can be a vector so that you can read multiple bits at once.</p>
+<p>12/xx/07 mpr scavenged code from <a href="DaqDIn" class="uri">DaqDIn</a> and converted it to this.<br />
+1/11/08 mpr swept through attempting to improve consistency across daq<br />
+functions</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/Daq/DaqDReadBit.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/Daq/DaqDReadBit.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/Daq/DaqDReadBit.m</code></p>
+</div>

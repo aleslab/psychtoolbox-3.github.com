@@ -1,0 +1,26 @@
+<h2 id="psychtoolbox-psychglimageprocessing">[[Psychtoolbox]] › [[PsychGLImageProcessing]]</h2>
+<p>rval = kPsychNeedOtherStreamInput</p>
+<p>Return a flag that you can pass to the ‘imagingmode’ parameter of<br />
+<a href="Screen" class="uri">Screen</a>(‘OpenWindow’) in order to allow shaders in stereo configurations<br />
+to access both eyes input images.</p>
+<p>Normally only the stereo compositing chain of the pipeline can access<br />
+both image buffers for left-eye and right-eye view. This flag also enables<br />
+access during the per-view image processing chain, and during the per<br />
+view output formatting/post-processing chain. Logic for these chains is<br />
+that the primary image channel is bound to texture unit 0 as usual, but<br />
+additionally now the other channel (right channel for left view processing,<br />
+and left channel for right view processing) is bound to texture unit 1.</p>
+<p>Caution: The secondary channel is bound with nearest neighbour filtering.<br />
+Caution: The shaders in one of these chains will only have access to the<br />
+secondary channels initial input image for their chains (inputimageFBO in case<br />
+of the image processing chain, preConversionFBO in case of output conversion<br />
+/ final formatting). Multi-Pass chains have to take this into account that the<br />
+secondary channel won’t update during multi-stage processing, but stays static.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychGLImageProcessing/kPsychNeedOtherStreamInput.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychGLImageProcessing/kPsychNeedOtherStreamInput.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychGLImageProcessing/kPsychNeedOtherStreamInput.m</code></p>
+</div>

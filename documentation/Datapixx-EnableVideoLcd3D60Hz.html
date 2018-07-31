@@ -1,0 +1,27 @@
+<h1 id="datapixxenablevideolcd3d60hz"><a href="Datapixx-EnableVideoLcd3D60Hz">Datapixx(‘EnableVideoLcd3D60Hz’)</a></h1>
+<h2 id="psychtoolbox-datapixx.mexdll-subfunction">[[Psychtoolbox]] › [[Datapixx]].{mex*,dll} subfunction</h2>
+<p>Liquid crystal displays can exhibit an artifact when presenting 2 static images<br />
+on alternating video frames, such as with frame-sequencial 3D. The origin of<br />
+this artifact is related to LCD pixel polarity inversion. The optical<br />
+transmission of a liquid crystal cell varies with the magnitude of the voltage<br />
+applied to the cell. Liquid crystal cells are designed to be driven by an AC<br />
+voltage with little or no DC component. As such, the cell drivers alternate the<br />
+polarity of the cell’s driving voltage on alternate video frames. The cell will<br />
+see no net DC driving voltage, as long as the pixel is programmed to the same<br />
+intensity on even and odd video frames. Small differences in a pixel’s even and<br />
+odd frame luminance tend to leave the cell unaffected, and large differences in<br />
+even and odd frame luminance for short periods of time (10-20 frames?) also do<br />
+not seem to affect the cell; however, large differences in luminance for a<br />
+longer period of time will cause a DC buildup in the pixel’s liquid crystal<br />
+cell. This can result in the pixel not showing the programmed luminance<br />
+correctly, and can also cause the pixel to “stick” for several seconds after the<br />
+image has been removed, causing an after-image on the display. <a href="VPixx" class="uri">VPixx</a><br />
+Technologies has developed a strategy for keeping the pixel cells DC balanced.<br />
+Instead of alternating the cell driving voltage on every video frame, we can<br />
+alternate the voltage only on every second frame. This feature is enabled by<br />
+calling this routine. Call this routine before presenting static or<br />
+slowly-moving 3D images, or when presenting 60Hz flickering stimuli. Be sure to<br />
+call <a href="DisableVideoLcd3D60Hz" class="uri">DisableVideoLcd3D60Hz</a> afterwards to return to normal pixel driving. Note<br />
+that this feature is only supported on the <a href="VIEWPixx" class="uri">VIEWPixx</a>/3D when running with a<br />
+refresh rate of 120Hz.</p>
+<p>&lt;&lt;=====See also:===== DisableVideoLcd3D60Hz &lt;&lt;</p>

@@ -1,0 +1,33 @@
+<h1 id="screentextfont"><a href="Screen-TextFont">Screen(‘TextFont’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Get/Set the font for future text draws in this window.<br />
+You can ask what the current font is, or specify the desired font by number or<br />
+by name (e.g. ‘Helvetica’). Font numbers are not consistent from Mac to Mac, and<br />
+they aren’t supported but silently ignored on MS-Windows and Linux, so use font<br />
+names for reliability and portability. Font numbers are mostly available for<br />
+backward compatibility to old OS-9 Psychtoolbox versions.<br />
+The font name can be a string of at most 255 characters length, e.g.<br />
+‘Helvetica’, or a list containing one string of at most 255 characters, e.g.<br />
+{‘Helvetica’}. The default font depends on the operating system and is selected<br />
+for good readability. You can query and change it via a call to<br />
+<a href="Screen" class="uri">Screen</a>(‘<a href="Preference" class="uri">Preference</a>’, ‘DefaultFontName’).<br />
+It’s ok to request a non-existent font; this will have no effect. If you care,<br />
+call <a href="TextFont" class="uri">TextFont</a> again to find out whether you got the font you requested. See<br />
+<a href="FontDemo" class="uri">FontDemo</a>.<br />
+On OSX there are some exotic fonts which can only be selected if you specify<br />
+them by either their font number, or by simultaneously selecting their exact<br />
+font family name and text style. To support those snow flakes you can specify<br />
+the optional ‘textStyle’ argument together with the font name.<br />
+On Linux - and usually OSX - you can either provide a font name - PTB will<br />
+select the closest matching available font for that name, size and style<br />
+requirements - or you can start the fontName with a dash ‘-’ followed by a full<br />
+<a href="FontConfig" class="uri">FontConfig</a> font specifier string which encodes all kinds of properties. The<br />
+‘fc-list’ command under Linux allows you to query all available fonts.<br />
+Depending on the selected text renderer, Linux can be picky about the supplied<br />
+fonts - if you request a non-existent font with the legacy text renderer, the<br />
+<a href="DrawText" class="uri">DrawText</a> command will fail with an error message. However, with the default FTGL<br />
+text renderer on Linux, Linux will be lenient in its font selection. If you call<br />
+<a href="Screen" class="uri">Screen</a>(‘TextFont’) after you’ve drawn some text, the command will return the<br />
+font family name of the true selected font.</p>
+<p>&lt;&lt;=====See also:=====</p>
+<p>&lt;&lt;</p>

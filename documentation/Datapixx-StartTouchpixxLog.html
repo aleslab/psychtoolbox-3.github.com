@@ -1,0 +1,19 @@
+<h1 id="datapixxstarttouchpixxlog"><a href="Datapixx-StartTouchpixxLog">Datapixx(‘StartTouchpixxLog’)</a></h1>
+<h2 id="psychtoolbox-datapixx.mexdll-subfunction">[[Psychtoolbox]] › [[Datapixx]].{mex*,dll} subfunction</h2>
+<p>Start logging <a href="TOUCHPixx" class="uri">TOUCHPixx</a> touch panel activity. The <a href="TOUCHPixx" class="uri">TOUCHPixx</a> controller polls the<br />
+panel at more than 5kHz waiting for a panel press. When a panel press is<br />
+detected, a touch timetag is stored with the x,y coordinates into the log buffer<br />
+specified by <a href="SetTouchpixxLog" class="uri">SetTouchpixxLog</a>. If continuous logging is enabled, successive<br />
+timetags and coordinates are logged at 200Hz. A final timetag and (0,0)<br />
+coordinates are logged when the panel pressure is released. newLogFrames<br />
+returned by <a href="GetTouchpixxStatus" class="uri">GetTouchpixxStatus</a> indicates the number of transitions logged since<br />
+the last call to <a href="ReadTouchpixxLog" class="uri">ReadTouchpixxLog</a>.<br />
+Note that the first call to <a href="StartTouchpixxLog" class="uri">StartTouchpixxLog</a> must be preceeded by a call to<br />
+<a href="SetTouchpixxLog" class="uri">SetTouchpixxLog</a> to initialize and clear the log. Once <a href="SetTouchpixxLog" class="uri">SetTouchpixxLog</a> has been<br />
+called, <a href="StartTouchpixxLog" class="uri">StartTouchpixxLog</a> and <a href="StopTouchpixxLog" class="uri">StopTouchpixxLog</a> may be called multiple times to<br />
+enable and disable logging.<br />
+Note that the <a href="TOUCHPixx" class="uri">TOUCHPixx</a> subsystem uses some of the Digital Input resources.<br />
+Specifically, <a href="TOUCHPixx" class="uri">TOUCHPixx</a> logging cannot be used simultaneously with digital input<br />
+logging.<br />
+See Touchpixx*Demo files for examples.</p>
+<p>&lt;&lt;=====See also:===== EnableTouchpixx, GetTouchpixxCoordinates, SetTouchpixxLog, StopTouchpixxLog, ReadTouchpixxLog, EnableTouchpixxLogContinuousMode, GetTouchpixxStatus &lt;&lt;</p>

@@ -1,0 +1,23 @@
+<h2 id="psychtoolbox-psychglimageprocessing">[[Psychtoolbox]] › [[PsychGLImageProcessing]]</h2>
+<p>Change parameters for side-by-side stereo display modes (4 and 5).</p>
+<p><a href="SetStereoSideBySideParameters" class="uri">SetStereoSideBySideParameters</a>(win [, leftOffset][, leftScale][, rightOffset][, rightScale])</p>
+<p>Call this function after the win = <a href="PsychImaging" class="uri">PsychImaging</a>(‘OpenWindow’,…); call on an<br />
+onscreen window in side-by-side stereo mode to change the parameters<br />
+of drawing the stereo views.</p>
+<p>All parameters except the onscreen ’win’dowhandle are optional and have<br />
+reasonable builtin defaults:</p>
+<p>‘leftOffset’ = Top-Left [x,y] offset of left eye framebuffer in relative<br />
+coordinates [0,0] == top-left of framebuffer, [1,0] == 1 stereo window<br />
+width to the right, [2,0] == 2 stereo window width to the right etc.</p>
+<p>‘leftScale’ = Scaling of left eye image buffer. E.g., [1,1] == Don’t<br />
+scale. [0.75, 0.5] scale to 75% of original width, 50% of original<br />
+height.</p>
+<p>‘rightOffset’, ‘rightScale’ == Ditto for right eye image.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychGLImageProcessing/SetStereoSideBySideParameters.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychGLImageProcessing/SetStereoSideBySideParameters.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychGLImageProcessing/SetStereoSideBySideParameters.m</code></p>
+</div>

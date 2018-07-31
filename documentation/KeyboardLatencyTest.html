@@ -1,0 +1,76 @@
+<h2 id="psychtoolbox-psychtests">[[Psychtoolbox]] › [[PsychTests]]</h2>
+<p><a href="KeyboardLatencyTest" class="uri">KeyboardLatencyTest</a>([triggerlevel=0.01][,modality=0][,submode][,portString])</p>
+<p>Uses sound capture with high timing precision via<br />
+<a href="PsychPortAudio" class="uri">PsychPortAudio</a>() for measuring latency, timing accuracy and variability<br />
+of various response input devices, e.g., keyboard, keypad, mouse, other<br />
+HID devices like Joysticks etc., various response button boxes, and some<br />
+exotic response devices.</p>
+<p>Whenever the script tells you, hit a key on the tested input device<br />
+hard and loud enough so the noise of hitting the button or key can be<br />
+recorded by the attached microphone. This noise will be timestamped by<br />
+the code as the “true” button press time. Timestamps acquired<br />
+by standard input device queries are compared against that reference<br />
+and the difference is computed as device latency.</p>
+<p>Sound is captured from the default recording device, waiting<br />
+until the amplitude exceeds some ‘triggerlevel’.</p>
+<p>The ‘modality’ flag chooses between keyboard (==0 - the default), and<br />
+mouse (==1). ‘portString’ allows to select which keyboard to test on some<br />
+systems (OS/X and Linux). It also allows to select which mouse to test on<br />
+Linux, but not on other systems.</p>
+<p>A ‘modality’ of 2 queries the keyboard, a keypad, a mouse, or other HID<br />
+devices by use of the <a href="KbTriggerWait" class="uri">KbTriggerWait</a>() function. ‘submode’ specifies the<br />
+<a href="KbName" class="uri">KbName</a>() keyCode of the key to test on a keyboard. By default the SPACE<br />
+key is used. For other devices you *must* specify a key or button number in<br />
+‘submode’. Specifiying numbers of non-existent keys or buttons will cause<br />
+an infinite hang of Matlab or Octave, as there is no way to interrupt the<br />
+function or press a non-existent key or button. The optional ‘portString’<br />
+specifies the deviceIndex of the device to test. If omitted, the primary<br />
+keyboard is tested.</p>
+<p>A ‘modality’ of 3 will test the <a href="PsychRTBox" class="uri">PsychRTBox</a>() driver for the USTCRTBOX reaction<br />
+time button box, if such a box is attached. A setting 4 will also test<br />
+that box, but without opening a connection to it, ie., it is assumed that<br />
+the box is already open from a previous call of this function with<br />
+modality setting ‘3’. This allows to repeat the test many times without<br />
+recalibrating the box. The optional ‘submode’ flag selects different ways<br />
+of testing the box: A setting of zero will perform a ‘ClockRatio’<br />
+calibration to provide exact live timestamps and to test drift<br />
+correction. A setting of 1 will skip this, so live timestamps will<br />
+exhibit clock-drift and only the post-hoc timestamps will be somewhat<br />
+exact. A setting of 2 will skip collection of post-hoc timestamps.</p>
+<p>A ‘modality’ of 5 will exercise the RB-x30 response pads from Cedrus.</p>
+<p>A ‘modality’ of 6 will exercise the PST serial response button box.<br />
+Setting ‘submode’ to 1 will optimize for use with FTDI serial-USB<br />
+converters.</p>
+<p>A ‘modality’ of 7 will exercise the CMU serial response button box.<br />
+Setting ‘submode’ to 1 will optimize for use with FTDI serial-USB<br />
+converters.</p>
+<p>A ‘modality’ of 8 will exercise the Bitwhacker emulated response button box.<br />
+Setting ‘submode’ to 1 will optimize for use with FTDI serial-USB<br />
+converters.</p>
+<p>A ‘modality’ of 9 will exercise the fORP serial response button box in<br />
+program mode 0.<br />
+Setting ‘submode’ to 1 will optimize for use with FTDI serial-USB<br />
+converters.</p>
+<p>A ‘modality’ of 10 will measure timing of touch input devices like<br />
+touchscreens or touchpads. ‘portString’ allows to select a specific<br />
+touch input device as enumerated via <a href="GetTouchDeviceIndices" class="uri">GetTouchDeviceIndices</a>(). By default<br />
+the first detected touchscreen or touchpad is used. Note that on some<br />
+operating systems you must hit the touchscreen or touchpad inside the<br />
+displayed onscreen window, as those systems will not register touches<br />
+outside the onscreen window.</p>
+<p>The optional ‘portString’ argument can be set to define the serial port<br />
+to connect to for response devices that are connected via serial port.<br />
+By default, the proper serial port is auto-detected, but you can override<br />
+a wrong detection this way.</p>
+<p>Obviously this method of measuring carries quite a bit of uncertainty<br />
+in exact timing, but with a high quality microphone, proper tuning and<br />
+good sound hardware, it shouldn’t be off too much. At least you get a<br />
+rough feeling for the lags inherent to keyboards and mice.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychTests/KeyboardLatencyTest.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychTests/KeyboardLatencyTest.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychTests/KeyboardLatencyTest.m</code></p>
+</div>

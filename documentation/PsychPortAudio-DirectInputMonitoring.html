@@ -1,0 +1,64 @@
+<h1 id="psychportaudiodirectinputmonitoring"><a href="PsychPortAudio-DirectInputMonitoring">PsychPortAudio(‘DirectInputMonitoring’)</a></h1>
+<h2 id="psychtoolbox-psychportaudio.mexdll-subfunction">[[Psychtoolbox]] › [[PsychPortAudio]].{mex*,dll} subfunction</h2>
+<p>Change the current settings for the “direct input monitoring” feature on device<br />
+‘pahandle’.<br />
+The device must be open for this setting to take effect. Changed settings may or<br />
+may not persist across closing and opening the device, this is hardware<br />
+dependent and not to be relied on.<br />
+So-called “Zero latency direct input monitoring” is a hardware feature of some<br />
+modern (and usually higher end) soundcards. It allows to directly feed audio<br />
+signals that are received at the audio input connectors of the soundcard back to<br />
+the output connectors, without any extended intermediate processing of the audio<br />
+signals by either the sound hardware or the host computer and its software. Due<br />
+to this direct signal path, which only applies selectable amplification and some<br />
+stereo panning and rerouting, the feedback latency from input to output (e.g,<br />
+microphone to speakers) is as minimal as technically possible. On many high-end<br />
+cards it is instantaneous!</p>
+<p>The ‘enable’ flag is mandatory: If set to zero, monitoring will be disabled for<br />
+the given ‘inputChannel’. A setting of one will enable input live-monitoring of<br />
+the given ‘inputChannel’ to the given ‘outputChannel’ with the selected other<br />
+settings.<br />
+All following settings are optional and have reasonable defaults. Depending on<br />
+your hardware, some or all of them may be silently ignored by your sound<br />
+hardware.<br />
+The optional ‘inputChannel’ argument specifies which input audio channels<br />
+monitoring settings should be modified. If omitted or set to -1, all input<br />
+channels settings will be modified, or at least tried to be modified.<br />
+The optional ‘outputChannel’ specifies the index of the base-channel of a<br />
+channel stereo-pair to which the ‘inputChannel’ should be routed. It must be an<br />
+even number like 0, 2, 4, …. If omitted, channel 0, i.e., the first output<br />
+channel stereo pair will be used. This at least on ASIO soundcards under<br />
+MS-Windows.<br />
+The optional ‘gainLevel’ defines the desired amplifier gain for the routed<br />
+signal. The value should be negative for signal attenuation (i.e., negative<br />
+gain) and positive for amplification (i.e., positive gain). As specification of<br />
+gains is not standardized across operating systems, the numbers you’ll have to<br />
+pass in for a desired effect will vary across operating systems and audio<br />
+hardware. However, the default setting of zero tries to set a neutral gain of<br />
+zero decibel - the signal is passed through without change in intensity. On<br />
+MS-Windows with ASIO soundcards, values between 0.0 and 1.0 will select gains<br />
+between 0 and 12 dB. Values between 0.0 and -1.0 will select negative gains<br />
+between 0 and -infinity dB, ie., full attenuation. The setting may get<br />
+completely ignored or only approximately implemented by given hardware.<br />
+Double-check your results!<br />
+The optional ‘stereoPan’ parameter allows to select panning between the two<br />
+output channels of a selected stereo output channel pair if the hardware allows<br />
+that. Range 0.0 - 1.0 selects between left-channel and right channel, with the<br />
+default of 0.5 selecting a centered output with equal distribution to both<br />
+channels.</p>
+<p>In the optional return argument ‘result’ the function returns a status code to<br />
+report if the requested change could be carried out successfully. A value of<br />
+zero means success. A value of 1 means some error, e.g., invalid parameters<br />
+specified. A value of 2 means that your combinatin of operating system, sound<br />
+system, soundcard device driver and soundcard hardware does not support direct<br />
+input monitoring, at least not for the given configuration. A setting of 3 means<br />
+that your <a href="PortAudio" class="uri">PortAudio</a> driver plugin does not support the feature - You may need to<br />
+update your plugin from the Psychtoolbox Wiki.</p>
+<p>The current <a href="PsychPortAudio" class="uri">PsychPortAudio</a> driver supports direct input monitoring on <a href="MacOS" class="uri">MacOS</a>/X<br />
+with certain sound hardware (but not the builtin sound) and on Microsoft Windows<br />
+systems with ASIO-2.0 capable sound hardware, and only if the latest<br />
+portaudio_x86.dll ASIO plugin is installed from our Wiki. Even then, only a<br />
+subset of ASIO-2 hardware may support this feature and only a subset of these<br />
+may support all parameters. According to vendor documentation, some soundcards<br />
+from Creative Labs and many of RME’s cards do support this feature.</p>
+<p>&lt;&lt;=====See also:===== Open GetDeviceSettings &lt;&lt;</p>

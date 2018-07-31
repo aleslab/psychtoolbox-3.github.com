@@ -1,0 +1,37 @@
+<h2 id="psychtoolbox-psychdemos">[[Psychtoolbox]] › [[PsychDemos]]</h2>
+<p><a href="MovingLineDemo" class="uri">MovingLineDemo</a>([xv=10][, twolines=0][, screenid=max])</p>
+<p>Shows a pair of vertical lines, or a single line, which travel<br />
+horizontally across the display from the left to the right, repeating<br />
+infinitely.</p>
+<p>The optional parameter ‘xv’ defines the speed in pixels per redraw cycle.<br />
+It defaults to 10 pixels per redraw cycle.</p>
+<p>The optional parameter ‘twolines’ selects if one line or a pair of lines<br />
+should be drawn. By default, twolines==0, ie., a single line is drawn.</p>
+<p>The optional parameter ‘screenid’ selects the display screen to use for<br />
+display, it defaults to the secondary display on multi-display setups.</p>
+<p>Hold down the right mouse button to pause the animation. Press the left<br />
+mouse button to exit the demo.</p>
+<p>The lines show a greyscale gradient, starting with black at the top of<br />
+the screen, ending in white at the bottom. They are seperated by ‘xv’<br />
+pixels.</p>
+<p>The purpose of this simple animation is to demonstrate differences in the<br />
+way CRT monitors and TFT flat panel display devices display moving<br />
+stimuli. It shows artifacts that are due to both the display technology<br />
+and due to perceptual effects in the visual system.</p>
+<p>On a well working CRT monitor, which is an impulse-type display with fast<br />
+response time, you should see a sharp and clearly separated moving pair<br />
+of lines. On a LCD display with its high latency response behaviour and<br />
+its working principle as a hold-type display, you should see a<br />
+significant “smear” or “blur” of the line pair – or maybe not even a<br />
+pair of distinctive lines anymore. This is due to technical limitations<br />
+of the display technology and due to the “bad” interaction between<br />
+hold-type displays and smooth pursuit eye movements caused by tracking of<br />
+certain types of moving stimuli.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/MovingLineDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/MovingLineDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/MovingLineDemo.m</code></p>
+</div>

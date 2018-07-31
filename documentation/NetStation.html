@@ -1,0 +1,87 @@
+<h2 id="psychtoolbox-psychhardware">[[Psychtoolbox]] › [[PsychHardware]]</h2>
+<p><a href="NetStation" class="uri">NetStation</a> - Basic control of the EGI/<a href="NetStation" class="uri">NetStation</a> EEG recording system via<br />
+TCP/IP network connection. (See http://www.egi.com)</p>
+<p>This function was developed and contributed to Psychtoolbox by Gergely Csibra, 2006-2008.<br />
+Code is based on Rick Gilmore’s routines, 2005. Thanks!<br />
+Code adapted to <a href="PCs" class="uri">PCs</a> (and Macs with Intel architecture) by Zhao Fan, 2008.</p>
+<p>General syntax</p>
+<p>[status, errormsg] = <a href="NetStation" class="uri">NetStation</a>(‘command’, …)</p>
+<p>if status == 0, the command has been succesfully executed<br />
+otherwise see string “errormsg” for error message</p>
+<p>Commands</p>
+<p><a href="NetStation" class="uri">NetStation</a>(‘Connect’, host [, port])</p>
+<pre><code>       Establishes TCP/IP connection to the [NetStation](NetStation) host computer.  
+       &quot;host&quot; is the hostname as a string (e.g., &#39;anything.com&#39; or &#39;187.14.176.12&#39;)  
+       &quot;port&quot; is the ethernet port to be used. Default is 55513.  </code></pre>
+<p><a href="NetStation" class="uri">NetStation</a>(‘Disconnect’)</p>
+<pre><code>       Disconnects from [NetStation](NetStation) host.  </code></pre>
+<p><a href="NetStation" class="uri">NetStation</a>(‘Synchronize’ [, <a href="SynchLimit" class="uri">SynchLimit</a>])</p>
+<pre><code>       Synchronize to the connected host. &quot;[SynchLimit](SynchLimit)&quot; could specify the maximum allowed difference  
+       IN MILLISECONDS. Default is 2.5 ms.  </code></pre>
+<p><a href="NetStation" class="uri">NetStation</a>( ‘GetNTPSynchronize’, ntpserver )</p>
+<pre><code>       Synchronize to the amps built-in NTP server using EGI N-type  
+       synchronization (eci\_NTPClockSynch method). So far only tested  
+       for 400 series amps with [NetStation](NetStation) 5.3 and Psychtoolbox on  
+       Linux! ntpserver is the amp ip, e.g. &#39;10.10.10.51&#39;.  
+
+       NTP synchronization might possibly also work for 300 series  
+       amps (using the [NetStation](NetStation) PC as NTP server) and other  
+       [NetStation](NetStation) versions and OS. Please report on the Psychtoolbox  
+       mailing list if you could test other versions (EGI photodiode  
+       and AV tester box required).  
+
+       Note that Psychtoolbox client time is NOT required to be  
+       adjusted to NTP server time. Rather current NTP server (i.e.  
+       amp) time is queried at event time (using the [GetNTP](GetNTP) client).  
+       Possible delays between event and NTP request times and network  
+       delays are accounted for. NTP synchronization is expected to be  
+       considerably more accurate than regular synchronization on  
+       quiet local networks.  </code></pre>
+<p><a href="NetStation" class="uri">NetStation</a>(‘StartRecording’)</p>
+<pre><code>       Instructs [NetStation](NetStation) to start recording.  </code></pre>
+<p><a href="NetStation" class="uri">NetStation</a>(‘StopRecording’)</p>
+<pre><code>       Instructs [NetStation](NetStation) to stop recording.  </code></pre>
+<p><a href="NetStation" class="uri">NetStation</a>(‘Event’ [,code] [,starttime] [,duration] [,keycode1] [,keyvalue1] […])<br />
+<a href="NetStation" class="uri">NetStation</a>(‘EventNoAck’ [,code] [,starttime] [,duration] [,keycode1] [,keyvalue1] […])</p>
+<pre><code>       Send an event to the [NetStation](NetStation) host. The &#39;EventNoAck&#39; variant doesn&#39;t  
+       wait for acknowledgement of reception of the event, whereas the &#39;Event&#39;  
+       version does. Note that the &#39;EventNoAck&#39; command is included for  
+       completeness. It is not a good practice to skip waiting for  
+       acknowledgements. If time is an important factor, Event commands can be sent  
+       at a later opportunity within a session (e.g., in blocks at the end  
+       of experiments).  
+
+       &quot;code&quot;      The 4-char event code (e.g., &#39;STIM&#39;)  
+                   Default: &#39;EVEN&#39;  
+       &quot;starttime&quot; The time IN SECONDS when the event started. The VBL time  
+                   returned by [Screen](Screen)(&#39;[Flip](Flip)&#39;) can be passed here as a parameter.  
+                   Default: current time.  
+       &quot;duration&quot;  The duration of the event IN SECONDS.  
+                   Default: 0.001.  
+       &quot;keycode&quot;   The 4-char code of a key (e.g., &#39;tria&#39;).  
+       &quot;keyvalue&quot;  The value of the key (any number or string)  
+                   The keycode-keyvalue pairs can be repeated arbitrary times.  </code></pre>
+<p><a href="NetStation" class="uri">NetStation</a>(‘FlushReadbuffer’);</p>
+<pre><code>        Flushes the read buffer.  </code></pre>
+<p>Uses a modified version of the TCP/UDP/IP Toolbox 2.0.5, a third party GPL’ed<br />
+open source toolbox, which is included in Psychtoolbox,<br />
+but also available from the Mathworks website:<br />
+http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=345</p>
+<p>The toolbox has been modified for lower communication latency.</p>
+<p>Created by Gergely Csibra, 2006-2008<br />
+Based on Rick Gilmore’s routines, 2005<br />
+Adapted to PC by Zhao Fan, 2008<br />
+This function was modified by Matt Mollison to accommodate sending more than just int16s to Net Station<br />
+Improved by Justin Ales 2014.<br />
+Consolidated by Gergely Csibra, 2015<br />
+Improved by Justin Ales 2017.<br />
+<a href="GetNTPSynchronize" class="uri">GetNTPSynchronize</a> added by Andreas Widmann, 2017<br />
+%</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/NetStation.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/NetStation.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/NetStation.m</code></p>
+</div>

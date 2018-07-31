@@ -1,0 +1,55 @@
+<h2 id="psychtoolbox-psychtests">[[Psychtoolbox]] › [[PsychTests]]</h2>
+<p><a href="OSXCompositorIdiocyTest" class="uri">OSXCompositorIdiocyTest</a> - Test for potential OSX compositor brokeness.</p>
+<h3 id="usage">Usage:</h3>
+<p><a href="OSXCompositorIdiocyTest" class="uri">OSXCompositorIdiocyTest</a>([testScreen=max][, distractorScreen]);</p>
+<p>This test tests if the OSX desktop compositor is potentially<br />
+interfering with <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) on a fullscreen window on a<br />
+display, especially in dual-display, dual-window configurations.</p>
+<p>The test performs 300 black-white flips on ‘testScreen’.<br />
+Then it optionally opens a fullscreen window on ‘distractorScreen’,<br />
+and repeats the 300 black-white flips on ‘testScreen’. The 2nd<br />
+window does nothing.</p>
+<p>What you should observe is black-white flicker in both “PASS I”<br />
+and “PASS II”. If you observe flicker, that’s a good sign, although<br />
+not a guarantee that everything is fine, timing-wise, on your system.</p>
+<p>If you observe no flicker in “PASS I” then your systems flip<br />
+implementation is totally broken and not recommended for any<br />
+timing-sensitive visual stimulation.</p>
+<p>If you observe flicker in “PASS I”, but not in “PASS II” - when<br />
+the distractor window is open on ‘distractorScreen’, then your<br />
+system is possibly fine for single-display stimulation, but<br />
+broken for dual-display (e.g., binocular, stereoscopic, stereoMode 10)<br />
+stimulation wrt. presentation timing and timestamping.</p>
+<p>What this test does is it alternates between the two buffers<br />
+of the doublebuffered window. One buffer is filled black, the<br />
+other white.<br />
+- If <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) is executed by your operating system<br />
+and graphics hardware via so called page-flipping, then you should<br />
+observe flicker and the timing and timestamping of visual stimuli<br />
+should be research grade.</p>
+<ul>
+<li>However, there is still some chance of observing flicker even<br />
+if page-flipping isn’t used, but the desktop compositor is active<br />
+in a triple-buffer configuration. Therefore a successfull run of<br />
+this test is not 100% proof that you are safe from timing woes.</li>
+</ul>
+<p>If you don’t observe flickering then this means a desktop compositor<br />
+or copy-swapping is active and the presentation timing and timestamps<br />
+are not to be trusted!</p>
+<p>So far we know that at least OSX 10.8.5 with AMD graphics hardware<br />
+works properly for single-window / single-display visual stimulation,<br />
+but *not* in dual-window stimulation!<br />
+There is some indication that this dual-display stimulation OSX bug<br />
+can be possibly resolved or worked around via the applying the<br />
+<a href="Screen" class="uri">Screen</a>(‘<a href="Preference" class="uri">Preference</a>’,‘ConserveVRAM’, x); setting with x = 16384 or<br />
+x = 8192. Results look promising but are not 100% certain.</p>
+<p>So far we also know that at least OSX 10.9 - 10.10 with <a href="NVidia" class="uri">NVidia</a><br />
+graphics hardware do not work properly at all in any configuration!</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychTests/OSXCompositorIdiocyTest.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychTests/OSXCompositorIdiocyTest.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychTests/OSXCompositorIdiocyTest.m</code></p>
+</div>

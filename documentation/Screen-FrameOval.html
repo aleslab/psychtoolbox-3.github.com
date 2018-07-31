@@ -1,0 +1,22 @@
+<h1 id="screenframeoval"><a href="Screen-FrameOval">Screen(‘FrameOval’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Draw the outline of an oval inscribed in “rect”. “color” is the clut index<br />
+(scalar or [r g b] triplet) that you want to poke into each pixel; default<br />
+produces white with the standard CLUT for this window’s pixelSize. Default<br />
+“rect” is entire window.<br />
+Default pen size is (1,1). The penMode argument is ignored. The penWidth must<br />
+equal the penHeight. If non-equal arguments are given, <a href="FrameOval" class="uri">FrameOval</a> will choose<br />
+the maximum value of both. The pen width will be non-uniform for non-circular<br />
+ovals, this is a known limitation.<br />
+Instead of drawing one oval, you can also specify a list of multiple ovals to be<br />
+drawn - this is faster when you need to draw many ovals per frame. To draw n<br />
+ovals, provide “rect” as a 4 rows by n columns matrix, each column specifying<br />
+one oval, e.g., rect(1,5)=left border of 5th oval, rect(2,5)=top border of 5th<br />
+oval, rect(3,5)=right border of 5th oval, rect(4,5)=bottom border of 5th oval.<br />
+If the ovals should have different colors, then provide “color” as a 3 or 4 row<br />
+by n column matrix, the i’th column specifiying the color of the i’th oval.<br />
+If drawing multiple ovals at once, both the penHeight and penMode arguments are<br />
+completely ignored! The penWidth argument defines the size of each drawn oval.<br />
+You can either specify one common penWidth for all ovals, or provide a per-oval<br />
+penWidth.</p>
+<p>&lt;&lt;=====See also:===== FillOval &lt;&lt;</p>

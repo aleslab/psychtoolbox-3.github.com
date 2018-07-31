@@ -1,0 +1,26 @@
+<h1 id="screengetflipinterval"><a href="Screen-GetFlipInterval">Screen(‘GetFlipInterval’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Returns an estimate of the monitor flip interval for the specified onscreen<br />
+window.“windowPtr” is the handle of the onscreen window for which info should be<br />
+returned. “nrSamples” If left out, the estimated interval from previous calls to<br />
+<a href="GetFlipInterval" class="uri">GetFlipInterval</a> or from the initial calibration done during<br />
+<a href="Screen" class="uri">Screen</a>(‘OpenWindow’…) is reported. If set to a value greater zero, PTB will<br />
+perform a measurement loop to compute a good estimate. The loop will run until<br />
+at least nrSamples valid samples have been taken and standard deviation of the<br />
+measurement is below “stddev” seconds. A timeout value “timeout” can be set to<br />
+abort the measurement after timeout seconds if the measurement doesn’t converge<br />
+for some reason. Timeout is 10 seconds and stddev is 50 microseconds by default.<br />
+PTB automatically takes at least 50 valid samples when opening an<br />
+onscreen-window, trying to achieve a standard deviation below 100 microseconds,<br />
+but timing out after a maximum of 15 seconds. If you require very high<br />
+precision, call this routine with values that suit your demands. The returned<br />
+monitorRefreshInterval is in seconds, but has sub-millisecond accuracy. The real<br />
+number of valid samples taken and the final standard deviation is returned as<br />
+well. CAUTION: When using <a href="OpenGL" class="uri">OpenGL</a> flip-frame stereo (stereomode=1 in <a href="OpenWindow">OpenWindow)</a>)<br />
+on ATI graphics hardware, the flip interval (as reported here) may be twice as<br />
+long as the monitor refresh interval! Using Anti-Aliasing with a high<br />
+multiSample level at a high display resolution may also cause the graphics<br />
+hardware to switch to a flip-interval twice as long as the monitor refresh<br />
+interval, because it is not capable of performing all anti-aliasing computations<br />
+in one single refresh interval.</p>
+<p>&lt;&lt;=====See also:===== OpenWindow, Flip, NominalFrameRate &lt;&lt;</p>

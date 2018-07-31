@@ -1,0 +1,36 @@
+<h2 id="psychtoolbox-psychoneliners">[[Psychtoolbox]] › [[PsychOneliners]]</h2>
+<p>vec = <a href="Struct2Vect" class="uri">Struct2Vect</a>(struc,fieldnm)<br />
+Traverses array of structs STRUC and returns data from all fields FIELDNM<br />
+in vector VEC.<br />
+Returns array vector if field contains numeric scalars or scalar structs,<br />
+cell vector otherwise. If concatenating struct arrays, each struct must<br />
+contain the same fields</p>
+<p>Example: for field data.field:<br />
+data(1).field = 23;<br />
+data(2).field = 56;<br />
+vec = <a href="Struct2Vect" class="uri">Struct2Vect</a>(data,‘field’)<br />
+vec = [23 56];</p>
+<p>Example: for field data2.test:<br />
+data2(1).test = 23;<br />
+data2(2).test = ‘d’;<br />
+vec = <a href="Struct2Vect" class="uri">Struct2Vect</a>(data2,‘test’)<br />
+vec = {23 ’d};</p>
+<p>Example: for field data3.cells:<br />
+data3(1).cells = 23;<br />
+data3(2).cells = [42 45];<br />
+vec = <a href="Struct2Vect" class="uri">Struct2Vect</a>(data3,‘cells’)<br />
+vec = {23, [42 45]};</p>
+<p>Example: for field data4.struc:<br />
+data4(1).struc.a = 24;<br />
+data4(2).struc.a = [42 45];<br />
+vec = <a href="Struct2Vect" class="uri">Struct2Vect</a>(data4,‘struc’)<br />
+vec(1).a = 24;<br />
+vec(2).a = [42 45];</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOneliners/Struct2Vect.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOneliners/Struct2Vect.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOneliners/Struct2Vect.m</code></p>
+</div>

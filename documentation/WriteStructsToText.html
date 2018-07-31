@@ -1,0 +1,23 @@
+<h2 id="psychtoolbox-psychfiles">[[Psychtoolbox]] › [[PsychFiles]]</h2>
+<p><a href="WriteStructsToText" class="uri">WriteStructsToText</a>(filename,theStructs)</p>
+<p>Write a tab delimited text file. The first row should<br />
+contain the field names for a structure. Each following<br />
+row contains the data for one instance of that structure.</p>
+<p>This routine writes each element of the structure array as a row.<br />
+Only numeric and string field values are supported.</p>
+<p>If the filename is a string, this routine handles opening and<br />
+closing of the file. Otherwise, this routine assumes<br />
+that what was passed is a valid fid and uses it as such,<br />
+leaving the calling routine to do the opening and closing.</p>
+<p>06/16/03 dhb Wrote it.<br />
+07/01/03 dhb Support string fields too.<br />
+08/12/06 dhb Call filetype only if OS9.<br />
+07/07/13 dhb Add handling of non-string filename as fid.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychFiles/WriteStructsToText.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychFiles/WriteStructsToText.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychFiles/WriteStructsToText.m</code></p>
+</div>

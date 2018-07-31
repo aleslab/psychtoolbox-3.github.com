@@ -1,0 +1,42 @@
+<h2 id="psychtoolbox-psychhardware-forp">[[Psychtoolbox]] › [[PsychHardware]] › [[FORP]]</h2>
+<p><a href="FORPWait" class="uri">FORPWait</a> Checks for the specified amount of time, if a button of a FORP device<br />
+(tested for HH-5-CYL) is pressed , returns if a button has been<br />
+pressed or specified amount of time has passed.</p>
+<h3 id="usage">Usage:</h3>
+<p>[<a href="KeyPressed" class="uri">KeyPressed</a>,<a href="EventTime" class="uri">EventTime</a>] = <a href="FORPWait" class="uri">FORPWait</a>([Seconds])</p>
+<h3 id="arguments">Arguments:</h3>
+<p>Seconds Maximum time to check for buttonpresses in seconds.<br />
+Default’s to ‘wait forever’ if not provided.</p>
+<p>Returns the keycode <a href="(KeyPressed)" class="uri">(KeyPressed)</a> of the pressed button and the<br />
+time <a href="(EventTime)" class="uri">(EventTime)</a> of the status check.</p>
+<p><a href="KeyPressed" class="uri">KeyPressed</a> <a href="KeyCode" class="uri">KeyCode</a> of the Pressed Button or empty value if<br />
+waiting timed out without any key press.</p>
+<p><a href="EventTime" class="uri">EventTime</a> Time of keypress as returned by <a href="GetSecs" class="uri">GetSecs</a>.</p>
+<h3 id="important-note">IMPORTANT NOTE:</h3>
+<p>Current-Designs FORP Device (HH-5-CYL) does not return any values for<br />
+manufacturer or product, so i used the <a href="VendorID" class="uri">VendorID</a> returned by<br />
+<a href="PsychHID" class="uri">PsychHID</a>(‘Devices’) for the HH-5-CYL.(ATM i do no really know if the<br />
+<a href="VendorID" class="uri">VendorID</a> has unique values).<br />
+Another issue i had to solve was a ?bug? using ‘GetReport’. I had to<br />
+close the Callbackhandlers to the current device by calling<br />
+‘ReceiveReportsStop’ before calling ‘GetReport’ on another device.<br />
+If you have got any advice for a better way solve those problems, feel<br />
+free to let me know:</p>
+<pre><code>      Florian Stendel   
+      Visual Processing Lab  
+      Universitaets - Augenklinik Magdeburg  
+      Leipziger Strasse 44  
+      39120 Magdeburg  
+      Tel:    0049 (0)391 67 21723  
+      Email:  vincentdhs@gmx.de  </code></pre>
+<p>09/10/06 fs Wrote it.<br />
+19/10/06 fs Added some further improvements suggested by Mario<br />
+Kleiner.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/FORP/FORPWait.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/FORP/FORPWait.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/FORP/FORPWait.m</code></p>
+</div>

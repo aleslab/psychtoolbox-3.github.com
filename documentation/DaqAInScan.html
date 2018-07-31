@@ -1,0 +1,267 @@
+<h2 id="psychtoolbox-psychhardware-daq">[[Psychtoolbox]] › [[PsychHardware]] › [[Daq]]</h2>
+<p>[data,params]=<a href="DaqAInScan" class="uri">DaqAInScan</a><a href="(DeviceIndex),options">(DeviceIndex</a></p>
+<p>****************************************************************************<br />
+* *<br />
+* For USB-1608FS, make sure you look at the bottom of this help as there *<br />
+* are significant differences between the function of that device and of *<br />
+* the USB-1208FS. “channel” means something a bit different, and the *<br />
+* recommendation for that device is oppostite of that for the USB-1208FS *<br />
+* with respect to using options.<a href="FIrstchannel" class="uri">FIrstchannel</a> and options.Lastchannel. The *<br />
+* differences indicating need for that change in recommendation are *<br />
+* unfortunate as the two different methods for choosing which channels to *<br />
+* scan were the most confusing things in this function. But the *<br />
+* USB-1208FS can be told to select particular channels by utilizing the *<br />
+* gain queue, and the USB-1608FS does not allow that behavior. See the *<br />
+* help for <a href="DaqALoadQueue" class="uri">DaqALoadQueue</a> for more insight. – mpr *<br />
+* *<br />
+****************************************************************************</p>
+<p>USB-1208FS: Analog input scan. Clocked analog to digital conversion. This<br />
+command samples several analog input channels at a specified rate and<br />
+sends the readings to the host. Use <a href="DaqAInScan" class="uri">DaqAInScan</a> when you want to complete<br />
+the whole operation in one call, tying up the computer until the sampling<br />
+is done. Use <a href="DaqAInScanBegin" class="uri">DaqAInScanBegin</a>, <a href="DaqAInScanContinue" class="uri">DaqAInScanContinue</a>, and <a href="DaqAInScanEnd" class="uri">DaqAInScanEnd</a>,<br />
+instead, when you want to use the computer during sampling.</p>
+<p>USE CHANNEL AND RANGE: You can specify the channels to be scanned in two<br />
+different ways, “<a href="FirstChannel" class="uri">FirstChannel</a>” and “<a href="LastChannel" class="uri">LastChannel</a>”, or as an arbitrary<br />
+“channel” list. We recommend the latter because it’s much more general.<br />
+With “channel” you also provide a corresponding list of the desired gain<br />
+“range”. If you use <a href="FirstChannel" class="uri">FirstChannel</a> and <a href="LastChannel" class="uri">LastChannel</a>, then the sampling will<br />
+use the existing gains that were last set on those channels (by <a href="AIn" class="uri">AIn</a> or<br />
+<a href="ALoadQueue">ALoadQueue)</a>). However, <a href="DaqAInScan" class="uri">DaqAInScan</a> doesn’t know what that gain range was,<br />
+so it arbitrarily assumes a gain range of 3 in computing the scale factor<br />
+to convert your readings into voltages. Thus every reason recommends that<br />
+you supply channel and range when you call <a href="DaqAInScan" class="uri">DaqAInScan</a>.</p>
+<p>“data” is an <a href="NxM" class="uri">NxM</a> matrix, with one column per channel. Each reading is a<br />
+double, based on a 16-bit value in the report. In the USB-1208FS<br />
+only the upper 12 of those 16 bits are significant.<br />
+“params.fActual” is the actual sampling frequency, sample/channel/s. It<br />
+is as close as possible to the requested sampling frequency<br />
+options.f.<br />
+“params.times” is the times <a href="(GetSecs)" class="uri">(GetSecs)</a> of receipt by <a href="PsychHID" class="uri">PsychHID</a> of the<br />
+reports in data.<br />
+“<a href="DeviceIndex" class="uri">DeviceIndex</a>” is a small integer, the array index specifying which HID<br />
+device in the array returned by <a href="PsychHID" class="uri">PsychHID</a>(‘Devices’) is interface 0<br />
+of the desired USB-1208FS box.<br />
+“options.channel” is a vector of length 1 to 8. Each value (0 to 15)<br />
+selects any of various single-ended or differential measurements<br />
+using the eight digitizers. By default, <a href="DaqAInScan" class="uri">DaqAInScan</a> sends this for you<br />
+to the device by calling <a href="DaqALoadQueue" class="uri">DaqALoadQueue</a> before issuing the <a href="AInScan" class="uri">AInScan</a><br />
+command.<br />
+“channel” Measurement<br />
+0 0-1 (differential)<br />
+1 2-3 (differential)<br />
+2 4-5 (differential)<br />
+3 6-7 (differential)<br />
+4 1-0 (differential)<br />
+5 3-2 (differential)<br />
+6 5-4 (differential)<br />
+7 7-6 (differential)<br />
+8 0 (single-ended)<br />
+9 1 (single-ended)<br />
+10 2 (single-ended)<br />
+11 3 (single-ended)<br />
+12 4 (single-ended)<br />
+13 5 (single-ended)<br />
+14 6 (single-ended)<br />
+15 7 (single-ended)</p>
+<p>“options.range” is a vector of the same length as options.channel, with<br />
+values of 0 to 7, specifying the desired gain (and voltage range) for<br />
+the corresponding channel. By default, <a href="DaqAInScan" class="uri">DaqAInScan</a> sends this for you<br />
+to the device by calling <a href="DaqALoadQueue" class="uri">DaqALoadQueue</a> before issuing the <a href="AInScan" class="uri">AInScan</a><br />
+command. When options.range is not specified <a href="DaqAInScan" class="uri">DaqAInScan</a> assumes a<br />
+value of 3 in computing the scale factor applied to the results to<br />
+convert them into volts unless you are making a single-ended measurement.<br />
+For single-ended measures, the range is always +/- 10 V, so if you pass a<br />
+channel higher than 7, any range values you pass for that channel will be<br />
+ignored.</p>
+<pre><code>0 for Gain 1x (+-20 V),     1 for Gain 2x (+-10 V),  
+2 for Gain 4x (+-5 V),      3 for Gain 5x (+-4 V),  
+4 for Gain 8x (+-2.5 V),    5 for Gain 10x (+-2 V),  
+6 for Gain 16x (+-1.25 V),  7 for Gain 20x (+-1 V).  </code></pre>
+<p>“options.<a href="FirstChannel" class="uri">FirstChannel</a>” (0 to 15) is the first channel of the scan. NOT<br />
+RECOMMENDED; use options.channel instead. If you specify <a href="FirstChannel" class="uri">FirstChannel</a><br />
+and <a href="LastChannel" class="uri">LastChannel</a> then don’t specify channel and range, above. (formerly<br />
+“options.lowChannel” – that terminology is deprecated.)<br />
+“options.<a href="LastChannel" class="uri">LastChannel</a>” (0 to 15) is the last channel of the scan. The<br />
+values <a href="FirstChannel" class="uri">FirstChannel</a> and <a href="LastChannel" class="uri">LastChannel</a> specify the channel range for the<br />
+scan. If <a href="FirstChannel" class="uri">FirstChannel</a> is greater than <a href="LastChannel" class="uri">LastChannel</a>, the scan will wrap<br />
+(i.e. if <a href="FirstChannel" class="uri">FirstChannel</a> is 14 and <a href="LastChannel" class="uri">LastChannel</a> is 1, the scan will include<br />
+channels 14, 15, 0, and 1.) NOT RECOMMENDED; use options.channel<br />
+instead. If you specify <a href="FirstChannel" class="uri">FirstChannel</a> and <a href="LastChannel" class="uri">LastChannel</a> then don’t specify<br />
+channel and range, above. (formerly “options.highChannel” – that<br />
+terminology is deprecated.)<br />
+“options.count” is the desired number of samples per channel, either in<br />
+the 32-bit range 1 to 4e+09, or INF. The value INF invokes the<br />
+USB-1208FS’s continuous data collection mode, which runs indefinitely.<br />
+“options.<a href="ReleaseTime" class="uri">ReleaseTime</a>” effective only when options.continue (see below) is set<br />
+to 1 and options.count is Inf. Setting options.<a href="ReleaseTime" class="uri">ReleaseTime</a> to some<br />
+reasonable time in the future and then calling <a href="DaqAInScanContinue" class="uri">DaqAInScanContinue</a> will<br />
+allow data to be offloaded from the device’s FIFO. If you select the<br />
+option appropriately and call <a href="DaqAInScanContinue" class="uri">DaqAInScanContinue</a> frequently enough, you<br />
+will not lose data. Otherwise the FIFO fills, and you get jack diddly<br />
+squat.<br />
+“options.f” is desired sampling frequency, sample/channel/s, in the range<br />
+0.596/c to 10e6/c Hz, where c is the number of channels being<br />
+scanned.<br />
+“options.immediate” is 1 = immediate-transfer mode, 0 (default) =<br />
+block-transfer mode. At low sampling rates, immediate-transfer mode<br />
+will reduce the delay in receiving the sampled data. In<br />
+immediate-transfer mode, each 16-bit sample is sent immediately (a<br />
+2-byte report), rather than waiting for the buffer to fill (62<br />
+bytes). This mode should not be used if the aggregate sampling rate<br />
+is greater than 2,000 samples per second in order to avoid data loss.<br />
+The difference between the two modes will be more apparent if you<br />
+enable options.print, allowing you to see that you get one-sample<br />
+reports (2 bytes) in immediate mode, and less-frequent 31-sample<br />
+reports (62 bytes) in block-transfer mode.<br />
+“options.trigger” is 1 = use external trigger; 0 (default).<br />
+The external trigger may be used to start data collection<br />
+synchronously. If the bit is set, the device will wait until the<br />
+appropriate trigger edge is detected, then begin sampling data at<br />
+the specified rate. No messages will be sent until the trigger is<br />
+detected.<br />
+“options.retrigger” is 1 = retrigger mode, 0 (default) = normal trigger.<br />
+The retrigger mode option is only used if trigger is used. This<br />
+option will cause the trigger to be rearmed after options.count<br />
+samples are acquired if in continuous mode.<br />
+“options.sendChannelRange is 1 (default) to ask that the options.channel<br />
+and options.range lists (if provided) be sent to the device by<br />
+calling <a href="DaqALoadQueue" class="uri">DaqALoadQueue</a> before the sending the <a href="AInScan" class="uri">AInScan</a> command, or 0 to<br />
+not send them. Since those lists persist in the device you can save<br />
+time by skipping this transmission after you’ve already sent them<br />
+once (either through <a href="DaqAinScan" class="uri">DaqAinScan</a> or by explicitly calling<br />
+<a href="DaqALoadQueue" class="uri">DaqALoadQueue</a> yourself). Even if you set this option to 0 you should<br />
+still supply the options.channel and options.range arguments to<br />
+<a href="DaqAInScan" class="uri">DaqAInScan</a> because it needs to know how many channels you are using<br />
+in order to set up the count and frequency parameters in the <a href="AInScan" class="uri">AInScan</a><br />
+command to the USB-1208FS. This default is 0 if you supply<br />
+<a href="FirstChannel" class="uri">FirstChannel</a> and <a href="LastChannel" class="uri">LastChannel</a>.<br />
+”options.queue&quot; is 1 = use channel gain queue (i.e. “channel” and<br />
+“range”), 0 = use options.<a href="FirstChannel" class="uri">FirstChannel</a> and options.<a href="LastChannel" class="uri">LastChannel</a><br />
+arguments. Don’t bother setting this. It will be set for you, based<br />
+on which parameters you provide.<br />
+“options.print” is 1 = enable diagnostic printing of the reports; 0<br />
+(default) no diagnostics.<br />
+“options.begin” is 1 (default) to begin a new scan.<br />
+“options.continue” is 1 (default) to receive reports (inside <a href="PsychHID">PsychHID)</a>).<br />
+“options.end” is 1 (default) to wait until done and return the result.<br />
+“options.nodiscard” is an optional field. If 1 (true) then the check for<br />
+consecutively numbered reports is skipped. No data is discarded.</p>
+<p>LIMITATION: The literature from Measurement Computing mentions a speed of<br />
+50 kHz, but that’s a theoretical limit. As of 17 April 2005, <a href="DaqAInScan" class="uri">DaqAInScan</a><br />
+achieves 2000/c sample/channel/s, where c is the number of channels being<br />
+sampled.</p>
+<p>See also Daq, <a href="DaqFunctions" class="uri">DaqFunctions</a>, <a href="DaqPins" class="uri">DaqPins</a>, <a href="DaqTest" class="uri">DaqTest</a>, <a href="PsychHIDTest" class="uri">PsychHIDTest</a>,<br />
+<a href="DaqAInScanBegin" class="uri">DaqAInScanBegin</a>, <a href="DaqAInScanContinue" class="uri">DaqAInScanContinue</a>, <a href="DaqAInScanEnd" class="uri">DaqAInScanEnd</a>,<br />
+<a href="DaqDeviceIndex" class="uri">DaqDeviceIndex</a>, <a href="DaqDIn" class="uri">DaqDIn</a>, <a href="DaqDOut" class="uri">DaqDOut</a>, <a href="DaqAIn" class="uri">DaqAIn</a>, <a href="DaqAOut" class="uri">DaqAOut</a>, <a href="DaqAInScan" class="uri">DaqAInScan</a>,<a href="DaqAOutScan" class="uri">DaqAOutScan</a>.</p>
+<p>In some ways the USB-1608FS is less functional than the 1208FS. For instance,<br />
+where the 1208FS allows you to sample from the different channels in arbitrary<br />
+order, the 1608FS only allows you to sample from sequential channels. Hence,<br />
+I think the only way to get this function to wrap for the 1608FS would be if<br />
+you sampled from *all* channels and threw away the data not requested by the<br />
+user. Since that would entail a potentially mystifying performance hit, I<br />
+instead opt to tell user that they cannot set <a href="FirstChannel" class="uri">FirstChannel</a> higher than<br />
+<a href="LastChannel" class="uri">LastChannel</a>. What follows are other differences in options… If an option<br />
+is not specified below, then it behaves the same for the 1608FS as for the<br />
+1208FS.</p>
+<p>“options.channel” will be ignored (though you will get a warning). Do *NOT*<br />
+even consider using this method with a 1608FS as it would be too confusing<br />
+to try to set this up… you could not poll an arbitrary sequence, and if<br />
+you want non-consecutive channels… see previous paragraph.</p>
+<p>“options.range” if specified, is either a scalar or a vector that must be of<br />
+the same length as the vector: options.<a href="FirstChannel" class="uri">FirstChannel</a>:options.<a href="LastChannel" class="uri">LastChannel</a>.<br />
+Values must be in the set 0:7, specifying the desired gain (and hence<br />
+voltage range) for the corresponding channel as in the 1208FS except that<br />
+the mapping differs. For the USB-1608FS, the values mean:</p>
+<pre><code>0 for Gain 1x (+/- 10 V),     1 for Gain 2x (+/- 5 V),  
+2 for Gain 4x (+/- 2.5 V),    3 for Gain 5x (+/- 2 V),  
+4 for Gain 8x (+/- 1.25 V),   5 for Gain 10x (+/- 1 V),  
+6 for Gain 16x (+/- 0.625 V), 7 for Gain 32x (+/- 0.3125 V)  </code></pre>
+<p>If options.range is passed, this function will call <a href="DaqALoadQueue" class="uri">DaqALoadQueue</a> for you. If<br />
+it is not, then it is assumed you do not wish to change the gains, and that<br />
+function is not called. Since we cannot read the gains, a preferences file<br />
+will be created or edited for you when you call <a href="DaqALoadQueue" class="uri">DaqALoadQueue</a>.</p>
+<p>“options.<a href="FirstChannel" class="uri">FirstChannel</a>” (0 to 7) is the first channel of the scan. If you do not<br />
+pass this option, it is assumed to be 0.<br />
+“options.<a href="LastChannel" class="uri">LastChannel</a>” (options.Firstchannel to 7) is the last channel of the<br />
+scan. If you do not specify this option, it is assumed you want only to<br />
+sample from options.Firstchannel.<br />
+“options.retrigger” is apparently not an option for the 1608FS. I could be<br />
+wrong about whether it *could* be an option: there is a potential option<br />
+called “external sync”, and that might be the same as retrigger. However,<br />
+even if that is correct, I have not implemented it. (see note below on<br />
+numerical definitions of options)<br />
+“options.queue” again, not an option. Don’t try to use it.</p>
+<p>These options do not exist (as such) for the 1208FS. They all default to 0.</p>
+<p>“options.burst” if 1, acquire data in burst mode. It is not clear to me what<br />
+differences are entailed by setting this to 1 compared to just setting<br />
+“options.immediate” to 1, but if nothing else, data from multiple channels<br />
+can be acquired faster; I’ve not tested it, but it may be that in burst<br />
+mode the device acquires data until its FIFO is full and may ignore<br />
+efforts to communicate with it until that occurs.<br />
+“options.<a href="ExternSync" class="uri">ExternSync</a>” if 1, use external sync signal. I believe this is mainly<br />
+for using to daqs to acquire data simultaneously. Connect the sync<br />
+terminals of the two devices, configure one to output a sync signal and<br />
+set this option to 1 so that this device listens for that sync signal and<br />
+times its data acquisition accordingly.<br />
+“options.debug” I have no idea what this does… “debug” doesn’t even appear<br />
+in the user manual for the device.</p>
+<p>To use this function, you don’t need the following information. However, if<br />
+you want to modify it, this information may prove useful to you. The options<br />
+that are passed through <a href="PsychHID" class="uri">PsychHID</a> are combined into a single 8-bit number. The<br />
+settings for the bits (that I know of) for the 1208FS are:<br />
+1 (0x1) Execution Mode (1=counted, 0=continuous)<br />
+2 (0x2) Transfer mode (1=immediate, 0=blocked)<br />
+3 (0x4) Trigger mode (1=external, 0=internal)<br />
+5 (0x10) Gain Queue mode (1=use stored queue, 0=use channels passed)<br />
+6 (0x20) Retrigger mode (1=reset trigger, 0=don’t)</p>
+<p>and for the 1608FS:<br />
+1 (0x1) Execution Mode (1=counted, 0=continuous)<br />
+2 (0x2) Burst Mode (1=burst I/O, 0=normal I/O)<br />
+3 (0x4) Transfer mode (1=immediate, 0=blocked)<br />
+4 (0x8) Trigger mode (1=external, 0=internal)<br />
+5 (0x10) External sync (1=use external, 0=don’t); as noted above, this may<br />
+be the same as retrigger mode<br />
+6 (0x20) Debug mode (1=debug, 0=non-debug) (I don’t know what this does)</p>
+<p>4/15/05 dgp Wrote it.<br />
+4/15/05 dgp Merged several of the arguments into the “options” struct.<br />
+4/25/05 dgp Added options.channel, options.range, and options.sendChannelRange.<br />
+4/27/05 dgp Fixed immediate-transfer mode once I realized that the report<br />
+contains only one sample, not one sample per channel.<br />
+8/26/05 dgp Fixed bug in extraction of serial number, as suggested by Steve<br />
+Van Hooser, vanhooser@neuro.duke.edu<br />
+8/26/05 dgp Incorporated bug fix for compatibility with Mac OS X Tiger<br />
+suggested by Maria Mckinley <a href="mailto:parody@u.washington.edu\">parody@u.washington.edu\</a>. The reported<br />
+number of outputs of the USB-1208FS has changed in Tiger.<br />
+http://groups.yahoo.com/group/psychtoolbox/message/3614<br />
+1/02/07 mk Add ‘persistent dinc’ to line 245. This apparently fixes some<br />
+bug, bugfix proposed by Florian Stendel.<br />
+1/x/08 mpr modified for use of USB-1608FS, added options.<a href="ReleaseTime" class="uri">ReleaseTime</a>; changed<br />
+low and high Channels to First and Last because previous<br />
+terminology seemed too easily confused with high and low bytes<br />
+or high and low channels in 1208FS pin out diagrams.<br />
+3/14/08 mpr added warning when data are discarded<br />
+3/15/09 mk timer_preload calculation changed according to bug report and bugfix<br />
+suggested by Peter Meilstrup in forum message 9221. There was an<br />
+off-by-one bug present…<br />
+3/24/12 mk Add handling for options.livedata – retrieval of data while<br />
+DAQ is running.<br />
+6/21/15 mk Implement options.sendChannelRange for the 1608-FS to allow skipping<br />
+of <a href="DaqALoadQueue" class="uri">DaqALoadQueue</a>, which is likely pretty expensive.</p>
+<p>12/6/15 mk Try to select interfaces ascending by interfaceID for assignment to<br />
+<a href="IndexRange" class="uri">IndexRange</a>, instead of hard-coding ranges. This should not change<br />
+anything on Linux or Windows, but maybe it helps the brain-dead OSX.</p>
+<p>9/24/16 js Remembers the serial number of the Daq device when options.begin is true,<br />
+then only uses device <a href="IDs" class="uri">IDs</a> with the same serial number; this allows multiple<br />
+devices to be attached to the same system. Adds optional field options.nodiscard<br />
+to keep all data, regardless of the consecutivity of reports.</p>
+<p>9/26/16 mk Runs on Matlab R2013a and later, replacing the deprecated bitcmp function<br />
+for handling of 12 bit differential channels on non-USB 1608FS. Untested.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/Daq/DaqAInScan.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/Daq/DaqAInScan.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/Daq/DaqAInScan.m</code></p>
+</div>

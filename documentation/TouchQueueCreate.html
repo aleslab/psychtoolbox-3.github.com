@@ -1,0 +1,29 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p><a href="TouchQueueCreate" class="uri">TouchQueueCreate</a>(windowHandle, deviceNumber [, numSlots=100000][, numValuators=auto][, keyList=all])</p>
+<p>Create a touch queue for receiving touch input from touch input devices<br />
+like touchscreens, tablets, touch surfaces, or touchpads.</p>
+<p>‘windowHandle’ Handle for a <a href="Screen" class="uri">Screen</a>() onscreen window for which touch<br />
+should be received.</p>
+<p>‘deviceNumber’ Handle for the touch input device. <a href="GetTouchDeviceIndices" class="uri">GetTouchDeviceIndices</a>()<br />
+allows to enumerate touch devices.</p>
+<p>‘numSlots’ Number of input slots for storing touch events. You must empty<br />
+the queue frequently enough, so no more than ‘numSlots’ events collect in<br />
+the queue, or the queue will stop storing new events and drop information.</p>
+<p>‘numValuators’ Number of optional touch device properties to store per<br />
+event. Defaults to what the device can provide.</p>
+<p>‘keyList’ If the touch queue is also used to receive button input from<br />
+physical buttons (or maybe virtual buttons?) from the device, this provides<br />
+the list of buttons to accept. See <a href="KbQeueCreate" class="uri">KbQeueCreate</a> for explanation. By default<br />
+all buttons are accepted.</p>
+<p>Once a queue is created its touch data collection can be started via<br />
+<a href="TouchQueueStart" class="uri">TouchQueueStart</a>(), stopped via <a href="TouchQueueStop" class="uri">TouchQueueStop</a>(), cleared via <a href="TouchQueueFlush" class="uri">TouchQueueFlush</a>(),<br />
+asked for current number of pending events via <a href="TouchEventAvail" class="uri">TouchEventAvail</a>() and events<br />
+can be fetched via <a href="TouchEventGet" class="uri">TouchEventGet</a>().</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/TouchQueueCreate.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/TouchQueueCreate.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/TouchQueueCreate.m</code></p>
+</div>

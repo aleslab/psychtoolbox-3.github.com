@@ -1,0 +1,66 @@
+<h1 id="screenopenoffscreenwindow"><a href="Screen-OpenOffscreenWindow">Screen(‘OpenOffscreenWindow’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Open an offscreen window. This is simply an <a href="OpenGL" class="uri">OpenGL</a> texture that is treated as a<br />
+window, so you can draw to it. Offscreen windows should be used to keep old code<br />
+from OS-9 Psychtoolbox working, or if you need an offscreen drawing canvas for<br />
+fast drawing, that you can later use as a texture. For quickly displaying<br />
+premade Matlab image matrices, use the ‘MakeTexture’ command instead. It allow<br />
+for significantly higher drawing speeds.<br />
+You can specify a screen (any windowPtr or a screenNumber&gt;=0) or no<br />
+screen(screenNumber=-1), but any real screen must already have an open <a href="Screen" class="uri">Screen</a><br />
+window when you call <a href="OpenOffscreenWindow" class="uri">OpenOffscreenWindow</a>.<br />
+“color” is the clut index (scalar or [r g b] triplet or [r g b a] quadruple)<br />
+that you want to poke into each pixel as initial background color; default is<br />
+white.<br />
+“rect” specifies the size of the offscreen window If supplied, “rect” must<br />
+contain at least one pixel. If a windowPtr is supplied, then “rect” defaults to<br />
+the whole window. If a screenNumber is supplied then “rect” defaults to the<br />
+whole screen. If a screenNumber of -1 is supplied, then “rect” defaults to the<br />
+size of the main screen. (In all cases, subsequent references to this new<br />
+offscreen window will use its coordinates: origin at its upper left.)<br />
+“pixelSize” sets the depth (in bits) of each pixel. If you specify no screen<br />
+(screenNumber=-1) then the default pixelSize is 32, but you can specify any<br />
+legal depth: 8, 16, 24, 32. A pixelSize of 0 or [] is replaced by the default of<br />
+32 bits per pixel. If you specify a screen number of windowPtr, then the default<br />
+depth is that of the screen or window. If you run your script with the imaging<br />
+pipeline enabled (imagingmode flag &gt; 0 in <a href="Screen" class="uri">Screen</a>(‘OpenWindow’), then all<br />
+Offscreen windows always have 4 color channels RGBA and the selectable depths<br />
+are additionally 64 bits or 128 bits, corresponding to 16 bits or 32 bits<br />
+floating point precision per color component. If 64 bits are selected but the<br />
+hardware does not support this in float precision, a 15 bit precision per color<br />
+channel signed integer format will be tried instead. On <a href="OpenGL" class="uri">OpenGL</a>-ES hardware, only<br />
+the 32 bpc float type or 8 bit integer type is supported, therefore a pixelSize<br />
+of more than 32 will always get silently upgraded to 128 bits per pixel, if<br />
+possible.<br />
+‘specialFlags’ optional parameter to set special properties, defaults to zero.<br />
+If you set it to 1 then the offscreen window is created in GL_TEXTURE_2D format<br />
+if possible. Use of GL_TEXTURE_2D format is currently not automatically<br />
+compatible with use of specialFlags setting 2.<br />
+If you set ‘specialFlags’ to 2 then the offscreen window will be drawn with<br />
+especially high precision, see specialFlags setting of 2 in help for<br />
+<a href="Screen" class="uri">Screen</a>(‘DrawTexture’) for more explanation.<br />
+A ‘specialFlags’ == 8 will prevent automatic mipmap-generation for GL_TEXTURE_2D<br />
+textures.<br />
+A ‘specialFlags’ == 32 will prevent automatic closing of the offscreen window by<br />
+a call to <a href="Screen" class="uri">Screen</a>(‘<a href="Close" class="uri">Close</a>’);<br />
+‘multiSample’ optional number of samples to use for anti-aliased drawing: This<br />
+defaults to zero if omitted, ie., no anti-aliasing is performed when drawing<br />
+into this offscreen window. If you set a positive non-zero number of samples and<br />
+your system supports anti-aliased drawing to offscreen windows and the imaging<br />
+pipeline is active, then <a href="Screen" class="uri">Screen</a> will try to allocate the offscreen window with<br />
+at least the requested number of samples per pixel for anti-aliasing, but<br />
+gracefully fall back to lower numbers if the hardware isn’t capable of handling<br />
+the requested number. Please note that anti-aliased offscreen windows can’t be<br />
+directly used for transformations in <a href="Screen" class="uri">Screen</a>(‘TransformTexture’) or for drawing<br />
+via <a href="Screen" class="uri">Screen</a>(‘DrawTexture’) – this is a hardware limitation. To display or use<br />
+the content of an anti-aliased offscreen window you must first create a normal<br />
+offscreen window of the same size and color format (same ‘rect’ and ‘pixelSize’<br />
+parameter), then use <a href="Screen" class="uri">Screen</a>(‘CopyWindow’, antialiasedWindowhandle,<br />
+normalWindowhandle); to copy the content to the normal offscreen window. This<br />
+will perform the actual conversion into anti-aliased and displayable content.<br />
+If the imaging pipeline is disabled, the ‘multiSample’ parameter will be<br />
+silently ignored.</p>
+<p>NOTE: <a href="Screen" class="uri">Screen</a>‘s windows are known only to <a href="Screen" class="uri">Screen</a> and must be closed by it, e.g.,<br />
+<a href="Screen" class="uri">Screen</a>(’<a href="Close" class="uri">Close</a>’, w). Matlab knows nothing about <a href="Screen" class="uri">Screen</a>’s windows, so the Matlab<br />
+CLOSE command won’t work on <a href="Screen" class="uri">Screen</a>’s windows.</p>
+<p>&lt;&lt;=====See also:===== OpenWindow &lt;&lt;</p>

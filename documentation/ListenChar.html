@@ -1,0 +1,93 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p>function <a href="ListenChar" class="uri">ListenChar</a>([listenFlag])</p>
+<p>Tell the Psychtoolbox function “<a href="GetChar" class="uri">GetChar</a>” to start or stop listening for<br />
+keyboard input. By default <a href="ListenChar" class="uri">ListenChar</a> enables listening when no argument is<br />
+supplied. Passing 0 will turn off character listening and reset the<br />
+buffer which holds the captured characters. Passing a value of 1 or not<br />
+passing any value will enable listening. Passing a value of 2 will enable<br />
+listening, additionally any output of keypresses to Matlabs or Octaves<br />
+windows is suppressed. Use this with care, if your script aborts with an<br />
+error, Matlab or Octave may be left with a dead keyboard until the user<br />
+presses CTRL+C to reenable keyboard input. ‘listenFlag’ 2 is silently<br />
+ignored on Matlab in -nojvm mode under MS-Windows.</p>
+<p>Passing the listenFlag -1 will only suppress keypresses into Matlabs or<br />
+Octaves command window, but not collect characters for use with <a href="CharAvail" class="uri">CharAvail</a><br />
+or <a href="GetChar" class="uri">GetChar</a>. This allows concurrent use of <a href="ListenChar" class="uri">ListenChar</a> for character suppression<br />
+while at the same time using keyboard queues for character and key input.<br />
+Reenabling keypresses into Matlab and Octave is only possible via a call<br />
+with listenFlag 0 if suppression was enabled with listenFlag -1. Use of<br />
+listenFlag -1 does not block keyboard queues, so if you want to get keyboard<br />
+input, the better way might be to use keyboard queues (see <a href="KbEventAvail" class="uri">KbEventAvail</a>,<br />
+<a href="KbEventGet" class="uri">KbEventGet</a> and <a href="KbEventFlush">KbEventFlush)</a>) for input and <a href="ListenChar" class="uri">ListenChar</a>(-1) and <a href="ListenChar" class="uri">ListenChar</a>(0)<br />
+to suppress characters into the Matlab/Octave command window or console.</p>
+<p>This function isn’t entirely necessary to turn on listening as calling<br />
+<a href="GetChar" class="uri">GetChar</a>, <a href="CharAvail" class="uri">CharAvail</a>, or <a href="FlushEvents" class="uri">FlushEvents</a> will trigger listening on. However,<br />
+it is the only method by which to disable listening or switch between<br />
+suppression of keyboard input to Matlab and unsuppressed mode.</p>
+<p>Please note that the commands <a href="ListenChar" class="uri">ListenChar</a>, <a href="CharAvail" class="uri">CharAvail</a> and <a href="GetChar" class="uri">GetChar</a> are<br />
+subject to various constraints and limitations, depending on the<br />
+operating system you use, if you use Matlab in Java or -nojvm mode, if<br />
+you use Octave, if you have <a href="Screen" class="uri">Screen</a>() onscreen windows open or not, or if<br />
+you use <a href="KbQueueXXX" class="uri">KbQueueXXX</a> functions in parallel or not. Therefore use of these<br />
+functions can be troublesome for any but the most simple usages. Use of<br />
+<a href="KbCheck" class="uri">KbCheck</a>, <a href="KbWait" class="uri">KbWait</a>, <a href="KbStroke" class="uri">KbStroke</a>/Press/<a href="ReleaseWait" class="uri">ReleaseWait</a> is often simpler if you are<br />
+just after keyboard input. Use of <a href="KbQueue" class="uri">KbQueue</a> functions, e.g., <a href="KbQueueCheck" class="uri">KbQueueCheck</a>,<br />
+<a href="KbQueueWait" class="uri">KbQueueWait</a>, <a href="KbTriggerWait" class="uri">KbTriggerWait</a> is better suited for background keystroke<br />
+collection. Use of <a href="KbEventAvail" class="uri">KbEventAvail</a> and <a href="KbEventGet" class="uri">KbEventGet</a> is often more convenient,<br />
+more flexible and subject to less restrictions and gotchas than use of<br />
+<a href="GetChar" class="uri">GetChar</a> et al.</p>
+<h3 id="some-of-the-restrictions-and-caveats">Some of the restrictions and caveats:</h3>
+<ol type="1">
+<li><p>Works very well with Matlab and its Java based GUI enabled on Linux<br />
+and <a href="MacOSX" class="uri">MacOSX</a>, as well as on <a href="WindowsXP" class="uri">WindowsXP</a> and earlier versions of Windows.</p></li>
+<li><p>When used on Windows Vista or later (Vista, Windows-7, Windows-8, …)<br />
+with Matlab’s Java GUI, you cannot use any <a href="KbQueue" class="uri">KbQueue</a> functions at the same<br />
+time, ie., <a href="KbQueueCreate" class="uri">KbQueueCreate</a>/Start/Stop/Check/Wait as well as <a href="KbWaitTrigger" class="uri">KbWaitTrigger</a>,<br />
+<a href="KbEventFlush" class="uri">KbEventFlush</a>, <a href="KbEventAvail" class="uri">KbEventAvail</a>, and <a href="KbEventGet" class="uri">KbEventGet</a> are off limits after any call<br />
+to <a href="ListenChar" class="uri">ListenChar</a>, <a href="ListenChar" class="uri">ListenChar</a>(1), <a href="ListenChar" class="uri">ListenChar</a>(2), <a href="FlushEvents" class="uri">FlushEvents</a>, <a href="CharAvail" class="uri">CharAvail</a> or<br />
+<a href="GetChar" class="uri">GetChar</a>. You would need to call <a href="ListenChar" class="uri">ListenChar</a>(0) before you could call<br />
+<a href="KbQueueCreate" class="uri">KbQueueCreate</a> and then use those functions. Vice versa, after a call to<br />
+<a href="KbQueueCreate" class="uri">KbQueueCreate</a>, <a href="CharAvail" class="uri">CharAvail</a>, <a href="FlushEvents" class="uri">FlushEvents</a>, and <a href="GetChar" class="uri">GetChar</a> are dysfunctional and<br />
+<a href="ListenChar" class="uri">ListenChar</a> may be limited. You need to call <a href="KbQueueRelease" class="uri">KbQueueRelease</a> before you can<br />
+use them again. Use of other devices, e.g., mouse or joystick, is not<br />
+prohibited during use of <a href="GetChar" class="uri">GetChar</a> et al.</p></li>
+<li><p>If you use Matlab in “matlab -nojvm” mode without its GUI, or if you<br />
+use GNU/Octave instead of Matlab, the same restrictions as in 2. apply -<br />
+no parallel use of the default keyboards <a href="KbQueue" class="uri">KbQueue</a>. <a href="KbQueues" class="uri">KbQueues</a> can be used<br />
+for other input devices and on Linux and OSX for keyboards other than the<br />
+default keyboard.</p></li>
+</ol>
+<p>The only feature that works in parallel with <a href="KbQueues" class="uri">KbQueues</a> on the default keyboard<br />
+is the suppression of spilling of keystroke characters into the Matlab or<br />
+Octave window during <a href="ListenChar" class="uri">ListenChar</a>(2) - at least on Linux and OSX. On<br />
+Windows this can’t be prevented at all in “matlab -nojvm” mode. However,<br />
+if you switch to <a href="ListenChar" class="uri">ListenChar</a>(2) mode, you cannot break out of it by<br />
+pressing CTRL+C on Linux if the keyboard queue that is in parallel use<br />
+didn’t get <a href="KbQueueStart" class="uri">KbQueueStart</a> called, ie. if it is stopped. On OSX with a<br />
+stopped Keyboard queue, neither CTRL+C nor stopping a runaway script<br />
+works.</p>
+<ol start="4" type="1">
+<li>On Linux, as a exception, some <a href="GetChar" class="uri">GetChar</a>, <a href="CharAvail" class="uri">CharAvail</a> functionality may<br />
+still work in case 3. under certain conditions, e.g., if you don’t use<br />
+<a href="ListenChar" class="uri">ListenChar</a>(2) and your Matlab/Octave is not in interactive mode.</li>
+</ol>
+<p>Also, <a href="GetChar" class="uri">GetChar</a> can only collect keystrokes from multiple connected<br />
+keyboards in case 1. In all other cases, it can only collect keystrokes,<br />
+or respond to press of CTRL+C, for the default keyboard device. It will<br />
+ignore other connected keyboards.</p>
+<p>Basically: Mixing <a href="GetChar" class="uri">GetChar</a> et al. and modern <a href="KbQueue" class="uri">KbQueue</a> functions is usually<br />
+not advisable, or if needed, great care must be taken to sidestep all the<br />
+mentioned limitations. Also the <a href="KbQueue" class="uri">KbQueue</a> functions usually have better<br />
+timing precision and allow to flexibly address multiple keyboards<br />
+separately at least on Linux and OSX.</p>
+<p>For further explanation see help for “<a href="GetChar" class="uri">GetChar</a>”.</p>
+<p>_________________________________________________________________________</p>
+<p>See also: <a href="GetChar" class="uri">GetChar</a></p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/ListenChar.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/ListenChar.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/ListenChar.m</code></p>
+</div>

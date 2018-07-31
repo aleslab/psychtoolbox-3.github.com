@@ -1,0 +1,22 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p>ifi = <a href="VideoRefreshFromMeasurement" class="uri">VideoRefreshFromMeasurement</a>(window, samples)</p>
+<p>This function should determine the exact duration of the displays video<br />
+refresh interval with the highest possible precision, using whatever<br />
+method proves to be the most accurate on your system.</p>
+<p>You must provide ‘window’ the handle to the onscreen window whose<br />
+associated display you want to be measured and (optionally) ‘samples’,<br />
+the number of samples to take for computation of video refresh interval.</p>
+<p>The function returns the measured interval in units of seconds.</p>
+<p>CAUTION: This is unfinished alpha quality code. While it works well on<br />
+some system setups, it doesn’t yet on others and will need more<br />
+fine-tuning in the future. For most purpose, the values returned by<br />
+<a href="Screen" class="uri">Screen</a>(‘GetFlipInterval’, window); are perfectly useable and the<br />
+recommended way of getting the video refresh duration.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/FrameRateFromMeasurement.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/FrameRateFromMeasurement.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/FrameRateFromMeasurement.m</code></p>
+</div>

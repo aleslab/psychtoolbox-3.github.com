@@ -1,0 +1,17 @@
+<h1 id="psychoculusvrcoregetfovtexturesize"><a href="PsychOculusVRCore-GetFovTextureSize">PsychOculusVRCore(‘GetFovTextureSize’)</a></h1>
+<h2 id="psychtoolbox-psychoculusvrcore.mexdll-subfunction">[[Psychtoolbox]] › [[PsychOculusVRCore]].{mex*,dll} subfunction</h2>
+<p>Return recommended size of client renderbuffers for Oculus device ‘oculusPtr’.<br />
+‘eye’ which eye to provide the size for: 0 = Left, 1 = Right.<br />
+‘fov’ Optional field of view in degrees, from line of sight: [leftdeg, rightdeg,<br />
+updeg, downdeg]. If ‘fov’ is omitted, the Oculus runtime will be asked for a<br />
+good default field of view and that will be used. The field of view may be<br />
+dependent on the settings in the Oculus user profile of the currently selected<br />
+user.<br />
+‘pixelsPerDisplay’ Ratio of the number of render target pixels to display pixels<br />
+at the center of distortion. Defaults to 1.0 if omitted. Lower values can<br />
+improve performance, at lower quality.</p>
+<p>Return values are ‘width’ for minimum recommended width of framebuffer in pixels<br />
+and ‘height’ for minimum recommended height of framebuffer in pixels. ‘fovPort’<br />
+is the field of view in degrees finally used for calculation of ‘width’ x<br />
+‘height’.</p>
+<p>&lt;&lt;=====See also:===== GetUndistortionParameters &lt;&lt;</p>

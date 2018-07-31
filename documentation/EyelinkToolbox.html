@@ -1,0 +1,97 @@
+<h2 id="psychtoolbox-psychhardware-eyelinktoolbox">[[Psychtoolbox]] › [[PsychHardware]] › [[EyelinkToolbox]]</h2>
+<pre><code>[EyelinkToolbox](EyelinkToolbox).  
+
+The [EyelinkToolbox](EyelinkToolbox) can be used to ceate eye-movement experiments and  </code></pre>
+<p>control the SR-Research Eyelink(c) gazetrackers<br />
+(http://www.eyelinkinfo.com/) from within Matlab and Octave.<br />
+It is incorporated into the <a href="PsychToolbox" class="uri">PsychToolbox</a> (http://www.psychtoolbox.org/).<br />
+It provides an interface to the Eyelink Gazetracker.<br />
+It uses a very similar approach as the <a href="PsychToolBox" class="uri">PsychToolBox</a> and uses the<br />
+functions provided by the <a href="PsychToolBox" class="uri">PsychToolBox</a> for graphics and sound.</p>
+<h3 id="how-to-start-using-it">How to start using it:</h3>
+<p>The <a href="EyelinkToolbox" class="uri">EyelinkToolbox</a> is a collection of m-files and a Mex file.<br />
+The <a href="EyelinkToolbox" class="uri">EyelinkToolbox</a> core is the mex/dll-file called Eyelink. The<br />
+<a href="EyelinkToolbox" class="uri">EyelinkToolbox</a> uses the same approach as the SCREEN mex/dll function<br />
+provided in the <a href="PsychToolBox" class="uri">PsychToolBox</a>. Most of the Eyelink functions that are<br />
+avaible in C are also available under Matlab. In addition, the<br />
+<a href="EyelinkToolbox" class="uri">EyelinkToolbox</a> provides a number of wrapper functions to simplify<br />
+creating an eye-tracking program. The main functionality of the<br />
+<a href="EyelinkToolbox" class="uri">EyelinkToolbox</a> is demonstrated in a number of demos. This is probably<br />
+where you want to start if you are new to the <a href="EyelinkToolbox" class="uri">EyelinkToolbox</a>.</p>
+<p>For a complete list of available functions type “Eyelink” in the Matlab<br />
+command window. For an explanation of any particular eyelink function<br />
+just add a question mark “?” after a command. E.g. for help on the<br />
+function ‘Initialize’, try either of these equivalent forms:</p>
+<pre><code>    Eyelink(&#39;Initialize?&#39;)  
+    Eyelink initialize?  </code></pre>
+<h3 id="contents-of-the-eyelinktoolbox-folder">Contents of the <a href="EyelinkToolbox" class="uri">EyelinkToolbox</a> folder:</h3>
+<pre><code>-Contents.m: this file.  
+
+-Changes.m: file that documents changes to the [EyelinkToolbox](EyelinkToolbox)  
+
+-[EyelinkBasic](EyelinkBasic)  
+    Eyelink.mex/dll file and a collection of m-files that provide the  
+   core functionality of the toolbox.  
+
+-[EyelinkDemos](EyelinkDemos)  
+   [EyelinkShortDemos](EyelinkShortDemos) is the best place to start. Contains relatively   
+   simple demos. The SR-Research Demo folder is a slightly more  
+   elaborate example. The folder BRMIC contains the original example  
+   as shown in the [EyelinkToolbox](EyelinkToolbox) article in BRMIC (Cornelissen,  
+   Peters and Palmer 2002). It is obsolete in many ways but left in  
+   the toolbox for historic reasons.  </code></pre>
+<p>-<a href="EyelinkOneLiners" class="uri">EyelinkOneLiners</a><br />
+Handy routines that provide less essential functionality</p>
+<pre><code>We welcome any observations, suggestions that may help us improve this  
+toolbox. If any particular function you need is still missing, let us know  
+and we&#39;ll try to incorporate it into a next release. In case you decide  </code></pre>
+<p>to add or modify functions yourself, please send us the modified code.<br />
+If you think you’ve found a bug, please tell us. It will help greatly<br />
+if you can supply a minimal-length program that exhibits the bug.<br />
+If you’re interested in the c-source code of this project, it is part<br />
+of the source code of the <a href="PsychToolbox" class="uri">PsychToolbox</a> (http://www.psychtoolbox.org/).</p>
+<p>******Citing the use of the Eyelink Toolbox******</p>
+<p>We would very much appreciate it if you would (also) cite the <a href="EyelinkToolbox" class="uri">EyelinkToolbox</a><br />
+paper when you have used the toolbox in your work. You could write something<br />
+like:</p>
+<p>We wrote our experiments in Matlab, using the Psychophysics and Eyelink<br />
+Toolbox extensions (Brainard, 1997; Pelli, 1997; Cornelissen, Peters &amp;<br />
+Palmer, 2002; see http://psychtoolbox.org/).</p>
+<p>Brainard, D. H. (1997) The Psychophysics Toolbox, Spatial Vision 10:433-436.<br />
+Cornelissen, F.W., Peters. E., Palmer, J. (2002).</p>
+<p>The Eyelink Toolbox: Eye tracking with MATLAB and the Psychophysics<br />
+Toolbox. Behavior Research Methods, Instruments &amp; Computers, 34,<br />
+613-617.</p>
+<p>Pelli, D. G. (1997) The <a href="VideoToolbox" class="uri">VideoToolbox</a> software for visual psychophysics:<br />
+Transforming numbers into movies, Spatial Vision 10:437-442.<br />
+This toolbox is also actively supported and co-developed by SR-Research<br />
+(http://www.eyelinkinfo.com), the manufacturer of the Eyelink<br />
+gazetrackers. You can contact them about it. However, if your problem<br />
+is likely of interest to other users as well, then please post<br />
+questions on the <a href="PsychToolbox" class="uri">PsychToolbox</a> mailinglist, which is also monitored by<br />
+SR-Research.</p>
+<p>The <a href="EyelinkToolbox" class="uri">EyelinkToolbox</a> and its source code are copyright<br />
+Enno Peters, Frans Cornelissen and John Palmer. Additional copyrights<br />
+for some contributed functions are SR-Research and the respective<br />
+individual developers of those functions.</p>
+<p>(Type “Eyelink” or Eyelink(‘Version’) for authors). The<br />
+toolbox is freely useable and redistributable under the terms of the<br />
+MIT license. The exact license text is included inside License.txt in<br />
+the root folder of any Psychtoolbox-3 installation.</p>
+<p>Disclaimer: we cannot be hold responsible for any damage that may<br />
+(appear to) be caused by the use of this toolbox. Use at<br />
+your own risk!</p>
+<p>Frans W. Cornelissen<br />
+22nd July 2010<br />
+email: f.w.cornelissen@med.umcg.nl</p>
+<pre><code>Enno Peters, Frans Cornelissen and John Palmer  
+Groningen, 27-11-2002  </code></pre>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/EyelinkToolbox/contents.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/EyelinkToolbox/contents.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/EyelinkToolbox/contents.m</code></p>
+</div>
+<p>{{category}}</p>

@@ -1,0 +1,44 @@
+<h2 id="psychtoolbox-psychdemos">[[Psychtoolbox]] › [[PsychDemos]]</h2>
+<p>Demonstrate simple use of built-in video capture engine.</p>
+<p><a href="VideoCaptureDemo" class="uri">VideoCaptureDemo</a>([fullscreen=0][, fullsize=0][, roi][, depth][, fps=realmax][,deviceId=0][, cameraname][, bpc=8])</p>
+<p><a href="VideoCaptureDemo" class="uri">VideoCaptureDemo</a> initializes the first attached and supported camera on<br />
+your computer (e.g, the built-in iSight of Apple Macintosh computers),<br />
+then shows its video image in a Psychtoolbox window.</p>
+<p>By default, a capture rate of 30 frames per second is requested, and the<br />
+timecode and interframe interval of each captured image is displayed in<br />
+the top-left corner of the display. A press of the <a href="ESCape" class="uri">ESCape</a> key ends the<br />
+demo.</p>
+<p>See also <a href="ImagingVideoCaptureDemo" class="uri">ImagingVideoCaptureDemo</a>, <a href="VideoDelayloopMiniDemo" class="uri">VideoDelayloopMiniDemo</a> and a few other<br />
+nice demos.</p>
+<h3 id="optional-parameters">Optional parameters:</h3>
+<p>‘fullscreen’ If set to non-zero value, the image is displayed in a<br />
+fullscreen window, as usual, otherwise a normal GUI window is used.</p>
+<p>‘fullsize’ If set to 1, the cameras image is scaled up to full screen<br />
+resolution, ie. so it fills the maximum amount of display area, but<br />
+preserving the original aspect ratio.</p>
+<p>‘roi’ Selects a rectangular subregion of the camera for display. By<br />
+default, it selects the full area of the camera, if possible. This<br />
+parameter may need tweaking for some cameras, as some drivers have<br />
+bugs and don’t work well with all settings.</p>
+<p>‘depth’ Number of color channels 1 = grayscale, 3 = rgb, 4 = rgba etc.</p>
+<p>‘fps’ Target capture framerate. Maximum for given resolution and color depth<br />
+if omitted.</p>
+<p>‘deviceId’ Device index of video capture device. Defaults to system default.</p>
+<p>‘cameraname’ Name string for selection of video capture device. This is<br />
+only honored if ‘deviceId’ is a negative number, and only for certain<br />
+video capture plugins. Defaults to none.</p>
+<p>‘bpc’ Optional bit depth in bits per channel. Defaults to classic 8 bpc, but<br />
+some cameras support up to 16 bpc. Setting 16 bpc will try to coerce those into<br />
+providing “HDR” data. Usually this works with higher end firewire cameras and<br />
+the dc1394 capture engine. Your mileage with standard consumer cameras and the<br />
+default [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) capture engine will likely be less great. If at all, it would<br />
+probably only work on Linux or on OSX with [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) built from source, so you<br />
+have the camerabin1 plugin available.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/VideoCaptureDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/VideoCaptureDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/VideoCaptureDemo.m</code></p>
+</div>

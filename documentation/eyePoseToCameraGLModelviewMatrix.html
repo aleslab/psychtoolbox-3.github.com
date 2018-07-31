@@ -1,0 +1,28 @@
+<h2 id="psychtoolbox-psychopengl">[[Psychtoolbox]] › [[PsychOpenGL]]</h2>
+<p>eyePoseToCameraGLModelviewMatrix() - Convert eyePose directly to <a href="OpenGL" class="uri">OpenGL</a> modelview matrix.</p>
+<h3 id="usage">Usage:</h3>
+<p>modelview = eyePoseToCameraGLModelviewMatrix(eyePose [, eyeLocalTranslate])</p>
+<h3 id="input-arguments">Input arguments:</h3>
+<p>‘eyePose’ is a [tx, ty, tz, rx, ry, rz, rw] vector, with the first 3 components<br />
+defining eye translation, and the last 4 components defining a rotation Quaternion<br />
+that defines eye orientation.</p>
+<p>‘eyeLocalTranslate’ is an optional 3 component translation vector that gets applied<br />
+to ‘eyePose’ position, but within the eyes own rotated local coordinate system.<br />
+This is useful if ‘eyePose’ is not actually describing an eye pose, but the tracked<br />
+global head pose or global HMD pose. Applying suitable ‘eyeLocalTranslate’ translation<br />
+vectors allows to derive the eyes position from the head/HMD position.</p>
+<h3 id="return-arguments">Return arguments:</h3>
+<p>‘modelview’ is a 4x4 matrix that can be directly loaded into <a href="OpenGL" class="uri">OpenGL</a> as GL_MODELVIEW<br />
+matrix, e.g., glLoadMatrixd(modelview); to define camera position and orientation<br />
+for rendering accordign to eyePose. Iow. modelview is already the inverse matrix of<br />
+eyePose.</p>
+<p>‘eyePoseT’ is the original input ‘eyePose’, but optionally transformed by ‘eyeLocalTranslate’.<br />
+It is not the inverse of ‘eyePos’, like ‘modelview’!</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOpenGL/eyePoseToCameraGLModelviewMatrix.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOpenGL/eyePoseToCameraGLModelviewMatrix.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOpenGL/eyePoseToCameraGLModelviewMatrix.m</code></p>
+</div>

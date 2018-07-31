@@ -1,0 +1,28 @@
+<h2 id="psychtoolbox-psychoneliners">[[Psychtoolbox]] › [[PsychOneliners]]</h2>
+<p>gitInfo = <a href="GetGITInfo" class="uri">GetGITInfo</a>(directory)</p>
+<p>Description:<br />
+Retrieves the git information on a specified directory or file. This is<br />
+essentially a wrapper around the shell command “git”.</p>
+<p>Input:<br />
+directory (string) - Directory name of interest.</p>
+<p>Output:<br />
+gitInfo (struct) - Structure containing the following information:<br />
+Path<br />
+Describe<br />
+Revision<br />
+<a href="LastCommit" class="uri">LastCommit</a><br />
+<a href="RemoteRepository" class="uri">RemoteRepository</a><br />
+<a href="RemoteBranch" class="uri">RemoteBranch</a><br />
+<a href="LocalBranch" class="uri">LocalBranch</a></p>
+<p>‘gitInfo’ will be empty if there is no git info for directory or if directory<br />
+does not exist.</p>
+<p>7/11/13 dhb Wrote it based on <a href="GetSVNInfo" class="uri">GetSVNInfo</a><br />
+7/12/13 dhb More info, based on Ben Heasly’s version of this in <a href="RenderToolbox3" class="uri">RenderToolbox3</a>.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOneliners/GetGITInfo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOneliners/GetGITInfo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOneliners/GetGITInfo.m</code></p>
+</div>

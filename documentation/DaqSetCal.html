@@ -1,0 +1,50 @@
+<h2 id="psychtoolbox-psychhardware-daq">[[Psychtoolbox]] › [[PsychHardware]] › [[Daq]]</h2>
+<p>err=<a href="DaqSetCal" class="uri">DaqSetCal</a><a href="(DeviceIndex),on">(DeviceIndex</a><br />
+USB-1208FS set CAL output.<br />
+“<a href="DeviceIndex" class="uri">DeviceIndex</a>” is a small integer, the array index specifying which HID<br />
+device in the array returned by <a href="PsychHID" class="uri">PsychHID</a>(‘Devices’) is interface 0<br />
+of the desired USB-1208FS box.<br />
+“on” is 1 for on (+2.5 V), and 0 for off (0 V).<br />
+USB-1608FS:<br />
+arguments and logic are the same except that “on” can take more values to<br />
+produce a wider variety of results:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">on</th>
+<th>output (Volts)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td>0.625</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2</td>
+<td>1.25</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3</td>
+<td>2.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>The calibration terminal is pin 17 on the USB-1608FS.</p>
+<p>See also Daq, <a href="DaqFunctions" class="uri">DaqFunctions</a>, <a href="DaqPins" class="uri">DaqPins</a>, ,<a href="DaqCalibrateAIn" class="uri">DaqCalibrateAIn</a>, <a href="DaqTest" class="uri">DaqTest</a>, <a href="PsychHIDTest" class="uri">PsychHIDTest</a>.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/Daq/DaqSetCal.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/Daq/DaqSetCal.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/Daq/DaqSetCal.m</code></p>
+</div>

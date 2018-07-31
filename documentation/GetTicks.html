@@ -1,0 +1,21 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p>ticks = <a href="GetTicks" class="uri">GetTicks</a></p>
+<p>The number of system ticks since startup. One tick is 1/60.15 second.</p>
+<p>For more precise timing use <a href="GetSecs" class="uri">GetSecs</a> or <a href="WaitSecs" class="uri">WaitSecs</a>.</p>
+<p>TIMING ADVICE: the first time you access any MEX function or M file,<br />
+Matlab takes several hundred milliseconds to load it from disk.<br />
+Allocating a variable takes time too. Usually you’ll want to omit<br />
+those delays from your timing measurements by making sure all the<br />
+functions you use are loaded and that all the variables you use are<br />
+allocated, before you start timing. MEX files stay loaded until you<br />
+flush the MEX files (e.g. by changing directory or calling CLEAR<br />
+MEX). M files and variables stay in memory until you clear them.</p>
+<p>See also: <a href="WaitTicks" class="uri">WaitTicks</a>, <a href="GetTicksTick" class="uri">GetTicksTick</a>, <a href="GetSecs" class="uri">GetSecs</a>, <a href="GetSecsTick" class="uri">GetSecsTick</a>, <a href="WaitSecs" class="uri">WaitSecs</a>, <a href="GetChar" class="uri">GetChar</a>, <a href="GetBusTicks" class="uri">GetBusTicks</a>, <a href="GetBusTicksTick" class="uri">GetBusTicksTick</a>.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/GetTicks.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/GetTicks.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/GetTicks.m</code></p>
+</div>

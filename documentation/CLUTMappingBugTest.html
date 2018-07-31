@@ -1,0 +1,52 @@
+<h2 id="psychtoolbox-psychtests">[[Psychtoolbox]] › [[PsychTests]]</h2>
+<p><a href="CLUTMappingBugTest" class="uri">CLUTMappingBugTest</a>([<a href="CLUTMapLength" class="uri">CLUTMapLength</a>=[256, 2048]])</p>
+<p><a href="CLUTMapLength" class="uri">CLUTMapLength</a> = Length of CLUT to test. Reasonable values would be<br />
+256, …, 2048. Values up to 8192 would work on modern GPU’s, values<br />
+up to 16384 might work on the latest gen hardware from 2017.<br />
+If omitted, the test will run itself with <a href="CLUTMapLength" class="uri">CLUTMapLength</a> 256 and 2048.</p>
+<p>This test is derived from <a href="CLUTMappingBug" class="uri">CLUTMappingBug</a>.m, written by Denis Pelli,<br />
+which demonstrated the following bug in the May 2017 PTB release, which<br />
+is now fixed, as this test should verify:</p>
+<p>This program demonstrates a bug in the software CLUT mapping that<br />
+appeared in the May 2017 release of Psychtoolbox. It seems that the<br />
+rounding rule has changed for conversion of the floating point color<br />
+(argument to <a href="FillRect">FillRect)</a>) to selection of the index in the software CLUT. My<br />
+programs use the software CLUT. They were reliably displaying my stimuli.<br />
+Since the new release, my stimuli are distorted as though my floating<br />
+point colors are mapped through the wrong CLUT entries.</p>
+<p><a href="MacBook" class="uri">MacBook</a> Pro (Retina, 15-inch, Mid 2015). MATLAB 8.6.0.267246 (R2015b),<br />
+Psychtoolbox 3.0.14 beta.</p>
+<p>This program loads the CLUT with a gray ramp, and then sets two CLUT<br />
+entries (rectEntry and screenEntry) to green. It then uses <a href="FillRect" class="uri">FillRect</a> to<br />
+fill the whole screen with the color of screenEntry, and then a small<br />
+rect with the color of rectEntry. If everything works, then both color<br />
+values should display the same green. This works fine when the clut<br />
+length is short (e.g. 256) and and the entry numbers are small (under<br />
+100). This fails when the clut length is large or the entry number is<br />
+large. When the CLUT size is 2048, this fails even for entry 1. Very<br />
+likely we’re missing the right CLUT entry by just one, but that is a very<br />
+obvious fail here because only two CLUT entries are green. Off by one is<br />
+terrible for my psychophysical programs as well.</p>
+<p>If you set <a href="CLUTMapLength" class="uri">CLUTMapLength</a>=256 and rectEntry=20, then everything works<br />
+fine, and you get the same green over the whole screen, as you should. If<br />
+you then set rectEntry=128, then the rect will be gray, not green. If you<br />
+increase <a href="CLUTMapLength" class="uri">CLUTMapLength</a> to 2048 then you’ll get no green, as the rect<br />
+and the screen background are black.</p>
+<p>This seems to be a problem in the rounding rule used to convert the<br />
+floating point color argument of <a href="FillRect" class="uri">FillRect</a> to an index in the CLUT.</p>
+<p>I am very surprised to find that the bug disappears if I turn on<br />
+<a href="EnableNative10BitFramebuffer" class="uri">EnableNative10BitFramebuffer</a> while running on my <a href="MacBook" class="uri">MacBook</a> Pro. In my<br />
+psychophysical software, I always have that on, yet I’m encountering the<br />
+rounding bug. I’m not sure what might be different between this demo and<br />
+my psychophysical software. I wrote this program to isolate the problem I<br />
+was having in that software.</p>
+<p>denis.pelli@nyu.edu<br />
+May 30, 2017</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychTests/CLUTMappingBugTest.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychTests/CLUTMappingBugTest.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychTests/CLUTMappingBugTest.m</code></p>
+</div>

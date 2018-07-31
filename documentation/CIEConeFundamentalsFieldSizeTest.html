@@ -1,0 +1,75 @@
+<h2 id="psychtoolbox-psychtests">[[Psychtoolbox]] › [[PsychTests]]</h2>
+<p><a href="CIEConeFundamentalsFieldSizeTest" class="uri">CIEConeFundamentalsFieldSizeTest</a></p>
+<p>Look at how the quantities in the CIE standard that depend on field size vary with<br />
+field size, particularly for field sizes greater than 10-degrees, which<br />
+is the outer limit of what the standard sanctions.</p>
+<p>My conclusions are<br />
+1. that since we know macular pigment is declining towards zero with<br />
+field size (see refs below) and the CIE expoential formula has this<br />
+property, it is resonable to use the CIE formula for macular pigment<br />
+density for field sizes greater than 10-degrees.<br />
+2. the CIE formula for pigment optical density asymptotes to a constant<br />
+as one extends past 10-degrees. Whether this is true in the retina or<br />
+not, I am not sure. But as field size gets larger, using this formula<br />
+is going to be no worse than simply using the 10-degree values, since<br />
+they are the same.<br />
+3. one needs to take any estimate of the <a href="CMFs" class="uri">CMFs</a> for large field sizes<br />
+with a grain of salt. There is going to be variation across the field,<br />
+so any point estimate is likely to be wrong somewhere. The CIE<br />
+formulae, extended using the formulae past their bounds, are a good<br />
+first guess for the mean field properties, but being aware that there<br />
+is variation within the field, as well as individual variation around<br />
+the CIE estimates, is important when considering things like the effect<br />
+of inadvertant stimulation of cones when one tries to isolate<br />
+melanopsin using silent substitution. Note in particular that the CIE<br />
+formula is trying to capture large field color matches where subjects<br />
+are instructed to ignore the center of the field as best they can. In<br />
+a threshold experiment, this might not be how subjects were instructed<br />
+and would in any case be rather hard to do. And if you used annular<br />
+stimuli, you’d be a bit off and might want to think about how to<br />
+estimate the fundamentals from the annulus. Studying the Moreland and<br />
+Alexander paper below in detail might help with thinking on that.</p>
+<p>Refs:<br />
+Mooreland &amp; Alexander (1997). Effect of macular pigment on color<br />
+matching with field sizes in the 1 deg to 10 deg range. Doc. Opth.<br />
+Proc. Ser., 59, 363-368.<br />
+Moreland and Alexander make color matches for annuli and for<br />
+circular fields, and develop a formula for the equivalent macular<br />
+pigment density for color matches of various field sizes. In<br />
+these matches, observers are instructed to to ignore the central<br />
+Maxwell?s spot, I am pretty sure. M&amp;A say the data are consistent<br />
+with the idea that obsevers look near the edge of the field but<br />
+not quite at it. Their data are for field sizes of 10 degrees,<br />
+and the estimates are fit with exponentials. M&amp;A used these data<br />
+together with measurements of macular pigment density by Moreland<br />
+&amp; Bhatt (1884) to develop an equivalent (for uniform fields)<br />
+macular pigment density to be used in predicting color matches<br />
+out to 10 degrees. The formula is an exponential decay.<br />
+Something like this made it into the CIE standard, although it<br />
+may have been tweaked to make sure the color matching data are<br />
+consistent with the 10-deg and 2-deg <a href="CMFs" class="uri">CMFs</a>. I have not thought<br />
+hard about the underlying calculations.</p>
+<p>Moreland, J.D. and Bhatt, P. (1984). Retinal distribution ofmacular<br />
+pigment. In: Verriest, G. (ed.), Colour Vision Deficiencies VII. Doc.<br />
+Ophthalmol. Proc. Ser. 39: 127-132. W. Junk, The Hague.<br />
+Uses color-matching data for field sizes out to 18 deg (I think)<br />
+to develop estimates of macular pigment density as a function of<br />
+eccentricity. Key feature of the data is that density estimates<br />
+decline according to an exponential and reach zero at<br />
+eccentricity (radius) of about 7 degrees. This paper also<br />
+reviews earlier estimates and they all look like decaying<br />
+exponentials.</p>
+<p>Putnam and Bland (2014). Macular pigment optical density spatial<br />
+distribution measured in a subject with oculocutaneous albinism.<br />
+Journal of Optometry, 7, 241-245.</p>
+<p>See <a href="ComputeCIEConeFundamentals" class="uri">ComputeCIEConeFundamentals</a>, <a href="CIEConeFundamentalsTest" class="uri">CIEConeFundamentalsTest</a>.</p>
+<p>5/25/16 dhb Wrote it.<br />
+6/1/16 dhb Polished it up a bit, and added to PTB distribution.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychTests/CIEConeFundamentalsFieldSizeTest.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychTests/CIEConeFundamentalsFieldSizeTest.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychTests/CIEConeFundamentalsFieldSizeTest.m</code></p>
+</div>

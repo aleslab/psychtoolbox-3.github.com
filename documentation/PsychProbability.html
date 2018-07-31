@@ -1,0 +1,62 @@
+<h2 id="psychtoolbox-psychprobability">[[Psychtoolbox]] › [[PsychProbability]]</h2>
+<p>Psychtoolbox:<a href="PsychProbability" class="uri">PsychProbability</a>.</p>
+<p>Computation/Evaluation of probability distributions, basic sampling and<br />
+randomization.</p>
+<p><a href="BalanceFactors" class="uri">BalanceFactors</a> - Balance a set of factors given the factor levels.<br />
+<a href="BalanceTrials" class="uri">BalanceTrials</a> - Balance a set of factors given the factor levels. Takes alternative parameters wrt. <a href="BalanceFactors" class="uri">BalanceFactors</a>.<br />
+<a href="BuildMarkovK" class="uri">BuildMarkovK</a> - Build covariance matrix for Markov process.<br />
+<a href="ChiSqrCumulative" class="uri">ChiSqrCumulative</a> - Chi-squared distribution probability function.<br />
+<a href="ChiSquarePDF" class="uri">ChiSquarePDF</a> - Chi-squared distribution PDF.<br />
+<a href="ChooseKFromN" class="uri">ChooseKFromN</a> - Randomly choose k distinct integers out of n.<br />
+<a href="ClockRandSeed" class="uri">ClockRandSeed</a> - Seed rand() and randn() from clock.<br />
+<a href="CoinFlip" class="uri">CoinFlip</a> - Bernoulli random variable.<br />
+<a href="CoinFlipPDF" class="uri">CoinFlipPDF</a> - Bernoulli distribution PDF.<br />
+<a href="ColMean" class="uri">ColMean</a> - Take column means, works for one row matrices.<br />
+<a href="ColStd" class="uri">ColStd</a> - Take column stds, works for one row matrices.<br />
+<a href="CombVec" class="uri">CombVec</a> - Generate all possible combinations of input vectors.<br />
+<a href="CovToCorr" class="uri">CovToCorr</a> - Compute matrix of correlations from covariance.<br />
+<a href="FindNeighborCorr" class="uri">FindNeighborCorr</a> - Find nearest neighbor correlations in data set.<br />
+<a href="MultiNormalDraw" class="uri">MultiNormalDraw</a> - Draw vectors from multivariate normal.<br />
+<a href="MultiNormalPDF" class="uri">MultiNormalPDF</a> - Compute multivariate normal PDF.<br />
+<a href="NormalCumulative" class="uri">NormalCumulative</a> - Univariate normal CDF<br />
+<a href="NormalDraw" class="uri">NormalDraw</a> - Draw from univariate normal.<br />
+<a href="NormalPDF" class="uri">NormalPDF</a> - Univariate normal PDF.<br />
+<a href="NormalProb" class="uri">NormalProb</a> - Compute probability of univariate normal in interval.<br />
+<a href="NRandPerm" class="uri">NRandPerm</a> - Randomly select elements from a random permutation.<br />
+<a href="RandDim" class="uri">RandDim</a> - Randomize matrix along any dimension.<br />
+<a href="Randi" class="uri">Randi</a> - Get random integer sample. Same as <a href="Ranint" class="uri">Ranint</a>, but Denis prefers it.<br />
+<a href="RandLim" class="uri">RandLim</a> - Generates a matrix of random numbers between a lower and upper limit.<br />
+<a href="RandSample" class="uri">RandSample</a> - Get a random sample from a list.<br />
+<a href="RandSel" class="uri">RandSel</a> - Randomly select elements from matrix, elements are replenished.<br />
+<a href="Ranint" class="uri">Ranint</a> - Get random integer sample. Same as <a href="Randi" class="uri">Randi</a>, but David prefers it.<br />
+<a href="Sample" class="uri">Sample</a> - Get a random sample from a list.<br />
+<a href="Shuffle" class="uri">Shuffle</a> - Randomly reorder the entries of vector/matrix.<br />
+<a href="UniqueAndN" class="uri">UniqueAndN</a> - Returns unique elements of array and the number of times each element occurs in the array.<br />
+<a href="UniqueNoSorting" class="uri">UniqueNoSorting</a> - Returns elements of array in order of appearance or disappearance.<br />
+<a href="URandSel" class="uri">URandSel</a> - Randomly select elements from matrix, elements are not replenished.</p>
+<p>Combining <a href="CombVec" class="uri">CombVec</a> and <a href="RandDim" class="uri">RandDim</a><br />
+Using <a href="CombVec" class="uri">CombVec</a> and <a href="RandDim" class="uri">RandDim</a>, it is very simple to generate all trials<br />
+in an experiment with a factorial design and then randomize these<br />
+trials:<br />
+cond_a = [1 2]; cond_b = [120 180]; ntrial = 2;<br />
+trial = <a href="CombVec" class="uri">CombVec</a>(cond_a,cond_b);<br />
+trial =<br />
+1 2 1 2<br />
+120 120 180 180</p>
+<p>trial = repmat(trial,1,ntrial); % each combination of conditions occurs ntrial times<br />
+trial(end+1,:) = [1:size(trial,2)]; % append trial number<br />
+trial = <a href="RandDim" class="uri">RandDim</a>(trial,2); % shuffle trial order</p>
+<p>trial =<br />
+2 1 1 2 1 1 2 2<br />
+120 180 180 180 120 120 120 180<br />
+6 3 7 8 5 1 2 4</p>
+<p><a href="BalanceFactors" class="uri">BalanceFactors</a>.m was contributed by David E. Fencsik (fencsik@gmail.com), thanks!</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychProbability/Contents.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychProbability/Contents.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychProbability/Contents.m</code></p>
+</div>
+<p>{{category}}</p>

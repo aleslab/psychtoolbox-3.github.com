@@ -1,0 +1,54 @@
+<h2 id="psychtoolbox-psychopengl">[[Psychtoolbox]] › [[PsychOpenGL]]</h2>
+<p>EXPERIMENTAL - BETA QUALITY:</p>
+<p>moglClutBlit(win, src [, newclut]) – Blit an image into window, apply CLUT.</p>
+<p>moglClutBlit copies a texture image ‘src’ (either made via<br />
+src = <a href="Screen" class="uri">Screen</a>(‘MakeTexture’, …) or an offscreen window created via<br />
+src = <a href="Screen" class="uri">Screen</a>(‘OpenOffscreenWindow’, …)) to an onscreen window ‘win’.</p>
+<p>During the copy, it applies a color lookup table (clut) to the texture,<br />
+transforming the color indices in the input texture into RGB color<br />
+pixels according to the color lookup table.</p>
+<p>The color lookup table contains 256 rows with 3 columns. The i’th row<br />
+contains the Red, green and blue color values to be used when an input<br />
+pixel with colorindex i-1 is used. Column 1 = Red component, column 2 =<br />
+Green component, column 3 = blue component.</p>
+<p>The clut will be initialized to a gray-level ramp, i.e. index 1 =<br />
+(0,0,0), index i+1 = (i, i, i), index 256 = (255, 255, 255).</p>
+<h3 id="arguments">Arguments:</h3>
+<p>‘src’ texture handle or offscreen window handle of the image to copy.<br />
+‘win’ window handle of the target window.<br />
+‘newclut’ The new 256 rows by 3 columns clut. If you don’t provide any<br />
+clut, the clut from a previous call will be used. Initially it is a<br />
+graylevel ramp.</p>
+<p>Usage:<br />
+1. Add the command “<a href="InitializeMatlabOpenGL" class="uri">InitializeMatlabOpenGL</a>” at the top of your script,<br />
+before the first call to <a href="Screen" class="uri">Screen</a>(‘OpenWindow’, …). If you don’t use any<br />
+3D graphics, <a href="InitializeMatlabOpenGL" class="uri">InitializeMatlabOpenGL</a>([], 0, 1); will be the fastest.</p>
+<ol start="2" type="1">
+<li><p>Create your color index image either as a texture, e.g., via<br />
+src=<a href="Screen" class="uri">Screen</a>(‘MakeTexture’, win, myimage), or create it as Offscreen window<br />
+src=<a href="Screen" class="uri">Screen</a>(‘OpenOffscreenWindow’, win) and draw your index colored<br />
+stimulus into it.</p></li>
+<li><p>Whenever you want to change the clut and draw the image with updated<br />
+clut, call moglClutBlit(win, src, newclut); with newclut being the new<br />
+color lookup table.</p></li>
+<li><p>Call the <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’, …) command to show the new image, drawn with<br />
+the new clut.</p></li>
+<li><p>At the end of your script and before you <a href="Screen" class="uri">Screen</a>(‘<a href="Close" class="uri">Close</a>’, win) or<br />
+<a href="Screen" class="uri">Screen</a>(‘CloseAll’), call moglClutBlit() without parameters, so it can<br />
+clean up after itself.</p></li>
+</ol>
+<p>See <a href="GLSLClutAnimDemo" class="uri">GLSLClutAnimDemo</a> for an example.</p>
+<p>Note: This function requires you to use fairly recent graphics hardware<br />
+with support for <a href="OpenGL" class="uri">OpenGL</a> Pixelshaders and the <a href="OpenGL" class="uri">OpenGL</a> shading language<br />
+(GLSL). It won’t work on old hardware. Use of cluts for 8 bit clut<br />
+animation is deprecated. Today, most stimuli can be generated in much more<br />
+flexible and elegant ways using PTB-3’s new drawing features and <a href="OpenGL" class="uri">OpenGL</a><br />
+capabilities.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOpenGL/moglClutBlit.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOpenGL/moglClutBlit.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOpenGL/moglClutBlit.m</code></p>
+</div>

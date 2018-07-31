@@ -1,0 +1,265 @@
+<h2 id="psychtoolbox-psychhardware">[[Psychtoolbox]] › [[PsychHardware]]</h2>
+<p><a href="CedrusResponseBox" class="uri">CedrusResponseBox</a> - Interface to Cedrus Response Boxes.</p>
+<p>This function provides an interface to response button boxes from Cedrus,<br />
+specifically model RB 530,…,830 and compatible models supporting the<br />
+XID protocol (see http://www.cedrus.com).</p>
+<p>These response boxes connect via a serial line link interface, or a USB<br />
+interface which emulates a serial link interface. They support the XID<br />
+protocol for communication. See http://www.cedrus.com/xid for details.</p>
+<p>This function allows to establish a connection to the box, control a few<br />
+of its parameters and most importantly query its button state and<br />
+associated button press timestamps.</p>
+<p>It supports multiple subcommands, which accept and return different<br />
+arguments, as listed below.</p>
+<h1 id="limitations">Limitations</h1>
+<p>Functionality is currently limited mostly to button queries (and RJ-45<br />
+connector state queries), including timestamps, as well as control of<br />
+built-in timers of the box. We also support basic configuration of TTL<br />
+ports, but not yet all settings of the box like e.g., button debounce<br />
+time. Adding such calls is straightforward and simple.</p>
+<p>We found communication with the Cedrus boxes to be unreliable quite<br />
+often. It is an open question if this is a flaw in the design of the<br />
+Cedrus devices and their firmware or protocols, or if the programming<br />
+documentation for them is incomplete and therefore our implementation of<br />
+the driver. However, the problems were reproduced under different<br />
+operating systems, serial port drivers, toolboxes by different<br />
+implementations written by different people, so it doesn’t seem to be a<br />
+simple glitch in one implementation. In general, the boxes work, but<br />
+don’t be surprised if you need to restart your script multiple times<br />
+before you can establish communication, or if the more advanced<br />
+fucntions, e.g., for configuration of the TTL RJ-45 connector, work<br />
+unreliably for no apparent reason. Cedrus has been contacted, but so far<br />
+no resolution or response from them.</p>
+<p>In short: If you are looking for a reliable response box that is painfree<br />
+to use, don’t buy Cedrus devices!</p>
+<h1 id="subfunctions-and-their-meaning">Subfunctions and their meaning</h1>
+<p>Functions for device init and shutdown: Call once at beginning/end of<br />
+your script. These are slow!</p>
+<p>handle = <a href="CedrusResponseBox" class="uri">CedrusResponseBox</a>(‘Open’, port [, lowbaudrate]);<br />
+- Open a compatible response box which is connected to the given named<br />
+serial ‘port’. ‘port’names differ accross operating systems. A typical<br />
+port name for Windows would be ’COM2’, whereas a typical port name on OS/X<br />
+or Linux would be the name of a serial port device file, e.g.,<br />
+‘/dev/cu.usbserial-FTDI125ZX9’ on OS/X, or ‘/dev/ttyS0’ on Linux.</p>
+<p>All names on OS/X are like ‘/dev/cu.XXXXX’, where the XXXXX part depends<br />
+on your serial port device, typically ‘/dev/cu.usbserial-XXXXX’ for<br />
+serial over USB devices with product name XXXXX.</p>
+<p>On Linux, all names are of pattern ‘/dev/ttySxx’ for standard serial<br />
+ports, e.g., ‘/dev/ttyS0’ for the first serial port in the system, and of<br />
+type ‘/dev/ttyUSBxx’ for serial over USB devices, e.g., ‘/dev/ttyUSB0’<br />
+for the first serial line emulated over the USB protocol.</p>
+<p>After the connection is established and some testing and initialization is,<br />
+done, the function returns a device ‘handle’, a unique identifier to use<br />
+for all other subfunctions.</p>
+<p>By default the commlink is opened at a baud transmission rate of 115200<br />
+Baud (All DIP switches on the box need to be in ‘down’ position!). If you<br />
+specify the optional flag ‘lowbaudrate’ as 1, then the speed will be<br />
+lowered to 56 kBaud at device open time – in case your system works<br />
+unreliably at the higher rate.</p>
+<p>By default, the script uses Psychtoolbox’s own <a href="IOPort" class="uri">IOPort</a>() serial link<br />
+driver for communication (ptb_cedrus_drivertype = 2). If you want to use<br />
+a different driver for testing, change the ‘ptb_cedrus_drivertype’<br />
+parameter inside the code with the id of a supported driver (Matlab<br />
+serial()). This option may go away in the future and is for debugging<br />
+only!</p>
+<p><a href="CedrusResponseBox" class="uri">CedrusResponseBox</a>(‘<a href="Close" class="uri">Close</a>’, handle);<br />
+- <a href="Close" class="uri">Close</a> connection to response box. The ‘handle’ becomes invalid after<br />
+that command.</p>
+<p><a href="CedrusResponseBox" class="uri">CedrusResponseBox</a>(‘CloseAll’);<br />
+- <a href="Close" class="uri">Close</a> all connections to all response boxes. This is a convenience<br />
+function for quick shutdown.</p>
+<p>dev = <a href="CedrusResponseBox" class="uri">CedrusResponseBox</a>(‘GetDeviceInfo’, handle);<br />
+- Return queried information about the device in a struct ‘dev’. ‘dev’<br />
+contains (amongst other) the following fields:</p>
+<p>General information:<br />
+dev.Name = Device name string.<br />
+dev.<a href="VersionMajor" class="uri">VersionMajor</a> and dev.<a href="VersionMinor" class="uri">VersionMinor</a> = Major and Minor firmware revision.<br />
+dev.productId = Type of device, e.g., ‘Lumina’, ‘VoiceKey’ or ‘RB response pad’.<br />
+dev.modelId = Submodel of the device if the device is a RB response pad,<br />
+e.g., ‘RB-530’, ‘RB-730’, ‘RB-830’ or ‘RB-834’.</p>
+<p>dev.port = Portname of serial port, as passed to the open function.</p>
+<p>Diagnostic information for timing: Values of -1 or 0 usually mean “info<br />
+not available”.</p>
+<p>dev.roundtriptime = Median of estimated roundtrip latency for<br />
+communication with the box - in seconds.</p>
+<p>dev.roundtripstddev = Standard deviation from mean of roundtrip latency<br />
+measurements in seconds. Large numbers mean that your operating system<br />
+has bad scheduling and that reported event timestamps may be uncertain by<br />
+that amount.</p>
+<p>dev.rttresetdelay = Duration (in seconds) of a reaction time timer reset sequence<br />
+Values of more than 3 msecs indicate some problems with the box itself or<br />
+the communication link – Measured event times or reaction times may not<br />
+be trustworthy!</p>
+<h3 id="functions-for-use-within-script.-these-are-as-fast-as-possible">Functions for use within script. These are as fast as possible:</h3>
+<p><a href="CedrusResponseBox" class="uri">CedrusResponseBox</a>(‘ClearQueues’, handle);<br />
+- Clear all queues, discard all pending data.</p>
+<p>[status = ] <a href="CedrusResponseBox" class="uri">CedrusResponseBox</a>(‘FlushEvents’, handle);<br />
+- Empty/clear/flush the queue of pending events. Use this to get rid of<br />
+any stale button press or release events before start of response<br />
+collection in a trial. E.g., Assume you wait for a subjects keypress and<br />
+finally receive that keypress via ‘GetButtons’ or ‘WaitButtons’. You<br />
+collected your response, the trial is done, but when the subject releases<br />
+the button again, that will generate another event - a release event, in<br />
+which you’re not interested. Maybe the subject will accidentally hit the<br />
+button as well. –&gt; Good to clean the queue before a new trial.</p>
+<p>This function has a second use as well. It has an optional output<br />
+argument, ‘status’, which will return the current status of all buttons<br />
+(i.e. whether they are currently being pressed or not).<br />
+Status is a 3 row by 8 column matrix: Row 1 describes the status of the<br />
+up to eight pushbuttons of the box. Row 2 describes the status of the TTL<br />
+lines of the RJ-45 accessory connector. Row 3 describes the status of the<br />
+<a href="VoiceKey" class="uri">VoiceKey</a> if any. Columns 1 to 8 of each row correspond to buttons 1-8,<br />
+TTL lines 1-8 or inputs 1-8 of the <a href="VoiceKey" class="uri">VoiceKey</a>.</p>
+<h3 id="the-mapping-for-the-cb-530-for-row-1-of-status-status1-is-as-follows">The mapping for the CB-530 for row 1 of ‘status’ status(1,:) is as follows:</h3>
+<p>[top ??? left middle right bottom] – the 2nd entry has no associated<br />
+button, but it may be the scanner trigger input. The mapping on other boxes<br />
+may be different.</p>
+<p>This is useful if you just want to know whether the subject is currently<br />
+pressing any buttons before you proceed, but are not fussed about timing.</p>
+<p>E.g. I often find myself doing the following:<br />
+buttons = 1;<br />
+while any(buttons(1,:))<br />
+buttons = <a href="CedrusResponseBox" class="uri">CedrusResponseBox</a>(‘FlushEvents’, mybox);<br />
+end</p>
+<p>…to wait for the subject to release any buttons which might currently be down.</p>
+<p>evt = <a href="CedrusResponseBox" class="uri">CedrusResponseBox</a>(‘GetButtons’, handle);<br />
+- Return next queued button-press or button-release event from the box.<br />
+Each time a button on the box is pressed or released, and each time the<br />
+state of the accessory connector changes, an “event” data packet is sent<br />
+from the box to the computer. The packet is timestamped with the time of<br />
+the triggering event, as measured by the boxes reaction time timer.</p>
+<p>This function checks if such an event is available and returns its<br />
+description in a ‘evt’ struct, if so. If no event is pending, it returns an<br />
+empty ‘evt’, ie. isempty(evt) is true.</p>
+<h3 id="evt-for-a-real-fetched-event-is-a-struct-with-the-following-fields">‘evt’ for a real fetched event is a struct with the following fields:</h3>
+<p>evt.raw = “raw” byte that describes the event. Only for debugging.</p>
+<p>evt.port = Number of the device port on which the event occured. Push<br />
+buttons and scanner triggers are on port 0, the RJ-45 TTL<br />
+connector is on port 1, port 2 is the voice-key (if any).</p>
+<p>evt.action = Action that triggered the event:<br />
+1 = Button press, 0 = Button release for pushbuttons.<br />
+1 = TTL line high, 0 = TTL line low for RJ-45 I/O lines.<br />
+1 = Voice onse, 0 = Voice offset/silence for Voicekey.</p>
+<p>evt.button = Number of the button that was pressed or released (1 to 8)<br />
+or the TTL line that was going high/low. Numbers vary by<br />
+response box.</p>
+<p>evt.buttonID= Descriptive name string for pressed button, e.g., ‘top’ or<br />
+‘left’. Please note that this mapping is only meaningful<br />
+for the RB-530 response box.</p>
+<p>evt.rawtime = Time of the event in secs since last reset of the reaction<br />
+time timer, measured in msecs resolution. This value is<br />
+always valid, but not directly comparable to any other<br />
+timestamps or time measurements within Psychtoolbox.</p>
+<p>evt = <a href="CedrusResponseBox" class="uri">CedrusResponseBox</a>(‘WaitButtons’, handle);<br />
+- Queries and returns the same info as ‘GetButtons’, but waits for<br />
+events. If there isn’t any event available, will wait until one becomes<br />
+available.</p>
+<p>evt = <a href="CedrusResponseBox" class="uri">CedrusResponseBox</a>(‘WaitButtonPress’, handle);<br />
+- Like <a href="WaitButtons" class="uri">WaitButtons</a>, but will wait until the subject /presses/ a key – the<br />
+signal that a key has been released is not acceptable – Button release<br />
+events are simply discarded.</p>
+<p>evt = <a href="CedrusResponseBox" class="uri">CedrusResponseBox</a>(‘GetBaseTimer’, handle [, nSamples=1]);<br />
+- Query current time of base timer of the box. Returned values are in<br />
+seconds, resolution is milliseconds. evt.basetimer is the timers time,<br />
+maybe corrected for serial link receive latency. evt.ptbreceivetime is a<br />
+timestamp taken via PTB’s <a href="GetSecs" class="uri">GetSecs</a>() at time of receive of the data.<br />
+evt.ptbtime is the basetimers time mapped into PTB <a href="GetSecs" class="uri">GetSecs</a> time if such a<br />
+mapping is possible, otherwise this field doesn’t exist:<br />
+evt.ptbreceivetime and evt.ptbtime shouldn’t be significantly different<br />
+if everything is good. Large differences indicate some timing problems<br />
+with the connection to the box, or a timer problem - either with your<br />
+computers timer or the hardware timer of the tox, or significant<br />
+clock-drift between the computers timer and the boxes timer. In any case,<br />
+reaction timer measurements and such will be problematic.</p>
+<p>Note that this automatically discards all pending events in the queue before<br />
+performing the timer query!</p>
+<p>The optional argument ‘nSamples’ allows to specify if multiple samples of<br />
+PTB timer vs. the response boxes timer should be measured. If ‘nSamples’<br />
+is set to a value greater than one, a cell array with nSamples elements<br />
+will be returned, each corresponding to one measurement. This allows,<br />
+e.g., to check if <a href="PTBs" class="uri">PTBs</a> timer and the boxes timer drift against each<br />
+other.</p>
+<p>resetTime = <a href="CedrusResponseBox" class="uri">CedrusResponseBox</a>(‘ResetRTTimer’, handle);<br />
+- Reset reaction time timer of box to zero. This should not be neccessary<br />
+if you use the evt.ptbtime timestamps for time measurements or reaction<br />
+time measurements. If you however use uncalibrated mode and the<br />
+evt.rawtime values directly, this function may be useful to establish a<br />
+zero baseline for reaction time measurements. However, as the communication<br />
+delay for sending the reset command can’t be reliably measured, using<br />
+such a software triggered timer reset may not be the most reliable way of<br />
+resetting the timer. The function returns ‘resetTime’ PTB’s best guess of<br />
+when the reset was carried out – essentially a <a href="GetSecs" class="uri">GetSecs</a>() timestamp of<br />
+when the reset command was sent.</p>
+<p>Note that this automatically discards all pending<br />
+events in the queue before performing the query!</p>
+<p>slope = <a href="CedrusResponseBox" class="uri">CedrusResponseBox</a>(‘GetBoxTimerSlope’, handle);<br />
+- Compute slope (drift) between computer clock and device clock. ‘slope’<br />
+tells how many seconds of time “elapse” on the computer in <a href="GetSecs" class="uri">GetSecs</a> time<br />
+for each “elapsed” second of box time. At device open time, the driver<br />
+takes a timestamp from the device basetimer. This function also takes a<br />
+timestamp and then computes the ratio of differences. The longer you’ll<br />
+wait after <a href="CedrusResponseBox" class="uri">CedrusResponseBox</a>(‘Open’) before calling this function, the<br />
+more accurate the clock-drift estimate will be.</p>
+<p>roundtrip = <a href="CedrusResponseBox" class="uri">CedrusResponseBox</a>(‘RoundTripTest’, handle);<br />
+- Initiate 100 trials of the roundtrip test of the box. Data is echoed<br />
+forth and back 100 times between PTB and the box, and the latency is<br />
+measured (in seconds, with msecs resolution). The vector of all samples<br />
+is returned in ‘roundtrip’ for evaluation and debugging. The measured<br />
+latency is also used for delay correction for the ‘GetBaseTimer’<br />
+subfunction. However, a roundtrip test is performed automatically when<br />
+opening the response box connection, so this is rarely needed.</p>
+<p>Note that this automatically discards all pending<br />
+events in the queue before performing the query!</p>
+<p>[currentMode] = <a href="CedrusResponseBox" class="uri">CedrusResponseBox</a>(‘SetConnectorMode’, handle [, mode]);<br />
+- Set or get mode of operation of external accessory connector: ‘mode’ can be<br />
+any of the following text strings:</p>
+<p>‘GeneralPurpose’: Input/Output assignment of pins can be freely<br />
+programmed via the ‘DefineInputLinesAndLevels’ subcommand (see below),<br />
+and the output lines only change if the ‘SetOutputLineLevels’ command<br />
+(see below) is used. The connector doesn’t change state by itself.</p>
+<p>‘ReflectiveContinuous’: Line levels reflect button state: Line is active<br />
+if button is pressed and goes inactive when the button is released again.</p>
+<p>‘ReflectiveSinglePulse’: A single pulse is sent to an output line if a<br />
+button is pressed on the box. Nothing is sent on release.</p>
+<p>‘ReflectiveDoublePulse’: A single pulse is sent to an output line if a<br />
+button is pressed on the box. Another pulse is sent on button release.</p>
+<p>If ‘mode’ is left out, the function queries and returns the current mode<br />
+as return argument ‘currentMode’. If mode is given, nothing is returned.</p>
+<p><a href="CedrusResponseBox" class="uri">CedrusResponseBox</a>(‘SetOutputLineLevels’, handle, outlevels);<br />
+- Set accessory connector output lines to state specified in ‘outlevels’.<br />
+outlevels is an 8 element vector of zeros and ones. Each element<br />
+corresponds to an output pin, and its values sets the output level of<br />
+that pin. Example: outlevel = [1,1,1,1,0,0,0,0] would set the 4 lines<br />
+with the lowest numbers (lines 0,1,2,3) to ‘1’ aka active and the 4 lines<br />
+with the highest numbers (lines 4,5,6,7) to ‘0’ aka inactive.<br />
+This corresponds to <a href="XiD" class="uri">XiD</a> command ‘ah’.</p>
+<p>The command is only effective if connector is set to ‘GeneralPurpose’.</p>
+<p><a href="CedrusResponseBox" class="uri">CedrusResponseBox</a>(‘DefineInputLinesAndLevels’, handle, inputlines, logiclevel, debouncetime);<br />
+- Define which lines on the connector are inputs: ‘inputlines’ is a<br />
+vector with the line numbers of the input lines. All other lines are<br />
+designated as output lines, e.g., inputlines = [0, 2, 4] would set lines<br />
+0, 2 and 4 as inputs, remaining lines 1,3,5,6,7 as outputs. ‘logiclevel’<br />
+tells if the default TTL level of the input lines is low (logiclevel=1)<br />
+or high (logiclevel=0). Example: logiclevel = 1 means that the lines are<br />
+pulled low by default, so they will detect an active high state – if<br />
+their level is raised to TTL high state. The argument ‘debouncetime’ must<br />
+be the debounce time for the input lines in milliseconds. After an event<br />
+on a input line, the box will ignore all further events on than input<br />
+line for ‘debouncetime’ milliseconds.</p>
+<p>This corresponds to <a href="XiD" class="uri">XiD</a> commands ‘a4’, ‘a50’ and ‘a51’, as well as ‘a6’.</p>
+<p>The command is only effective if connector is set to ‘GeneralPurpose’.</p>
+<p>inputLines = <a href="CedrusResponseBox" class="uri">CedrusResponseBox</a>(‘ReadInputLines’, handle);<br />
+- Read current state of the connectors input lines: Returns an 8 element<br />
+vector where each element corresponds to one input line and a 1 means<br />
+active, 0 means inactive. This corresponds to <a href="XiD" class="uri">XiD</a> command ‘ar’.</p>
+<p>Note that this automatically discards all pending<br />
+events in the queue before performing the query!</p>
+<p>The command is only effective if connector is set to ‘GeneralPurpose’.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/CedrusResponseBox.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/CedrusResponseBox.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/CedrusResponseBox.m</code></p>
+</div>

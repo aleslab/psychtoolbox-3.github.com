@@ -1,0 +1,38 @@
+<h2 id="psychtoolbox-psychhardware-brightsidedisplay">[[Psychtoolbox]] › [[PsychHardware]] › [[BrightSideDisplay]]</h2>
+<p><a href="SimpleHDRDemo" class="uri">SimpleHDRDemo</a>([imfilename][, dummymode][, sf]) – Load and show a high dynamic range image<br />
+on the <a href="BrightSide" class="uri">BrightSide</a> Technologies High Dynamic Range display device.</p>
+<p>‘imfilename’ - Filename of the HDR image to load. Will load our standard<br />
+low-dynamic range ‘konijntjes’ if ‘imfilename’ is omitted.</p>
+<p>‘dummymode’ - If set to 1 we only run in emulation mode without use of<br />
+the HDR device or <a href="BrightSide" class="uri">BrightSide</a> core library.</p>
+<p>‘sf’ - Scaling factor to apply.</p>
+<p>Btw. you can find lot’s of nice free HDR images by Googling on the<br />
+internet!</p>
+<p>Except for buying and installing the display device and control<br />
+libraries, usage with Psychtoolbox is pretty straightforward. Modify your<br />
+scripts in the following manner:</p>
+<ol type="1">
+<li><p>Use <a href="BrightSideHDR" class="uri">BrightSideHDR</a>(‘OpenWindow’, …) instead of <a href="Screen" class="uri">Screen</a>(‘OpenWindow’,<br />
+…) – Will perform all additional display setup work for you.</p></li>
+<li><p>Use <a href="HDRRead" class="uri">HDRRead</a>(imfilename) instead of imread(imfilename) to load HDR<br />
+image files as Matlab matrices.</p></li>
+<li><p>Set the ‘floatprecision’ flag of <a href="Screen" class="uri">Screen</a>(‘MakeTexture’, …) to 1 or 2<br />
+to enforce creation of HDR textures from your image matrix.</p></li>
+<li><p>Optionally you can use the <a href="Screen" class="uri">Screen</a>(‘ColorRange’, …) command to<br />
+upscale or downscale color values for normal 2D drawing commands. This<br />
+won’t affect drawing of textures.</p></li>
+<li><p>Optionally you can use fragment shaders to perform on-the-fly image<br />
+processing when drawing an image, e.g., gamma correction, scaling, color<br />
+conversion, tone-mapping. See the more advanced demos on how to do this.</p></li>
+</ol>
+<p>History:<br />
+Written 2006 by Mario Kleiner - MPI for Biological Cybernetics, Tuebingen, Germany<br />
+and Oguz Ahmet Akyuz - Department of Computer Science, University of Central Florida.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/BrightSideDisplay/SimpleHDRDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/BrightSideDisplay/SimpleHDRDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/BrightSideDisplay/SimpleHDRDemo.m</code></p>
+</div>

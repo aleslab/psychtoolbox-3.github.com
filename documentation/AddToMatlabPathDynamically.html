@@ -1,0 +1,25 @@
+<h2 id="psychtoolbox-psychoneliners">[[Psychtoolbox]] › [[PsychOneliners]]</h2>
+<p><a href="AddToMatlabPathDynamically" class="uri">AddToMatlabPathDynamically</a>(directory)</p>
+<p>Add the directory and its subdirectories to Matlab’s path, dynamically,<br />
+with strippint out of .svn and .git directories.</p>
+<p>Use for putting routines onto path that are specifict to a particular<br />
+project, without them staying around and clogging up the name space.</p>
+<p>Typical usages:<br />
+a) When getting version info<br />
+exp.mFileName = mfilename;<br />
+[exp.versionInfo,exp.codeDir] = <a href="GetAllVersionInfo" class="uri">GetAllVersionInfo</a>(exp.mFileName);<br />
+<a href="AddToMatlabPathDynamically" class="uri">AddToMatlabPathDynamically</a>(exp.codeDir);</p>
+<ol start="2" type="a">
+<li>Direct call<br />
+<a href="AddToMatlabPathDynamically" class="uri">AddToMatlabPathDynamically</a>( fileparts(which(mfilename)));</li>
+</ol>
+<p>7/12/13 dhb Wrote it.<br />
+7/25/14 dhb Make independent of <a href="BrainardLab" class="uri">BrainardLab</a> idiosyncracies.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOneliners/AddToMatlabPathDynamically.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOneliners/AddToMatlabPathDynamically.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOneliners/AddToMatlabPathDynamically.m</code></p>
+</div>

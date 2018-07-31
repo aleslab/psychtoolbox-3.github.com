@@ -1,0 +1,42 @@
+<h2 id="psychtoolbox-psychdemos">[[Psychtoolbox]] › [[PsychDemos]]</h2>
+<p><a href="FastNoiseDemo" class="uri">FastNoiseDemo</a>([numRects=1][, rectSize=128][, scale=1][, syncToVBL=1][, dontclear=0])</p>
+<p>Demonstrates how to generate and draw noise patches on-the-fly in a fast way. Can be<br />
+used to benchmark your system by varying the load. If you like this demo<br />
+then also have a look at <a href="FastMaskedNoiseDemo" class="uri">FastMaskedNoiseDemo</a> that shows how to<br />
+efficiently draw a masked stimulus by use of alpha-blending.</p>
+<p>numRects = Number of random patches to generate and draw per frame.</p>
+<p>rectSize = Size of the generated random noise image: rectSize by rectSize<br />
+pixels. This is also the size of the Psychtoolbox noise<br />
+texture.</p>
+<p>scale = Scalefactor to apply to texture during drawing: E.g. if you’d set<br />
+scale = 2, then each noise pixel would be replicated to draw an image<br />
+that is twice the width and height of the input noise image. In this<br />
+demo, a nearest neighbour filter is applied, i.e., pixels are just<br />
+replicated, not bilinearly filtered – Important to preserve statistical<br />
+independence of the random pixel values!</p>
+<p>syncToVBL = 1=Synchronize bufferswaps to retrace. 0=Swap immediately when<br />
+drawing is finished. Value zero is useful for benchmarking the whole<br />
+system, because your measured framerate will not be limited by the<br />
+monitor refresh rate – Gives you a feeling of how much headroom is left<br />
+in your loop.</p>
+<p>dontclear = If set to 1 then the backbuffer is not automatically cleared<br />
+to background color after a flip. Can save up to 1 millisecond on old<br />
+graphics hardware.</p>
+<p>Example results on a Intel Pentium-4 3.2 Ghz machine with a <a href="NVidia" class="uri">NVidia</a><br />
+<a href="GeForce" class="uri">GeForce</a> 7800 GTX graphics card, running under M$-Windows XP SP3:</p>
+<p>Two patches, 256 by 256 noise pixels each, scaled by any factor between 1<br />
+and 5 yields a redraw rate of 100 Hz.</p>
+<p>One patch, 256 by 256 noise pixels, scaled by any factor between 1<br />
+and 5 yields a redraw rate of 196 Hz.</p>
+<p>Two patches, 128 by 128 noise pixels each, scaled by any factor between 1<br />
+and 5 yields a redraw rate of 360 - 380 Hz.</p>
+<p>One patch, 128 by 128 noise pixels, scaled by any factor between 1<br />
+and 5 yields a redraw rate of 670 Hz.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/FastNoiseDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/FastNoiseDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/FastNoiseDemo.m</code></p>
+</div>

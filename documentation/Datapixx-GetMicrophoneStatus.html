@@ -1,0 +1,39 @@
+<h1 id="datapixxgetmicrophonestatus"><a href="Datapixx-GetMicrophoneStatus">Datapixx(‘GetMicrophoneStatus’)</a></h1>
+<h2 id="psychtoolbox-datapixx.mexdll-subfunction">[[Psychtoolbox]] › [[Datapixx]].{mex*,dll} subfunction</h2>
+<p>Returns a struct containing the following audio input status information:<br />
+-“source” is the audio input source:<br />
+0: Has not been set yet via <a href="SetMicrophoneSource" class="uri">SetMicrophoneSource</a><br />
+1: High impedance “MIC IN” jack<br />
+2: Line level “Audio IN” jack<br />
+-“gain” is the input audio amplification set by <a href="SetMicrophoneSource" class="uri">SetMicrophoneSource</a><br />
+-“audioLoopback” is 1 if audio inputs are driven internally by audio outputs, or<br />
+0 if audio inputs decode sound from external input jacks.<br />
+-“scheduleRunning” is 1 if the audio acquisition schedule is currently running,<br />
+or 0 if stopped.<br />
+-“scheduleOnset” is the programmed delay in seconds between<br />
+<a href="StartMicrophoneSchedule" class="uri">StartMicrophoneSchedule</a> execution, and the first audio sample acquisition.<br />
+-“scheduleRate” is the audio sample rate in samples per second.<br />
+-“lrMode” is the left/right ear acquisition mode (see <a href="SetMicrophoneSchedule" class="uri">SetMicrophoneSchedule</a> for<br />
+details).<br />
+-“bufferBaseAddress” is the acquisition data buffer base address within the<br />
+Datapixx.<br />
+-“bufferSize” is the number of bytes in the acquisition data buffer.<br />
+-“numBufferFrames” is the total number of samples which fit in the acquisition<br />
+data buffer.<br />
+-“currentWriteFrame” is the buffer frame which will be written by the next<br />
+acquired audio sample.<br />
+-“currentReadFrame” is the buffer frame which will be read by the next streaming<br />
+call to <a href="ReadMicrophoneBuffer" class="uri">ReadMicrophoneBuffer</a>.<br />
+-“newBufferFrames” = currentWriteFrame - currentReadFrame. This is the maximum<br />
+number of frames which can be read by the next call to <a href="ReadMicrophoneBuffer" class="uri">ReadMicrophoneBuffer</a> in<br />
+streaming mode, without causing a streaming underflow.<br />
+-“maxScheduleFrames”, if non-0, is the value of currentWriteFrame which will<br />
+automatically stop the schedule.<br />
+-“numStreamUnderflows” is the number of <a href="ReadMicrophoneBuffer" class="uri">ReadMicrophoneBuffer</a> streaming<br />
+underflows which have occurred since <a href="SetMicrophoneSchedule" class="uri">SetMicrophoneSchedule</a>. See<br />
+<a href="ReadMicrophoneBuffer" class="uri">ReadMicrophoneBuffer</a> for details.<br />
+-“numStreamOverflows” is the number of <a href="ReadMicrophoneBuffer" class="uri">ReadMicrophoneBuffer</a> streaming overflows<br />
+which have occurred since <a href="SetMicrophoneSchedule" class="uri">SetMicrophoneSchedule</a>. See <a href="ReadMicrophoneBuffer" class="uri">ReadMicrophoneBuffer</a> for<br />
+details.<br />
+See <a href="DatapixxMicrophone" class="uri">DatapixxMicrophone</a>*Demo and <a href="DatapixxAudioFeedbackDemo" class="uri">DatapixxAudioFeedbackDemo</a> files for examples.</p>
+<p>&lt;&lt;=====See also:===== InitAudio, SetMicrophoneSchedule, StartMicrophoneSchedule, StopMicrophoneSchedule, ReadMicrophoneBuffer &lt;&lt;</p>

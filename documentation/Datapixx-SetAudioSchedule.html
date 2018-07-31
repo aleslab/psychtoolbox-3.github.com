@@ -1,0 +1,48 @@
+<h1 id="datapixxsetaudioschedule"><a href="Datapixx-SetAudioSchedule">Datapixx(‘SetAudioSchedule’)</a></h1>
+<h2 id="psychtoolbox-datapixx.mexdll-subfunction">[[Psychtoolbox]] › [[Datapixx]].{mex*,dll} subfunction</h2>
+<p>Configure a schedule for autonomous audio waveform playback.<br />
+-“scheduleOnset” is the desired delay (in double precision seconds) between<br />
+schedule initiation, and when the first audio waveform sample is played.<br />
+-“scheduleRate” is the rate at which successive waveform samples are sent to the<br />
+audio transmitter. The value is given in samples/second, and must be in the<br />
+range 8000-96000.<br />
+-“maxScheduleFrames” has two modes, depending on whether the full waveform has a<br />
+fixed known length. If the waveform length is known (eg: 100000 samples), then<br />
+just pass 100000 to maxScheduleFrames. In this mode, once the audio waveform<br />
+schedule is started with <a href="StartAudioSchedule" class="uri">StartAudioSchedule</a>, the schedule will terminate<br />
+automatically when maxScheduleFrames has been reached. If the waveform length is<br />
+not known in advance, then pass 0 to maxScheduleFrames. In this mode, the<br />
+waveform will continue until the schedule is manually stopped using<br />
+<a href="StopAudioSchedule" class="uri">StopAudioSchedule</a>.<br />
+-“lrMode” specifies how the left/right ears should be updated from the waveform<br />
+buffer. The following values are used:<br />
+0: MONO, Each Audio schedule datum goes to left and right ears<br />
+1: LEFT, Each Audio schedule datum goes to left ear only<br />
+2: RIGHT, Each Audio schedule datum goes to right ear only<br />
+3: STEREO, Pairs of Audio data go to left/right ears<br />
+If STEREO is selected, then 2 rows of data should be downloaded in<br />
+<a href="WriteAudioBuffer" class="uri">WriteAudioBuffer</a>. -“bufferBaseAddress” specifies the start of the RAM buffer<br />
+which holds the waveform data inside the Datapixx. Use <a href="WriteAudioBuffer" class="uri">WriteAudioBuffer</a> to<br />
+download the audio waveform data to this address before calling<br />
+<a href="StartAudioSchedule" class="uri">StartAudioSchedule</a>.<br />
+-“numBufferFrames” specifies the size of the waveform buffer in the Datapixx<br />
+RAM. For many applications, the Datapixx has enough RAM for <a href="WriteAudioBuffer" class="uri">WriteAudioBuffer</a> to<br />
+download multiple complete waveforms before initiating playback. In these cases,<br />
+numBufferFrames could be left at its default value of maxScheduleFrames. If<br />
+maxScheduleFrames is larger than numBufferFrames (or 0), then each time the<br />
+waveform frame counter reaches a multiple of numBufferFrames, the waveform<br />
+buffer address automatically wraps back to bufferBaseAddress. This circular<br />
+buffer effect can be used for streaming arbitrarily long waveforms into an audio<br />
+schedule. Simply monitor freeBufferFrames returned by <a href="GetAudioStatus" class="uri">GetAudioStatus</a>, and use<br />
+<a href="WriteAudioBuffer" class="uri">WriteAudioBuffer</a> in streaming mode to append new waveform data into buffer space<br />
+which has already been played. The circular buffer effect can also be used to<br />
+implement periodic waveforms very efficiently. A long periodic toneburst could<br />
+be assigned a small buffer filled with only a single period of the waveform. The<br />
+periodic waveform will play continuously, and any <a href="WriteAudioBuff" class="uri">WriteAudioBuff</a> into the<br />
+waveform buffer will immediately update the generated waveform.<br />
+Note that every call to <a href="StartAudioSchedule" class="uri">StartAudioSchedule</a> must be preceeded by a call to<br />
+<a href="SetAudioSchedule" class="uri">SetAudioSchedule</a> (ie: multiple calls to <a href="StartAudioSchedule" class="uri">StartAudioSchedule</a> each require their<br />
+own call to <a href="SetAudioSchedule">SetAudioSchedule)</a>).<br />
+Note that schedule timing is implemented in hardware with microsecond precision.<br />
+See <a href="DatapixxSimonGame" class="uri">DatapixxSimonGame</a>, <a href="DatapixxAudio" class="uri">DatapixxAudio</a>*Demo files for examples.</p>
+<p>&lt;&lt;=====See also:===== InitAudio, WriteAudioBuffer, GetAudioGroupDelay, StartAudioSchedule, StopAudioSchedule, GetAudioStatus &lt;&lt;</p>

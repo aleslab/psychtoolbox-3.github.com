@@ -1,0 +1,45 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p>oldType = <a href="ShowCursor" class="uri">ShowCursor</a>([type] [, screenid][, mouseid])</p>
+<p><a href="ShowCursor" class="uri">ShowCursor</a> redisplays the mouse pointer after a previous call to<br />
+<a href="HideCursor" class="uri">HideCursor</a>. If the optional ‘type’ is specified, it also allows to alter<br />
+the shape of the cursor. See following sections for details.</p>
+<p>The optional ‘mouseid’ allows to select which mouse cursor shall<br />
+be redisplayed or changed in visual appearance. This only makes sense<br />
+if you have multiple visible mouse cursors and is a Linux only feature.</p>
+<p>The return value ‘oldType’ is always zero, as this query mechanism is not<br />
+supported with PTB-3. Just returned for backwards-compatibility.</p>
+<p>OSX, WINDOWS, LINUX: ______________________________________________________</p>
+<h3 id="cursor-shape-can-be-selected.-these-types-are-defined-by-name">Cursor shape can be selected. These types are defined by name:</h3>
+<p>‘Arrow’ = Standard mouse-pointer arrow.<br />
+‘CrossHair’ = A cross-hair cursor.<br />
+‘Hand’ = A hand symbol.<br />
+‘SandClock’ = Some sort of sand clock/hour-glass (not available on OSX).<br />
+‘TextCursor’ = A text selection/caret placement cursor (AKA I Beam).</p>
+<p>Apart from that names, you can pass integral numbers for type to select<br />
+further shapes. The mapping of numbers to shapes is operating system<br />
+dependent, therefore not portable across different platforms. On<br />
+MS-Windows, you can select between number 0 to 8. On Linux/X11 you can<br />
+select from a wide range of numbers from 0 up to (at least) 152, maybe<br />
+more, depending on your setup. See the C header file “X11/cursorfont.h”<br />
+for a mapping of numbers to shapes. Passing invalid numbers can create<br />
+errors. On Linux with Wayland backend, you can pass custom additional<br />
+namestrings as ‘type’.</p>
+<p>LINUX: ____________________________________________________________________</p>
+<p>Linux allows for display and handling of multiple mouse cursors if your<br />
+X-Server is of version 1.7 or later, or if you use the Wayland display<br />
+backend on a modern Wayland server.</p>
+<p>OSX: ______________________________________________________________________</p>
+<p>If provided, the optional “type” argument changes the cursor shape to:<br />
+0: Arrow<br />
+4: I Beam<br />
+5: Cross<br />
+10: Hand<br />
+___________________________________________________________________________</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/ShowCursor.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/ShowCursor.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/ShowCursor.m</code></p>
+</div>

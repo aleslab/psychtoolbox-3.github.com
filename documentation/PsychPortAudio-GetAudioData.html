@@ -1,0 +1,60 @@
+<h1 id="psychportaudiogetaudiodata"><a href="PsychPortAudio-GetAudioData">PsychPortAudio(‘GetAudioData’)</a></h1>
+<h2 id="psychtoolbox-psychportaudio.mexdll-subfunction">[[Psychtoolbox]] › [[PsychPortAudio]].{mex*,dll} subfunction</h2>
+<p>Retrieve captured audio data from a audio device. ‘pahandle’ is the handle of<br />
+the device whose data is to be retrieved. ‘audiodata’ is a matrix with audio<br />
+data in floating point format. Each row of the matrix returns one sound channel,<br />
+each column one sample for each channel. Returned samples are in range -1.0 to<br />
++1.0, with 0.0 for silence. This is intentionally a very restricted interface.<br />
+For lowest latency and best timing we want you to accept audio data exactly at<br />
+the optimal format and sample rate, so the driver can safe computation time and<br />
+latency for expensive sample rate conversion, sample format conversion, and<br />
+bounds checking/clipping.<br />
+You must call this function once before start of capture operations to allocate<br />
+an internal buffer that stores captured audio data inbetween your periodic<br />
+calls. Provide ‘amountToAllocateSecs’ as requested buffersize in seconds. After<br />
+start of capture you must call this function periodically at least every<br />
+‘amountToAllocateSecs’ seconds to drain the internal buffer into your<br />
+Matlab/Octave matrix ‘audiodata’. If you fail to call the function frequently<br />
+enough, sound data will get lost!<br />
+‘minimumAmountToReturnSecs’ optional minimum amount of recorded data to return<br />
+at each call. The driver will only return control to your script when it was<br />
+able to collect at least that amount of seconds of sound data - or if the<br />
+capture engine was stopped. If you don’t set this parameter, the driver will<br />
+return immediately, giving you whatever amount of sound data was available -<br />
+including an empty matrix if nothing was available.<br />
+‘maximumAmountToReturnSecs’ allows you to optionally restrict the amount of<br />
+returned sound data to a specific duration in seconds. By default, you’ll get<br />
+whatever is available.<br />
+If you provide both, ‘minimumAmountToReturnSecs’ and ‘maximumAmountToReturnSecs’<br />
+and set them to equal values (but significantly lower than the<br />
+‘amountToAllocateSecs’ buffersize!!) then you’ll always get an ‘audiodata’<br />
+matrix back that is of a fixed size. This may be convenient for postprocessing<br />
+in Matlab. It may also reduce or avoid Matlab memory fragmentation…<br />
+‘singleType’ if set to 1 will return a sound data matrix of single() type<br />
+instead of double() type. By default, double() type is returned. single() type<br />
+matrices only consume half as much memory as double() type matrices, without any<br />
+loss of audio precision.</p>
+<h3 id="optional-return-arguments-other-than-audiodata">Optional return arguments other than ‘audiodata’:</h3>
+<p>‘absrecposition’ is the absolute position (in samples) of the first column in<br />
+the returned data matrix, assuming that sample zero was the very first recorded<br />
+sample in this session. The count is reset each time you start a new capture<br />
+session via call to <a href="PsychPortAudio" class="uri">PsychPortAudio</a>(‘Start’).<br />
+Each call to this function will return a new chunk of recorded sound data. The<br />
+‘absrecposition’ provides you with absolute matrix column indices to stitch<br />
+together the results of all calls into one seamless recording if you want.<br />
+‘overflow’ if this flag is zero then everything went fine. If it is one then you<br />
+didn’t manage to call this function frequent enough, the capacity of the<br />
+internal recording buffer was exceeded and therefore you lost captured sound<br />
+data, i.e., there is a gap in your recording. When initially allocating the<br />
+internal buffer, make sure to allocate it big enough so it is able to easily<br />
+store all recorded data inbetween your calls to ‘GetAudioData’. Example: You<br />
+expect to call this routine once every second in your trial loop, then allocate<br />
+a sound buffer of at least 2 seconds for some security headroom. If you know<br />
+that the recording time of each recording has an upper bound then you can<br />
+allocate an internal buffer of sufficient size and fetch the buffer all at once<br />
+at the end of a recording.<br />
+‘ctsstarttime’ this is an estimate of the system time (in seconds) when the very<br />
+first sample of this recording was captured by the sound input of your hardware.<br />
+This is only a rough estimate, not to be trusted down to the millisecond level,<br />
+at least not without former careful calibration of your setup!</p>
+<p>&lt;&lt;=====See also:===== Open GetDeviceSettings &lt;&lt;</p>

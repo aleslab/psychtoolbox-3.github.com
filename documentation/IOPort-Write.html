@@ -1,0 +1,31 @@
+<h1 id="ioportwrite"><a href="IOPort-Write">IOPort(‘Write’)</a></h1>
+<h2 id="psychtoolbox-ioport.mexdll-subfunction">[[Psychtoolbox]] › [[IOPort]].{mex*,dll} subfunction</h2>
+<p>Write data to device, specified by ‘handle’.<br />
+‘data’ must be a vector of data items to write, or a matrix (in which case data<br />
+in the matrix will be transmitted in column-major order, ie., first the first<br />
+column, then the 2nd column etc…), either with data elements of uint8 class or<br />
+a (1 Byte per char) character string. The optional flag ‘blocking’ if set to 0<br />
+will ask the write function to not block, but return immediately, ie. data is<br />
+sent/written in the background while your code continues to execute - There may<br />
+be an arbitrary delay until data transmission is really finished. The default<br />
+setting is 1, ie. blocking writes - The function waits until data transmission<br />
+is really finished. You can also use blocking == 2 to request a different mode<br />
+for blocking writes, where <a href="IOPort" class="uri">IOPort</a> is polling for write-completion instead of a<br />
+more cpu friendly wait. This may decrease latency for certain applications.<br />
+Another even more agressive polling method is implemented via blocking == 3 on<br />
+Linux systems with some limited set of hardware, e.g., real native serial ports.<br />
+On systems without any support for specific polling modes, the 2 or 3 settings<br />
+are treated as a standard blocking write.</p>
+<p>Optionally, the function returns the following return arguments:<br />
+‘nwritten’ Number of bytes written – Should match amount of data provided on<br />
+success.<br />
+‘when’ A timestamp of write completion: This is only meaningful in blocking<br />
+mode!<br />
+‘errmsg’ A system defined error message if something wen’t wrong.<br />
+The following three timestamps are for low-level debugging and special purpose:<br />
+‘prewritetime’ A timestamp taken immediately before submitting the write<br />
+request. ‘postwritetime’ A timestamp taken immediately after submitting the<br />
+write request. ‘lastchecktime’ A timestamp taken at the time of last check for<br />
+write completion if applicable.</p>
+<p>&lt;&lt;=====See also:=====</p>
+<p>&lt;&lt;</p>

@@ -1,0 +1,17 @@
+<h1 id="psychportaudiosetloop"><a href="PsychPortAudio-SetLoop">PsychPortAudio(‘SetLoop’)</a></h1>
+<h2 id="psychtoolbox-psychportaudio.mexdll-subfunction">[[Psychtoolbox]] › [[PsychPortAudio]].{mex*,dll} subfunction</h2>
+<p>Restrict audio playback to a subrange of sound samples in the current audio<br />
+playback buffer for audio device ‘pahandle’. The device must be open and a<br />
+soundbuffer created via ‘FillBuffer’ for this setting to take effect. The<br />
+setting is reset at each non-streaming ‘FillBuffer’ call.<br />
+‘startSample’ defines the first sample to be played, it defaults to zero, ie.<br />
+the very first in the buffer. ‘endSample’ the last sample to be played, it<br />
+defaults to the end of the buffer.<br />
+Calling this function without any parameter except ‘pahandle’ will therefore<br />
+reset the playloop to the full buffer size. It is possible but not advisable to<br />
+change the loop range while sound playback is active, as this may cause audible<br />
+glitches or artifacts in the playback.<br />
+By default, ‘startSample’ and ‘endSample’ are specified in units of samples, but<br />
+if the optional flag ‘UnitIsSeconds’ is set to a non-zero value, then the given<br />
+range is interpreted in units of seconds.</p>
+<p>&lt;&lt;=====See also:===== FillBuffer Start Stop RescheduleStart &lt;&lt;</p>

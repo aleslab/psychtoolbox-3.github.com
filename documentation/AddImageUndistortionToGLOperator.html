@@ -1,0 +1,44 @@
+<h2 id="psychtoolbox-psychglimageprocessing">[[Psychtoolbox]] › [[PsychGLImageProcessing]]</h2>
+<p><a href="AddImageUndistortionToGLOperator" class="uri">AddImageUndistortionToGLOperator</a>(gloperator, exampleImage, calibrationStructureOrFile [, showCalibOutput=0][, varargin])</p>
+<p>Add a geometric undistortion operation to a given imaging pipeline image<br />
+processing operator ‘gloperator’. ‘gloperator’ is the operator to add to.<br />
+‘exampleImage’ is a texture- or offscreen window handle to a texture or<br />
+offscreen window which has exactly the color depths and size of the input<br />
+images you want to geometrically undistort (and scale) later on. The<br />
+created operator will be adapted to only work correctly on input images<br />
+of that size! ‘calibrationStructureOrFile’ Either the file name to a<br />
+geometric calibration file, as created by, e.g.,<br />
+<a href="DisplayUndistortionBezier" class="uri">DisplayUndistortionBezier</a>.m or <a href="DisplayUndistortionBVL" class="uri">DisplayUndistortionBVL</a>.m, or a struct with<br />
+the neccessary information as created, e.g., by <a href="CreateDisplayWarp" class="uri">CreateDisplayWarp</a>().<br />
+‘showCalibOutput’ optional flag: If set to non-zero value, the routine<br />
+will plot some debug output to the console or into figure windows.<br />
+‘varargin’ may contain optional parameters that will be passed to the<br />
+routine <a href="CreateDisplayWarp" class="uri">CreateDisplayWarp</a>() as optional arguments (see help<br />
+<a href="CreateDisplayWarp">CreateDisplayWarp)</a>).</p>
+<p>This routine can be used if you have geometrically distorted images from<br />
+some source (movie file, video capture, etc.), given as textures or<br />
+offscreen windows. It allows to define an operator that applies some<br />
+geometric correction to that images and returns corrected versions of<br />
+that images.</p>
+<h3 id="a-typical-way-of-using-this">A typical way of using this:</h3>
+<ol type="a">
+<li><p>Create an “undistortion definition file” by use of the interactive<br />
+display calibration routines, e.g., <a href="DisplayUndistortionBezier" class="uri">DisplayUndistortionBezier</a>.m or<br />
+<a href="DisplayUndistortionBVL" class="uri">DisplayUndistortionBVL</a>.m, and save it somewhere.</p></li>
+<li><p>In your script, call this routine, passing the filename of that<br />
+calibration file, and an ‘exampleImage’ of the size and format of the<br />
+input images to undistort, to create a suitable gloperator.</p></li>
+<li><p>In your code, apply the operator to distorted images by use of the<br />
+<a href="Screen" class="uri">Screen</a>(‘TransformTexture’) function, e.g.:</p></li>
+</ol>
+<p>correctedImage = <a href="Screen" class="uri">Screen</a>(‘TransformTexture’, distortedImage, gloperator);</p>
+<p>An example of this procedure can be seen in the demo<br />
+“<a href="ImageUndistortionDemo" class="uri">ImageUndistortionDemo</a>”.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychGLImageProcessing/AddImageUndistortionToGLOperator.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychGLImageProcessing/AddImageUndistortionToGLOperator.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychGLImageProcessing/AddImageUndistortionToGLOperator.m</code></p>
+</div>

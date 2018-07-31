@@ -1,0 +1,34 @@
+<h2 id="psychtoolbox-psychcal">[[Psychtoolbox]] › [[PsychCal]]</h2>
+<p>[spd,S] = <a href="MeasMonSpd" class="uri">MeasMonSpd</a>(window, settings, [S], [syncMode], [whichMeterType], [bitsppClut])</p>
+<p>Measure the Spd of a series of monitor settings.</p>
+<p>This routine is specific to go with <a href="CalibrateMon" class="uri">CalibrateMon</a>,<br />
+as it depends on the action of <a href="SetMon" class="uri">SetMon</a>.</p>
+<p>If whichMeterType is passed and set to 0, then the routine<br />
+returns random spectra. This is useful for testing when<br />
+you don’t have a meter.</p>
+<p>Other valid types:<br />
+1 - Use PR650 (default)<br />
+2 - Use CVI</p>
+<p>10/26/93 dhb Wrote it based on ccc code.<br />
+11/12/93 dhb Modified to use <a href="SetColor" class="uri">SetColor</a>.<br />
+8/11/94 dhb Sync mode.<br />
+8/15/94 dhb Sync mode as argument, allow S to be [] for default.<br />
+4/12/97 dhb New toolbox compatibility, take window and bits args.<br />
+8/26/97 dhb pbe Add noMeterAvail arg.<br />
+4/7/99 dhb Add argument for radius board. Compact default arg code.<br />
+8/14/00 dhb Call to CMETER(‘SetParams’) conditional on OS9.<br />
+8/20/00 dhb Remove bits arg to <a href="SetColor" class="uri">SetColor</a>.<br />
+8/21/00 dhb Remove dependence on RADIUS flag. This is now handled inside of <a href="SetColor" class="uri">SetColor</a>.<br />
+dhb Change calling conventions to remove unused args.<br />
+9/14/00 dhb Sync mode is not actually used. Arg still passed for backwards compat.<br />
+2/27/02 dhb Change noMeterAvail to whichMeterType.<br />
+8/19/12 mk Rewrite g_usebitspp path to use PTB imaging pipeline for higher robustness<br />
+and to support more display devices.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychCal/MeasMonSpd.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychCal/MeasMonSpd.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychCal/MeasMonSpd.m</code></p>
+</div>

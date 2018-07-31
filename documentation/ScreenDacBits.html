@@ -1,0 +1,19 @@
+<h2 id="psychtoolbox-psychoneliners">[[Psychtoolbox]] › [[PsychOneliners]]</h2>
+<p>dacBits = <a href="ScreenDacBits" class="uri">ScreenDacBits</a>(windowPtrOrScreenNumber)</p>
+<p>What is the precision of the <a href="DACs" class="uri">DACs</a> on this graphics card?</p>
+<p>At present you need to know the bit depth of your graphics board’s DAC<br />
+to determine how to write its CLUT, i.e. <a href="Screen" class="uri">Screen</a> ‘SetClut’ or ‘Gamma’.<br />
+Use this routine and <a href="ScreenUsesHighGammaBits" class="uri">ScreenUsesHighGammaBits</a>, instead of the the brand-<br />
+and platform-specific <a href="IsRadiusThunder10" class="uri">IsRadiusThunder10</a> and <a href="IsATIRadeon10" class="uri">IsATIRadeon10</a>, to keep your<br />
+program as general as possible, not tied to particular hardware or<br />
+platform.</p>
+<p>The value is set in <a href="PrepareScreen" class="uri">PrepareScreen</a>.m.</p>
+<p>See also <a href="LoadClut" class="uri">LoadClut</a>, <a href="ScreenPixelSize" class="uri">ScreenPixelSize</a>, <a href="ScreenUsesHighGammaBits" class="uri">ScreenUsesHighGammaBits</a>, <a href="ScreenClutSize" class="uri">ScreenClutSize</a>.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOneliners/ScreenDacBits.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOneliners/ScreenDacBits.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOneliners/ScreenDacBits.m</code></p>
+</div>

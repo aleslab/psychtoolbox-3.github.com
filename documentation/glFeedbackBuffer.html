@@ -1,0 +1,35 @@
+<h2 id="psychtoolbox-psychopengl-mogl-wrap">[[Psychtoolbox]] › [[PsychOpenGL]] › [[MOGL]] › [[wrap]]</h2>
+<p>glFeedbackBuffer Interface to <a href="OpenGL" class="uri">OpenGL</a> function glFeedbackBuffer</p>
+<p>usage: glFeedbackBuffer( bufsize, buftype, bufferptr )</p>
+<p>bufsize is the number of float values that can be written into the buffer.<br />
+Caution: A float takes up 4 bytes, so the size of the allocated buffer needs<br />
+to be at least 4*bufsize!</p>
+<p>buftype is a <a href="GLenum" class="uri">GLenum</a> specifiying the type of requested information. See <a href="OpenGL" class="uri">OpenGL</a> manual.</p>
+<p>bufferptr is a pointer to a buffer allocated via bufferptr=moglmalloc() or bufferptr=moglcalloc().</p>
+<h3 id="example-of-usage">Example of usage:</h3>
+<ol type="1">
+<li><p>Allocate a buffer of proper size to hold the information you want <a href="OpenGL" class="uri">OpenGL</a> to return:<br />
+bufferptr = moglmalloc(bufsize * 4);</p></li>
+<li><p>Set this memory buffer as feedback buffer and tell GL which kind of info about each<br />
+primitive should be fed back. E.g., GL.2D would return projected 2D screen coordinates of<br />
+each transformed vertex.<br />
+glFeedbackBuffer(bufsize, GL.2D, bufferptr);</p></li>
+<li><p>Switch <a href="OpenGL" class="uri">OpenGL</a> from normal rasterization (=drawing) mode into feedback mode. Executing<br />
+drawing commands will not create any visible drawing, but will only store the results<br />
+of geometric transform, culling and lighting operations into your buffer ‘bufferptr’:<br />
+glRenderMode(GL.FEEDBACK);</p></li>
+<li><p>Draw your scene…</p></li>
+<li><p>Switch back to normal rendering. This will return the number of actually fed back items:<br />
+itemcount = glRenderMode(GL.RENDER);</p></li>
+<li><p>Return the content of the memory feedback buffer as a new Matlab matrix:<br />
+myfeedbackresult = moglgetbuffer(bufferptr, GL.FLOAT, itemcount*4);</p></li>
+<li><p>Interpret and use content of myfeedbackresult as described in the manual for glFeedbackBuffer.</p></li>
+</ol>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOpenGL/MOGL/wrap/glFeedbackBuffer.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOpenGL/MOGL/wrap/glFeedbackBuffer.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOpenGL/MOGL/wrap/glFeedbackBuffer.m</code></p>
+</div>

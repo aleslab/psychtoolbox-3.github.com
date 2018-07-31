@@ -1,0 +1,29 @@
+<h2 id="psychtoolbox-psychdemos">[[Psychtoolbox]] › [[PsychDemos]]</h2>
+<p><a href="VideoDelayLoopMiniDemo" class="uri">VideoDelayLoopMiniDemo</a>([delayframes = 0][, duration = 30][, roi][, firewireBasler = 0]);</p>
+<p>Demonstrates most simplistic use of <a href="PsychVideoDelayLoop" class="uri">PsychVideoDelayLoop</a>() function for<br />
+delayed visual feedback via a camera + display combo.</p>
+<p>‘delayframes’ == Requested delay in captured frames: 0 = Minimal delay<br />
+(i.e. request zero delay, get whatever the minimum of your camera +<br />
+display combo is).</p>
+<p>The demo takes some startup time to calibrate, then provides visual<br />
+feedback for 30 seconds, then ends, unless you specifiy a different<br />
+‘duration’ in seconds.</p>
+<p>‘firewireBasler’ defaults to zero. If set to 1, customize to a Basler<br />
+A602f IIDC-1394 compliant Firewire camera.</p>
+<p>Tested on <a href="MacOS" class="uri">MacOS</a>/X Intel <a href="MacBookPro" class="uri">MacBookPro</a> with builtin iSight camera. However,<br />
+the routine was originally developed, tested and optimized for GNU/Linux,<br />
+so it only provides limited functionality, flexibility and performance on<br />
+other operating systems. The inherent delay of USB cameras like Apples<br />
+builtin iSight is pretty high, so they are not seriously useful for low<br />
+delay feedback. Pick a good IIDC Firewire camera if you want low<br />
+latencies. Use Linux if you want really low latencies and optimal<br />
+control.</p>
+<p>This demo is only a proof of concept. Use with caution!</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/VideoDelayLoopMiniDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/VideoDelayLoopMiniDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/VideoDelayLoopMiniDemo.m</code></p>
+</div>

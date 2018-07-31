@@ -1,0 +1,30 @@
+<h2 id="psychtoolbox-psychhardware">[[Psychtoolbox]] › [[PsychHardware]]</h2>
+<p>info = <a href="GetTouchDeviceInfo" class="uri">GetTouchDeviceInfo</a>(deviceIndex)</p>
+<p>Return ‘info’ a struct with info about the specified touch input device<br />
+‘deviceIndex’. ‘info’ has the following fields:</p>
+<p>‘product’, ‘serialNumber’ and ‘locationID’ Self explanatory.</p>
+<p>‘maxTouchpoints’ The maximum number of simultaneously supported touch<br />
+points on the device. 10 is a quite common number for typical touchscreens.</p>
+<p>‘touchDeviceType’: 0 = Touchpad, 1 = Touchscreen.</p>
+<p>‘valuatorInfos’: A struct array. Each slot contains info about the meaning,<br />
+parameter range and resolution of the corresponding value in the Valuators<br />
+vector returned as part of touch events. i’th slot == i’th vector entry.<br />
+This is mostly for use with <a href="GetTouchValuators" class="uri">GetTouchValuators</a>() to map raw valuator values<br />
+into something meaningful.</p>
+<p>WINDOWS: ________________________________________________________________________</p>
+<p>This function currently returns nothing, as touch devices aren’t yet<br />
+supported.</p>
+<p>OS X: ___________________________________________________________________________</p>
+<p>This function currently returns nothing, as OSX does not support touch<br />
+screens in a meaningful way as far as we know. And Psychtoolbox for OSX<br />
+currently does not implement any special support for touchpads or such.</p>
+<p>_________________________________________________________________________________<br />
+see also: <a href="GetTouchDeviceIndices" class="uri">GetTouchDeviceIndices</a>, <a href="GetTouchValuators" class="uri">GetTouchValuators</a>, <a href="TouchEventGet" class="uri">TouchEventGet</a></p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/GetTouchDeviceInfo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/GetTouchDeviceInfo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/GetTouchDeviceInfo.m</code></p>
+</div>

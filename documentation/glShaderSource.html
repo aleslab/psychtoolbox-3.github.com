@@ -1,0 +1,24 @@
+<h2 id="psychtoolbox-psychopengl-mogl-wrap">[[Psychtoolbox]] › [[PsychOpenGL]] › [[MOGL]] › [[wrap]]</h2>
+<p>glShaderSource Interface to glShaderSource</p>
+<p>usage: glShaderSource(shader, shadersource, debug)</p>
+<p>This function differs from its C counterpart. You have to pass in the<br />
+handle of the shader as returned by glCreateShader in ‘shader’.</p>
+<p>You have to pass a single character string ‘shadersource’ that<br />
+contains the ASCII text of the shaders source code. Each line in the<br />
+string needs to be terminated by a ‘’ aka ASCII code 10 aka newline.<br />
+This string will be split up into the array of strings as expected by<br />
+the C function glShaderSource.</p>
+<p>A simple way to read a shader from a standard text file is as follows:<br />
+fid=fopen(‘MyShader.txt’, ‘r’);<br />
+shadersource=fread(fid);<br />
+fclose(fid);<br />
+glShaderSource(shader, shadersource);</p>
+<p>C function: void glShaderSource<a href="(GLuint)%20shader,%20int%20numOfStrings,%20const%20char%20**strings,%20int%20*lenOfStrings">(GLuint</a>;</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOpenGL/MOGL/wrap/glShaderSource.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOpenGL/MOGL/wrap/glShaderSource.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOpenGL/MOGL/wrap/glShaderSource.m</code></p>
+</div>

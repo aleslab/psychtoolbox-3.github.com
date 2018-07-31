@@ -1,0 +1,42 @@
+<h1 id="screenstartvideocapture"><a href="Screen-StartVideoCapture">Screen(‘StartVideoCapture’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Start video capture device specified by ‘capturePtr’. If ‘captureRateFPS’ is<br />
+provided, the device is requested to capture at that rate. Otherwise it is<br />
+requested to operate at 25 Hz. The real capture rate may differ from the<br />
+requested one, depending on the capabilities of your capture device. For<br />
+professional firewire cameras when used with the IIDC-1394 videocapture engine,<br />
+PTB tries to select the closest supported framerate that is at least as high as<br />
+the requested one. For other videocapture engines, e.g., [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)), the result<br />
+is camera dependent. It may choose the closest supported rate, or the maximum<br />
+supported framerate. The real capture rate is returned as return argument ‘fps’.<br />
+If you pass the special value realmax, then PTB will try to select the highest<br />
+framerate that your capture device supports at the given video resolution and<br />
+other settings.<br />
+Some capture devices may only support a small set of framerates and may fail to<br />
+start completely if you or PTB on your behalf request a unsupported<br />
+‘captureRateFPS’. Some devices ignore the requested framerate completely and run<br />
+at whatever rate they like, e.g., Apples iSight cameras adjust their framerate<br />
+depending on lighting conditions. You may need to tinker a bit here, the<br />
+auto-selection of framerates is not fool-proof.<br />
+If ‘dropframes’ is provided and set to 1, the device is requested to always<br />
+deliver the most recently acquired frame, dropping previously captured but not<br />
+delivered frames if necessary. The default is to queue up as many frames as<br />
+possible. If you want to do video recordings, you want to have the default of<br />
+zero. If you want to do interactive realtime processing of video data (e.g,<br />
+video feedback for action-perception studies or build your own low-cost<br />
+eyetracker), then you want to use dropframes=1 for lowest possible latency.<br />
+‘startAt’ This optional argument provides a requested start time in seconds<br />
+system time, e.g., values returned by <a href="GetSecs" class="uri">GetSecs</a>() or <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’), when capture<br />
+should really start. Psychtoolbox will wait until that point in time has elapsed<br />
+before really triggering start of capture. This provides a means of<br />
+soft-synchronizing start of capture with external events. The optional return<br />
+value ‘starttime’ contains the best estimate (in system time) of when video<br />
+capture was really started. Accuracy of ‘startAt’ and ‘starttime’ is highly<br />
+dependent on operating system and capture device. It is assumed to be very<br />
+accurate on Linux with the dc1394 capture engine and professional class IIDC<br />
+1394 firewire cameras. No such guarantees are possible on other operating<br />
+systems or with other hardware. Specifically standard consumer DV cameras or USB<br />
+based webcams or built in cameras in Laptops (iSight et al.) may have rather<br />
+unpredictable and variable latency and start timing. Choose a pro operating<br />
+system and pro equipment if you really need timing precision!</p>
+<p>&lt;&lt;=====See also:===== CloseVideoCapture StartVideoCapture StopVideoCapture GetCapturedImage &lt;&lt;</p>

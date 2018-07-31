@@ -1,0 +1,191 @@
+<h2 id="psychtoolbox-psychopengl">[[Psychtoolbox]] › [[PsychOpenGL]]</h2>
+<p>moglFDF(cmd [, arg1][, arg2][, …]) - “MOGL <a href="FormlessDotFields" class="uri">FormlessDotFields</a>”</p>
+<p>Implementation of Sheinberg et al. inspired random dot structure from motion<br />
+rendering. This routine is a fast implementation of “Formless dot field<br />
+structure-from-motion stimuli”. It is based on - and very similar in<br />
+behaviour, although not identical in implementation - the algorithm<br />
+proposed by Jedediah M. Singer and David L. Sheinberg in their<br />
+Journal of Vision paper “A method for the real-time rendering of<br />
+formless dot field structure-from-motion stimuli” (Journal of Vision, 8,<br />
+1-8)</p>
+<p>This algorithm takes the idea of the above mentioned paper and pushes it<br />
+one step further by moving nearly all stimulus computation onto the GPU.</p>
+<p>All compute intense tasks are carried out by vertex- and fragment-shaders<br />
+on the GPU and all heavy data structures are stored within the GPU’s fast<br />
+local VRAM memory, reducing the amount of communication between host<br />
+system and graphics card to an absolute minimum. The Matlab code on the<br />
+CPU only controls the flow of operations on the GPU and generates a<br />
+matrix with random numbers to update the sample distribution. This should<br />
+provide a significant speedup beyond what the Singer et al. algorithm<br />
+achieves, at least for complex and demanding stimuli.</p>
+<p>The algorithm makes heavy use of GPU based image processing for maximum<br />
+speed, so it needs at least <a href="NVidia" class="uri">NVidia</a> Geforce 6000 series or ATI Radeon<br />
+X1000 series graphics hardware (and any later models or equivalent<br />
+hardware) to work. It also needs the PTB imaging pipeline enabled, at<br />
+least fast offscreen window support. You do this, e.g., by replacing a<br />
+call to …</p>
+<p>[win, winRect] = <a href="Screen" class="uri">Screen</a>(‘OpenWindow’, screenid, 0);</p>
+<p>… with a call sequence like this …</p>
+<p><a href="PsychImaging" class="uri">PsychImaging</a>(‘PrepareConfiguration’);<br />
+<a href="PsychImaging" class="uri">PsychImaging</a>(‘AddTask’, ‘General’, ‘UseFastOffscreenWindows’);<br />
+[win , winRect] = <a href="PsychImaging" class="uri">PsychImaging</a>(‘OpenWindow’, screenid, 0);</p>
+<p>A minimal example of how to use moglFDF to render a “dotfield”<br />
+representation of a rotating 3D sphere can be found in the <a href="FDFDemo" class="uri">FDFDemo</a>.m<br />
+file.</p>
+<h1 id="subcommands-their-syntax-meaning">Subcommands, their syntax &amp; meaning:</h1>
+<p>[oldflag, oldgain] = moglFDF(‘DebugFlag’, flag [, debugGain]);<br />
+- Set debug flag to value ‘flag’. Default is zero. Non-zero values enable<br />
+different visualizations that may aid debugging non-working setups.<br />
+1 = Show silhouette buffer, 2 = Show trackbuffer, 3 = Show random noise<br />
+sampling texture, 4 = Show sampleBuffer, 5 = Show <a href="FGDots" class="uri">FGDots</a> buffer. A<br />
+setting of -1 shows the real rendered image, instead of the random dot<br />
+visualization. A value of -2 disables any kind of textual warnings.</p>
+<p>The optional ‘debugGain’ parameter must be a 4 component [R G B A] color<br />
+vector with modulation gains for the drawn “debug images” - simply to<br />
+scale each color channel in intensity to allow for display of values<br />
+outside the standard displayable range between zero and one.</p>
+<p>context = moglFDF(‘CreateContext’, window, rect, texCoordMin, texCoordMax, texResolution, maxFGDots, maxBGDots, dotLifetime [,zThreshold=Off] [,<a href="BGSilhouetteAcceptanceProbability" class="uri">BGSilhouetteAcceptanceProbability</a>=0.0]);<br />
+- Create a “rendercontext” for a single 3D object. Returns a ‘context’<br />
+handle to it which needs to be passed in to all other functions as<br />
+reference. All following parameters are required and don’t have any<br />
+defaults:</p>
+<p>‘window’ Handle of masterwindow - The onscreen window used for rendering.<br />
+This is not neccessarily the window to which final stimulus will be drawn<br />
+to, but it is needed as a “parent” for all ressources.</p>
+<p>‘rect’ A Psychtoolbox rectangle [left top right bottom] that describes<br />
+the size and shape of the final stimulus window. This rect must have the<br />
+same size as the 3D window and final stimulus window – Lots of internal<br />
+calculations depend on this geometry spec.</p>
+<p>‘texCoordMin’ Two element vector which contains the minimum texture<br />
+coordinate values contained in the 3D scene for x- resp. y-direction.</p>
+<p>‘texCoordMax’ Two element vector which contains the maximum texture<br />
+coordinate values contained in the 3D scene for x- resp. y-direction.</p>
+<p>‘texResolution’ Two element vector which contains the internal resolution<br />
+for x- resp. y-direction of the 3D object surface. Higher values mean finer<br />
+resolution and less aliasing, but also higher storage requirements and<br />
+longer processing times.</p>
+<p>‘maxFGDots’ Maximum number of foreground (object shape) dots to use for<br />
+random shape sampling. This must be an integral multiple of<br />
+‘dotLifetime’. If it isn’t, it will get adjusted to become an integral<br />
+multiple.</p>
+<p>‘maxBGDots’ Maximum number of background dots to use for random background<br />
+sampling. This must be an integral multiple of ‘dotLifetime’. If it<br />
+isn’t, it will get adjusted to become an integral multiple. If you don’t<br />
+want to have structure cues in your stimulus, you should set ‘maxBGDots’<br />
+equal to ‘maxFGDots’ to keep overall dot density on the display constant.</p>
+<p>‘dotLifetime’ Lifetime of each foreground- or background dot in ‘Update’<br />
+cycles. Each dot is replace by a new random sample after that many<br />
+invocations of the ‘Update’ function.</p>
+<p>‘zThreshold’ Optional zThreshold for occlusion test: By default, it is<br />
+10.0 ie. occlusion test disabled. A value between 0.0 and 1.0 will enable<br />
+occlusion testing – Dots that would correspond to occluded surfaces are<br />
+not drawn. Small numbers (close to zero) make the test more sensitive but<br />
+can cause artifacts due to internal numeric roundoff errors. Bigger<br />
+numbers (closer to one) make it more robust but less powerful. The<br />
+“sweet-spot” depends on your hardware and 3D scene. Empirically a setting<br />
+of 0.0001 is a good value for ATI Radeon X1000 series hardware.<br />
+The default setting (bigger than 1.0) will disable occlusion test –<br />
+“Hidden dots” are not hidden, but drawn.</p>
+<p>‘BGSilhouetteAcceptanceProbability’ Optional <a href="BGSilhouetteAcceptanceProbability" class="uri">BGSilhouetteAcceptanceProbability</a><br />
+This is the probability with which a dot from the “background distribution”<br />
+will be drawn if it is actually located in the area of the objects<br />
+silhouette. A value of 0.0 (which is the default) will not draw any<br />
+background dots within the objects silhouette. Values between 0 and 1<br />
+correspond to acceptance probabilities between 0% and 100%. If you want<br />
+to keep the overall dot density of foreground dots and background dots<br />
+constant (in order to not provide segmentation cues based on structure),<br />
+you should set the ‘maxFGDots’ parameter like this:</p>
+<p>maxFGDots = (1 - <a href="BGSilhouetteAcceptanceProbability">BGSilhouetteAcceptanceProbability)</a>) * maxBGDots;</p>
+<p>context = moglFDF(‘SetRenderCallback’, context, callbackEvalString);<br />
+- Define the ‘eval’ string for this context to be used as rendercallback.<br />
+Pass in a Matlab command string (for evaluation via eval() function in the<br />
+Workspace of the calling function). This string is called/executed during<br />
+each ‘Update’ cycle. It has to contain the code that performs the actual<br />
+rendering of the 3D scene or object.</p>
+<p>The called rendering code *must not* glClear() the framebuffer or mess<br />
+around with alpha-blending state or depth-buffer/depth-test settings, nor<br />
+should it bind any shaders! It makes sense to disable any kind of<br />
+lighting or texture mapping, as no photorealistic image is rendered, so<br />
+it would be a waste of computation time.</p>
+<p>context = moglFDF(‘ReinitContext’, context, rect, texCoordMin, texCoordMax, texResolution, maxFGDots, maxBGDots, dotLifetime [,zThreshold=Off] [,<a href="BGSilhouetteAcceptanceProbability" class="uri">BGSilhouetteAcceptanceProbability</a>=0.0]);<br />
+- Reinitialize an already existing context with new stimulus parameters.<br />
+The parameters are identical to the ones in ‘CreateContext’, except for<br />
+the first one: You don’t pass a windowhandle of a parent window, as this<br />
+stays the same for the reinitialized context. Instead you pass the handle<br />
+of the ‘context’ to reinitialize.</p>
+<p>‘ReinitContext’ is the same as a sequence of ‘DestroyContext’, followed<br />
+by a new ‘CreateContext’, except that it is optimized for speed –<br />
+Reinitialization with new parameters is typically at least 3 times faster<br />
+than a full destroy &amp; recreate operation.</p>
+<p>context = moglFDF(‘DestroyContext’, context);<br />
+- Destroy a processing context, release all of its ressources.</p>
+<p>context = moglFDF(‘ResetState’, context);<br />
+- Reset processing contexts state to initial state, just as if it was<br />
+just created. Useful at start of a new trial. Another way to start a new<br />
+trial, but with a full distribution already initialized, is to use the<br />
+moglFDF(‘Update’) call with the ‘instantOn’ flag set to 1 for the first<br />
+iteration of your stimulus loop, instead of the default of zero.</p>
+<p>context = moglFDF(‘SetColorTexture’, context, textureId, textureTarget);<br />
+- Assign a regular color texture map with handle ‘textureId’ and texture<br />
+mapping target ‘textureTarget’ to ‘context’. This will enable assignment<br />
+of colors to drawn 2D dots (in moglFDF(‘Render’,…);) and fetch the<br />
+relevant per-dot colors from the assigned texture map ‘textureId’.</p>
+<p>Assigning an empty or negative textureId will disable texture mapping.<br />
+Texture mapping is disabled by default, i.e. at context creation time.</p>
+<p>context = moglFDF(‘SetDrawShader’, context, fgShaderId [, bgShaderId] [, needSprites]);<br />
+- Assign a GLSL shader with handle ‘fgShaderId’ during 2D drawing of<br />
+foreground dots in moglFDF(‘Render’,…); Passing a ‘fgShaderId’ which is<br />
+empty or negative disables shading. Shading is disabled by default.</p>
+<p>The optional ‘bgShaderId’ assigns potential shaders for drawing of<br />
+background dots.</p>
+<p>The optional flag ‘needSprites’ if set to 1, will enable generation of<br />
+point-sprite texture coordinates on texture unit 1 while using a shader<br />
+with point-smoothing enabled. A setting of 0 disables point sprites.<br />
+Point sprites plus special code within your drawing fragment shader are<br />
+needed if you want to draw nicely anti-aliased dots on <a href="GPUs" class="uri">GPUs</a> that don’t<br />
+support simultaneous use of fragment shaders and anti-aliased dots. On<br />
+such systems you can roll your own anti-aliasing via point-sprites.<br />
+Please note that almost all consumer class GPU’s don’t support<br />
+anti-aliased dots in conjunction with fragment shaders.</p>
+<p>context = moglFDF(‘Update’, context [, instantOn=0]);<br />
+- Perform an ‘update’ cycle for given context. A new “3D frame” is rendered<br />
+via the rendercallback function, then analysed, resampled etc. to create<br />
+a new complete distribution of 2D random dots, ready for drawing or<br />
+readback. If the optional ‘instantOn’ flag is provided and non-zero, then<br />
+the whole distribution is generated at once for a quick start at the<br />
+beginning of a new trial, otherwise only one batch of samples is updated.<br />
+By default, only one batch is updated, as required for the algorithm to<br />
+work.</p>
+<p>context = moglFDF(‘Render’, context [, targetWindow] [, drawSpec=[1,1]]);<br />
+- Render current 2D random dot cloud (as defined by processing of last<br />
+‘Update’ call) quickly and efficiently into window ‘targetWindow’.<br />
+‘targetWindow’ can be any onscreen- or offscreen window and is allowed to<br />
+change at each invocation of ‘Render’. By default, the ‘window’ from the<br />
+‘CreateContext’ call is used.</p>
+<p>‘drawSpec’ is an optional two-element vector to select if only foreground<br />
+dots should be rendered [1 0], only background dots should be rendered [0 1],<br />
+or both [1 1] – which is the default.</p>
+<p>Before calling ‘Render’ you can define dot sizes, colors, alpha-blending<br />
+state, texture coordinates, anti-aliasing settings, or define texture<br />
+mapping, point-sprite modes or texture mapping setups however you like.<br />
+The internal ‘Render’ routine just defines 2D point locations, then<br />
+invokes the render op.</p>
+<p>[xyFGdots, xyBGdots, uvFGdots] = moglFDF(‘GetResults’, context); - Returns a 2 row<br />
+by n columns vector of all random dot positions, for processing within<br />
+Matlab/Octave. Row 1 is x-locations, Row 2 is y-locations of dots, each<br />
+column defines one dot. The ‘xyFGDots’ contains all foreground dots which<br />
+define the object, whereas the ‘xyBGdots’ vector contains the background<br />
+dots. These vectors are suitable for direct drawing via<br />
+<a href="Screen" class="uri">Screen</a>(‘DrawDots’); However, invocation of moglFDF(‘Render’,…); is a<br />
+more efficient method of rendering these dot fields, unless you have very<br />
+special needs.</p>
+<p>The optional ‘uvFGdots’ argument returns 2D texture coordinates as<br />
+assigned to the rendered 3D object.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOpenGL/moglFDF.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOpenGL/moglFDF.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOpenGL/moglFDF.m</code></p>
+</div>

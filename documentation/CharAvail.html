@@ -1,0 +1,25 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p>[avail, numChars] = <a href="CharAvail" class="uri">CharAvail</a></p>
+<p><a href="CharAvail" class="uri">CharAvail</a> returns the availability of characters in the keyboard event<br />
+queue and sometimes the queue’s current size. “avail” will be 1 if<br />
+characters are available, 0 otherwise. “numChars” may hold the current<br />
+number of characters in the event queue, but in some system<br />
+configurations it is just empty, so do not rely on numChars providing<br />
+meaningful results, unless you’ve tested it on your specific setup.</p>
+<p>Please read the ‘help ListenChar’ carefully to understand various<br />
+limitations and caveats of this function, and to learn about - often<br />
+better - alternatives.</p>
+<p>Note that this routine does not actually remove characters from the event<br />
+queue. Call <a href="GetChar" class="uri">GetChar</a> to remove characters from the queue.</p>
+<p><a href="GetChar" class="uri">GetChar</a> and <a href="CharAvail" class="uri">CharAvail</a> are character-oriented (and slow), whereas <a href="KbCheck" class="uri">KbCheck</a><br />
+and <a href="KbWait" class="uri">KbWait</a> are keypress-oriented (and fast). See <a href="KbCheck" class="uri">KbCheck</a>.</p>
+<p>See also: <a href="GetChar" class="uri">GetChar</a>, <a href="ListenChar" class="uri">ListenChar</a>, <a href="FlushEvents" class="uri">FlushEvents</a>, <a href="KbCheck" class="uri">KbCheck</a>, <a href="KbWait" class="uri">KbWait</a>, <a href="KbDemo" class="uri">KbDemo</a>,<br />
+<a href="KbQueueDemo" class="uri">KbQueueDemo</a>.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/CharAvail.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/CharAvail.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/CharAvail.m</code></p>
+</div>

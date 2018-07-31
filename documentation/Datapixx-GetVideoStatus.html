@@ -1,0 +1,59 @@
+<h1 id="datapixxgetvideostatus"><a href="Datapixx-GetVideoStatus">Datapixx(‘GetVideoStatus’)</a></h1>
+<h2 id="psychtoolbox-datapixx.mexdll-subfunction">[[Psychtoolbox]] › [[Datapixx]].{mex*,dll} subfunction</h2>
+<p>Returns a struct containing the following video status information:<br />
+-“horizontalResolution” is the number of visible pixels in one horizontal scan<br />
+line<br />
+-“verticalResolution” is the number of visible lines in one vertical frame<br />
+-“horizontalTotal” is the number of video dot times in one horizontal scan line,<br />
+including horizontal blanking interval<br />
+-“verticalTotal” is the number of video lines in one vertical frame, including<br />
+vertical blanking interval<br />
+-“verticalFrequency” is the vertical frame rate in Hz<br />
+-“horizontalFrequency” is the horizontal line rate in Hz<br />
+-“dotFrequency” is the pixel dot rate in Hz<br />
+-“mode” is the video processing mode set by <a href="SetVideoMode" class="uri">SetVideoMode</a><br />
+-“receivingVideo” is 1 if the Datapixx is currently receiving video data over<br />
+the DVI link. If the video input cable becomes unplugged, or the graphics board<br />
+enters power-saving mode, then receivingVideo will be 0.<br />
+-“receivingDualLinkVideo” is 1 if currently receiving dual-link DVI video, or 0<br />
+for single-link video.<br />
+-“stereoEye” is 1 if the Datapixx is showing left-eye data, or 0 if showing<br />
+right-eye data.<br />
+-“verticalStereo” is 1 if the Datapixx is doubling the refresh rate, showing the<br />
+top and bottom halves of the image on successive video frames, and driving the<br />
+mini-DIN-3 VESA stereo connector for stereo goggles.<br />
+-“stereoBlueline” is 1 if the Datapixx is driving the mini-DIN-3 VESA stereo<br />
+connector, based on blueline codes on the bottom of each video frame.<br />
+-“stereoVesaWaveform” can take on one of the following values:<br />
+0: VESA port drives straight L/R squarewave for 3rd party emitter.<br />
+1: VESA port drives 3DPixx IR emitter for <a href="CrystalEyes" class="uri">CrystalEyes</a> 3D goggles.<br />
+2: VESA port drives 3DPixx IR emitter for NVIDIA 3D goggles.<br />
+-“horizontalSplit” is 1 if the Datapixx is showing the left half of the image on<br />
+VGA OUT 1, and the right half of the image on VGA OUT 2. The Datapixx will do<br />
+this automatically if the horizontal resolution is at least twice the vertical<br />
+resolution. If horizontalSplit is 0, then the Datapixx is in mirror mode,<br />
+showing the same image on the two VGA outputs. See <a href="DatapixxDualDisplayInfo" class="uri">DatapixxDualDisplayInfo</a>.m for<br />
+details.<br />
+-“horizontalOverlay” is 1 if the Datapixx is showing an overlay composite of the<br />
+left/right halves of the video image.<br />
+-“horizontalOverlayBoundsLeft/Right/Top/Bottom” show the extents of the overlay.<br />
+-“pixelSyncTimeout” is 1 if the last call to <a href="RegWrPixelSync" class="uri">RegWrPixelSync</a> or <a href="RegWrRdPixelSync" class="uri">RegWrRdPixelSync</a><br />
+timed out.<br />
+-“overClocked” is 1 if the Datapixx is receiving video at too high a clock<br />
+frequency.<br />
+-“pixelSyncRasterLine” is the raster line on which the pixel sync is expected.<br />
+-“pixelSyncSingleLine” is 1 if pixel sync is only recognized on a single line.<br />
+-“pixelSyncBlankLine” is 1 if the pixel sync raster line is displayed black.<br />
+-“scanningBacklight” is 1 if <a href="VIEWPixx" class="uri">VIEWPixx</a> scanning backlight is enabled.<br />
+-“lcd3D60Hz” is 1 if <a href="VIEWPixx" class="uri">VIEWPixx</a>/3D pixel polarity inversion is enabled.<br />
+-“propixxCeilingMount” is 1 if <a href="PROPixx" class="uri">PROPixx</a> is flipping image horizontally and<br />
+vertically.<br />
+-“propixxRearProjection” is 1 if <a href="PROPixx" class="uri">PROPixx</a> is flipping image horizontally.<br />
+-“propixx3DCrosstalk” is <a href="PROPixx" class="uri">PROPixx</a> 3D left &lt;-&gt; right eye crosstalk elimination<br />
+factor.<br />
+-“propixx3DCrosstalkLR” is <a href="PROPixx" class="uri">PROPixx</a> left -&gt; right eye 3D crosstalk elimination<br />
+factor.<br />
+-“propixx3DCrosstalkRL” is <a href="PROPixx" class="uri">PROPixx</a> left &lt;- right eye 3D crosstalk elimination<br />
+factor.<br />
+See <a href="DatapixxStatusDemo" class="uri">DatapixxStatusDemo</a> example.</p>
+<p>&lt;&lt;=====See also:===== SetVideoMode, SetVideoHorizontalSplit, SetVideoVerticalStereo &lt;&lt;</p>

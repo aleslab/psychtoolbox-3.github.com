@@ -1,0 +1,156 @@
+<h2 id="psychtoolbox-psychtests">[[Psychtoolbox]] › [[PsychTests]]</h2>
+<p><a href="VBLSyncTest" class="uri">VBLSyncTest</a>(n, numifis, loadjitter, clearmode, stereo, flushpipe, synchronous, usedpixx, screenNumber)</p>
+<p>Tests syncing of Psychtoolbox to the vertical retrace (VBL) and demonstrates<br />
+how to implement the old <a href="Screen" class="uri">Screen</a>(‘WaitBlanking’) behaviour with<br />
+<a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’)…</p>
+<p>This script provides a means to test, how well PTB synchronizes<br />
+stimulus onset and execution of Matlab/Octave with the vertical retrace<br />
+(also known as vertical blank or VBL) on your specific hardware setup.</p>
+<p>The script first opens a double-buffered fullscreen window. Then it<br />
+performs a monitor calibration timing loop to estimate the real monitor refresh<br />
+interval (aka IFI): While the formula ifi = 1.0 / <a href="Screen" class="uri">Screen</a>(‘NominalFramerate’) will<br />
+return an ifi that is close to the real IFI, it will be a little bit off<br />
+from the real value. The reason is unavoidable jitter in the manufacturing of<br />
+graphics cards internal clock circuits, as well as some drift and jitter<br />
+caused by instabilities and change in the power supply and operating<br />
+temperature of your machine. To be on the safe side, we use a timing-loop<br />
+to compute the real IFI as an average of the IFI’s of a number of consecutive<br />
+monitor refresh intervals.</p>
+<p>After the calibration you’ll see a simple animation: A flashing rectangle<br />
+moving from the top-left corner of the screen to the bottom-right corner.<br />
+During this animation, which lasts ‘n’ frames, it collects information<br />
+about the timing behaviour.</p>
+<p>At the end, a couple of graphs are shown to you that should allow you to<br />
+assess the timing behaviour of your setup.</p>
+<p>The following parameters can be changed in order to simulate different<br />
+loads and stimulus presentation timings to assess PTB’s behaviour under<br />
+different conditions.</p>
+<h3 id="parameters">PARAMETERS:</h3>
+<p>n = Number of samples to take. E.g., n=1000 == Draw an animation<br />
+consisting of 1000 frames.</p>
+<p>numifis = Number of monitor refresh intervals <a href="(IFIs)" class="uri">(IFIs)</a> between flips:<br />
+0 == <a href="Flip" class="uri">Flip</a> at each vertical retrace: This is the old PTB 1.0.50 behaviour.<br />
+Values of numifis&gt;0 will cause <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) to wait for ‘numifis’<br />
+monitor refresh intervals before flipping the back- and front buffers in<br />
+sync with the vertical retrace.</p>
+<p>This would be roughly equivalent to the following snippet of code in the old<br />
+<a href="MacOS9" class="uri">MacOS9</a>-PTB:<br />
+…<br />
+<a href="Screen" class="uri">Screen</a>(‘WaitBlanking’, windowPtr, numifis);<br />
+<a href="Screen" class="uri">Screen</a>(‘CopyWindow’, windowPtr, myOffscreenWindowwithStimulusPtr);<br />
+…</p>
+<p>loadjitter = Simulated load with a random duration between 0 ms<br />
+and loadjitter monitor refresh intervals: We wait for the specified<br />
+amount of time to simulate the execution of other Matlab-code, e.g.,<br />
+<a href="KbChecks" class="uri">KbChecks</a>, <a href="GetMouse" class="uri">GetMouse</a>, Matlab calculations …</p>
+<p>clearmode = Change the behaviour of <a href="Flip" class="uri">Flip</a> after flipping.<br />
+clearmode = 0 will clear your stimulus drawing surface to background color after flip.<br />
+This is the behaviour as found in PTB 1.0.50. After <a href="Flip" class="uri">Flip</a> you start with an<br />
+empty image and can draw a completely new stim.</p>
+<p>clearmode = 1 will not clear after a flip, but keep the contents of your stimulus<br />
+image after the <a href="Flip" class="uri">Flip</a>: This allows you to incrementally update/draw stimuli.</p>
+<p>clearmode = 2 will neither clear nor keep the drawing surface after <a href="Flip" class="uri">Flip</a>, but leave the<br />
+cleanup work to you. To be precise: The drawing surface will contain the<br />
+stimulus image that was *just shown* on the screen. Think of <a href="Flip" class="uri">Flip</a> as if it would<br />
+flip the front- and back-side of a sheet of paper: The current front side<br />
+shows the stim to your subject, the current back side is where you draw.<br />
+clearmode 2 will allow you to update the back side, which was the front<br />
+side before the flip happened! This mode is useful if you want to save<br />
+about 0.5-2 ms of time needed for mode 1 or 2 if you draw stimuli on very<br />
+tight deadlines.</p>
+<p>stereo = Test timing of display of stereoscopic stimuli.<br />
+stereo = 0 will show you a standard monoscopic display.<br />
+stereo = 1 will use the OS-X stereo output facilities to show stereoscopic<br />
+stimuli: OS-X will quickly alternate between two images at each monitor refresh,<br />
+one for the left-eye, one for the right-eye, while generating proper<br />
+control signals for LCD shutter glasses. This should work with <a href="MacOS" class="uri">MacOS</a>-X<br />
+compatible stereo display hardware, e.g., <a href="CrystalEyes" class="uri">CrystalEyes</a> shutter glasses.</p>
+<p>flushpipe = Mark end of drawing commands to improve presentation timing.<br />
+PTB knows a new command <a href="Screen" class="uri">Screen</a>(‘DrawingFinished’) which, when properly used,<br />
+will give PTB hints on how to optimize drawing of stimuli: This allows to draw<br />
+more complex stimuli at higher monitor refesh intervals with reliable presentation<br />
+timing. flushpipe enables/disables use of this new command.</p>
+<p>flushpipe = 0 Don’t mark end of drawing commands.<br />
+flushpipe = 1 Mark end of drawing commands to improve timing.</p>
+<p>synchronous = 0 Don’t wait for drawing completion in <a href="Screen" class="uri">Screen</a>(‘DrawingFinished’)<br />
+synchronous = 1 Wait for completion - Useful for benchmarking and debugging,<br />
+but degrades performance significantly in real experiments.</p>
+<p>usedpixx = 1 Use a <a href="DataPixx" class="uri">DataPixx</a>/<a href="ViewPixx" class="uri">ViewPixx</a>/<a href="ProPixx" class="uri">ProPixx</a> device for external<br />
+timestamping of stimulus onset, as a correctness test for <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’)<br />
+timestamping. Disabled (0) by default.<br />
+usedpixx = 2 Additionally correct for the clock skew between the computer<br />
+and <a href="DataPixx" class="uri">DataPixx</a> device.</p>
+<p>screenNumber = Use a screen other than the default (max) for testing .</p>
+<h3 id="examples">EXAMPLES:</h3>
+<p><a href="VBLSyncTest" class="uri">VBLSyncTest</a>(1000, 0, 0.6, 0, 0, 1, 0) – Render 1000 consecutive frames,<br />
+flip at each retrace , pausing for 0.6 frame durations after each flip.<br />
+Clear the framebuffer after flip, don’t use stereo output, but use the new<br />
+“<a href="DrawingFinished" class="uri">DrawingFinished</a>” command.</p>
+<p><a href="VBLSyncTest" class="uri">VBLSyncTest</a>(100, 10, 6, 1, 0, 1, 0) – Render 100 frames,<br />
+flip only every 10th monitor refresh interval (“<a href="WaitBlanking" class="uri">WaitBlanking</a>” for 10 refresh intervals),<br />
+pause for 6 frame durations after each flip. Don’t clear the framebuffer after<br />
+flip, don’t use stereo output, but use the new “<a href="DrawingFinished" class="uri">DrawingFinished</a>” command.</p>
+<p><a href="VBLSyncTest" class="uri">VBLSyncTest</a>(100, 10, 6, 1, 1, 1, 0) – Render 100 frames,<br />
+flip only every 10th monitor refresh interval (“<a href="WaitBlanking" class="uri">WaitBlanking</a>” for 10 refresh intervals),<br />
+pause for 6 frame durations after each flip. Don’t clear the framebuffer after<br />
+flip, use stereo output via “frame-sequential stereo”, use the new “<a href="DrawingFinished" class="uri">DrawingFinished</a>” command.</p>
+<h3 id="the-plots">THE PLOTS:</h3>
+<h3 id="explanation-of-how-to-read-the-plots">Explanation of how to read the plots:</h3>
+<p>Figure 1 shows the time delta between start of the VBL of successive<br />
+<a href="Flip" class="uri">Flip</a>’s: This value should be close to the requested delta as specified to<br />
+<a href="Flip" class="uri">Flip</a>, e.g., you set numifis=0 or numifis=1 on a 100 Hz monitor. Then<br />
+delta should be close to 1000 ms / 100 Hz = 10 ms. If numifis=2, it<br />
+should be close to two monitor refresh intervals = 20 ms…</p>
+<p>The green horizontal line denotes the proper delta value for your monitor<br />
+refresh rate and ‘numifis’ value. The blue graph shows measured deltas. A<br />
+jitter of less than +/- 1 ms indicates proper stimulus presentation timing -<br />
+no skipped frames.</p>
+<p>Figure 2 shows the rasterbeam positions when flip took its internal<br />
+timestamp: The values should be usually above the screen height, e.g., on<br />
+a monitor resolution of 1200 x 1024 pixels, values should be above 1024.<br />
+Values way below 1024 are also ok (e.g., &lt; 100). This just means that<br />
+your computer is either pretty slow, or connected to a flat-panel.<br />
+Lots of randomly distributed values between 0 and 1024 would indicate sync trouble.</p>
+<p>Figure 3: Shows the estimated difference between requested presentation<br />
+deadline and the real presentation deadline (start of VBL). Positive<br />
+values indicate a deadline-miss and give you an indication of how much<br />
+the deadline has been missed. Negative (or zero) values indicate that the<br />
+deadline has been met. While the sign of this value is useful for assessing<br />
+timing, the value itself is only meaningful for people who can read and<br />
+fully understand the C source code and logic of ‘Flips’ implementation…</p>
+<p>Figure 4: Shows the difference (in milliseconds) between estimated<br />
+start of VBL and return of the <a href="Flip" class="uri">Flip</a> command to Matlab. This is some<br />
+indication of the processing overhead of <a href="OpenGL" class="uri">OpenGL</a>, the Operating system and<br />
+Psychtoolbox when executing ‘<a href="Flip" class="uri">Flip</a>’. It’s also a lower bound for the<br />
+timing delay when trying to synchronize start of acquisition devices to<br />
+VBL.</p>
+<p>Figure 5: Shows the difference (in milliseconds) between estimated<br />
+stimulus onset (aka end of vertical retrace, scanning beam starts<br />
+at top of screen) and the end of <a href="Flip" class="uri">Flip</a>. This is the crucial value, if you<br />
+want to sync something like sound-playback, triggering of some<br />
+data-acquisition device (fMRI, MEG, EEG, …) to stimulus onset. It<br />
+should give you a feeling of how well you can sync. It’s possible that<br />
+negative values are reported on fast machines - <a href="Flip" class="uri">Flip</a> returns ahead of<br />
+time (while monitor is still in retrace state). This is fine because your<br />
+Matlab-Code for triggering something will add additional delays… Values<br />
+should be below 1-2 milliseconds on reasonably modern and correctly<br />
+configured hardware.</p>
+<p>Figure 6: Is only displayed when flag ‘synchronous=1’ This figure shows<br />
+the total accumulated time for all drawing commands from the last <a href="Flip" class="uri">Flip</a> to the<br />
+<a href="DrawingFinished" class="uri">DrawingFinished</a> command. It allows you to get a feeling on how hard the<br />
+graphics hardware has to work for drawing your stim - and if it is<br />
+possible at all to draw the stim on your hardware, given your time<br />
+constraints. During a normal experiment (without sync-flag), the<br />
+execution times of your Matlab code (as measured, e.g., by tic and toc)<br />
+and of the drawing commands don’t add up, because the graphics hardware<br />
+works in parallel to the Matlab code.</p>
+<p>Please read the code of this M-File carefully as an example of how to get<br />
+the best possible presentation timing on PTB-OSX.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychTests/VBLSyncTest.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychTests/VBLSyncTest.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychTests/VBLSyncTest.m</code></p>
+</div>

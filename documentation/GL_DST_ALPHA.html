@@ -1,0 +1,28 @@
+<h2 id="psychtoolbox-psychalphablending">[[Psychtoolbox]] › [[PsychAlphaBlending]]</h2>
+<p>constantString=GL_DST_ALPHA</p>
+<p>Return the string ‘GL_DST_ALPHA’, which specifies an alpha blending<br />
+factor to <a href="Screen" class="uri">Screen</a>(‘BlendFunction’, …).</p>
+<p>“Alpha” is a factor which weights RGB values when combining pixels by<br />
+drawing or copying. Alpha values weight the pixels drawn, the “source<br />
+surface”. Separate alpha values weight the pixels drawn onto, the<br />
+“destination surface”. A given pixel’s alpha factor is not necessarily<br />
+the alpha component of that pixel’s [rgba] color vector, but may instead<br />
+be the other combined surface’s alpha component, a function of either or<br />
+both both alpha compoenents, a constant, or it may derive from RGB values<br />
+of the other combined surface. The Psychtoolbox command<br />
+<a href="Screen" class="uri">Screen</a>(‘BlendFunction’) selects which. It implements the <a href="OpenGL" class="uri">OpenGL</a> function<br />
+“glBlendFunc”.</p>
+<p>In MATLAB, <a href="Screen" class="uri">Screen</a>(‘BlendFunction’) accepts strings named for C constants<br />
+passed to the <a href="OpenGL" class="uri">OpenGL</a> function glBlendFunc().Enter “Help<br />
+<a href="PsychAlphaBlending" class="uri">PsychAlphaBlending</a>” in the MATLAB command window for a list of blending<br />
+constants (and other functions related to alpha blending).</p>
+<p>GL_DST_ALPHA may be used as either a source or a destination factor.</p>
+<p>see also: <a href="PsychAlphaBlending" class="uri">PsychAlphaBlending</a>, <a href="AlphaDemo" class="uri">AlphaDemo</a>, <a href="AlphaBlendingTest" class="uri">AlphaBlendingTest</a>.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychAlphaBlending/GL_DST_ALPHA.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychAlphaBlending/GL_DST_ALPHA.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychAlphaBlending/GL_DST_ALPHA.m</code></p>
+</div>

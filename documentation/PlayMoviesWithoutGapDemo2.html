@@ -1,0 +1,33 @@
+<h2 id="psychtoolbox-psychdemos-moviedemos">[[Psychtoolbox]] › [[PsychDemos]] › [[MovieDemos]]</h2>
+<p><a href="PlayMoviesWithoutGapDemo2" class="uri">PlayMoviesWithoutGapDemo2</a>(moviename)</p>
+<p>This demo accepts a pattern for a valid moviename, e.g.,<br />
+moviename=‘*.mpg’, then it plays all movies in the current working<br />
+directory whose names match the provided pattern, e.g., the ‘*.mpg’<br />
+pattern would play all MPEG files in the current directory.</p>
+<p>Pressing ESC ends the demo.</p>
+<p>Movies are played one after each other. We try to minimize perceptible<br />
+gaps between end of movie i and start of movie i+1 by asynchronous<br />
+loading: While movie i is played back, we ask Psychtoolbox to load the<br />
+next movie i+1 in the background, so startup time for movie i+1 will be<br />
+minimized.</p>
+<p>This method uses only one ‘movie’ object for successive, gapless playback<br />
+of many movie files. The advantage is simplicity in use and maximum<br />
+quality in the sense that movies should play back-to-back without any<br />
+significant delays between them. The downside is loss in flexibility.<br />
+This method only works if all movies have exactly the same image size,<br />
+color depth and format, aspect ratio and playback framerate. They may<br />
+only differ in filename, content and duration. Any other difference will<br />
+cause malfunctions, even hard crashes of Matlab or Octave!</p>
+<p>If you need a method that is more flexible and can handle movies of<br />
+different format, use the method in <a href="PlayMoviesWithoutGapDemo1" class="uri">PlayMoviesWithoutGapDemo1</a>. That<br />
+method can handle arbitrary movies. The downside is a higher likelyhood<br />
+of small gaps between movies.</p>
+<p>History: 14.03.2012 mk Wrote it, derived from <a href="PlayMoviesWithoutGapDemo1" class="uri">PlayMoviesWithoutGapDemo1</a>.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/MovieDemos/PlayMoviesWithoutGapDemo2.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/MovieDemos/PlayMoviesWithoutGapDemo2.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/MovieDemos/PlayMoviesWithoutGapDemo2.m</code></p>
+</div>

@@ -1,0 +1,33 @@
+<h2 id="psychtoolbox-psychglimageprocessing">[[Psychtoolbox]] › [[PsychGLImageProcessing]]</h2>
+<p>rval = kPsychNeedRetinaResolution</p>
+<p>Return a flag that you can pass to the ‘imagingmode’ parameter of<br />
+<a href="Screen" class="uri">Screen</a>(‘OpenWindow’) in order to allow driving a <a href="HiDPI" class="uri">HiDPI</a> display, aka<br />
+Retina-Display at its full native resolution.</p>
+<p>Without this flag, <a href="Screen" class="uri">Screen</a>() will automatically enable its builtin<br />
+panelfitter if it detects the onscreen window being displayed on a Retina<br />
+style display, ie., with a scaled <a href="HiDPI" class="uri">HiDPI</a> display mode. The panelfitter<br />
+will expose only a smaller, lower resolution framebuffer to the user and<br />
+upscale user drawn stimuli to full panel resolution at <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’).<br />
+This is the same behaviour as what OSX normally exposes on a Retina<br />
+panel, because it doesn’t cause headaches with various coordinate<br />
+transforms, e.g., mouse or touch input coordinates to display coordinates<br />
+and vice versa and it puts less load on the GPU, therefore performance<br />
+impact is minimized. The downside of this default behaviour is that one<br />
+can’t take full advantage of the displays high resolution, apart from<br />
+anti-aliasing.</p>
+<p>By default <a href="Screen" class="uri">Screen</a>() will use the low-level compatibility mode via panel<br />
+fitting. If usercode explicitely requests use of the panelfitter via<br />
+<a href="PsychImaging" class="uri">PsychImaging</a>() tasks, then those requests override <a href="Screen" class="uri">Screen</a>’s default<br />
+behaviour.</p>
+<p>If usercode doesn’t want panelfitting or low-res modes, but the full<br />
+native Retina resolution, it can pass this flag to express its wish.<br />
+Normally the flag is passed by <a href="PsychImaging" class="uri">PsychImaging</a> as part of a more convenient<br />
+setup procedure.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychGLImageProcessing/kPsychNeedRetinaResolution.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychGLImageProcessing/kPsychNeedRetinaResolution.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychGLImageProcessing/kPsychNeedRetinaResolution.m</code></p>
+</div>

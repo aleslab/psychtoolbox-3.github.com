@@ -1,0 +1,25 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p>[secs, keyCode, deltaSecs] = <a href="KbPressWait" class="uri">KbPressWait</a>([deviceNumber][, untilTime=inf][, more optional args for <a href="KbWait" class="uri">KbWait</a>]);</p>
+<p><a href="KbPressWait" class="uri">KbPressWait</a> waits for a single key press of your subject, ie. it waits<br />
+until all keys on the keyboard are released, after that it waits for a<br />
+a press of a key, then it returns the keyboard state and timestamp of the key<br />
+press *without* waiting for the key press to finish ie, without waiting for<br />
+a key release.</p>
+<p>It also returns if the optional deadline ‘untilTime’ is reached.</p>
+<p>This is a convenience wrapper, doing the same thing as<br />
+<a href="KbWait" class="uri">KbWait</a>(deviceNumber, 2, …); so read “help <a href="KbWait" class="uri">KbWait</a>” for details about<br />
+operation and returned values.</p>
+<p>You’ll typically use this function to ask your subject for a response and<br />
+you want to continue your script immediately without delay, even if the<br />
+subject keeps the key pressed for a while – a typical usage would be if<br />
+you want to change the stimulus immediately after response, eg, blank the<br />
+display etc.</p>
+<p>See also: <a href="KbPressWait" class="uri">KbPressWait</a>, <a href="KbReleaseWait" class="uri">KbReleaseWait</a>, <a href="KbWait" class="uri">KbWait</a>, <a href="KbCheck" class="uri">KbCheck</a>, <a href="KbStrokeWait" class="uri">KbStrokeWait</a>.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/KbPressWait.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/KbPressWait.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/KbPressWait.m</code></p>
+</div>

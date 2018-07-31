@@ -1,0 +1,32 @@
+<h2 id="psychtoolbox-psychhardware-eyelinktoolbox-eyelinkdemos-sr-researchdemo">[[Psychtoolbox]] › [[PsychHardware]] › [[EyelinkToolbox]] › [[EyelinkDemos]] › [[SR-ResearchDemo]]</h2>
+<p>Short MATLAB example that uses the Eyelink and Psychophysics Toolboxes<br />
+This is the example as shown in the <a href="EyelinkToolbox" class="uri">EyelinkToolbox</a> article in BRMIC<br />
+Cornelissen, Peters and Palmer 2002), but updated to also work on the<br />
+PC version of the toolbox, and uses some new routines.</p>
+<p>Adapted after “Psychtoolbox[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkDemos](EyelinkDemos)  <a href="ShortDemos" class="uri">ShortDemos</a>[EyelinkExample](EyelinkExample).m”</p>
+<h3 id="history">HISTORY</h3>
+<p>mm/dd/yy<br />
+07/01/08 js redone the structure of the experiment and added<br />
+integration messages to the <a href="EyeLink" class="uri">EyeLink</a> Data Viewer software<br />
+07/14/08 js added code to set your own EDF file name before opening<br />
+the experiment graphics<br />
+07/13/10 fwc made to work with new toolbox with callback and updated to<br />
+enable eye image display, added “cleanup” function,<br />
+reenabled try-catch<br />
+09/20/12 srresearch updated to allow:<br />
+1. Transfer the image to host. (STEP 7.1)<br />
+2. Change the calibration colors and turn on/off the<br />
+calibration beep. (STEP 6)<br />
+3. End trials by button box. (STEP 7.5)<br />
+12/20/13 srresearch<br />
+Added part to make it run with octave<br />
+fixed issue with non integer arguments for Eyelink(‘message’ …)<br />
+removed cleanup function, used Eyelink(‘ShutDown’); <a href="Screen" class="uri">Screen</a>(‘CloseAll’) instead.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/EyelinkToolbox/EyelinkDemos/SR-ResearchDemo/EyeLinkPicture.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/EyelinkToolbox/EyelinkDemos/SR-ResearchDemo/EyeLinkPicture.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/EyelinkToolbox/EyelinkDemos/SR-ResearchDemo/EyeLinkPicture.m</code></p>
+</div>

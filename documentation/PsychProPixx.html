@@ -1,0 +1,81 @@
+<h2 id="psychtoolbox-psychhardware-datapixxtoolbox-datapixxbasic">[[Psychtoolbox]] › [[PsychHardware]] › [[DatapixxToolbox]] › [[DatapixxBasic]]</h2>
+<p><a href="PsychProPixx" class="uri">PsychProPixx</a>() - Drive fast display modes of <a href="ProPixx" class="uri">ProPixx</a> projectors.</p>
+<p>This function is an EXPERIMENTAL PROTOTYPE. It is subject<br />
+to backwards incompatible change, or maybe even complete<br />
+removal from future Psychtoolbox versions without warning!<br />
+If you intend to use it in your own experiments, better make<br />
+a private copy of the function file, or be prepared to rewrite<br />
+your experiment code after Psychtoolbox updates.</p>
+<p>This function provides a preliminary method to setup Psychtoolbox<br />
+for the fast display modes of the <a href="ProPixx" class="uri">ProPixx</a> projector and to use those<br />
+modes in a convenient and relatively efficient fashion.</p>
+<p>See <a href="PropixxImageUndistortionThrowaway" class="uri">PropixxImageUndistortionThrowaway</a>.m for a preliminary demo<br />
+on how to use this function.</p>
+<h3 id="subcommands-and-their-meaning">Subcommands and their meaning:</h3>
+<p><a href="PsychProPixx" class="uri">PsychProPixx</a>(‘SetupFastDisplayMode’, window, rate [, flipmethod=0][, localcalibration=none][, dogpumeasure=0]);<br />
+– Setup for Propixx fast display mode. ‘window’ is the handle of<br />
+the onscreen window which displays on the <a href="ProPixx" class="uri">ProPixx</a>. ‘rate’ is the<br />
+desired update rate, 4 for 4-fold rate (= 120 * 4 = 480 Hz), or<br />
+12 for 12-fold rate (= 120 * 12 = 1440 Hz). ‘flipmethod’ method<br />
+of flipping the stimulus images onto the screen. 0 = Standard<br />
+<a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’), 1 = <a href="Screen" class="uri">Screen</a>(‘AsyncFlipBegin’) async flips,<br />
+2 = Optimized non-blocking flips with later retrieval of timestamps<br />
+via <a href="PsychProPixx" class="uri">PsychProPixx</a>(‘GetTimingSamples’). Method 2 is the most efficient<br />
+method, but it is only supported on Linux with the open-source graphics<br />
+drivers. Method 1 is likely the second most efficient method and should<br />
+work on all operating systems, but returned timestamps need some<br />
+understanding of the rules for async flips. Method 0 is the most easy<br />
+to use on any system, but also likely the least efficient one.<br />
+‘localcalibration’ Specify a calibration file for display geometry correction<br />
+via a local method. This is usually slower than use of a global calibration,<br />
+so better use that and leave this parameter [] empty.<br />
+‘dogpumeasure’ If set to 1 then the actual processing time per frame<br />
+on the graphics card (gpu) will be measured with high precision if the<br />
+gpu + graphics driver supports this. This is useful for benchmarking and<br />
+tuning of code. Results are returned in the global variable ‘gpudur’ and<br />
+optionally plotted via <a href="PsychProPixx" class="uri">PsychProPixx</a>(‘DisableFastDisplayMode’, 1);</p>
+<p>image = <a href="PsychProPixx" class="uri">PsychProPixx</a>(‘GetImageBuffer’);<br />
+– Get an offscreen window suitable for drawing a stimulus into it,<br />
+and then passing it to <a href="PsychProPixx" class="uri">PsychProPixx</a>(‘QueueImage’, image);</p>
+<p>presenting = <a href="PsychProPixx" class="uri">PsychProPixx</a>(‘QueueImage’, image [, tWhen]);<br />
+- Queue a ‘image’ for presentation. ‘image’ must be a texture<br />
+or <a href="OffScreenWindow" class="uri">OffScreenWindow</a> of proper size, ie., half the width and height<br />
+of the onscreen window. The most easy way to get a matching<br />
+offscreen window for drawing into and presentation is to use<br />
+image = <a href="PsychProPixx" class="uri">PsychProPixx</a>(‘GetImageBuffer’).</p>
+<p>Once a sufficient number of images are queued, the final<br />
+image for driving the <a href="ProPixx" class="uri">ProPixx</a> projector is created and presented,<br />
+either at the next video refresh, or at the optional target time<br />
+‘tWhen’ - which is passed to the <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) command. When<br />
+this happens, the ‘presenting’ flag will return as either 1 in offline<br />
+timestamping mode (flipmethod 2), or as the <a href="Flip" class="uri">Flip</a> timestamp of<br />
+image onset for the whole composite image, otherwise it will return<br />
+as 0 if an image has just been queued for presentation.</p>
+<p>If you pass a ‘tWhen’ value of -1 then the <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) is not executed<br />
+automatically. Instead ‘presenting’ is returned as 1 when a flip needs to<br />
+be performed as soon as possible, and you need to manually call the function<br />
+presenting = <a href="PsychProPixx" class="uri">PsychProPixx</a>(‘<a href="Flip" class="uri">Flip</a>’ [, tWhen]); to trigger the actual flip. The<br />
+return value ‘presenting’ has the same meaning as the one of ‘QueueImage’.<br />
+This allows to split queuing and processing of stimulus images from actually<br />
+flipping. This allows to overlap cpu computations in Octave/Matlab with gpu<br />
+rendering better, by putting the cpu computations mostly between ‘QueueImage’<br />
+and final ‘<a href="Flip" class="uri">Flip</a>’. This is mostly advantageous for flipmethod 0, and to some<br />
+degree flipmethod 1, but not as efficient as using the Linux-only flipmethod 2.</p>
+<p>samples = <a href="PsychProPixx" class="uri">PsychProPixx</a>(‘GetTimingSamples’);<br />
+– Returns ‘<a href="Flip" class="uri">Flip</a>’ timestamps in the vector ‘samples’. Depending<br />
+on flipmode, either all samples of all presentations are returned<br />
+(for flipmode 2 on Linux), or up to the most recent 1200 samples<br />
+are returned (for flipmode 0 or 1 on all operating systems).</p>
+<p><a href="PsychProPixx" class="uri">PsychProPixx</a>(‘DisableFastDisplayMode’ [, plottimestamps]);<br />
+– Disable Propixx mode, reset internal variables etc. If the optional<br />
+‘plottimestamps’ flag is set to 1 then plots are generated which show<br />
+the collected durations of frame presentations, and potentially<br />
+collected timestamps of gpu rendertime if benchmarking was enabled.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/DatapixxToolbox/DatapixxBasic/PsychProPixx.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/DatapixxToolbox/DatapixxBasic/PsychProPixx.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/DatapixxToolbox/DatapixxBasic/PsychProPixx.m</code></p>
+</div>

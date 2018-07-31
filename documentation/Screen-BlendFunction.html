@@ -1,0 +1,44 @@
+<h1 id="screenblendfunction"><a href="Screen-BlendFunction">Screen(‘BlendFunction’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Return or set the current alpha-blending mode and the color buffer writemask for<br />
+window ‘windowIndex’.<br />
+Alpha blending is a way to combine color values of pixels already in the window<br />
+with new color values from drawing commands. Alpha blending is disabled by<br />
+default: If you overdraw some pixel location (x,y) in your window with a new<br />
+source color value [Rs Gs Bs As], then the window location gets that color value<br />
+assigned: I(x,y) = [Rs Gs Bs As]. However, <a href="OpenGL" class="uri">OpenGL</a> also allows you to combine<br />
+such new color values with color values previously stored in that location. The<br />
+old values are called destination colors [Rd Gd Bd Ad]. The way old and new<br />
+destination and source colors are combined into new destination colors is called<br />
+alpha-blending. Formally:<br />
+New color at location (x,y) is [Rn Gn Bn An] = blendequation([Rs Gs Bs As], [Rd<br />
+Gd Bd Ad]);<br />
+where blendequation is a function that describes how the new [Rs Gs Bs As]<br />
+color values and previous old values [Rd Gd Bd Ad] should be combined. You can<br />
+choose the ‘blendequation’ from a set of defined blend equations via choice of<br />
+the ‘sourceFactorNew’ and ‘destinationFactorNew’ arguments. See help<br />
+<a href="PsychAlphaBlending" class="uri">PsychAlphaBlending</a> and the help texts for the functions in that folder for<br />
+possible choices of blend factors. The default setting of GL_ONE, GL_ZERO<br />
+disables blending.<br />
+The most common alpha-blending factors are sourceFactorNew = GL_SRC_ALPHA and<br />
+destinationFactorNew = GL_ONE_MINUS_SRC_ALPHA They are needed for proper<br />
+anti-aliasing (smoothing) by <a href="Screen" class="uri">Screen</a>(‘DrawLines’), <a href="Screen" class="uri">Screen</a>(‘DrawDots’) and for<br />
+drawing masked stimuli with the <a href="Screen" class="uri">Screen</a>(‘DrawTexture’) command. See <a href="DotDemo" class="uri">DotDemo</a>,<br />
+<a href="LinesDemo" class="uri">LinesDemo</a>, <a href="AlphaImageDemo" class="uri">AlphaImageDemo</a>, <a href="GazeContingentDemo" class="uri">GazeContingentDemo</a> for a few applications of<br />
+alpha-blending.</p>
+<p>This function also allows to return and set the color write mask for a window:<br />
+You can prevent Psychtoolbox from drawing into and changing the content of one<br />
+or more color channels by disabling the color channel for writing. This allows<br />
+to perform drawing commands that only affect, e.g., the red chahnnel, but not<br />
+the blue, green or alpha channel. You choose the channels by specification of<br />
+the ‘colorMaskNew’ vector: The first element selects if writing to the red color<br />
+channel are allowed (value greater than zero) or disallowed (value equal zero).<br />
+The 2nd element selects the green channels state, the 3rd element selects the<br />
+blue channels state and the 4th element selects the alpha channels state. E.g.,<br />
+setting colorMaskNew equal to [1 1 0 0] would allow updates of the red and green<br />
+channel, but not of the blue and alpha channel. A setting of [0 1 0 1] would<br />
+allow updates to the green- and alpha channel, but not the red- and blue channel<br />
+etc. The default writemask is ‘all enabled’ ie. [1 1 1 1].</p>
+<p>Settings for alpha-blending and color write mask are per window: They can be set<br />
+individually for each onscreen window, offscreen window or texture.</p>
+<p>&lt;&lt;=====See also:===== DrawDots, DrawLines, DrawTexture &lt;&lt;</p>

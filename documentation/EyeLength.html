@@ -1,0 +1,45 @@
+<h2 id="psychtoolbox-psychcolorimetricdata">[[Psychtoolbox]] › [[PsychColorimetricData]]</h2>
+<p>eyeLengthMM = <a href="EyeLength" class="uri">EyeLength</a>(species,source)</p>
+<p>Return the length of the eye in mm. Length is taken as distance<br />
+between nodal point and fovea. For foveal stimuli, this length<br />
+may be used to convert between degrees of visual angle and mm/um<br />
+of retina. Since the nodal point isn’t at the center of eye,<br />
+the same conversion doesn’t work for extrafoveal stimuli.</p>
+<p>Supported species:<br />
+Human (Default), Rhesus, Dog</p>
+<p>Supported sources:<br />
+<a href="LeGrand" class="uri">LeGrand</a> (Human, 16.6832 mm, Default)<br />
+Rodieck (Human, 16.1 mm)<br />
+Gulstrand (Human, 17 mm)<br />
+<a href="PerryCowey" class="uri">PerryCowey</a> (Rhesus)<br />
+Packer (Rhesus)<br />
+<a href="PennDog" class="uri">PennDog</a> (Dog)<br />
+None</p>
+<p>Passing a numeric value as source returns that value as the<br />
+estimate, independent of species. This is a hack that allows<br />
+some debugging.</p>
+<p>Passing a string that is a number (that is, something that str2num<br />
+will turn into a number) as the source will cause that number to<br />
+be returned as the eye length. This is a bit redundant with the<br />
+numeric option above.</p>
+<p>Passing None is appropriate as an error check – if a calculation<br />
+uses the eye length when none is passed, NaN’s will show up in<br />
+the answer.</p>
+<p>Finally, if you pass a decimal number as a string, this value<br />
+will be returned. Useful for passing arbitrary numbers through<br />
+routines that rely on this function.</p>
+<p>7/15/03 dhb Wrote it.<br />
+2/27/13 dhb Added 17 mm option<br />
+3/1/13 dhb Changed ‘17’ to ‘Gulstrand’<br />
+dhb Added option of passing a number as a string.<br />
+4/12/13 dhb Fix bug introduced in previous update, which may have<br />
+been Matlab version dependent.<br />
+8/9/13 dhb A few more comments.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychColorimetricData/EyeLength.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychColorimetricData/EyeLength.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychColorimetricData/EyeLength.m</code></p>
+</div>

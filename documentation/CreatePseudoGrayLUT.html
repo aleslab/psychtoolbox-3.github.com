@@ -1,0 +1,60 @@
+<h2 id="psychtoolbox-psychglimageprocessing">[[Psychtoolbox]] › [[PsychGLImageProcessing]]</h2>
+<p>[lut, numuniquelevels] = <a href="CreatePseudoGrayLUT" class="uri">CreatePseudoGrayLUT</a>(nativeBpc)</p>
+<p>Create and return a 3 rows by 2^(nativeBpc + 4) columns RGB16 uint16<br />
+color lookup table ‘lut’, suitable as lut for the generic LUT based<br />
+luminance output formatter of the Psychtoolbox imaging pipeline. This<br />
+is a helper function for <a href="PsychImaging" class="uri">PsychImaging</a>(), usually not directly called by<br />
+user code.</p>
+<p>This will setup the pipeline for output of luminance images with about<br />
+1786 different levels of perceived luminance on a standard 8 bits per<br />
+color channel RGB framebuffer of a standard graphics card. Also supports<br />
+more levels on a 10 bpc or 12 bpc framebuffer.</p>
+<p>In general, under optimal conditions, for a suitable and well calibrated<br />
+display, a luminance precision increase of up to 2.8 bits on top of the<br />
+native output precision of the framebuffer and display device should be<br />
+possible. However, this has not been verified yet, especially for the higher<br />
+bit depths modes.</p>
+<h3 id="usage">Usage:</h3>
+<p>At the beginning of your script, replace the standard …</p>
+<p>win = <a href="Screen" class="uri">Screen</a>(‘OpenWindow’, screenid, …);</p>
+<h3 id="call-by-the-following-commands">… call by the following commands:</h3>
+<p><a href="PsychImaging" class="uri">PsychImaging</a>(‘PrepareConfiguration’);<br />
+<a href="PsychImaging" class="uri">PsychImaging</a>(‘AddTask’, ‘General’, ‘EnablePseudoGrayOutput’);<br />
+win = <a href="PsychImaging" class="uri">PsychImaging</a>(‘OpenWindow’, screenid, ….);</p>
+<h3 id="further-explanation">Further explanation:</h3>
+<p>The technique to represent 10.7 bits (log2(1786)) of luminance on a 8 bit<br />
+display is called “Pseudo Gray” or “Bit-Stealing”. It adds small delta<br />
+values to the different color channels to “tilt” the RGB color vector of<br />
+each pixel a bit away from the &quot;pure luminance’ axis. This slight tilt,<br />
+combined with the different emission characteristics of red, green and<br />
+blue monitor phospor and the different sensitivity of the human eye for the<br />
+three different colors, will create the perception (or illusion) of extra<br />
+luminance values. So far the theory. In practice you’ll need a well<br />
+calibrated and gamma corrected color monitor for this to work, and there<br />
+may be some smallish color artifacts in your stimuli.</p>
+<p>Anyway, this is the “poor man’s solution” to high bitdepths luminance<br />
+output, mostly here for illustration and demo purposes. If you need well<br />
+controlled high quality high resolution luminance output, check out our<br />
+different drivers for different high precision display devices like video<br />
+attenuators, the <a href="VideoSwitcher" class="uri">VideoSwitcher</a>, CRS Bits++ box and the AMD/ATI 10 bit<br />
+framebuffer driver. See “help <a href="PsychImaging" class="uri">PsychImaging</a>” for an overview and usage.</p>
+<p>The LUT encoding used here is based solely on the algorithm described at<br />
+this webpage by Richard W. Franzen:</p>
+<p><a href="http://r0k.us/graphics/pseudoGrey.html\" class="uri">http://r0k.us/graphics/pseudoGrey.html\</a></p>
+<p>The webpage refers to multiple different sources of this type of<br />
+algorithm, as apparently the principle was described by multiple independent<br />
+authors. There is also a reference to the “Bit stealing” technique by:</p>
+<p>Tyler C.W., Chan H., Liu L., <a href="McBride" class="uri">McBride</a> B. &amp; Kontsevich L.L. (1992)<br />
+“Bit-stealing: How to get 1786 or more grey levels from an 8-bit color<br />
+monitor”, Proc. SPIE #1666, pp 351-364.</p>
+<p>However, i haven’t ever read that article, so i don’t know if it proposes<br />
+exactly the same procedure although readers of that article told me that<br />
+it is “basically the same”.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychGLImageProcessing/CreatePseudoGrayLUT.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychGLImageProcessing/CreatePseudoGrayLUT.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychGLImageProcessing/CreatePseudoGrayLUT.m</code></p>
+</div>

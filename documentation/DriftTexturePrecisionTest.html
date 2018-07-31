@@ -1,0 +1,34 @@
+<h2 id="psychtoolbox-psychtests">[[Psychtoolbox]] › [[PsychTests]]</h2>
+<p><a href="DriftTexturePrecisionTest" class="uri">DriftTexturePrecisionTest</a>([highprecision=0][, verbose=0][, filterMode=1])</p>
+<p>This test finds the minimum useful subtexel stepsize of the graphics hardwares<br />
+texture coordinate interpolators. The minimum stepsize is the finest<br />
+subpixel stepwidth that the gfx-hardware can resolve into an image in a<br />
+meaningful way, e.g., for slow subpixel scrolling, drifting gratings and<br />
+such.</p>
+<p>It draws an alternating black-white pattern, reads it back, then draws<br />
+the pattern shifted by some small horizontal amount, reads it back and<br />
+compares the two drawn images. If they are different then the hardware<br />
+could resolve the subpixel increment into two different, properly shifted<br />
+images via bilinear texture interpolation. If they are the same then the<br />
+increment was too small to resolve for this hardware. The smallest<br />
+stepsize is found in multiple iterations that reduce the stepsize until<br />
+no difference is found anymore.</p>
+<p>The minimum resolvable stepsize for an ATI Mobility Radeon X1600 (e.g.,<br />
+<a href="MacBook" class="uri">MacBook</a> Pro) is 1/64 th of a pixel, which corresponds to 6 bits subpixel<br />
+accuracy.</p>
+<p>If the optional flag ‘highprecision’ is set to 1 or 2, then floating<br />
+point textures are used, instead of integer textures with 8 bit<br />
+resolution. 1 selects 16bpc float textures, 2 selects 32bpc float<br />
+textures. A setting of 3 or 4 selects also 16bpc or 32bpc float textures,<br />
+but additionally a special PTB GLSL interpolation shader is used instead<br />
+of the hard-wired interpolator of your gfx chip. This is computationally<br />
+more demanding and therefore slower, but it should provide higher<br />
+precision and better resolution.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychTests/DriftTexturePrecisionTest.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychTests/DriftTexturePrecisionTest.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychTests/DriftTexturePrecisionTest.m</code></p>
+</div>

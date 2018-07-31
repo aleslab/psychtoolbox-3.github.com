@@ -1,0 +1,50 @@
+<h2 id="psychtoolbox-psychdemos">[[Psychtoolbox]] › [[PsychDemos]]</h2>
+<p><a href="ContrastModulatedNoiseTheClumsyStyleDemo" class="uri">ContrastModulatedNoiseTheClumsyStyleDemo</a>([noisesize=512] [, staticnoise=0])</p>
+<p>This demo shows how to render contrast modulated noise with old, outdated<br />
+graphics hardware. A rectangular image with random noise of size<br />
+‘noisesize’ by ‘noisesize’ pixels is created, then drawn to the display.</p>
+<p>We use alpha-blending tricks to modulate the contrast of the noise in<br />
+realtime. In this demo you can move the mouse pointer to drag around a<br />
+“modulation disk” of 50 pixels diameter. Noise inside the disk has a<br />
+different contrast ‘fgcontrast’ from the rest of the image, which has a<br />
+contrast of ‘bgcontrast’ (see top of code for fgcontrast and bgcontrast).</p>
+<p>You can press the cursor left and cursor right keys to decrement or<br />
+increment the contrast inside the disk in steps of 0.01 units. Press<br />
+cursor up key to set the inside disk contrast equal to outside disk<br />
+contrast. Press ESCAPE key to finish the demo.</p>
+<p>The optional ‘staticnoise’ flag - if set to 1 - will render a static<br />
+noise image instead of one that changes at each frame. That’s faster<br />
+because one doesn’t need to recreate the noise texture each frame.</p>
+<p>How this works? Basically we use standard <a href="Screen" class="uri">Screen</a> 2D drawing commands to<br />
+draw a “contrast values weight map” into the alpha-channel, so the<br />
+alpha-channel encodes contrast values between 0.0 and 1.0 in steps of<br />
+1/256th. Then we draw a noise texture of fixed contrast into the<br />
+framebuffer and the alpha-blending hardware takes care of modulating the<br />
+contrast of the drawn noise texture with the values from the<br />
+alpha-channel.</p>
+<p>Hardware requirements: ATI Radeon 8500 or later, <a href="NVidia" class="uri">NVidia</a> Geforce2 or later<br />
+on <a href="MacOS" class="uri">MacOS</a>/X. Not Intel-GMA 950 of Intel <a href="MacBook" class="uri">MacBook</a>!</p>
+<p>Limitations: This demo is meant to run on outdated graphics hardware, so<br />
+it can’t make use of the Psychtoolbox imaging pipeline, which would allow<br />
+for a very elegant, flexible and fast implementation. We use a multi-pass<br />
+approach here to work around hardware restrictions as much as possible.<br />
+Some of the limitations of this approach: Contrast modulation is<br />
+restricted to 0.0 - 1.0 and accuracy is limited to 256 levels. Clamping<br />
+of your noise matrix (has to fit in the “normal” 8 bit 256 gray level<br />
+range) can change the noise distribution in unwanted ways. The multi-pass<br />
+approach used here is pretty inefficient, so redraw rates are pretty low,<br />
+e.g., max. 15 fps on a fast <a href="MacBookPro" class="uri">MacBookPro</a> with ATI Radeon X1600.</p>
+<p>If you have recent graphics hardware (ATI Radeon X1000 or later, <a href="NVidia" class="uri">NVidia</a><br />
+Geforce 6000 and later), take a look at <a href="ContrastModulatedNoiseTheElegantStyleDemo" class="uri">ContrastModulatedNoiseTheElegantStyleDemo</a>.m<br />
+instead. That demo takes advantage of the imaging pipeline, greatly<br />
+simplifying stimulus programming and lifting basically all restrictions<br />
+of the approach presented here. Achievable redraw rates are also much<br />
+higher that way!</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/ContrastModulatedNoiseTheClumsyStyleDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/ContrastModulatedNoiseTheClumsyStyleDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/ContrastModulatedNoiseTheClumsyStyleDemo.m</code></p>
+</div>

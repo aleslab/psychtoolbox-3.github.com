@@ -1,0 +1,23 @@
+<h2 id="psychtoolbox-psychcal">[[Psychtoolbox]] › [[PsychCal]]</h2>
+<p>cal = <a href="DropCalBits" class="uri">DropCalBits</a>(cal,whichScreen,[forceBit])</p>
+<p>Drops the bitdepth of a calibration file if<br />
+necessary. Useful for running programs<br />
+transparently on 8 and 10 bit hardware.</p>
+<p>If arg forceBits is passed, it is used as<br />
+the current hardware depth. Otherwise the<br />
+reported <a href="DACBits" class="uri">DACBits</a> of whichScreen is used.</p>
+<p>This code assumes calibration was done at<br />
+equally spaced levels in RGB settings, as is<br />
+the case with our calibration routines. May<br />
+not generalize, and I haven’t worried about<br />
+the roundoff errors. Certainly OK for basic<br />
+use.</p>
+<p>2/13/05 dhb Wrote it.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychCal/DropCalBits.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychCal/DropCalBits.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychCal/DropCalBits.m</code></p>
+</div>

@@ -1,0 +1,27 @@
+<h1 id="screennominalframerate"><a href="Screen-NominalFrameRate">Screen(‘NominalFrameRate’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Returns or sets the nominal video frame rate in Hz, as reported by your<br />
+computer’s video driver. ‘FrameRate’ is an alias for ‘NominalFrameRate’. By<br />
+default, this function returns the nominal framerate, as reported by your<br />
+operating system, rounded to the closest integral value. If you set the optional<br />
+‘mode’ flag to 1, then the framerate is returned without rounding to the closest<br />
+integer, but at floating point precision, on systems that support this <a href="(MacOS)-X%20and%20Linux">(MacOS</a>. GNU/Linux only: If you set the ‘mode’ flag to 2 and specify<br />
+‘reqFrameRate’, then Psychtoolbox will try to change the current video refresh<br />
+rate of the display: If ‘reqFrameRate’ is above 10.0, <a href="Screen" class="uri">Screen</a> will try to switch<br />
+to a framerate as close as possible to ‘reqFrameRate’ Hz. If ‘reqFrameRate’ is a<br />
+positive or negative value smaller than 10.0, then the video setting will be<br />
+changed by ‘reqFrameRate’ system dependent units. The new settings that would<br />
+result are validated to make sure they are safe for your display. Invalid<br />
+settings are rejected, returning a value of -1. On systems other than Linux, 0<br />
+is always returned to signal failure. On successfull framerate change, the new<br />
+resulting nominal framerate is returned with double precision. NOTE:<br />
+‘reqFrameRate’ must be pretty close to the initial framerate, e.g. initial +/- 2<br />
+Hz. It is not possible to apply big changes, e.g., from 60 Hz to 75 Hz. This<br />
+function is meant for fine-tuning the video refresh interval for the purpose of<br />
+synchronizing different displays or the display and other stimulation- or<br />
+acquisition devices. You can compensate for small phase-shifts or deviations…<br />
+Due to manufacturing tolerances and other noise in your system, the real monitor<br />
+refresh interval can differ slightly from the nominal values returned by this<br />
+function. To query the real, measured framerate use <a href="Screen" class="uri">Screen</a>(‘GetFlipInterval’)<br />
+instead.</p>
+<p>&lt;&lt;=====See also:===== FrameRate GetFlipInterval &lt;&lt;</p>

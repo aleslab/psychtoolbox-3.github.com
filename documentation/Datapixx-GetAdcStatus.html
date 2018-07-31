@@ -1,0 +1,48 @@
+<h1 id="datapixxgetadcstatus"><a href="Datapixx-GetAdcStatus">Datapixx(‘GetAdcStatus’)</a></h1>
+<h2 id="psychtoolbox-datapixx.mexdll-subfunction">[[Psychtoolbox]] › [[Datapixx]].{mex*,dll} subfunction</h2>
+<p>Returns a struct containing the following ADC status information:<br />
+-“dacAdcLoopback” is 1 if ADC inputs are driven internally by DAC outputs, or 0<br />
+if ADC inputs report real analog inputs.<br />
+-“freeRunning” is 1 if ADC hardware is sampling continuously, or 0 if it only<br />
+samples on ADC acquisition schedule ticks.<br />
+-“scheduleRunning” is 1 if the analog acquisition schedule is currently running,<br />
+or 0 if stopped.<br />
+-“scheduleOnset” is the programmed delay in seconds between <a href="StartAdcSchedule" class="uri">StartAdcSchedule</a><br />
+execution, and the first ADC sample acquisition.<br />
+-“scheduleRate” is the rate at which subsequent ADC samples are acquired.<br />
+-“scheduleRateUnits” is the programmed units of scheduleRate:<br />
+1: samples per second<br />
+2: samples per video frame<br />
+3: seconds per sample<br />
+-“numChannels” is the number of ADC channels scheduled for acquisition.<br />
+-“chanSelString” is a string with one selection status character per ADC<br />
+channel. If the channel is not scheduled, the character is ‘-’; otherwise, the<br />
+status character is the channel number (eg: ‘01234567——–’ means that<br />
+channels 0 to 7 are stored in the acquisition buffer, but channels 8-15 are<br />
+not).<br />
+-“chanRefString” is a string with one reference status character per ADC<br />
+channel:<br />
+‘-’: single ended, referenced to ground<br />
+‘D’: fully differential, referenced to adjacent channel<br />
+‘0’: differential, referenced to REF0<br />
+‘1’: differential, referenced to REF1<br />
+-“bufferBaseAddress” is the acquisition data buffer base address within the<br />
+Datapixx.<br />
+-“bufferSize” is the number of bytes in the acquisition data buffer.<br />
+-“numBufferFrames” is the total number of samples which fit in the acquisition<br />
+data buffer.<br />
+-“currentWriteFrame” is the buffer frame which will be written by the next<br />
+acquired ADC sample.<br />
+-“currentReadFrame” is the buffer frame which will be read by the next streaming<br />
+call to <a href="ReadAdcBuffer" class="uri">ReadAdcBuffer</a>.<br />
+-“newBufferFrames” = currentWriteFrame - currentReadFrame. This is the maximum<br />
+number of frames which can be read by the next call to <a href="ReadAdcBuffer" class="uri">ReadAdcBuffer</a> in<br />
+streaming mode, without causing a streaming underflow.<br />
+-“maxScheduleFrames”, if non-0, is the value of currentWriteFrame which will<br />
+automatically stop the schedule.<br />
+-“numStreamUnderflows” is the number of <a href="ReadAdcBuffer" class="uri">ReadAdcBuffer</a> streaming underflows which<br />
+have occurred since <a href="SetAdcSchedule" class="uri">SetAdcSchedule</a>. See <a href="ReadAdcBuffer" class="uri">ReadAdcBuffer</a> for details.<br />
+-“numStreamOverflows” is the number of <a href="ReadAdcBuffer" class="uri">ReadAdcBuffer</a> streaming overflows which<br />
+have occurred since <a href="SetAdcSchedule" class="uri">SetAdcSchedule</a>. See <a href="ReadAdcBuffer" class="uri">ReadAdcBuffer</a> for details.<br />
+See <a href="DatapixxAdc" class="uri">DatapixxAdc</a>*Demo files for examples.</p>
+<p>&lt;&lt;=====See also:===== SetAdcSchedule, StartAdcSchedule, StopAdcSchedule, ReadAdcBuffer &lt;&lt;</p>

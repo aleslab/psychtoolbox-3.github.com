@@ -1,0 +1,40 @@
+<h2 id="psychtoolbox-psychoneliners">[[Psychtoolbox]] › [[PsychOneliners]]</h2>
+<p>bytesName=<a href="NameBytes" class="uri">NameBytes</a>(numBytes [,abbreviateFlag])</p>
+<p><a href="NameBytes" class="uri">NameBytes</a> accepts a quantity of bytes and returns a string naming that number<br />
+of bytes in more readable form. For example:</p>
+<pre><code>\&gt;\&gt; c=[Screen](Screen)(&#39;Computer&#39;);  
+\&gt;\&gt; c.hw.physmem  
+
+ans =  
+
+   1.3422e+09  
+
+\&gt;\&gt; [NameBytes](NameBytes)(c.hw.physmem)  
+
+ans =  
+
+1.25 GB  
+
+\&gt;\&gt;  </code></pre>
+<h3 id="numbers-of-bytes-have-the-following-names-and-abbreviations">Numbers of bytes have the following names and abbreviations:</h3>
+<p>Byte B 2^0 1<br />
+<a href="KiloByte" class="uri">KiloByte</a> KB 2^10 1,024<br />
+<a href="MegaByte" class="uri">MegaByte</a> MB 2^20 1,048,576<br />
+<a href="GigaByte" class="uri">GigaByte</a> GB 2^30 1,073,741,824<br />
+<a href="TeraByte" class="uri">TeraByte</a> TB 2^40 1,099,511,627,776<br />
+<a href="PetaByte" class="uri">PetaByte</a> PB 2^50 1,125,899,906,842,624<br />
+<a href="ExaByte" class="uri">ExaByte</a> EB 2^60 1,152,921,504,606,846,976<br />
+<a href="ZettaByte" class="uri">ZettaByte</a> ZB 2^70 1,180,591,620,717,411,303,424<br />
+<a href="YottaByte" class="uri">YottaByte</a> YB 2^80 1,208,925,819,614,629,174,706,176</p>
+<p>By default <a href="NameBytes" class="uri">NameBytes</a> uses the abbeviated byte quantity label, for<br />
+example “GB” instead of “<a href="GigaBytes" class="uri">GigaBytes</a>”. For the full name, pass<br />
+1 in the optional abbreviateFlag argument.</p>
+<p>see also: <a href="NameFrequency" class="uri">NameFrequency</a>, <a href="DescribeComputer" class="uri">DescribeComputer</a></p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOneliners/NameBytes.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOneliners/NameBytes.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOneliners/NameBytes.m</code></p>
+</div>

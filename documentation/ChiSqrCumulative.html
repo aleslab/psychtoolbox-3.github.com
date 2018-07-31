@@ -1,0 +1,27 @@
+<h2 id="psychtoolbox-psychprobability">[[Psychtoolbox]] › [[PsychProbability]]</h2>
+<p>prob = <a href="ChiSqrCumulative" class="uri">ChiSqrCumulative</a>(X2,v)</p>
+<p>Computes the chi-squared probability function. <a href="ChiSqrCumulative" class="uri">ChiSqrCumulative</a>(X2,v)<br />
+returns P(X2|v), the probability of observing a chi-squared value &lt;= X2<br />
+with v degrees of freedom. This is the probability that the sum of<br />
+squares of v unit-variance normally-distributed random variables is &lt;=<br />
+X2. X2 and v may be matrices of the same size size, or either may be a<br />
+scalar.</p>
+<p>e.g., <a href="ChiSqrCumulative" class="uri">ChiSqrCumulative</a>(5.99,2) returns 0.9500, verifying the 95%<br />
+confidence bound for 2 degrees of freedom. This is also cross-checked in,<br />
+e.g., Abramowitz &amp; Stegun Table 26.8</p>
+<p>References: Press et al., Numerical Recipes, Cambridge, 1986;<br />
+Abramowitz &amp; Stegun, Handbook of Mathematical Functions, Dover, 1972.</p>
+<p>Peter R. Shaw, Woods Hole Oceanographic Institution<br />
+Woods Hole, MA 02543<br />
+(508) 457-2000 ext. 2473 pshaw@aqua.whoi.edu<br />
+March, 1990</p>
+<p>Computed using the Incomplete Gamma function, as given by<br />
+Press et al. (Recipes) eq. (6.2.17)</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychProbability/ChiSqrCumulative.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychProbability/ChiSqrCumulative.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychProbability/ChiSqrCumulative.m</code></p>
+</div>

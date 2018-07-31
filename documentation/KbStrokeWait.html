@@ -1,0 +1,23 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p>[secs, keyCode, deltaSecs] = <a href="KbStrokeWait" class="uri">KbStrokeWait</a>([deviceNumber][, untilTime=inf][, more optional args for <a href="KbWait" class="uri">KbWait</a>]);</p>
+<p><a href="KbStrokeWait" class="uri">KbStrokeWait</a> waits for a single keystroke of your subject, ie. it waits<br />
+until all keys on the keyboard are released, after that it waits for a<br />
+single keystroke - a single press of a key, followed by releasing the key<br />
+again. After the subject has finished its “keystroke” and released the key,<br />
+<a href="KbStrokeWait" class="uri">KbStrokeWait</a> returns the keyboard state and timestamp of the key press.</p>
+<p>It also returns if the optional deadline ‘untilTime’ is reached.</p>
+<p>This is a convenience wrapper, doing the same thing as<br />
+<a href="KbWait" class="uri">KbWait</a>(deviceNumber, 3, …); so read “help <a href="KbWait" class="uri">KbWait</a>” for details about<br />
+operation and returned values.</p>
+<p>You’ll typically use this function to ask your subject for input of a<br />
+single character, or for confirmation of something (e.g., “Press any key<br />
+when you’re ready for the next block of trials”).</p>
+<p>See also: <a href="KbPressWait" class="uri">KbPressWait</a>, <a href="KbReleaseWait" class="uri">KbReleaseWait</a>, <a href="KbWait" class="uri">KbWait</a>, <a href="KbCheck" class="uri">KbCheck</a>, <a href="KbStrokeWait" class="uri">KbStrokeWait</a>.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/KbStrokeWait.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/KbStrokeWait.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/KbStrokeWait.m</code></p>
+</div>

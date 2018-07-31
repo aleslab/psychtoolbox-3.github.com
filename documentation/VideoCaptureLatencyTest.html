@@ -1,0 +1,31 @@
+<h2 id="psychtoolbox-psychtests">[[Psychtoolbox]] › [[PsychTests]]</h2>
+<p><a href="VideoCaptureLatencyTest" class="uri">VideoCaptureLatencyTest</a></p>
+<p>This routine tests the latency of Videocapture for<br />
+a given Camera -&gt; Computer -&gt; PTB -&gt; gfx-card -&gt; display combo.</p>
+<h3 id="working-principle-and-usage">Working principle and usage:</h3>
+<ol type="1">
+<li><p>Point camera to monitor so that cameras field of view captures monitor<br />
+display area.</p></li>
+<li><p>Calibration: First a black screen is shown to the cam and captured to<br />
+find the average intensity of an image of a black display.<br />
+Then (over ten trials), the screen turns white and the script measures<br />
+the time delay between onset of white screen and arrival of a captured<br />
+image with at least 25% more intensity than the ‘black’-image – our<br />
+white image. This procedure is repeated 10 times and latencies averaged.</p></li>
+</ol>
+<p>-&gt; Rough estimate of delay from scene change to arrival of frame.<br />
+-&gt; You have to add the display onset delay if captured image should be<br />
+shown to subject for video feedback loops.</p>
+<h3 id="parameters">Parameters:</h3>
+<p>texfetch == 0 Measure only capture latency. 1 == Measure texture fetch<br />
+latency as well. 2 == Measure drawing and onset latency as well.</p>
+<p>History:<br />
+2/9/06 mk Written.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychTests/VideoCaptureLatencyTest.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychTests/VideoCaptureLatencyTest.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychTests/VideoCaptureLatencyTest.m</code></p>
+</div>

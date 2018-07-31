@@ -1,0 +1,66 @@
+<h2 id="psychtoolbox-psychopengl">[[Psychtoolbox]] › [[PsychOpenGL]]</h2>
+<p>objobject=<a href="LoadOBJFile" class="uri">LoadOBJFile</a>(modelname [, debug] [, preparse])</p>
+<p>Load an Alias/Wavefront ASCII-OBJ file and return description of corresponding 3D<br />
+models in ‘objobject’. The current implementation will only consider polygons<br />
+with 3 or 4 vertices per polygon, corresponding to <a href="OpenGL" class="uri">OpenGL</a> GL_TRIANGLES or GL_QUADS.<br />
+The routine can only parse ASCII OBJ files, not the (more disk space efficient)<br />
+binary files. It will also ignore any part of the OBJ specification that is not a<br />
+polygon mesh, e.g., NURBS. It will also ignore any kind of .mtl material/texture<br />
+definition files.</p>
+<p>Parameters:<br />
+‘modelname’ Filename of the OBJ file to read.<br />
+‘debug’ (Optional) If set to non-zero, some debug output is written to the Matlab prompt.<br />
+‘preparse’ (Optional) If set to non-zero (default), some preparsing is<br />
+done to speed up loading of large OBJ files. Preparsing assumes that all<br />
+vertices, texture coordinates and face indices contain 3 components. If<br />
+loading of your OBJ file fails, retry with preparse==0 to use a more<br />
+generic but slow loader.</p>
+<p>Return values:<br />
+‘objobject’ objobject is a cell array of structs. For each mesh in the<br />
+OBJ file, a single cell is created in objobject. Each cell contains a<br />
+struct whose subfields contain all information about the mesh. A struct<br />
+consists of the following fields:</p>
+<p>faces == 3-by-count or 4-by-count elements index matrix: Each of the ‘count’ columns<br />
+defines one of ‘count’ polygons. Each polygon is defined by an integer index into<br />
+the vertices, normals, texcoords arrays. Polygons can be triangles or quadrilaterals.</p>
+<p>vertices == A m-by-n vector of vertex position definitions: Each of the n columns<br />
+defines the position of one of n vertices. m Can be 2 for 2D points, 3 for 3D points<br />
+or 4 for 3D points with additional ‘w’ component.</p>
+<p>texcoords == Optional 2-by-n vector of texture coordinates.</p>
+<p>normals == Optional 3-by-n vector of surface normals.</p>
+<p>If a mesh contains triangle-definitions and quad-definitions, the triangle<br />
+definitions will be returned in ‘faces’ whereas the Quads will be returned in<br />
+‘quadfaces’. If only one type of primitives is defined, it will always be returned<br />
+in ‘faces’. It is possible but uncommon for a OBJ file to not contain ‘faces’ at all.</p>
+<p>subMeshName = String with the name of the sub-mesh stored in cell, as<br />
+defined by the ‘g’ (geometry group) parameter. Can be empty if no<br />
+explicit group names are defined.</p>
+<p>mtllib = Name of the .mtl material library definition file which contains<br />
+things like textures and rendering parameters for the object. Can be<br />
+empty if no such file is defined.</p>
+<p>usemtl = Cell array of material selectors. Can be empty, or have<br />
+arbitrarily many cells. Each cell defines which material from the<br />
+material library file ‘mtllib’ should be selected for rendering a subset<br />
+of the quad- or triangle-faces in a submesh. Each cell has these<br />
+subfields:</p>
+<p>materialName = String with name of material to select from mtllib.</p>
+<p>triStartIndex = Startindex (Starting with 0 for first element) of the<br />
+first triangle face to render with given materialName.</p>
+<p>quadStartIndex = Startindex (Starting with 0 for first element) of the<br />
+first quad face to render with given materialName.</p>
+<p>Example: Assuming the OBJ file contains exactly one triangle mesh, you’ll<br />
+be able to access its data as: objobject{1}.faces –&gt; faces of the mesh,<br />
+objobject{1}.vertices –&gt; vertex definitions, …</p>
+<p>nobjects = length(objobject); Will return the number of meshes in the OBJ<br />
+file in ‘nobjects’. objobject{i}.vertices would return the vertex<br />
+definition array of the i’th mesh in the OBJ file.</p>
+<p>This loader is an improved/modified version of the loader from MATLAB-Central, written by:<br />
+W.S. Harwin, University Reading, 2006</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOpenGL/LoadOBJFile.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOpenGL/LoadOBJFile.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOpenGL/LoadOBJFile.m</code></p>
+</div>

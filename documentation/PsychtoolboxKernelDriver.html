@@ -1,0 +1,91 @@
+<h2 id="psychtoolbox-psychdocumentation">[[Psychtoolbox]] › [[PsychDocumentation]]</h2>
+<p><a href="PsychtoolboxKernelDriver" class="uri">PsychtoolboxKernelDriver</a> - A low level support driver for Apple OS-X</p>
+<p>The <a href="PsychtoolboxKernelDriver" class="uri">PsychtoolboxKernelDriver</a> (PKD) is a <a href="MacOS" class="uri">MacOS</a>-X kernel extension (a<br />
+kext). It currently should fully work with AMD/ATI Radeon graphics cards<br />
+of the X1000 series, as well as the HD2000 series up to the most recent<br />
+AMD graphics cards, iow. anything released since around the year 2006.<br />
+On <a href="NVidia" class="uri">NVidia</a> cards, only beamposition queries for high precision timestamping<br />
+are supported. Intel graphics chips are not supported.</p>
+<p>The driver needs to be manually installed by a user with administrator<br />
+privileges and provides a few special services to PTB-3, ie., PTB’s<br />
+functionality is extended/enhanced if it detects such a driver at startup<br />
+time:</p>
+<p>* Beamposition queries (See help <a href="BeampositionQueries">BeampositionQueries)</a>) allow for<br />
+especially robust and accurate stimulus onset timestamping. They are<br />
+no longer supported by OS-X 10.9 and later and were not supported at all<br />
+on Intel based Macintosh computers with AMD/ATI or Intel graphics.<br />
+The driver restores this functionality for <a href="NVidia" class="uri">NVidia</a> and AMD/ATI gpu’s.<br />
+Support for Intel gpu’s is disabled by default, as it can lead to system<br />
+crashes due to some unfixable incompatibility of Intel graphics hardware<br />
+which is completely out of our control.</p>
+<p>* Multihead display sync: The driver allows to synchronize the display<br />
+refresh cycles of the displays connected to a multihead graphics card<br />
+to allow for high quality tear-free binocular and stereo stimulation of<br />
+subjects. This is only supported on AMD/ATI graphics cards.</p>
+<p>* Use of 10 bit per color component framebuffers: The driver enables two<br />
+extra bits of color output precision per color channel on your card,<br />
+allowing for 1 billion shades of different colors instead of the 16.8<br />
+million colors available without the driver. This was only supported on<br />
+AMD/ATI graphics cards and is no longer supported since Psychtoolbox 3.0.14,<br />
+as Apple sabotaged our ability to provide this functionality on OSX 10.11<br />
+and later.</p>
+<p>* The driver implements workarounds to fix some problems caused by<br />
+graphics driver and operating system bugs when the graphics card is used<br />
+with high color/luminance precision display devices like the CRS Bits+ or<br />
+Bits# boxes, or the <a href="VPixx" class="uri">VPixx</a> Inc. <a href="DataPixx" class="uri">DataPixx</a> and <a href="ViewPixx" class="uri">ViewPixx</a> devices, and similar<br />
+equipment. This is only supported on AMD/ATI graphics hardware.</p>
+<p>The driver only works with one single graphics card at a time. On a<br />
+single-gpu system it will just work. On a <a href="MacBookPro" class="uri">MacBookPro</a> hybrid-graphics<br />
+system with an integrated intel gpu and a discrete <a href="NVidia" class="uri">NVidia</a> or AMD gpu, it<br />
+will automatically switch to use the proper gpu. On a multi-gpu system<br />
+with multiple discrete gpu’s, e.g., <a href="MacPro" class="uri">MacPro</a> with multiple graphics cards<br />
+installed, it will use the default gpu zero by default. You can ask it use a<br />
+different gpu by calling the command <a href="PsychTweak" class="uri">PsychTweak</a>(‘UseGPUIndex’, gpuidx);<br />
+to select gpu ‘gpuidx’ - numbering starts at zero. Then call clear<br />
+<a href="Screen" class="uri">Screen</a>, so <a href="Screen" class="uri">Screen</a>() actually picks up the new setting. Simultaneous use<br />
+of multiple gpu’s is not supported at this time.</p>
+<p>As this driver accesses the hardware at a very low level, bypassing the<br />
+whole operating system, its graphics subsystem and drivers, there is<br />
+some potential for things to go wrong. Although our testing over 10 years<br />
+didn’t show any such problems, it could happen on some future OSX systems.<br />
+That is why this driver is considered a permanently experimental feature.</p>
+<h1 id="how-to-install-one-time-setup">How to install (one time setup)</h1>
+<p>OSX versions older than 10.11 “El Capitan” are no longer supported.</p>
+<p>Install the <a href="PsychtoolboxKernelDriver64Bit" class="uri">PsychtoolboxKernelDriver64Bit</a>.kext.zip, as exemplified here.</p>
+<h3 id="you-must-type-this-into-the-terminal">You must type this into the terminal:</h3>
+<p>cd /System/Library/Extensions/<br />
+sudo unzip /<a href="PathToPsychtoolbox" class="uri">PathToPsychtoolbox</a>/Psychtoolbox/<a href="PsychHardware" class="uri">PsychHardware</a>/<a href="PsychtoolboxKernelDriver64Bit" class="uri">PsychtoolboxKernelDriver64Bit</a>.kext.zip</p>
+<p>“<a href="PathToPsychtoolbox" class="uri">PathToPsychtoolbox</a>” must be replaced with the path to the Psychtoolbox folder, e.g., if your<br />
+Psychtoolbox is installed under /Users/kleinerm/Psychtoolbox, then the above command would<br />
+look like this:</p>
+<p>sudo unzip /Users/kleinerm/Psychtoolbox/<a href="PsychHardware" class="uri">PsychHardware</a>/<a href="PsychtoolboxKernelDriver64Bit" class="uri">PsychtoolboxKernelDriver64Bit</a>.kext.zip</p>
+<p>This will automatically load the driver after a few seconds, and also after<br />
+each system restart.</p>
+<p>If the driver fails to load, then please report it to the Psychtoolbox forum.<br />
+If it fails to load due to invalid cryptographic signatures you can disable<br />
+“System integrity protection” (SIP) as a temporary measure. The Internet will<br />
+tell you how to do that. This would make the kernel driver load, but reduce<br />
+resistance of your system against potential hacker/virus/trojan horses attacks<br />
+and other security threats.</p>
+<p>If you are a user of OSX 10.13 “High Sierra” or later, the iToys company put up<br />
+some additional obstacles on top of all the awfulness of macOS. Read these<br />
+instructions if you get the error message “System policy prevents loading the kernel extension.”<br />
+from “kextload”, or it fails for some other reason:</p>
+<p>https://developer.apple.com/library/content/technotes/tn2459/_index.html</p>
+<h1 id="how-to-upgrade-with-a-more-recent-version-bundled-with-a-new-version-of-psychtoolbox">How to upgrade with a more recent version, bundled with a new version of Psychtoolbox</h1>
+<h3 id="you-can-unload-and-delete-the-driver-before-a-driver-upgrade-via">You can unload and delete the driver before a driver upgrade via:</h3>
+<p>sudo kextunload /System/Library/Extensions/<a href="PsychtoolboxKernelDriver" class="uri">PsychtoolboxKernelDriver</a>.kext<br />
+sudo rm -R /System/Library/Extensions/<a href="PsychtoolboxKernelDriver" class="uri">PsychtoolboxKernelDriver</a>.kext</p>
+<p>Then you can follow the instructions for installation above.</p>
+<p>If everything went well, Psychtoolbox will report availability (and its<br />
+use) of the driver the first time the <a href="Screen" class="uri">Screen</a>() mex file gets loaded and<br />
+used. If it doesn’t happen immediately, type “clear <a href="Screen" class="uri">Screen</a>” to force a<br />
+reload of <a href="Screen" class="uri">Screen</a>.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDocumentation/PsychtoolboxKernelDriver.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDocumentation/PsychtoolboxKernelDriver.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDocumentation/PsychtoolboxKernelDriver.m</code></p>
+</div>

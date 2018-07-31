@@ -1,0 +1,32 @@
+<h2 id="psychtoolbox-psychdemos">[[Psychtoolbox]] › [[PsychDemos]]</h2>
+<p>function <a href="DriftDemo4" class="uri">DriftDemo4</a>([angle=0][, cyclespersecond=1][, freq=1/360][, gratingsize=360][, internalRotation=0])<br />
+___________________________________________________________________</p>
+<p>Display an animated grating, using the new <a href="Screen" class="uri">Screen</a>(‘DrawTexture’) command.<br />
+This demo demonstrates fast drawing of such a grating via use of procedural<br />
+texture mapping. It only works on hardware with support for the GLSL<br />
+shading language, vertex- and fragmentshaders. The demo ends if you press<br />
+any key on the keyboard.</p>
+<p>The grating is not encoded into a texture, but instead a little algorithm - a<br />
+procedural texture shader - is executed on the graphics processor (GPU)<br />
+to compute the grating on-the-fly during drawing.</p>
+<p>This is very fast and efficient! All parameters of the grating can be<br />
+changed dynamically. For a similar approach wrt. Gabors, check out<br />
+<a href="ProceduralGaborDemo" class="uri">ProceduralGaborDemo</a>. For an extremely fast aproach for drawing many Gabor<br />
+patches at once, check out <a href="ProceduralGarboriumDemo" class="uri">ProceduralGarboriumDemo</a>. That demo could be<br />
+easily customized to draw many sine gratings by mixing code from that<br />
+demo with setup code from this demo.</p>
+<p>Optional Parameters:<br />
+‘angle’ = Rotation angle of grating in degrees.<br />
+‘internalRotation’ = Shall the rectangular image patch be rotated<br />
+(default), or the grating within the rectangular patch?<br />
+gratingsize = Size of 2D grating patch in pixels.<br />
+freq = Frequency of sine grating in cycles per pixel.<br />
+cyclespersecond = Drift speed in cycles per second.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/DriftDemo4.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/DriftDemo4.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/DriftDemo4.m</code></p>
+</div>

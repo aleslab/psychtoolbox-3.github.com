@@ -1,0 +1,24 @@
+<h2 id="psychtoolbox-psychalphablending">[[Psychtoolbox]] › [[PsychAlphaBlending]]</h2>
+<p>newSourceMat=<a href="AlphaSourceTerm" class="uri">AlphaSourceTerm</a>(sourceFactorStr, sourceMat, destinationMat)</p>
+<p><a href="AlphaSourceTerm" class="uri">AlphaSourceTerm</a> simuluates the step of multplying an alpha factor with the<br />
+source image in <a href="OpenGL" class="uri">OpenGL</a> alpha blending.</p>
+<p>Apply an <a href="OpenGL" class="uri">OpenGL</a> source factor rule such as ‘GL_ZERO’ to the image matrix<br />
+‘sourceMat’, returing the dot product of sourceMat and the alpha factor<br />
+selected by string ‘sourceFactorStr’.</p>
+<p>The destination image matrix ‘destinationMat’ is required because source<br />
+factor strings may select alpha values from the destination.</p>
+<p><a href="AlphaSourceTerm" class="uri">AlphaSourceTerm</a> calculates with double-precision (64-bit) floating point<br />
+arithmatitic whereas the precision of an <a href="OpenGL" class="uri">OpenGL</a> renderer which it<br />
+simulates is unspecified, except that <a href="OpenGL" class="uri">OpenGL</a> guarantees perfect precision<br />
+for alpha values 0 and 1 (255 via <a href="Screen" class="uri">Screen</a>). Comparison of <a href="AlphaSourceTerm" class="uri">AlphaSourceTerm</a><br />
+with the <a href="OpenGL" class="uri">OpenGL</a> renderer shows that alpha multiplicaion discards up to<br />
+one bit of precision.</p>
+<p>see also: <a href="AlphaDestinationProduct" class="uri">AlphaDestinationProduct</a> <a href="PsychAlphaBlending" class="uri">PsychAlphaBlending</a></p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychAlphaBlending/AlphaSourceTerm.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychAlphaBlending/AlphaSourceTerm.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychAlphaBlending/AlphaSourceTerm.m</code></p>
+</div>

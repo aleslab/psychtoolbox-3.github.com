@@ -1,0 +1,22 @@
+<h2 id="psychtoolbox-psychdemos">[[Psychtoolbox]] › [[PsychDemos]]</h2>
+<p><a href="DrawManuallyAntiAliasedTextDemo" class="uri">DrawManuallyAntiAliasedTextDemo</a>([textSize=96]) - Manually anti-alias text for special purpose applications.</p>
+<p>This demo shows how to draw somewhat anti-aliased text efficiently if you<br />
+can’t use the operating systems built-in text anti-aliasing for some<br />
+reason.</p>
+<p>It draws the text oversized, without anti-aliasing, into an offscreen<br />
+window. Then it draws the offscreen window into the onscreen window,<br />
+applying alpha-blending and bilinear texture filtering, shrinking to 50%<br />
+size. A GLSL shader based gaussian blur operator is applied during<br />
+drawing to reduce aliasing caused high-frequency edges in the texts<br />
+contour.</p>
+<p>This needs a modern graphics card to work and is not as efficient as the<br />
+operating systems anti-aliasing, but still reasonably fast if done right.</p>
+<p>see also: <a href="PsychDemos" class="uri">PsychDemos</a></p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/DrawManuallyAntiAliasedTextDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/DrawManuallyAntiAliasedTextDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/DrawManuallyAntiAliasedTextDemo.m</code></p>
+</div>

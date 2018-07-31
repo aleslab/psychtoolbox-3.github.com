@@ -1,0 +1,50 @@
+<h2 id="psychtoolbox-psychcal">[[Psychtoolbox]] › [[PsychCal]]</h2>
+<p>[cal, cals, fullFilename] = <a href="LoadCalFile" class="uri">LoadCalFile</a>([filespec], [whichCal], [dir])</p>
+<p>Load calibration data from saved file in the <a href="CalData" class="uri">CalData</a> folder.<br />
+Will search one level deep in the <a href="CalData" class="uri">CalData</a> folder if the<br />
+file does not exist at the top level, but skips subdirs<br />
+called ‘xOld’, ‘Plots’, and those that begin with ‘.’.</p>
+<p>If no argument is given, loads from file default.mat. If<br />
+an integer N is passed, loads from file screenN.mat. If<br />
+a string S is given, loads from S.mat. You can pass the<br />
+trailing .mat as well and it will still work.</p>
+<p>If whichCal is specified, the whichCal’th calibration<br />
+in the file is returned. If whichCal &gt; nCals, an<br />
+empty calibration is returned. whichCal defaults<br />
+to the most recent calibration, if not passed or passed<br />
+as the empty matrix. You can also pass Inf for whichCal<br />
+to get the most recent calibration.</p>
+<p>If the specified file cannot be found, returns empty matrix.</p>
+<p>The returned variable cal is a structure containing calibration<br />
+information.</p>
+<p>The returned cell array cals contains all of the calibrations<br />
+stored in the file</p>
+<p>The returned string fullFilename is the full path to the calibration<br />
+file.</p>
+<p>See also <a href="SaveCalFile" class="uri">SaveCalFile</a>, <a href="CalDataFolder" class="uri">CalDataFolder</a>.</p>
+<p>5/28/96 dgp Wrote it.<br />
+6/6/96 dgp Use <a href="CalibrationsFolder" class="uri">CalibrationsFolder</a>.<br />
+6/6/96 dgp Use whole path in filename so Matlab will only look there.<br />
+7/25/96 dgp Use <a href="CalDataFolder" class="uri">CalDataFolder</a>.<br />
+8/4/96 dhb More flexible filename interface.<br />
+8/21/97 dhb Rewrite for calibrations stored as cell array.<br />
+Optional return of entire calibration history.<br />
+8/26/97 dhb Handle case of isempty(cals).<br />
+Added whichCal argument.<br />
+5/18/99 dhb Added dir argument.<br />
+8/15/00 dhb Modify to handle local/demo cal directories.<br />
+4/2/13 dhb Updated for subdir searching logic.<br />
+6/2/13 dhb More robust about whether passed filespec contains the trailing ‘.mat’.<br />
+7/3/13 dhb Fix buglet for check on trailing .mat when length of filename less than 4 chars.<br />
+12/11/14 dhb Use fullfile rather than straight append to build up full path to cal file.<br />
+10/23/15 dhb Suppress warning about enumeration being converted to<br />
+struct on load. This can happen when the cal struct contains a field<br />
+that is an ennumeration, but is, I think, OK.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychCal/LoadCalFile.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychCal/LoadCalFile.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychCal/LoadCalFile.m</code></p>
+</div>

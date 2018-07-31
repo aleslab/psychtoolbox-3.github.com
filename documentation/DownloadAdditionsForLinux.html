@@ -1,0 +1,42 @@
+<h2 id="psychtoolbox">[[Psychtoolbox]]</h2>
+<p><a href="DownloadAdditionsForLinux" class="uri">DownloadAdditionsForLinux</a>(targetdirectory [, flavor]);</p>
+<p>Install missing Matlab or Octave mex files for older versions of the<br />
+Psychtoolbox, as provided by some Linux distributions, e.g., Ubuntu 12.10<br />
+or (as of April 2013) 13.04.</p>
+<p>It needs Subversion to be installed on your machine (sudo apt-get install<br />
+subversion).</p>
+<p>You *do not need* this function if you downloaded Psychtoolbox from its<br />
+home-site via <a href="DownloadPsychtoolbox" class="uri">DownloadPsychtoolbox</a>(), or if you install Psychtoolbox from<br />
+the <a href="NeuroDebian" class="uri">NeuroDebian</a> repository. If you install from <a href="NeuroDebian" class="uri">NeuroDebian</a>, simply<br />
+install these packages:</p>
+<h3 id="for-matlab">For Matlab:</h3>
+<p>Basic Mex files: sudo apt-get install matlab-psychtoolbox-3<br />
+Datapixx and Eyelink: sudo apt-get install matlab-psychtoolbox-3-nonfree</p>
+<p>For Octave, if you want to use the Datapixx or Eyelink functions:<br />
+sudo apt-get install octave-psychtoolbox-3-nonfree</p>
+<p>However, some Linux distributinos bundle Psychtoolbox as part of their<br />
+standard package repository, e.g., Ubuntu 12.10 and 13.04, and they<br />
+provide outdated packages (as of April 2013) which require you to run<br />
+this script manually after each installation or update in order to<br />
+retrieve mex files for Matlab, or the Datapixx and Eyelink mex files for<br />
+octave.</p>
+<p>You can call this function from within Matlab, providing the full path to<br />
+a directory. The function will create a new folder <a href="PsychtoolboxAddOns" class="uri">PsychtoolboxAddOns</a><br />
+inside that directory and add it to your path. The add on files will be<br />
+downloaded from the Psychtoolbox main repository and stored there.</p>
+<p>After this function successfully completes, your Psychtoolbox should work<br />
+with Matlab on Linux as well.</p>
+<p>If you call this function from within Octave, it will download only a few<br />
+additional addon files for the Octave Psychtoolbox. Currently the only<br />
+added files are the Eyelink mex files for SR-Research Eyelink<br />
+Gazetrackers, and the Datapixx mex file for <a href="VPixx" class="uri">VPixx</a> Inc. products.</p>
+<p>This function should eventually become obsolete when the regular mainstream<br />
+Linux distributions update their packaged versions of Psychtoolbox.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/DownloadAdditionsForLinux.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/DownloadAdditionsForLinux.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/DownloadAdditionsForLinux.m</code></p>
+</div>

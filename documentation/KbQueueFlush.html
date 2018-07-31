@@ -1,0 +1,28 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p>nflushed = <a href="KbQueueFlush" class="uri">KbQueueFlush</a>([deviceIndex][flushType=1])</p>
+<p>Flush <a href="KbQueue" class="uri">KbQueue</a> and/or <a href="KbQueue" class="uri">KbQueue</a> event buffer. By default, if flushType is<br />
+omitted, only the <a href="KbQueues" class="uri">KbQueues</a> events are deleted. Other ‘flushTypes’ affect<br />
+the <a href="KbQueue" class="uri">KbQueue</a> event buffer, but rather use the <a href="KbEventFlush" class="uri">KbEventFlush</a>() function to<br />
+do this.</p>
+<p>If ‘flushType’ is 0, only the number of currently queued events will be<br />
+returned.</p>
+<p>If ‘flushType’ is 1, only events returned by <a href="KbQueueCheck" class="uri">KbQueueCheck</a> will be flushed. This<br />
+is the default.</p>
+<p>If ‘flushType’ is 2, only events returned by <a href="KbEventGet" class="uri">KbEventGet</a> will be flushed.</p>
+<p>If ‘flushType’ is 3, events returned by both <a href="KbQueueCheck" class="uri">KbQueueCheck</a> and <a href="KbEventGet" class="uri">KbEventGet</a><br />
+will be flushed.</p>
+<p>If ‘flushType’ is 4, only the number of key-press events with valid, mapped ASCII<br />
+<a href="CookedKey" class="uri">CookedKey</a> field will be returned.</p>
+<p>Removes all unprocessed events from the queue and zeros out any already<br />
+scored events.<br />
+_________________________________________________________________________</p>
+<p>See also: <a href="KbQueueCreate" class="uri">KbQueueCreate</a>, <a href="KbQueueStart" class="uri">KbQueueStart</a>, <a href="KbQueueStop" class="uri">KbQueueStop</a>, <a href="KbQueueCheck" class="uri">KbQueueCheck</a>,<br />
+<a href="KbQueueWait" class="uri">KbQueueWait</a>, <a href="KbQueueFlush" class="uri">KbQueueFlush</a>, <a href="KbQueueRelease" class="uri">KbQueueRelease</a></p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/KbQueueFlush.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/KbQueueFlush.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/KbQueueFlush.m</code></p>
+</div>

@@ -1,0 +1,31 @@
+<h2 id="psychtoolbox-psychdemos">[[Psychtoolbox]] › [[PsychDemos]]</h2>
+<p><a href="ImagingStereoMoviePlayer" class="uri">ImagingStereoMoviePlayer</a>(moviefile [,stereoMode=8] [,imaging=1] [,anaglyphmode=0] [,screenid=max])</p>
+<p>Minimalistic movie player for stereo movies. Reads movie from file<br />
+‘moviefile’. Left half of each movie video frame must contain left-eye<br />
+image, whereas right half of each frame must contain right-eye image.</p>
+<p>‘stereoMode’ mode of presentation, defaults to mode 8 (Red-Blue<br />
+Anaglyph). ‘imaging’ if set to 1, will use the Psychtoolbox imaging<br />
+pipeline for stereo display – allows to set gains for anaglyph stereo<br />
+and other more advanced anaglyph algorithms.</p>
+<p>stereoMode 103 activates stereo display on a VR HMD.</p>
+<p>‘anaglyphmode’ when imaging is enabled, allows to select the type of<br />
+anaglyph algorithm:</p>
+<p>0 = Standard anaglyphs.<br />
+1 = Gray anaglyphs.<br />
+2 = Half-color anaglyphs.<br />
+3 = Optimized color anaglyphs.<br />
+4 = Full color anaglyphs.</p>
+<p>See “help <a href="SetAnaglyphStereoParameters" class="uri">SetAnaglyphStereoParameters</a>” for further description and references.</p>
+<p>‘screenid’ <a href="Screen" class="uri">Screen</a> id of target display screen (on multi-display setups).<br />
+By default, the screen with maximum id is used.</p>
+<p>The left image is centered on the screen, the right images position can<br />
+be moved by moving the mouse cursor to align for inter-eye distance.</p>
+<p>Press any key to quit the player.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/ImagingStereoMoviePlayer.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/ImagingStereoMoviePlayer.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/ImagingStereoMoviePlayer.m</code></p>
+</div>

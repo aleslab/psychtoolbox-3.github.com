@@ -1,0 +1,22 @@
+<h2 id="psychtoolbox-psychgamma">[[Psychtoolbox]] › [[PsychGamma]]</h2>
+<p>y=<a href="MonitorGamma" class="uri">MonitorGamma</a>(x,x0,gamma)</p>
+<p>This function is commonly used to describe the “gamma” function of a video<br />
+monitor. x represents input voltage and y represents luminance. There are two<br />
+parameters: threshold x0, and the exponent gamma. In my applications, x and y<br />
+have been normalized so that the gamma curve always goes through (0,0) and (1,1),<br />
+so I’ve built that constraint into the function:<br />
+if x&lt;=x0 then y=0<br />
+if x&gt;x0 then y=((x-x0)/(1-x0))^gamma<br />
+The arguments can be scalars or matrices; <a href="MonitorGamma" class="uri">MonitorGamma</a> will do the right thing.<br />
+Note that it is unreasonable for x0 to be outside the unit interval, or for g to<br />
+be negative, but these constraints are not enforced here.</p>
+<p>See <a href="MonitorGammaError" class="uri">MonitorGammaError</a>.</p>
+<p>Denis Pelli 5/28/96</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychGamma/MonitorGamma.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychGamma/MonitorGamma.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychGamma/MonitorGamma.m</code></p>
+</div>

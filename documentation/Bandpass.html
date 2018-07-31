@@ -1,0 +1,16 @@
+<h2 id="psychtoolbox-psychsignal">[[Psychtoolbox]] › [[PsychSignal]]</h2>
+<p>w=<a href="Bandpass" class="uri">Bandpass</a>(n,fLow,fHigh) returns a 1xn window, a band-pass filter. The<br />
+elements represent gain at each freq, uniformly spaced from -1 to 1 of<br />
+Nyquist frequency. fLow and fHigh are the positive cut-off frequencies<br />
+on this scale. We pass frequencies in the interval [fLow,fHigh). The<br />
+asymmetric use of bounds guarantees that complementary filters will add<br />
+to 1: <a href="Bandpass" class="uri">Bandpass</a>(n,0,f)+<a href="Bandpass" class="uri">Bandpass</a>(n,f,Inf)==ones(1,n). If fHigh is omitted<br />
+it’s assumed to be Inf. Also see Bandpass2.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychSignal/Bandpass.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychSignal/Bandpass.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychSignal/Bandpass.m</code></p>
+</div>

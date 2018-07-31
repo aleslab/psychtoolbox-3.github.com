@@ -1,0 +1,70 @@
+<h2 id="psychtoolbox-psychdocumentation">[[Psychtoolbox]] › [[PsychDocumentation]]</h2>
+<p><a href="AntiAliasing" class="uri">AntiAliasing</a> – Psychtoolbox facilities for Anti-Aliasing.</p>
+<p>According to http://www.wikipedia.org , anti-aliasing is the<br />
+technique of minimizing aliasing (jagged or blocky patterns)<br />
+when representing a high-resolution signal at a lower resolution.</p>
+<p>If you want to know in detail about the reason for aliasing artifacts<br />
+in digital computer images and the theoretical approaches for removing<br />
+or reducing it, as a starter, search and read on Wikipedia about “Aliasing”<br />
+and “Anti-Aliasing”, or read a book or website about computer graphics<br />
+or digital image processing.</p>
+<p>Psychtoolbox allows for multiple approaches to anti-alias your stimuli.<br />
+The methods all represent some tradeoff between ease of use, generality<br />
+and amount of brute-force applied to implement them.</p>
+<h3 id="multisampling-supersampling">Multisampling / Supersampling:</h3>
+<p>The easiest (for you) and at the same time most general approach is the<br />
+brute-force approach, called “Multisampling” or “Supersampling”, also<br />
+known as “Full scene anti-aliasing” or FSAA. You can enable multisampling<br />
+for an onscreen window by simply setting the optional argument ‘multisample’<br />
+of the <a href="Screen" class="uri">Screen</a>(‘OpenWindow’, …) - subfunction to a value greater than zero.<br />
+Psychtoolbox will check if your graphics hardware supports multisampling and<br />
+enable it for the new onscreen window, if possible. In a nutshell, the graphics<br />
+hardware will then perform all drawing operations (including all images, all 2D shapes<br />
+like points, discs, lines, rectangles and polygons, text and all 3D <a href="OpenGL" class="uri">OpenGL</a> rendering)<br />
+at a much higher resolution than your display resolution, computing multiple color<br />
+samples for each output pixel. When calling <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’), the hardware will<br />
+downsample this high resolution image by use of a proper lowpass filter, combining<br />
+the multiple color values of the multiple samples per pixel into a single color<br />
+value for the final output pixel. A typical algorithm for this would be a weighted<br />
+average of the color values of the multiple samples, but depending on your gfx-<br />
+hardware, the algorithm may use more clever schemes. The value of the ‘multisample’<br />
+parameter roughly specifies, how many samples should be used for each final pixel.<br />
+A higher value means a higher quality, but at the same time higher requirements in<br />
+terms of video memory usage and processing time.</p>
+<p>Psychtoolbox tries to select a value as close as possible to the requested value: It<br />
+rounds up to the closest value supported by your hardware (e.g., if you request 6<br />
+samples, but the hardware only supports either 4 or 8 samples, PTB will select 8<br />
+samples). If you request a value that is greater than the highest supported value,<br />
+PTB will use the maximum value supported by your system.</p>
+<p>The algorithms used for multisampling differ between each model of graphics hardware:<br />
+NVidia’s gfx-cards do it differently than ATI’s cards and each model from <a href="NVidia" class="uri">NVidia</a> or<br />
+ATI also does it differently from its predecessors. For a general overview of how<br />
+multisampling and supersampling works, have a look at Wikipedias articles on<br />
+“Supersampling”. For specific gfx-cards, the hardware vendors provide white papers<br />
+and specifications on how their devices operate at specific settings, e.g., one<br />
+presentation of <a href="NVidia" class="uri">NVidia</a> is http://developer.nvidia.com/object/gdc_ogl_multisample.html<br />
+A more detailed article is http://www.3dcenter.org/artikel/geforcefx_aa_modi/index_english.php</p>
+<p>As stated above, this brute-force approach of anti-aliasing requires minimal<br />
+work for you (setting one optional parameter) and it works always, but it is<br />
+expensive. For a multisample value of n, your hardware will need roughly n+1 times<br />
+the amount of video memory and it will need more than n times the amount of computation<br />
+time for drawing and showing your stimulus. The maximum value that you can set for n<br />
+therefore not only depends on how modern your graphics-card is, but is also limited<br />
+by the amount of VRAM installed on your gfx-card, the screen resolution you’ve selected,<br />
+the complexity of your stimulus and the stimulus update rate you need, so choose a<br />
+reasonable tradeoff for your purpose.</p>
+<p>Some sort of multisampling/supersampling should be supported by basically any piece<br />
+of graphics hardware for Intel PC’s under M$-Windows or GNU/Linux sold by <a href="NVidia" class="uri">NVidia</a> or ATI<br />
+after beginning of 2001. On <a href="MacOS" class="uri">MacOS</a>-X, all supported gfx-adapters, except the ATI Rage 128<br />
+and ATI Rage 128 Pro, should allow for at least 4-way sampling.</p>
+<p>Typical values on todays hardware: <a href="GeForce" class="uri">GeForce</a>-3 series: 4-way sampling,<br />
+<a href="GeForce" class="uri">GeForce</a> 7800 series: 16 way multisampling.</p>
+<p>To be continued…</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDocumentation/AntiAliasing.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDocumentation/AntiAliasing.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDocumentation/AntiAliasing.m</code></p>
+</div>

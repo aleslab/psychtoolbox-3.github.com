@@ -1,0 +1,33 @@
+<h2 id="psychtoolbox">[[Psychtoolbox]]</h2>
+<p><a href="UpdatePsychtoolbox" class="uri">UpdatePsychtoolbox</a>(targetdirectory, targetRevision)</p>
+<p>Update your working copy of the Psychtoolbox with the latest bug fixes,<br />
+enhancements, and features from the master server.</p>
+<p>If you are using a Psychtoolbox provided by <a href="NeuroDebian" class="uri">NeuroDebian</a>, this is not<br />
+needed. You will be automatically notified of updates to Psychtoolbox by<br />
+your operating systems update manager as soon as they become available.</p>
+<p>The “targetdirectory” argument is optional. If present, it gives the path<br />
+of the Psychtoolbox folder to update. If omitted, <a href="UpdatePsychtoolbox" class="uri">UpdatePsychtoolbox</a> will<br />
+update the Psychtoolbox folder found by Matlab’s or Octave’s “which”<br />
+command. For example:</p>
+<p><a href="UpdatePsychtoolbox" class="uri">UpdatePsychtoolbox</a><br />
+<a href="UpdatePsychtoolbox" class="uri">UpdatePsychtoolbox</a>(‘~/Applications/Psychtoobox’)</p>
+<p>The “targetRevision” argument is optional and should be normally omitted.<br />
+Normal behaviour is to upgrade your working copy to the latest revision.<br />
+If you provide a specific targetRevision, then this script will<br />
+*downgrade* your copy of Psychtoolbox to the specified revision. This is<br />
+only useful if you experience problems after an update and want to revert<br />
+to an earlier known-to-be-good release. Revisions can be specified by a<br />
+revision number, a specific date, or by the special flag ‘PREV’ which<br />
+will downgrade to the revision before the most current one. By executing<br />
+this script multiple times with the ‘PREV’ specifier, you can<br />
+incrementally downgrade until stuff works for you.</p>
+<p><a href="UpdatePsychtoolbox" class="uri">UpdatePsychtoolbox</a> cannot change the beta-vs-stable flavor of your<br />
+Psychtoolbox. To change the flavor, run <a href="DownloadPsychtoolbox" class="uri">DownloadPsychtoolbox</a> again.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/UpdatePsychtoolbox.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/UpdatePsychtoolbox.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/UpdatePsychtoolbox.m</code></p>
+</div>

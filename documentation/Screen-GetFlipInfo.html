@@ -1,0 +1,42 @@
+<h1 id="screengetflipinfo"><a href="Screen-GetFlipInfo">Screen(‘GetFlipInfo’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Returns a struct with miscellaneous info about finished flips on the specified<br />
+onscreen window.</p>
+<p>This function is currently only supported on Linux X11/GLX with the free<br />
+graphics drivers,<br />
+and on Linux/Wayland with support for the presentation_feedback extension.</p>
+<p>The function allows you to enable logging of timestamps and other status<br />
+information about all completed bufferswaps, as triggered via <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’),<br />
+<a href="Screen" class="uri">Screen</a>(‘AsyncFlipBegin’) etc. Whenever a flip completes, a little info struct is<br />
+stored in a internal queue. This function allows you to fetch these info structs<br />
+from the queue. It allows you to enable and disable logging of these info<br />
+structs. Logging is disabled by default.</p>
+<p>“windowPtr” is the handle of the onscreen window for which info should be<br />
+returned.<br />
+“infoType” If left out or set to zero, the flip handle for the last invocation<br />
+of flip is returned. E.g., if a value of 53 is returned, then the info struct<br />
+with a info.<a href="SwapbuffersCount" class="uri">SwapbuffersCount</a> field of 53 will contain the info for that last<br />
+invocation of flip.<br />
+This allows to associate specific flips with the returned logged timestamps and<br />
+other info.<br />
+If set to 1, logging of flip completion info is enabled.<br />
+If set to 2, logging of flip completion info is disabled.<br />
+If set to 3, the oldest stored flip completion info is returned in a struct<br />
+‘info’.</p>
+<h1 id="the-info-struct-contains-the-following-fields">The info struct contains the following fields</h1>
+<p><a href="OnsetTime" class="uri">OnsetTime</a>: Visual stimulus onset time of the completed <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) operation.<br />
+<a href="OnsetVBLCount" class="uri">OnsetVBLCount</a>: Video refresh cycle count when the flip completed.<br />
+<a href="SwapbuffersCount" class="uri">SwapbuffersCount</a>: Serial number of this info struct. Corresponds to the handle<br />
+returned for ‘infoType’ zero.<br />
+<a href="SwapType" class="uri">SwapType</a>: How was the flip executed? Low level info about strategy chosen by<br />
+GPU.<br />
+<a href="BackendFeedbackString" class="uri">BackendFeedbackString</a>: A string with more info, which is specific to a display<br />
+backend, e.g., GLX vs. Wayland.<br />
+Note: Currently only flips with a ‘SwapType’ field containing the (sub-)string<br />
+‘Pageflip’ are considered to have reliable timing and trustworthy timestamps. On<br />
+Wayland dislay servers a ‘SwapType’ of ‘ImpreciseCopy’ also has good timing,<br />
+although likely with less precise and accurate onset timestamps.<br />
+‘ImprecisePageflip’ is also considered having slightly less precise and accurate<br />
+onset timestamps. Other types of ’Pageflip’s should be high quality in the time<br />
+domain.</p>
+<p>&lt;&lt;=====See also:===== OpenWindow, Flip, NominalFrameRate &lt;&lt;</p>

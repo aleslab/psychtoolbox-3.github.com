@@ -1,0 +1,68 @@
+<h1 id="screendrawtext"><a href="Screen-DrawText">Screen(‘DrawText’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Draw text. “text” may include Unicode characters (e.g. Chinese).<br />
+A standard Matlab/Octave char()acter text string is interpreted according to<br />
+<a href="Screen" class="uri">Screen</a>‘s current character encoding setting. By default this is the “system<br />
+default locale”, as selected in the language settings of your user account. You<br />
+can change the encoding anytime via a call to <a href="Screen" class="uri">Screen</a>(’<a href="Preference" class="uri">Preference</a>‘,<br />
+’TextEncodingLocale’, newencoding); E.g., for UTF-8 multibyte character encoding<br />
+you’d call <a href="Screen" class="uri">Screen</a>(‘<a href="Preference" class="uri">Preference</a>’,‘TextEncodingLocale’,‘UTF-8’);<br />
+If you have a non-ASCII text string and want to make sure that Matlab or Octave<br />
+doesn’t meddle with your string, convert it into a uint8() datatype before<br />
+passing to this function.<br />
+If you want to pass a string which contains unicode characters directly, convert<br />
+the text to a double matrix, e.g., mytext = double(myunicodetext); then pass the<br />
+double matrix to this function. <a href="Screen" class="uri">Screen</a> will interpret all double numbers<br />
+directly as unicode code points.<br />
+Unicode text drawing is supported on all operating systems if you select the<br />
+default high quality text renderer. Of course you also have to select a text<br />
+font which contains the unicode character sets you want to draw - not all fonts<br />
+contain all unicode characters.<br />
+The following optional parameters allow to control location and color of the<br />
+drawn text:<br />
+“x” “y” defines the text pen start location. Default is the location of the pen<br />
+from previous draw text commands, or (0,0) at startup. “color” is the CLUT index<br />
+(scalar or [r g b] triplet or [r g b a] quadruple) for drawing the text; startup<br />
+default produces black.<br />
+“backgroundColor” is the color of the background area behind the text. By<br />
+default, text is drawn transparent in front of whatever image content is stored<br />
+in the window. You need to set an explicit backgroundColor and possibly enable<br />
+user defined alpha-blending with <a href="Screen" class="uri">Screen</a>(‘<a href="Preference" class="uri">Preference</a>’, ‘TextAlphaBlending’, 1);<br />
+and <a href="Screen" class="uri">Screen</a>(‘Blendfunction’, …) to make use of text background drawing.<br />
+Appearance of the background + text may be different accross different operating<br />
+systems and text renderers, or it may not be supported at all, so this is not a<br />
+feature to rely on.<br />
+“yPositionIsBaseline” If specified, will override the global preference setting<br />
+for text positioning: It defaults to off. If it is set to 1, then the “y” pen<br />
+start location defines the base line of drawn text, otherwise it defines the top<br />
+of the drawn text. Old PTB’s had a behaviour equivalent to setting 1,<br />
+unfortunately this behaviour wasn’t replicated in early versions of<br />
+Psychtoolbox-3, so now we stick to the new behaviour by default.<br />
+“swapTextDirection” If specified and set to 1, then the direction of the text is<br />
+swapped from the default left-to-right to the swapped right-to-left direction,<br />
+e.g., to handle scripts with right-to-left writing order like hebrew.<br />
+“newX, newY” optionally return the final pen location.<br />
+“textHeight” optionally return height of current text string. May return zero if<br />
+this is not supported by the current text renderer.<br />
+Btw.: <a href="Screen" class="uri">Screen</a>(‘<a href="Preference" class="uri">Preference</a>’, …); provides a couple of interesting text<br />
+preference settings that affect text drawing, e.g., setting alpha blending and<br />
+anti-aliasing modes.<br />
+Selectable text renderers: The <a href="Screen" class="uri">Screen</a>(‘<a href="Preference" class="uri">Preference</a>’, ‘TextRenderer’, Type);<br />
+command allows to select among different text rendering engines with different<br />
+properties:<br />
+Type 0 is the legacy OS specific text renderer: On Linux this is implemented as<br />
+a fast, but low quality <a href="OpenGL" class="uri">OpenGL</a> display list renderer without any support for<br />
+unicode or text anti-aliasing. On MS-Windows, this is currently a GDI based<br />
+renderer. On OSX this currently selects Apples <a href="CoreText" class="uri">CoreText</a> text renderer, which is<br />
+slow but does support anti-aliasing, unicode and other features. Normally you<br />
+really don’t want to use the type 0 legacy renderer. It is provided for<br />
+backwards compatibility to old experiment scripts and may need to get removed<br />
+completely in future versions of Psychtoolbox due to circumstances out of our<br />
+control.<br />
+Type 1 is the high quality renderer: It supports unicode, anti-aliasing, and<br />
+many other interesting features. This is a renderer loaded from an external<br />
+plugin, and based on FTGL for fast high quality text drawing with <a href="OpenGL" class="uri">OpenGL</a>.<br />
+This function doesn’t provide support for text layout. Use the higher level<br />
+<a href="DrawFormattedText" class="uri">DrawFormattedText</a>() function if you need basic support for text layout, e.g,<br />
+centered text output, line wrapping etc.</p>
+<p>&lt;&lt;=====See also:===== TextBounds TextSize TextFont TextStyle TextColor TextBackgroundColor Preference &lt;&lt;</p>

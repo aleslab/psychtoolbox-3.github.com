@@ -1,0 +1,37 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p>Workaround-Wrapper for the <a href="Screen" class="uri">Screen</a>(‘DrawDots’) function.</p>
+<p>Usage: <a href="ScreenDrawDots" class="uri">ScreenDrawDots</a>(windowPtr, xy [, dotdiameter=1][, dotcolor=white][, center2D][, dot_type=1]);</p>
+<p>This function is the equivalent of the <a href="Screen" class="uri">Screen</a>(‘DrawDots’) subfunction<br />
+for fast drawing of 2D dots. It has the same parameters as that function,<br />
+so it can be used as a drop-in replacement in many cases.</p>
+<p>On most systems, this function will simply call <a href="Screen" class="uri">Screen</a>(‘DrawDots’,…);<br />
+passing it all parameters you provided, so you’ll get exactly that<br />
+functionality, minus a little bit of performance loss due to the extra<br />
+call overhead.</p>
+<p>On severely broken systems (like the piece of junk that Apple calls Snow<br />
+Leopard 10.6.3), where the iPhone company managed to screw up their <a href="OpenGL" class="uri">OpenGL</a><br />
+implementation so badly that even <a href="Screen" class="uri">Screen</a>(‘DrawDots’) doesn’t work, it<br />
+will try to use a different method to emulate ‘DrawDots’ behaviour as<br />
+closely as possible. This is a hack! It will incur significant<br />
+performance loss and it will provide an imperfect emulation which<br />
+should work ok for simple cases of usage of ‘DrawDots’, but may not work<br />
+perfectly (or at all) for complex usage or with high precision framebuffers.</p>
+<p>For syntax and further help, see help of “<a href="Screen" class="uri">Screen</a> <a href="DrawDots" class="uri">DrawDots</a>?”</p>
+<p>To replace direct calls to <a href="Screen" class="uri">Screen</a>(‘DrawDots’,…); with calls to this<br />
+function, simply use text search &amp; replace of your text editor to search<br />
+for:<br />
+<a href="Screen" class="uri">Screen</a>(‘DrawDots’</p>
+<h3 id="and-set-the-replace-text-to">and set the replace text to:</h3>
+<pre><code>  [ScreenDrawDots](ScreenDrawDots)(  </code></pre>
+<p>You can enable the workaround (across sessions) via a call:<br />
+clear all; <a href="ScreenDrawDots" class="uri">ScreenDrawDots</a>(1); on the Matlab/Octave command line.</p>
+<p>You can disable the workaround (across sessions) via a call:<br />
+clear all; <a href="ScreenDrawDots" class="uri">ScreenDrawDots</a>(0); on the Matlab/Octave command line.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/ScreenDrawDots.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/ScreenDrawDots.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/ScreenDrawDots.m</code></p>
+</div>

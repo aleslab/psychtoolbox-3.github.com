@@ -1,0 +1,10 @@
+<h1 id="datapixxgetmicrophonegroupdelay"><a href="Datapixx-GetMicrophoneGroupDelay">Datapixx(‘GetMicrophoneGroupDelay’)</a></h1>
+<h2 id="psychtoolbox-datapixx.mexdll-subfunction">[[Psychtoolbox]] › [[Datapixx]].{mex*,dll} subfunction</h2>
+<p>Returns Datapixx Microphone IN group delay in seconds.<br />
+This is the time between when a voltage appears at the “MIC IN” jack of the<br />
+<a href="DATAPixx" class="uri">DATAPixx</a>, and when an audio input schedule will acquire the voltage. Due to the<br />
+way in which <a href="CODECs" class="uri">CODECs</a> operate, this delay is a function of the sample rate. For<br />
+greatest precision in audio acquisition timing, this value could be subtracted<br />
+from the scheduleOnset parameter before calling <a href="SetMicrophoneSchedule" class="uri">SetMicrophoneSchedule</a>.<br />
+See <a href="DatapixxAudioFeedbackDemo" class="uri">DatapixxAudioFeedbackDemo</a> for an example.</p>
+<p>&lt;&lt;=====See also:===== InitAudio, SetMicrophoneSchedule &lt;&lt;</p>

@@ -1,0 +1,21 @@
+<h2 id="psychtoolbox-psychopengl">[[Psychtoolbox]] › [[PsychOpenGL]]</h2>
+<p>moglChooseFBO(fbo, bufferid) – Set FBO ‘fbo’ as framebuffer.</p>
+<p>If fbo is &gt; 0, then the corresponding FBO is bound and <a href="OpenGL" class="uri">OpenGL</a> is set up<br />
+to render and read from that FBO with orthogonal projection. If fbo is<br />
+zero, then the system framebuffer is enabled again for normal drawing.</p>
+<p>Normally, read- and writebuffer are set to color attachment zero. If you<br />
+provide bufferid, then it is set to bufferid, with 1 being the first<br />
+attachment (COLOR_ATTACHMENT0_EXT).</p>
+<p>This function is mostly useful for image processing and GPGPU<br />
+applications. Normal Psychtoolbox code will want to use standard<br />
+Offscreen windows instead. They are properly managed by Psychtoolbox for<br />
+normal stimulus drawing and implemented to work on any kind of hardware,<br />
+whereas this function is optimized for <a href="OpenGL" class="uri">OpenGL</a>-2 compliant hardware.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOpenGL/moglChooseFBO.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOpenGL/moglChooseFBO.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOpenGL/moglChooseFBO.m</code></p>
+</div>

@@ -1,0 +1,66 @@
+<h1 id="psychportaudioopenslave"><a href="PsychPortAudio-OpenSlave">PsychPortAudio(‘OpenSlave’)</a></h1>
+<h2 id="psychtoolbox-psychportaudio.mexdll-subfunction">[[Psychtoolbox]] › [[PsychPortAudio]].{mex*,dll} subfunction</h2>
+<p>Open a virtual slave audio device and initialize it. Returns a ‘pahandle’ device<br />
+handle for the device.<br />
+Slave audio devices are almost always attached to a ‘pamaster’ audio device that<br />
+you need to open and initialize first via a call to pamaster =<br />
+<a href="PsychPortAudio" class="uri">PsychPortAudio</a>(‘Open’, …); The ‘pamaster’ corresponds to a real soundcard<br />
+present in your system which has been setup for a certain mode of operation,<br />
+timing mode, frequency etc. The exception is if you create an <a href="AMModulator" class="uri">AMModulator</a> slave<br />
+(see below). It can be attached to another playback slave device by passing the<br />
+handle of that device as ‘pamaster’. To each real pamaster you can attach<br />
+multiple slave devices. Each slave represents a subset of the audio channels of<br />
+the pamaster device. Each slave can be used as if it is a real independent<br />
+soundcard for capture or playback with or without its own set of playback<br />
+buffers, its own schedule and mode of operation, its own start and stop times,<br />
+status etc. Under the hood, the slave device will use the defined subset of<br />
+channels of the master device to achieve this illusion of independent<br />
+soundcards. Typical usage scenarios would be:</p>
+<p>* Mixing of independent soundtracks: Create multiple slave devices, one for each<br />
+soundtrack. Attach all of them to the same set of channels on a common master<br />
+device. Now you can feed each slave with its own soundtrack, start, stop and<br />
+schedule playback of each slave/soundtrack independently. Sound from all active<br />
+channels of all active slaves will be mixed together and output through the<br />
+channels of the master device.</p>
+<p>* Independent control of channels: Same as above, but the slaves don’t share the<br />
+same subset of channels on the master, but each slave chooses a distinctive<br />
+subset of channels, therefore no mixing will occur.</p>
+<p>‘pamaster’ is the mandatory pahandle of a master audio device. The master must<br />
+have been opened via <a href="PsychPortAudio" class="uri">PsychPortAudio</a>(‘Open’, …, mode, …); with the mode flag<br />
+value ‘8’ included to define it as a master (see ‘Open’).</p>
+<p>‘mode’ Mode of operation. See help of ‘Open’ function for valid settings.<br />
+However, a mode flag of ‘8’ for master operation is not allowed for obvious<br />
+reasons. Also, the given ‘mode’ flags must be a subset of the ‘mode’ set on the<br />
+master device! E.g., you can’t specify a audio capture mode flag if the master<br />
+device isn’t enabled for capture as well. As an exception kPortAudioMonitoring<br />
+mode is allowed to be present on a slave while missing on the associated master<br />
+device.<br />
+The slave-only mode flag 32 (kPortAudioIsAMModulator) defines a slave device not<br />
+as a source of audio data, but as a source of amplitude modulation (AM) envelope<br />
+data. Its samples don’t create sound, but gain-modulate the sound of other<br />
+slaves attached to the master to allow precisely timed AM modulation. See the<br />
+help for <a href="PsychPortAudio" class="uri">PsychPortAudio</a>(‘Volume’) for more details about AM.</p>
+<p>The slave-only mode flag 64 (kPortAudioIsOutputCapture) defines a slave capture<br />
+device that captures audio data from the *output channels* of the master device,<br />
+i.e., it records the audio stream that is sent to the speakers. This may be<br />
+useful for capturing PsychPortAudio’s audio output for documentation or debug<br />
+purposes.</p>
+<p>All slave devices share the same settings for latencymode, timing, sampling<br />
+frequency and other low-level tunable parameters, because they operate on the<br />
+same underlying audio hardware.</p>
+<p>‘channels’ Define total number of playback and capture channels to use. See help<br />
+for ‘Open?’ for explanation. By default, all channels of the master are used.</p>
+<p>‘selectchannels’ optional matrix with mappings of logical slave channels to<br />
+logical master channels: selectchannels’ is a one row by ‘channels’ matrix with<br />
+mappings for pure playback or pure capture. For full-duplex mode (playback and<br />
+capture), ‘selectchannels’ must be a 2 rows by max(channels) column matrix. row<br />
+1 will define playback channel mappings, whereas row 2 will then define capture<br />
+channel mappings. In any case, the number in the i’th column will define which<br />
+master device channel will be used for playback or capture of the i’th<br />
+<a href="PsychPortAudio" class="uri">PsychPortAudio</a> channel (the i’th row of your sound matrix). Numbering of master<br />
+device channels starts with one! Example: Both, playback and simultaneous<br />
+recording are requested from a master device which represents a 16 channel<br />
+soundcard with all 16 channels open. If you’d specify ‘selectchannels’ as [1, 6<br />
+; 12, 14], then playback would happen to master channels one and six, sound<br />
+would be captured from master channels 12 and 14.</p>
+<p>&lt;&lt;=====See also:===== Open Close GetDeviceSettings &lt;&lt;</p>

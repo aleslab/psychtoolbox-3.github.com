@@ -1,0 +1,46 @@
+<h2 id="psychtoolbox-psychsound-moal-core">[[Psychtoolbox]] › [[PsychSound]] › [[MOAL]] › [[core]]</h2>
+<p><a href="InitializeMatlabOpenAL" class="uri">InitializeMatlabOpenAL</a>([debuglevel] [,snddevicename] [, openal_c_style])</p>
+<p><a href="InitializeMatlabOpenAL" class="uri">InitializeMatlabOpenAL</a> – Initialize the <a href="OpenAL" class="uri">OpenAL</a> for Matlab wrapper ‘moal’.</p>
+<p>Call this function at the beginning of your experiment script if you intend<br />
+to use low-level <a href="OpenAL" class="uri">OpenAL</a> sound commands in your script as provided by our<br />
+moalcore extension.</p>
+<p>This will check if moal is properly installed and upload all required<br />
+<a href="OpenAL" class="uri">OpenAL</a> constants into your Matlab workspace. It will also set up<br />
+Psychtoolbox for interfacing with external <a href="OpenAL" class="uri">OpenAL</a> code.</p>
+<p><a href="MacOS" class="uri">MacOS</a>/X users do not need to take any measures, <a href="OpenAL" class="uri">OpenAL</a> comes installed on<br />
+Tiger (10.4) by default. The same is true for modern GNU/Linux distributions.</p>
+<p>Users of Microsoft Windows need to download and install the freely available<br />
+<a href="OpenAL" class="uri">OpenAL</a> runtime for Windows. Follow the links to the runtime for Windows in<br />
+the ‘Downloads’ section of the <a href="OpenAL" class="uri">OpenAL</a> homepage:</p>
+<p>http://www.openal.org</p>
+<p>Options: All options are optional.</p>
+<p>debuglevel = 0 to 3: Setting debuglevel == 0 will disable debug-output.<br />
+A level of 1 will cause MOAL to output error messages and abort your<br />
+scripts execution if it detects any <a href="OpenAL" class="uri">OpenAL</a> error. A level of 2 provides<br />
+additional information that may help you to optimize your code. level 3<br />
+means to be very verbose</p>
+<p>snddevicename: Optional. Request a specific sound output device by<br />
+its name. If left out, or if an invalid name is given, <a href="OpenAL" class="uri">OpenAL</a> will<br />
+select a default output device - the most capable and most efficient<br />
+device in your system.</p>
+<p>openal_c_style = 0 / 1: Optional. If left out or set to zero, all<br />
+constants will be loaded in structs in order to avoid cluttering the<br />
+Matlab workspace too much. You’ll have to replace all AL_xxx calls by<br />
+AL.xxx calls, e.g., AL_TRUE becomes AL.TRUE .<br />
+If set to one, then all constants will additionally be provided in standard<br />
+C-Style syntax, aka AL_TRUE, but this only works in the main function, not<br />
+in subroutines.</p>
+<p>The ‘OpenAL for Matlab’ low level wrapper moal was implemented by Mario<br />
+Kleiner, trivially derived from our MOGL Matlab for <a href="OpenGL" class="uri">OpenGL</a> wrapper, which<br />
+was developed and contributed to Psychtoolbox under GPL license by<br />
+Prof. Richard F. Murray, University of York, Canada and Mario Kleiner.</p>
+<p>MOAL is now licensed under the more permissive MIT license since 2011.<br />
+Relicensing with permission of Richard Murray.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychSound/MOAL/core/InitializeMatlabOpenAL.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychSound/MOAL/core/InitializeMatlabOpenAL.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychSound/MOAL/core/InitializeMatlabOpenAL.m</code></p>
+</div>

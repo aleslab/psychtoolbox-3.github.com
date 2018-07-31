@@ -1,0 +1,35 @@
+<h2 id="psychtoolbox-psychhardware-daq">[[Psychtoolbox]] › [[PsychHardware]] › [[Daq]]</h2>
+<p>err=<a href="DaqDReadBit" class="uri">DaqDReadBit</a><a href="(DeviceIndex),%5BBitNumber%5D(BitNumber),value">(DeviceIndex</a><br />
+USB-1608FS: Write bit to digital port.<br />
+“<a href="DeviceIndex" class="uri">DeviceIndex</a>” is a small integer, the array index specifying which HID<br />
+device in the array returned by <a href="PsychHID" class="uri">PsychHID</a>(‘Devices’) is interface 0<br />
+of the desired USB-1608FS box.</p>
+<p>******************************************************************************<br />
+* *<br />
+* If your Daq is a USB-1208FS or USB-1408FS, this code has not been tested; *<br />
+* it probably will not run on your device. The USB-1608FS has only one DIO *<br />
+* port and that is what this code was written to expect. To make it run on *<br />
+* a 12 or 14 bit device, you should fix this to take an additional input *<br />
+* (the portnumber) and to continue to behave as is for the 16-bit device. *<br />
+* An example of how to do that can be found in <a href="DaqDConfigPort" class="uri">DaqDConfigPort</a>. – mpr *<br />
+* *<br />
+******************************************************************************</p>
+<p><a href="BitNumber" class="uri">BitNumber</a> should range from 0:7 specifying the channel whose bit you want set;<br />
+0 corresponds to screw terminal 21, 1 corresponds to screw terminal 23, etc.<br />
+“value” should be 0 or 1.</p>
+<p><a href="BitNumber" class="uri">BitNumber</a> can be a vector in order to write multiple bits at once. To<br />
+implement this, value must be a vector the same length as <a href="BitNumber" class="uri">BitNumber</a>, or it<br />
+must be a scalar in which case all designated bits will be given that value.</p>
+<p>See also Daq, <a href="DaqFunctions" class="uri">DaqFunctions</a>, <a href="DaqPins" class="uri">DaqPins</a>, <a href="DaqTest" class="uri">DaqTest</a>, <a href="PsychHIDTest" class="uri">PsychHIDTest</a>,<br />
+<a href="DaqDConfigPortBit" class="uri">DaqDConfigPortBit</a>, <a href="DaqDReadBit" class="uri">DaqDReadBit</a>, <a href="DaqDeviceIndex" class="uri">DaqDeviceIndex</a>, <a href="DaqDIn" class="uri">DaqDIn</a>, <a href="DaqDOut" class="uri">DaqDOut</a>.</p>
+<p>12/17/07 mpr scavenged code from <a href="DaqDOut" class="uri">DaqDOut</a> and edited it to make this<br />
+1/11/08 mpr swept through attempting to improve consistency across daq<br />
+functions</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/Daq/DaqDWriteBit.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/Daq/DaqDWriteBit.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/Daq/DaqDWriteBit.m</code></p>
+</div>

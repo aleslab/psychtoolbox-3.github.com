@@ -1,0 +1,68 @@
+<h1 id="screenopenwindow"><a href="Screen-OpenWindow">Screen(‘OpenWindow’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Open an onscreen window. Specify a screen by a windowPtr or a screenNumber (0 is<br />
+the main screen, with menu bar). “color” is the clut index (scalar or [r g b]<br />
+triplet) that you want to poke into each pixel; default is white. If supplied,<br />
+“rect” must contain at least one pixel. If a windowPtr is supplied then “rect”<br />
+is in the window’s coordinates (origin at upper left), and defaults to the whole<br />
+window. If a screenNumber is supplied then “rect” is in screen coordinates<br />
+(origin at upper left), and defaults to the whole screen. (In all cases,<br />
+subsequent references to this new window will use its coordinates: origin at its<br />
+upper left.). Please note that while providing a “rect” parameter to open a<br />
+normal window instead of a fullscreen window is convenient for debugging, but<br />
+drawing performance, stimulus onset timing and onset timestamping may be<br />
+impaired, so be careful.<br />
+“pixelSize” sets the depth (in bits) of each pixel; default is to leave depth<br />
+unchanged. “numberOfBuffers” is the number of buffers to use. Setting anything<br />
+else than 2 will be useful for development/debugging of PTB itself but will mess<br />
+up any real experiment. “stereomode” Type of stereo display algorithm to use: 0<br />
+(default) means: Monoscopic viewing. 1 means: Stereo output via <a href="OpenGL" class="uri">OpenGL</a> on any<br />
+stereo hardware that is supported by <a href="MacOS" class="uri">MacOS</a>-X, e.g., the shutter glasses from<br />
+<a href="CrystalView" class="uri">CrystalView</a>. 2 means: Left view compressed into top half, right view into bottom<br />
+half. 3 means left view compressed into bottom half, right view compressed into<br />
+top half. 4 and 5 allow split screen display where left view is shown in left<br />
+half, right view is shown in right half or the display. A value of 5 does the<br />
+opposite (cross-fusion). Values of 6,7,8 and 9 enable Anaglyph stereo rendering<br />
+of types left=Red, right=Green, vice versa and left=Red, right=Blue and vice<br />
+versa. A value of 10 enables multi-window stereo: Open one window for left eye<br />
+view, one for right eye view, treat both of them as one single stereo window. A<br />
+value of 11 enables our own frame-sequential stereo mode. See <a href="StereoDemo" class="uri">StereoDemo</a>.m for<br />
+examples of usage of the different stereo modes. See <a href="ImagingStereoDemo" class="uri">ImagingStereoDemo</a>.m for<br />
+more advanced usage on modern hardware.<br />
+“multisample” This parameter, if provided and set to a value greater than zero,<br />
+enables automatic hardware anti-aliasing of the display: For each pixel,<br />
+‘multisample’ color samples are computed and combined into a single output pixel<br />
+color. Higher numbers provide better quality but consume more video memory and<br />
+lead to a reduction in framerate due to the higher computational demand. The<br />
+maximum number of samples is hardware dependent. Psychtoolbox will silently<br />
+clamp the number to the maximum supported by your hardware if you ask for too<br />
+much. On very old hardware, the value will be ignored. Read ‘help AntiAliasing’<br />
+for more in-depth information about multi-sampling. “imagingmode” This optional<br />
+parameter enables PTB’s internal image processing pipeline. The pipeline is off<br />
+by default. Read ‘help PsychImaging’ for information about typical use and<br />
+benefits of this feature.<br />
+“specialFlags” This optional parameter enables some special window behaviours if<br />
+the sum of certain flags is passed. A currently supported flag is the symbolic<br />
+constant kPsychGUIWindow. It enables windows to behave more like regular GUI<br />
+windows on your system. See ‘help kPsychGUIWindow’ for more info.<br />
+“clientRect” This optional parameter allows to define a size of the onscreen<br />
+windows drawing area that is different from the actual size of the windows<br />
+framebuffer. If set, then the imaging pipeline is started and a virtual<br />
+framebuffer of the size of “clientRect” is created. Your code will draw into<br />
+that framebuffer. At display time, the content of this virtual framebuffer will<br />
+get scaled to the size of the true onscreen window, a process known as<br />
+panel-scaling or panel-fitting. This allows to decouple the size of a stimulus<br />
+as drawn by your code from the actual resolution of the display device. The<br />
+feature is mostly useful if you need to run the same presentation code on<br />
+different setups with different native resolutions. See the ‘help PsychImaging’<br />
+section about ‘UsePanelFitter’ for more info.</p>
+<p>Opening or closing a window takes about one to three seconds, depending on type<br />
+of connected display. COMPATIBILITY TO OS-9 PTB: If you absolutely need to run<br />
+old code for the old <a href="MacOS" class="uri">MacOS</a>-9 or Windows Psychtoolbox, you can switch into a<br />
+compatibility mode by adding the command <a href="Screen" class="uri">Screen</a>(‘<a href="Preference" class="uri">Preference</a>’, ‘EmulateOldPTB’,<br />
+1) at the very top of your script. This will restore Offscreen windows and<br />
+<a href="WaitBlanking" class="uri">WaitBlanking</a> functionality, but at the same time disable most of the new<br />
+features of the <a href="OpenGL" class="uri">OpenGL</a> Psychtoolbox. Please do not write new experiment code in<br />
+the old style! Emulation mode is pretty new and may contain significant bugs, so<br />
+use with great caution!</p>
+<p>&lt;&lt;=====See also:===== OpenOffscreenWindow, SelectStereoDrawBuffer, PanelFitter, Close, CloseAll &lt;&lt;</p>

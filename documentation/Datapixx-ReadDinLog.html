@@ -1,0 +1,22 @@
+<h1 id="datapixxreaddinlog"><a href="Datapixx-ReadDinLog">Datapixx(‘ReadDinLog’)</a></h1>
+<h2 id="psychtoolbox-datapixx.mexdll-subfunction">[[Psychtoolbox]] › [[Datapixx]].{mex*,dll} subfunction</h2>
+<p>Upload digital input data from a Datapixx internal log buffer to the local host.<br />
+-“numFrames” is the number of frames to upload, and should not exceed<br />
+newLogFrames returned by <a href="GetDinStatus" class="uri">GetDinStatus</a>. If numFrames argument is missing,<br />
+<a href="ReadDinLog" class="uri">ReadDinLog</a> will return all remaining logged data.<br />
+-“logData” is a row vector of acquired digital input values. Each column of the<br />
+vector contains an unsigned integer with the new state of digital inputs 0 to 15<br />
+after a transition.<br />
+-“logTimetags” is a row vector of acquisition timetags, indicating when the<br />
+corresponding transition to the state in logData occurred. The timetags are in<br />
+double precision seconds since Datapixx powerup. Response times can be<br />
+calculated by calling <a href="SetMarker" class="uri">SetMarker</a>() at stimulus onset, then subtracting<br />
+<a href="GetMarker" class="uri">GetMarker</a>() from the logged timetags.<br />
+-“underflow” is set to 1 if calls to <a href="ReadDinLog" class="uri">ReadDinLog</a> read too many frames. The<br />
+newLogFrames field returned by <a href="GetDinStatus" class="uri">GetDinStatus</a> indicates the maximum number of<br />
+frames which can be read by <a href="ReadDinLog" class="uri">ReadDinLog</a>. If more than this number of frames is<br />
+read, an underflow occurs and there will be errors in the logged data. In<br />
+addition to returning an underflow flag, the numLogUnderflows field returned by<br />
+<a href="GetDinStatus" class="uri">GetDinStatus</a> will be incremented.<br />
+See <a href="DatapixxSimonGame" class="uri">DatapixxSimonGame</a>, <a href="DatapixxDin" class="uri">DatapixxDin</a>*Demo files for examples.</p>
+<p>&lt;&lt;=====See also:===== SetDinLog, StartDinLog, StopDinLog, GetDinStatus &lt;&lt;</p>

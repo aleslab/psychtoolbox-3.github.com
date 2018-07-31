@@ -1,0 +1,41 @@
+<h2 id="psychtoolbox-psychoneliners">[[Psychtoolbox]] › [[PsychOneliners]]</h2>
+<p>fName=<a href="NameFrequency" class="uri">NameFrequency</a>(fValue, [numDecimalPlaces])</p>
+<p><a href="NameFrequency" class="uri">NameFrequency</a> accepts a frequency (in Hz) and returns a<br />
+string naming that frequency in a more readable form. For example:</p>
+<pre><code>\&gt;\&gt; c=[Screen](Screen)(&#39;Computer&#39;);  
+\&gt;\&gt; c.hw.cpufreq  
+
+ans =  
+
+   999999997  
+
+\&gt;\&gt; [NameFrequency](NameFrequency)(c.hw.cpufreq)  
+
+ans =  
+
+1.00 [GHz](GHz)  
+
+\&gt;\&gt; [NameFrequency](NameFrequency)(c.hw.cpufreq,6)  
+
+ans =  
+
+999.999997 [MHz](MHz)  
+
+\&gt;\&gt;  </code></pre>
+<p>By default <a href="NameFrequency" class="uri">NameFrequency</a> displays two digits to the right of the decimal<br />
+point. Specify other numbers of digits by passing the optional<br />
+numDecimalPlaces argument.</p>
+<p><a href="NameFrequency" class="uri">NameFrequency</a> is used by <a href="DescribeComputer" class="uri">DescribeComputer</a> to name the clock frequency of<br />
+the CPU. For that purpose, it displays frequency to a specified number of<br />
+decimal places, not to a specified precision. It is therfore a poor<br />
+choice for scientific work, where typcially a fixed precision in digits<br />
+is appropriate.</p>
+<p>see also: <a href="NameBytes" class="uri">NameBytes</a>, <a href="DescribeComputer" class="uri">DescribeComputer</a></p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOneliners/NameFrequency.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOneliners/NameFrequency.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOneliners/NameFrequency.m</code></p>
+</div>

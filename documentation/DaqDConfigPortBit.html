@@ -1,0 +1,38 @@
+<h2 id="psychtoolbox-psychhardware-daq">[[Psychtoolbox]] › [[PsychHardware]] › [[Daq]]</h2>
+<p>err=<a href="DaqDConfigPortBit" class="uri">DaqDConfigPortBit</a><a href="(DeviceIndex),%5BBitNumber%5D(BitNumber),direction">(DeviceIndex</a><br />
+USB-1608FS: Configure digital port. This command sets the direction of<br />
+the DIO port to input or output.<br />
+“<a href="DeviceIndex" class="uri">DeviceIndex</a>” is a small integer, the array index specifying which HID<br />
+device in the array returned by <a href="PsychHID" class="uri">PsychHID</a>(‘Devices’) is interface 0<br />
+of the desired USB-1208FS box.<br />
+“<a href="BitNumber" class="uri">BitNumber</a>” ranges from 0:7 and can be a vector if you want to configure<br />
+multiple ports at the same time.<br />
+“direction” 0 = output, 1 = input; must be either a scalar or a vector of the<br />
+same length as <a href="BitNumber" class="uri">BitNumber</a><br />
+See also Daq, <a href="DaqFunctions" class="uri">DaqFunctions</a>, <a href="DaqPins" class="uri">DaqPins</a>, <a href="DaqTest" class="uri">DaqTest</a>, <a href="PsychHIDTest" class="uri">PsychHIDTest</a>, <a href="DaqDReadBit" class="uri">DaqDReadBit</a>,<br />
+<a href="DaqDWriteBit" class="uri">DaqDWriteBit</a>, <a href="DaqDConfigPort" class="uri">DaqDConfigPort</a>, <a href="DaqDIn" class="uri">DaqDIn</a>, <a href="DaqDOut" class="uri">DaqDOut</a>.</p>
+<p>******************************************************************************<br />
+* *<br />
+* If your Daq is a USB-1208FS or USB-1408FS, this code has not been tested *<br />
+* probably will not run on your device. The USB-1608FS has only one DIO *<br />
+* port and that is what this code was written to expect. To make it run on *<br />
+* a 12 or 14 bit device, you should fix this to take an additional input *<br />
+* (the portnumber) and to continue to behave as is for the 16-bit device. *<br />
+* An example of how to do that can be found in <a href="DaqDConfigPort" class="uri">DaqDConfigPort</a>. – mpr *<br />
+* *<br />
+******************************************************************************</p>
+<p>Code has not been tested on USB-1208FS or USB-1408FS. If you have one of<br />
+those devices, you should modify this code to accept portnumber as an<br />
+additional input parameter. See <a href="DaqDConfigPort" class="uri">DaqDConfigPort</a> for an example of how to deal<br />
+with the added input.</p>
+<p>12/17/07 mpr scavenged and modified code from <a href="DaqDConfigPort" class="uri">DaqDConfigPort</a><br />
+1/11/08 mpr swept through trying to improve consistency across daq<br />
+functions</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/Daq/DaqDConfigPortBit.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/Daq/DaqDConfigPortBit.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/Daq/DaqDConfigPortBit.m</code></p>
+</div>

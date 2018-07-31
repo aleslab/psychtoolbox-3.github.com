@@ -1,0 +1,59 @@
+<h2 id="psychtoolbox-psychhardware-daq">[[Psychtoolbox]] › [[PsychHardware]] › [[Daq]]</h2>
+<p>params=<a href="DaqAOutScan" class="uri">DaqAOutScan</a><a href="(DeviceIndex),v,options">(DeviceIndex</a><br />
+USB-1208FS: Analog output scan. Produce sampled analog output voltage<br />
+waveforms on one or two channels. This command sends the values in “v”<br />
+(one column per channel) to the specified range of (one or two) output<br />
+channels.</p>
+<p>“params.fActual” is the actual sampling frequency, sample/channel/s.<br />
+It is as close as possible to the requested sampling frequency<br />
+options.f.<br />
+“params.countActual” is the actual total sample/channel sent.<br />
+“params.start” is when the first report (“v” data) was sent to the device.<br />
+“params.end” is when the final report was sent to device.<br />
+“<a href="DeviceIndex" class="uri">DeviceIndex</a>” is a small integer, the array index specifying which HID<br />
+device in the array returned by <a href="PsychHID" class="uri">PsychHID</a>(‘Devices’) is interface 0<br />
+of the desired USB-1208FS box.<br />
+“v” is a matrix, with one column per channel. (If you’re using only one<br />
+channel, then you’re allowed to send the vector as either a column<br />
+or a row.) Each value is a double, in the range 0 to 1, which will<br />
+produce an output voltage in the range 0 to 4.095 V.<br />
+“options.<a href="FirstChannel" class="uri">FirstChannel</a>” is the first channel of the scan (0 - 1). (formerly<br />
+“options.lowChannel” – that terminology is deprecated.)<br />
+“options.<a href="LastChannel" class="uri">LastChannel</a>” is the last channel of the scan (0 - 1), and must<br />
+be greater than or equal to options.<a href="FirstChannel" class="uri">FirstChannel</a>. The values<br />
+options.<a href="FirstChannel" class="uri">FirstChannel</a> and options.<a href="LastChannel" class="uri">LastChannel</a> specify the channel<br />
+range for the scan. (Formerly “options.highChannel” – that terminology<br />
+is deprecated.)<br />
+“options.f” is the desired sampling frequency, sample/channel/s, in the<br />
+range 0.596/c to 10e6/c Hz, where c is the number of channels to be<br />
+scanned.<br />
+“options.trigger” is 1 = use external trigger. The external trigger<br />
+may be used to start the scan synchronously. If the bit is set, the<br />
+device will wait until the appropriate trigger edge is detected,<br />
+then begin emitting samples at the specified rate.<br />
+“options.getReports” is 1 (default) = wait to receive report from<br />
+USB-1208FS before sending each block of data in “v”. 0 = send<br />
+blocks of data at what should be the right rate.<br />
+“options.print” is 1 = enable diagnostic printing; 0 (default) no<br />
+diagnostics.</p>
+<p>LIMITATIONS: As of 17 April 2005, <a href="DaqAoutScan" class="uri">DaqAoutScan</a> works fine at up to 2000<br />
+sample/s with one channel, or up to 200 sample/channel/s with two<br />
+channels. (It is surprising that these two limits are not exactly a<br />
+factor of 2 apart.) When I try to go faster than that I encounter various<br />
+problems. Sometimes I get “data underrun” errors and sometimes the<br />
+<a href="PsychHID" class="uri">PsychHID</a> <a href="SetReport" class="uri">SetReport</a> call hangs up forever, never returning, making it<br />
+necessary to quit MATLAB. I don’t understand why these things happen;<br />
+they shouldn’t. I am trying to get help from Measurement Computing and<br />
+Apple to understand and overcome this problems. However, in the meantime,<br />
+the attained rates are enough for my immediate needs, and hopefully that<br />
+will be true for many other users.</p>
+<p>See also Daq, <a href="DaqFunctions" class="uri">DaqFunctions</a>, <a href="DaqPins" class="uri">DaqPins</a>, <a href="DaqTest" class="uri">DaqTest</a>, <a href="PsychHIDTest" class="uri">PsychHIDTest</a>,<br />
+<a href="DaqDeviceIndex" class="uri">DaqDeviceIndex</a>, <a href="DaqDIn" class="uri">DaqDIn</a>, <a href="DaqDOut" class="uri">DaqDOut</a>, <a href="DaqAIn" class="uri">DaqAIn</a>, <a href="DaqAOut" class="uri">DaqAOut</a>, <a href="DaqAInScan" class="uri">DaqAInScan</a>.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/Daq/DaqAOutScan.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/Daq/DaqAOutScan.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/Daq/DaqAOutScan.m</code></p>
+</div>

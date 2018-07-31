@@ -1,0 +1,31 @@
+<h2 id="psychtoolbox-psychoneliners">[[Psychtoolbox]] › [[PsychOneliners]]</h2>
+<p>savedClut = <a href="SaveIdentityClut" class="uri">SaveIdentityClut</a>(windowPtr [, LUT])</p>
+<p>This routine defines a LUT or LUT-type for use as identity gamma lookup<br />
+table for applications that need such a table, e.g., Bits+ box,<br />
+<a href="VideoSwitcher" class="uri">VideoSwitcher</a>, Video attenuators, the <a href="BrightSide" class="uri">BrightSide</a> HDR display etc.</p>
+<p>It writes the LUT into a config file. The function <a href="LoadIdentityClut" class="uri">LoadIdentityClut</a>()<br />
+will use the written LUT from that config file, if such a file exists.</p>
+<p>You can either pass a full blown LUT in the optional argument ‘LUT’, or<br />
+you can pass a LUT id code (see codes and corresponding LUT’s in the<br />
+source code of <a href="LoadIdentityClut" class="uri">LoadIdentityClut</a>.m). If you omit the argument, then the<br />
+function will readout and store the current CLUT of the given display -<br />
+in the hope that the current LUT is actually an identity CLUT.</p>
+<p>windowPtr is optional: It can be omitted, in which case the LUT of the<br />
+screen with screenid = max(<a href="Screen" class="uri">Screen</a>(‘Screens’)) is used. It can be a<br />
+screenid for the screen to read out, or it can be the window handle of an<br />
+existing open onscreen window, in which case the screen corresponding to<br />
+that window is used.</p>
+<p>In any case the type of operating system, graphics card vendor and model,<br />
+as well as <a href="OpenGL" class="uri">OpenGL</a> version and <a href="OpenGL" class="uri">OpenGL</a> driver version and screenid is used<br />
+to specify the configuration to which the LUT applies. This to<br />
+disambiguate in case multiple different operating systems, os versions,<br />
+GPU’s or display types are used.</p>
+<p>The routine returns the stored clut in the optional return argument ‘oldClut’.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOneliners/SaveIdentityClut.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOneliners/SaveIdentityClut.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOneliners/SaveIdentityClut.m</code></p>
+</div>

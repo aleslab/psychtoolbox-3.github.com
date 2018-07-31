@@ -1,0 +1,25 @@
+<h2 id="psychtoolbox-psychhardware-eyelinktoolbox-eyelinktests">[[Psychtoolbox]] › [[PsychHardware]] › [[EyelinkToolbox]] › [[EyelinkTests]]</h2>
+<p>John Palmer<br />
+test button input of eyelink. Simple version w/o file i/o<br />
+Times using both eyelink timestamp and local computer clock<br />
+runs till holding down key on keyboard while pressing button<br />
+prints out by keypress: button, states, eyelink time, getsecs time, overhead, diffs<br />
+7/1/02 bug w/ eyelink time doesn’t work, not even intializing variable????<br />
+7/12/02 new MEX version w/ modified lastbuttonpress, works fine<br />
+7/15/02 v6: used lastbuttonpress to get initial time baseline<br />
+7/16/02 v7: used currenttime to get initial time<br />
+7/18/02 v8: used the new requesttime and readtime routines<br />
+7/19/02 v9: broke out routine <a href="EXGetEyeLinkTime" class="uri">EXGetEyeLinkTime</a>, v10: put in separate file<br />
+7/25/02 fwc renamed to testbutton</p>
+<p>Typical Results:<br />
+getsecs overhead 0.02 ms<br />
+<a href="EXGetEyeLink" class="uri">EXGetEyeLink</a> overhead 0.60 ms<br />
+random error in eyelink time ~ +-0.50 ms, good for a ms clock!</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/EyelinkToolbox/EyelinkTests/testbutton.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/EyelinkToolbox/EyelinkTests/testbutton.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/EyelinkToolbox/EyelinkTests/testbutton.m</code></p>
+</div>

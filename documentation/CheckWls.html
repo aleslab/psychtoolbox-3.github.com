@@ -1,0 +1,26 @@
+<h2 id="psychtoolbox-psychcolorimetric">[[Psychtoolbox]] › [[PsychColorimetric]]</h2>
+<p>[errorRet] = <a href="CheckWls" class="uri">CheckWls</a>(wls1,wls2,[quiet])</p>
+<p>Check that two wavelength descriptions are consistent with<br />
+the same underlying sampling.</p>
+<p>Arguments may be either[start delta n],<br />
+a list of wavelengths, or a struct.</p>
+<p>errorRet indicates status<br />
+== 0: OK<br />
+== 1: Mismatch</p>
+<p>Arg quiet tells function whether or not to print display to<br />
+screen notifying user that check failed:<br />
+0 =&gt; display message<br />
+else =&gt; keep quiet</p>
+<p>9/13/93 dhb Added error return, no longer exits on error.<br />
+3/12/99 xmz Took care of cases when wls1 and wls2 are not<br />
+equal in length.<br />
+1/4/00 mpr Added quiet flag to suppress display.<br />
+4/22/04 dhb Make quiet the default.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychColorimetric/CheckWls.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychColorimetric/CheckWls.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychColorimetric/CheckWls.m</code></p>
+</div>

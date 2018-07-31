@@ -1,0 +1,30 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p>numFonts=<a href="FontInfo" class="uri">FontInfo</a>(‘NumFonts’); % Return the number of installed fonts<br />
+fontInfoStructArray=<a href="FontInfo" class="uri">FontInfo</a>(‘Fonts’);% Return an array of font info structs<br />
+versionInfo=<a href="FontInfo" class="uri">FontInfo</a>(‘Version’); % Return version info for Fonts command</p>
+<p>OS X: ___________________________________________________________________</p>
+<p>Return information about the text fonts installed on your computer.<br />
+<a href="FontInfo" class="uri">FontInfo</a> may be used in conjunction with <a href="Screen" class="uri">Screen</a>(‘DrawText’) to select a<br />
+screen font which satifies your requirements. <a href="FontInfo" class="uri">FontInfo</a>(‘Fonts’) may omit<br />
+information in some fields of the returned struct, depending on what<br />
+information the font file itself supplies. In particular, the<br />
+verticalMetrics and horizontalMetrics substructs are often empty.</p>
+<p>The font number associated with a particular font may change if you<br />
+restart your computer or change the installed fonts. Therefore you<br />
+should not code font numbers into your scripts. Instead, specify fonts<br />
+within your scripts by using font names. You may pass font names<br />
+directly to <a href="Screen" class="uri">Screen</a>(‘TextFont’), or use the table returnd by the <a href="FontInfo" class="uri">FontInfo</a><br />
+function to find the number of a font which satisfies your criteria for a<br />
+font. Among those critera may be the font name itself.</p>
+<p>OS 9, WINDOWS, Linux: ___________________________________________________</p>
+<p><a href="FontInfo" class="uri">FontInfo</a> does not exist on OS-9, Windows and Linux.<br />
+_________________________________________________________________________</p>
+<p>SEE ALSO: <a href="Screen" class="uri">Screen</a>, <a href="Screen" class="uri">Screen</a>(‘TextFont’)</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/FontInfo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/FontInfo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/FontInfo.m</code></p>
+</div>

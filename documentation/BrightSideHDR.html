@@ -1,0 +1,96 @@
+<h2 id="psychtoolbox-psychhardware-brightsidedisplay">[[Psychtoolbox]] › [[PsychHardware]] › [[BrightSideDisplay]]</h2>
+<p><a href="BrightSideHDR" class="uri">BrightSideHDR</a>(cmd [, arg1][, arg2]) – Psychtoolbox interface to<br />
+<a href="BrightSide" class="uri">BrightSide</a> Technologies High Dynamic Range display device.</p>
+<p>This function is used to set up and interface with the High Dynamic Range<br />
+display of <a href="BrightSide" class="uri">BrightSide</a> Technologies. It is a Matlab wrapper around lower<br />
+level GLSL Psychtoolbox functions and the low-level <a href="BrightSideCore" class="uri">BrightSideCore</a>.dll<br />
+MEX-File. You need to have Brightsides DLL’s (and the display device)<br />
+installed on your machine for this to work. Without the DLL’s this will<br />
+simply crash. See “help <a href="BSRuntimeLibs" class="uri">BSRuntimeLibs</a>” for information about<br />
+dependencies.</p>
+<p>cmd - The command that <a href="BrightSideHDR" class="uri">BrightSideHDR</a> should execute. cmd can be any of<br />
+the following:</p>
+<p>Open a window on the HDR display as with <a href="Screen" class="uri">Screen</a>(‘OpenWindow’, …),<br />
+perform all HDR initialization:</p>
+<p>[win, winRect] = <a href="BrightSideHDR" class="uri">BrightSideHDR</a>(‘OpenWindow’, screenid, …);</p>
+<p>This will execute <a href="Screen" class="uri">Screen</a>(‘OpenWindow’) with all proper parameters,<br />
+followed by <a href="BrightSide" class="uri">BrightSide</a> HDR init routines. It is a completely sufficient<br />
+drop in replacement for <a href="Screen" class="uri">Screen</a>(‘OpenWindow’), accepting and returning<br />
+exactly the same arguments that <a href="Screen" class="uri">Screen</a>() would do, adjusting all<br />
+parameters to the constraints of the <a href="BrightSideHDR" class="uri">BrightSideHDR</a>, if necessary.</p>
+<p>[win, winRect] = <a href="BrightSideHDR" class="uri">BrightSideHDR</a>(‘DummyOpenWindow’, screenid, …);<br />
+Same as <a href="OpenWindow" class="uri">OpenWindow</a>, but just init a dummy mode that operates on standard<br />
+displays without the Brightside-Libraries - useful for off-site testing.</p>
+<p>[win, winRect] = <a href="BrightSideHDR" class="uri">BrightSideHDR</a>(‘RawOpenWindow’, screenid, …);<br />
+Same as <a href="DummyOpenWindow" class="uri">DummyOpenWindow</a>, but just init a bare-minimum window on the HDR<br />
+display suitable for playback of previously computed raw framebuffer<br />
+images (see raw capture and replay support below). This will essentially<br />
+open a fullscreen window on the HDR display, with proper window settings<br />
+and identity gamma tables to make sure framebuffer content is passed<br />
+unaltered 1-to-1 to the display. The imaging pipeline is disabled, this<br />
+is a pure “fast replay” mode of content created in a previous session.</p>
+<p>In most applications you won’t ever need to use any of the commands<br />
+below, as PTB does all this stuff automatically behind the scenes…<br />
+Ignore them unless you know what you’re doing.</p>
+<p><a href="BrightSideHDR" class="uri">BrightSideHDR</a>(‘Initialize’, win [, dummy]); – Initialize the <a href="BrightSide" class="uri">BrightSide</a> libraries<br />
+for HDR output into onscreen window ‘win’. Onscreen window ‘win’ must have been<br />
+opened before on a screen which corresponds to the attached High Dynamic Range<br />
+display device. If you set ‘dummy’ to 1, then we are in emulation mode,<br />
+i.e., we work without invocation of the mex file and without a real HDR<br />
+display. This call will also attach all callback functions to the proper<br />
+hooks for the given onscreen window ‘win’ inside the <a href="Screen" class="uri">Screen</a>() command.</p>
+<p><a href="BrightSideHDR" class="uri">BrightSideHDR</a>(‘Debuglevel’, level); – Set level of verbosity for<br />
+debugging. The default is zero which means to be silent. A level of 1<br />
+produces some debug output.</p>
+<h3 id="support-for-raw-hdr-image-capture-and-replay">SUPPORT FOR RAW HDR IMAGE CAPTURE AND REPLAY:</h3>
+<p>[sourceWin, destWin] = <a href="BrightSideHDR" class="uri">BrightSideHDR</a>(‘CreateSnapshotBufferPair’);<br />
+- Create a pair of offscreen windows useable for “offline” HDR-&gt;<a href="BrightSide" class="uri">BrightSide</a><br />
+conversion. Will create ‘sourceWin’ as a offscreen window with 32bpc<br />
+float RGBA format, ‘destWin’ as a offscreenwindow with 8 bpc RGBA format.<br />
+Both windows will have the size of the HDR displays framebuffer.</p>
+<p>You can draw into the ‘sourceWin’ just as you’d do to an onscreen window.<br />
+Then you can call <a href="BrightSideHDR" class="uri">BrightSideHDR</a>(‘ConvertImageToSnapshotBuffer’, destWin,<br />
+sourceWin); to convert the HDR image into a <a href="BrightSide" class="uri">BrightSide</a> formatted image in<br />
+‘destWin’. You can use ‘destWin’ or its content in the<br />
+<a href="BrightSideHDR" class="uri">BrightSideHDR</a>(‘BlitRawFramebufferSnapshot’) call for quick “replay” of<br />
+HDR content.</p>
+<p>[rawImg] = <a href="BrightSideHDR" class="uri">BrightSideHDR</a>(‘ConvertImageToSnapshotBuffer’, destWin, sourceWin);<br />
+- Convert HDR image in offscreen window ‘sourceWin’ into a HDR<br />
+useable raw image in offscreen window ‘destWin’. Optionally return a<br />
+Matlab uint8 RGB image matrix with the raw data as 1st return argument<br />
+rawImg.</p>
+<p>You could save ‘rawImg’ to disk and later load it and “replay” it on the<br />
+HDR display via calls to <a href="BrightSideHDR" class="uri">BrightSideHDR</a>(‘BlitRawFramebufferSnapshot’,<br />
+sourceWin);</p>
+<p>rawSnapshotMatrix = <a href="BrightSideHDR" class="uri">BrightSideHDR</a>(‘GetRawFramebufferSnapshot’);<br />
+-Call immediately after <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’). This will create a “screenshot” of the<br />
+framebuffer for the currently displaying HDR image and return a Matlab<br />
+matrix with proper raw framebuffer data, formatted for the HDR display.<br />
+Can be used to <a href="Screen" class="uri">Screen</a>(‘MakeTexture’) a texture that you can blit into the<br />
+framebuffer via <a href="BrightSideHDR" class="uri">BrightSideHDR</a>(‘BlitRawFramebufferSnapshot’) without need<br />
+for expensive conversion at runtime.</p>
+<p><a href="BrightSideHDR" class="uri">BrightSideHDR</a>(‘BlitRawFramebufferSnapshot’, sourceWin); Blit the given<br />
+RGB8 or RGBA8 texture or offscreen window into the framebuffer of HDR<br />
+display, so it gets displayed at the next invocation of <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’).<br />
+The ‘sourceWin’ must be a texture or offscreen window whose image content<br />
+was previously created by one of the raw snapshotting functions above,<br />
+ie., it must be already encoded in the special data format for <a href="BrightSide" class="uri">BrightSide</a><br />
+displays.</p>
+<p>Callbacks: Usually called automatically by <a href="Screen" class="uri">Screen</a>(), no need to use them<br />
+in your script directly! Some of them may disappear in the future,<br />
+getting subsumed by <a href="Screen" class="uri">Screen</a>()’s internal imaging pipeline.</p>
+<p><a href="BrightSideHDR" class="uri">BrightSideHDR</a>(‘BrightSideExecuteBlit’, win); – This will convert<br />
+the HDR image content in the HDR backbuffer into the special data<br />
+format needed by the HDR display hardware. This is called by PTB<br />
+automatically, don’t call it yourself!</p>
+<p><a href="BrightSideHDR" class="uri">BrightSideHDR</a>(‘Shutdown’); – Shut down the HDR device and core library,<br />
+switch PTB back to standard LDR output. This is called by PTB<br />
+automatically, don’t call it yourself!</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/BrightSideDisplay/BrightSideHDR.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/BrightSideDisplay/BrightSideHDR.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/BrightSideDisplay/BrightSideHDR.m</code></p>
+</div>

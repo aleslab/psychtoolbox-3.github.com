@@ -1,0 +1,44 @@
+<h2 id="psychtoolbox-psychcolorimetricdata">[[Psychtoolbox]] › [[PsychColorimetricData]]</h2>
+<p>dimensions = <a href="PhotoreceptorDimensions" class="uri">PhotoreceptorDimensions</a>(receptorTypes,whichDimension,species,source)</p>
+<p>Return estimates of photoreceptor dimensions.</p>
+<p>Allowable receptor types depend on species and source, but the general<br />
+list is:<br />
+<a href="SCone" class="uri">SCone</a>, <a href="MCone" class="uri">MCone</a>, <a href="LCone" class="uri">LCone</a>, <a href="FovealSCone" class="uri">FovealSCone</a>, <a href="FovealMCone" class="uri">FovealMCone</a>, <a href="FovealLCone" class="uri">FovealLCone</a>, Rod.</p>
+<p>The type argument may be a single string or a cell array of strings. If it<br />
+is an array, a column vector of values is returned.</p>
+<p>The foveal version of cone types is sensible only for primates. Not all<br />
+estimate sources support all receptor types.</p>
+<p>Note that the following three numbers are overdetermined: photopigment<br />
+specific density (sd), photopigment axial density (ad), and outer segment<br />
+length osl. In particular, ad = sd*osl. Depending on the measurement<br />
+method, different sources provide different pairs of these numbers.<br />
+We have attempted to enforce this consistency in the set of routines<br />
+<a href="PhotopigmentSpecificDensity" class="uri">PhotopigmentSpecificDensity</a>, <a href="PhotopigmentAxialDensity" class="uri">PhotopigmentAxialDensity</a>, and <a href="PhotoreceptorDimensions" class="uri">PhotoreceptorDimensions</a>.<br />
+That is to say, for the same source, species, and type, you should get<br />
+a consistent triplet of numbers.</p>
+<p>Argument whichDimension may take on values:<br />
+<a href="OSdiam" class="uri">OSdiam</a>, <a href="ISdiam" class="uri">ISdiam</a>, <a href="OSlength" class="uri">OSlength</a>.</p>
+<p>Supported species:<br />
+Human (Default), <a href="GuineaPig" class="uri">GuineaPig</a>, Dog</p>
+<p>Supported sources:<br />
+Rodeick (Default).<br />
+CVRL (Human Cone OS length)<br />
+Webvision (Human Cone IS diameter)<br />
+Hendrickson (Human Rod OS length)<br />
+<a href="SterlingLab" class="uri">SterlingLab</a> <a href="(GuineaPig)%20dimensions">(GuineaPig</a>.<br />
+Generic<br />
+<a href="PennDog" class="uri">PennDog</a> (Dog dimensions).<br />
+None (returns empty for the corresponding value)</p>
+<p>The Generic type returns a single number for all species/type.</p>
+<p>7/11/03 dhb Wrote it.<br />
+12/04/07 dhb Added dog but with placeholder numbers.<br />
+8/9/13 dhb Comment clean up, allow ‘None’ to return empty as the value.<br />
+8/10/13 dhb Added Webvision source for IS diameter.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychColorimetricData/PhotoreceptorDimensions.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychColorimetricData/PhotoreceptorDimensions.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychColorimetricData/PhotoreceptorDimensions.m</code></p>
+</div>

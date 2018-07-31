@@ -1,0 +1,37 @@
+<h2 id="psychtoolbox-psychobsolete">[[Psychtoolbox]] › [[PsychObsolete]]</h2>
+<p><a href="SleepSecs" class="uri">SleepSecs</a>(s)</p>
+<p>Wait for duration s seconds, up to one second. <a href="SleepSecs" class="uri">SleepSecs</a> suspends the<br />
+MATLAB process.</p>
+<p>OS X: ___________________________________________________________________</p>
+<p>If you set the priority level to greater than 0 using either <a href="Priority" class="uri">Priority</a> or<br />
+<a href="Rush" class="uri">Rush</a> then use <a href="SleepSecs" class="uri">SleepSecs</a> instead of <a href="WaitSecs" class="uri">WaitSecs</a> while priority is elevated.<br />
+Whereas <a href="SleepSecs" class="uri">SleepSecs</a> surrenders CPU time, <a href="WaitSecs" class="uri">WaitSecs</a> consumes CPU time,<br />
+exceeding limits set by <a href="Priority" class="uri">Priority</a> or <a href="Rush" class="uri">Rush</a> and causing the Mach kernel to<br />
+revoke any priority setting greater than 0.</p>
+<p>If you are playing an animation, then use <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) to both<br />
+synchronize updating of the display to the Video <a href="BLanking" class="uri">BLanking</a> invterval (VBL)<br />
+and to delay your animation loop until the next VBL; Like <a href="SleepSecs" class="uri">SleepSecs</a>, <a href="Flip" class="uri">Flip</a><br />
+surrenders CPU time to other processes, abiding by limits set when<br />
+negotiating with the kernel for priority levels &gt; 0.</p>
+<p>You should not need to continuously sleep the MATLAB process at high<br />
+priority for periods greater than 1 second. If you feel the need for<br />
+continuous delay at elevated priority for greater than the maximum one<br />
+second duration of <a href="SleepSecs" class="uri">SleepSecs</a>, consider instead lowering priority to 0,<br />
+calling <a href="WaitSecs" class="uri">WaitSecs</a>, and then reeleveting priority.</p>
+<p><a href="SleepSecs" class="uri">SleepSecs</a> would be useful in a loop which called <a href="KbCheck" class="uri">KbCheck</a> at high priority<br />
+while not displaying an animation.</p>
+<p><a href="SleepSecs" class="uri">SleepSecs</a> uses the Posix usleep (“microsleep”) function.</p>
+<p>OS 9: ___________________________________________________________________</p>
+<p><a href="SleepSecs" class="uri">SleepSecs</a> does not exist in OS 9.</p>
+<p>WINDOWS: ________________________________________________________________</p>
+<p><a href="SleepSecs" class="uri">SleepSecs</a> does not exist in Windows.</p>
+<p>_________________________________________________________________________</p>
+<p>See Also: <a href="Priority" class="uri">Priority</a>, <a href="Rush" class="uri">Rush</a>, <a href="SetMachPriorityMex" class="uri">SetMachPriorityMex</a>, <a href="GetMachPriorityMex" class="uri">GetMachPriorityMex</a>, <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’)</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychObsolete/SleepSecs.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychObsolete/SleepSecs.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychObsolete/SleepSecs.m</code></p>
+</div>

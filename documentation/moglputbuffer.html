@@ -1,0 +1,16 @@
+<h2 id="psychtoolbox-psychopengl-mogl-wrap">[[Psychtoolbox]] › [[PsychOpenGL]] › [[MOGL]] › [[wrap]]</h2>
+<p>moglputbuffer(inputmatrix, ptr, nrbytes) – Copy content of matrix to buffer.</p>
+<p>This copies the content of the matrix ‘inputmatrix’ into the mogl memory<br />
+buffer ‘ptr’ which was previously created via calls to ptr = moglmalloc(…)<br />
+or ptr = moglcalloc(…). At most nrbytes are copied - if the target buffer<br />
+is too small for nrbytes, only the amount is copied that fits into the buffer.</p>
+<p>Be careful to avoid setting nrbytes to a size that exceeds the size of<br />
+inputmatrix, or Matlab/Octave will possibly crash or do other nasty things!</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOpenGL/MOGL/wrap/moglputbuffer.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOpenGL/MOGL/wrap/moglputbuffer.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOpenGL/MOGL/wrap/moglputbuffer.m</code></p>
+</div>

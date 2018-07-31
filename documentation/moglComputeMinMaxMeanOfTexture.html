@@ -1,0 +1,18 @@
+<h2 id="psychtoolbox-psychopengl-psychglslshaders">[[Psychtoolbox]] › [[PsychOpenGL]] › [[PsychGLSLShaders]]</h2>
+<p>[minv, maxv, meanv] = moglComputeMinMaxMeanOfTexture(texid, pingpongfbo1, pingpongfbo2, fastpath)</p>
+<p>This function expects a square RGB texture as input, whose color channels<br />
+contain identical values L=R=G=B where L is a grayscale (luminance) input<br />
+image. It computes and returns its global minimum, maximum and mean luminance<br />
+on the GPU.</p>
+<p>The width and height of the texture need to be divisible by two (even numbers).<br />
+It only works on RECTANGLE textures, not on standard power-of-two textures!<br />
+You are not allowed to use an input texture ‘texid’ that is identical to<br />
+the color buffer texture of the FBO ‘pingpongfbo2’!</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/moglComputeMinMaxMeanOfTexture.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/moglComputeMinMaxMeanOfTexture.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOpenGL/PsychGLSLShaders/moglComputeMinMaxMeanOfTexture.m</code></p>
+</div>

@@ -1,0 +1,38 @@
+<h2 id="psychtoolbox-psychcolorimetric">[[Psychtoolbox]] › [[PsychColorimetric]]</h2>
+<p>[absorptanceSpectra, absorptanceSpectraWls] =…<br />
+<a href="AbsorbanceToAbsorptance" class="uri">AbsorbanceToAbsorptance</a>(absorbanceSpectra, absorbanceSpectraWls, axialOpticalDensities)</p>
+<p>Convert pigment absorbance spectra into absorptance spectra, using the peak axial<br />
+optical density. The absorbance/absorptance terminology is described at the<br />
+CVRL web page, http://cvrl.ucl.ac.uk. Wyszecki and Stiles refere to absorbance<br />
+the absorption coefficient (p. 588).</p>
+<p>Both absorptance spectra and absorbance spectra describe quantal absorption.</p>
+<p>Absorbance spectra are normalized to a peak value of 1.<br />
+Absorptance spectra are the proportion of quanta actually absorbed.</p>
+<p>Equation: absorptanceSpectra = 1 - 10.^(-OD * absorbanceSpectra)</p>
+<p>Multiple spectra may be passed in the rows of absorbanceSpectra. If<br />
+so, then the same number of densities should be passed in the vector<br />
+axialOpticalDensities, and multiple answers are returned in the rows<br />
+of absorptanceSpectra.</p>
+<p>Wavelength information may be in any of the available Psychtoolbox representations,<br />
+and the returned wavelength information is in the same format as passed.</p>
+<p>A useful fact about this conversion is the following. For small axial optical densities<br />
+the absorptance spectrum is a scaled version of the absorbance spectrum. This follows<br />
+if we take the Taylor expansion of 1 - 10.^(-x) for small values of x. We find that<br />
+that is 1 - (10^0 + (-ln(10)*x) = ln(10)*x. Plugging in OD*absorbanceSpectra for x<br />
+we get the absorptanceSpectra = ln(10)*OD*absorbanceSpectra.</p>
+<p>04/29/03 lyin Wrote wrote with advice from dhb<br />
+04/30/03 lyin Reorganize the variable<br />
+06/12/03 lyin Change the way variable being passed<br />
+06/23/03 dhb Check dimensions of spectra and density.<br />
+06/30/03 dhb Change to toolbox convention, put sensitivity like stuff in rows.<br />
+08/11/13 dhb Fix comment to reflect row convention change made in 2003. Slowly but surely we fix things up.<br />
+10/29/13 dhb, ms Add commment about absorptance for low OD.<br />
+12/02/13 dhb Fix spelling of “absorptance” in routine names and throughout.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychColorimetric/AbsorbanceToAbsorptance.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychColorimetric/AbsorbanceToAbsorptance.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychColorimetric/AbsorbanceToAbsorptance.m</code></p>
+</div>

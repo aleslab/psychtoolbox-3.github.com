@@ -1,0 +1,12 @@
+<h1 id="psychoculusvrcoreopen"><a href="PsychOculusVRCore-Open">PsychOculusVRCore(‘Open’)</a></h1>
+<h2 id="psychtoolbox-psychoculusvrcore.mexdll-subfunction">[[Psychtoolbox]] › [[PsychOculusVRCore]].{mex*,dll} subfunction</h2>
+<p>Open connection to Oculus VR HMD, return a ‘oculusPtr’ handle to it.</p>
+<p>The call tries to open the HMD with index ‘deviceIndex’, or the first detected<br />
+HMD, if ‘deviceIndex’ is omitted. You can pass in a ‘deviceIndex’ of -1 to open<br />
+an emulated HMD. It doesn’t provide any sensor input, but allows some basic<br />
+testing and debugging of VR software nonetheless.<br />
+The returned handle can be passed to the other subfunctions to operate the<br />
+device.<br />
+A second return argument ‘modelName’ returns the model name string of the Oculus<br />
+device.</p>
+<p>&lt;&lt;=====See also:===== GetCount Close &lt;&lt;</p>

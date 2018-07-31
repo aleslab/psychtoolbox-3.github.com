@@ -1,0 +1,44 @@
+<h2 id="psychtoolbox-psychtests">[[Psychtoolbox]] › [[PsychTests]]</h2>
+<p><a href="QuestTest" class="uri">QuestTest</a>.m</p>
+<p>Created by hacking a copy of <a href="QuestDemo" class="uri">QuestDemo</a>.m, in order to<br />
+do some simulations for Beau Watson.</p>
+<p>128 repetitions of each condition<br />
+Quest assumes <a href="LogWeibull" class="uri">LogWeibull</a> psychometric function with parameters:<br />
+beta = {1.5, 2., 2.5, 3., 3.5, 4., 4.5, 5., 5.5} (in separate conditions)<br />
+gamma = 0.03<br />
+delta = .01<br />
+sample range = {-30,30} dB<br />
+sample step size 0.5 dB<br />
+Prior is always Gaussian, sd=12 dB, centered on guess.<br />
+Initial guess drawn from Normal distribution with mean 0 and sd=6 dB.<br />
+Quest uses mode of posterior density.<br />
+Simulated observer has <a href="LogWeibull" class="uri">LogWeibull</a> psychometric function with parameters:<br />
+{beta=3.5,gamma=.03,delta=.01}</p>
+<p>By commenting and uncommenting five lines below, you can use<br />
+this file to implement three QUEST-related procedures for measuring<br />
+threshold.</p>
+<p><a href="QuestMode" class="uri">QuestMode</a>: In the original algorithm of Watson &amp; Pelli (1983)<br />
+each trial and the final estimate are at the MODE of the posterior pdf.</p>
+<p><a href="QuestMean" class="uri">QuestMean</a>: In the improved algorithm of King-Smith et al. (1994).<br />
+each trial and the final estimate are at the MEAN of the posterior pdf.</p>
+<p><a href="QuestQuantile" class="uri">QuestQuantile</a> &amp; <a href="QuestMean" class="uri">QuestMean</a>: In the ideal algorithm of Pelli (1987)<br />
+each trial is at the best QUANTILE, and the final estimate is at<br />
+the MEAN of the posterior pdf.</p>
+<p>King-Smith, P. E., Grigsby, S. S., Vingrys, A. J., Benes, S. C., and Supowit, A.<br />
+(1994) Efficient and unbiased modifications of the QUEST threshold method: theory,<br />
+simulations, experimental evaluation and practical implementation.<br />
+Vision Res, 34 (7), 885-912.</p>
+<p>Pelli, D. G. (1987) The ideal psychometric procedure. Investigative Ophthalmology<br />
+&amp; Visual Science, 28 (Suppl), 366.</p>
+<p>Watson, A. B. and Pelli, D. G. (1983) QUEST: a Bayesian adaptive psychometric<br />
+method. Percept Psychophys, 33 (2), 113-20.</p>
+<p>Copyright (c) 1996-1997 Denis G. Pelli</p>
+<p>6/24/97 dgp wrote it, based on <a href="QuestDemo" class="uri">QuestDemo</a>.m</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychTests/QuestTest.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychTests/QuestTest.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychTests/QuestTest.m</code></p>
+</div>

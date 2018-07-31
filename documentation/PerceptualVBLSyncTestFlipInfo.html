@@ -1,0 +1,65 @@
+<h2 id="psychtoolbox-psychtests">[[Psychtoolbox]] › [[PsychTests]]</h2>
+<p><a href="PerceptualVBLSyncTestFlipInfo" class="uri">PerceptualVBLSyncTestFlipInfo</a>(screen, stereomode, fullscreen, doublebuffer, maxduration, vblSync, testdualheadsync)</p>
+<p>Perceptual synchronization test for synchronization of <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) and<br />
+<a href="Screen" class="uri">Screen</a>(‘WaitBlanking’) to the vertical retrace. This is like<br />
+<a href="PerceptualVBLSyncTest" class="uri">PerceptualVBLSyncTest</a>, but also outputs diagnostic info from the<br />
+<a href="Screen" class="uri">Screen</a>(‘GetFlipInfo’) command, which is only available on Linux.</p>
+<p>Arguments:<br />
+‘screen’ Either a single screen handle, or none (in which case the<br />
+display with the maximum id will be used), or a vector of two handles in<br />
+stereomode 10, e.g., [0 1] if you want to output to screens 0 and 1. You<br />
+can also pass a vector of two screens when stereomode is not set to 10.<br />
+In this case two separate (non-stereo) onscreen windows will be opened on<br />
+both displays and they will get flipped in multiflip mode 2. That means<br />
+that the first display (first element of ‘screen’) is synced to VBL, but<br />
+the 2nd one is synced to bufferswaps of the first one. This is a<br />
+straightforward test to check if two displays of a stereosetup run with a<br />
+synchronized retrace cycle (good!) or if they are phase-shifted or<br />
+drifting against each other (not good!).</p>
+<p>‘stereomode’ Which stereomode to use? Defaults to zero, ie. no stereo.</p>
+<p>‘fullscreen’ Fullscreen presentation? Defaults to 1 ie. yes. In<br />
+non-fullscreen mode, no proper synchronization of bufferswaps can be<br />
+expected.</p>
+<p>‘doublebuffer’ Single- or double-buffering (1). Defaults to 1. In single<br />
+buffer mode there is no sync to retrace, so this is a good way to<br />
+simulate the tearing artifacts that would happen on sync failure, just to<br />
+get an impression.</p>
+<p>‘maxduration’ Maximum runtime of test: Runs until keypress or maxduration<br />
+seconds have elapsed (Default is 10 seconds).</p>
+<p>‘vblSync’ If 1, synchronize bufferswaps to vertical retrace of monitor,<br />
+otherwise (setting 0) swap immediately without sync, ie., usually with tearing.</p>
+<p>‘testdualheadsync’ If 1, and ‘vblSync’ is zero, manually wait until the video<br />
+scanout position reaches half the height of the display, then swap. If this<br />
+is done on a multi-display setup and the video scanout cycles of all the<br />
+participating displays are properly synchronized, you should see a “static”<br />
+crack line roughly at half the height of the display, maybe a bit lower. If<br />
+you see a wandering crack line, at least on some displays, or you see vertical<br />
+offsets of the position of the crack line between displays, then the displays<br />
+are not properly synchronized, ie., not suitable for artifact free binocular<br />
+stimulation. Caveat: This logic has been developed and tested specifically<br />
+for testing on Linux with a single X-<a href="Screen" class="uri">Screen</a> spanning multiple displays. It may<br />
+or may not be suitable to assess other operating systems or display configurations.</p>
+<p>After starting this test, you should see a flickering greyish background<br />
+that flickers in a homogenous way - without cracks or weird moving patterns<br />
+in the flickering area. If you see an imhogenous flicker, this means that<br />
+synchronization of stimulus onset to the vertical retrace doesn’t work due<br />
+to some serious bug or limitation of your graphics hardware or its driver.<br />
+If you don’t know what this means, you can test this script with parameter<br />
+doublebuffer == 0 to artificially create a synchronization failure.</p>
+<p>On many systems you should also see some emerging pattern of yellow horizontal lines.<br />
+These lines should be tightly concentrated/clustered in the topmost area of<br />
+the screen. Lots of yellow lines in the middle or bottom area or even<br />
+randomly distributed lines indicate some bug in the driver of your graphics<br />
+hardware. This is a common problem of all ATI graphics adapters on <a href="MacOS" class="uri">MacOS</a>-X<br />
+versions earlier than OS-X 10.4.3 when running a dual-display setup…</p>
+<p>A second reason for distributed yellow lines could be bad timing on your<br />
+machine, e.g., due to background activity by virus scanners or the Spotlight<br />
+indexing service on OS-X. Turn these off for conducting your studies!</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychTests/PerceptualVBLSyncTestFlipInfo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychTests/PerceptualVBLSyncTestFlipInfo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychTests/PerceptualVBLSyncTestFlipInfo.m</code></p>
+</div>

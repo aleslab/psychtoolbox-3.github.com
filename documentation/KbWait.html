@@ -1,0 +1,61 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p>[secs, keyCode, deltaSecs] = <a href="KbWait" class="uri">KbWait</a>([deviceNumber][, forWhat=0][, untilTime=inf])</p>
+<p>Waits until any key is down and optionally returns the time in seconds<br />
+and the keyCode vector of keyboard states, just as <a href="KbCheck" class="uri">KbCheck</a> would do. Also<br />
+allows to wait for release of all keys or for single keystrokes, see<br />
+below.</p>
+<p>If the optional parameter ‘untilTime’ is provided, <a href="KbWait" class="uri">KbWait</a> will only wait<br />
+until that time and then return regardless if anything happened on the<br />
+keyboard or not.</p>
+<p>CAUTION: <a href="KbWait" class="uri">KbWait</a> periodically checks the keyboard. After each failed check<br />
+(ie. no change in keyboard state) it will wait for 5 msecs before the<br />
+next check. This is done to reduce the load on your system, and it is<br />
+important to do so. However if you want to measure reaction times this is<br />
+clearly not what you want, as it adds up to 5 msecs extra uncertainty to<br />
+all measurements!</p>
+<p>If you have trouble with <a href="KbWait" class="uri">KbWait</a> always returning immediately, this could<br />
+be due to “stuck keys”. See “help <a href="DisableKeysForKbCheck" class="uri">DisableKeysForKbCheck</a>” on how to work<br />
+around this problem. See also “help <a href="RestrictKeysForKbCheck" class="uri">RestrictKeysForKbCheck</a>”.</p>
+<p><a href="GetChar" class="uri">GetChar</a> and <a href="CharAvail" class="uri">CharAvail</a> are character oriented (and slow), whereas <a href="KbCheck" class="uri">KbCheck</a><br />
+and <a href="KbWait" class="uri">KbWait</a> are keypress oriented (and fast).</p>
+<p>Using <a href="KbWait" class="uri">KbWait</a> from the MATLAB command line: When you type “<a href="KbWait" class="uri">KbWait</a>” at the<br />
+prompt and hit the enter/return key to execute that command, then <a href="KbWait" class="uri">KbWait</a><br />
+will detect the enter/return key press and return immediatly. If you<br />
+want to test <a href="KbWait" class="uri">KbWait</a> from the command line, then try this:</p>
+<p><a href="WaitSecs" class="uri">WaitSecs</a>(0.2);<a href="KbWait" class="uri">KbWait</a></p>
+<p><a href="KbWait" class="uri">KbWait</a> can also wait for releasing of keys instead of pressing of keys<br />
+if you set the optional 2nd argument ‘forWhat’ to 1.</p>
+<p>If you want to wait for a single keystroke, set the ‘forWhat’ value to 2.<br />
+<a href="KbWait" class="uri">KbWait</a> will then first wait until all keys are released, then for the<br />
+first keypress, then it will return. The above example could be realized<br />
+via:</p>
+<p><a href="KbWait" class="uri">KbWait</a>([], 2);</p>
+<p>If you would set ‘forWhat’ to 3 then it would wait for releasing the key<br />
+after pressing it againg, ie. waitForAllKeysReleased -&gt; waitForKeypress<br />
+-&gt; waitForAllKeysReleased -&gt; Return [secs, keyCode] of the key press.</p>
+<p>OSX and Linux: __________________________________________________________</p>
+<p><a href="KbWait" class="uri">KbWait</a> uses the <a href="PsychHID" class="uri">PsychHID</a> function, a general purpose function for<br />
+reading from the Human Interface Device (HID) class of USB devices.</p>
+<p><a href="KbWait" class="uri">KbWait</a> tests the first USB-HID keyboard device by default. Optionally<br />
+you can pass in a ‘deviceNumber’ to test a different keyboard if multiple<br />
+keyboards are connected to your machine. If deviceNumber is -1, all<br />
+keyboard devices will be checked. If deviceNumber is -2, all keypad<br />
+devices (if any) will be checked. If deviceNumber is -3, all keyboard and<br />
+keypad devices will be checked. The device numbers to be checked are<br />
+determined only on the first call to the function. If these numbers<br />
+change, the function can be reset using “clear <a href="KbWait" class="uri">KbWait</a>”.</p>
+<p>As a little bonus, <a href="KbWait" class="uri">KbWait</a> can also query other HID human input devices<br />
+which have keys or buttons as if they were keyboards. If you pass in the<br />
+deviceIndex of a mouse <a href="(GetMouseIndices)%20will%20provide%20with%20them">(GetMouseIndices</a>, it will<br />
+treat mouse button state as keyboard state. Similar behaviour usually<br />
+works with Joysticks, Gamepads and other input controllers.</p>
+<p>_________________________________________________________________________</p>
+<p>See also: <a href="KbCheck" class="uri">KbCheck</a>, <a href="KbStrokeWait" class="uri">KbStrokeWait</a>, <a href="KbPressWait" class="uri">KbPressWait</a>, <a href="KbReleaseWait" class="uri">KbReleaseWait</a>, <a href="GetChar" class="uri">GetChar</a>, <a href="CharAvail" class="uri">CharAvail</a>, <a href="KbDemo" class="uri">KbDemo</a>.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/KbWait.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/KbWait.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/KbWait.m</code></p>
+</div>

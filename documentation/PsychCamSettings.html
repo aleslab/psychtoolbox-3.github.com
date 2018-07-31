@@ -1,0 +1,111 @@
+<h2 id="psychtoolbox-psychvideocapture">[[Psychtoolbox]] › [[PsychVideoCapture]]</h2>
+<p>rc = <a href="PsychCamSettings" class="uri">PsychCamSettings</a>(cmd, grabber [, arg0, arg1, …])</p>
+<p>Setup tool for video sources for use with Psychtoolbox<br />
+video capture functions. This function can mostly only operate<br />
+on IIDC/DCAM machine vision standard compliant camera connected<br />
+via IEEE1394-Firewire bus or USB bus + IIDC protocol. In other<br />
+words, it only operates on cameras controlled via the libdc1394<br />
+firewire video capture engine on Linux and OSX, not on standard<br />
+consumer/prosumer class cameras controlled by the [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) engine,<br />
+e.g., webcams, DV cameras etc.</p>
+<p><a href="PsychCamSettings" class="uri">PsychCamSettings</a> is used to query or change settings of such<br />
+a video source that is supported by the <a href="Screen" class="uri">Screen</a>() subfunctions<br />
+for video capture. The first parameter, a ‘cmd’ command string<br />
+specifies the subfunction to execute. The second parameter<br />
+‘grabber’ is the device handle returned by <a href="Screen" class="uri">Screen</a>(‘OpenVideoCapture’).<br />
+All following parameters are dependent on the selected subfunction.</p>
+<p>Subfunctions of form ‘XXX’ change the setting of a parameter XXX.<br />
+Subfunctions of form ‘XXX’ query the current setting of a parameter XXX.<br />
+Subfunctions of form ‘AutoXXX’ try to switch parameter XXX into automatic<br />
+control, if supported by the camera or video source.</p>
+<p>The type of parameters supported is highly dependent on the specific video<br />
+source. Unsupported parameters are usually “no operations” - silently ignored.</p>
+<p>For known camera models, the tool will try to map physically meaningful<br />
+values into camera settings and return camera settings as meaningful properties.<br />
+E.g., exposure time is expected and returned in milliseconds, if the mapping<br />
+for the specific camera is known. Otherwise it is set and returned in arbitrary<br />
+units.</p>
+<p>Currently known cameras: Basler A602f grayscale firewire camera. Unibrain Fire-i<br />
+firewire camera. Basler A312fc, AVT Marlin F033.</p>
+<h3 id="parameters-and-their-meaning">Parameters and their meaning:</h3>
+<p>curval = <a href="PsychCamSettings" class="uri">PsychCamSettings</a>(‘ExposureTime’, grabber, val)<br />
+– Set and/or return current exposure time in milliseconds for supported cams, and<br />
+in raw camera specific system units for unknown cameras.</p>
+<p>curval = <a href="PsychCamSettings" class="uri">PsychCamSettings</a>(‘Brightness’, grabber, val)<br />
+– Set/Return brightness setting in arbitrary units. Brightness is the DC offset<br />
+added to the CCD sensor signal before amplification and A/D conversion.</p>
+<p>curval = <a href="PsychCamSettings" class="uri">PsychCamSettings</a>(‘Gain’, grabber, val)<br />
+– Set/Return gain setting in arbitrary units. Gain is the multiplier<br />
+applied to the CCD sensor signal during amplification and before A/D conversion.</p>
+<p>curval = <a href="PsychCamSettings" class="uri">PsychCamSettings</a>(‘Gamma’, grabber, val)<br />
+– Set/Return gamma setting. Gamma is used to influence or set gamma correction.</p>
+<p>curval = <a href="PsychCamSettings" class="uri">PsychCamSettings</a>(‘Sharpness’, grabber, val)<br />
+– Set/Return sharpness setting in arbitrary units. Manipulates digital post-<br />
+processing of images in the camera.</p>
+<p>curval = <a href="PsychCamSettings" class="uri">PsychCamSettings</a>(‘WhiteBalance’, grabber, val)<br />
+– Set/Return white-balance setting in arbitrary units. Only meaningful on color cams.</p>
+<p>curval = <a href="PsychCamSettings" class="uri">PsychCamSettings</a>(‘Saturation’, grabber, val)<br />
+– Set/Return color saturation setting in arbitrary units. Only meaningful on color cams.</p>
+<p>Similar to above are queries and (auto-)settings for: Hue, <a href="WhiteShading" class="uri">WhiteShading</a>, Iris, Focus, Pan, Tilt,<br />
+Zoom, <a href="CaptureQuality" class="uri">CaptureQuality</a>, <a href="CaptureSize" class="uri">CaptureSize</a>, Temperature, <a href="FrameRate" class="uri">FrameRate</a>, <a href="OpticalFilter" class="uri">OpticalFilter</a> and <a href="TriggerDelay" class="uri">TriggerDelay</a>.</p>
+<p>curval = <a href="PsychCamSettings" class="uri">PsychCamSettings</a>(‘BacklightCompensation’, grabber, val)<br />
+– Set/Return setting for backlight compensation mode. Backlight compensation is active<br />
+if control of exposure time, gain and brightness are switched to automatic. It defines<br />
+the algorithm to use for computing the overall image brightness. This is currently<br />
+only supported on the Unibrain Fire-i camera and has the following meaning:</p>
+<p>0 = Off. Just average across image.<br />
+1 = Use a disc in the center of the image.<br />
+2 = Use some weighted mix of a disc in the image center and the area outside the disc.<br />
+3 = Use some portrait mode for optimal exposure of a person sitting in front of the cam.<br />
+4 = Use upper third of image.<br />
+5 = Use middle third of image.<br />
+6 = Use lower third of image.</p>
+<h3 id="special-commands-and-their-meaning">Special commands and their meaning:</h3>
+<p>vendor = <a href="PsychCamSettings" class="uri">PsychCamSettings</a>(‘GetVendor’, grabber)<br />
+– Return camera vendor name string.</p>
+<p>model = <a href="PsychCamSettings" class="uri">PsychCamSettings</a>(‘GetModel’, grabber)<br />
+– Return camera model name string.</p>
+<p>known = <a href="PsychCamSettings" class="uri">PsychCamSettings</a>(‘IsKnownCamera’, grabber)<br />
+– Return 1, if this camera is known to <a href="PsychCamSettings" class="uri">PsychCamSettings</a>,<br />
+so it can accept and return meaningful physical properties,<br />
+instead of unknown device units.</p>
+<p>settings = <a href="PsychCamSettings" class="uri">PsychCamSettings</a>(‘AutomateAllSettings’, grabber)<br />
+– Switch all settings into automatic control mode, where possible,<br />
+and return the current settings in a struct.</p>
+<p>settings = <a href="PsychCamSettings" class="uri">PsychCamSettings</a>(‘GetAllSettings’, grabber)<br />
+– Return all known settings in a struct.</p>
+<p>oldsettings = <a href="PsychCamSettings" class="uri">PsychCamSettings</a>(‘SetAllSettings’, grabber, settings)<br />
+– Set all settings from a struct ‘settings’.</p>
+<p>latency = <a href="PsychCamSettings" class="uri">PsychCamSettings</a>(‘EstimateLatency’, grabber [, fps])<br />
+– This command analyses the current camera settings and, based on<br />
+the specification of the camera, tries to estimate the latency (in<br />
+seconds) between start of exposure of a video frame and arrival of<br />
+the video frame in the computers video buffer.</p>
+<p>If you subtract this ‘latency’ value from the ‘capturetimestamp’<br />
+returned by the <a href="Screen" class="uri">Screen</a>(‘GetCapturedImage’) function, you should<br />
+get an estimate of when (in system time) the image was<br />
+actually acquired that corresponds to the captured image.</p>
+<p>Please note: In theory Basler firewire cameras with “SFF cycle timer support”<br />
+should be able to report the start time of image exposure directly via<br />
+the returned capture timestamps if the command …<br />
+<a href="Screen" class="uri">Screen</a>(‘SetVideoCaptureParameter’, grabber, ‘BaslerFrameTimestampEnable’);<br />
+… was executed before start of capture, therefore making this ‘EstimateLatency’<br />
+dance redundant. In practice though, the two tested Basler cameras which should<br />
+support this feature didn’t work properly, ie., they returned completely bogus<br />
+capture timestamps when ‘BaslerFrameTimestampEnable’ was called. Your mileage<br />
+may therefore vary, but it is at least worth a try if you possess a Basler camera.</p>
+<h3 id="latency-is-defined-as">Latency is defined as:</h3>
+<p>Duration of sensor-exposure + sensor readout delay + transmission<br />
+onset delay + time needed for data transfer over Firewire bus or<br />
+other device.</p>
+<p>The latency values computed here are based on the official camera<br />
+specs. If the spec is wrong or inaccurate, then this value will<br />
+be wrong or inaccurate as well, so use with caution!</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychVideoCapture/PsychCamSettings.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychVideoCapture/PsychCamSettings.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychVideoCapture/PsychCamSettings.m</code></p>
+</div>

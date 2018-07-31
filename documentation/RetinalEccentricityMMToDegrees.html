@@ -1,0 +1,59 @@
+<h2 id="psychtoolbox-psychcolorimetricdata">[[Psychtoolbox]] › [[PsychColorimetricData]]</h2>
+<p>eccMm = <a href="DegreesToRetinalEccentricityMM" class="uri">DegreesToRetinalEccentricityMM</a>(eccDegrees,[species],[method],[eyeLengthMm])</p>
+<p>Convert eccentricity in degrees to retinal eccentricity in mm. By<br />
+default, this takes into account a simple model eye, rather than just<br />
+relying on a linear small angle approximation.</p>
+<p>Input:<br />
+eccDegrees – retinal eccentricity in degrees<br />
+species – what species<br />
+‘Human’ – Human eye [default]<br />
+‘Rhesus’ – Rhesus monkey<br />
+method – what method<br />
+‘DaceyPeterson’ – formulae from Dacey &amp; Peterson (1992) [default]<br />
+‘Linear’ – linear, based on small angle approx<br />
+eyeLengthMm – Eye length to assume for linear calculation, should be<br />
+the posterior nodal distance. Defaults to the default values returned<br />
+by function <a href="EyeLength" class="uri">EyeLength</a> for the chosen species.</p>
+<p>The Dacey and Peterson formulae are based on digitizing and fitting<br />
+curves published by<br />
+1) Drasdo and Fowler, 1974 (British J. Opthth, 58,pp. 709 ff., Figure 2,<br />
+for human.<br />
+2) Perry and Cowey (1985, Vision Reserch, 25, pp. 1795-1810, Figure 4,<br />
+for rhesus monkey.<br />
+These curves, I think, were produced by ray tracing or otherwise solving<br />
+model eyes.</p>
+<p>The default eye length returned by <a href="EyeLength" class="uri">EyeLength</a> for Human is currently the Rodiek value of<br />
+16.1 mm. Drasdo and Fowler formulae are based on a length of about this,<br />
+so the linear and <a href="DaceyPeterson" class="uri">DaceyPeterson</a> methods are roughly consistent for small<br />
+angles. Similarly with the Rhesus default. Using other EyeLength’s will<br />
+make the two methods inconsistent.</p>
+<p>The Dacey and Peterson equations don’t go through (0,0), but rather<br />
+produce a visual angle of 0.1 degree for an eccentricity of 0. This<br />
+seems bad to me. I modified the formulae so that they use the linear<br />
+approximation for small angles, producing a result that does go through<br />
+(0,0). This may be related to the fact that there is some ambiguity in<br />
+the papers between whether the center should be thought of as the fovea<br />
+or the center of the optical axis. But I think this difference is small<br />
+enough that the same formulae would apply across such a shift in origin.</p>
+<p>I digitized Drasdo and Fowler Figure 2 and compared it to what<br />
+<a href="DegreesToRetinalEccentricity" class="uri">DegreesToRetinalEccentricity</a> produces. I’d call agreement so-so, but<br />
+considerably better than what the linear approximation produces. One<br />
+could probably do better, but my intuition is that the deviations are<br />
+small compared to eye to eye differences and differences that would be<br />
+produced by different model eyes, so that juice isn’t worth the squeeze.<br />
+I pasted my digitization at the end of <a href="DegreesToRetinalEccentricity" class="uri">DegreesToRetinalEccentricity</a> if<br />
+anyone wants to fuss with this. But probably if you’re going to do that,<br />
+you should do the whole ray tracing thing with our best current model<br />
+eye.</p>
+<p>I have not checked the fit to the Perrry and Cowey curve for Rhesus<br />
+against a digitization of that figure.</p>
+<p>See also: <a href="EyeLength" class="uri">EyeLength</a>, <a href="DegreesToRetinalEccentricityMM" class="uri">DegreesToRetinalEccentricityMM</a>, <a href="DegreesToRetinalMM" class="uri">DegreesToRetinalMM</a>, <a href="RetinalMMToDegrees" class="uri">RetinalMMToDegrees</a></p>
+<p>6/30/2015 dhb Wrote it.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychColorimetricData/RetinalEccentricityMMToDegrees.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychColorimetricData/RetinalEccentricityMMToDegrees.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychColorimetricData/RetinalEccentricityMMToDegrees.m</code></p>
+</div>

@@ -1,0 +1,22 @@
+<h2 id="psychtoolbox-psychoneliners">[[Psychtoolbox]] › [[PsychOneliners]]</h2>
+<p>Merges contents of multiple cell arrays into one big cell array</p>
+<p>c = <a href="MergeCell" class="uri">MergeCell</a>(varargin)</p>
+<p><a href="MergeCell" class="uri">MergeCell</a> takes any number of cell vectors (contain the same datatype)<br />
+and concatenates their contents into one big cellvector<br />
+Any signleton inputs are expanded as needed, these inputs can be 1x1<br />
+cells or the contained datatype itself</p>
+<p>Example: To add some information about fit to plot legend, we’d wan’t to<br />
+append information about the fit to the line labels:</p>
+<p>linelbls = {‘line a’,‘line b’,‘line c’};<br />
+chi2_r = [.9 1 4.2];<br />
+chi2_rtxt= arrayfun(@(x) sprintf(‘slope: %.3f’,x),chi2_r,‘UniformOutput’,false);</p>
+<p>leglbls = <a href="MergeCell" class="uri">MergeCell</a>(linelbls,‘, chi^2_r:’,chi2_rtxt);<br />
+% leglbls = <a href="MergeCell" class="uri">MergeCell</a>(linelbls,{‘, chi^2_r:’},chi2_rtxt); would be equivalent</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOneliners/MergeCell.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOneliners/MergeCell.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOneliners/MergeCell.m</code></p>
+</div>

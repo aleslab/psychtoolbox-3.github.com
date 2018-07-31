@@ -1,0 +1,75 @@
+<h2 id="psychtoolbox-psychhardware-brightsidedisplay">[[Psychtoolbox]] › [[PsychHardware]] › [[BrightSideDisplay]]</h2>
+<p><a href="HDRMinimalisticOpenGLDemo" class="uri">HDRMinimalisticOpenGLDemo</a> - Demonstrate use of MATLAB-<a href="OpenGL" class="uri">OpenGL</a> toolbox with<br />
+the <a href="BrightSide" class="uri">BrightSide</a>-Technologies High Dynamic Range Display.</p>
+<p>It differs from the normal <a href="MinimalisticOpenGLDemo" class="uri">MinimalisticOpenGLDemo</a> only by the <a href="OpenWindow" class="uri">OpenWindow</a><br />
+call that requests <a href="BrightSide" class="uri">BrightSide</a> HDR support, and the setup of lightsource<br />
+intensities to make better use of the large dynamic range of the HDR<br />
+display.</p>
+<p>This demo demonstrates use of <a href="OpenGL" class="uri">OpenGL</a> commands in a Matlab script to<br />
+perform some very boring 3D rendering in Psychtoolbox.</p>
+<p>It shows a single static ball, lit with default lighting and exactly one<br />
+light source. This is meant to demonstrate the minimum amount of code to<br />
+draw anything visible with perspective projection. It also draws a static<br />
+teapot and some little box with a cone as roof.</p>
+<p>Then it waits for a keyboard press.</p>
+<p>After that it demonstrates how to do basic texture mapping and animation:<br />
+It loads a JPEG image of the earths surface from the filesystem, using<br />
+Matlabs imread() function, then converts the image into a Psychtoolbox<br />
+texture using <a href="Screen" class="uri">Screen</a>(‘MakeTexture’), then provides this texture as a<br />
+standard <a href="OpenGL" class="uri">OpenGL</a> compatible texture using <a href="Screen" class="uri">Screen</a>(‘GetOpenGLTexture’).<br />
+This standard texture is applied to a sphere using standard <a href="OpenGL" class="uri">OpenGL</a> commands<br />
+and finally the sphere is drawn as a rotating object in a simple animation<br />
+loop. –&gt; You’ll see a rotating earth.</p>
+<p>Stop the demo by pressing any key and it will finish.</p>
+<h3 id="notable-implementation-details-regarding-use-of-opengl">Notable implementation details regarding use of <a href="OpenGL" class="uri">OpenGL</a>:</h3>
+<p>The call <a href="InitializeMatlabOpenGL" class="uri">InitializeMatlabOpenGL</a> at the top of the script initializes the<br />
+Matlab-<a href="OpenGL" class="uri">OpenGL</a> toolbox and enables the 3D gfx support in Psychtoolbox to<br />
+allow proper interfacing between the <a href="OpenGL" class="uri">OpenGL</a> toolbox and Psychtoolbox.</p>
+<p>After this call, all <a href="OpenGL" class="uri">OpenGL</a> functions are made available to Matlab with<br />
+the same - or a very similar - calling syntax as in the C programming<br />
+language. <a href="OpenGL" class="uri">OpenGL</a> constants are made available in a format that is optimized<br />
+for Matlab, where the first underscore is replaced by a dot, e.g.,<br />
+GL.DEPTH_TEST, instead of the C-style GL_DEPTH_TEST.</p>
+<p>In order to execute <a href="OpenGL" class="uri">OpenGL</a> 3D drawing commands to draw 3D stims into a<br />
+Psychtoolbox Onscreen- or offscreen window, one needs to call<br />
+<a href="Screen" class="uri">Screen</a>(‘BeginOpenGL’, windowPtr). After <a href="OpenGL" class="uri">OpenGL</a> drawing and before<br />
+execution of standard <a href="Screen" class="uri">Screen</a>() commands, one needs to call<br />
+<a href="Screen" class="uri">Screen</a>(‘EndOpenGL’, windowPtr) to tell Psychtoolbox that 3D drawing is<br />
+finished.</p>
+<p>Some <a href="OpenGL" class="uri">OpenGL</a> functions that return complex parameters to Matlab are not<br />
+yet implemented - this is work in progress. The performance will be also<br />
+lower than when coding in a compiled language like C++ or C – that’s the<br />
+Matlab tax you’ll have to pay ;-)</p>
+<p>The toolbox checks after execution of each single <a href="OpenGL" class="uri">OpenGL</a> command if it<br />
+caused some error. It aborts your script with an error message, if so. If<br />
+you are happy with your code and want to disable these error checks in<br />
+order to squeeze out a bit more speed, you can call<br />
+<a href="InitializeMatlabOpenGL" class="uri">InitializeMatlabOpenGL</a>(0,0) instead of <a href="InitializeMatlabOpenGL" class="uri">InitializeMatlabOpenGL</a> at the top<br />
+of your script. This will disable automatic error-checking. You can then<br />
+use the commands gluErrorString or glGetError to perform manual error-checks<br />
+in your code if you want.</p>
+<p>Apart from that, use of <a href="OpenGL" class="uri">OpenGL</a> for Matlab is the same as <a href="OpenGL" class="uri">OpenGL</a> for the C<br />
+programming language. If you are used to <a href="OpenGL" class="uri">OpenGL</a> coding in C, it should be<br />
+a zero effort transition to code in Matlab+PTB. If you don’t know <a href="OpenGL" class="uri">OpenGL</a><br />
+then get yourself one of the many good books or visit one of the many<br />
+<a href="OpenGL" class="uri">OpenGL</a> tutorials on the internet.</p>
+<p>The <a href="OpenGL" class="uri">OpenGL</a> Red Book is a great introduction and reference for <a href="OpenGL" class="uri">OpenGL</a><br />
+programming. Release 1.0 is available online, later releases can be<br />
+purchased in any good book store:</p>
+<p>http://www.opengl.org/documentation/red_book_1.0/</p>
+<h3 id="for-more-infos-code-samples-tutorials-online-documentation-go-to">For more infos, code samples, tutorials, online documentation, go to:</h3>
+<p>http://www.opengl.org</p>
+<p>The <a href="OpenGL" class="uri">OpenGL</a> for Matlab toolbox was developed and contributed under<br />
+GPL license by Prof. Richard F. Murray, University of York, Canada and<br />
+ported to M$-Windows and GNU/Linux and tuned by Mario Kleiner.</p>
+<p>The earth surface JPEG-image is taken from the Linux/KDE application<br />
+kdeworldclock. kdeworldclock and its components are licensed under<br />
+GPL.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/BrightSideDisplay/HDRMinimalisticOpenGLDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/BrightSideDisplay/HDRMinimalisticOpenGLDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/BrightSideDisplay/HDRMinimalisticOpenGLDemo.m</code></p>
+</div>

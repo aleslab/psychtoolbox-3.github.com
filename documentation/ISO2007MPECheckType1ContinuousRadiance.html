@@ -1,0 +1,22 @@
+<h2 id="psychtoolbox-psychradiometric-psychiso2007mpe">[[Psychtoolbox]] › [[PsychRadiometric]] › [[PsychISO2007MPE]]</h2>
+<p>[<a href="IsOverLimit" class="uri">IsOverLimit</a>,<a href="ISO2007MPEStruct" class="uri">ISO2007MPEStruct</a>] = <a href="ISO2007MPECheckType1ContinuousRadiance" class="uri">ISO2007MPECheckType1ContinuousRadiance</a>(S_in,radiancein_WattsPerSrM2,stimulusDurationSecs,stimulusAreaDegrees2,eyeLengthMm)</p>
+<p>Run all the checks that apply to a radiance measurement for the ISO 2007 MPE standard, for a Type 1 instrument and continuous exposure.<br />
+Does not do the convergent beam check – see comment in Contents.m about when we think this applies.</p>
+<p>Returns a flag set to 1 if the input exceeds any of the limits, and a structure with the computed ISO2007MPE<br />
+values and corresponding limits.</p>
+<p>We use 17 mm eye length by default. You can override the eye length by passing a different length in mm.<br />
+This value is used in the conversion from radiance to retinal irradiance.</p>
+<p>****************************************************************************<br />
+IMPORTANT: Before using the ISO2007MPE routines, please see the notes on usage<br />
+and responsibility in <a href="PsychISO2007MPE" class="uri">PsychISO2007MPE</a>/Contents.m (type “help <a href="PsychISO2007MPE" class="uri">PsychISO2007MPE</a>”<br />
+at the Matlab prompt.<br />
+****************************************************************************</p>
+<p>6/28/13 dhb Wrote it.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychRadiometric/PsychISO2007MPE/ISO2007MPECheckType1ContinuousRadiance.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychRadiometric/PsychISO2007MPE/ISO2007MPECheckType1ContinuousRadiance.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychRadiometric/PsychISO2007MPE/ISO2007MPECheckType1ContinuousRadiance.m</code></p>
+</div>

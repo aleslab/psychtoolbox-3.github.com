@@ -1,0 +1,105 @@
+<h2 id="psychtoolbox-psychhardware-eyelinktoolbox">[[Psychtoolbox]] › [[PsychHardware]] › [[EyelinkToolbox]]</h2>
+<pre><code>[EyelinkToolbox](EyelinkToolbox).  
+History and list of changes  </code></pre>
+<p>July 2010<br />
+Enabled use of callbacks by default<br />
+Revampled demos, made to work with new callback version<br />
+General cleanup</p>
+<p>March 2009<br />
+Completed access to raw sample structs<br />
+Added support for LOST_DATA_EVENT<br />
+Added <a href="GetQueuedData" class="uri">GetQueuedData</a><br />
+Added experimental camera image capture</p>
+<p>Version 2, October 2006<br />
+Updated Beta version for <a href="OpenGL" class="uri">OpenGL</a> Toolbox</p>
+<p>Version 2, June 2006<br />
+Beta version for <a href="OpenGL" class="uri">OpenGL</a> Toolbox</p>
+<pre><code>Version 1.4.5 xx-xx-2003  
+
+fixed small error in setting usemaxwait in geteyelinktime  
+
+Version 1.4.4 27-11-2002  
+
+fixed dummy mode bug in eyelink.dll (was due to an eyelink software incompatability  
+eyelinkeventexample now works on both mac and pc  
+new function in eyelinkoneliners: dummymodedlg  
+is now used in some of the examples to ask to run in dummy mode when no eyelink is connected  
+
+Version 1.4.3 26-11-2002  
+
+Includes eyelink.dll PC beta version  
+PC support added to Eyelink Demo experiment  
+added function dodriftcorrection which implements driftcorrection loop  </code></pre>
+<p>getkeyforeyelink made PC compatible<br />
+getkeyforeyelinktest, slightly adapted</p>
+<pre><code>known bugs: on PC, there&#39;s no communication between operator PC and subject PC during image-mode display  
+eyelinkeventexample does not work on PC  
+On PC no builtin drift correction and trackersetup functions are implemented  
+PC version requires modified getchar.dll!  
+Sounds are not original eyelink sounds.....  
+
+Version 1.4.2 10-11-2002 (local release only)  
+Version 1.4.1 18-10-2002 (local release only)  
+
+dotrackersetup.m: now allows one to go directly into a particular tracker mode  
+this option is not fully tested. Just leave out the &#39;sendkey&#39; parameter and it will work as it used to.  
+added call to &#39;getnextdata&#39; in addition to &#39;getnextdatatype&#39; to conform to the c-routine call  
+button [,time] = Eyelink(&#39;lastbuttonpress&#39;) now will properly report time if requested  
+                                            (previous versions had an erroneous  
+                                            time parameter on the right hand side)  
+removed superfluous (non-error) messages from initialization and openfile functions  
+added event types to initeyelinkdefaults (for use with getnextdata)  
+tested with [PsychToolbox](PsychToolbox) 2.5.2 and pre-release screen 2.5.3  
+
+New naming scheme for folder and subfolders, a la [PsychToolbox](PsychToolbox)  </code></pre>
+<p><a href="EyelinkToolbox" class="uri">EyelinkToolbox</a><br />
+<a href="EyelinkTests" class="uri">EyelinkTests</a><br />
+<a href="EyelinkSounds" class="uri">EyelinkSounds</a><br />
+<a href="EyelinkBasic" class="uri">EyelinkBasic</a><br />
+<a href="EyelinkDemos" class="uri">EyelinkDemos</a><br />
+<a href="EyelinkOneLiners" class="uri">EyelinkOneLiners</a></p>
+<pre><code>new functions:  
+time = Eyelink(&#39;requesttime&#39;)  
+time = Eyelink(&#39;readtime&#39;)  
+
+result = Eyelink(&#39;buttonstates&#39;)  
+[result = ]Eyelink(&#39;flushkeybuttons&#39;[, enablebuttons = 0])  
+utility function windowsize  
+
+new tests:   
+    [EXGetEyeLinkTime](EXGetEyeLinkTime).m  
+    testbutton.m  
+changes to demos:  
+    eyelinkexample is now identical to the one in the BRMIC paper  
+    adapted eyelinkdemo experiment slightly.  
+
+Software used to produce/test the code.    
+Mac OS 9.2.2  
+C-compiler: [CodeWarrior](CodeWarrior) 6.1.  
+Matlab 5.2.1  
+Operator PC: [EyeLink](EyeLink) 2.04  
+[PsychToolbox](PsychToolbox) 2.5.2  
+
+
+Version 1.3.0         25-07-02  
+    limited release  
+Version 1.2.0         28-06-01  
+
+Software used to produce/test the code.    
+Mac OS 9.1.  
+C-compiler: [CodeWarrior](CodeWarrior) 6.1.  
+Matlab 5.2.1  
+Operator PC: [EyeLink](EyeLink) 2.04  
+[PsychToolbox](PsychToolbox) 2.44  </code></pre>
+<p>% updated on-line documentation<br />
+added a few test programs provided by John Palmer<br />
+added <a href="SimpleStepExperiment" class="uri">SimpleStepExperiment</a> by John Palmer to the demo’s<br />
+Reorganised demo-experiments</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/EyelinkToolbox/changes.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/EyelinkToolbox/changes.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/EyelinkToolbox/changes.m</code></p>
+</div>

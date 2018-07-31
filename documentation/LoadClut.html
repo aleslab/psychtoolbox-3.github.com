@@ -1,0 +1,54 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p>[err]=<a href="LoadClut" class="uri">LoadClut</a>(windowPtrOrScreenNumber,clut,[startEntry],[bits])</p>
+<p>Load the hardware color lookup table (CLUT) of a video screen. It uses<br />
+<a href="Screen" class="uri">Screen</a>(‘LoadCLUT’), as appropriate, to leave the hardware CLUT<br />
+containing the numbers you provide in “clut”, with no transformation.<br />
+There *are* restrictions: On Microsoft Windows you can’t use <a href="CLUTs" class="uri">CLUTs</a> for<br />
+animation, as the operating system requires all <a href="CLUTs" class="uri">CLUTs</a> to contain mono-<br />
+tonically increasing entries. Psychtoolbox currently has no way of<br />
+detecting the resolution of your graphics cards DAC, so unless you<br />
+explicitely provide the DAC resolution in the optional parameter ‘bits’,<br />
+it will always assume a 8-Bit DAC. This assumption is safe, but it does<br />
+not allow you to automatically take advantage of higher resolution <a href="DACs" class="uri">DACs</a>.<br />
+Apart from that, all pixelSizes are supported. It should works with all<br />
+graphics cards on <a href="MacOS" class="uri">MacOS</a>-X, Windows and Linux. Fully supports 8-or-more-bit<br />
+<a href="DACs" class="uri">DACs</a>.</p>
+<p>We *strongly* suggest that all users use <a href="Screen" class="uri">Screen</a>(‘LoadNormalizedGammaTable’)<br />
+in new code. Its values range between 0.0 and 1.0 and are independent<br />
+of DAC size, the system automatically maps the range 0.0 - 1.0 to the<br />
+range really available on your graphics card, so no need for you (or for<br />
+Psychtoolbox) to know the resolution of your graphics cards DAC. You will<br />
+always automatically benefit from the highest possible resolution of your<br />
+graphics card.</p>
+<h3 id="function-arguments">FUNCTION ARGUMENTS:</h3>
+<p>The err return argument is only here for backwards compatibility to<br />
+the old Psychtoolbox. It always will be empty.</p>
+<p>“clut”, the user-supplied color table, should be a clutSizex3 matrix.<br />
+Each row in the “clut” matrix is loaded into an RGB entry in the<br />
+hardware CLUT. The values of the matrix elements should be integers in<br />
+the range 0 to 2^bits-1.</p>
+<p>The maximum clut size is 256 rows, but you can pass less rows if you only<br />
+want to change a portion of the hardware CLUT.</p>
+<p>“startEntry” is optional and determines which hardware CLUT entry to<br />
+load first. Entries are numbered from 0 up. The default is 0. The first<br />
+element of “clut”, i.e. clut(1), will be loaded into hardware entry<br />
+“startEntry”.</p>
+<p>“bits” specifies how many bits you want to write to the CLUT. Typically<br />
+it will be 8 bits, which is the default value. If you set it to<br />
+some other value, the range of allowable entries scales accordingly.<br />
+Thus if you use a 10-bit CLUT, then each entry should be between 0 and<br />
+1023, etc.</p>
+<h3 id="graphics-cards-with-more-than-8-bit-dacs">GRAPHICS CARDS WITH MORE-THAN-8-BIT DACS:</h3>
+<p>Some ATI Radeon’s have 10-bit <a href="DACs" class="uri">DACs</a>. The BITS++ adapter from Cambridge<br />
+Research Systems has 14-bit <a href="DACs" class="uri">DACs</a>.<br />
+http://www.crsltd.com/catalog/bits++/</p>
+<p>See also <a href="Screen" class="uri">Screen</a> subfunctions ‘LoadCLUT’, ‘LoadNormalizedGammaTable’,<br />
+‘ReadNormalizedGammaTable’</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/LoadClut.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/LoadClut.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/LoadClut.m</code></p>
+</div>

@@ -1,0 +1,14 @@
+<h1 id="screentextbackgroundcolor"><a href="Screen-TextBackgroundColor">Screen(‘TextBackgroundColor’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Read/Set the text background color for the specified window.<br />
+The background color defaults to [0,0,0,0], i.e., a fully transparent black.<br />
+This means that the background is invisible. You’ll need to assign at least a<br />
+non-zero alpha-value for the background to be drawn. With some text renderers<br />
+you’ll also need to enable user-controlled text alpha-blending via a call to<br />
+<a href="Screen" class="uri">Screen</a>(‘<a href="Preference" class="uri">Preference</a>’, ‘TextAlphaBlending’, 1); for text background to be drawn,<br />
+e.g., for the Apple OSX legacy text renderer 0. If you want text to be drawn<br />
+with sub-pixel anti-aliasing then some renderers need you to set an opaque text<br />
+background color - with an alpha value of 255, or whatever the maximum value is<br />
+for the selected color mode.</p>
+<p>&lt;&lt;=====See also:=====</p>
+<p>&lt;&lt;</p>

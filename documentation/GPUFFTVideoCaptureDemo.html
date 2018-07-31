@@ -1,0 +1,41 @@
+<h2 id="psychtoolbox-psychdemos-gpgpudemos">[[Psychtoolbox]] › [[PsychDemos]] › [[GPGPUDemos]]</h2>
+<p><a href="GPUFFTVideoCaptureDemo" class="uri">GPUFFTVideoCaptureDemo</a> - Demonstrate use of GPGPU computing for live filtering via 2D-FFT.</p>
+<p>This demo makes use of the FOSS <a href="GPUmat" class="uri">GPUmat</a> toolbox to perform a GPU<br />
+accelerated 2D FFT + filtering in frequency space + 2D inverse FFT on a<br />
+live video feed from video capture or movie playback. <a href="GPUmat" class="uri">GPUmat</a> allows to<br />
+use NVidia’s CUDA gpu computing framework on supported <a href="NVidia" class="uri">NVidia</a> gpu’s<br />
+<a href="(GeForce)-8000%20series%20and%20later,%20aka%20%5BDirect3D%5D(Direct3D)-10%20or%20%5BOpenGL%5D(OpenGL)-3%20capable">(GeForce</a>.</p>
+<p>It shows how a Psychtoolbox floating point texture (with video content<br />
+inside) can be efficiently passed to <a href="GPUmat" class="uri">GPUmat</a> as a matrix of <a href="GPUsingle" class="uri">GPUsingle</a> data<br />
+type, which is stored and processed on the GPU. Then it uses GPUmat’s fft<br />
+routines for forward/inverse fft’s and matrix manipulation. Then it<br />
+returns the final image to Psychtoolbox as a new floating point texture<br />
+for display. The same steps are carried out with Matlab/Octave’s regular<br />
+fft routines on the cpu for reference.</p>
+<p>Requires the freely downloadable <a href="NVidia" class="uri">NVidia</a> CUDA-5.0 SDK/Runtime and the free<br />
+and open-source <a href="GPUmat" class="uri">GPUmat</a> toolbox as well as a compute capable <a href="NVidia" class="uri">NVidia</a><br />
+graphics card.</p>
+<h3 id="usage">Usage:</h3>
+<p><a href="GPUFFTVideoCaptureDemo" class="uri">GPUFFTVideoCaptureDemo</a>([usegpu=1][, showfft=0][, fwidth=11][, roi=[0 0 640 480]][, depth=1][, deviceId=0][, cameraname])</p>
+<h3 id="parameters">Parameters:</h3>
+<p>‘usegpu’ = 0 to use regular Matlab/Octave fft on CPU, 1 = to use <a href="GPUmat" class="uri">GPUmat</a> on GPU.</p>
+<p>‘showfft’ = 1 to show amplitude spectrum of video in usegpu=1 mode.</p>
+<p>‘fwidth’ = Width of low-pass filter kernel in frequency space units.</p>
+<p>‘roi’ Selects a rectangular subregion of the camera for display. By<br />
+default, it selects a [0 0 640 480] rectangle, ie. the full area of a<br />
+camera with 640 x 480 pixels resolution. This parameter may need tweaking<br />
+for some cameras, as some drivers have bugs and don’t work well with all<br />
+settings.</p>
+<p>‘depth’ = 1 for Mono, 3 for color processing.</p>
+<p>‘deviceId’ Device index of video capture device. Defaults to system default.</p>
+<p>‘cameraname’ Name string for selection of video capture device. This is<br />
+only honored if ‘deviceId’ is a negative number, and only for certain<br />
+video capture plugins. Defaults to none.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/GPGPUDemos/GPUFFTVideoCaptureDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/GPGPUDemos/GPUFFTVideoCaptureDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/GPGPUDemos/GPUFFTVideoCaptureDemo.m</code></p>
+</div>

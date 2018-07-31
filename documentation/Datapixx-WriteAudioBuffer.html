@@ -1,0 +1,30 @@
+<h1 id="datapixxwriteaudiobuffer"><a href="Datapixx-WriteAudioBuffer">Datapixx(‘WriteAudioBuffer’)</a></h1>
+<h2 id="psychtoolbox-datapixx.mexdll-subfunction">[[Psychtoolbox]] › [[Datapixx]].{mex*,dll} subfunction</h2>
+<p>Download audio data from local host to a Datapixx internal waveform buffer.<br />
+-“bufferData” is a 2D matrix of audio waveform data in the range -1 to +1. The<br />
+first row of the matrix contains data for the left ear, and the second row<br />
+contains data for the right-ear. A mono dataset will only have a single row.<br />
+-“bufferAddress” is the byte address in Datapixx RAM where the buffer should<br />
+start. Specifying a bufferAddress of -1 will cause bufferData to be streamed to<br />
+the end of the buffer which was last defined in <a href="SetAudioSchedule" class="uri">SetAudioSchedule</a>, and<br />
+initialized by a call to <a href="WriteAudioBuffer" class="uri">WriteAudioBuffer</a> with bufferAddress not set to -1.<br />
+-“nextBufferAddress” is the next Datapixx address after bufferData has been<br />
+downloaded. Multiple contiguous audio waveforms can be downloaded by passing the<br />
+returned nextBufferAddress of one waveform as the bufferAddress of the next<br />
+waveform. The Datapixx typically has 128 MB of internal RAM which is shared<br />
+between all I/O subsystems (DAC/ADC/AUDIO, etc). Datapixx(‘GetRamSize’) can be<br />
+used to query the quantity of RAM in your system.<br />
+-“underflow” or “overflow” are set to 1 if streaming calls to <a href="WriteAudioBuffer" class="uri">WriteAudioBuffer</a><br />
+supply insufficient, or too much, data. If bufferAddress is passed a value of<br />
+-1, then <a href="WriteAudioBuffer" class="uri">WriteAudioBuffer</a> is streaming continuous waveform data into a circular<br />
+buffer. Streaming playback must ensure that the provided data always remains<br />
+ahead of the playback position, without providing more data than can fit in the<br />
+playback buffer. The freeBufferFrames field returned by <a href="GetAudioStatus" class="uri">GetAudioStatus</a> indicates<br />
+the maximum number of columns which can be written by <a href="WriteAudioBuffer" class="uri">WriteAudioBuffer</a>. If more<br />
+than this number of frames is written, an overflow occurs and there will be a<br />
+glitch in the generated waveform. If the streaming data is not supplied quickly<br />
+enough, then old data will be played, also causing a glitch. In addition to<br />
+returning underflow/overflow flags, these errors will increment the<br />
+numStreamUnderflows/numStreamOverflows fields returned by <a href="GetAudioStatus" class="uri">GetAudioStatus</a>.<br />
+See <a href="DatapixxSimonGame" class="uri">DatapixxSimonGame</a>, <a href="DatapixxAudio" class="uri">DatapixxAudio</a>*Demo files for examples.</p>
+<p>&lt;&lt;=====See also:===== InitAudio, SetAudioSchedule &lt;&lt;</p>

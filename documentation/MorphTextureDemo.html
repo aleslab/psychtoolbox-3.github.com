@@ -1,0 +1,37 @@
+<h2 id="psychtoolbox-psychdemos-opengl4matlabdemos-morphdemo">[[Psychtoolbox]] › [[PsychDemos]] › [[OpenGL4MatlabDemos]] › [[MorphDemo]]</h2>
+<p>function <a href="MorphTextureDemo" class="uri">MorphTextureDemo</a>([dotson][, normalson][,stereomode][, usefastoffscreenwindows])</p>
+<p><a href="MorphTextureDemo" class="uri">MorphTextureDemo</a> – Demonstrates use of “<a href="moglmorpher" class="uri">moglmorpher</a>” for fast morphing<br />
+and rendering of 3D shapes *and* textures. See “help <a href="moglmorpher" class="uri">moglmorpher</a>” for<br />
+info on moglmorphers purpose and capabilities.</p>
+<p>This demo will load two morpheable shapes from OBJ files and two<br />
+textures, then morph them continously into each other, using a simple<br />
+sine-function to define the timecourse of the morph.</p>
+<p>Control keys and their meaning: ‘a’ == Zoom out by moving object away<br />
+from viewer. ‘z’ == Zoom in by moving object close to viewer. ‘k’ and ‘l’<br />
+== Rotate object around axis. ‘ESC’ == Quit demo.</p>
+<h3 id="options">Options:</h3>
+<p>dotson = If set to 0 (default), just show surface. If set to 1, some dots<br />
+are plotted to visualize the vertices of the underlying mesh. If set to<br />
+2, the mesh itself is superimposed onto the shape. If set to 3 or 4, then<br />
+the projected vertex 2D coordinates are also visualized in a standard<br />
+Matlab figure window.</p>
+<p>normalson = If set to 1, then the surface normal vectors will get<br />
+visualized as small green lines on the surface.</p>
+<p>stereomode = n. For n&gt;0 this activates stereoscopic rendering - The shape<br />
+is rendered from two slightly different viewpoints and one of<br />
+Psychtoolbox’s built-in stereo display algorithms is used to present the<br />
+3D stimulus. This is very preliminary so it doesn’t work that well yet.</p>
+<p>usefastoffscreenwindows = If set to 0 (default), work on any graphics<br />
+card. If you have recent hardware, set it to 1. That will enable support<br />
+for fast offscreen windows - and a much faster implementation of shape<br />
+morphing.</p>
+<p>This demo and the morpheable OBJ shapes were contributed by Dr. Quoc C.<br />
+Vuong, MPI for Biological Cybernetics, Tuebingen, Germany.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/OpenGL4MatlabDemos/MorphDemo/MorphTextureDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/OpenGL4MatlabDemos/MorphDemo/MorphTextureDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/OpenGL4MatlabDemos/MorphDemo/MorphTextureDemo.m</code></p>
+</div>

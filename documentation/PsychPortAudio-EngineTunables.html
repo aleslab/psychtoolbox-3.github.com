@@ -1,0 +1,39 @@
+<h1 id="psychportaudioenginetunables"><a href="PsychPortAudio-EngineTunables">PsychPortAudio(‘EngineTunables’)</a></h1>
+<h2 id="psychtoolbox-psychportaudio.mexdll-subfunction">[[Psychtoolbox]] › [[PsychPortAudio]].{mex*,dll} subfunction</h2>
+<p>Return, and optionally set low-level tuneable driver parameters.<br />
+The driver must be idle, ie., no audio device must be open, if you want to<br />
+change tuneables! These tuneable parameters usually have reasonably chosen<br />
+defaults and you should only need to change them to work around bugs or flaws in<br />
+your operating system, sound hardware or drivers, or if you have very unusual<br />
+needs or setups. Only touch these if you know what you’re doing, probably after<br />
+consultation with the Psychtoolbox forum or Wiki. Some of these have potential<br />
+to cause serious system malfunctions if not selected properly!</p>
+<p>‘yieldInterval’ - If the driver has to perform polling operations, it will<br />
+release the cpu for yieldInterval seconds inbetween unsuccessful polling<br />
+iterations. Valid range is 0.0 to 0.1 secs, with a reasonable default of 0.001<br />
+secs ie. 1 msec.<br />
+‘MutexEnable’ - Enable (1) or Disable (0) internal mutex locking of driver data<br />
+structures to prevent potential race-conditions between internal processing<br />
+threads. Locking is enabled by default. Only disable locking to work around<br />
+seriously broken audio device drivers or system setups and be aware that this<br />
+may have unpleasant side effects and can cause all kinds of malfunctions by<br />
+itself!<br />
+‘lockToCore1’ - Deprecated: Enable (1) or Disable (0) locking of all audio<br />
+engine processing threads to cpu core 1 on Microsoft Windows systems. By default<br />
+threads are locked to cpu core 1 to avoid problems with timestamping due to bugs<br />
+in some microprocessors clocks and in Microsoft Windows itself. If you’re<br />
+confident/certain that your system is bugfree wrt. to its clocks and want to get<br />
+a bit more performance out of multi-core machines, you can disable this. You<br />
+must perform this setting before you open the first audio device the first time,<br />
+otherwise the setting might be ignored. In the current driver this setting is<br />
+silently ignored, as a new method of handling this has been implemented.<br />
+‘audioserver_autosuspend’ - Enable (1) or Disable (0) automatic suspending of<br />
+running desktop audio servers, e.g., <a href="PulseAudio" class="uri">PulseAudio</a>, while <a href="PsychPortAudio" class="uri">PsychPortAudio</a> is active.<br />
+Default is (1) - suspend while <a href="PsychPortAudio" class="uri">PsychPortAudio</a> does its thing. Desktop sound<br />
+servers like the commonly used <a href="PulseAudio" class="uri">PulseAudio</a> server can interfere with low level<br />
+audio device access and low-latency / high-precision audio timing. For this<br />
+reason it is a good idea to switch them to standby (suspend) while a<br />
+<a href="PsychPortAudio" class="uri">PsychPortAudio</a> session is active. Sometimes this isn’t needed or not even<br />
+desireable. Therefore this option allows to inhibit this automatic suspending of<br />
+audio servers.</p>
+<p>&lt;&lt;=====See also:===== Open &lt;&lt;</p>

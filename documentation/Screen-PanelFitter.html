@@ -1,0 +1,25 @@
+<h1 id="screenpanelfitter"><a href="Screen-PanelFitter">Screen(‘PanelFitter’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Change operating parameters of builtin panel fitter.</p>
+<p>The size of the source framebuffer is given by the ‘clientRect’ parameter in<br />
+<a href="Screen" class="uri">Screen</a>(‘OpenWindow’), the size of the destination framebuffer is given by the<br />
+‘rect’ parameter in that function. Default panel fitter behaviour is to rescale<br />
+the source content to completely fit into the destination buffer, something that<br />
+may not preserve aspect-ratio unless care is taken by the user to make sure<br />
+source and destination framebuffer have already the same aspect ratio.<br />
+This function allows to define new src and dst rectangles, thereby implicitely<br />
+defining scaling and filtering properties. It optionally takes new settings in<br />
+‘newParams’ and returns old settings in ‘oldParams’. The function also allows to<br />
+define a rotation angle for rotation of the output image. The parameters are<br />
+11-element vectors of format<br />
+params = [srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, angle, rotCX,<br />
+rotCY];<br />
+These tuples define top-left and bottom-right (x,y) corners of the source and<br />
+destination rectangles for the (scaled)blit, and the rotation ‘angle’ if display<br />
+rotation is requested. The angle and rotCX and rotCY parameters are optional and<br />
+assumed to be zero if omitted, ie., no rotation. rotCX and rotCY define the<br />
+center of rotation if a rotation is requested.<br />
+You usually won’t call this function directly, but leave the job to a<br />
+higher-level setup routine, e.g., <a href="PsychImaging" class="uri">PsychImaging</a>() and its ‘UsePanelFitter’ setup<br />
+code.</p>
+<p>&lt;&lt;=====See also:===== OpenWindow &lt;&lt;</p>

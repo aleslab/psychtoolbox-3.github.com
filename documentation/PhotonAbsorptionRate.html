@@ -1,0 +1,30 @@
+<h2 id="psychtoolbox-psychcolorimetric">[[Psychtoolbox]] › [[PsychColorimetric]]</h2>
+<p>[photonAbsorptionRate] =…<br />
+<a href="PhotonAbsorptionRate" class="uri">PhotonAbsorptionRate</a> (irradianceInQuanta, irradianceS, absorptanceSpectra, absorptanceSpectraS, collectingDiameter)</p>
+<p>Compute photons being absorbed per photoreceptor per sec, given the spectrum incident on the<br />
+photoreceptor array. We typically take the collecting area of a photoreceptor to be the inner segement<br />
+diameter.</p>
+<p>Spatial units for this routine are um, which are convenient for photoreceptor calculations. Be sure<br />
+to convert your incident spectrum to these units. The retinal irradiance is passed in quantal units. Note<br />
+that routines <a href="EnergyToQuanta" class="uri">EnergyToQuanta</a> and <a href="QuantaToEnergy" class="uri">QuantaToEnergy</a> are available for your converting pleasure.</p>
+<p>Can handle multiple photoreceptor types. Put each absopbtance spectrum in a row of matrix<br />
+absorptanceSpectra, put corresponding collecting diameters in column vector collectingDiameter.</p>
+<p>Units:<br />
+photonAbsorptionRate: quanta/sec/photorecptor<br />
+irradianceInQuanta: quanta/um^2-sec-wlinterval<br />
+absorptanceSpectra: probability an incident quantum will be absorbed.<br />
+collectingDiameter (um^2)</p>
+<p>05/06/03 lyin Wrote it<br />
+06/12/03 lyin Change the way variable being passed.<br />
+06/26/03 dhb Change computation of area to pi*r^2 rather than pi*d^2!<br />
+06/26/03 dhb Change to expect absorptanceSpectra and collectingDiameter in rows.<br />
+7/08/03 dhb Cosmetic.<br />
+7/09/03 dhb Take input in quantal units.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychColorimetric/PhotonAbsorptionRate.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychColorimetric/PhotonAbsorptionRate.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychColorimetric/PhotonAbsorptionRate.m</code></p>
+</div>

@@ -1,0 +1,91 @@
+<h2 id="psychtoolbox-psychdemos">[[Psychtoolbox]] › [[PsychDemos]]</h2>
+<p>Demonstrate use of built-in video capture engine with the Android <a href="IPWebcam" class="uri">IPWebcam</a> app,<br />
+or with a local videoloopback source, e.g., a [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) screencast.</p>
+<p><a href="VideoIPWebcamCaptureDemo" class="uri">VideoIPWebcamCaptureDemo</a>([videourl=‘http://192.168.178.22:8080/videofeed’][fullscreen=0][, fullsize=1][, moviename])</p>
+<p>if ‘videourl’ is left out, or a URL then <a href="VideoIPWebcamCaptureDemo" class="uri">VideoIPWebcamCaptureDemo</a><br />
+connects to a IP web video stream streamed from an Android device by<br />
+the Android <a href="IPWebcam" class="uri">IPWebcam</a> application, available from the Google Play Store here:</p>
+<p>https://play.google.com/store/apps/details?id=com.pas.webcam&amp;hl=en</p>
+<p>It then shows its video stream in a Psychtoolbox window.<br />
+A press of the <a href="ESCape" class="uri">ESCape</a> key ends the demo.</p>
+<p>This demo has been successfully tested on Ubuntu Linux 14.04.5-LTS,<br />
+but should likely work with OSX and Windows as well if the installed<br />
+[<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) framework provides the needed plugins.</p>
+<p>If you provide the value 1 as videourl then <a href="VideoIPWebcamCaptureDemo" class="uri">VideoIPWebcamCaptureDemo</a> tries<br />
+to source video from a local video source running on port 8554. E.g., on<br />
+Linux you can use the following command in a terminal window to perform<br />
+a screencast from the desktop to port 8554 scaled to 640x480 pixels resolution<br />
+and 30 fps target framerate:</p>
+<p>gst-launch-1.0 ximagesrc xname=“Psychophysics Toolbox - Yahoo Groups - Mozilla Firefox” use-damage=0 ! video/x-raw,framerate=30/1 ! videoscale method=0 ! video/x-raw,width=640,height=480 ! videoconvert ! x264enc tune=“zerolatency” threads=1 ! video/x-h264,stream-format=byte-stream ! tcpserversink port=8554</p>
+<p>The specific example would only capture from a Mozilla firefox window with the<br />
+title “Psychophysics Toolbox - Yahoo Groups - Mozilla Firefox”</p>
+<h3 id="the-following-similar-line-might-achieve-screencasting-on-ms-windows-but-has-not-been-tested">The following similar line might achieve screencasting on MS-Windows, but has not been tested:</h3>
+<p>gst-launch-1.0 gdiscreencapsrc ! video/x-raw,framerate=30/1 ! videoscale method=0 ! video/x-raw,width=640,height=480 ! videoconvert ! x264enc tune=“zerolatency” threads=1 ! video/x-h264,stream-format=byte-stream ! tcpserversink port=8554</p>
+<h3 id="optional-parameters">Optional parameters:</h3>
+<p>‘videourl’ If not set, defaults to ‘http://192.168.178.22:8080/videofeed’.<br />
+Instead of a URL of a IP Webcam you can also pass in the value 1 to get<br />
+a local videoloopback as shown above, e.g., for a screencast.</p>
+<p>‘fullscreen’ If set to non-zero value, the image is displayed in a<br />
+fullscreen window, as usual, otherwise a normal GUI window is used.</p>
+<p>‘fullsize’ If set to 1, the cameras image is scaled up to full screen<br />
+resolution, ie. so it fills the maximum amount of display area, but<br />
+preserving the original aspect ratio.</p>
+<p>‘moviename’ Name string for selection of filename of a target movie file<br />
+to which video should be recorded. Defaults to none,ie., no video<br />
+recording. ‘help VideoRecording’ for more info about video recording.</p>
+<p>One application of such a custom setup can be seen in the discussion thread<br />
+containing message #20942 on the Psychtoolbox forum.</p>
+<p>This section is referring to an alternative way of getting video, which<br />
+can be significantly higher performance and more flexible, but only works<br />
+on Linux. As of this release it has not been tested with <a href="IPWebcam" class="uri">IPWebcam</a>!</p>
+<h3 id="see-the-following-github-project-for-an-elegant-solution-on-linux">See the following <a href="GitHub" class="uri">GitHub</a> project for an elegant solution on Linux:</h3>
+<p>https://github.com/bluezio/ipwebcam-gst</p>
+<h3 id="more-background-information">More background information:</h3>
+<h3 id="loopback-setup-on-linux-for-use-with-new-gstreamergstreamergstreamer-1-video-backend">Loopback setup on Linux for use with new [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer))-1 video backend:</h3>
+<p>This specific configuration was shown to work at least on Ubuntu 14.04<br />
+LTS with a Sony PAL-DV firewire camera. After following the setup steps,<br />
+demos like our standard <a href="VideoCaptureDemo" class="uri">VideoCaptureDemo</a>, <a href="VideoRecordingDemo" class="uri">VideoRecordingDemo</a>, … worked<br />
+without any special configuration or treatment of DV cameras.</p>
+<p>Here you need to install a <a href="Video4Linux2" class="uri">Video4Linux2</a> loopback kernel module. It will<br />
+allow to create virtual video sources, from which Psychtoolbox can<br />
+read/capture/process record live video. Then some external application<br />
+can feed video into those virtual sources. You then attach an external<br />
+command line DV capture session as video source.</p>
+<ol type="1">
+<li><p>Install the package “v4l2loopback-dkms” to get the kernel module installed and<br />
+loaded. A “sudo apt-get install v4l2loopback-dkms” on Ubuntu 14.04-LTS<br />
+and later distributions should do the trick. The package is probably<br />
+also available on Debian, other Debian/Ubuntu derived distros etc. Or<br />
+you get the most recent version to compile and install from source<br />
+code from the homepage of the project:<br />
+https://github.com/umlaeute/v4l2loopback</p></li>
+<li><p>You may or may not need to “sudo modprobe v4l2loopback” on first use.</p></li>
+<li><p>Then you use a [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) video capture pipeline launched from a terminal<br />
+window to connect to your DV camera, capture live video and feed it<br />
+into the virtual video loopback device. An example launch line can<br />
+look like this:</p>
+<p>gst-launch dv1394src ! dvdemux ! dvdec ! v4l2sink device=/dev/video0</p>
+<p>This would make live video from the first connected DV camera<br />
+available on /dev/video0. See<br />
+https://github.com/umlaeute/v4l2loopback/wiki for more detailed<br />
+instructions.</p>
+<p>If this doesn’t work for you with [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer))-1 you may need to install<br />
+good old [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer))-0.10 in addition to the already installed<br />
+[<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer))-1 and instead use the gst-launch-0.10 command instead of the<br />
+gst-launch command to select for the old implementation.</p></li>
+<li><p>Psychtoolbox video capture functions should now report and be able to<br />
+use a new virtual video capture device with a name like “Dummy video<br />
+device 0000” or some name defined by you. Psychtoolbox should be able<br />
+to video capture or record video from that device aka your DV video<br />
+camera.</p>
+<p>The Wiki of v4l2loopback describes more elaborate setups, e.g., for<br />
+capturing from multiple video DV cameras.</p></li>
+</ol>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/VideoIPWebcamCaptureDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/VideoIPWebcamCaptureDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/VideoIPWebcamCaptureDemo.m</code></p>
+</div>

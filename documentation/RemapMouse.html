@@ -1,0 +1,43 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p>[xo, yo] = <a href="RemapMouse" class="uri">RemapMouse</a>(win, viewId, xm, ym); – Map mouse position to stimulus position.</p>
+<p>Certain operations, e.g., <a href="PsychImaging" class="uri">PsychImaging</a>(‘AddTask’, …, ‘GeometryCorrection’, …);<br />
+to perform geometric display correction, will break the 1:1<br />
+correspondence between stimulus pixel locations (xo,yo) and the mouse<br />
+cursor position, ie. a mouse cursor positioned at display position<br />
+(xm,ym) will be no longer pointing to stimulus pixel (xm,ym). If you<br />
+want to know which pixel in your original stimulus image corresponds to<br />
+a specific physical display pixel (or mouse cursor position), use this<br />
+function to perform the neccessary coordinate transformation.</p>
+<p>‘win’ is the window handle of the onscreen window to remap.</p>
+<p>‘viewId’ is the view id to remap, the same name you specified in<br />
+<a href="PsychImaging" class="uri">PsychImaging</a>() to setup a geometry correction, e.g., ‘AllViews’.</p>
+<p>(xm,ym) is the 2D position in display device space, e.g., as returned<br />
+from <a href="GetMouse" class="uri">GetMouse</a>() for a mouse cursor position query. Please make sure<br />
+that you pass in the ‘win’dow handle to <a href="GetMouse" class="uri">GetMouse</a> as well, ie.<br />
+<a href="GetMouse" class="uri">GetMouse</a>(win), so <a href="GetMouse" class="uri">GetMouse</a>() can correct its returned mouse position<br />
+for your specific display arrangement and onscreen window placement.<br />
+This function only corrects for distortions inside the onscreen window<br />
+’win’, ie. relative to its origin.</p>
+<p>The returned values (xo, yo) are the remapped stimulus pixel locations,<br />
+over which a mouse cursor at location (xm,ym) is currently hovering.</p>
+<p>If you pass in a (xm,ym) position for which there doesn’t exist any<br />
+corresponding stimulus pixel position, the values (0,0) will be<br />
+returned.</p>
+<p>If you call this function on a window or view without active geometry<br />
+manipulations, it will do nothing and simply return the passed in (xm,<br />
+ym) position, ie. it is safe to use this function all the time.</p>
+<p>Limitations: The function currently only corrects for distortions<br />
+introduced by the tasks implemented in the Psychtoolbox image<br />
+processing pipeline via some of the functions available via<br />
+<a href="PsychImaging" class="uri">PsychImaging</a>() function. It does not take other transformations into<br />
+account, e.g., mirroring, arranging displays of a multi-display setup<br />
+in an unusual way etc. You may need to add your own code to take such<br />
+transformations into account.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/RemapMouse.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/RemapMouse.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/RemapMouse.m</code></p>
+</div>

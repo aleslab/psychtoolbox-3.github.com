@@ -1,0 +1,73 @@
+<h2 id="psychtoolbox-psychdocumentation">[[Psychtoolbox]] › [[PsychDocumentation]]</h2>
+<p>[<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) - Installation instructions for the [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) media framework.</p>
+<p>Psychtoolbox uses the [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) multi-media framework for all multi-media<br />
+related operations. On Windows with Matlab, [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) is also needed for<br />
+high quality text rendering via <a href="Screen" class="uri">Screen</a>(‘DrawText’).</p>
+<p>All movie playback, movie creation, video capture and video recording<br />
+operations are based on [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)). These functions won’t work without a<br />
+working [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) installation on your system (with the exception of video<br />
+capture from firewire DCAM/IIDC machine vision cameras on Linux and OSX).</p>
+<p>You will need at least version 1.2 of [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) on Linux and version 1.4<br />
+on Windows or OSX, but we recommend to use the latest available stable<br />
+release of the version 1 series.</p>
+<h3 id="installation-instructions">Installation instructions:</h3>
+<h3 id="gnulinux">GNU/Linux:</h3>
+<p>Any recent 2013 Linux distribution will include support for [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer))-1 in its<br />
+package management system, so you can easily install it via the software<br />
+management tools of your system. If you install PTB via <a href="NeuroDebian" class="uri">NeuroDebian</a>, then most<br />
+[<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) packages will get automatically installed, with the possible exception<br />
+of some optional packages with potential license or patent restrictions, so read on.</p>
+<p>You may need to install those extra plugin packages to play back all<br />
+common audio and video file formats like MP3 and MP4. Video or movie<br />
+recording with high quality <a href="(DivX),%20H.264">(DivX</a> may also require recent<br />
+versions of additional plugin packages which contain support for these<br />
+formats. These may not installed by default due to licensing and patent<br />
+clauses in place for some territories on this planet. You may want to<br />
+specifically add them to your system depending on your format needs.</p>
+<p>An easy test is to run <a href="SimpleMovieDemo" class="uri">SimpleMovieDemo</a>. If it fails or only plays sound,<br />
+but not video, then some of the plugins are missing, e.g., the important<br />
+“gst-libav” plugins.</p>
+<h3 id="ms-windows-and-apple-osx">MS-Windows and Apple OSX:</h3>
+<p>You must install [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) if you want to use multi-media functions!<br />
+You must also install [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) if you want to use the high-quality text<br />
+renderer on Windows with Matlab, which provides consistent text rendering<br />
+with OSX and Linux, instead of the lower quality legacy GDI text renderer.</p>
+<p>If you don’t intend to use such functionality then installation of<br />
+[<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) is optional. <a href="Screen" class="uri">Screen</a> will work normally, but abort with an error<br />
+message if you try to use any multi-media functions. For use with Octave-4 on<br />
+Windows you must install [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) regardless if you want to use multi-media<br />
+functionality or not, as the <a href="Screen" class="uri">Screen</a>() mex file won’t work at all without [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer))<br />
+installed.</p>
+<p>NOTE: Many Matlab versions on MS-Windows show instable behavior with [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)),<br />
+e.g., crashing in <a href="SimpleMovieDemo" class="uri">SimpleMovieDemo</a> and other demos that use [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)), unless<br />
+they are used without the Graphical user interface and without Java. That means<br />
+you need to start Matlab with the -nojvm command line switch, ie. matlab.exe -nojvm.<br />
+See also: https://github.com/Psychtoolbox-3/Psychtoolbox-3/wiki/FAQ#how-to-resolve-gstreamer-problems</p>
+<h3 id="download-and-install-the-latest-64-bit-x86_64-gstreamergstreamergstreamer-runtimes-from">Download and install the latest 64-Bit (“x86_64”) [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) runtimes from:</h3>
+<p><a href="http://gstreamer.freedesktop.org/download/\" class="uri">http://gstreamer.freedesktop.org/download/\</a></p>
+<p>You should check for and install the latest runtime packages available for your<br />
+system for best reliability and performance. However, as a convenience, at time<br />
+of this writing (January 2017) the required downloads would be:</p>
+<p>For MS-Windows: 64-Bit Intel runtime v1.10.2 for use with 64-Bit Matlab/Octave.</p>
+<p><a href="http://gstreamer.freedesktop.org/data/pkg/windows/1.10.2/gstreamer-1.0-x86\_64-1.10.2.msi\" class="uri">http://gstreamer.freedesktop.org/data/pkg/windows/1.10.2/gstreamer-1.0-x86\_64-1.10.2.msi\</a></p>
+<p>For Apple OSX: Runtime v1.10.2</p>
+<p><a href="http://gstreamer.freedesktop.org/data/pkg/osx/1.10.2/gstreamer-1.0-1.10.2-x86\_64.pkg\" class="uri">http://gstreamer.freedesktop.org/data/pkg/osx/1.10.2/gstreamer-1.0-1.10.2-x86\_64.pkg\</a></p>
+<p>When the installer asks you to select the components it should install,<br />
+select a “Custom installation” (instead of “Full installation” or “Basic<br />
+installation” or such). Then, in the displayed check list of packages to<br />
+install, select *all* components manually, if you want support for all<br />
+video formats and all functionality. Without this, many popular video<br />
+formats like H264 video will not play at all, or video recording / video<br />
+capture and similar functions may not work. In fact, even our own demos,<br />
+e.g., <a href="SimpleMovieDemo" class="uri">SimpleMovieDemo</a> *will fail* if you don’t have all codecs installed!<br />
+-&gt; If <a href="SimpleMovieDemo" class="uri">SimpleMovieDemo</a> doesn’t work, then the most likely cause is that<br />
+you didn’t select all [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) packages for installation, so restart the<br />
+installer and repeat installation with the full set of packages.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDocumentation/GStreamer.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDocumentation/GStreamer.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDocumentation/GStreamer.m</code></p>
+</div>

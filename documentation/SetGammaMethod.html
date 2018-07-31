@@ -1,0 +1,22 @@
+<h2 id="psychtoolbox-psychcal">[[Psychtoolbox]] › [[PsychCal]]</h2>
+<p>cal = <a href="SetGammaMethod" class="uri">SetGammaMethod</a>(cal,gammaMode,[precision])</p>
+<p>Set up the gamma correction mode to be used. Options<br />
+are:<br />
+gammaMode == 0 - search table using linear interpolation via interp1.<br />
+gammaMode == 1 - inverse table lookup. Fast but less accurate.<br />
+gammaMode == 2 - exhaustive search</p>
+<p>If gammaMode == 1, then you may specify the precision of the<br />
+inverse table. The default is 1000 levels.</p>
+<p>See also <a href="RefitCalGamma" class="uri">RefitCalGamma</a>, <a href="CalibrateFitGamma" class="uri">CalibrateFitGamma</a>, <a href="GamutToSettings" class="uri">GamutToSettings</a></p>
+<p>8/4/96 dhb Wrote it.<br />
+8/21/97 dhb Update for structure.<br />
+3/12/98 dhb Change name to <a href="SetGammaCorrectMode" class="uri">SetGammaCorrectMode</a><br />
+5/26/12 dhb Add real exhaustive search mode (2).</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychCal/SetGammaMethod.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychCal/SetGammaMethod.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychCal/SetGammaMethod.m</code></p>
+</div>

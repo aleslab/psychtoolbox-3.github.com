@@ -1,0 +1,68 @@
+<h2 id="psychtoolbox-psychpriority">[[Psychtoolbox]] › [[PsychPriority]]</h2>
+<p>priorityStruct = <a href="MachGetPriorityMex" class="uri">MachGetPriorityMex</a>(policyFlavorString, defaultFlag)</p>
+<p>OSX: ___________________________________________________________________</p>
+<p>Retrieve current or default parameters for the main MATLAB thread for any<br />
+of the three priority flavors: ‘THREAD_STANDARD_POLICY’,<br />
+‘THREAD_TIME_CONSTRAINT_POLICY’ and ‘THREAD_PRECEDENCE_POLICY’</p>
+<h3 id="the-returned-struct-contains-these-fields">The returned struct contains these fields:</h3>
+<p>priorityStruct.threadID<br />
+a number identifying the current thread.</p>
+<p>priorityStruct.flavor<br />
+one of: ‘THREAD_STANDARD_POLICY’, ‘THREAD_TIME_CONSTRAINT_POLICY’,<br />
+‘THREAD_PRECEDENCE_POLICY’</p>
+<p>priorityStruct.policy<br />
+see policy struct variants below</p>
+<p>priorityStruct.policySize<br />
+The amount of memory allocated for the policy struct passed to the<br />
+Mach function thread_policy_get() by <a href="MachGetPriorityMex" class="uri">MachGetPriorityMex</a>.</p>
+<p>priorityStruct.policyFillSize<br />
+amount of memory filled into the policy struct by<br />
+Mach function thread_policy_get().</p>
+<p>priorityStruct.getDefault<br />
+value of the defaultFlag argument passed into <a href="MachGetPriorityMex" class="uri">MachGetPriorityMex</a>.</p>
+<p>priorityStruct.isDefault<br />
+If the flag value passed to <a href="MachGetPriorityMex" class="uri">MachGetPriorityMex</a> is 0, requesting<br />
+current parameter values and not default parameter values and yet<br />
+<a href="MachGetPriorityMex" class="uri">MachGetPriorityMex</a> returns default parameters and defaultFlag value<br />
+1, then the priority flavor which was specified in the first<br />
+argument to priorityFlavorString is not in effect.</p>
+<p>The form of the embedded struct “policy” depends on the value of<br />
+priorityFlavorString argument.</p>
+<p>‘THREAD_STANDARD_POLICY’:<br />
+priorityStruct.flavorPolicy.no_data % a place holder only</p>
+<p>‘THREAD_TIME_CONSTRAINT_POLICY’ % see help <a href="MachSetTimeConstraintPriority" class="uri">MachSetTimeConstraintPriority</a><br />
+priorityStruct.flavorPolicy.period<br />
+priorityStruct.flavorPolicy.computation<br />
+priorityStruct.flavorPolicy.constraint<br />
+priorityStruct.flavorPolicy.preemptible</p>
+<p>‘THREAD_PRECEDENCE_POLICY’ % see help <a href="MachSetTimeConstraintPriority" class="uri">MachSetTimeConstraintPriority</a><br />
+priorityStruct.flavorPolicy.importance</p>
+<p>There are three policy flavors but a thread may have only one of two<br />
+policy modes: THREAD_STANDARD_POLICY or THREAD_TIME_CONSTRAINT_POLICY.<br />
+These are mutually-exclusive modes; setting a thread to either one will<br />
+unset the other mode. The “importance” parameter associated with<br />
+THREAD_PRECEDENCE_POLICY is preserved after either THREAD_STANDARD_POLICY<br />
+or THREAD_TIME_CONSTRAINT_POLICY is set, however the<br />
+THREAD_PRECEDENCE_POLICY “importance” setting is ignored by the Mach task<br />
+scheduler while a thread is in THREAD_TIME_CONSTRAINT_POLICY mode. A<br />
+thread is governed by the “importance” parameter only when in<br />
+THREAD_STANDARD_POLICY mode.</p>
+<p><a href="MachGetPriorityMex" class="uri">MachGetPriorityMex</a> uses the OS X Darwin function thread_policy_get().<br />
+For more information on thread_policy_get() see:<br />
+Psychtoolbox3/Source/Common/<a href="MachPriorityMex" class="uri">MachPriorityMex</a>/<a href="MachGetPriorityMex" class="uri">MachGetPriorityMex</a>.c<br />
+http://developer.apple.com/documentation/Darwin/Conceptual/<a href="KernelProgramming" class="uri">KernelProgramming</a>/scheduler/chapter_8_section_4.html<br />
+/usr/include/mach/thread_policy.h</p>
+<p>OS9: ___________________________________________________________________</p>
+<p><a href="MachGetPriorityMex" class="uri">MachGetPriorityMex</a> does not exist in OS 9.</p>
+<p>WIN: ________________________________________________________________</p>
+<p><a href="MachGetPriorityMex" class="uri">MachGetPriorityMex</a> does not exist in Windows.</p>
+<p>_________________________________________________________________________</p>
+<p>see also: <a href="Priority" class="uri">Priority</a>, <a href="Rush" class="uri">Rush</a>, <a href="MachGetPriorityFlavor" class="uri">MachGetPriorityFlavor</a>, <a href="MachSetPriorityMex" class="uri">MachSetPriorityMex</a>,</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychPriority/MachGetPriorityMex.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychPriority/MachGetPriorityMex.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychPriority/MachGetPriorityMex.m</code></p>
+</div>

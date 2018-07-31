@@ -1,0 +1,25 @@
+<h2 id="psychtoolbox-psychprobability">[[Psychtoolbox]] › [[PsychProbability]]</h2>
+<p><a href="CombVec" class="uri">CombVec</a> Generate all possible combinations of input vectors.</p>
+<p><a href="CombVec" class="uri">CombVec</a>(A1,A2,…) takes any number of inputs,<br />
+A1 - Matrix of N1 (column) vectors.<br />
+A2 - Matrix of N2 (column) vectors.<br />
+…<br />
+and returns a matrix of (N1*N2*…) column vectors, where the columns<br />
+consist of all possibilities of A2 vectors, appended to<br />
+A1 vectors, etc.</p>
+<p>Example</p>
+<pre><code>a1 = [1 2];  
+a2 = [3 4; 3 4];  
+a3 = [CombVec](CombVec)(a1,a2)  
+a3 =   
+    1     2     1     2  
+    3     3     4     4  
+    3     3     4     4  </code></pre>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychProbability/CombVec.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychProbability/CombVec.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychProbability/CombVec.m</code></p>
+</div>

@@ -1,0 +1,52 @@
+<h1 id="datapixxsetdacschedule"><a href="Datapixx-SetDacSchedule">Datapixx(‘SetDacSchedule’)</a></h1>
+<h2 id="psychtoolbox-datapixx.mexdll-subfunction">[[Psychtoolbox]] › [[Datapixx]].{mex*,dll} subfunction</h2>
+<p>Configure a schedule for autonomous DAC waveform playback.<br />
+-“scheduleOnset” is the desired delay (in double precision seconds) between<br />
+schedule initiation, and when the first waveform sample is sent to the <a href="DACs" class="uri">DACs</a>.<br />
+-“scheduleRate” is the rate at which successive waveform samples are sent to the<br />
+<a href="DACs" class="uri">DACs</a>. scheduleRate has two formats. It can be a single number, or a 2 element<br />
+array. If it is a single number, then it specifies integer samples/second. If it<br />
+is a 2 element array, then the first element specifies the rate, and the second<br />
+element specifies the units of the rate.<br />
+If units = 1, then the rate is interpreted as integer samples/second.<br />
+If units = 2, then the rate is interpreted as integer samples/video frame.<br />
+If units = 3, then the rate is interpreted as double precision seconds/sample<br />
+(sample period).<br />
+Regardless of the actual format chosen, the resulting update rate cannot exceed<br />
+1 <a href="MHz" class="uri">MHz</a>.<br />
+-“maxScheduleFrames” has two modes, depending on whether the full waveform has a<br />
+fixed known length. If the waveform length is known (eg: 100000 samples), then<br />
+just pass 100000 to maxScheduleFrames. In this mode, once the DAC waveform<br />
+schedule is started with <a href="StartDacSchedule" class="uri">StartDacSchedule</a>, the schedule will terminate<br />
+automatically when maxScheduleFrames has been reached. If the waveform length is<br />
+not known in advance, then pass 0 to maxScheduleFrames. In this mode, the<br />
+waveform will continue until the schedule is manually stopped using<br />
+<a href="StopDacSchedule" class="uri">StopDacSchedule</a>.<br />
+-“channelList” is a list of the DAC channels which should be updated from the<br />
+waveform buffer. The list should contain 1 or more integers in the range 0 to<br />
+<a href="GetDacNumChannels" class="uri">GetDacNumChannels</a>-1.<br />
+The number of scheduled channels should equal the number of channels downloaded<br />
+in <a href="WriteDacBuffer" class="uri">WriteDacBuffer</a>. -“bufferBaseAddress” specifies the start of the RAM buffer<br />
+which holds the waveform data inside the Datapixx. Use <a href="WriteDacBuffer" class="uri">WriteDacBuffer</a> to<br />
+download the waveform data to this address before calling <a href="StartDacSchedule" class="uri">StartDacSchedule</a>.<br />
+-“numBufferFrames” specifies the size of the waveform buffer in the Datapixx<br />
+RAM. For many applications, the Datapixx has enough RAM for <a href="WriteDacBuffer" class="uri">WriteDacBuffer</a> to<br />
+download multiple complete waveforms before initiating playback. In these cases,<br />
+numBufferFrames could be left at its default value of maxScheduleFrames. If<br />
+maxScheduleFrames is larger than numBufferFrames (or 0), then each time the<br />
+waveform frame counter reaches a multiple of numBufferFrames, the waveform<br />
+buffer address automatically wraps back to bufferBaseAddress. This circular<br />
+buffer effect can be used for streaming arbitrarily long waveforms into a DAC<br />
+schedule. Simply monitor freeBufferFrames returned by <a href="GetDacStatus" class="uri">GetDacStatus</a>, and use<br />
+<a href="WriteDacBuffer" class="uri">WriteDacBuffer</a> in streaming mode to append new waveform data into buffer space<br />
+which has already been played. The circular buffer effect can also be used to<br />
+implement periodic waveforms very efficiently. A long periodic toneburst could<br />
+be assigned a small buffer filled with only a single period of the waveform. The<br />
+periodic waveform will play continuously, and any <a href="WriteDacBuff" class="uri">WriteDacBuff</a> into the waveform<br />
+buffer will immediately update the generated waveform.<br />
+Note that every call to <a href="StartDacSchedule" class="uri">StartDacSchedule</a> must be preceeded by a call to<br />
+<a href="SetDacSchedule" class="uri">SetDacSchedule</a> (ie: multiple calls to <a href="StartDacSchedule" class="uri">StartDacSchedule</a> each require their own<br />
+call to <a href="SetDacSchedule">SetDacSchedule)</a>).<br />
+Note that schedule timing is implemented in hardware with microsecond precision.<br />
+See <a href="DatapixxDac" class="uri">DatapixxDac</a>*Demo files for examples.</p>
+<p>&lt;&lt;=====See also:===== WriteDacBuffer, StartDacSchedule, StopDacSchedule, GetDacStatus &lt;&lt;</p>

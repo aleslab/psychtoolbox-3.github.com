@@ -1,0 +1,22 @@
+<h1 id="screenopenproxy"><a href="Screen-OpenProxy">Screen(‘OpenProxy’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Create a proxy object. A proxy is a windowRecord (like a texture, offscreen<br />
+window or onscreen window), but without associated image content. Its useful as<br />
+a container for all the typical settings associated with a window or texture.<br />
+Its main purpose is to store additional hook function chains for use with the<br />
+imaging pipeline. The users script can create special proxy objects for<br />
+different image processing subtasks, attach proper user defined hook chains to<br />
+it, and then switch between different hook chains by simply passing different<br />
+proxy objects to the image processing functions. This way we are not limited to<br />
+a fixed number of imaging hooks but can create new ones dynamically. Read ‘help<br />
+PsychGLImageProcessing’ for more infos about proxies and the pipeline.</p>
+<p>‘windowPtr’ is a handle to an associated parent onscreen window. Just pass the<br />
+handle of the onscreen window for which image processing is supposed to take<br />
+place. The routine returns a handle ‘proxyPtr’ to the new proxy object. You can<br />
+delete proxy objects via the regular <a href="Screen" class="uri">Screen</a>(‘<a href="Close" class="uri">Close</a>’, proxyPtr) or<br />
+<a href="Screen" class="uri">Screen</a>(‘CloseAll’); command as you would do with textures or windows. You can<br />
+add or modify hook functions by passing the ‘proxyPtr’ to the<br />
+<a href="Screen" class="uri">Screen</a>(‘Hookfunction’, …) subfunction. You can apply a proxy via the<br />
+<a href="Screen" class="uri">Screen</a>(‘TransformTexture’) function. ‘imagingmode’ flags to define the boundary<br />
+conditions for image processing.</p>
+<p>&lt;&lt;=====See also:===== Hookfunction, TransformTexture &lt;&lt;</p>

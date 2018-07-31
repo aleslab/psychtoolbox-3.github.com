@@ -1,0 +1,10 @@
+<h1 id="datapixxstartdacschedule"><a href="Datapixx-StartDacSchedule">Datapixx(‘StartDacSchedule’)</a></h1>
+<h2 id="psychtoolbox-datapixx.mexdll-subfunction">[[Psychtoolbox]] › [[Datapixx]].{mex*,dll} subfunction</h2>
+<p>Start running a DAC waveform playback schedule. The actual hardware schedule<br />
+will be initiated by the next <a href="RegWr" class="uri">RegWr</a>* command, and then the first waveform sample<br />
+will hit the <a href="DACs" class="uri">DACs</a> after the scheduleOnset specified in <a href="SetDacSchedule" class="uri">SetDacSchedule</a>.<br />
+Note that every call to <a href="StartDacSchedule" class="uri">StartDacSchedule</a> must be preceeded by a call to<br />
+<a href="SetDacSchedule" class="uri">SetDacSchedule</a> (ie: multiple calls to <a href="StartDacSchedule" class="uri">StartDacSchedule</a> each require their own<br />
+call to <a href="SetDacSchedule">SetDacSchedule)</a>).<br />
+See <a href="DatapixxDac" class="uri">DatapixxDac</a>*Demo files for examples.</p>
+<p>&lt;&lt;=====See also:===== SetDacSchedule, StopDacSchedule, GetDacStatus &lt;&lt;</p>

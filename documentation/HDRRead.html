@@ -1,0 +1,31 @@
+<h2 id="psychtoolbox-psychhardware-brightsidedisplay">[[Psychtoolbox]] › [[PsychHardware]] › [[BrightSideDisplay]]</h2>
+<p>img = <a href="HDRRead" class="uri">HDRRead</a>(imgfilename[, continueOnError=0][, flipit=0])<br />
+Read a high dynamic range image file and return it as Matlab double<br />
+matrix, suitable for use with <a href="Screen" class="uri">Screen</a>(‘MakeTexture’) and friends.</p>
+<p>‘imgfilename’ - Filename of the HDR image file to load.<br />
+Returns ‘img’ - A double precision matrix of size h x w x c where h is<br />
+the height of the input image, w is the width and c is the number of<br />
+color channels: 1 for luminance images, 2 for luminance images with alpha<br />
+channel, 3 for true-color RGB images, 4 for RGB images with alpha<br />
+channel.</p>
+<p>‘continueOnError’ Optional flag. If set to 1, <a href="HDRRead" class="uri">HDRRead</a> won’t abort on<br />
+error, but simply return an empty img matrix. Useful for probing if a<br />
+specific file type is supported.</p>
+<p>‘flipit’ Optional flag: If set to 1, the loaded image is flipped upside<br />
+down.</p>
+<p><a href="HDRRead" class="uri">HDRRead</a> is a dispatcher for a collection of reading routines for<br />
+different HDR image file formats. Currently supported are:</p>
+<p>* Run length encoded RGBE format, read via read_rle_rgbe.m, extension is<br />
+“.hdr”. Returns a RGB image.</p>
+<p>The reader routines are contributed code or open source / free software /<br />
+public domain code downloaded from various locations under different, but<br />
+GPL compatible licenses. See the help for the respective loaders for<br />
+copyright and author information.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/BrightSideDisplay/HDRRead.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/BrightSideDisplay/HDRRead.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/BrightSideDisplay/HDRRead.m</code></p>
+</div>

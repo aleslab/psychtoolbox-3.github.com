@@ -1,0 +1,28 @@
+<h2 id="psychtoolbox-psychfiles">[[Psychtoolbox]] › [[PsychFiles]]</h2>
+<p>Syntax: path=<a href="PsychtoolboxConfigDir" class="uri">PsychtoolboxConfigDir</a>([subDir])</p>
+<p>Purpose: Look for a folder for storing Psychtoolbox preferences; create if<br />
+necessary.</p>
+<pre><code>     When called without optional &#39;subDir&#39; argument, the path to the  
+     root configuration folder is returned (and the folder optionally  
+     created if it doesn&#39;t exist yet). When &#39;subDir&#39; is given, the  
+     path to the subfolder &#39;subDir&#39; inside the root configuration  
+     folder is returned - and the &#39;subDir&#39; created inside that folder  
+     if neccessary. Subfolders are useful to group related  
+     configuration data, e.g., all settings for DAQ toolbox, all  
+     display calibration settings, etc.  </code></pre>
+<p>History: 1/23/08 mpr configured it was about time to write this<br />
+3/7/08 mpr streamlined this<br />
+3/8/08 mk A bit more of streamlining - Don’t write the<br />
+<a href="PsychPrefsfolder" class="uri">PsychPrefsfolder</a>.m file anymore.<br />
+4/28/08 mk Made compatible with Octave, added ‘subDir’<br />
+option.<br />
+6/14/09 mk Remove Octave code -&gt; Not needed anymore.<br />
+4/10/17 mk Some cleanup and error reporting improvements.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychFiles/PsychtoolboxConfigDir.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychFiles/PsychtoolboxConfigDir.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychFiles/PsychtoolboxConfigDir.m</code></p>
+</div>

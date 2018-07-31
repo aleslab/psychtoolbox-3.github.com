@@ -1,0 +1,24 @@
+<h2 id="psychtoolbox-psychfiles">[[Psychtoolbox]] › [[PsychFiles]]</h2>
+<p>str = <a href="DirList" class="uri">DirList</a>(dirnm,qdispfiles,lim,pref, folderFilter, fileFilter, qRelPath)<br />
+recursively lists directories en returns the whole shit<br />
+as a string<br />
+all inputs except the first are optional<br />
+QDISPFILES is a boolean indicating whether files should also be listed<br />
+(true, default)<br />
+LIM is the maximum number of levels that will be listed (default unlimited (inf))<br />
+PREF is a prefix for each node in the directorylist<br />
+FOLDERFILTER is to filter out unwanted folders (regexp). If a match<br />
+occurs, the directory _IS NOT_ output and not recursed into<br />
+FILEFILTER is to filter out unwanted files (regexp). If a match<br />
+occurs, the files _ARE_ output. Use e.g. ‘.m<span class="math inline">$' to only display files with .m extensions, '\.mat$</span>|.m$’ to include all files with .mat or .m files.<br />
+default: ‘.’, shows all files.<br />
+QRELPATH if true, a listing of existing paths relative to DIRNM. Default<br />
+false</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychFiles/DirList.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychFiles/DirList.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychFiles/DirList.m</code></p>
+</div>

@@ -1,0 +1,103 @@
+<h2 id="psychtoolbox-psychdemos">[[Psychtoolbox]] › [[PsychDemos]]</h2>
+<p>Demonstrate simple use of built-in video capture engine with DV consumer cameras.</p>
+<p><a href="VideoDVCamCaptureDemo" class="uri">VideoDVCamCaptureDemo</a>([fullscreen=0][, fullsize=0][, roi][, depth][,deviceId=0][, moviename])</p>
+<p>NOTE: As of October 2014, DV video camera capture has not been tested at<br />
+all on MS-Windows, as [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer))-1 currently doesn’t ship with video<br />
+capture plugins for MS-Windows. On Apple OSX 10.9.5 Mavericks with our<br />
+new [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer))-1 video capture engine, video capture from DV did not work,<br />
+neither with Psychtoolbox, nor with [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) command line tools or other<br />
+independent open source video capture applications. Only Apples Facetime<br />
+app managed to get a marginally useable video stream from the DV camera.<br />
+Testing on Linux with this specific demo showed mixed results. However on<br />
+Linux there is a slightly hacky way that makes it work somewhat reliably<br />
+with the new backend by exposing the camera as a regular video source, so<br />
+all regular video capture/recording/processing demos can be used for DV<br />
+capture, without any need for special treatment like in this demo. Read<br />
+the section below for further instructions for a reliable DV setup on<br />
+Linux.</p>
+<p><a href="VideoDVCamCaptureDemo" class="uri">VideoDVCamCaptureDemo</a> initializes the first attached and supported DV<br />
+firewire consumer camera, then shows its video image in a Psychtoolbox<br />
+window. A press of the <a href="ESCape" class="uri">ESCape</a> key ends the demo.</p>
+<h3 id="optional-parameters">Optional parameters:</h3>
+<p>‘fullscreen’ If set to non-zero value, the image is displayed in a<br />
+fullscreen window, as usual, otherwise a normal GUI window is used.</p>
+<p>‘fullsize’ If set to 1, the cameras image is scaled up to full screen<br />
+resolution, ie. so it fills the maximum amount of display area, but<br />
+preserving the original aspect ratio.</p>
+<p>‘roi’ Set to [0 0 720 576] for a PAL-DV camera and [0 0 720 480] for a<br />
+NTSC-DV camera. Default is PAL if omitted.</p>
+<p>‘deviceId’ Device index of video capture device. Defaults to system<br />
+default. You can also specify a gst-launch style string to define a<br />
+videosource here. Or you can set the special string deviceId = ‘X’ so<br />
+builtin spec strings suitable for each operating system will be used.</p>
+<p>‘moviename’ Name string for selection of filename of a target movie file<br />
+to which video should be recorded. Defaults to none,ie., no video<br />
+recording.</p>
+<p><a href="VideoDVCamCaptureDemo" class="uri">VideoDVCamCaptureDemo</a> also allows you to test out video capture from<br />
+special video sources other than Consumer-DV cameras, ie. sources which<br />
+require use of a custom built [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) video source bin. You test such<br />
+setups by specifying the bin spec-string and other parameters as parameters<br />
+for the demo. As an example, the following call would try to capture a video<br />
+stream that is encoded as H264 video and that is transmitted over the network<br />
+via TCP-IP protocol, ie., a H264 video stream encapsulated in TCP:</p>
+<p><a href="VideoDVCamCaptureDemo" class="uri">VideoDVCamCaptureDemo</a>([], [], [0 0 320 240], 6, ‘tcpclientsrc port=8554 host=localhost ! h264parse ! avdec_h264 name=ptbdvsource’);</p>
+<p>This would receive the TCP stream from port 8554 on the machine with<br />
+the name ‘localhost’ (the local machine). The stream would decode from<br />
+H264 to color format 6 - YUV-I420 - with video frames of 320 x 240 pixels<br />
+size. For testing purpose you could enter the following [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) command<br />
+line into a terminal window to generate a test video stream and send it from<br />
+the local machine ‘localhost’ on port 8554, as H264 encoded TCP-IP stream,<br />
+then receive it via <a href="VideoDVCamCaptureDemo" class="uri">VideoDVCamCaptureDemo</a> as shown above:</p>
+<p>gst-launch-1.0 videotestsrc horizontal-speed=5 ! x264enc tune=“zerolatency” threads=1 ! video/x-h264,stream-format=byte-stream ! tcpserversink port=8554</p>
+<p>One application of such a custom setup can be seen in the discussion thread<br />
+containing message #18807 on the Psychtoolbox forum. There the video source<br />
+is an IP camera attached to a robot, streaming H264 video over the network for<br />
+consumption by a machine running Psychtoolbox.</p>
+<h3 id="loopback-setup-on-linux-for-use-with-new-gstreamergstreamergstreamer-1-video-backend">Loopback setup on Linux for use with new [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer))-1 video backend:</h3>
+<p>This specific configuration was shown to work at least on Ubuntu 14.04<br />
+LTS with a Sony PAL-DV firewire camera. After following the setup steps,<br />
+demos like our standard <a href="VideoCaptureDemo" class="uri">VideoCaptureDemo</a>, <a href="VideoRecordingDemo" class="uri">VideoRecordingDemo</a>, … worked<br />
+without any special configuration or treatment of DV cameras.</p>
+<p>Here you need to install a <a href="Video4Linux2" class="uri">Video4Linux2</a> loopback kernel module. It will<br />
+allow to create virtual video sources, from which Psychtoolbox can<br />
+read/capture/process record live video. Then some external application<br />
+can feed video into those virtual sources. You then attach an external<br />
+command line DV capture session as video source.</p>
+<ol type="1">
+<li><p>Install the package “v4l2loopback-dkms” to get the kernel module installed and<br />
+loaded. A “sudo apt-get install v4l2loopback-dkms” on Ubuntu 14.04-LTS<br />
+and later distributions should do the trick. The package is probably<br />
+also available on Debian, other Debian/Ubuntu derived distros etc. Or<br />
+you get the most recent version to compile and install from source<br />
+code from the homepage of the project:<br />
+https://github.com/umlaeute/v4l2loopback</p></li>
+<li><p>You may or may not need to “sudo modprobe v4l2loopback” on first use.</p></li>
+<li><p>Then you use a [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer)) video capture pipeline launched from a terminal<br />
+window to connect to your DV camera, capture live video and feed it<br />
+into the virtual video loopback device. An example launch line can<br />
+look like this:</p>
+<p>gst-launch dv1394src ! dvdemux ! dvdec ! v4l2sink device=/dev/video0</p>
+<p>This would make live video from the first connected DV camera<br />
+available on /dev/video0. See<br />
+https://github.com/umlaeute/v4l2loopback/wiki for more detailed<br />
+instructions.</p>
+<p>If this doesn’t work for you with [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer))-1 you may need to install<br />
+good old [<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer))-0.10 in addition to the already installed<br />
+[<a href="GStreamer" class="uri">GStreamer</a>][(GStreamer)]((GStreamer))-1 and instead use the gst-launch-0.10 command instead of the<br />
+gst-launch command to select for the old implementation.</p></li>
+<li><p>Psychtoolbox video capture functions should now report and be able to<br />
+use a new virtual video capture device with a name like “Dummy video<br />
+device 0000” or some name defined by you. Psychtoolbox should be able<br />
+to video capture or record video from that device aka your DV video<br />
+camera.</p>
+<p>The Wiki of v4l2loopback describes more elaborate setups, e.g., for<br />
+capturing from multiple video DV cameras.</p></li>
+</ol>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/VideoDVCamCaptureDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/VideoDVCamCaptureDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/VideoDVCamCaptureDemo.m</code></p>
+</div>

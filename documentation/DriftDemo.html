@@ -1,0 +1,29 @@
+<h2 id="psychtoolbox-psychdemos">[[Psychtoolbox]] › [[PsychDemos]]</h2>
+<p><a href="DriftDemo" class="uri">DriftDemo</a><br />
+___________________________________________________________________</p>
+<p>Display an animated grating using the new <a href="Screen" class="uri">Screen</a>(‘DrawTexture’) command.<br />
+In Psychtoolbox-3 <a href="Screen" class="uri">Screen</a>(‘DrawTexture’) replaces<br />
+<a href="Screen" class="uri">Screen</a>(‘CopyWindow’).</p>
+<p>This is a very simple, bare bones demo on how to do frame animation. For<br />
+much more efficient ways to draw gratings and gabors, have a look at<br />
+<a href="DriftDemo2" class="uri">DriftDemo2</a>, <a href="DriftDemo3" class="uri">DriftDemo3</a>, <a href="DriftDemo4" class="uri">DriftDemo4</a>, <a href="ProceduralGaborDemo" class="uri">ProceduralGaborDemo</a>, <a href="GarboriumDemo" class="uri">GarboriumDemo</a>,<br />
+<a href="ProceduralGarboriumDemo" class="uri">ProceduralGarboriumDemo</a> and <a href="DriftWaitDemo" class="uri">DriftWaitDemo</a>.</p>
+<h3 id="copywindow-vs.-drawtexture"><a href="CopyWindow" class="uri">CopyWindow</a> vs. <a href="DrawTexture" class="uri">DrawTexture</a>:</h3>
+<p>In the OS 9 Psychtoolbox, <a href="Screen" class="uri">Screen</a> (‘CopyWindow&quot;) was used for all<br />
+time-critical display of images, in particular for display of the movie<br />
+frames in animated stimuli. In contrast, <a href="Screen" class="uri">Screen</a>(’DrawTexture’) should not<br />
+be used for display of all graphic elements, but only for display of<br />
+MATLAB matrices. For all other graphical elements, such as lines, rectangles,<br />
+and ovals we recommend that these be drawn directly to the display<br />
+window during the animation rather than rendered to offscreen windows<br />
+prior to the animation.<br />
+_________________________________________________________________________</p>
+<p>see also: <a href="PsychDemos" class="uri">PsychDemos</a>, <a href="MovieDemo" class="uri">MovieDemo</a></p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/DriftDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/DriftDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/DriftDemo.m</code></p>
+</div>

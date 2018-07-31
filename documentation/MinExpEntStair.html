@@ -1,0 +1,146 @@
+<h2 id="psychtoolbox-psychstaircase">[[Psychtoolbox]] › [[PsychStairCase]]</h2>
+<p>Minimum Expected Entropy Staircase</p>
+<p>Caution: Currently only works with Matlab, not with GNU/Octave!</p>
+<p>The staircase gives suggestions for which probe value to test next,<br />
+choosing the probe that will provide the most information (based on the<br />
+principle of minimum entropy = maximally unambiguous probability<br />
+distribution). Probes are chosen from a set of possible probe values<br />
+provided at staircase init, and their use is evaluated based on the<br />
+expected amount of information gain given a space of PSE and slope values<br />
+to test over.</p>
+<p>By default, a psychometric function ranging from 0% to 100% is used, as<br />
+is suitable for discrimination experiments with a standard in the middle<br />
+of the possible stimulus parameter range. For other paradigms, such as<br />
+n-AFC detection tasks, one can set the guessrate input during staircase<br />
+init to 1/num_alternatives, e.g. .5 when doing a 2IFC detection task.<br />
+This guess rate is thus not the rate at which participants guess instead<br />
+of do your task (thats the lapse rate), it the minimum rate of correct<br />
+responses as determined by your design. NB: below discussion is based on<br />
+the default psychometric function with the full range, but all points are<br />
+equally valid for a scaled psychometric function.</p>
+<p>It is recommended to have the staircase determine the optimal next probe<br />
+based on only a random subset of the response history (see options<br />
+‘toggle_use_resp_subset’ and ‘toggle_use_resp_subset_prop’). This makes<br />
+its operation more robust for response errors and also avoids probe<br />
+oscillations when the fit estimate is converging.<br />
+When we are close to convergence, probes will tend to be near the 25% and<br />
+75% points. If a probe is 25% and you answer ‘1’ (pedestal faster, which<br />
+is likely, because it’s near the correct 25% point), then for the next<br />
+trial the peak in expected entropy reduction will generally be the 75%<br />
+point, and vice versa. This can lead to undesirable probe sequences where<br />
+the correct response alternates 0,1,0,1,0,1. If you choose a random<br />
+subset, this will completely eliminate the problem. If the staircase has<br />
+converged to where there are two almost equal expected entropy minima,<br />
+then small variations due to the selection of subsets will randomly vary<br />
+which minimum emerges as lowest.<br />
+This strategy does not significantly affect optimal operation of the<br />
+staircase. Lots of probe values provide useful information. Therefore, it<br />
+is not crucial to have a highly accurate estimate of likelihoods, so<br />
+relatively few trials are sufficient (less than are needed to for final<br />
+estimates of PSE and DL). Throwing out trials for the staircase<br />
+computation yields robustness without much cost.</p>
+<p>Another option would be to load a non-uniform prior on the space of<br />
+possible location/mean/PSE and dispersion/slope parameters (known as mu<br />
+and sigma respectively for a cumulative Gaussian - see option<br />
+‘loadprior’). Probe sampling will then stay reasonable in early trials<br />
+even if there were a couple bad responses. But this strategy is not as<br />
+robust as using a random subset – bad trials will continue to have an<br />
+effect throughout.</p>
+<p>In absence of anything to base the optimal probe value on, the first<br />
+probe is chosen randomly from the set of possible probes. When a prior<br />
+was loaded, a likelihood distribution is available based on which the<br />
+optional probe value can be computed. If for any other reason choosing<br />
+the next probe based on the measure of minimum expected entropy fails,<br />
+the staircase will fall back on the same random probe sampling strategy.<br />
+There is an option to set the first probe value to be tested, which, for<br />
+the first trial only, will overrule both of the above probe choice<br />
+strategies. This can be useful if you want to be sure that the first<br />
+trial is an easy one so the participant knows what to expect.</p>
+<p>Another measure for robustness is to choose a small lapse rate. If lapse<br />
+would be zero and a response error is made by the observer, immediately a<br />
+whole range of mean-slope combinations becomes impossible. If lapse rate<br />
+is non-zero, these would still have a non-zero probability and the<br />
+staircase can rebound. Therefore a lapse rate of 5% or even more<br />
+depending on task difficulty is always recommended. NB: in the default<br />
+discrimination setup of the staircase (guessrate is not specified or set<br />
+to 0), half of the lapse rate is taken off the bottom of the psychometric<br />
+function and half is taken off the top. So if the lapse rate is 0.05, the<br />
+psychometric function will range from 0.025 to 0.975. In the setup for a<br />
+n-AFC detection experiment when the psychometric function has a lower<br />
+bound of 1/num_alternatives, the lapse rate is taken off the top. So when<br />
+the guess_rate is set to .5 (2AFC) and the pase rate is set to .05, the<br />
+psychometric function will range from 0.05 to 0.95.<br />
+Note that the staircase does not support a 0 lapse rate in the first<br />
+place as it works with log-probability and we get in trouble if we would<br />
+take the log of a 0 probability. Any lapse rate lower than 1e-10 will be<br />
+adjusted to 1e-10 upon calling the ‘init’ function.</p>
+<p>If the staircase gets stuck at one of the bounds of the probe set, check<br />
+that the sign of the slope space matches the expected sign of the<br />
+response. E.g., lets look at an experiment in which you are doing 2IFC<br />
+task in which the observer is asked to report which interval contained<br />
+the faster motion. If the observer choses the test over the pedestal<br />
+interval the response is 1, if the observer chosen the pedestal to be<br />
+faster, the response is 0. All slopes in the set would in this case be<br />
+positive as the low end of the probe space (slow speeds) is associated<br />
+with response 0 and the high end with response 1. If we however asked the<br />
+observer to indicate the slower interval, the slopes in our slope set<br />
+would not match the task, and the staircase would get stuck at one of the<br />
+probe bounds. In this case, the lower end of the probe space is<br />
+associated with the response 1 and the higher end with the response<br />
+0–we’d thus have a negative slope for the fitted cumulative probability<br />
+function.</p>
+<p>The staircase currently only supports logistic and cumulative Gaussian<br />
+(default) psychometric functions (see ‘set_psychometric_func’), but<br />
+others could easily be implemented. Changes should be needed only to the<br />
+function “fit_a_point” at the bottom of this mfile, providing that the<br />
+function is characterized by two parameters (which do not necessarily<br />
+have to be PSE and slope, though that is the terminology here.<br />
+Should you implement such a function, please do send me your code at<br />
+dcnieho <span class="citation" data-cites="at">@at</span>@ gmail.com.</p>
+<p>The above discussion assumes that response inputs to ‘process_resp’ are<br />
+either 0 or 1 (see note above about their meaning) though in practice<br />
+anything larger than 0 is treated as 1 and anything lower than 0,<br />
+including 0, is treated as 0. the staircase can thus easily be integrated<br />
+with programs that use a 1, -1 response scheme.</p>
+<p>For actual offline fitting of your data, you would probably want to use a<br />
+dedicated toolbox such as Prins, N &amp; Kingdom, F. A. A. (2009) Palamedes:<br />
+Matlab routines for analyzing psychophysical data.<br />
+http://www.palamedestoolbox.org. instead of using the function parameters<br />
+or PSE and DL returned from staircase functions ‘get_fit’ and<br />
+‘get_PSE_DL’.<br />
+Also note that while the staircase runs far more robust when a small<br />
+lapse rate is assumed, it is common to either fit the psychometric<br />
+function without a lapse rate, or otherwise with the lapse rate as a free<br />
+parameter (possibily varying only over subjects, but not over conditions<br />
+within each subject).</p>
+<p>References:<br />
+Based on the Minimum expected entropy staircase method developed by:<br />
+Saunders JA &amp; Backus BT (2006). Perception of surface slant from<br />
+oriented textures. Journal of Vision 6(9), article 3</p>
+<p>Discussions of conceptually similar staircases can be found in:<br />
+Kontsevich LL &amp; Tyler CW (1999). Bayesian adaptive estimation of<br />
+psychometric slope and threshold. Vision Res 39(16), pp. 2729-37<br />
+Lesmes LA, Lu ZL, Baek J &amp; Albright TD (2010). Bayesian adaptive<br />
+estimation of the contrast sensitivity function: The quick CSF method.<br />
+Journal of Vision 10(3), article 17</p>
+<h3 id="use">USE:</h3>
+<p>Calling this function creates a staircase instance. The interface of the<br />
+staircase is accessed through the returned function handle. You can<br />
+create as many instances as you like by calling this function, each<br />
+instance has its own internal memory/history. In that sense this is<br />
+really OO (I’m not happy with MATLAB’s OO features and also want to be<br />
+compatible with old versions, hence the below paradigm).<br />
+When interacting with the staircase through the function handle, the<br />
+first argument is a string that identifies the action you want to perform<br />
+(you can think of this as the string containing the name of the member<br />
+function to be called) and optionally any other arguments that are needed<br />
+for the call. See <a href="MESDemo" class="uri">MESDemo</a> for an example and the comments below for use<br />
+of the different staircase functions.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychStairCase/MinExpEntStair.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychStairCase/MinExpEntStair.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychStairCase/MinExpEntStair.m</code></p>
+</div>

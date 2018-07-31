@@ -1,0 +1,26 @@
+<h1 id="screendrawlines"><a href="Screen-DrawLines">Screen(‘DrawLines’)</a></h1>
+<h2 id="psychtoolbox-screen.mexdll-subfunction">[[Psychtoolbox]] › [[Screen]].{mex*,dll} subfunction</h2>
+<p>Quickly draw an array of lines into the specified window “windowPtr”.<br />
+“xy” is a two-row vector containing the x and y coordinates of the line<br />
+segments: Pairs of consecutive columns define (x,y) positions of the starts and<br />
+ends of line segments. All positions are relative to “center” (default center is<br />
+[0 0]). “width” is either a scalar with the global width for all lines in pixels<br />
+(default is 1), or a vector with one separate width value for each separate<br />
+line. “colors” is either a single global color argument for all lines, or an<br />
+array of rgb or rgba color values for each line, where each column corresponds<br />
+to the color of the corresponding line start or endpoint in the xy position<br />
+argument. If you specify different colors for the start- and endpoint of a line<br />
+segment, PTB will generate a smooth transition of colors along the line via<br />
+linear interpolation. The default color is white if colors is omitted. “smooth”<br />
+is a flag that determines whether lines should be smoothed: 0 (default) no<br />
+smoothing, 1 smoothing (with anti-aliasing), 2 = high quality smoothing. If you<br />
+use smoothing, you’ll also need to set a proper blending mode with<br />
+<a href="Screen" class="uri">Screen</a>(‘BlendFunction’).<br />
+“lenient” If set to 1, will not check the widths of lines for validity, so you<br />
+can try requesting widths bigger than what the hardware claims to support.</p>
+<p>The optional return arguments [minSmoothLineWidth, maxSmoothLineWidth,<br />
+minAliasedLineWidth, maxAliasedLineWidth] allow you to query the minimum and<br />
+maximum allowed ‘width’ for smooth anti-aliased lines and for non anti-aliased<br />
+lines. Calling […] = <a href="Screen" class="uri">Screen</a>(‘DrawLines’, windowPtr) will only query these<br />
+width limits without drawing any lines.</p>
+<p>&lt;&lt;=====See also:===== BlendFunction &lt;&lt;</p>

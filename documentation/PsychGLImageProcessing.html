@@ -1,0 +1,86 @@
+<h2 id="psychtoolbox-psychglimageprocessing">[[Psychtoolbox]] › [[PsychGLImageProcessing]]</h2>
+<p>Psychtoolbox:<a href="PsychGLImageProcessing" class="uri">PsychGLImageProcessing</a> – <a href="OpenGL" class="uri">OpenGL</a> image processing functions.</p>
+<p>This subfolder contains subroutines, tests and demos on how to use<br />
+the PTB built-in image processing pipeline.</p>
+<p>The built in pipeline provides the infrastructure to define image processing<br />
+or stimulus image postprocessing operations on stimuli drawn by PTB’s <a href="Screen" class="uri">Screen</a><br />
+2D drawing commands or MOGL 3D <a href="OpenGL" class="uri">OpenGL</a> drawing commands.</p>
+<p>The pipeline provides the data flow and API to define type and parameterization<br />
+of the image processing operations. Operations are usually implemented via<br />
+<a href="OpenGL" class="uri">OpenGL</a> GLSL shader plugins, vertex &amp; fragment shader programs written in the<br />
+high level <a href="OpenGL" class="uri">OpenGL</a> Shading langugage GLSL and executed directly inside the<br />
+graphics processing unit GPU. While this is the most efficient way, operations<br />
+may also be defined in standard <a href="OpenGL" class="uri">OpenGL</a> code, Matlab M-Functions or C callable<br />
+functions.</p>
+<h3 id="typical-applications-realized-via-plugins-are">Typical applications, realized via plugins are:</h3>
+<p>* Stereo display algorithms.<br />
+* High dynamic range display output drivers.<br />
+* Standard operations like 2D convolution, noise, linear superposition.<br />
+* Geometric undistortion of displays.<br />
+* Per pixel output corrections like gamma, color, gain, display PDF.</p>
+<p>This part of PTB is under heavy construction. This intro will get extended<br />
+soon with more useful infos…</p>
+<h3 id="files">Files:</h3>
+<p><a href="Add2DConvolutionToGLOperator" class="uri">Add2DConvolutionToGLOperator</a> - Create and add a shader for 2D image convolution to a <a href="GLOperator" class="uri">GLOperator</a>.<br />
+<a href="Add2DSeparableConvolutionToGLOperator" class="uri">Add2DSeparableConvolutionToGLOperator</a> - Create and add a shader for 2D separable image convolution to a <a href="GLOperator" class="uri">GLOperator</a>.<br />
+<a href="AddImageUndistortionToGLOperator" class="uri">AddImageUndistortionToGLOperator</a> - Add geometric image correction to a <a href="GLOperator" class="uri">GLOperator</a>.<br />
+<a href="AddToGLOperator" class="uri">AddToGLOperator</a> - Add a shader with options to a <a href="GLOperator" class="uri">GLOperator</a>.<br />
+<a href="BitsPlusPlus" class="uri">BitsPlusPlus</a> - Setup function for imaging pipelines built-in Bits++ support.<br />
+<a href="CountSlotsInGLOperator" class="uri">CountSlotsInGLOperator</a> - Count number of processing slots in a given <a href="GLOperator" class="uri">GLOperator</a>.<br />
+<a href="CreateDisplayWarp" class="uri">CreateDisplayWarp</a> - Internal helper function for setup of geometric display undistortion.<br />
+<a href="CreateGLOperator" class="uri">CreateGLOperator</a> - Create a new <a href="GLOperator" class="uri">GLOperator</a> as container for imaging operations.<br />
+<a href="CreateProceduralGabor" class="uri">CreateProceduralGabor</a> - Create a procedural texture for fast drawing of Gabor patches.<br />
+<a href="CreateProceduralNoise" class="uri">CreateProceduralNoise</a> - Create a procedural texture for fast drawing of random noise patches.<br />
+<a href="CreateProceduralSineGrating" class="uri">CreateProceduralSineGrating</a> - Create a procedural texture for fast drawing of sine grating patches.<br />
+<a href="CreateProceduralSmoothedApertureSineGrating" class="uri">CreateProceduralSmoothedApertureSineGrating</a> - Create a procedural texture for fast drawing of smoothed aperture sine grating patches.<br />
+<a href="CreateProceduralSquareWaveGrating" class="uri">CreateProceduralSquareWaveGrating</a> - Create a procedural texture for fast drawing of squarewave grating patches.<br />
+<a href="CreateProceduralSmoothedDisc" class="uri">CreateProceduralSmoothedDisc</a> - Create a procedural texture for fast drawing of smoothed edge discs.<br />
+<a href="CreatePseudoGrayLUT" class="uri">CreatePseudoGrayLUT</a> - Create a lookup table for pseudogray conversion - Internal helper function.<br />
+<a href="CreateResolutionPyramid" class="uri">CreateResolutionPyramid</a> - Build a mip-map image resolution pyramid for given texture.<br />
+<a href="CreateSinglePassImageProcessingShader" class="uri">CreateSinglePassImageProcessingShader</a> - Create a single pass image processing shader for simple but common operations.<br />
+<a href="DisplayUndistortionBezier" class="uri">DisplayUndistortionBezier</a> - Interactive geometric display calibration for simple needs.<br />
+<a href="DisplayUndistortionBVL" class="uri">DisplayUndistortionBVL</a> - Interactive geometric display calibration. Recommended!<br />
+<a href="DisplayUndistortionCSV" class="uri">DisplayUndistortionCSV</a> - Import ASCII data file with geometric display calibration for <a href="NVidia" class="uri">NVidia</a> “Warp API”.<br />
+<a href="DisplayUndistortionHalfCylinder" class="uri">DisplayUndistortionHalfCylinder</a> - Interactive geometric display calibration for half-cylinder or spherical projections.<br />
+<a href="DisplayUndistortionLabRiggerMouseStim" class="uri">DisplayUndistortionLabRiggerMouseStim</a> - Create display undistortion based on method from <a href="LabRigger" class="uri">LabRigger</a> for mouse visual stims.<br />
+<a href="DisplayUndistortionSphere" class="uri">DisplayUndistortionSphere</a> - Interactive geometric display calibration for spherical projections.<br />
+<a href="ImagingStereoDemo" class="uri">ImagingStereoDemo</a> - Counterpart to <a href="StereoDemo" class="uri">StereoDemo</a>, but using imaging pipeline<br />
+for increased fidelity, flexibility, ease of use.<br />
+<a href="MakeTextureDrawShader" class="uri">MakeTextureDrawShader</a> - Create GLSL shader for use with <a href="Screen" class="uri">Screen</a>(‘DrawTexture’) and <a href="Screen" class="uri">Screen</a>(‘MakeTexture’)<br />
+to apply on-the-fly texture filtering operations during texture draw.</p>
+<p><a href="PsychImaging" class="uri">PsychImaging</a> - Generic setup routine for the imaging pipeline. Allows to setup<br />
+and initialize the pipeline for many common tasks.<br />
+<a href="PsychVideoSwitcher" class="uri">PsychVideoSwitcher</a> - Setup routine for the Xiangru Li et al. “<a href="VideoSwitcher" class="uri">VideoSwitcher</a>” video attenuator device.</p>
+<p><a href="SetAnaglyphStereoParameters" class="uri">SetAnaglyphStereoParameters</a> - Function for runtime tuning of Anaglyph stereo parameters,<br />
+see <a href="ImagingStereoDemo" class="uri">ImagingStereoDemo</a> for example of use.<br />
+<a href="SetStereoBlueLineSyncParameters" class="uri">SetStereoBlueLineSyncParameters</a> - Change settings for drawing of stereo sync lines in frame-sequential stereo mode.<br />
+<a href="SetStereoSideBySideParameters" class="uri">SetStereoSideBySideParameters</a> - Change parameters for side-by-side stereo display modes (4 and 5).<br />
+<a href="SetCompressedStereoSideBySideParameters" class="uri">SetCompressedStereoSideBySideParameters</a> - Change parameters for compressed side-by-side stereo display modes.</p>
+<p><a href="VignetCalibration" class="uri">VignetCalibration</a> - Vignetted luminance calibration procedure for undistortion of distorted display luminance.</p>
+<p>Constants for imagingmode flag of <a href="Screen" class="uri">Screen</a>(‘OpenWindow’, …., imagingmode);<br />
+One can ‘or’ them together, e.g., imagingmode = mor(kPsychNeed16BPCFixed, kPsychNeedFastBackingStore);</p>
+<p>kPsychNeed16BPCFixed - Request 16 bit per color component, fixed point framebuffer.<br />
+kPsychNeed16BPCFloat - Request 16 bit per color component, floating point framebuffer.<br />
+kPsychNeed32BPCFloat - Request 32 bit per color component, floating point framebuffer.<br />
+kPsychNeedDualPass - Indicate that some of the used image processing plugins will need<br />
+at two render passes for processing.<br />
+kPsychNeedFastBackingStore - Enable minimal imaging pipeline. This flag is implied when using any<br />
+of the other flags.<br />
+kPsychNeedFastOffscreenWindows - Only enable support for fast Offscreen windows, nothing else.<br />
+kPsychNeedHalfWidthWindow - Tell imaging pipe to create internal buffers half the real window width. Internal flag, not useful for end-user code.<br />
+kPsychNeedHalfHeightWindow - Tell imaging pipe to create internal buffers half the real window height. Internal flag, not useful for end-user code.<br />
+kPsychNeedImageProcessing - Request explicit support for image processing.<br />
+kPsychNeedMultiPass - Indicate that some of the used plugins will need more than two passes.<br />
+kPsychNeedOutputConversion - Indicate that display output is going to some special output device that<br />
+needs special output formatting, e.g., Bits++ or Brightside HDR.<br />
+kPsychNeedTwiceWidthWindow - Tell imaging pipe to create internal buffers twice the real window width. Internal flag, not useful for end-user code.<br />
+kPsychNeedTripleWidthWindow - Tell imaging pipe to create internal buffers triple the real window width. Internal flag, not useful for end-user code.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychGLImageProcessing/Contents.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychGLImageProcessing/Contents.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychGLImageProcessing/Contents.m</code></p>
+</div>
+<p>{{category}}</p>

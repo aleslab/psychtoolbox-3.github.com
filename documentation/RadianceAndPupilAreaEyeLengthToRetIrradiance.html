@@ -1,0 +1,29 @@
+<h2 id="psychtoolbox-psychradiometric">[[Psychtoolbox]] › [[PsychRadiometric]]</h2>
+<p>retIrradiance_PowerPerArea = <a href="RadianceAndPupilAreaEyeLengthToRetIrradiance" class="uri">RadianceAndPupilAreaEyeLengthToRetIrradiance</a>(radiance_PowerPerAreaSr,radianceS,pupilArea,eyeLength)</p>
+<p>Perform the geometric calculations necessary to convert a measurement of source<br />
+radiance to corresponding retinal irradiance.</p>
+<p>Let x be the units of distance (m, cm, mm, um, etc.)</p>
+<p>Input radiance_PowerPerAreaSr should be in units of power/x^2-sr-wlinterval.<br />
+Input radianceS gives the wavelength sampling information (nm).<br />
+Input pupilArea should be in units of x^2.<br />
+Input eyeLength should be the length of the eye in units of x</p>
+<p>Output retIrradiance_PowerPerArea is in units of power/x^2-wlinterval.</p>
+<p>Light power may be expressed in watts or quanta-sec or in your<br />
+favorite units. Indeed, it may also be passed as energy rather<br />
+than power.</p>
+<p>This conversion does not take absorption in the eye into account,<br />
+as this is more conveniently foldeded into the spectral absorptance.</p>
+<p>The wavelength sampling is not needed or used, and the world would be a<br />
+better place if it were not passed. But taking it out of the arg list<br />
+now would probably break a number of calling programs in an irritating<br />
+manner.</p>
+<p>See also: <a href="PsychRadiometric" class="uri">PsychRadiometric</a>, <a href="RetIrradianceAndPupilAreaEyeLengthToRadiance" class="uri">RetIrradianceAndPupilAreaEyeLengthToRadiance</a>, <a href="PupilAreaFromLum" class="uri">PupilAreaFromLum</a>, <a href="EyeLength" class="uri">EyeLength</a>.</p>
+<p>3/6/13 dhb Wrote it.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychRadiometric/RadianceAndPupilAreaEyeLengthToRetIrradiance.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychRadiometric/RadianceAndPupilAreaEyeLengthToRetIrradiance.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychRadiometric/RadianceAndPupilAreaEyeLengthToRetIrradiance.m</code></p>
+</div>

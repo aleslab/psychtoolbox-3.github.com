@@ -1,0 +1,267 @@
+<h2 id="psychtoolbox-psychdocumentation">[[Psychtoolbox]] › [[PsychDocumentation]]</h2>
+<p><a href="HybridGraphics" class="uri">HybridGraphics</a> – Support for hybrid graphics laptops.</p>
+<p>Please check the Psychtoolbox website and Wiki for up to date<br />
+information about the state of <a href="HybridGraphics" class="uri">HybridGraphics</a>. This document<br />
+may contain obsolete information quite quickly on this fast<br />
+changing topic, especially on Linux.</p>
+<h1 id="background">BACKGROUND</h1>
+<p>Hybrid graphics laptops are laptops which have two built-in<br />
+graphics cards <a href="(GPUs)" class="uri">(GPUs)</a>. One card is usually an integrated<br />
+graphics chip (iGPU) which has a low power consumption and<br />
+heat production, allowing for a cool laptop and long battery<br />
+runtime, but it also has relatively low performance. This chip<br />
+is sufficient for typical desktop GUI use, watching videos and<br />
+other light graphics applications. The 2nd card, called discrete<br />
+GPU (dGPU), provides much higher performance but consumes more<br />
+power and produces more heat, so the laptop runs hotter and/or<br />
+needs more cooling, all resulting in shorter battery runtimes.</p>
+<p>The idea is to use the dGPU for performance hungry graphics<br />
+intense applications, and the iGPU for day to day tasks,<br />
+selecting either for high performance or long battery runtimes.</p>
+<p>These laptops come in two basic flavors, hardware multiplexed<br />
+(muxed) and non-multiplexed (muxless). Muxed laptops have an<br />
+electronic switch that can connect the iGPU or dGPU to the video<br />
+outputs (internal flat panel and external video connectors like<br />
+<a href="MiniDisplayPort" class="uri">MiniDisplayPort</a> or HDMI or DVI or VGA). The switch is software<br />
+controlled and allows selection of which gpu is driving the<br />
+displays, the other gpu is powered down for maximum power saving.</p>
+<h1 id="osx-linux-on-apple-hardware-and-on-other-muxed-laptops">OSX, Linux on Apple hardware and on other muxed Laptops</h1>
+<p>As of 2016, all past and current laptops from Apple <a href="(MacBookPro)%20line">(MacBookPro</a> are muxed. When using Mac OSX, the operating system controls<br />
+the mux to select an appropriate gpu. For light desktop and 2D use,<br />
+the iGPU is active. Whenever a 3D application starts up, e.g.,<br />
+Psychtoolbox, the iGPU gets disconnected and powered down and the<br />
+dGPU gets powered up and connected. From the perspective of<br />
+Psychtoolbox there essentially is only one GPU, which is the dGPU,<br />
+either a <a href="NVidia" class="uri">NVidia</a> or AMD graphics card. Apart from a couple of rather<br />
+horrible bugs, e.g., for the 2010 <a href="MacBookPro" class="uri">MacBookPro</a> with some recent versions<br />
+of OSX, this means that hybrid graphics under OSX usually “just works”.</p>
+<p>If one uses an Apple <a href="MacBookPro" class="uri">MacBookPro</a> under Linux then the machine will run<br />
+with either the dGPU active and the Laptop behaves like a machine with<br />
+one gpu, or the active gpu can be switched via the Linux “vgaswitcheroo”<br />
+mechanism. The same applies for other PC laptops which are equipped<br />
+with a mux. Iow. one can manually select the performance vs. power<br />
+consumption tradeoff.</p>
+<p>Most modern common PC laptops are muxless though. The iGPU is hard-wired to<br />
+the video outputs, both to the laptop flat panel and the external outputs.<br />
+The iGPU is always active and drives the displays and takes care of drawing<br />
+the GUI and handling 2D applications. The dGPU can be powered up as needed<br />
+to handle GPGPU computations and the rendering for more demanding 2D, Video<br />
+and 3D applications. As the dGPU is not connected to the display outputs, it<br />
+has to copy its rendered images into the RAM of the iGPU and the iGPU then<br />
+displays the images on behalf of the dGPU. This involves some significant<br />
+overhead: Multiple milliseconds of time are needed for each <a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’) to<br />
+copy image data from the dGPU to the iGPU, and converting the data into a format<br />
+the iGPU can display. For this reason, display latency on a muxless laptop<br />
+will always be longer and absolute graphics performance lower than on a laptop<br />
+which only has a dGPU, or on a muxless laptop. A big problem is the need to<br />
+properly synchronize the rendering of the dGPU with the display of the iGPU.<br />
+Depending on how this synchronization or handshake is implemented, visual<br />
+stimulus onset timing and timestamping can be highly unreliable and inaccurate.</p>
+<h1 id="windows">WINDOWS</h1>
+<p>On Microsoft Windows a handshake method is used which maintains good framerates<br />
+for video games and similar applications, but causes visual stimulus onset timing<br />
+and timestamping to be almost always completely wrong, with observed errors in<br />
+the range of +/- 33 msecs on a 60 Hz panel. That means that the dGPU is unuseable<br />
+if visual timing matters in any way. The best you can do on a muxless laptop under<br />
+Microsoft Windows is to configure the driver to disable the dGPU and only use the<br />
+iGPU for all rendering, and then hope that the iGPU graphics driver isn’t too buggy,<br />
+a hope that is often unjustified, especially if the iGPU is an Intel graphics chip.<br />
+Intel graphics has timing bugs itself quite often on MS-Windows, even on regular<br />
+single gpu laptops.</p>
+<h1 id="linux">LINUX</h1>
+<p>On Linux, as of August 2017, good progress has been made in implementing methods<br />
+which provide both good performance *and* reliable, trustworthy, accurate visual<br />
+timing and timestamping. Some - but not all! - types of Laptop hardware should<br />
+work well, but for all of them some special configuration or software upgrades<br />
+are needed.</p>
+<p>We recommend <a href="XServer" class="uri">XServer</a> version 1.19.3 or later, and Mesa version 13 or later, and<br />
+Linux 4.10 or later, as this combination provides best performance and ease of<br />
+setup for all supported types of hybrid graphics laptops. Users of Ubuntu Linux<br />
+can simply install Ubuntu 16.04.4 LTS (or Ubuntu 18.04-LTS and later) from fresh<br />
+installation media, or upgrade to 16.04.4 LTS from earlier Ubuntu releases and then<br />
+install the new hardware enablement stack (HWE) via …</p>
+<p>sudo apt install –install-recommends linux-lowlatency-hwe-16.04 xserver-xorg-hwe-16.04</p>
+<p>… if it isn’t already automatically installed after an upgrade to 16.04.4 LTS.</p>
+<p>The following sections describe the current level and quality of support for different<br />
+types of hybrid graphics laptops, and required configuration steps, assuming you have<br />
+sufficiently up to date kernel, X-Server and Mesa as explained in the previous paragraph.<br />
+Psychtoolbox would tell you if you need to upgrade your kernel, if you’d run it on a<br />
+muxless hybrid graphics Laptop.</p>
+<h3 id="laptops-with-an-intel-igpu-combined-with-a-nvidia-dgpu-nvidia-optimus-models">* Laptops with an Intel iGPU combined with a <a href="NVidia" class="uri">NVidia</a> dGPU (“<a href="NVidia" class="uri">NVidia</a> Optimus” models):</h3>
+<p>These should work perfectly if you use the “nouveau” open-source graphics driver,<br />
+at least as far as testing with three different laptops went. Stimuli are displayed<br />
+without any artifacts, and timing and timestamping is accurate and trustworthy.<br />
+Performance is highly dependent on the model of <a href="NVidia" class="uri">NVidia</a> gpu though, with the latest<br />
+generations currently providing only relatively low performance, and ongoing work<br />
+to improve the performance for recent models.</p>
+<p>If you want to use the <a href="NVidia" class="uri">NVidia</a> proprietary display driver for Linux instead, there<br />
+now exists a solution which works with correct timing and timestamping, as verified<br />
+on two Optimus Laptops, a Lenovo Lenovo Ideapad Z50-70 with <a href="GeForce" class="uri">GeForce</a> 840M and a Razer<br />
+Blade 2016 with <a href="GeForce" class="uri">GeForce</a> 1060M. However, the solution is less flexible and power-efficient<br />
+than use of the “nouveau” open-source driver. It requires some setup work, and it needs<br />
+a <a href="NVidia" class="uri">NVidia</a> proprietary driver of at least version 375.66. If you can’t select a recent<br />
+enough driver of at least version 375.66, you need to enable the proprietary graphics<br />
+driver ppa to get a convenient update to <a href="NVidia" class="uri">NVidia</a> driver version 375.66 or later versions.<br />
+Also, you must use a X-Server of the 1.19.x series, the v1.20 servers are not yet supported.<br />
+Follow the following steps to get Optimus set up:</p>
+<ol type="1">
+<li><p>Install the proprietary graphics drivers ppa by typing in a terminal:<br />
+sudo add-apt-repository ppa:graphics-drivers/ppa<br />
+sudo apt-get update</p></li>
+<li><p>Then launch the 3rd party driver manager GUI to select the <a href="NVidia" class="uri">NVidia</a> proprietary driver<br />
+for use on your system. You must select a <a href="NVidia" class="uri">NVidia</a> proprietary driver of the 375 series,<br />
+with a version number of 375.66 or later. This will also automatically setup standard<br />
+Optimus / PRIME support for tear-free stimulus display, but getting proper visual<br />
+stimulation timing and timestamping for Psychtoolbox requires some more steps.</p></li>
+<li><p>Edit the file /etc/modprobe.d/nvidia-graphics-drivers.conf. Modify the last line<br />
+in that file and replace the assignment modeset=0 with modeset=1 to enable drm<br />
+modesetting support.</p></li>
+<li><p>Execute “sudo update-initramfs -u -k all” in a terminal.<br />
+NOTE: You may need to repeat both steps 3 and 4 every time after a significant upgrade<br />
+of your distributions software. Otherwise Psychtoolbox may complain about timing and<br />
+synchronization problems after such an upgrade.</p></li>
+<li><p>Copy the custom Psychtoolbox modesetting driver into the system driver directory.<br />
+There are two variants, the nolag variant and the highlag variant. In theory, the<br />
+nolag variant would be preferrable, but it sometimes gives inconsistent performance:</p>
+<p>sudo cp /pathto/Psychtoolbox/<a href="PsychHardware" class="uri">PsychHardware</a>/<a href="LinuxDrivers" class="uri">LinuxDrivers</a>/<a href="NVidiaOptimus" class="uri">NVidiaOptimus</a>/modesetting_drv.so /usr/lib/xorg/extra-modules/modesetting_drv.so</p>
+<p>For use of the variant with higher lag but consistent performance, use the highlag driver<br />
+instead:</p>
+<p>sudo cp /pathto/Psychtoolbox/<a href="PsychHardware" class="uri">PsychHardware</a>/<a href="LinuxDrivers" class="uri">LinuxDrivers</a>/<a href="NVidiaOptimus" class="uri">NVidiaOptimus</a>/modesetting_drv.so_highlag /usr/lib/xorg/extra-modules/modesetting_drv.so</p></li>
+<li><p>Reboot. Now your system should be ready for research compatible Optimus.</p></li>
+</ol>
+<p>On Ubuntu, the “nvidia-settings” GUI tool allows you to switch between Optimus (PRIME) and<br />
+standard Intel graphics. The section “PRIME profiles” allows to click on a toggle button<br />
+to switch between “<a href="NVidia" class="uri">NVidia</a>” gpu for power hungry but fast Optimus, and “Intel” for low power<br />
+consumption lower performance mode.</p>
+<p>If you want to use a different distribution than Ubuntu, “Fedora 25” and later, “Debian unstable”,<br />
+“Arch Linux” and “<a href="SuSE" class="uri">SuSE</a> Tumbleweed” are known to ship required X-Server, Linux kernel and <a href="NVidia" class="uri">NVidia</a><br />
+driver options for Optimus. However, these are not tested with PTB, and setup may be different<br />
+from Ubuntu’s approach. Alternatively you could also download and compile your own X-Server 1.19<br />
+if you are not afraid of compilers and Makefiles and willing to spend a workday doing this. The<br />
+following paragraph assumes you are not using Ubuntu 17.04:</p>
+<p>Once you have a X-Server 1.19 up and running, you will need the <a href="NVidia" class="uri">NVidia</a> proprietary<br />
+display drivers of version 375.66 or later for 64-Bit Intel processors. Then you need<br />
+to copy various configuration files into various places, and adapt some of these files<br />
+to your specific system. Finally you need to install a custom xf86-video-modesetting<br />
+display driver onto your system. This modesetting driver is specifically made to<br />
+interoperate with Psychtoolbox to provide research grade precision timing and<br />
+timestamping. Then, after a reboot, you may be rewarded with a <a href="NVidia" class="uri">NVidia</a> Optimus laptop<br />
+which can efficiently use your discrete high-performance <a href="NVidia" class="uri">NVidia</a> gpu with research grade<br />
+timing. However, research grade timing is only provided for pure single-display setups,<br />
+not for any kind of multi-display operation. That means your Laptop can have exactly<br />
+one display enabled, either the Laptop internal flat-panel, or one externally connected<br />
+display. Also timing is only reliable and trustworthy for a Psychtoolbox fullscreen<br />
+window. You will find all the needed config files and custom made display driver and<br />
+setup instructions in the Psychtoolbox subdirectory Psychtoolbox/<a href="PsychHardware" class="uri">PsychHardware</a>/<a href="LinuxDrivers" class="uri">LinuxDrivers</a>/<a href="NVidiaOptimus" class="uri">NVidiaOptimus</a>/</p>
+<p>See the following thread for the current state of the <a href="NVidia" class="uri">NVidia</a> proprietary implementation<br />
+and for some more nice background info on the challenges of proper handshaking and<br />
+synchronization on muxless laptops:</p>
+<p>https://devtalk.nvidia.com/default/topic/957814/linux/prime-and-prime-synchronization</p>
+<h3 id="laptops-with-an-intel-igpu-combined-with-an-amd-dgpu-amd-enduro-models">* Laptops with an Intel iGPU combined with an AMD dGPU (“AMD Enduro” models):</h3>
+<p>These should work very well out of the box on Ubuntu 16.04.3 LTS and later, as explained<br />
+above.</p>
+<p>On other Linux distributions make sure to install Linux 4.8.11 or later versions of the Linux<br />
+kernel, together with X-Server 1.18 or later, and Mesa version 17.0 or later.</p>
+<h3 id="amd-enduro-hybrid-graphics-was-tested-with-two-pc-setups">AMD Enduro hybrid graphics was tested with two PC setups:</h3>
+<ul>
+<li>Intel HD “Haswell desktop” graphics chip + AMD Radeon R9 380 Tonga Pro.<br />
+</li>
+<li>Intel HD “Ivybridge desktop” graphics chip + AMD <a href="FireGL" class="uri">FireGL</a> “Cedar”.</li>
+</ul>
+<p>Stimuli are displayed without any artifacts and timing and timestamping is accurate and<br />
+trustworthy.</p>
+<h3 id="laptops-with-dual-nvidia-gpus-nvidia-igpu-nvidia-dgpu">* Laptops with dual <a href="NVidia" class="uri">NVidia</a> gpus <a href="NVidia" class="uri">NVidia</a> iGPU + <a href="NVidia" class="uri">NVidia</a> dGPU:</h3>
+<p>Muxless would not work with any current official solution [1]. However, i am not aware of<br />
+any recent muxless laptops - or any such muxless laptops actually - which use dual-<a href="NVidia" class="uri">NVidia</a><br />
+gpus. All known dual-<a href="NVidia" class="uri">NVidia</a> laptops are rather old and use a hardware mux, so Linux<br />
+“vgaswitcheroo” mechanism can be used to switch between gpus for perfect results.</p>
+<h3 id="laptops-with-dual-amd-gpus-amd-igpu-amd-dgpu-amd-enduro-models">* Laptops with dual AMD gpus AMD iGPU + AMD dGPU (“AMD Enduro” models):</h3>
+<p>Muxless won’t work with any current official solution, so you can only use the<br />
+AMD iGPU [1]. A “dirty hack” solution exists from Mario Kleiner for old AMD laptops,<br />
+but it is not released, and not clear if releasing this hack would be a good idea.<br />
+Check the PTB website for updates or contact the user forum if you have questions wrt.<br />
+this solution.</p>
+<p>For those combinations that should work (Intel iGPU + <a href="NVidia" class="uri">NVidia</a>/AMD dGPU “Optimus/Enduro”),<br />
+after you’ve upgraded to all the required software, the following setup steps are<br />
+needed for muxless PRIME mode. Note that these *do not apply* to Optimus with the proprietary<br />
+graphics driver from <a href="NVidia" class="uri">NVidia</a>:</p>
+<ol type="1">
+<li>Run the “<a href="XOrgConfCreator" class="uri">XOrgConfCreator</a>” script to create a proper <a href="XOrg" class="uri">XOrg</a> configuration file,<br />
+and then “<a href="XOrgConfSelector" class="uri">XOrgConfSelector</a>” to switch to that configuration file, logout and<br />
+login again.</li>
+</ol>
+<h3 id="tell-matlab-or-octave-to-use-the-dgpu-for-rendering-with-psychtoolbox">2. Tell Matlab or Octave to use the dGPU for rendering with Psychtoolbox:</h3>
+<ul>
+<li><p>Either use the setenv(‘DRI_PRIME’,‘1’); command before calling the first <a href="Screen" class="uri">Screen</a>()<br />
+command, e.g., by adding it to Matlabs startup.m script or Octaves ~/.octaverc<br />
+startup script.</p></li>
+<li><p>Or copy the Psychtoolbox/<a href="PsychHardware" class="uri">PsychHardware</a>/<a href="LinuxX11ExampleXorgConfs" class="uri">LinuxX11ExampleXorgConfs</a>/_.drirc to the file<br />
+~/.drirc and then customize it for your hardware to always select the dGPU for<br />
+rendering with Octave or Matlab. The file itself contains customization instructions.<br />
+The &lt;device&gt; … &lt;&gt; section in that file can also be included into the<br />
+global /etc/drirc file if it should apply to all users on a machine.</p></li>
+</ul>
+<ol start="3" type="1">
+<li><p>Optionally verify the handshaking and synchronization actually works. Psychtoolbox must not<br />
+report any timing or timestamping related errors or warnings, or other warnings<br />
+relating to hybrid graphics problems. Typical tests like <a href="PerceptualVBLSyncTest" class="uri">PerceptualVBLSyncTest</a> or<br />
+<a href="VBLSyncTest" class="uri">VBLSyncTest</a> must work correctly. All demos should display without any visual artifacts,<br />
+tearing artifacts etc.</p>
+<p>Additionally you can use the Linux ftrace script i915_optimus_trace.sh in the<br />
+Psychtoolbox/<a href="PsychHardware" class="uri">PsychHardware</a>/ folder. Instructions on how to use it are inside the<br />
+script. Running it while a Psychtoolbox stimulation script runs will measure the<br />
+timing of functions relevant for proper timing. The printout after 20 seconds should<br />
+show the function “reservation_object_wait_timeout_rcu” using a significant amount of<br />
+time, e.g., multiple thousand microseconds (usecs), e.g.,</p>
+<ol start="3" type="1">
+<li><pre><code>          |  intel\_mmio\_flip\_work\_func [i915]() {  </code></pre></li>
+<li># 3060.318 us | reservation_object_wait_timeout_rcu();<br />
+</li>
+<li># 3070.039 us | }</li>
+</ol>
+<p>Here the iGPU waited for 3060.318 usecs until the dGPU was done with its part<br />
+of the job. That’s a realistic waiting time for simple visual stimuli, although<br />
+numbers could easily go up into the &gt; 9 msecs range for more demanding stimuli or<br />
+slower gpus. Just to give you a perspective on the potential performance loss or<br />
+added latency compared to a single gpu laptop.</p></li>
+</ol>
+<p>[1] There also exist some muxless Laptop models where the iGPU is hard-wired to the internal<br />
+Laptop flat panel, whereas the dGPU is hard-wired to (some of) the external video outputs.<br />
+On these models one can configure a dual-x-screen setup for visual stimulation and then<br />
+assign the iGPU to drive X-<a href="Screen" class="uri">Screen</a> 0 on the internal panel and assign the dGPU to drive<br />
+X-<a href="Screen" class="uri">Screen</a> 1 on the external video outputs.</p>
+<pre><code>This would work with high performance and timing precision even on hybrid graphics laptops  
+which otherwise wouldn&#39;t work, e.g., dual [NVidia](NVidia) or dual AMD laptops. Such a setup  
+wouldn&#39;t require any of the setup steps mentioned above. Instead it would require to  
+create a dual-x-screen setup via [XOrgConfCreator](XOrgConfCreator), but then to manually customize the  
+created config file, as [XOrgConfCreator](XOrgConfCreator) can&#39;t automatically handle such dual-gpu setups  
+yet. [Ask](Ask) for assistance on the Psychtoolbox user forum if you happen to have such a  
+laptop. One example xorg.conf file for handling such a setup (Intel iGPU + AMD dGPU)  
+can be found under the name xorg.conf\_SeparateScreensDualGPUIntelAndAMD in the  
+Psychtoolbox/[PsychHardware](PsychHardware)/[LinuxX11ExampleXorgConfs](LinuxX11ExampleXorgConfs)/ folder. It would need customization  
+though for a given Laptop, specifically adapting the &quot;[BusID](BusID)&quot; parameter for your hardware.  
+
+Another example X-Config file for such a laptop can be found for year 2016 Razer Blade gaming  
+laptop with Intel HD-530 Skylake iGPU + [NVidia](NVidia) [GeForce](GeForce) 1060M Pascal dGPU, where the Intel  
+iGPU is hardwired to the laptop panel and USB-C output, whereas the [NVidia](NVidia) dGPU is hardwired  
+to a HDMI output. The filename in the Psychtoolbox/[PsychHardware](PsychHardware)/[LinuxX11ExampleXorgConfs](LinuxX11ExampleXorgConfs)/  
+folder is xorg.conf\_RazerBlade-2-[XScreens](XScreens)-intel+nouveau  
+
+Another X-Config example file for the Razer Blade 2016 is the file ...  
+xorg.conf\_RazerBlade-2-[XScreens](XScreens)-[NVidiaProprietary](NVidiaProprietary)\_iGPUPrime+dGPUHDMInative.conf  
+... This file is for use with the [NVidia](NVidia) proprietary driver instead of the nouveau open-source  
+driver. It uses the [NVidia](NVidia) gpu to drive two separate X-Screens 0 and 1. X-[Screen](Screen) 0 is driven  
+via Optimus PRIME output, displaying via the Intel HD 530 iGPU on either the laptop flatpanel  
+or the USB-C video output, but not both at the same time if visual stimulation timing matters.  
+X-[Screen](Screen) 1 is driven directly via the HDMI output connected to the [NVidia](NVidia) dGPU.  
+
+NOTE: If you copy these files into the /etc/X11/xorg.conf.d/ folder you must rename them to  
+      end with the suffix .conf otherwise they won&#39;t be actually used!  </code></pre>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDocumentation/HybridGraphics.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDocumentation/HybridGraphics.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDocumentation/HybridGraphics.m</code></p>
+</div>

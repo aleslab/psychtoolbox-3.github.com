@@ -1,0 +1,42 @@
+<h2 id="psychtoolbox-psychdemos-psychexampleexperiments">[[Psychtoolbox]] › [[PsychDemos]] › [[PsychExampleExperiments]]</h2>
+<p><a href="MinimumMotionExp" class="uri">MinimumMotionExp</a>([writeResult=0])</p>
+<p>Minimum motion luminance measurement (Anstis and Cavanagh). Rapid,<br />
+precise, and works well down to 1hz, or 1 cpd. Self-contained script,<br />
+with optional gamma file input or default.</p>
+<p>Measures red/green and blue/green foveal or extrafoveal equiluminance<br />
+using the Cavanagh, <a href="MacLeod" class="uri">MacLeod</a> and Anstis (1987) sinusoidal minimum motion<br />
+stimulus, here drawn as a windmill.</p>
+<p>One component of the test stimulus is a rotary sine wave where peaks of 1<br />
+phosphor coincide with troughs of a second phosphor. This is counterphase<br />
+modulated in cosine phase is space and time. A “luminance lure” grating<br />
+is added in spatial and temporal quadrature (sine phase). The stimulus<br />
+appears in clockwise or anticlockwise motion, depending on the relative<br />
+luminance of two phosphors. The ratio of the two phosphor intensities is<br />
+adjusted using the mouse. The isoluminant point is the precise point<br />
+where the motion direction changes, and there the motion is replaced by<br />
+counterphase flicker. User selects whether to measure the red phosphor<br />
+luminance relative to the green, the blue phosphor luminance relative to<br />
+the green, or the blue phosphor luminance relative to the red. Reported<br />
+values are the ratios of phosphor luminances when each phosphor is at<br />
+maximum intensity. Average stimulus chromaticity and luminance are kept<br />
+constant during the adjustment.</p>
+<p>The stimulus is produced by clut animation (palette mode). If BPP is<br />
+nonzero, we assume that DVI video output is relayed to the monitor via a<br />
+CRS <a href="BitsPlusPlus" class="uri">BitsPlusPlus</a> device, or via a <a href="DataPixx" class="uri">DataPixx</a>/<a href="ViewPixx" class="uri">ViewPixx</a> device allowing fine<br />
+control of modulation depths and corresponding precision in luminance<br />
+estimates. Otherwise set BPP to zero. In either case, Psychophysics<br />
+Toolbox 3 and Matlab 7.4 or later (or Octave 3.2 or later) are required.</p>
+<p>Note: Writing of result files is disabled, but can be enabled in a<br />
+“production setting” by providing the optional argument ‘writeResult’ as<br />
+1.</p>
+<p>This script is contributed by Don <a href="MacLeod" class="uri">MacLeod</a>, UCSD. It was modified by Mario<br />
+Kleiner for portability across all supported operating systems and for<br />
+optimized speed.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/PsychExampleExperiments/MinimumMotionExp.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/PsychExampleExperiments/MinimumMotionExp.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/PsychExampleExperiments/MinimumMotionExp.m</code></p>
+</div>

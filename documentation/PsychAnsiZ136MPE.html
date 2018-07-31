@@ -1,0 +1,72 @@
+<h2 id="psychtoolbox-psychradiometric-psychansiz136mpe">[[Psychtoolbox]] › [[PsychRadiometric]] › [[PsychAnsiZ136MPE]]</h2>
+<p>Psychtoolbox:<a href="PsychAnsiZ136MPE" class="uri">PsychAnsiZ136MPE</a>.</p>
+<p>Partial and in progress implementation of Ansi Z136.1-2007 standard for computing<br />
+maximum permissable exposure.</p>
+<p>*****************************************************************<br />
+IMPORTANT:<br />
+a) Individuals using these routines must accept full responsibility<br />
+for light exposures they implement. We recommend that values computed<br />
+with these routines be carefully checked against independent calculations.<br />
+We have done our best to follow the standard, but it is very complex and<br />
+there may be errors.</p>
+<ol start="2" type="a">
+<li><p>There is now (Jan 2015) an updated version of this standard that is more<br />
+conservative. Thus these routines are now mainly for historical<br />
+reference. We would love it if someone were to provide a Matlab<br />
+implementation of the new standard.</p></li>
+<li><p>As of March, 2013, these routines are still very much a work<br />
+in progress and should thus be treated with special caution. See<br />
+<a href="AnsiZ136MPEBasicTest" class="uri">AnsiZ136MPEBasicTest</a> and <a href="AnsiZ136MPEDeloriTest" class="uri">AnsiZ136MPEDeloriTest</a>, both for test<br />
+code, and for comments about points of uncertainty.</p></li>
+<li><p>Particularly obscure to me at present is the limiting cone aperture<br />
+section described with an asterisk in Table 2 of the 2007 standard<br />
+document.</p></li>
+<li><p>The field’s knowledge of safe light levels is evolving, and it is important<br />
+to keep abreast of current research and not to rely soley on the<br />
+Ansi standard. In particular, note that there<br />
+are reports of disrubption at light levels below the limits specified<br />
+in the Ansi 2007 stanard. See for example:<br />
+Morgan et al., (2008), IOVS, 49, 3715-3729.<br />
+Morgan et al., (2009), IOVS, 50, 6015-6022.<br />
+Hunter et al., (2012), Prog. Ret. Eye. Res., 31, 28-42.</p></li>
+<li><p>Apparently a new version of the Ansi Z136 standard is forthcoming,<br />
+but I do not have information as to what changed.</p></li>
+<li><p>The Z136 standard is for laser light, which is coherent and monochromatic.<br />
+Different standards apply for broadband lights. Two relevant references are:<br />
+ISO 15004-2:2007, Ophthalmic instruments – Fundamental requirements and<br />
+test methods – Part 2: Light hazard protection.</p></li>
+</ol>
+<pre><code>ICNIRP (International Commission on Non-Ionizing Radiation Protection) Guidelines,  
+(1997), Guidelines on exposure to broad-band inchoherent optical radiation (0.38 to 3 uM),  
+Health Physics, 73, 539-554.  </code></pre>
+<p>The second seems a little old, but is the most recent ICNIRP guideline for broadband<br />
+that I could easily locate.</p>
+<ul>
+<li>David Brainard, March 6, 2013.<br />
+*****************************************************************</li>
+</ul>
+<p>REFERENCES.<br />
+Ansi Z136.1-2007. The standard document. The more recent Ansi Z136.8-2012<br />
+refers back to the 2007 document for the MPE calculations. But see<br />
+point d) in the notes above.</p>
+<p>Delori et al., 2007, JOSA A, 24, 1250-1265. Provides explanation<br />
+about many of the calculations in the 2000 version of the standard.</p>
+<p><a href="AnsiZ136MPEBasicTest" class="uri">AnsiZ136MPEBasicTest</a> - Test the suite of routines. Generates many figures that should match those in the standard.<br />
+<a href="AnsiZ136MPEComputeCa" class="uri">AnsiZ136MPEComputeCa</a> - Compute constant Ca, Table 6<br />
+<a href="AnsiZ136MPEComputeCb" class="uri">AnsiZ136MPEComputeCb</a> - Compute constant Cb, Table 6<br />
+<a href="AnsiZ136MPEComputeCc" class="uri">AnsiZ136MPEComputeCc</a> - Compute constant Cc, Table 6<br />
+<a href="AnsiZ136MPEComputeCe" class="uri">AnsiZ136MPEComputeCe</a> - Compute constant Ce, Table 6<br />
+<a href="AnsiZ136MPEComputeExtendedSourceLimit" class="uri">AnsiZ136MPEComputeExtendedSourceLimit</a> - Compute overall MPE limit for extended sources, Table 5b<br />
+<a href="AnsiZ136MPEComputeExtendedSourcePhotochemicalLimit" class="uri">AnsiZ136MPEComputeExtendedSourcePhotochemicalLimit</a> - Compute photochemical MPE for extended sources, Table 5b<br />
+<a href="AnsiZ136MPEComputeLimitingConeAngle" class="uri">AnsiZ136MPEComputeLimitingConeAngle</a> - Compute limiting cone angle, Table 6<br />
+<a href="AnsiZ136MPEComputeT2" class="uri">AnsiZ136MPEComputeT2</a> - Compute constant T2, Table 6<br />
+<a href="AnsiZ136MPEDeloriTest" class="uri">AnsiZ136MPEDeloriTest</a> - Tests our computations against those from Delori’s spreadsheet.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychRadiometric/PsychAnsiZ136MPE/Contents.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychRadiometric/PsychAnsiZ136MPE/Contents.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychRadiometric/PsychAnsiZ136MPE/Contents.m</code></p>
+</div>
+<p>{{category}}</p>

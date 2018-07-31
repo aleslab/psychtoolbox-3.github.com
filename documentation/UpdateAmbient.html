@@ -1,0 +1,36 @@
+<h2 id="psychtoolbox-psychcal">[[Psychtoolbox]] › [[PsychCal]]</h2>
+<p>cal = <a href="UpdateAmbient" class="uri">UpdateAmbient</a>(cal,newP_ambient,[ADD])</p>
+<p>Update the ambient light used in the conversions. The<br />
+value of P_ambient in the structure is replaced with the<br />
+passed value and the computed quantities that depend on<br />
+it are updated.</p>
+<p>The ambient must be specified in the same measurement units as it<br />
+was in the cal at the initial call to <a href="SetColorSpace" class="uri">SetColorSpace</a>. If different<br />
+units are desired, all ambient fields in the structure must be updated<br />
+and <a href="SetColorSpace" class="uri">SetColorSpace</a> called again. I have never wanted to do this,<br />
+so I haven’t written a separate routine.</p>
+<p>It is sometimes useful, however, to update the ambient in the<br />
+linear color space defined by the call to <a href="SetColorSpace" class="uri">SetColorSpace</a>. To<br />
+do this, use <a href="UpdateAmbientLinear" class="uri">UpdateAmbientLinear</a>.</p>
+<p>If flag ADD is true, passed ambient is added to current<br />
+value. Otherwise passed value replaces current value.<br />
+ADD is false if not passed. Use caution when setting ADD<br />
+true – if the ambient is changing during the experiment<br />
+you typically don’t want to keep adding multiple times.</p>
+<p>11/17/93 dhb Wrote it.<br />
+8/4/96 dhb Updated for modern scheme.<br />
+8/21/97 dhb Update for structures.<br />
+3/2/98 dhb Fix bug in checks introduce 8/21/97, pointed out by dgp.<br />
+3/10/98 dhb Change T_ to P_.<br />
+10/26/99 dhb, mdr Fix bug in checks. There was also a variable name<br />
+glitch. I don’t think this could have worked the way<br />
+it was. Perhaps no one calls it.<br />
+5/2/02 dhb, kr Add ADD flag.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychCal/UpdateAmbient.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychCal/UpdateAmbient.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychCal/UpdateAmbient.m</code></p>
+</div>

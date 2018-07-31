@@ -1,0 +1,40 @@
+<h2 id="psychtoolbox-psychpriority">[[Psychtoolbox]] › [[PsychPriority]]</h2>
+<p>priorityLevel=<a href="MaxPriority" class="uri">MaxPriority</a>([windowPtrOrScreenNumber],[‘WaitBlanking’],[‘PeekBlanking’],…<br />
+[‘BlankingInterrupt’],[‘SetClut’],[‘ClutMovie’],…<br />
+[‘SND’],[‘sound’],[‘speak’],…<br />
+[‘GetSecs’],[‘WaitSecs’],[‘cputime’],…<br />
+[‘KbCheck’],[‘KbWait’],[‘CharAvail’],[‘GetChar’],…<br />
+[‘EventAvail’],[‘GetClicks’],[‘GetMouse’],[‘GetTicks’])</p>
+<p><a href="MaxPriority" class="uri">MaxPriority</a>.m receives a list of one or more function names, in any<br />
+order, and returns the maximum priorityLevel that will allow all the<br />
+named functions to work normally on this computer. Use <a href="MaxPriority" class="uri">MaxPriority</a><br />
+before calling RUSH, to select the highest priorityLevel that’s<br />
+compatible with all the functions that you’re rushing.</p>
+<p>The name matching ignores case.</p>
+<p>OS X: ___________________________________________________________________</p>
+<p>On OS X all priority levels are safe for all functions. <a href="MaxPriority" class="uri">MaxPriority</a><br />
+always returns 9, the highest priority level.</p>
+<p>To preserve compatibility with other platforms we recommend using<br />
+<a href="MaxPriority" class="uri">MaxPriority</a> in your script on OS X, instead of the constant 9.</p>
+<p>WINDOWS: ________________________________________________________________</p>
+<p><a href="Priority" class="uri">Priority</a> levels returned by <a href="MaxPriority" class="uri">MaxPriority</a> are 0, 1 and 2.<br />
+Although use of priority levels &gt; 1 is possible and allowed by <a href="MaxPriority" class="uri">MaxPriority</a><br />
+if you don’t try to acquire input from keyboard or mouse, it is discouraged<br />
+to use levels &gt; 1 as this can interfere with execution of a lot of<br />
+important system processes and severely reduce the stability of<br />
+Windows execution.</p>
+<p>LINUX: __________________________________________________________________</p>
+<p><a href="MaxPriority" class="uri">MaxPriority</a> always returns 1, although levels of up to 99 are possible.<br />
+We recommend to sticking to the lowest level, unless some tweaking for a<br />
+specific setup or situation is necessary.</p>
+<p>_________________________________________________________________________</p>
+<p>See RUSH, <a href="Priority" class="uri">Priority</a>, <a href="MovieDemo" class="uri">MovieDemo</a>, <a href="ScreenTest" class="uri">ScreenTest</a>, SCREEN <a href="Preference" class="uri">Preference</a> <a href="MaxPriorityForBlankingInterrupt" class="uri">MaxPriorityForBlankingInterrupt</a>,<br />
+SCREEN <a href="Preference" class="uri">Preference</a> <a href="SetClutPunchesBlankingClock" class="uri">SetClutPunchesBlankingClock</a>.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychPriority/MaxPriority.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychPriority/MaxPriority.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychPriority/MaxPriority.m</code></p>
+</div>

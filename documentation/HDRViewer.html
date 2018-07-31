@@ -1,0 +1,37 @@
+<h2 id="psychtoolbox-psychhardware-brightsidedisplay">[[Psychtoolbox]] › [[PsychHardware]] › [[BrightSideDisplay]]</h2>
+<p><a href="HDRViewer" class="uri">HDRViewer</a>([imfilepattern][, dummymode][, scalefactor]) – Load and show high<br />
+dynamic range images on the <a href="BrightSide" class="uri">BrightSide</a> Technologies High Dynamic Range<br />
+display device.</p>
+<p>The viewer allows to cycle through a sequence of images in the given<br />
+folder, matching the given filename pattern. It allows to adjust the<br />
+intensity online, as well as to zoom into regions of the image.</p>
+<p>‘imfilepattern’ - Filename search pattern of the HDR images to load,<br />
+e.g., ‘myimages*.hdr’ would load all images starting with ‘myimages’ and<br />
+ending with extension ‘.hdr’.</p>
+<p>‘dummymode’ - If set to 1 we only run in emulation mode without use of<br />
+the HDR device or <a href="BrightSide" class="uri">BrightSide</a> core library.</p>
+<h3 id="control-keys">Control keys:</h3>
+<p>You can cycle through all images by pressing the space-bar. You can change<br />
+image intensity scaling by pressing the cursor up- and down-keys. You can<br />
+exit the viewer by pressing <a href="ESCape" class="uri">ESCape</a>. By pressing the ‘q’ key, you can<br />
+toggle between float precision HDR and 256 level 8 bit quantized output.</p>
+<p>Zoom mode:<br />
+Pressing the left mouse button will enable zoom mode. Dragging the mouse<br />
+while the button is depressed allows to change the region which should be<br />
+zoomed. Releasing the mouse button will show the selected region zoomed<br />
+up to fullscreen. A single mouse click will reset to the full image.</p>
+<p>Btw. you can find lot’s of nice free HDR images by Googling on the<br />
+internet!</p>
+<p>This is an extension of <a href="SimpleHDRDemo" class="uri">SimpleHDRDemo</a>.m, see that file for basic usage of<br />
+HDR displays with Psychtoolbox.</p>
+<p>History:<br />
+Written 2006 by Mario Kleiner - MPI for Biological Cybernetics, Tuebingen, Germany<br />
+and Oguz Ahmet Akyuz - Department of Computer Science, University of Central Florida.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/BrightSideDisplay/HDRViewer.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/BrightSideDisplay/HDRViewer.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/BrightSideDisplay/HDRViewer.m</code></p>
+</div>

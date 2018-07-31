@@ -1,0 +1,22 @@
+<h2 id="psychtoolbox-psychhardware-bitsplustoolbox">[[Psychtoolbox]] › [[PsychHardware]] › [[BitsPlusToolbox]]</h2>
+<p>[encodedDIOdata] = bitsGoggles(left, right [, window])</p>
+<p>Drives the FE1 goggles connected to bits 4 and 5 of the digital output<br />
+of a Bits+, Bits#, etc.</p>
+<p>‘left’ and ‘right’ define the required state of the left and<br />
+right goggle shutter, where a value of:<br />
+0 = goggle open<br />
+1 = goggle closed</p>
+<p>If ‘window’ is given, but the return argument ‘encodedDIOdata’ is not<br />
+given, then the control code is drawn into the framebuffer and a flip<br />
+is performed.</p>
+<p>If ‘encodedDIOdata’ is given, then ‘window’ is not used<br />
+and the required T-Lock code is returned as a image matrix<br />
+which could be used for <a href="Screen" class="uri">Screen</a>(‘PutImage’) or <a href="Screen" class="uri">Screen</a>(‘DrawTexture’).</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/BitsPlusToolbox/bitsGoggles.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/BitsPlusToolbox/bitsGoggles.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/BitsPlusToolbox/bitsGoggles.m</code></p>
+</div>

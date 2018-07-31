@@ -1,0 +1,34 @@
+<h2 id="psychtoolbox-psychhardware">[[Psychtoolbox]] › [[PsychHardware]]</h2>
+<p>[keypadIndices, productNames, allInfos] = <a href="GetKeypadIndices" class="uri">GetKeypadIndices</a>([productName][, serialNumber][, locationID])</p>
+<p>The <a href="PsychHID" class="uri">PsychHID</a> assigns each USB HID device connected to you computer a<br />
+unique index. <a href="GetKeypadIndices" class="uri">GetKeypadIndices</a> returns the indices for those HID<br />
+devices which are keypads. The product names of each keypad are<br />
+returned in a second argument which is useful to identify the keypad<br />
+associated with an index. The third return argument is a cell-array with<br />
+complete information about the keypad device, e.g., allInfos{1} returns<br />
+all known info about the 1st detected keypad.</p>
+<p>If you have multiple keypads connected you can restrict the set of<br />
+returned keypads by specifying the following optional match-critera:</p>
+<p>product = Product name of target devices, as returned in ‘productNames’.</p>
+<p>serialNumber = Serial number of target devices. This is a text string,<br />
+not a number!</p>
+<p>locationID = Numeric id of where the device is connected to the<br />
+computer. The number is supposed to be unique for a given<br />
+connection port. E.g., the same number will be returned<br />
+whenever the device is connected to the same USB port of<br />
+the computer. The value should be persistent across<br />
+reboots of the machine, but may not be persistent across<br />
+operating system upgrades - or may not be persistent at<br />
+all in case of os bugs. Your mileage may vary…<br />
+_________________________________________________________________________<br />
+WINDOWS: All keypads are treated as one keypad, you can not select between<br />
+different keypads.</p>
+<p>see also: <a href="GetGamepadIndices" class="uri">GetGamepadIndices</a>, <a href="GetKeyBoardIndices" class="uri">GetKeyBoardIndices</a></p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/GetKeypadIndices.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/GetKeypadIndices.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/GetKeypadIndices.m</code></p>
+</div>

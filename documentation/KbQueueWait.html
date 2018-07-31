@@ -1,0 +1,45 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p>secs=<a href="KbQueueWait" class="uri">KbQueueWait</a>([deviceIndex][, forWhat=0][, untilTime=inf])</p>
+<p>Waits for any key to be pressed and returns the time of the press. The<br />
+optional ‘forWhat’ parameter controls what kind of event is waited for<br />
+(similar to <a href="KbWait">KbWait)</a>).<br />
+forWhat:<br />
+0: return as soon as a key is down<br />
+1: return as soon as no keys are down<br />
+2: wait for a key press (so if a key is already down upon function<br />
+entering, it is ignored):<br />
+waitForAllKeysReleased -&gt; waitForKeypress<br />
+3: wait for a keystroke like, 2, but wait until key is released after<br />
+pressing it:<br />
+waitForAllKeysReleased -&gt; waitForKeypress -&gt; waitForAllKeysReleased</p>
+<p>If the optional parameter ‘untilTime’ is provided, <a href="KbWait" class="uri">KbWait</a> will only wait<br />
+until that time and then return regardless if anything happened on the<br />
+keyboard or not.</p>
+<p><a href="KbQueueFlush" class="uri">KbQueueFlush</a> should not be called immediately prior to this function. If<br />
+you do that and clear prior events, <a href="KbQueueWait" class="uri">KbQueueWait</a> is not able to determine<br />
+whether a key is down or not upon function entry (important for all four<br />
+forWhat modes). It will assume no keys are down and, e.g., return<br />
+immediate when forWhat is 1 even though a key was depressed before the<br />
+flush and is still being held. <a href="KbQueueWait" class="uri">KbQueueWait</a> correctly deals with previous<br />
+events in the buffer.<br />
+NB. Previously, use of <a href="KbQueueFlush" class="uri">KbQueueFlush</a> before calling this function was<br />
+recommended. The current function maintains backwards compatibility for<br />
+this use case. However, any changes of existing code to follow the new<br />
+recommendation and remove preceding <a href="KbQueueFlush" class="uri">KbQueueFlush</a> calls should be<br />
+carefully considered and tested (don’t change what works).</p>
+<p>Note that this command will not respond to any keys that were inactivated<br />
+by using the keyList argument to <a href="KbQueueCreate" class="uri">KbQueueCreate</a>.</p>
+<p>Since <a href="KbQueueWait" class="uri">KbQueueWait</a> is implemented as a looping call to <a href="KbQueueCheck" class="uri">KbQueueCheck</a>, it<br />
+will not respond to any key codes stored in the global variable<br />
+ptb_kbcheck_disabledKeys (see “help <a href="DisableKeysForKbCheck" class="uri">DisableKeysForKbCheck</a>”)<br />
+_________________________________________________________________________</p>
+<p>See also: <a href="KbQueueCreate" class="uri">KbQueueCreate</a>, <a href="KbQueueStart" class="uri">KbQueueStart</a>, <a href="KbQueueStop" class="uri">KbQueueStop</a>, <a href="KbQueueCheck" class="uri">KbQueueCheck</a>,<br />
+<a href="KbQueueWait" class="uri">KbQueueWait</a>, <a href="KbQueueFlush" class="uri">KbQueueFlush</a>, <a href="KbQueueRelease" class="uri">KbQueueRelease</a></p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/KbQueueWait.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/KbQueueWait.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/KbQueueWait.m</code></p>
+</div>

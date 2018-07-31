@@ -1,0 +1,50 @@
+<h2 id="psychtoolbox-psychdemos">[[Psychtoolbox]] › [[PsychDemos]]</h2>
+<p><a href="IsomerizationsInEyeDemo" class="uri">IsomerizationsInEyeDemo</a></p>
+<p>Shows how to compute photoreceptor isomerizations using toolbox<br />
+routines. These calculations are for the human eye,<br />
+starting with a spectrum as measured by the PR-650<br />
+in watts/sr-m^2-wlinterval, or with a relative spectrum<br />
+and a photopic troland value.</p>
+<p>NOTE, DHB, 7/19/13. This demo routine and its associated data routines<br />
+<a href="(DefaultPhotoreceptors),%20%5BFillInPhotoreceptors%5D(FillInPhotoreceptors),%20%5BPrintPhotoreceptors">(DefaultPhotoreceptors</a>](PrintPhotoreceptors))<br />
+should be better integrated with the more recent code that<br />
+implements the CIE physiological cone fundamentals, and the<br />
+whole set of stuff should be better documented. See also<br />
+<a href="IsomerizationsInDishDemo" class="uri">IsomerizationsInDishDemo</a><br />
+<a href="CIEConeFundamentalsTest" class="uri">CIEConeFundamentalsTest</a><br />
+<a href="ComputeCIEConeFundamentals" class="uri">ComputeCIEConeFundamentals</a><br />
+<a href="ComputeRawConeFundamentals" class="uri">ComputeRawConeFundamentals</a><br />
+<a href="DefaultPhotoreceptors" class="uri">DefaultPhotoreceptors</a><br />
+<a href="FillInPhotoreceptors" class="uri">FillInPhotoreceptors</a><br />
+<a href="PrintPhotoreceptors" class="uri">PrintPhotoreceptors</a><br />
+<a href="RetIrradianceToIsoRecSec" class="uri">RetIrradianceToIsoRecSec</a><br />
+In particular, there should be some default for the<br />
+photoreceptors structure that gives one the CIE cone<br />
+fundamentals in all their parametric glory, plus additional<br />
+parameters that yield real energy/quantal sensitivites so<br />
+that the resulting coordinates are isomerization rates in<br />
+real units. I think that we’re close to having that, but<br />
+better documentation and tidying is needed.</p>
+<p>07/08/03 dhb Wrote starting from <a href="IsomerizationsInDishDemo" class="uri">IsomerizationsInDishDemo</a>.<br />
+07/11/03 dhb Grab data through subroutines. Get rid of integration time.<br />
+07/15/03 dhb Take eye size from function.<br />
+08/14/11 dhb Comment out saving of T_dogrec at end. Want to be careful when and where<br />
+this is done, but the template may be useful someday.<br />
+03/20/12 dhb Update cal file for PTB 3.<br />
+04/09/12 dhb Add test of irradiance to troland conversion.<br />
+04/27/13 dhb More extensive comments.<br />
+7/19/13 dhb Print out photoreceptors structure using <a href="PrintPhotoreceptors" class="uri">PrintPhotoreceptors</a>.<br />
+dhb Add monochromatic light option to the section that starts with trolands.<br />
+8/11/13 dhb Add test of <a href="AborbtanceToAbsorbance" class="uri">AborbtanceToAbsorbance</a>.<br />
+dhb Protect against case when absorbance is provided directly.<br />
+05/26/14 dhb Dusted off.<br />
+6/10/14 npc, dhb Modifications for accessing calibration data using a @<a href="CalStruct" class="uri">CalStruct</a> object.<br />
+7/7/14 dhb Make calStruct object code conditional on the support routines existing on the path.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychDemos/IsomerizationsInEyeDemo.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychDemos/IsomerizationsInEyeDemo.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychDemos/IsomerizationsInEyeDemo.m</code></p>
+</div>

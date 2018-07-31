@@ -1,0 +1,32 @@
+<h2 id="psychtoolbox-psychpriority">[[Psychtoolbox]] › [[PsychPriority]]</h2>
+<p>OS X: ___________________________________________________________________</p>
+<p><a href="MachGetPriorityFlavor" class="uri">MachGetPriorityFlavor</a> returns the priority flavor mode of the main<br />
+MATLAB thread, either ‘THREAD_TIME_CONSTRAINT_POLICY’ or<br />
+‘THREAD_STANDARD_POLICY’.</p>
+<p>The second return argument, priorityStruct, is the priority struct for<br />
+the active priority flavor mode.</p>
+<p>The priority flavor ‘THREAD_PRECEDENCE_POLICY’ is never returned<br />
+because its status is implied by either ‘THREAD_TIME_CONSTRAINT_POLICY’<br />
+or ‘THREAD_STANDARD_POLICY’:</p>
+<p>-If flavorNameString is ‘THREAD_TIME_CONSTRAINT_POLICY’, then then<br />
+‘THREAD_PRECEDENCE_POLICY’and its ’importance’ parameter are ignored<br />
+by the Mach task scheduler.</p>
+<p>-If flavorNameString is ‘THREAD_STANDARD_POLICY’ then the ‘importance’<br />
+parameter associated with ‘THREAD_PRECEDENCE_POLICY’ governs the<br />
+relative allocation of CPU time between the main MATLAB thread and all<br />
+other threads of the MATLAB process.</p>
+<p><a href="MachGetPriorityFlavor" class="uri">MachGetPriorityFlavor</a> probes priority using <a href="MachGetPriorityMex" class="uri">MachGetPriorityMex</a>.</p>
+<p>OS 9: ___________________________________________________________________</p>
+<p><a href="MachGetPriorityFlavor" class="uri">MachGetPriorityFlavor</a> does not exist in OS 9.</p>
+<p>WINDOWS: ________________________________________________________________</p>
+<p><a href="MachGetPriorityFlavor" class="uri">MachGetPriorityFlavor</a> does not exist in Windows.</p>
+<p>_________________________________________________________________________</p>
+<p>see also: <a href="Priority" class="uri">Priority</a>, <a href="Rush" class="uri">Rush</a>, <a href="MachGetPriorityMex" class="uri">MachGetPriorityMex</a>, <a href="MachSetPriorityMex" class="uri">MachSetPriorityMex</a>,</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychPriority/MachGetPriorityFlavor.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychPriority/MachGetPriorityFlavor.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychPriority/MachGetPriorityFlavor.m</code></p>
+</div>

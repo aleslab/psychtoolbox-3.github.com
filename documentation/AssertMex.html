@@ -1,0 +1,22 @@
+<h2 id="psychtoolbox-psychoneliners">[[Psychtoolbox]] › [[PsychOneliners]]</h2>
+<p>Handle missing or dysfunctional MEX files on Matlab or Octave.</p>
+<p><a href="AssertMex" class="uri">AssertMex</a>(targetname)</p>
+<p><a href="AssertMex" class="uri">AssertMex</a> detects missing mex files. Calling <a href="AssertMex" class="uri">AssertMex</a> from<br />
+your help file, e.g. foo.m, asserts the existence of a mex file foo.mex.<br />
+If no such mex file exists then <a href="AssertMex" class="uri">AssertMex</a> will exit with an error.</p>
+<p>Assert Mex is useful for detecting the error condition when a .m help<br />
+file is mistakenly executed because the correspondig .mex file is<br />
+missing. When foo.mex is missing, MATLAB silently executes the help file<br />
+foo.m instead. Calling <a href="AssertMex" class="uri">AssertMex</a> within foo.m detects and reports that<br />
+error. E.g., in <a href="Screen" class="uri">Screen</a>.m you’ll find <a href="AssertMex" class="uri">AssertMex</a>(‘<a href="Screen" class="uri">Screen</a>.m’) to handle<br />
+missing or dysfunctional <a href="Screen" class="uri">Screen</a> mex files properly.<br />
+_________________________________________________________________________</p>
+<p>See also: <a href="AssertOpenGL" class="uri">AssertOpenGL</a>, COMPUTER, <a href="IsOSX" class="uri">IsOSX</a>, <a href="IsWin" class="uri">IsWin</a></p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOneliners/AssertMex.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOneliners/AssertMex.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOneliners/AssertMex.m</code></p>
+</div>

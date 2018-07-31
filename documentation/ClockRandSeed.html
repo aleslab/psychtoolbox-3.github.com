@@ -1,0 +1,40 @@
+<h2 id="psychtoolbox-psychprobability">[[Psychtoolbox]] › [[PsychProbability]]</h2>
+<p>[seed,whichGen] = <a href="ClockRandSeed" class="uri">ClockRandSeed</a>([seed],[whichGen])<br />
+<a href="ClockRandSeed" class="uri">ClockRandSeed</a> seeds the random number from the time-of-day clock or another<br />
+“random enough” random source, e.g., high resolution time, or a true<br />
+random number source. If ‘seed’ is passed this is used instead of a<br />
+random source or clock time.</p>
+<p>‘whichGen’ optionally allows selection of the random number generator.<br />
+If omitted, the recommended Mersenne-Twister will be used on both<br />
+Matlab and Octave.</p>
+<p>If supported, the rng() function will be used, with rng(‘shuffle’) if<br />
+‘seed’ is omitted. Otherwise the old rand()/randn() setup method is<br />
+used, with ‘reset’ on Octave for truly random init from /dev/urandom<br />
+or high resolution clock time. On Matlab the old seed = fix(1e6*sum(clock))<br />
+will be used.</p>
+<p>NOTE: There is a page in the 2017 Matlab docs describing the issues around<br />
+random number generator selection and seeding. Type “help rand” and then<br />
+follow to the note on “<a href="Replace" class="uri">Replace</a> Discouraged Syntaxes of rand and randn” that<br />
+is at the end of the Description section.</p>
+<h3 id="for-reseeding-on-old-matlab-versions-note-the-following">For reseeding on old Matlab versions, note the following:</h3>
+<p>The multiplier 1e6 in fix(1e6*sum(clock)) is bigger than the 100<br />
+suggested by Mathworks (see help RAND). They suggest 100*sum(clock), but<br />
+this would only change the seed once every 1/100 sec, which might<br />
+correspond to many iterations of a loop. With the bigger multiplier it’s<br />
+pretty sure (depending only on clock grain) that two successive calls<br />
+will generate different seeds.</p>
+<p>Also unlike the Mathworks suggestion (see help RAND), we call FIX. This<br />
+has no effect on RAND and RANDN, but makes it easier to correctly print<br />
+the seed to a file. When a random seed generates an interesting result<br />
+one would like to be able to recreate the conditions that generated the<br />
+run. If the seed 1e6*sum(clock) is printed to a file, ‘%.0f’ will often<br />
+round it differently than RAND would.</p>
+<p>See also: rng, rand, randn.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychProbability/ClockRandSeed.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychProbability/ClockRandSeed.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychProbability/ClockRandSeed.m</code></p>
+</div>

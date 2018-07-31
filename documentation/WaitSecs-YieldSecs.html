@@ -1,0 +1,11 @@
+<h1 id="waitsecsyieldsecs"><a href="WaitSecs-YieldSecs">WaitSecs(‘YieldSecs’)</a></h1>
+<h2 id="psychtoolbox-waitsecs.mexdll-subfunction">[[Psychtoolbox]] › [[WaitSecs]].{mex*,dll} subfunction</h2>
+<p>Wait for at least “waitPeriodSecs”, don’t care if it takes a few milliseconds<br />
+longer. Optionally, return the real wakeup time “realWakeupTimeSecs”.<br />
+This call is useful if you want your code to release the cpu for a few<br />
+milliseconds, e.g., to avoid overloading the cpu in a spinning loop, and you<br />
+don’t care if the wait takes a few msecs longer than specified. If you do care,<br />
+use one of the other <a href="WaitSecs" class="uri">WaitSecs</a>() variants! The other variants emphasize accuracy<br />
+of timed waits, even if this causes a high load on the processor.</p>
+<p>&lt;&lt;=====See also:=====</p>
+<p>&lt;&lt;</p>

@@ -1,0 +1,22 @@
+<h2 id="psychtoolbox-psychoptics">[[Psychtoolbox]] › [[PsychOptics]]</h2>
+<p>s0 = <a href="ComputeDiffLimit" class="uri">ComputeDiffLimit</a>(pupil,nm)</p>
+<p>Compute the diffraction limit for coherent light.<br />
+(For incoherent light the answer is 2*s0.)<br />
+See page 120 in Goodman.</p>
+<pre><code>&quot;pupil&quot; diameter in mm  
+&quot;nm&quot; is wavelength in nm  
+&quot;s0&quot; is highest spatial frequency passed by the pupil in cycles/deg  </code></pre>
+<p>Goodman, J. W. (1968) Introduction to Fourier Optics.<br />
+San Francisco: <a href="McGraw" class="uri">McGraw</a>-Hill. Page 120.</p>
+<p>Goodman’s formula involves di, which I think is the distance to the<br />
+image. Goodman’s formula gives the limit in<br />
+cycles/unit length. The formula below gives<br />
+the answer in cycles/degree.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOptics/ComputeDiffLimit.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOptics/ComputeDiffLimit.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOptics/ComputeDiffLimit.m</code></p>
+</div>

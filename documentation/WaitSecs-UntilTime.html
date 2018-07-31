@@ -1,0 +1,17 @@
+<h1 id="waitsecsuntiltime"><a href="WaitSecs-UntilTime">WaitSecs(‘UntilTime’)</a></h1>
+<h2 id="psychtoolbox-waitsecs.mexdll-subfunction">[[Psychtoolbox]] › [[WaitSecs]].{mex*,dll} subfunction</h2>
+<p>Wait until at least system time “whenSecs” has been reached. Optionally, return<br />
+the real wakeup time “realWakeupTimeSecs”.<br />
+This allows conveniently waiting until an absolute point in time has been<br />
+reached, or to allow drift-free waiting for a well defined interval, more<br />
+accurate than the standard <a href="WaitSecs" class="uri">WaitSecs</a>() call.<br />
+Example:<br />
+Wait until 0.6 secs after last stimulus onset, if vbl=<a href="Screen" class="uri">Screen</a>(‘<a href="Flip" class="uri">Flip</a>’, window);<br />
+was the onset timestamp vbl from a previous flip:<br />
+realwakeup = <a href="WaitSecs" class="uri">WaitSecs</a>(‘UntilTime’, vbl + 0.6);</p>
+<p>In a perfect world, realwakeup == vbl + 0.6, in reality it will be<br />
+realwakeup == vbl + 0.6 + randomjitter; with randomjitter being the hopefully<br />
+small scheduling delay of your operating system. If the delay is high or varies<br />
+a lot between trials then your system has noisy timing or real timing problems.</p>
+<p>&lt;&lt;=====See also:=====</p>
+<p>&lt;&lt;</p>

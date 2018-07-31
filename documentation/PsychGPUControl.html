@@ -1,0 +1,76 @@
+<h2 id="psychtoolbox-psychoneliners">[[Psychtoolbox]] › [[PsychOneliners]]</h2>
+<p>[rc,rcExt] = <a href="PsychGPUControl" class="uri">PsychGPUControl</a>(cmd, arg); – Control low-level GPU settings.</p>
+<p><a href="PsychGPUControl" class="uri">PsychGPUControl</a> calls into external helper tools to change certain<br />
+low-level operating settings of your systems graphics card (GPU).</p>
+<p>Not all operating systems and GPU’s support this. The function will<br />
+do nothing on unsupported OS/GPU combos.</p>
+<p>Currently OS/X doesn’t support this function at all, and on MS-Windows<br />
+and GNU/Linux, only recent ATI GPU’s with recent drivers do support it.</p>
+<p>All subfunctions return an optional ‘rc’ return code of zero on success,<br />
+non-zero on error or if the feature is unsupported.<br />
+‘rcExt’ is optional as well and its meaning depends on the subfunction.</p>
+<h3 id="subfunctions-and-their-syntax-meaning">Subfunctions and their syntax &amp; meaning:</h3>
+<p>[rc,rcExt] = <a href="PsychGPUControl" class="uri">PsychGPUControl</a>(‘SetDitheringEnabled’, enableFlag);<br />
+- Depending on the setting of ‘enableFlag’, either enable (=1) or<br />
+disable (=0) display color dithering on all connected displays.<br />
+‘rcExt’ returns the version of the low-level dithering API (currently 1 or 2)<br />
+that had to be used in order to overcome compatibility issues (Windows/AMD<br />
+only). ‘rcExt’ is only non-empty when the API was reported by the low-level<br />
+function.</p>
+<p>Under normal circumstances, the GPU should decide itself if dithering<br />
+should be used or not. This function allows you to override the GPU’s<br />
+automatic choice.</p>
+<p>rc = <a href="PsychGPUControl" class="uri">PsychGPUControl</a>(‘SetGPUPerformance’, gpuPerformance);<br />
+- Select the performance state of the GPU. ‘gpuPerformance’ can be set to<br />
+0 if the GPU shall automatically adjust its performance and power-<br />
+consumption, or to one of 10 fixed levels between 1 and 10, where 1 means<br />
+the lowest performance - and power consumption, whereas 10 means the<br />
+highest performance - and maximum power consumption.</p>
+<p>If in doubt, choose 10 for best accuracy of visual stimulus onset timing,<br />
+0 for non-critical activities to leave the decision up to the graphics<br />
+driver and GPU.</p>
+<p>rc = <a href="PsychGPUControl" class="uri">PsychGPUControl</a>(‘FullScreenWindowDisablesCompositor’, flag [, screenIds]);<br />
+- Select if desktop composition should be disabled for displays where<br />
+a Psychtoolbox fullscreen onscreen window is displayed. ‘flag’ == 1 means<br />
+to disable composition for fullscreen windows, 0 means to enable composition<br />
+for fullscreen windows. You usually want composition to be disabled, as this<br />
+is currently the only way to get decent timing and precise visual stimulus<br />
+onset timestamping. The optional vector of ‘screenIds’ selects which screens<br />
+should be affected by the change. If left out or set to [], all detected<br />
+screens will be changed. This will also apply a workaround for a limitation in<br />
+Ubuntu Linux standard Unity GUI (actually in the Compiz compositor) when used on<br />
+a single-x-screen setup with multiple video outputs, e.g., a single x-screen,<br />
+dual-display stereo setup. For the workaround to work, you may have to logout<br />
+and login again once, as sometimes the system does not seem to pick up the new<br />
+settings until a logout/login cycle.</p>
+<p>rc = <a href="PsychGPUControl" class="uri">PsychGPUControl</a>(‘EnableCompizMultiDisplayWorkaround’, enableFlag);<br />
+- Enable or disable workaround for a limitation of the Ubuntu Linux Unity GUI<br />
+if one wants to do multi-display visual stimulation on a single x-screen setup<br />
+or on X-<a href="Screen" class="uri">Screen</a> 0 of a multi x-screen setup. Trying to open a Psychtoolbox<br />
+fullscreen window on PTB screen 0 aka X-<a href="Screen" class="uri">Screen</a> 0 if that X-<a href="Screen" class="uri">Screen</a> has multiple<br />
+active displays attached, e.g., for dual-display stereo stimulation, can fail<br />
+to work without severe visual stimulation timing problems. This is due to a<br />
+design limitation of Unity’s Compiz desktop compositor, as of Ubuntu 16.04.0 LTS<br />
+and earlier distribution versions. You can either solve this problem by switching<br />
+to a different desktop GUI environment like GNOME-3 or KDE, or by attaching all<br />
+visual stimulation displays to a secondary X-<a href="Screen" class="uri">Screen</a>, e.g., screen 1 (run <a href="XOrgConfCreator" class="uri">XOrgConfCreator</a><br />
+to set up such a setup). If you want to use Unity, you can use this function to<br />
+enable a workaround that fixes the problem, either immediately or after a logout<br />
+and login. There are no known downsides of the workaround when using your system<br />
+with a single display attached. The downside of the workaround on multi-display<br />
+setups will be that while Psychtoolbox will work fine, during your regular use of<br />
+the desktop GUI, automatic window placement and resizing of regular GUI applications<br />
+may be suboptimal due to the workaround interfering. Windows will no longer maximize<br />
+on a single display screen if you ask them to, but over the whole desktop. You can<br />
+use this function to enable and disable the workaround if you tend to use your desktop<br />
+not only for multi-display stimulation, but also for regular multi-display desktop use.</p>
+<p>Set ‘enableFlag’ to 1 to enable the workaround for visual stimulation, and 0<br />
+to disable the workaround for more ergonomic multi-display desktop use.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychOneliners/PsychGPUControl.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychOneliners/PsychGPUControl.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychOneliners/PsychGPUControl.m</code></p>
+</div>

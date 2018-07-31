@@ -1,0 +1,34 @@
+<h1 id="psychoculusvrcoregettrackingstate"><a href="PsychOculusVRCore-GetTrackingState">PsychOculusVRCore(‘GetTrackingState’)</a></h1>
+<h2 id="psychtoolbox-psychoculusvrcore.mexdll-subfunction">[[Psychtoolbox]] › [[PsychOculusVRCore]].{mex*,dll} subfunction</h2>
+<p>Return current state of head position and orientation tracking for Oculus device<br />
+‘oculusPtr’.<br />
+Head position and orientation is predicted for target time ‘predictionTime’ in<br />
+seconds if provided, based on the latest measurements from the tracking<br />
+hardware. If ‘predictionTime’ is omitted or set to zero, then no prediction is<br />
+performed and the current state based on latest measurements is returned.</p>
+<p>‘state’ is a struct with fields reporting the following values:<br />
+‘Time’ = Time in seconds of predicted tracking state.<br />
+‘Status’ = Tracking status flags. +1 = Head orientation tracked, +2 = Head<br />
+position tracked, +4 = Camera pose tracked +32 = Position tracking hardware<br />
+connected, +128 = HMD display is connected and available.<br />
+‘HeadPose’ = Head position [x, y, z] in meters and rotation as quaternion [rx,<br />
+ry, rz, rw], all as a vector [x,y,z,rx,ry,rz,rw].<br />
+‘HeadLinearSpeed’ = Linear velocity [vx,vy,vz] in meters/sec.<br />
+‘HeadAngularSpeed’ = Angular velocity [rx,ry,rz] in radians/sec.<br />
+‘HeadLinearAcceleration’ = Linear acceleration [ax,ay,az] in meters/sec^2.<br />
+‘HeadAngularAcceleration’ = Angular acceleration [rax,ray,raz] in radians/sec^2.<br />
+‘CameraPose’ as vector with position and orientation quaternion, like<br />
+‘HeadPose’.<br />
+‘LeveledCameraPose’ Like ‘CameraPose’ but aligned to the gravity vector of the<br />
+world.<br />
+‘CameraFrustumHVFov’ Horizontal and vertical field of view of the tracking<br />
+camera in radians.<br />
+‘CameraFrustumNearFarZInMeters’ Near and far limit of the camera view frustum in<br />
+meters.<br />
+‘LastCameraFrameCounter’ Last camera framecounter value of tracking camera.<br />
+‘RawSensorAcceleration’ = Raw measured accelerometer reading in m/sec^2.<br />
+‘RawSensorGyroRate’ = Raw gyrometer reading in rad/s.<br />
+‘RawMagnetometer’ = Raw magnetic field in gauss.<br />
+‘SensorTemperature’ = Sensor temperature in degrees Celsius.<br />
+‘IMUReadoutTime’ = Readout time of the last IMU sample in seconds.</p>
+<p>&lt;&lt;=====See also:===== Start Stop &lt;&lt;</p>

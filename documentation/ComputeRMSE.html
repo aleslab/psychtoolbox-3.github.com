@@ -1,0 +1,24 @@
+<h2 id="psychtoolbox-psychgamma">[[Psychtoolbox]] › [[PsychGamma]]</h2>
+<p>rmse = <a href="ComputeRMSE" class="uri">ComputeRMSE</a>(data,predict,SUPRESS_WARNING)</p>
+<p>Compute a root fractional SSE between data and prediction.<br />
+Inputs should be column vectors.</p>
+<p>The routine badly named, because what it computes<br />
+is not what anyone would call an RMSE. A better<br />
+name for the routine would be <a href="ComptueFSSE" class="uri">ComptueFSSE</a> or something<br />
+like that.</p>
+<p>Indeed, it now calls through an appropriately named<br />
+<a href="ComputeFSSE" class="uri">ComputeFSSE</a>, and issues an annoying warning encouraging<br />
+the user to change the calling form.</p>
+<p>2/3/96 dhb Added improved comments.<br />
+1/13/13 dhb Added cautionary comment about what this routine does.<br />
+as well as message that would tell an unsuspecting user<br />
+at runtime.<br />
+dhb Added mechanism to suppress the warning message.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychGamma/ComputeRMSE.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychGamma/ComputeRMSE.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychGamma/ComputeRMSE.m</code></p>
+</div>

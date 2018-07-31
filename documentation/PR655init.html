@@ -1,0 +1,21 @@
+<h2 id="psychtoolbox-psychhardware-pr655toolbox">[[Psychtoolbox]] › [[PsychHardware]] › [[PR655Toolbox]]</h2>
+<p>retval = <a href="PR655init" class="uri">PR655init</a>(portNumber, [enableHandshaking])</p>
+<p>Initialize serial port for talking to colorimeter.<br />
+Returns whatever character is sent by colorimeter</p>
+<p>Per <a href="PhotoResearch" class="uri">PhotoResearch</a>, handshaking is disabled.</p>
+<p>11/26/07 mpr added timeout if nothing is returned within 10 seconds.<br />
+01/16/09 tbc Adapted from <a href="PR650Toolbox" class="uri">PR650Toolbox</a> for use with PR655</p>
+<p>It seems the iterative <a href="CMCheckInit" class="uri">CMCheckInit</a> method of initialization is not<br />
+necessary with the PR655, so one run of this seems to do the trick.<br />
+“usbmodem*” seems to cover every instance I’ve run into. Not sure about<br />
+the prevalance of using usbmodem as a generic identifier, but if you can<br />
+afford the PR655, you’re probably on some more respectable form of internet<br />
+connection. -TBC</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/PR655Toolbox/PR655init.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/PR655Toolbox/PR655init.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/PR655Toolbox/PR655init.m</code></p>
+</div>

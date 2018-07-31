@@ -1,0 +1,45 @@
+<h2 id="psychtoolbox-psychcolorimetric-psychmunsell">[[Psychtoolbox]] › [[PsychColorimetric]] › [[PsychMunsell]]</h2>
+<p>[w,X,tri] = <a href="MunsellGriddata3" class="uri">MunsellGriddata3</a>(x,y,z,v,xi,yi,zi,method,options,X,tri)</p>
+<p>This is a modified version of the Matlab function griddata3. We modified<br />
+to allow precomputing of the triangulation, and then direct use of that.<br />
+This will allows us to precompute the triangulation (slow) and<br />
+then interpolate using the same triangulation many times (fast, we hope).</p>
+<p>GRIDDATA3 Data gridding and hyper-surface fitting for 3-dimensional data.<br />
+W = GRIDDATA3(X,Y,Z,V,XI,YI,ZI) fits a hyper-surface of the form<br />
+W = F(X,Y,Z) to the data in the (usually) nonuniformly-spaced vectors<br />
+(X,Y,Z,V). GRIDDATA3 interpolates this hyper-surface at the points<br />
+specified by (XI,YI,ZI) to produce W.</p>
+<p>(XI,YI,ZI) is usually a uniform grid (as produced by MESHGRID) and is<br />
+where GRIDDATA3 gets its name.</p>
+<p>[…] = GRIDDATA3(X,Y,Z,V,XI,YI,ZI,METHOD) where METHOD is one of<br />
+‘linear’ - Tessellation-based linear interpolation (default)<br />
+‘nearest’ - Nearest neighbor interpolation</p>
+<p>defines the type of surface fit to the data.<br />
+All the methods are based on a Delaunay triangulation of the data.<br />
+If METHOD is [], then the default ‘linear’ method will be used.</p>
+<p>[…] = GRIDDATA3(X,Y,Z,V,XI,YI,ZI,METHOD,OPTIONS) specifies a cell<br />
+array of strings OPTIONS to be used as options in Qhull via DELAUNAYN.<br />
+If OPTIONS is [], the default options will be used.<br />
+If OPTIONS is {’’}, no options will be used, not even the default.</p>
+<p>Example:<br />
+rand(‘state’,0);<br />
+x = 2*rand(5000,1)-1; y = 2*rand(5000,1)-1; z = 2*rand(5000,1)-1;<br />
+v = x.^2 + y.^2 + z.^2;<br />
+d = -0.8:0.05:0.8;<br />
+[xi,yi,zi] = meshgrid(d,d,d);<br />
+w = griddata3(x,y,z,v,xi,yi,zi);<br />
+Since it is difficult to visualize 4D data sets, use isosurface at 0.8:<br />
+p = patch(isosurface(xi,yi,zi,w,0.8));<br />
+isonormals(xi,yi,zi,w,p);<br />
+set(p,‘FaceColor’,‘blue’,‘EdgeColor’,‘none’);<br />
+view(3), axis equal, axis off, camlight, lighting phong</p>
+<p>Class support for inputs X,Y,Z,V,XI,YI,ZI: double</p>
+<p>See also GRIDDATA, GRIDDATAN, QHULL, DELAUNAYN, MESHGRID.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychColorimetric/PsychMunsell/MunsellGriddata3.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychColorimetric/PsychMunsell/MunsellGriddata3.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychColorimetric/PsychMunsell/MunsellGriddata3.m</code></p>
+</div>

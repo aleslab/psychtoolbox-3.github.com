@@ -1,0 +1,89 @@
+<h2 id="psychtoolbox-psychhardware-daq">[[Psychtoolbox]] › [[PsychHardware]] › [[Daq]]</h2>
+<p>Command codes for the USB-1208FS Daq.<br />
+0x10 16 <a href="DaqAIn" class="uri">DaqAIn</a> Read analog in<br />
+0x11 17 <a href="DaqAInScan" class="uri">DaqAInScan</a> Read analog in, clocked<br />
+0x12 18 <a href="DaqAInStop" class="uri">DaqAInStop</a> Stop input scan<br />
+0x13 19 <a href="DaqALoadQueue" class="uri">DaqALoadQueue</a> Set channel gains<br />
+0x14 20 <a href="DaqAOut" class="uri">DaqAOut</a> Write analog out<br />
+0x15 21 <a href="DaqAOutScan" class="uri">DaqAOutScan</a> Write analog out, clocked<br />
+0x16 22 <a href="DaqAOutStop" class="uri">DaqAOutStop</a> Stop output scan<br />
+0x01 1 <a href="DaqDConfigPort" class="uri">DaqDConfigPort</a> Configure digital port<br />
+0x03 3 <a href="DaqDIn" class="uri">DaqDIn</a> Read digital ports<br />
+0x04 4 <a href="DaqDOut" class="uri">DaqDOut</a> Write digital port<br />
+0x40 64 <a href="DaqBlinkLED" class="uri">DaqBlinkLED</a> Cause LED to blink<br />
+0x20 32 <a href="DaqCInit" class="uri">DaqCInit</a> Initialize counter<br />
+0x21 33 <a href="DaqCIn" class="uri">DaqCIn</a> Read counter<br />
+0x46 70 <a href="DaqGetAll" class="uri">DaqGetAll</a> Read all analog and digital input values<br />
+0x44 68 <a href="DaqGetStatus" class="uri">DaqGetStatus</a> Read device status<br />
+0x41 65 <a href="DaqReset" class="uri">DaqReset</a> Reset the device<br />
+0x45 69 <a href="DaqSetCal" class="uri">DaqSetCal</a> Set CAL output<br />
+0x43 67 <a href="DaqSetSync" class="uri">DaqSetSync</a> Configure sync<br />
+0x42 66 <a href="DaqSetTrigger" class="uri">DaqSetTrigger</a> Configure ext. trigger<br />
+0x30 48 <a href="DaqMemRead" class="uri">DaqMemRead</a> Read memory<br />
+0x31 49 <a href="DaqMemWrite" class="uri">DaqMemWrite</a> Write memory<br />
+0x55 85 <a href="DaqReadCode" class="uri">DaqReadCode</a> Read program memory<br />
+0x50 80 <a href="DaqPrepareDownload" class="uri">DaqPrepareDownload</a> Prepare for program memory download<br />
+0x51 81 <a href="DaqWriteCode" class="uri">DaqWriteCode</a> Write program memory<br />
+0x53 83 <a href="DaqWriteSerialNumber" class="uri">DaqWriteSerialNumber</a> Write a new serial number to device<br />
+See also Daq, <a href="DaqFunctions" class="uri">DaqFunctions</a>, <a href="DaqPins" class="uri">DaqPins</a>.</p>
+<p>Command codes for USB-1608FS. Since all overlapped codes are the same,<br />
+assume that all codes are the same… well… except that there are no<br />
+analog output ports apparently, so <a href="DaqAOut" class="uri">DaqAOut</a>, <a href="DaqAOutScan" class="uri">DaqAOutScan</a>, and <a href="DaqAOutStop" class="uri">DaqAOutStop</a><br />
+should not have associated codes. No 20, 21, or 22.<br />
+0x01 1 <a href="DaqDConfigPort" class="uri">DaqDConfigPort</a> Configure digital port<br />
+0x02 2 <a href="DaqDConfigPortBit" class="uri">DaqDConfigPortBit</a> Configure individual digital port bits<br />
+0x03 3 <a href="DaqDIn" class="uri">DaqDIn</a> Read digital port<br />
+0x04 4 <a href="DaqDOut" class="uri">DaqDOut</a> Write digital port<br />
+0x05 5 <a href="DaqDReadBit" class="uri">DaqDReadBit</a> Read digital port bit<br />
+0x06 6 <a href="DaqDWriteBit" class="uri">DaqDWriteBit</a> Write digital port bit</p>
+<p>0x10 16 <a href="DaqAIn" class="uri">DaqAIn</a> Read analog input channel<br />
+0x11 17 <a href="DaqAInScan" class="uri">DaqAInScan</a> Scan analog channels<br />
+0x12 18 <a href="DaqAInStop" class="uri">DaqAInStop</a> Stop input scan<br />
+0x13 19 <a href="DaqALoadQueue" class="uri">DaqALoadQueue</a> Load the channel/gain queue</p>
+<p>0x20 32 <a href="DaqCInit" class="uri">DaqCInit</a> Initialize counter<br />
+0x21 33 <a href="DaqCIn" class="uri">DaqCIn</a> Read Counter</p>
+<p>0x30 48 <a href="DaqMemRead" class="uri">DaqMemRead</a> Read Memory<br />
+0x31 49 <a href="DaqMemWrite" class="uri">DaqMemWrite</a> Write Memory</p>
+<p>0x40 64 <a href="DaqBlinkLED" class="uri">DaqBlinkLED</a> Causes LED to blink<br />
+0x41 65 <a href="DaqReset" class="uri">DaqReset</a> Reset USB interface<br />
+0x42 66 <a href="DaqSetTrigger" class="uri">DaqSetTrigger</a> Configure external trigger<br />
+0x43 67 <a href="DaqSetSync" class="uri">DaqSetSync</a> Configure sync input/output<br />
+0x44 68 <a href="DaqGetStatus" class="uri">DaqGetStatus</a> Get device status<br />
+0x45 69 <a href="DaqSetCal" class="uri">DaqSetCal</a> Set calibration output<br />
+0x46 70 <a href="DaqGetAll" class="uri">DaqGetAll</a> Get all analog and digital input values</p>
+<p>0x50 80 <a href="DaqPrepareDownload" class="uri">DaqPrepareDownload</a> Prepare for program memory download<br />
+0x51 81 <a href="DaqWriteCode" class="uri">DaqWriteCode</a> Write program memory<br />
+0x52 82 (unwritten) Return program memory checksum<br />
+0x53 83 <a href="DaqWriteSerialNumber" class="uri">DaqWriteSerialNumber</a> Write a new serial number to device<br />
+0x54 84 (unwritten) Update program memory<br />
+0x55 85 <a href="DaqReadCode" class="uri">DaqReadCode</a> Read program memory</p>
+<p>Command codes for USB-1024LS and similar: Quite different from the 1x08<br />
+series: A speciality is that reportId must be always zero (0) for these<br />
+devices - they use interrupt endpoint 0 transfers. For the same reason,<br />
+output reports must always by 8 bytes in length – pad them if they’re<br />
+shorter! Handling of port C of the device may be a bit quirky, as it is<br />
+treated as two ports, a low port and a high port.</p>
+<p>This is based on code and command codes found in usb-1024LS.h and .c,<br />
+subroutine files of the free libhid, a GPL’ed cross platform HID device<br />
+library written by Warren Jasper (<a href="mailto:wjasper@tx.ncsu.edu\">wjasper@tx.ncsu.edu\</a>). It has not been<br />
+tested by me on any actual device! (MK).</p>
+<p>0x0d 13 <a href="DaqDConfigPort" class="uri">DaqDConfigPort</a> Configure digital port (portid == portA = 0x1, portB = 0x4, portClow = 0x8 portCHi = 0x2)<br />
+0x03 3 <a href="DaqDIn" class="uri">DaqDIn</a> Read digital port<br />
+0x01 1 <a href="DaqDOut" class="uri">DaqDOut</a> Write digital port<br />
+0x02 2 <a href="DaqDReadBit" class="uri">DaqDReadBit</a> Read digital port bit (unwritten)<br />
+0x03 3 <a href="DaqDWriteBit" class="uri">DaqDWriteBit</a> Write digital port bit (unwritten)<br />
+0x0b 11 <a href="DaqBlinkLED" class="uri">DaqBlinkLED</a> Causes LED to blink<br />
+0x11 17 <a href="DaqReset" class="uri">DaqReset</a> Reset USB interface (unwritten)<br />
+0x05 5 <a href="DaqCInit" class="uri">DaqCInit</a> Initialize counter<br />
+0x04 4 <a href="DaqCIn" class="uri">DaqCIn</a> Read Counter<br />
+0x0a 10 <a href="DaqWriteCode" class="uri">DaqWriteCode</a> Write program memory (unwritten)<br />
+0x09 9 <a href="DaqReadCode" class="uri">DaqReadCode</a> Read program memory (unwritten)<br />
+0x0c 12 <a href="DaqWriteSerialNumber" class="uri">DaqWriteSerialNumber</a> Write a new serial number to device (unwritten)</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/Daq/DaqCodes.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/Daq/DaqCodes.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/Daq/DaqCodes.m</code></p>
+</div>

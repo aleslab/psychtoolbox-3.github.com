@@ -1,0 +1,37 @@
+<h2 id="psychtoolbox-psychbasic">[[Psychtoolbox]] › [[PsychBasic]]</h2>
+<p>[event, nremaining] = <a href="KbEventGet" class="uri">KbEventGet</a>([deviceIndex][, maxWaitTimeSecs=0])</p>
+<p>Return oldest pending event, if any, in return argument ‘event’, and the<br />
+remaining number of recorded events in the event buffer of a keyboard<br />
+queue in the return argument ‘nremaining’.</p>
+<p>By default, the event buffer of the default keyboard queue is checked,<br />
+but you can specify ‘deviceIndex’ to check the buffer of the queue<br />
+associated with ‘deviceIndex’.</p>
+<p><a href="KbEventGet" class="uri">KbEventGet</a>() will wait up to ‘maxWaitTimeSecs’ seconds for at least one<br />
+event to show up before it gives up. By default, it doesn’t wait but just<br />
+gives up if there aren’t any events queued at time of invocation.</p>
+<p>‘event’ is either empty if there aren’t any events available, or it is a<br />
+struct with information about the keyboard event. The returned event<br />
+struct currently contains the following fields:</p>
+<p>‘Keycode’ = The <a href="KbCheck" class="uri">KbCheck</a> / <a href="KbName" class="uri">KbName</a> style keycode of the key or button that<br />
+triggered this event.</p>
+<p>‘Time’ = The <a href="GetSecs" class="uri">GetSecs</a> time of when the event was received.</p>
+<p>‘Pressed’ = 1 for a key press event, 0 for a key release event.</p>
+<p>‘CookedKey’ = Keycode translated into a <a href="GetChar" class="uri">GetChar</a>() style ASCII character code.<br />
+Or zero if key does not have a corresponding character. Or -1 if mapping<br />
+is unsupported for given event. This does not yet work correctly on OSX.</p>
+<p>Keyboard event buffers are a different way to access the information<br />
+collected by keyboard queues. Before you can use an event buffer you<br />
+always must create its “parent keyboard queue” via <a href="KbQueueCreate" class="uri">KbQueueCreate</a>() and<br />
+call <a href="KbQueueStart" class="uri">KbQueueStart</a>() to enable key event recording. See “help<br />
+<a href="KbQueueCreate" class="uri">KbQueueCreate</a>” etc. on how to do this.</p>
+<p>_________________________________________________________________________</p>
+<p>See also: <a href="KbQueueCreate" class="uri">KbQueueCreate</a>, <a href="KbQueueStart" class="uri">KbQueueStart</a>, <a href="KbQueueStop" class="uri">KbQueueStop</a>, <a href="KbQueueCheck" class="uri">KbQueueCheck</a>,<br />
+<a href="KbQueueWait" class="uri">KbQueueWait</a>, <a href="KbQueueFlush" class="uri">KbQueueFlush</a>, <a href="KbQueueRelease" class="uri">KbQueueRelease</a></p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychBasic/KbEventGet.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychBasic/KbEventGet.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychBasic/KbEventGet.m</code></p>
+</div>

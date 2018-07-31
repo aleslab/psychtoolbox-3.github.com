@@ -1,0 +1,34 @@
+<h2 id="psychtoolbox-psychhardware-forp">[[Psychtoolbox]] › [[PsychHardware]] › [[FORP]]</h2>
+<p><a href="FORPCheck" class="uri">FORPCheck</a> Checks if a button of a FORP device (HH-5-CYL) is pressed.</p>
+<h3 id="usage">Usage:</h3>
+<p>[<a href="KeyPressed" class="uri">KeyPressed</a>,<a href="EventTime" class="uri">EventTime</a>] = <a href="FORPCheck" class="uri">FORPCheck</a>()</p>
+<p>Return the key name <a href="(KeyPressed)" class="uri">(KeyPressed)</a> of the pressed button and the<br />
+time <a href="(EventTime)" class="uri">(EventTime)</a> of the status check.</p>
+<p><a href="KeyPressed" class="uri">KeyPressed</a> Key name of the Pressed Button, empty string<br />
+if none pressed.</p>
+<p><a href="EventTime" class="uri">EventTime</a> Time of keypress check, as returned by <a href="GetSecs" class="uri">GetSecs</a>.</p>
+<h3 id="important-note">IMPORTANT NOTE:</h3>
+<p>See <a href="FORPWait" class="uri">FORPWait</a>.</p>
+<p>Going through each device can be very time consuming. If would advise<br />
+to unplug each unnecessary device, so less devices has to be checked.<br />
+If you have got any advice for a better way to solve those problems, feel<br />
+free to let me know:</p>
+<pre><code>      Florian Stendel   
+      Visual Processing Lab  
+      Universitaets - Augenklinik Magdeburg  
+      Leipziger Strasse 44  
+      39120 Magdeburg  
+      Tel:    0049 (0)391 67 21723  
+      Email:  vincentdhs@gmx.de  </code></pre>
+<p>10/10/06 fs Wrote it.<br />
+10/16/06 mk Add caching of device index.<br />
+10/17/06 fs Done some restructuring and testing.<br />
+02/08/07 mk New vendor id 6171 added to valid device lists.</p>
+<div class="code_header" style="text-align:right;">
+<p><span style="float:left;">Path  </span> <span class="counter">Retrieve <a href=
+  "https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/beta/Psychtoolbox/PsychHardware/FORP/FORPCheck.m">current version from GitHub</a> | View <a href=
+  "https://github.com/Psychtoolbox-3/Psychtoolbox-3/commits/beta/Psychtoolbox/PsychHardware/FORP/FORPCheck.m">changelog</a></span></p>
+</div>
+<div class="code">
+<p><code>Psychtoolbox/PsychHardware/FORP/FORPCheck.m</code></p>
+</div>
