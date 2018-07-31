@@ -1,6 +1,6 @@
 name: Psychtoolbox-3
 url: http://psychtoolbox.org
-permalink: none
+permalink:  /:title.html
 pygments: false
 markdown: kramdown
 
