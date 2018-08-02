@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychInitialize]]
+# [PsychInitialize](PsychInitialize)
+## [Psychtoolbox](Psychtoolbox)[PsychInitialize](PsychInitialize)
 
 Psychtoolbox:[PsychInitialize](PsychInitialize)  
   

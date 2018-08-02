@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [MultiWindowLockStepTest](MultiWindowLockStepTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [MultiWindowLockStepTest](MultiWindowLockStepTest)([nrwins=10][, separateScreens=0]);  
   

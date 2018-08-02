@@ -1,5 +1,5 @@
 # [Datapixx('SetVideoHorizontalOverlayBounds')](Datapixx-SetVideoHorizontalOverlayBounds) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Horizontal overlay causes the left and right halves of the video frame to be  

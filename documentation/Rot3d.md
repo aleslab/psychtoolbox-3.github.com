@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [Rot3d](Rot3d)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 out = Rot3d(in,n,dim)  
 rotates input matrix around x-, y- of z-axis  

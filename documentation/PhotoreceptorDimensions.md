@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [PhotoreceptorDimensions](PhotoreceptorDimensions)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
  dimensions = [PhotoreceptorDimensions](PhotoreceptorDimensions)(receptorTypes,whichDimension,species,source)  
   

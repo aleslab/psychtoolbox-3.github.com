@@ -1,5 +1,5 @@
 # [Datapixx('GetDacRanges')](Datapixx-GetDacRanges) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns 2D array (2 rows x nChans columns) with min/max output voltages for all  

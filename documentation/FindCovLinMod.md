@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [FindCovLinMod](FindCovLinMod)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 [B,w0,Kw] = [FindCovLinMod](FindCovLinMod)(Kx,nDim,[x0])  
   

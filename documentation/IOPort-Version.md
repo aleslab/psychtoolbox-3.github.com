@@ -1,5 +1,5 @@
 # [IOPort('Version')](IOPort-Version) 
-## [[Psychtoolbox]] &#8250; [[IOPort]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[IOPort](IOPort).{mex*} subfunction
 
 
 return the version of [IOPort](IOPort) in a struct  

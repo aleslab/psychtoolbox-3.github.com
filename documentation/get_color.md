@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]] &#8250; [[Utilities]]
+# [get_color](get_color)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)[Utilities](Utilities)
 
 Syntax: [ColorVector](ColorVector) = get\_color[(ColorNameString)]((ColorNameString))  
   

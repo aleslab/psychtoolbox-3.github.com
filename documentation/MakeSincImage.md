@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [MakeSincImage](MakeSincImage)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 image =  [MakeSincImage](MakeSincImage)(freq,i0,j0,nRowPixels,[nColPixels])  
   

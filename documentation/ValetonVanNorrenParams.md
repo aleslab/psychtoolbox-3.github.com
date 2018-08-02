@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [ValetonVanNorrenParams](ValetonVanNorrenParams)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
 [params] = [ValetonVanNorrenParams](ValetonVanNorrenParams)(logIsoRate,[photoreceptors],[trolandType],[[LMRatio](LMRatio)])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PR655Toolbox]]
+# [PR655rawxyz](PR655rawxyz)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PR655Toolbox](PR655Toolbox)
 
 readStr = [PR655rawxyz](PR655rawxyz)(timeout)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [KbKeysAction](KbKeysAction)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
  now, with the help of mapKeys (3rd example could be improved)  
 lum = [KbKeysAction](KbKeysAction)(keyCodes, 'a', 's', lum, -50, 50);  

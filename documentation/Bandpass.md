@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [Bandpass](Bandpass)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 w=[Bandpass](Bandpass)(n,fLow,fHigh) returns a 1xn window, a band-pass filter. The  
 elements represent gain at each freq, uniformly spaced from -1 to 1 of  

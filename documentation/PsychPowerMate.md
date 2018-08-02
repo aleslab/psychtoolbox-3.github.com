@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [PsychPowerMate](PsychPowerMate)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
 [PsychPowerMate](PsychPowerMate) - A driver for the Griffin Technology [PowerMate](PowerMate) USB knob.  
   

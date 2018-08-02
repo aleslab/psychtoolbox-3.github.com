@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [PsychRTBox](PsychRTBox)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
 Driver for the USTC reaction time button box [(RTBox)]((RTBox)) by Xiangrui Li et al.  
 varargout = [PsychRTBox](PsychRTBox)(cmd, varargin);  

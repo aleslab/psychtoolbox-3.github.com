@@ -1,5 +1,5 @@
 # [Datapixx('Is5VFault')](Datapixx-Is5VFault) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns non-0 if VESA and Analog I/O +5V pins are trying to draw more than 500  

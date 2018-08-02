@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [MaximizeGamutContrast](MaximizeGamutContrast)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 [s,sPos,sNeg] = [MaximizeGamutContrast](MaximizeGamutContrast)(dir,white)  
   

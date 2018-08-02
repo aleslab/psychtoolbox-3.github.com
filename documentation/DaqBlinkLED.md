@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqBlinkLED](DaqBlinkLED)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 err=[DaqBlinkLED](DaqBlinkLED)[(DeviceIndex)]((DeviceIndex))  
 USB-1208FS: blink LED.  

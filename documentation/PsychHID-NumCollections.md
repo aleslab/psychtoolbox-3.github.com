@@ -1,5 +1,5 @@
 # [PsychHID('NumCollections')](PsychHID-NumCollections) 
-## [[Psychtoolbox]] &#8250; [[PsychHID]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychHID](PsychHID).{mex*} subfunction
 
 
 Return the the number of collections on the specified USB HID device.  A  

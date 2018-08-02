@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSound]] &#8250; [[MOAL]] &#8250; [[wrap]]
+# [alGetInteger](alGetInteger)
+## [Psychtoolbox](Psychtoolbox)[PsychSound](PsychSound)[MOAL](MOAL)[wrap](wrap)
 
 alGetInteger  Interface to [OpenAL](OpenAL) function alGetInteger  
   

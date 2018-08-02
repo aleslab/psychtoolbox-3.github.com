@@ -1,5 +1,5 @@
 # [Screen('FrameOval')](Screen-FrameOval) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Draw the outline of an oval inscribed in "rect". "color" is the clut index  

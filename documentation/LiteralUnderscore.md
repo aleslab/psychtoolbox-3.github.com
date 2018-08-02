@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychFiles]]
+# [LiteralUnderscore](LiteralUnderscore)
+## [Psychtoolbox](Psychtoolbox)[PsychFiles](PsychFiles)
 
 str =  [LiteralUnderscore](LiteralUnderscore)(instr)  
   

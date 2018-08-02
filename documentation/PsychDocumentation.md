@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDocumentation]]
+# [PsychDocumentation](PsychDocumentation)
+## [Psychtoolbox](Psychtoolbox)[PsychDocumentation](PsychDocumentation)
 
 [PsychDocumentation](PsychDocumentation) -- Bits of documentation for Psychtoolbox  
   

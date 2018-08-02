@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [BackupCluts](BackupCluts)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 Backup current clut gamma tables of screens for later restoration via [RestoreCluts](RestoreCluts)().  
   

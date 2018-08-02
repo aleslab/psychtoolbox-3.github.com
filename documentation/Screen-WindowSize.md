@@ -1,5 +1,5 @@
 # [Screen('WindowSize')](Screen-WindowSize) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Return the width and height of a window or screen in units of pixels.  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PsychVRToolbox]]
+# [PsychVRHMD](PsychVRHMD)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PsychVRToolbox](PsychVRToolbox)
 
 [PsychVRHMD](PsychVRHMD)() - High level driver for VR HMD devices.  
   

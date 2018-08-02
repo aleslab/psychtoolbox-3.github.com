@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [PhotopigmentQuantalEfficiency](PhotopigmentQuantalEfficiency)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
  quantalEfficiencies = [PhotopigmentQuantalEfficiency](PhotopigmentQuantalEfficiency).(receptorTypes,[species],[source])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[iViewXToolbox]]
+# [iViewXInitDefaults](iViewXInitDefaults)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[iViewXToolbox](iViewXToolbox)
 
 set a number of iviewx default parameters  
 we should be able to reset a number of parameters in a convenient way  

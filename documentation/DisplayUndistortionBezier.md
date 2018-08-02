@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [DisplayUndistortionBezier](DisplayUndistortionBezier)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 [DisplayUndistortionBezier](DisplayUndistortionBezier)([caliboutfilename] [, xnum=2][, ynum=2][, subdivision=100][, imagename=default][, screenid=max][, stereomode=0][, winrect=[]][, calibinfilename][, refimagename])  
   

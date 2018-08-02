@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [LumToRetIrradiance](LumToRetIrradiance)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 irradiance = [RadianceToRetIrradiance](RadianceToRetIrradiance)(luminance,radiance,radianceS,pupilAreaMM,eyeSizeMM)  
   

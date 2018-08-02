@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [GetEchoString](GetEchoString)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [string,terminatorChar] = [GetEchoString](GetEchoString)(window,msg,x,y,[textColor],[bgColor],[useKbCheck=0],[deviceIndex],[untilTime=inf],[[KbCheck](KbCheck) args...]);  
   

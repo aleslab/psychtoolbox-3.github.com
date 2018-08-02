@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [MouseTraceDemo2](MouseTraceDemo2)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [MouseTraceDemo2](MouseTraceDemo2)  
   

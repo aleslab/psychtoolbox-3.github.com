@@ -1,5 +1,5 @@
 # [Screen('TextSize')](Screen-TextSize) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Read/Set the text size for the specified window.  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [LensTransmittance](LensTransmittance)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
 [lensTransmit,lensDensity] = [LensTransmittance](LensTransmittance)(S,[species],[source],[ageInYears],[pupilDiameterMM])  
   

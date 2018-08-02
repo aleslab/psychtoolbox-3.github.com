@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [PsychVideoSwitcher](PsychVideoSwitcher)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 [PsychVideoSwitcher](PsychVideoSwitcher)(command [,arg1, arg2, .....]);  
   

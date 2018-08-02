@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [ARToolkitDemo](ARToolkitDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 Use [ARToolkit](ARToolkit) to track and visualize 3D objects in live-video.  
   

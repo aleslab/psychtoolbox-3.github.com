@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDocumentation]]
+# [InstallKinect](InstallKinect)
+## [Psychtoolbox](Psychtoolbox)[PsychDocumentation](PsychDocumentation)
 
 [InstallKinect](InstallKinect) - Kinect driver installation instructions.  
   

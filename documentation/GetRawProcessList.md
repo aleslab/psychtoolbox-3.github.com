@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychPriority]]
+# [GetRawProcessList](GetRawProcessList)
+## [Psychtoolbox](Psychtoolbox)[PsychPriority](PsychPriority)
 
 processListString=[GetRawProcessList](GetRawProcessList)  
   

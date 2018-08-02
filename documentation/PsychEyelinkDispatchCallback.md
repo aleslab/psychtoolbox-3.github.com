@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]] &#8250; [[EyelinkBasic]]
+# [PsychEyelinkDispatchCallback](PsychEyelinkDispatchCallback)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkBasic](EyelinkBasic)
 
 Retrieve live eye-image from Eyelink, show it in onscreen window.  
   

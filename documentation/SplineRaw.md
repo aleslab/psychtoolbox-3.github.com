@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [SplineRaw](SplineRaw)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 [spec\_out] = [SplineRaw](SplineRaw)(wls\_in, spec\_in, wls\_out, [extend])  
   

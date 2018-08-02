@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]]
+# [TrolandsToRetIrradiance](TrolandsToRetIrradiance)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)
 
 [radianceWattsPerM2Sr, irradianceS] =...  
     [TrolandsToRetIrradiance](TrolandsToRetIrradiance)(relativeSpectrum, relativeSpectrumS, trolands, [photopic], [species], [source])  

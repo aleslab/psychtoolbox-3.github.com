@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [DrawFormattedTextDemo](DrawFormattedTextDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [DrawFormattedTextDemo](DrawFormattedTextDemo)  
   

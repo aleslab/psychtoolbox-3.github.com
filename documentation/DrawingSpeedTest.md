@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [DrawingSpeedTest](DrawingSpeedTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [DrawingSpeedTest](DrawingSpeedTest)([n=800][,primitivetype=0][,mode=0][,gpumeasure=0])  
   

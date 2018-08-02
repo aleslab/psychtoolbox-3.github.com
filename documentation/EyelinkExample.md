@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]] &#8250; [[EyelinkDemos]] &#8250; [[EyelinkShortDemos]]
+# [EyelinkExample](EyelinkExample)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkDemos](EyelinkDemos)[EyelinkShortDemos](EyelinkShortDemos)
 
 Short MATLAB example program that uses the Eyelink and Psychophysics  
 Toolboxes to create a real-time gaze-dependent display.  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [Ellipse](Ellipse)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [Ellipse](Ellipse)(a) creates a [Circle](Circle) with  
 diameter == ceil(2\*a)  

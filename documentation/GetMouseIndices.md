@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [GetMouseIndices](GetMouseIndices)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
 [mouseIndices, productNames, allInfo] = [GetMouseIndices](GetMouseIndices)([typeOnly][, productName][, serialNumber][, locationID])  
   

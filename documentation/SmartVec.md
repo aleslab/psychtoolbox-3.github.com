@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [SmartVec](SmartVec)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 vect = [SmartVec](SmartVec)(start,slength,step,mode)  
 makes sequence that satisfies certain conditions.  

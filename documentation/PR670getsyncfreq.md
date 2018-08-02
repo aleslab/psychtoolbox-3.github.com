@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PR670Toolbox]]
+# [PR670getsyncfreq](PR670getsyncfreq)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PR670Toolbox](PR670Toolbox)
 
 [PR670getsyncfreq](PR670getsyncfreq) - Measures the frequency of the light source.  
   

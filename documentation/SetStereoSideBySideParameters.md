@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [SetStereoSideBySideParameters](SetStereoSideBySideParameters)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 Change parameters for side-by-side stereo display modes (4 and 5).  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[PsychTutorials]]
+# [ImagingVideoCaptureDemo](ImagingVideoCaptureDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[PsychTutorials](PsychTutorials)
 
 Adrian, this function is not yet documented.
 

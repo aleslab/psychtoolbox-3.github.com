@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychFiles]]
+# [FindFolder](FindFolder)
+## [Psychtoolbox](Psychtoolbox)[PsychFiles](PsychFiles)
 
 directory=[FindFolder](FindFolder)(name)  
 Searches the Matlab 'path' for the path to the named folder.  

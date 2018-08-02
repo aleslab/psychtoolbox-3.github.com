@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [Resolute](Resolute)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 newplaat = [Resolute](Resolute)(plaat,newres)  
 accepts matrix PLAAT and resizes it to NEWRES  

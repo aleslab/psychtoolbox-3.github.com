@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [CalDataFolder](CalDataFolder)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 directory=[CalDataFolder](CalDataFolder)([forceDemo],[calFileName],[calDir])  
   

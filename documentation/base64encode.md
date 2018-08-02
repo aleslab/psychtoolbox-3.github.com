@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[iViewXToolbox]] &#8250; [[cbase64]]
+# [base64encode](base64encode)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[iViewXToolbox](iViewXToolbox)[cbase64](cbase64)
 
 BASE64ENCODE Perform base64 encoding on a string.  
   

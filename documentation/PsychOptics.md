@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOptics]]
+# [PsychOptics](PsychOptics)
+## [Psychtoolbox](Psychtoolbox)[PsychOptics](PsychOptics)
 
 Psychtoolbox:[PsychOptics](PsychOptics).  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [PsychDebugWindowConfiguration](PsychDebugWindowConfiguration)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 Switch PTB's onscreen window into a display mode suitable for easy debugging on single-screen setups.  
   

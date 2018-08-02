@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [GetChar](GetChar)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [ch, when] = [GetChar](GetChar)([getExtendedData], [getRawCode])  
   

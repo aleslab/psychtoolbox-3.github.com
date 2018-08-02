@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[ColorCal2]]
+# [ColorCal2](ColorCal2)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[ColorCal2](ColorCal2)
 
 varargout = [ColorCal2](ColorCal2)(command, [varargin])  
   

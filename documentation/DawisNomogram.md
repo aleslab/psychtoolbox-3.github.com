@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [DawisNomogram](DawisNomogram)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
 [T\_absorbance] = [DawisNomogram](DawisNomogram)(S,lambdaMax)  
   

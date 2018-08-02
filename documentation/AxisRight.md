@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PsychGamepad]]
+# [AxisRight](AxisRight)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PsychGamepad](PsychGamepad)
 
 Returns the value for horizontal axes in the extreme right position.  
   

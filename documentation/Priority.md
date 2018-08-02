@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychPriority]]
+# [Priority](Priority)
+## [Psychtoolbox](Psychtoolbox)[PsychPriority](PsychPriority)
 
 oldPriority=[Priority](Priority)([newPriority])  
   

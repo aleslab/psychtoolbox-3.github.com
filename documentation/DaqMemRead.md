@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqMemRead](DaqMemRead)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 [data,[errorstructure]]=[DaqMemRead](DaqMemRead)[(DeviceIndex]((DeviceIndex),address,bytes)  
 USB-1208FS: Read memory. This command reads data from the configuration  

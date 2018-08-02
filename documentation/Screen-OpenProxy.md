@@ -1,5 +1,5 @@
 # [Screen('OpenProxy')](Screen-OpenProxy) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Create a proxy object. A proxy is a windowRecord (like a texture, offscreen  

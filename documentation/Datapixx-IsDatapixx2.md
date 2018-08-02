@@ -1,5 +1,5 @@
 # [Datapixx('IsDatapixx2')](Datapixx-IsDatapixx2) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns non-0 for [DATAPixx2](DATAPixx2) digital video driver.  

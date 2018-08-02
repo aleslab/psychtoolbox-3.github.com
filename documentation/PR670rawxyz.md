@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PR670Toolbox]]
+# [PR670rawxyz](PR670rawxyz)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PR670Toolbox](PR670Toolbox)
 
 [PR670rawxyz](PR670rawxyz) - Makes a raw XYZ measurement using the PR-670.  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [AlphaMultiplicationTest](AlphaMultiplicationTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 passedFlag=[AlphaMultipicationTest](AlphaMultipicationTest)([screenNumber])  
   

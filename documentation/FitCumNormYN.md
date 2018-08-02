@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [FitCumNormYN](FitCumNormYN)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 [uEst,varEst] = [FitCumNormYN](FitCumNormYN)(inputs,nYes,nNo)  
   

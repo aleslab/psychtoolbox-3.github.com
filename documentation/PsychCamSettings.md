@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychVideoCapture]]
+# [PsychCamSettings](PsychCamSettings)
+## [Psychtoolbox](Psychtoolbox)[PsychVideoCapture](PsychVideoCapture)
 
 rc = [PsychCamSettings](PsychCamSettings)(cmd, grabber [, arg0, arg1, ...])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [kPsychNeedFastBackingStore](kPsychNeedFastBackingStore)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 rval = kPsychNeedFastBackingStore  
   

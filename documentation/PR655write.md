@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PR655Toolbox]]
+# [PR655write](PR655write)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PR655Toolbox](PR655Toolbox)
 
 Write a string of chars to PR655. Add [CR] terminator if necessary  
   

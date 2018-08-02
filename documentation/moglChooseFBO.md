@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOpenGL]]
+# [moglChooseFBO](moglChooseFBO)
+## [Psychtoolbox](Psychtoolbox)[PsychOpenGL](PsychOpenGL)
 
 moglChooseFBO(fbo, bufferid) -- Set FBO 'fbo' as framebuffer.  
   

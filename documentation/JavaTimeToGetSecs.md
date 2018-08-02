@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychJava]]
+# [JavaTimeToGetSecs](JavaTimeToGetSecs)
+## [Psychtoolbox](Psychtoolbox)[PsychJava](PsychJava)
 
 timeSecs=[JavaTimeToGetSecs](JavaTimeToGetSecs)(javaTime, [updateInterval])  
   

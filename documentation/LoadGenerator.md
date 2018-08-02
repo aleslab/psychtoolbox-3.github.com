@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [LoadGenerator](LoadGenerator)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [LoadGenerator](LoadGenerator)([yieldmsecs=0])  
   

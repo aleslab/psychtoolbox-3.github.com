@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [RandDim](RandDim)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 mat = [RandDim](RandDim)(in,dim)  
 randomizes dimension DIM of matrix IN  

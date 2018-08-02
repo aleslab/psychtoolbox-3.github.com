@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [PsychPortAudioDataPixxTimingTest](PsychPortAudioDataPixxTimingTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [PsychPortAudioDataPixxTimingTest](PsychPortAudioDataPixxTimingTest)([waitTime = 1][, exactstart=1][, deviceid=-1][, latbias=0][, triggerLevel=0.01])  
   

@@ -1,5 +1,5 @@
 # [Screen('LineStipple')](Screen-LineStipple) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Set 'DrawLine' to draw dashed lines.  Argument "stippleArray" is a 16-element  

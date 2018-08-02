@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [PsychHID](PsychHID)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
   
 returnValues=[PsychHID](PsychHID)(subcommand, arg1 [,arg2] ...)  

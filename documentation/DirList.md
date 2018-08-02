@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychFiles]]
+# [DirList](DirList)
+## [Psychtoolbox](Psychtoolbox)[PsychFiles](PsychFiles)
 
 str = [DirList](DirList)(dirnm,qdispfiles,lim,pref, folderFilter, fileFilter, qRelPath)  
 recursively lists directories en returns the whole shit  

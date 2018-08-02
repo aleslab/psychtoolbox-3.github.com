@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [RectCenter](RectCenter)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
    [x,y] = [RectCenter](RectCenter)(rect);  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychJava]]
+# [AddPsychJavaPath](AddPsychJavaPath)
+## [Psychtoolbox](Psychtoolbox)[PsychJava](PsychJava)
 
 Add Psychtoolbox directories containing Java classes to the path  
 which MATLAB searches for Java classes.  The MATLAB Java path is separate  

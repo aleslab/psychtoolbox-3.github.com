@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGamma]]
+# [ComputeGammaSig](ComputeGammaSig)
+## [Psychtoolbox](Psychtoolbox)[PsychGamma](PsychGamma)
 
 output = [ComputeGammaSig](ComputeGammaSig)(x,input)  
   

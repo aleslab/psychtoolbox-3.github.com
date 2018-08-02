@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [PsychGLImageProcessing](PsychGLImageProcessing)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 Psychtoolbox:[PsychGLImageProcessing](PsychGLImageProcessing)  -- [OpenGL](OpenGL) image processing functions.  
   

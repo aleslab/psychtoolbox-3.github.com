@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSound]] &#8250; [[MOAL]] &#8250; [[wrap]]
+# [_alGetSource3i](_alGetSource3i)
+## [Psychtoolbox](Psychtoolbox)[PsychSound](PsychSound)[MOAL](MOAL)[wrap](wrap)
 
 alGetSource3i  Interface to [OpenAL](OpenAL) function alGetSource3i  
   

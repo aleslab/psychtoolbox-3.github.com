@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGamma]]
+# [ComputeGammaWeib](ComputeGammaWeib)
+## [Psychtoolbox](Psychtoolbox)[PsychGamma](PsychGamma)
 
 output = [ComputeGammaWeib](ComputeGammaWeib)(x,input)  
   

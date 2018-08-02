@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [UniqueCell](UniqueCell)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
  [UniqueCell](UniqueCell)    Get unique rows from cell array  
   

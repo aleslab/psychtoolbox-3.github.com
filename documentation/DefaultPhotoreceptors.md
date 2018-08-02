@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [DefaultPhotoreceptors](DefaultPhotoreceptors)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
 photoreceptors = [DefaultPhotoreceptors](DefaultPhotoreceptors)(kind)  
   

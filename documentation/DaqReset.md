@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqReset](DaqReset)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 err=[DaqReset](DaqReset)[(DeviceIndex)]((DeviceIndex))  
 Assuming that something's wrong with the USB-1208FS or our communication  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [TextOffByOneBugTest](TextOffByOneBugTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [TextBug](TextBug)  
 Demonstrates an off-by-one bug in [Screen](Screen)('Drawtext'). The rendered text  

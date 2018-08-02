@@ -1,5 +1,5 @@
 # [Screen('Resolution')](Screen-Resolution) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Query or change display settings for screen "screenNumber".  

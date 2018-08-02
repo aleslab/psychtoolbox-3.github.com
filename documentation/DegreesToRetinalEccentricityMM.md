@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [DegreesToRetinalEccentricityMM](DegreesToRetinalEccentricityMM)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
 eccMm = [DegreesToRetinalEccentricityMM](DegreesToRetinalEccentricityMM)(eccDegrees,[species],[method],[eyeLengthMm])  
   

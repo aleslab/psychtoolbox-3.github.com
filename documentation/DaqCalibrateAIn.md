@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqCalibrateAIn](DaqCalibrateAIn)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 Syntax: [DaqCalibrateAIn](DaqCalibrateAIn)[(DeviceID]((DeviceID),[AnalogChannel)](AnalogChannel))  
   

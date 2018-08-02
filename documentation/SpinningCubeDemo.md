@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[OpenGL4MatlabDemos]]
+# [SpinningCubeDemo](SpinningCubeDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[OpenGL4MatlabDemos](OpenGL4MatlabDemos)
 
 [SpinningCubeDemo](SpinningCubeDemo) - Demonstrate use of MATLAB-[OpenGL](OpenGL) toolbox  
   

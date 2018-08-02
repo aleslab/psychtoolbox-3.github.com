@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDocumentation]]
+# [ProceduralShadingAPI](ProceduralShadingAPI)
+## [Psychtoolbox](Psychtoolbox)[PsychDocumentation](PsychDocumentation)
 
 [ProceduralShadingAPI](ProceduralShadingAPI) - Documentation useful for procedural shading:  
   

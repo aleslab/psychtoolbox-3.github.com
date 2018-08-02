@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOpenGL]]
+# [moglCreateFBO](moglCreateFBO)
+## [Psychtoolbox](Psychtoolbox)[PsychOpenGL](PsychOpenGL)
 
 [fbo , texids] = moglCreateFBO(width, height [, nrbuffers, layers, format, withdepth, withstencil])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [NormalROC](NormalROC)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 ROC = [NormalROC](NormalROC)(logbetas,us,vars,un,varn)  
   

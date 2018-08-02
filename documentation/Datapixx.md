@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[DatapixxToolbox]] &#8250; [[DatapixxBasic]]
+# [Datapixx](Datapixx)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[DatapixxToolbox](DatapixxToolbox)[DatapixxBasic](DatapixxBasic)
 
 Datapixx is a MEX file for precise control of the [DataPixx](DataPixx) device from  
 [VPixx](VPixx) Technologies. It has many functions; type "Datapixx" for a list:  

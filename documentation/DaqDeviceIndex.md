@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqDeviceIndex](DaqDeviceIndex)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 daq = [DaqDeviceIndex](DaqDeviceIndex)([[DeviceName](DeviceName)][, [ShowInterfaceNumberWarning](ShowInterfaceNumberWarning)=1])  
 Returns a list of all your USB -1024LS, -1208FS, -1408FS, or -1608FS daqs.  

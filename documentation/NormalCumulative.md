@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [NormalCumulative](NormalCumulative)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 function prob = [NormalCumulative](NormalCumulative)(x,u,var)  
   

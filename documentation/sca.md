@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [sca](sca)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [sca](sca) -- Execute [Screen](Screen)('CloseAll');  
 This is just a convenience wrapper that allows you  

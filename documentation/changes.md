@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]]
+# [changes](changes)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)
 
     [EyelinkToolbox](EyelinkToolbox).  
     History and list of changes  

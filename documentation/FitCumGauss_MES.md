@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychStairCase]]
+# [FitCumGauss_MES](FitCumGauss_MES)
+## [Psychtoolbox](Psychtoolbox)[PsychStairCase](PsychStairCase)
 
 Fits a cumulative Gaussian to a set of probe values and subject responses  
   

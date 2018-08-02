@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PR650Toolbox]]
+# [PR650measspd](PR650measspd)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PR650Toolbox](PR650Toolbox)
 
 [spd,qual] = [PR650measspd](PR650measspd)(S,[syncMode])  
   

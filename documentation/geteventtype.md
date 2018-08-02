@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]] &#8250; [[EyelinkOneLiners]]
+# [geteventtype](geteventtype)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkOneLiners](EyelinkOneLiners)
 
 Adrian, this function is not yet documented.
 

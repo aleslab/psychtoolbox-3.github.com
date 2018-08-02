@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [BoolFromSNR](BoolFromSNR)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 creates a boolean (selection) vector from an SNR (Signal-to-Noise Ratio)  
 q = [BoolFromSNR](BoolFromSNR)(SNR,n)  

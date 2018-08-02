@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [DisplayUndistortionBVL](DisplayUndistortionBVL)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 [scal] = [DisplayUndistortionBVL](DisplayUndistortionBVL)([caliboutfilename][, screenid][, xnum=37][, ynum=27][, referenceImage=None][, stereomode=0])  
 [scal] = [DisplayUndistortionBVL](DisplayUndistortionBVL)([caliboutfilename][, calibinfilename])  

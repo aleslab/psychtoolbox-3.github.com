@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [ImagingStereoDemo](ImagingStereoDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [ImagingStereoDemo](ImagingStereoDemo)([stereoMode=8][, usedatapixx = 0][, writeMovie = 0][, reduceCrossTalkGain = 0])  
   

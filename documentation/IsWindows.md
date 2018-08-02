@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychObsolete]]
+# [IsWindows](IsWindows)
+## [Psychtoolbox](Psychtoolbox)[PsychObsolete](PsychObsolete)
 
 function resultFlag = [IsWindows](IsWindows)  
   

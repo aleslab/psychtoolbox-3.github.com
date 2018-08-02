@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [GetGamepadIndices](GetGamepadIndices)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
 [gamepadIndices, productNames, allInfos] = [GetGamepadIndices](GetGamepadIndices)([productName][, serialNumber][, locationID])  
   

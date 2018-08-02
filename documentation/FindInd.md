@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [FindInd](FindInd)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 find that also does higher dims for output like [x,y,x,t] = findfull(4-D)  
 (unlimited of course)  

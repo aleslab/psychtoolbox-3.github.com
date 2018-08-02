@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [DbToLog](DbToLog)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 logUnits = [DbToLog](DbToLog)(dbUnits)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [DrawTextFontSwitchSpeedTest](DrawTextFontSwitchSpeedTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [DrawTextFontSwitchSpeedTest](DrawTextFontSwitchSpeedTest) - Test font settings switching speed.  
   

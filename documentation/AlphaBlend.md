@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychAlphaBlending]]
+# [AlphaBlend](AlphaBlend)
+## [Psychtoolbox](Psychtoolbox)[PsychAlphaBlending](PsychAlphaBlending)
 
 newImage=[AlphaBlend](AlphaBlend)(sourceFactorStr, destinationFactorStr, sourceImage, destinationImage)  
   

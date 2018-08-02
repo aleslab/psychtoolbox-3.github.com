@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[FORP]]
+# [FORPQueueClear](FORPQueueClear)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[FORP](FORP)
 
 Remove all reports from HID device 'deviceNumber':  
 Helper function for [FORPCheck](FORPCheck).  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [StereoViewer](StereoViewer)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [StereoViewer](StereoViewer)(leftimfile, rightimfile [,stereoMode=8] [,imaging=0])  
   

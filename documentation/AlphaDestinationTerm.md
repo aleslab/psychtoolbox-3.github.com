@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychAlphaBlending]]
+# [AlphaDestinationTerm](AlphaDestinationTerm)
+## [Psychtoolbox](Psychtoolbox)[PsychAlphaBlending](PsychAlphaBlending)
 
 newDestinationMat=[AlphaDestinationTerm](AlphaDestinationTerm)(destinationFactorStr, sourceMatrix, destinationMatrix)  
   

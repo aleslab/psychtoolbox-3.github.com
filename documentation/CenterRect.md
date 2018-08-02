@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [CenterRect](CenterRect)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
 [rect,dh,dv] = [CenterRect](CenterRect)(rect,fixedRect)  
   

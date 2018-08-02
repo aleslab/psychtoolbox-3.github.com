@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [IsomerizationsFromAbsorptions](IsomerizationsFromAbsorptions)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
  [isomerizationRate] = [IsomerizationsFromAbsorptions](IsomerizationsFromAbsorptions)(photonAbsorptionRate,[quantalEfficiency])  
   

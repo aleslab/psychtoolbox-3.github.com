@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BrightSideDisplay]]
+# [HDRMinimalisticOpenGLDemo](HDRMinimalisticOpenGLDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BrightSideDisplay](BrightSideDisplay)
 
 [HDRMinimalisticOpenGLDemo](HDRMinimalisticOpenGLDemo) - Demonstrate use of MATLAB-[OpenGL](OpenGL) toolbox with  
 the [BrightSide](BrightSide)-Technologies High Dynamic Range Display.  

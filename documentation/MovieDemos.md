@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[MovieDemos]]
+# [MovieDemos](MovieDemos)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[MovieDemos](MovieDemos)
 
 Psychtoolbox:[PsychDemos](PsychDemos):[MovieDemos](MovieDemos)  
   

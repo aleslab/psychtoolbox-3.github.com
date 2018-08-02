@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [XOrgConfSelector](XOrgConfSelector)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
 [XOrgConfSelector](XOrgConfSelector)([sdir]) - Select a X11 configuration file to apply.  
   

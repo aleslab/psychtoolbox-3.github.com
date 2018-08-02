@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PR705Toolbox]]
+# [PR705parsespdstr](PR705parsespdstr)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PR705Toolbox](PR705Toolbox)
 
 [PR705parsespdstr](PR705parsespdstr) - Parses the spectral power distribution string returned by the PR-705.  
   

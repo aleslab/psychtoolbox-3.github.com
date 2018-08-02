@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [BubbleDemo](BubbleDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [BubbleDemo](BubbleDemo)(mode, ms, myimgfile)  
   

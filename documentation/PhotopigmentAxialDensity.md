@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [PhotopigmentAxialDensity](PhotopigmentAxialDensity)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
  densities = [PhotopigmentAxialDensity](PhotopigmentAxialDensity)(receptorTypes,[species],[source],[fieldSizeDegrees])  
   

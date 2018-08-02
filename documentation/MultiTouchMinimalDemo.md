@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [MultiTouchMinimalDemo](MultiTouchMinimalDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [MultiTouchMinimalDemo](MultiTouchMinimalDemo)([dev][, verbose=0]) - A basic demo for multi-touch touchscreens.  
   

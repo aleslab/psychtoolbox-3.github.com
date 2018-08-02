@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [IsOSX](IsOSX)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 resultFlag = [IsOSX](IsOSX)([is64=0])  
   

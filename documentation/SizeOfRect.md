@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [SizeOfRect](SizeOfRect)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
 s=[SizeOfRect](SizeOfRect)(rect);  
 Accepts a Psychtoolbox rect [left, top, right, bottom] and returns the  

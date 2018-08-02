@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [ScreenDrawDots](ScreenDrawDots)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 Workaround-Wrapper for the [Screen](Screen)('DrawDots') function.  
   

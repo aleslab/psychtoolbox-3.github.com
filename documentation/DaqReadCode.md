@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqReadCode](DaqReadCode)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 data=[DaqReadCode](DaqReadCode)[(DeviceIndex]((DeviceIndex),address,bytes)  
 USB-1208FS: Read program memory.  

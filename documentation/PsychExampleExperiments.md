@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[PsychExampleExperiments]]
+# [PsychExampleExperiments](PsychExampleExperiments)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[PsychExampleExperiments](PsychExampleExperiments)
 
 Psychtoolbox:[PsychDemos](PsychDemos):[PsychExampleExperiments](PsychExampleExperiments)  
   

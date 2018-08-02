@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqAOutScan](DaqAOutScan)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 params=[DaqAOutScan](DaqAOutScan)[(DeviceIndex]((DeviceIndex),v,options)  
 USB-1208FS: Analog output scan. Produce sampled analog output voltage  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [TextFontTest](TextFontTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 Test setting the text font.  
 

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [ComputePhotopigmentBleaching](ComputePhotopigmentBleaching)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 [fractionBleached] = [ComputePhtopigmentBleaching](ComputePhtopigmentBleaching)(intensity,units,source)  
   

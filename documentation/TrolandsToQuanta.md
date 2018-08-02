@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]]
+# [TrolandsToQuanta](TrolandsToQuanta)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)
 
 quanta = [TrolandsToQuanta](TrolandsToQuanta)(wl,trolands,S\_vLambda,vLambda)  
   

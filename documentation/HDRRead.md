@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BrightSideDisplay]]
+# [HDRRead](HDRRead)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BrightSideDisplay](BrightSideDisplay)
 
 img = [HDRRead](HDRRead)(imgfilename[, continueOnError=0][, flipit=0])  
 Read a high dynamic range image file and return it as Matlab double  

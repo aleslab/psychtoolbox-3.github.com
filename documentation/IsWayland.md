@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [IsWayland](IsWayland)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 resultFlag = [IsWayland](IsWayland)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOpenGL]]
+# [morphtest](morphtest)
+## [Psychtoolbox](Psychtoolbox)[PsychOpenGL](PsychOpenGL)
 
 morphtest -- Quick and dirty test for [moglmorpher](moglmorpher)  
   

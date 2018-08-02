@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [AltSize](AltSize)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 varargout = [AltSize](AltSize)(in,arg)  
   

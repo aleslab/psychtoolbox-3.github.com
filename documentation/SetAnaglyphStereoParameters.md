@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [SetAnaglyphStereoParameters](SetAnaglyphStereoParameters)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 retval = [SetAnaglyphStereoParameters](SetAnaglyphStereoParameters)(subcommand, windowPtr, [red green blue]);  
   

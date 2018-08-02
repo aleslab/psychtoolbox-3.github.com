@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOptics]]
+# [DavilaGeislerLSFMinutes](DavilaGeislerLSFMinutes)
+## [Psychtoolbox](Psychtoolbox)[PsychOptics](PsychOptics)
 
 [DavilaGeislerLSFMinutes](DavilaGeislerLSFMinutes)  Compute Davila/Geisler estimate of 3mm pupil human LSF  
    lsf = [DavilaGeislerLSFMinutes](DavilaGeislerLSFMinutes)(distance)  

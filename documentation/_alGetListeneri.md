@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSound]] &#8250; [[MOAL]] &#8250; [[wrap]]
+# [_alGetListeneri](_alGetListeneri)
+## [Psychtoolbox](Psychtoolbox)[PsychSound](PsychSound)[MOAL](MOAL)[wrap](wrap)
 
 alGetListeneri  Interface to [OpenAL](OpenAL) function alGetListeneri  
   

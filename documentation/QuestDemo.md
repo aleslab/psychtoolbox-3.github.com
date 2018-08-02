@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Quest]]
+# [QuestDemo](QuestDemo)
+## [Psychtoolbox](Psychtoolbox)[Quest](Quest)
 
 [QuestDemo](QuestDemo).m  
   

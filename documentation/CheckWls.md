@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [CheckWls](CheckWls)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 [errorRet] = [CheckWls](CheckWls)(wls1,wls2,[quiet])  
   

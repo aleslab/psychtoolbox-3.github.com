@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqAOut](DaqAOut)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 err=[DaqAOut](DaqAOut)[(DeviceIndex]((DeviceIndex),channel,v)  
 USB-1208FS analog output.  

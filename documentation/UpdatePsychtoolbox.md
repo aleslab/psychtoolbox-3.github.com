@@ -1,4 +1,5 @@
-## [[Psychtoolbox]]
+# [UpdatePsychtoolbox](UpdatePsychtoolbox)
+## [Psychtoolbox](Psychtoolbox)
 
 [UpdatePsychtoolbox](UpdatePsychtoolbox)(targetdirectory, targetRevision)  
   

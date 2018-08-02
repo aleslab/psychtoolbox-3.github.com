@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [CreateProceduralSmoothedApertureSineGrating](CreateProceduralSmoothedApertureSineGrating)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 [gratingid, gratingrect] = [CreateProceduralSmoothedApertureSineGrating](CreateProceduralSmoothedApertureSineGrating)(windowPtr, width, height [, backgroundColorOffset =(0,0,0,0)] [, radius=inf][, contrastPreMultiplicator=1])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGamma]]
+# [PsychGamma](PsychGamma)
+## [Psychtoolbox](Psychtoolbox)[PsychGamma](PsychGamma)
 
 Psychtoolbox:[PsychGamma](PsychGamma).  
   

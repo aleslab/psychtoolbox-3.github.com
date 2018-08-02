@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [MeasXYZ](MeasXYZ)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
  [XYZ,qual] = [MeasXYZ](MeasXYZ)([meterType])  
   

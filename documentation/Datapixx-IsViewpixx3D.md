@@ -1,5 +1,5 @@
 # [Datapixx('IsViewpixx3D')](Datapixx-IsViewpixx3D) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns non-0 if [DATAPixx](DATAPixx) is embedded in a [VIEWPixx3D](VIEWPixx3D).  

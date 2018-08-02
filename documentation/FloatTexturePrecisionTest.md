@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [FloatTexturePrecisionTest](FloatTexturePrecisionTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 11 Bit ohne sign, 12 Bit mit sign.  
 

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [KbTriggerWait](KbTriggerWait)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 secs = [KbTriggerWait](KbTriggerWait)(keyCode, [deviceNumber])  
   

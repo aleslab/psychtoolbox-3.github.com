@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSound]] &#8250; [[MOAL]] &#8250; [[wrap]]
+# [alcASASetSource](alcASASetSource)
+## [Psychtoolbox](Psychtoolbox)[PsychSound](PsychSound)[MOAL](MOAL)[wrap](wrap)
 
 rc = alcAsaSetSource(property, sourceid, data);  
   

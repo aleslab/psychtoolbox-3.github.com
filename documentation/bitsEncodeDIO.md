@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BitsPlusToolbox]]
+# [bitsEncodeDIO](bitsEncodeDIO)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BitsPlusToolbox](BitsPlusToolbox)
 
  encodedDIOdata = bitsEncodeDIO(Mask, Data, Command, windowPtr, [setGammaTable])  
    Use it when you want to write DIO synchronised with screen frame.  

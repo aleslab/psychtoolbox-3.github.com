@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychAlphaBlending]]
+# [GL_SRC_COLOR](GL_SRC_COLOR)
+## [Psychtoolbox](Psychtoolbox)[PsychAlphaBlending](PsychAlphaBlending)
 
 constantString=GL\_SRC\_COLOR  
   

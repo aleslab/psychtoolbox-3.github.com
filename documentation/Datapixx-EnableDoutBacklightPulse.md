@@ -1,5 +1,5 @@
 # [Datapixx('EnableDoutBacklightPulse')](Datapixx-EnableDoutBacklightPulse) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 The [VIEWPixx](VIEWPixx) backlight is composed of an array of [LEDs](LEDs). [EnableDoutBacklightPulse](EnableDoutBacklightPulse)  

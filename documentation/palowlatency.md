@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSound]]
+# [palowlatency](palowlatency)
+## [Psychtoolbox](Psychtoolbox)[PsychSound](PsychSound)
 
 Force [GetSecs](GetSecs) and [WaitSecs](WaitSecs) into memory to avoid latency later on:  
 

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [AlphaAdditionTest](AlphaAdditionTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 failFlag=[AlphaAdditionTest](AlphaAdditionTest)([screenNumber])  
   

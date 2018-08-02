@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqSetCal](DaqSetCal)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 err=[DaqSetCal](DaqSetCal)[(DeviceIndex]((DeviceIndex),on)  
 USB-1208FS set CAL output.  

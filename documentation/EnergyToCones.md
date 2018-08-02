@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [EnergyToCones](EnergyToCones)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 cones = [EnergyToCones](EnergyToCones)(wl,energy,S\_cones,T\_cones)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]] &#8250; [[PsychMunsell]]
+# [MunsellHueToAngle](MunsellHueToAngle)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)[PsychMunsell](PsychMunsell)
 
 angle = [MunsellHueToAngle](MunsellHueToAngle)(H1,H2)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[MovieDemos]]
+# [PlayMoviesWithoutGapDemo2](PlayMoviesWithoutGapDemo2)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[MovieDemos](MovieDemos)
 
 [PlayMoviesWithoutGapDemo2](PlayMoviesWithoutGapDemo2)(moviename)  
   

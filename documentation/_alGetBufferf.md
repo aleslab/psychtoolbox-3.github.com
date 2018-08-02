@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSound]] &#8250; [[MOAL]] &#8250; [[wrap]]
+# [_alGetBufferf](_alGetBufferf)
+## [Psychtoolbox](Psychtoolbox)[PsychSound](PsychSound)[MOAL](MOAL)[wrap](wrap)
 
 alGetBufferf  Interface to [OpenAL](OpenAL) function alGetBufferf  
   

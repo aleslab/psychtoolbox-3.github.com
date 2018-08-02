@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDocumentation]]
+# [ConserveVRAMSettings](ConserveVRAMSettings)
+## [Psychtoolbox](Psychtoolbox)[PsychDocumentation](PsychDocumentation)
 
 [ConserveVRAMSettings](ConserveVRAMSettings): Workaround for flawed hardware and drivers  
   

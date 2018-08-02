@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BrightSideDisplay]]
+# [BrightSideHDR](BrightSideHDR)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BrightSideDisplay](BrightSideDisplay)
 
 [BrightSideHDR](BrightSideHDR)(cmd [, arg1][, arg2]) -- Psychtoolbox interface to  
 [BrightSide](BrightSide) Technologies High Dynamic Range display device.  

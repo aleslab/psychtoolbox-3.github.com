@@ -1,5 +1,5 @@
 # [Screen('VideoCaptureDevices')](Screen-VideoCaptureDevices) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Enumerate all available video devices for a given videocapture engine id  

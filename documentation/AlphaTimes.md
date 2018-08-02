@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychAlphaBlending]]
+# [AlphaTimes](AlphaTimes)
+## [Psychtoolbox](Psychtoolbox)[PsychAlphaBlending](PsychAlphaBlending)
 
 matProduct=[AlphaTimes](AlphaTimes)(mat1, alpha)  
   

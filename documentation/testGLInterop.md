@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGPGPU]]
+# [testGLInterop](testGLInterop)
+## [Psychtoolbox](Psychtoolbox)[PsychGPGPU](PsychGPGPU)
 
 Adrian, this function is not yet documented.
 

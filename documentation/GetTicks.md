@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [GetTicks](GetTicks)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 ticks = [GetTicks](GetTicks)  
   

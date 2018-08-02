@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [PhotopigmentNomogram](PhotopigmentNomogram)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
 T\_absorbance = [PhotopigmentNomogram](PhotopigmentNomogram)(S,lambdaMax,[source])  
   

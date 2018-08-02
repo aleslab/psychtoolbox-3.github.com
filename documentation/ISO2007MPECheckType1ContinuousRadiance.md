@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]] &#8250; [[PsychISO2007MPE]]
+# [ISO2007MPECheckType1ContinuousRadiance](ISO2007MPECheckType1ContinuousRadiance)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)[PsychISO2007MPE](PsychISO2007MPE)
 
 [[IsOverLimit](IsOverLimit),[ISO2007MPEStruct](ISO2007MPEStruct)] = [ISO2007MPECheckType1ContinuousRadiance](ISO2007MPECheckType1ContinuousRadiance)(S\_in,radiancein\_WattsPerSrM2,stimulusDurationSecs,stimulusAreaDegrees2,eyeLengthMm)  
   

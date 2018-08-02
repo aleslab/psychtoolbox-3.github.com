@@ -1,5 +1,5 @@
 # [Screen('PlayMovie')](Screen-PlayMovie) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Start playback of movie associated with movieobject 'moviePtr'. 'rate' defines  

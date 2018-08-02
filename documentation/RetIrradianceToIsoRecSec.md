@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [RetIrradianceToIsoRecSec](RetIrradianceToIsoRecSec)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
  [isoPerConeSec,absPerConeSec,photoreceptors] = ...  
         [RetIrradianceToIsoRecSec](RetIrradianceToIsoRecSec)(irradianceWatts,irradianceS,[photoreceptors])  

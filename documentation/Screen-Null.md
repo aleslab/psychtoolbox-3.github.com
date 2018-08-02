@@ -1,5 +1,5 @@
 # [Screen('Null')](Screen-Null) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Special test function for Psychtoolbox testing and developments. Normal users:  

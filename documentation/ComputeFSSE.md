@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGamma]]
+# [ComputeFSSE](ComputeFSSE)
+## [Psychtoolbox](Psychtoolbox)[PsychGamma](PsychGamma)
 
 rmse = [ComputeFSSE](ComputeFSSE)(data,predict)  
   

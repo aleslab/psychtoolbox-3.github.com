@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [TouchEventGet](TouchEventGet)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [event, nremaining] = [TouchEventGet](TouchEventGet)(deviceIndex, windowHandle [, maxWaitTimeSecs=0])  
   

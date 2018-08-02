@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDocumentation]]
+# [VideoRecording](VideoRecording)
+## [Psychtoolbox](Psychtoolbox)[PsychDocumentation](PsychDocumentation)
 
 [VideoRecording](VideoRecording) - Parameter settings, howtos and tips for Video recording.  
   

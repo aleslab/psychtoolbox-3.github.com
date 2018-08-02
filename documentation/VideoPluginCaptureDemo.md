@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [VideoPluginCaptureDemo](VideoPluginCaptureDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 Demonstrate simple use of built-in video marker tracking engine.  
   

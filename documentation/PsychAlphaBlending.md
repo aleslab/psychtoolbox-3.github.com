@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychAlphaBlending]]
+# [PsychAlphaBlending](PsychAlphaBlending)
+## [Psychtoolbox](Psychtoolbox)[PsychAlphaBlending](PsychAlphaBlending)
 
 Psychtoolbox:[PsychAlphaBlending](PsychAlphaBlending)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [ConeIncToDKL](ConeIncToDKL)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 [dkl] = [ConeIncToDKL](ConeIncToDKL)(coneInc,bg)  
   

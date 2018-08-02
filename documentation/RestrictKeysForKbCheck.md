@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [RestrictKeysForKbCheck](RestrictKeysForKbCheck)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 Restrict operation of [KbCheck](KbCheck) et al. to a subset of keys on the keyboard.  
   

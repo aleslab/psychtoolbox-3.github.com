@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqCodes](DaqCodes)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 Command codes for the USB-1208FS Daq.                                         
 0x10    16  [DaqAIn](DaqAIn)                  Read analog in            

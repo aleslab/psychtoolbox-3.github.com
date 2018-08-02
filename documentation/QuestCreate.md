@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Quest]]
+# [QuestCreate](QuestCreate)
+## [Psychtoolbox](Psychtoolbox)[Quest](Quest)
 
  q=[QuestCreate](QuestCreate)(tGuess,tGuessSd,pThreshold,beta,delta,gamma,[grain],[range],[plotIt])  
   

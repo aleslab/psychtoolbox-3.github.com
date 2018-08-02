@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]] &#8250; [[EyelinkTests]]
+# [testcalib](testcalib)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkTests](EyelinkTests)
 
 simple function to test calibration procedures  
 adopted from shorteyelinkdemo  

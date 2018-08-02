@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSound]] &#8250; [[MOAL]]
+# [moaldemo](moaldemo)
+## [Psychtoolbox](Psychtoolbox)[PsychSound](PsychSound)[MOAL](MOAL)
 
 moaldemo - Minimalistic demo on how to use [OpenAL](OpenAL) for  
 3D audio output in Matlab. This is mostly trash code  

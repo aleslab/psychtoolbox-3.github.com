@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [PrimaryToGamut](PrimaryToGamut)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
  [gamut, badIndex] = [PrimaryToGamut](PrimaryToGamut)(cal,primary)  
   

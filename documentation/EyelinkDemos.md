@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]] &#8250; [[EyelinkDemos]]
+# [EyelinkDemos](EyelinkDemos)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkDemos](EyelinkDemos)
 
 [EyelinkToolbox](EyelinkToolbox):[EyelinkDemos](EyelinkDemos)  
 Demos of eyelink toolbox functions and demos  

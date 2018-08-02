@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Quest]]
+# [QuestRecompute](QuestRecompute)
+## [Psychtoolbox](Psychtoolbox)[Quest](Quest)
 
 q=[QuestRecompute](QuestRecompute)(q [,plotIt=0])  
   

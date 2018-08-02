@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [KbQueueCreate](KbQueueCreate)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [KbQueueCreate](KbQueueCreate)([deviceNumber][, keyList][, numValuators=0][, numSlots=10000][, flags=0])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [MaxInd](MaxInd)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 [m,inds] = [MaxInd](MaxInd)(mat)  
 returns maximum of an N-D matrix and the indices at which this maximum  

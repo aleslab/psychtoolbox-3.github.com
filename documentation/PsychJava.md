@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychJava]]
+# [PsychJava](PsychJava)
+## [Psychtoolbox](Psychtoolbox)[PsychJava](PsychJava)
 
 Psychtoolbox:[PsychJava](PsychJava)  
   

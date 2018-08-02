@@ -1,5 +1,5 @@
 # [Datapixx('SetDinLog')](Datapixx-SetDinLog) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Configure digital input transition logging. The log reports rising and falling  

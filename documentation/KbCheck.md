@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [KbCheck](KbCheck)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [keyIsDown, secs, keyCode, deltaSecs] = [KbCheck](KbCheck)([deviceNumber])  
   

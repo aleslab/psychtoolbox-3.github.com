@@ -1,5 +1,5 @@
-# [[PsychOculusVRCore]]
-## [[Psychtoolbox]] &#8250; [[PsychOculusVRCore]].{mex*,dll} subfunction
+# [PsychOculusVRCore](PsychOculusVRCore)
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychOculusVRCore](PsychOculusVRCore)
 
 PsychOculusVRCore - A Psychtoolbox driver for Oculus VR hardware.  
   

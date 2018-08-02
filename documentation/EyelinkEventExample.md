@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]] &#8250; [[EyelinkDemos]] &#8250; [[EyelinkShortDemos]]
+# [EyelinkEventExample](EyelinkEventExample)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkDemos](EyelinkDemos)[EyelinkShortDemos](EyelinkShortDemos)
 
 Short MATLAB example program to demonstrate the use of events  
 with the Eyelink and Psychophysics Toolboxes. When subject gazes at an object  

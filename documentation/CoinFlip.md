@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [CoinFlip](CoinFlip)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 x = [CoinFlip](CoinFlip)(ndraws,p)  
   

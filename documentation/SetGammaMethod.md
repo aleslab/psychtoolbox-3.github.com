@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [SetGammaMethod](SetGammaMethod)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 cal = [SetGammaMethod](SetGammaMethod)(cal,gammaMode,[precision])  
   

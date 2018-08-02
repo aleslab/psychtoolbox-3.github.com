@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [GetSecsTest](GetSecsTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [GetSecsTest](GetSecsTest)([n=100000])  
   

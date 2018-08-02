@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [PrimaryToSettings](PrimaryToSettings)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 [settings, badIndex] = [PrimaryToSettings](PrimaryToSettings)(cal, primary)  
   

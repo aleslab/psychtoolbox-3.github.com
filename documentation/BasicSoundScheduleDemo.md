@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [BasicSoundScheduleDemo](BasicSoundScheduleDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [BasicSoundScheduleDemo](BasicSoundScheduleDemo)([wavfilenames])  
   

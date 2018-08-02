@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychObsolete]]
+# [IsOS9](IsOS9)
+## [Psychtoolbox](Psychtoolbox)[PsychObsolete](PsychObsolete)
 
 resultFlag = [IsOS9](IsOS9)  
   

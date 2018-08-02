@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [ProceduralSmoothedApertureSineGratingDemo](ProceduralSmoothedApertureSineGratingDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [ProceduralSmoothedApertureSineGratingDemo](ProceduralSmoothedApertureSineGratingDemo)([benchmark=0])  
   

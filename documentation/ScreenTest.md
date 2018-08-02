@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [ScreenTest](ScreenTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [ScreenTest](ScreenTest)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [MeasMonXYZ](MeasMonXYZ)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
  XYZ = [MeasMonXYZ](MeasMonXYZ)(window,settings,[syncMode],[whichMeterType])  
   

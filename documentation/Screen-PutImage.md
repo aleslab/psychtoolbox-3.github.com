@@ -1,5 +1,5 @@
 # [Screen('PutImage')](Screen-PutImage) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Copy the matrix "imageArray" to a window, very slowly.  

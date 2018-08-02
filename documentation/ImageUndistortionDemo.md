@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychAlpha]]
+# [ImageUndistortionDemo](ImageUndistortionDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychAlpha](PsychAlpha)
 
 [ImageUndistortionDemo](ImageUndistortionDemo)(calibfilename [, imagefilename])  
   

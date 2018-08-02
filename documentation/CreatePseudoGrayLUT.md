@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [CreatePseudoGrayLUT](CreatePseudoGrayLUT)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 [lut, numuniquelevels] = [CreatePseudoGrayLUT](CreatePseudoGrayLUT)(nativeBpc)  
   

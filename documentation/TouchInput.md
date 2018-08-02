@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDocumentation]]
+# [TouchInput](TouchInput)
+## [Psychtoolbox](Psychtoolbox)[PsychDocumentation](PsychDocumentation)
 
 [TouchInput](TouchInput) - Psychtoolbox support for touch input devices.  
   

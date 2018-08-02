@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [AssertOpenGL](AssertOpenGL)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [AssertOpenGL](AssertOpenGL)  
   

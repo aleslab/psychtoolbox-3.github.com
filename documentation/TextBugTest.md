@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [TextBugTest](TextBugTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [TextBugTest](TextBugTest)  
   

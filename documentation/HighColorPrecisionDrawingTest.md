@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [HighColorPrecisionDrawingTest](HighColorPrecisionDrawingTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [HighColorPrecisionDrawingTest](HighColorPrecisionDrawingTest)([testconfig][, maxdepth][, testblocks][, plotit=0])  
   

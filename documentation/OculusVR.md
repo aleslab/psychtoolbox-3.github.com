@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PsychVRToolbox]]
+# [OculusVR](OculusVR)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PsychVRToolbox](PsychVRToolbox)
 
 [OculusVR](OculusVR) - How to setup Oculus VR head mounted displays.  
   

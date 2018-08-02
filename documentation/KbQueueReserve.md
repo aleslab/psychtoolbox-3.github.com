@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [KbQueueReserve](KbQueueReserve)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 Reserve the keyboard queue of the default keyboard for use by the  
 alternative [GetChar](GetChar)() implementation. This is for internal use only!  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PR655Toolbox]]
+# [PR655parsespdstr](PR655parsespdstr)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PR655Toolbox](PR655Toolbox)
 
 spd = [PR655parsespdstr](PR655parsespdstr)(readStr,S)  
   

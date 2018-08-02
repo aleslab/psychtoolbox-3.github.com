@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[iViewXToolbox]] &#8250; [[tcp_udp_ip]]
+# [webget_demo](webget_demo)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[iViewXToolbox](iViewXToolbox)[tcp_udp_ip](tcp_udp_ip)
 
 WEBGET\_DEMO - Demo webpage downloader, returns a webpage as a string  
   

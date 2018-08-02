@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [hexstr](hexstr)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 str=[hexstr](hexstr)(n)  
 Convert any number to a hex string representing the lower 32 bits,  

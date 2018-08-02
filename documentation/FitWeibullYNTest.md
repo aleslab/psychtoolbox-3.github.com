@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [FitWeibullYNTest](FitWeibullYNTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [FitWeibYNTest](FitWeibYNTest)  
   

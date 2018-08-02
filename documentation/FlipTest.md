@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [FlipTest](FlipTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [FlipTest](FlipTest)  
   

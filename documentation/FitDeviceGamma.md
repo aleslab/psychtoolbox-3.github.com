@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGamma]]
+# [FitDeviceGamma](FitDeviceGamma)
+## [Psychtoolbox](Psychtoolbox)[PsychGamma](PsychGamma)
 
 function [gammaFit,gammaInputFit,fitComment,gammaParams] = ...  
   [FitDeviceGamma](FitDeviceGamma)(gammaRaw,gammaInputRaw,[fitType],[nInputLevels])  

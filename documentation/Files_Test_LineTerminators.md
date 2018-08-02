@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]] &#8250; [[UnitTests]]
+# [Files_Test_LineTerminators](Files_Test_LineTerminators)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)[UnitTests](UnitTests)
 
 Adrian, this function is not yet documented.
 

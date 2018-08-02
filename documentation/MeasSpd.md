@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [MeasSpd](MeasSpd)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
 [spectrum,qual] = [MeasSpd](MeasSpd)([S],[meterType],[syncMode])  
   

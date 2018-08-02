@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [Circle](Circle)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 cirbool = [Circle](Circle)(rad)  
   

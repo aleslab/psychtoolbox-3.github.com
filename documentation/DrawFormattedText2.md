@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [DrawFormattedText2](DrawFormattedText2)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [nx, ny, textbounds, cache, wordbounds] = [DrawFormattedText2](DrawFormattedText2)(tstring, key-value pairs)  
 or:  

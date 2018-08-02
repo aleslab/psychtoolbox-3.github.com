@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [EffectiveTrolandsFromLum](EffectiveTrolandsFromLum)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
  [trolands] = [EffectiveTrolandsFromLum](EffectiveTrolandsFromLum)(lum,[method])  
   

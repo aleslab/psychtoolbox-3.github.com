@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [LoadPsychHID](LoadPsychHID)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [LoadPsychHID](LoadPsychHID) - Try to get [PsychHID](PsychHID) linked and loaded on MS-Windows, no  
 matter what.  

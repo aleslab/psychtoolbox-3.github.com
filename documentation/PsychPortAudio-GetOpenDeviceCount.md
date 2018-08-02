@@ -1,5 +1,5 @@
 # [PsychPortAudio('GetOpenDeviceCount')](PsychPortAudio-GetOpenDeviceCount) 
-## [[Psychtoolbox]] &#8250; [[PsychPortAudio]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Return the number of currently open audio devices.  

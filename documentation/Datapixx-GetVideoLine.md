@@ -1,5 +1,5 @@
 # [Datapixx('GetVideoLine')](Datapixx-GetVideoLine) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Upload pixels from Datapixx internal video receiver line buffer to local host.  

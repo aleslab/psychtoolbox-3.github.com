@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [CreateProceduralGaussBlob](CreateProceduralGaussBlob)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 [blobid, blobrect] = [CreateProceduralGaussBlob](CreateProceduralGaussBlob)(windowPtr, width, height [, backgroundColorOffset =(0,0,0,0)][, disableNorm=0][, contrastPreMultiplicator=1])  
   

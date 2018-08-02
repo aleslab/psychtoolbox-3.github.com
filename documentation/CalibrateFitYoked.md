@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [CalibrateFitYoked](CalibrateFitYoked)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 cal = [CalibrateFitYoked](CalibrateFitYoked)(cal)  
   

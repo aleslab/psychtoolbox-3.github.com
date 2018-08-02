@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [ComputeRawConeFundamentals](ComputeRawConeFundamentals)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
 [T\_quantalAbsorptionsNormalized,T\_quantalAbsorptions,T\_quantalIsomerizations,adjIndDiffParams] = [ComputeRawConeFundamentals](ComputeRawConeFundamentals)(params,staticParams)  
   

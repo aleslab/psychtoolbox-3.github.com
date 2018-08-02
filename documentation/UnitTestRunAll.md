@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [UnitTestRunAll](UnitTestRunAll)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 this script runs all m files in [PsychTests](PsychTests)/[UnitTests](UnitTests), each of which is  
 assumed to be a unittest that is to return true upon success or false  

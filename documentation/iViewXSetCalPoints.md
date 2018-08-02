@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[iViewXToolbox]]
+# [iViewXSetCalPoints](iViewXSetCalPoints)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[iViewXToolbox](iViewXToolbox)
 
 set a number of iviewx default parameters  
 

@@ -1,5 +1,5 @@
 # [Screen('GetOpenGLDrawMode')](Screen-GetOpenGLDrawMode) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Return information about current [OpenGL](OpenGL) rendering state.  

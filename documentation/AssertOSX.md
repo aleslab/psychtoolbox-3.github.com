@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [AssertOSX](AssertOSX)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [AssertOSX](AssertOSX)  
   

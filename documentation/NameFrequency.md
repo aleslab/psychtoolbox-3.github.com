@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [NameFrequency](NameFrequency)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 fName=[NameFrequency](NameFrequency)(fValue, [numDecimalPlaces])  
   

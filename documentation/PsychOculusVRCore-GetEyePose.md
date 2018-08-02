@@ -1,5 +1,5 @@
 # [PsychOculusVRCore('GetEyePose')](PsychOculusVRCore-GetEyePose) 
-## [[Psychtoolbox]] &#8250; [[PsychOculusVRCore]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
 
 
 Return current predicted pose vector for an eye for Oculus device 'oculusPtr'.  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGamma]]
+# [InitialXWeib](InitialXWeib)
+## [Psychtoolbox](Psychtoolbox)[PsychGamma](PsychGamma)
 
 Adrian, this function is not yet documented.
 

@@ -1,5 +1,5 @@
 # [WaitSecs('Version')](WaitSecs-Version) 
-## [[Psychtoolbox]] &#8250; [[WaitSecs]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[WaitSecs](WaitSecs).{mex*} subfunction
 
 
 return the version of [WaitSecs](WaitSecs) in a struct  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [SPDToMetSPD](SPDToMetSPD)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 output = [SPDToMetSPD](SPDToMetSPD)(input,T,B)  
   

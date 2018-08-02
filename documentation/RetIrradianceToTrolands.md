@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]]
+# [RetIrradianceToTrolands](RetIrradianceToTrolands)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)
 
 [trolands] =...  
     [RetIrradianceToTrolands](RetIrradianceToTrolands)(irradianceWatts,irradianceS,[photopic],[species],[source])  

@@ -1,5 +1,5 @@
 # [Datapixx('EnableAudioLoopback')](Datapixx-EnableAudioLoopback) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Enable an internal loopback from the audio outputs to the audio inputs. This  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOpenGL]]
+# [eyePoseToCameraGLModelviewMatrix](eyePoseToCameraGLModelviewMatrix)
+## [Psychtoolbox](Psychtoolbox)[PsychOpenGL](PsychOpenGL)
 
 eyePoseToCameraGLModelviewMatrix() - Convert eyePose directly to [OpenGL](OpenGL) modelview matrix.  
   

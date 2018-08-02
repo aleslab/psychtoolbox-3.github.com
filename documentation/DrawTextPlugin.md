@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDocumentation]]
+# [DrawTextPlugin](DrawTextPlugin)
+## [Psychtoolbox](Psychtoolbox)[PsychDocumentation](PsychDocumentation)
 
 [DrawTextPlugin](DrawTextPlugin) -- The plugin-based [Screen](Screen)('DrawText') text renderer.  
   

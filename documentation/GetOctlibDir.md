@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [GetOctlibDir](GetOctlibDir)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [GetOctlibDir](GetOctlibDir) -- Get path to Octave runtime libraries  
   

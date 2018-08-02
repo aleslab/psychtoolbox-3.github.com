@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [SortCell](SortCell)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
  [SortCell](SortCell)    Sort a cell array in ascending order.  
   

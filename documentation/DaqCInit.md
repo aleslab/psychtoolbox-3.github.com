@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqCInit](DaqCInit)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 err=[DaqCInit](DaqCInit)[(DeviceIndex)]((DeviceIndex))  
 USB-1208FS: Initialize counter to zero.  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PR650Toolbox]]
+# [PR650setsyncfreq](PR650setsyncfreq)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PR650Toolbox](PR650Toolbox)
 
 [PR650setsyncfreq](PR650setsyncfreq)(syncFreq)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PsychGamepad]]
+# [Gamepad](Gamepad)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PsychGamepad](PsychGamepad)
 
 result = Gamepad(command [,arg1] [,arg2])  
   

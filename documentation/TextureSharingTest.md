@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [TextureSharingTest](TextureSharingTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [TextureSharingTest](TextureSharingTest) -- Test [OpenGL](OpenGL) context resource sharing.  
   

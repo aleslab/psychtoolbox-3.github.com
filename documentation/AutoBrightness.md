@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychContributed]] &#8250; [[AutoBrightness]]
+# [AutoBrightness](AutoBrightness)
+## [Psychtoolbox](Psychtoolbox)[PsychContributed](PsychContributed)[AutoBrightness](AutoBrightness)
 
 [oldSetting, status] = [AutoBrightness](AutoBrightness)([screenNumber=0][, newSetting])  
   

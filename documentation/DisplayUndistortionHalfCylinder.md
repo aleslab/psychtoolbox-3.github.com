@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [DisplayUndistortionHalfCylinder](DisplayUndistortionHalfCylinder)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 Create geometric display calibration file for projection onto a cylinder or sphere.  
   

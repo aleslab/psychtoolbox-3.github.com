@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [PsychCal](PsychCal)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 Psychtoolbox:[PsychCal](PsychCal).  
   

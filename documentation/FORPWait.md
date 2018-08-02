@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[FORP]]
+# [FORPWait](FORPWait)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[FORP](FORP)
 
 [FORPWait](FORPWait)     Checks for the specified amount of time, if a button of a FORP device  
              (tested for HH-5-CYL) is pressed , returns if a button has been  

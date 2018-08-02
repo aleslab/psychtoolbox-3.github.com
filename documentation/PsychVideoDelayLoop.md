@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychVideoCapture]]
+# [PsychVideoDelayLoop](PsychVideoDelayLoop)
+## [Psychtoolbox](Psychtoolbox)[PsychVideoCapture](PsychVideoCapture)
 
 [PsychVideoDelayLoop](PsychVideoDelayLoop)(subcommand, arg1, arg2, ...)  
   

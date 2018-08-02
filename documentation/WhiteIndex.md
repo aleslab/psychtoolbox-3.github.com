@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [WhiteIndex](WhiteIndex)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 color=[WhiteIndex](WhiteIndex)(windowPtrOrScreenNumber)  
 Returns the intensity value to produce white at the current screen depth,  

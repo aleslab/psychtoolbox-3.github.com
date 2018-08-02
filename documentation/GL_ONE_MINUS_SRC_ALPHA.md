@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychAlphaBlending]]
+# [GL_ONE_MINUS_SRC_ALPHA](GL_ONE_MINUS_SRC_ALPHA)
+## [Psychtoolbox](Psychtoolbox)[PsychAlphaBlending](PsychAlphaBlending)
 
 constantString=GL\_ONE\_MINUS\_SRC\_ALPHA  
   

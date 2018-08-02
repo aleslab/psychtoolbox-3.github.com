@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [BitsPlusPlusTLockBlitterTest](BitsPlusPlusTLockBlitterTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [BitsPlusPlusTLockBlitterTest](BitsPlusPlusTLockBlitterTest)([screenId])  
   

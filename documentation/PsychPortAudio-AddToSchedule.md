@@ -1,5 +1,5 @@
 # [PsychPortAudio('AddToSchedule')](PsychPortAudio-AddToSchedule) 
-## [[Psychtoolbox]] &#8250; [[PsychPortAudio]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Add a new item to an existing schedule for audio playback on audio device  

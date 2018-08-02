@@ -1,5 +1,5 @@
 # [FontInfo('Version')](FontInfo-Version) 
-## [[Psychtoolbox]] &#8250; [[FontInfo]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[FontInfo](FontInfo).{mex*} subfunction
 
 
 return the version of [FontInfo](FontInfo) in a struct  

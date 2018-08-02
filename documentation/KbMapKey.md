@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [KbMapKey](KbMapKey)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 q = [KbMapKey](KbMapKey)[(KeyNums]((KeyNums),keyCode)  
 Checks if any of specified keys is depressed  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [AnyAll](AnyAll)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 [q] = [AnyAll](AnyAll)(in)  
 returns true if any element of IN is non-zeros, false otherwise  

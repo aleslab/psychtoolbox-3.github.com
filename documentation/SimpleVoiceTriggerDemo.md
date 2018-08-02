@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [SimpleVoiceTriggerDemo](SimpleVoiceTriggerDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [SimpleVoiceTriggerDemo](SimpleVoiceTriggerDemo)(triggerlevel)  
   

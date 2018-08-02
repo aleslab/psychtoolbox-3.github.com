@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [kPsychNeedDualWindowOutput](kPsychNeedDualWindowOutput)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 rval = kPsychNeedDualWindowOutput  
   

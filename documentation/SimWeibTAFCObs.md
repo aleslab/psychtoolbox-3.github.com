@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [SimWeibTAFCObs](SimWeibTAFCObs)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 response = [SimWeibTAFCObs](SimWeibTAFCObs)(log10Intensity,alpha,beta)  
   

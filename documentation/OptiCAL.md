@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [OptiCAL](OptiCAL)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
 [OptiCAL](OptiCAL) - Psychtoolbox [IOPort](IOPort) interface to the CRS [OptiCAL](OptiCAL) luminance  
           meter device  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]] &#8250; [[EyelinkDemos]] &#8250; [[GazeContingentDemos]]
+# [EyelinkBubbleDemo](EyelinkBubbleDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkDemos](EyelinkDemos)[GazeContingentDemos](GazeContingentDemos)
 
   
 Demo implementation of a generic bubble display.  

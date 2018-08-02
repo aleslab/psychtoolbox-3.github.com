@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [PsychProbability](PsychProbability)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 Psychtoolbox:[PsychProbability](PsychProbability).  
   

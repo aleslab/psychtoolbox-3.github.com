@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDocumentation]]
+# [DisplayOutputMappings](DisplayOutputMappings)
+## [Psychtoolbox](Psychtoolbox)[PsychDocumentation](PsychDocumentation)
 
 [DisplayOutputMappings](DisplayOutputMappings) -- How they work, how to resolve problems.  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [CreateProceduralSquareWaveGrating](CreateProceduralSquareWaveGrating)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 [gratingid, gratingrect] = [CreateProceduralSquareWaveGrating](CreateProceduralSquareWaveGrating)(windowPtr, width, height [, backgroundColorOffset =(0,0,0,0)] [, radius=inf][, contrastPreMultiplicator=1])  
   

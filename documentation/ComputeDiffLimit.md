@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOptics]]
+# [ComputeDiffLimit](ComputeDiffLimit)
+## [Psychtoolbox](Psychtoolbox)[PsychOptics](PsychOptics)
 
 s0 = [ComputeDiffLimit](ComputeDiffLimit)(pupil,nm)  
   

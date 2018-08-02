@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [UnionRect](UnionRect)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
 newRect = [UnionRect](UnionRect)(a,b)  
   

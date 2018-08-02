@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOpenGL]]
+# [moglDrawDots3D](moglDrawDots3D)
+## [Psychtoolbox](Psychtoolbox)[PsychOpenGL](PsychOpenGL)
 
 Draw a large number of dots in 3D very efficiently.  
   

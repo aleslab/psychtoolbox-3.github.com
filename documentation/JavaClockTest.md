@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [JavaClockTest](JavaClockTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [JavaClockTest](JavaClockTest)  
   

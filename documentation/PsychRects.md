@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [PsychRects](PsychRects)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
 Psychtoolbox:[PsychRects](PsychRects).  
   

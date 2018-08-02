@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]] &#8250; [[PsychISO2007MPE]]
+# [ISO2007MPEComputeType1ContinuousRetIrradianceTHWeightedValue](ISO2007MPEComputeType1ContinuousRetIrradianceTHWeightedValue)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)[PsychISO2007MPE](PsychISO2007MPE)
 
 function [val\_UWattsPerCm2,limit\_UWattsPerCm2] = [ISO2007MPEComputeType1ContinuousRetIrradianceTHWeightedValue](ISO2007MPEComputeType1ContinuousRetIrradianceTHWeightedValue)(...  
   S,radiance\_WattsPerSrM2,weightingR,stimulusDurationSecs,[eyeLengthMm])  

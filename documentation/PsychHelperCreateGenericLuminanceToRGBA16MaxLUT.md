@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [PsychHelperCreateGenericLuminanceToRGBA16MaxLUT](PsychHelperCreateGenericLuminanceToRGBA16MaxLUT)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 luttex = [PsychHelperCreateGenericLuminanceToRGBA16MaxLUT](PsychHelperCreateGenericLuminanceToRGBA16MaxLUT)(lut, targetBpc, win);  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]] &#8250; [[EyelinkBasic]]
+# [EyelinkUpdateDefaults](EyelinkUpdateDefaults)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkBasic](EyelinkBasic)
 
 USAGE = [EyelinkUpdateDefaults](EyelinkUpdateDefaults)(el)   
   

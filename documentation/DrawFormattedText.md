@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [DrawFormattedText](DrawFormattedText)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [nx, ny, textbounds, wordbounds] = [DrawFormattedText](DrawFormattedText)(win, tstring [, sx][, sy][, color][, wrapat][, flipHorizontal][, flipVertical][, vSpacing][, righttoleft][, winRect])  
   

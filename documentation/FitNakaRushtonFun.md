@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [FitNakaRushtonFun](FitNakaRushtonFun)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 [f] = [FitNakaRushtonFun](FitNakaRushtonFun)(params,contrast,response)  
   

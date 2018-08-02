@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PR705Toolbox]]
+# [PR705init](PR705init)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PR705Toolbox](PR705Toolbox)
 
 [PR705init](PR705init) - Initialize the serial port to talk to the PR-705.  
   

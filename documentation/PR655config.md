@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PR655Toolbox]]
+# [PR655config](PR655config)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PR655Toolbox](PR655Toolbox)
 
 Update PR-655 configuration according to configIN. If no input is provided, return the current  
 configuration string.  

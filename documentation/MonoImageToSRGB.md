@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [MonoImageToSRGB](MonoImageToSRGB)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 rgbImage = [MonoImageToSRGB](MonoImageToSRGB)(monoImage,xy,[SCALE])  
   

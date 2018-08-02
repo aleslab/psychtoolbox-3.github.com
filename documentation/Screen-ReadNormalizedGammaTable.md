@@ -1,5 +1,5 @@
 # [Screen('ReadNormalizedGammaTable')](Screen-ReadNormalizedGammaTable) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Reads and returns the gamma table 'gammatable' of the specified screen or window  

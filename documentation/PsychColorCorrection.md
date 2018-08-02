@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [PsychColorCorrection](PsychColorCorrection)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 varargout = [PsychColorCorrection](PsychColorCorrection)(cmd, varargin)  
   

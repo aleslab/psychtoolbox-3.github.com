@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [PredictVisualOnsetForTime](PredictVisualOnsetForTime)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 tonset = [PredictVisualOnsetForTime](PredictVisualOnsetForTime)(window, when [, refreshinterval])  
   

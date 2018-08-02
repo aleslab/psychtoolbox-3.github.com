@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqCIn](DaqCIn)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 count=[DaqCIn](DaqCIn)[(DeviceIndex)]((DeviceIndex))  
 USB-1208FS: Read counter.  

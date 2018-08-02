@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BitsPlusToolbox]] &#8250; [[BitsPlusTests]]
+# [BitsPlusIdentityClutTest](BitsPlusIdentityClutTest)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BitsPlusToolbox](BitsPlusToolbox)[BitsPlusTests](BitsPlusTests)
 
 Test signal transmission from the framebuffer to your CRS Bits+/Bits\#  
 device or [VPixx](VPixx) Inc. [DataPixx](DataPixx)/[ViewPixx](ViewPixx)/Propixx device and similar CRS and  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [RectOfMatrix](RectOfMatrix)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
 rect = [RectOfMatrix](RectOfMatrix)(mat)  
   

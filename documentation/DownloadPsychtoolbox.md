@@ -1,4 +1,5 @@
-## [[Psychtoolbox]]
+# [DownloadPsychtoolbox](DownloadPsychtoolbox)
+## [Psychtoolbox](Psychtoolbox)
 
 [DownloadPsychtoolbox](DownloadPsychtoolbox)([targetdirectory][, flavor][, targetRevision])  
   

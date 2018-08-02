@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]]
+# [PsychRadiometric](PsychRadiometric)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)
 
 Psychtoolbox:[PsychRadiometric](PsychRadiometric).  
   

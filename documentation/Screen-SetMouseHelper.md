@@ -1,5 +1,5 @@
 # [Screen('SetMouseHelper')](Screen-SetMouseHelper) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 This is a helper function called by [SetMouse](SetMouse).  Do not call  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [Struct2Vect](Struct2Vect)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 vec = [Struct2Vect](Struct2Vect)(struc,fieldnm)  
 Traverses array of structs STRUC and returns data from all fields FIELDNM  

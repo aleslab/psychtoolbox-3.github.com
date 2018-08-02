@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [Scale](Scale)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 output = [Scale](Scale)(input)  
 Perform an affine scaling to put data in range [0-1].  

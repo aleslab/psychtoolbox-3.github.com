@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [ClockRandSeed](ClockRandSeed)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 [seed,whichGen] = [ClockRandSeed](ClockRandSeed)([seed],[whichGen])  
 [ClockRandSeed](ClockRandSeed) seeds the random number from the time-of-day clock or another  

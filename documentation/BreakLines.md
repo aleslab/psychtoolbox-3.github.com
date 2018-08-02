@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychFiles]]
+# [BreakLines](BreakLines)
+## [Psychtoolbox](Psychtoolbox)[PsychFiles](PsychFiles)
 
 strArray=[BreakLines](BreakLines)(str)  
   

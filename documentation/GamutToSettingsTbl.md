@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [GamutToSettingsTbl](GamutToSettingsTbl)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 [settings] = [GamutToSettingsTbl](GamutToSettingsTbl)(iGammaTable,gamut)  
   

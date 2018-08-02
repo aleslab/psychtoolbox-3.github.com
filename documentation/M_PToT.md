@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [M_PToT](M_PToT)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 [M] = M\_PToT(Psource,Tdest)  
 [M,dest] = M\_PToT(Psource,Tdest,source)  

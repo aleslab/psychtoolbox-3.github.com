@@ -1,5 +1,5 @@
 # [Datapixx('DisableDoutButtonSchedules')](Datapixx-DisableDoutButtonSchedules) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Disable internal loopback from the digital outputs to the digital inputs. This  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [HideCursor](HideCursor)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [HideCursor](HideCursor)([screenid=0][, mouseid])  
   

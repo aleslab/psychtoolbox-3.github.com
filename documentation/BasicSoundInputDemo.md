@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [BasicSoundInputDemo](BasicSoundInputDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [BasicSoundInputDemo](BasicSoundInputDemo)([wavfilename] [, voicetrigger=0] [, maxsecs=inf])  
   

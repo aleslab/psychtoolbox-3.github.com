@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Quest]]
+# [QuestSimulate](QuestSimulate)
+## [Psychtoolbox](Psychtoolbox)[Quest](Quest)
 
 response=[QuestSimulate](QuestSimulate)(q,intensity,tActual [,plotIt])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [kPsychNeed32BPCFloat](kPsychNeed32BPCFloat)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 rval = kPsychNeed32BPCFloat  
   

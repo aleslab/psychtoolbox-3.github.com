@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [KbQueueCheck](KbQueueCheck)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
  [pressed, firstPress, firstRelease, lastPress, lastRelease] = [KbQueueCheck](KbQueueCheck)([deviceIndex])  
   

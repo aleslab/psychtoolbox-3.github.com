@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [PanelFitterDemo](PanelFitterDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [PanelFitterDemo](PanelFitterDemo) - Demonstrate use of the panel fitter.  
   

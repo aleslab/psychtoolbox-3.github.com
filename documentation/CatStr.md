@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [CatStr](CatStr)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 string=[CatStr](CatStr)(stringArray)  
 The supplied array or cell array of strings is concatenated, to make one string.  

@@ -1,5 +1,5 @@
 # [Screen('glTranslate')](Screen-glTranslate) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Define a translation by (tx, ty, tz) in space, relative to the enclosing  

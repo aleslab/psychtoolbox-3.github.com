@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [CalibrateMonDrvr](CalibrateMonDrvr)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 cal = [CalibrateMonDrvr](CalibrateMonDrvr)(cal,USERPROMPT,whichMeterType,blankOtherScreen)  
   

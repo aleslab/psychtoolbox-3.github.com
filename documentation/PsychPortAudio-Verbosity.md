@@ -1,5 +1,5 @@
 # [PsychPortAudio('Verbosity')](PsychPortAudio-Verbosity) 
-## [[Psychtoolbox]] &#8250; [[PsychPortAudio]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Set level of verbosity for error/warning/status messages. 'level' optional, new  

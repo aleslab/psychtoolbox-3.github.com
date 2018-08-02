@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychJava]]
+# [IsPsychJavaPathSet](IsPsychJavaPathSet)
+## [Psychtoolbox](Psychtoolbox)[PsychJava](PsychJava)
 
 isSet=[IsPsychJavaPathSet](IsPsychJavaPathSet)(newValue)  
   

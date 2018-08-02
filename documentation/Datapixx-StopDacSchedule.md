@@ -1,5 +1,5 @@
 # [Datapixx('StopDacSchedule')](Datapixx-StopDacSchedule) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Stop running a DAC waveform playback schedule. The actual hardware schedule will  

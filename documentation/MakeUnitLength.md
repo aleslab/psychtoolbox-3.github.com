@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [MakeUnitLength](MakeUnitLength)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 output = [MakeUnitLength](MakeUnitLength)(input)  
   

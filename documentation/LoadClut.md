@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [LoadClut](LoadClut)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [err]=[LoadClut](LoadClut)(windowPtrOrScreenNumber,clut,[startEntry],[bits])  
   

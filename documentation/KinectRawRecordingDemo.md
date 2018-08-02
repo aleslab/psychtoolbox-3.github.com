@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychAlpha]]
+# [KinectRawRecordingDemo](KinectRawRecordingDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychAlpha](PsychAlpha)
 
 [KinectRawRecordingDemo](KinectRawRecordingDemo) - Capture, display and record video and depths data from a Kinect box.  
   

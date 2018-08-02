@@ -1,5 +1,5 @@
 # [PsychOculusVRCore('Close')](PsychOculusVRCore-Close) 
-## [[Psychtoolbox]] &#8250; [[PsychOculusVRCore]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
 
 
 [Close](Close) connection to Oculus Rift device 'oculusPtr'. Do nothing if no such device  

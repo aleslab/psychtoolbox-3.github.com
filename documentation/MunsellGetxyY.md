@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]] &#8250; [[PsychMunsell]]
+# [MunsellGetxyY](MunsellGetxyY)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)[PsychMunsell](PsychMunsell)
 
 [xyY,Xx,trix,Xy,triy,XY,triY] = [MunsellGetxyY](MunsellGetxyY)(angle,value,chroma,munsellData[,Xx,trix,Xy,triy,XY,triY])  
   

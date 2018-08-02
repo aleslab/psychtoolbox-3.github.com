@@ -1,5 +1,5 @@
 # [PsychPortAudio('OpenSlave')](PsychPortAudio-OpenSlave) 
-## [[Psychtoolbox]] &#8250; [[PsychPortAudio]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Open a virtual slave audio device and initialize it. Returns a 'pahandle' device  

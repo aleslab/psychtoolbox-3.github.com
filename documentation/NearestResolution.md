@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [NearestResolution](NearestResolution)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 res=[NearestResolution](NearestResolution)(screenNumber,[width,height,hz,pixelSize])  
 res=[NearestResolution](NearestResolution)(screenNumber [,width][,height][,hz][,pixelSize][,outputId])  

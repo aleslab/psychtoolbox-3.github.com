@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [DrawingIntoTexturesTest](DrawingIntoTexturesTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 Adrian, this function is not yet documented.
 

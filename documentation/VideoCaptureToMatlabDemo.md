@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [VideoCaptureToMatlabDemo](VideoCaptureToMatlabDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [VideoCaptureToMatlabDemo](VideoCaptureToMatlabDemo)([deviceIndex])  
   

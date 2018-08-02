@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSound]] &#8250; [[MOAL]] &#8250; [[source]]
+# [makefile_windows](makefile_windows)
+## [Psychtoolbox](Psychtoolbox)[PsychSound](PsychSound)[MOAL](MOAL)[source](source)
 
 Makefile for building the moalcore MEX file for Matlab+[OpenAL](OpenAL) under  
 MS-Windows. Call it while inside the .../MOAL/source folder. You'll  

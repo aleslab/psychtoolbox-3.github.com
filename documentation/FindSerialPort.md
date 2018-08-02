@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [FindSerialPort](FindSerialPort)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
 Syntax: [PortNumber](PortNumber) = [FindSerialPort](FindSerialPort)([[PortString](PortString)][, forIOPort=1][, dontFail=0])  
   

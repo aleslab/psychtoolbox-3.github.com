@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PsychGamepad]]
+# [HatRightUp](HatRightUp)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PsychGamepad](PsychGamepad)
 
 result = [HatRightUp](HatRightUp)  
 Return a constant for hat right and up position.  To read a hat position, use:  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [OrientationBandpass](OrientationBandpass)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 w=orientationBandpass(size,oLow,oHigh) returns a "window", i.e. a matrix  
 meant to be used as a band-pass filter. The matrix size is mxn if "size"  

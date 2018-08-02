@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [MakeMonoPrimary](MakeMonoPrimary)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 primary = [MakeMonoPrimary](MakeMonoPrimary)(wl,S)  
   

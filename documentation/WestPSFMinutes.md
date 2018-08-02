@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOptics]]
+# [WestPSFMinutes](WestPSFMinutes)
+## [Psychtoolbox](Psychtoolbox)[PsychOptics](PsychOptics)
 
 WESTPSFMINUTES  Compute Westheimer estimate of human PSF  
    psf = [WestPSFMinutes](WestPSFMinutes)(radius)  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[OpenGL4MatlabDemos]]
+# [VRHMDDemo1](VRHMDDemo1)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[OpenGL4MatlabDemos](OpenGL4MatlabDemos)
 
 [VRHMDDemo1](VRHMDDemo1) -- Show 3D stereo display via MOGL [OpenGL](OpenGL) on a VR headset.  
   

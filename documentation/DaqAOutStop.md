@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqAOutStop](DaqAOutStop)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 err=[DaqAOutStop](DaqAOutStop)[(DeviceIndex)]((DeviceIndex))  
 USB-1208FS stop analog output scan.  

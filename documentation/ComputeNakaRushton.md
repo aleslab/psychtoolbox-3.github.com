@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [ComputeNakaRushton](ComputeNakaRushton)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 [response] =  [ComputeNakaRushton](ComputeNakaRushton)(params,contrast)  
   

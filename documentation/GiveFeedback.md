@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [GiveFeedback](GiveFeedback)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
  [GiveFeedback](GiveFeedback)(correct)  
   

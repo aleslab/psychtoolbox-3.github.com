@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [ProceduralSmoothedDiscsDemo](ProceduralSmoothedDiscsDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [ProceduralSmoothedDiscsDemo](ProceduralSmoothedDiscsDemo)([ndiscs=200]) -- An aquarium full of discs!  
   

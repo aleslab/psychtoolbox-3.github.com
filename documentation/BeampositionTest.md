@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [BeampositionTest](BeampositionTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [BeampositionTest](BeampositionTest) - Test GPU scanout position ("beamposition") queries.  
   

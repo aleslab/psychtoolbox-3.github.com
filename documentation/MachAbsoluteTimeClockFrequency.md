@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [MachAbsoluteTimeClockFrequency](MachAbsoluteTimeClockFrequency)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 timebaseFrequencyHz = [MachAbsoluteTimeClockFrequency](MachAbsoluteTimeClockFrequency)  
   

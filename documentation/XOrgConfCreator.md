@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [XOrgConfCreator](XOrgConfCreator)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
 [XOrgConfCreator](XOrgConfCreator) - Automatically create X11 config files.  
   

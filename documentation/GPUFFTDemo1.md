@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[GPGPUDemos]]
+# [GPUFFTDemo1](GPUFFTDemo1)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[GPGPUDemos](GPGPUDemos)
 
 [GPUFFTDemo1](GPUFFTDemo1)([fwidth=11]) - Demonstrate use of GPGPU computing for 2D-FFT.  
   

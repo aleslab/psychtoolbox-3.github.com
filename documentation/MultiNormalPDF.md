@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [MultiNormalPDF](MultiNormalPDF)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 prob = [NormalPDF](NormalPDF)(x,u,K)  
   

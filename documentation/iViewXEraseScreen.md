@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[iViewXToolbox]]
+# [iViewXEraseScreen](iViewXEraseScreen)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[iViewXToolbox](iViewXToolbox)
 
 OS X version  
 

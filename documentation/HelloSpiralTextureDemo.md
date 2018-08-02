@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[ECVP2013]]
+# [HelloSpiralTextureDemo](HelloSpiralTextureDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[ECVP2013](ECVP2013)
 
 [SpiralTextureDemo](SpiralTextureDemo)  
 

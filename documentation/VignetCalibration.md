@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [VignetCalibration](VignetCalibration)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
  s = [VignetCalibration](VignetCalibration)([filename] [, screenId])  
   

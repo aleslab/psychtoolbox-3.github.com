@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [VBLSyncTest](VBLSyncTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [VBLSyncTest](VBLSyncTest)(n, numifis, loadjitter, clearmode, stereo, flushpipe, synchronous, usedpixx, screenNumber)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychInitialize]]
+# [PsychStartup](PsychStartup)
+## [Psychtoolbox](Psychtoolbox)[PsychInitialize](PsychInitialize)
 
 [PsychStartup](PsychStartup) -- Perform Psychtoolbox related setup at Matlab/Octave startup.  
   

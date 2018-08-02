@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychInitialize]]
+# [IsStartUpdateImplantedInFinish](IsStartUpdateImplantedInFinish)
+## [Psychtoolbox](Psychtoolbox)[PsychInitialize](PsychInitialize)
 
 isImplanted=[IsStartUpdateImplantedInFinish](IsStartUpdateImplantedInFinish)  
   

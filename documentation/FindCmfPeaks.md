@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [FindCmfPeaks](FindCmfPeaks)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
  [peakWls,peakVals] = [FindCmfPeaks](FindCmfPeaks)(S\_xxx,T\_xxx)  
   

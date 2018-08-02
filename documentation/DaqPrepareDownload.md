@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqPrepareDownload](DaqPrepareDownload)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 err=[DaqPrepareDownload](DaqPrepareDownload)[(DeviceIndex]((DeviceIndex),[[ProgramModeFlag](ProgramModeFlag)])  
 USB-1208FS: Prepare for program memory download. This command puts the  

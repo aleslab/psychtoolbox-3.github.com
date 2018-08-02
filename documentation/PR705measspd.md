@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PR705Toolbox]]
+# [PR705measspd](PR705measspd)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PR705Toolbox](PR705Toolbox)
 
 [PR705measspd](PR705measspd) - Get a spectral power distribution from the PR-705.  
   

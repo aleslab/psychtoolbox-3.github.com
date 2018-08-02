@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Quest]]
+# [QuestPdf](QuestPdf)
+## [Psychtoolbox](Psychtoolbox)[Quest](Quest)
 
 p=[QuestPdf](QuestPdf)(q,t)  
   

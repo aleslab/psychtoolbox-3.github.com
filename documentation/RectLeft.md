@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [RectLeft](RectLeft)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
 xLeft = rect[(RectLeft)]((RectLeft))  
   

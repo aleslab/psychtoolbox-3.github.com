@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [MergeCell](MergeCell)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 Merges contents of multiple cell arrays into one big cell array  
   

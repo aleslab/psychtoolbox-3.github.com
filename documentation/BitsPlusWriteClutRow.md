@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BitsPlusToolbox]]
+# [BitsPlusWriteClutRow](BitsPlusWriteClutRow)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BitsPlusToolbox](BitsPlusToolbox)
 
 checkRow=[BitsPlusWriteClutRow](BitsPlusWriteClutRow)(window,bitsPlusClutRow)  
   

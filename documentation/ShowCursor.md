@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [ShowCursor](ShowCursor)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 oldType = [ShowCursor](ShowCursor)([type] [, screenid][, mouseid])  
   

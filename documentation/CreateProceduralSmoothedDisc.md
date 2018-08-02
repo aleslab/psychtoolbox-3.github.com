@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [CreateProceduralSmoothedDisc](CreateProceduralSmoothedDisc)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 [discid, discrect] = [CreateProceduralSmoothedDisc](CreateProceduralSmoothedDisc)(windowPtr, width, height   
 [, backgroundColorOffset =(0,0,0,0)] [, radius=inf] [, sigma=11] [,useAlpha=1] [,method=1])  

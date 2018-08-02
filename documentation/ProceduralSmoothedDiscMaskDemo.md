@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [ProceduralSmoothedDiscMaskDemo](ProceduralSmoothedDiscMaskDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [ProceduralSmoothedDiscMaskDemo](ProceduralSmoothedDiscMaskDemo)([ndiscs=700]) -- An aquarium full of discs  
 within a centered mask.  

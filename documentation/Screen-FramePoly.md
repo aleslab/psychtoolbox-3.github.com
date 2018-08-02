@@ -1,5 +1,5 @@
 # [Screen('FramePoly')](Screen-FramePoly) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Draw a polygon frame. "color" is the clut index (scalar or [r g b a] vector)  

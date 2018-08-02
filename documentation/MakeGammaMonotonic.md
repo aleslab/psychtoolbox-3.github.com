@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGamma]]
+# [MakeGammaMonotonic](MakeGammaMonotonic)
+## [Psychtoolbox](Psychtoolbox)[PsychGamma](PsychGamma)
 
 output = [MakeGammaMonotonic](MakeGammaMonotonic)(input)  
   

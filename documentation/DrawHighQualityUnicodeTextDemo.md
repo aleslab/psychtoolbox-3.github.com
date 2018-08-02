@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [DrawHighQualityUnicodeTextDemo](DrawHighQualityUnicodeTextDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [DrawHighQualityUnicodeTextDemo](DrawHighQualityUnicodeTextDemo)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [TouchQueueCreate](TouchQueueCreate)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [TouchQueueCreate](TouchQueueCreate)(windowHandle, deviceNumber [, numSlots=100000][, numValuators=auto][, keyList=all])  
   

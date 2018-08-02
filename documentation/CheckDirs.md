@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychFiles]]
+# [CheckDirs](CheckDirs)
+## [Psychtoolbox](Psychtoolbox)[PsychFiles](PsychFiles)
 
 [CheckDirs](CheckDirs)(dirs,mode):  
 Iterates over all fields in struct 'dirs' and checks whether the Contents are existing directory addresses.  

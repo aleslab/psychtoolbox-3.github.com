@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]]
+# [QuantaToEnergy](QuantaToEnergy)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)
 
 energy = [QuantaToEnergy](QuantaToEnergy)(wls,quanta)  
   

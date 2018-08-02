@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]] &#8250; [[EyelinkOneLiners]]
+# [EyelinkGetEyeTracked](EyelinkGetEyeTracked)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkOneLiners](EyelinkOneLiners)
 
 get eye information and send message for EDF file  
 returns el.RIGHT\_EYE or el.LEFT\_EYE +1, for array access  

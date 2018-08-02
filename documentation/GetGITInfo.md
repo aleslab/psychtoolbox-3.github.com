@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [GetGITInfo](GetGITInfo)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
  gitInfo = [GetGITInfo](GetGITInfo)(directory)  
   

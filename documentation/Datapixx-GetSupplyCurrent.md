@@ -1,5 +1,5 @@
 # [Datapixx('GetSupplyCurrent')](Datapixx-GetSupplyCurrent) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns current (in Amps) being supplied from external +5V AC adaptor. This  

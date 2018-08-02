@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Quest]]
+# [QuestUpdate](QuestUpdate)
+## [Psychtoolbox](Psychtoolbox)[Quest](Quest)
 
 q=[QuestUpdate](QuestUpdate)(q,intensity,response)  
   

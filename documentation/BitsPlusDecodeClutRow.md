@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BitsPlusToolbox]]
+# [BitsPlusDecodeClutRow](BitsPlusDecodeClutRow)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BitsPlusToolbox](BitsPlusToolbox)
 
 Recover the 256x3 CLUT table from the 1x524x3 encoded form that we write into  
 the first line of the Bits++ image.  

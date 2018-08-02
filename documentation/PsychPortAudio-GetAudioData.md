@@ -1,5 +1,5 @@
 # [PsychPortAudio('GetAudioData')](PsychPortAudio-GetAudioData) 
-## [[Psychtoolbox]] &#8250; [[PsychPortAudio]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Retrieve captured audio data from a audio device. 'pahandle' is the handle of  

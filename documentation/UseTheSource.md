@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDocumentation]]
+# [UseTheSource](UseTheSource)
+## [Psychtoolbox](Psychtoolbox)[PsychDocumentation](PsychDocumentation)
 
 [UseTheSource](UseTheSource) - How to access the Psychtoolbox source code.  
   

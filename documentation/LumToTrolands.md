@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [LumToTrolands](LumToTrolands)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 trolands = [LumToTrolands](LumToTrolands)(luminance,pupilAreaMM)  
   

@@ -1,5 +1,5 @@
 # [Screen('GetMovieImage')](Screen-GetMovieImage) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Try to fetch a new texture image from movie object 'moviePtr' for visual  

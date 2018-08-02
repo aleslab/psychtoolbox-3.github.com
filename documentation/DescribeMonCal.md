@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [DescribeMonCal](DescribeMonCal)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 same = [DescribeMonCal](DescribeMonCal)(cal,[file],[whichScreen])  
   

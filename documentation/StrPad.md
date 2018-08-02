@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [StrPad](StrPad)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 str = [StrPad](StrPad)(in,length,padchar)  
 (pre)pads IN with CHAR to sepcified length LEN. If inputs IN or PADCHAR  

@@ -1,5 +1,5 @@
 # [PsychPortAudio('SetOpMode')](PsychPortAudio-SetOpMode) 
-## [[Psychtoolbox]] &#8250; [[PsychPortAudio]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Override basic mode of operation of an open audio device 'pahandle' and/or  

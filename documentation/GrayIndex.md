@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [GrayIndex](GrayIndex)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 color=[GrayIndex](GrayIndex)(windowPtrOrScreenNumber,[reflectance])  
 Returns the CLUT index to produce the specified gray, on a scale of  

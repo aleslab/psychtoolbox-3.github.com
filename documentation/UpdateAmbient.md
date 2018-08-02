@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [UpdateAmbient](UpdateAmbient)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
  cal = [UpdateAmbient](UpdateAmbient)(cal,newP\_ambient,[ADD])  
   

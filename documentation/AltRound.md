@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [AltRound](AltRound)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 out = [AltRound](AltRound)(nr,factor)  
 rounds the elements in NR to the nearest multiple  

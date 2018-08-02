@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [StockmanSharpeNomogram](StockmanSharpeNomogram)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
 T\_absorbance = [StockmanSharpeNomogram](StockmanSharpeNomogram)(S,lambdaMax)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [BlackIndex](BlackIndex)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 color=[BlackIndex](BlackIndex)(windowPtrOrScreenNumber)  
 Returns the CLUT index to produce black at the current screen depth,  

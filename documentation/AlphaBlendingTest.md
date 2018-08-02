@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [AlphaBlendingTest](AlphaBlendingTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [AlphaBlendingTest](AlphaBlendingTest)([screenNumber])  
   

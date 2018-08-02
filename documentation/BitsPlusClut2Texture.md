@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BitsPlusToolbox]]
+# [BitsPlusClut2Texture](BitsPlusClut2Texture)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BitsPlusToolbox](BitsPlusToolbox)
 
 texturePtr = [BitsPlusClut2Texture](BitsPlusClut2Texture)(windowPtr, clut)  
   

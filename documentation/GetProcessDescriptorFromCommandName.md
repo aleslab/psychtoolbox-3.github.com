@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychPriority]]
+# [GetProcessDescriptorFromCommandName](GetProcessDescriptorFromCommandName)
+## [Psychtoolbox](Psychtoolbox)[PsychPriority](PsychPriority)
 
 processDescriptor=[GetProcessDescriptorFromCommandName](GetProcessDescriptorFromCommandName)(commandName)  
   

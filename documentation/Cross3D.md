@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [Cross3D](Cross3D)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 output = [Cross3D](Cross3D)(v1,v2,v3)  
   

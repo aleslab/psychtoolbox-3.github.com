@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [IsInRect](IsInRect)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
 inside = [IsInRect](IsInRect)(x,y,rect)  
   

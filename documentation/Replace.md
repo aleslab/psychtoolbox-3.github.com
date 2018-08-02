@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [Replace](Replace)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [Replace](Replace) - [Replace](Replace) Elements  
   B = [Replace](Replace)(A,S1,S2) returns a matrix B in which the elements in A that   

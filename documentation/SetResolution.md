@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [SetResolution](SetResolution)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 oldRes=[SetResolution](SetResolution)(screenNumber,width,height,[hz],[pixelSize])  
 oldRes=[SetResolution](SetResolution)(screenNumber,res)  

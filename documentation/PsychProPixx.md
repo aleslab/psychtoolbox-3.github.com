@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[DatapixxToolbox]] &#8250; [[DatapixxBasic]]
+# [PsychProPixx](PsychProPixx)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[DatapixxToolbox](DatapixxToolbox)[DatapixxBasic](DatapixxBasic)
 
 [PsychProPixx](PsychProPixx)() - Drive fast display modes of [ProPixx](ProPixx) projectors.  
   

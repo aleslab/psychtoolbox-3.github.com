@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOptics]]
+# [GoodmanDiffrac](GoodmanDiffrac)
+## [Psychtoolbox](Psychtoolbox)[PsychOptics](PsychOptics)
 
 mtf = [GoodmanDiffrac](GoodmanDiffrac)(s,s0)  
   

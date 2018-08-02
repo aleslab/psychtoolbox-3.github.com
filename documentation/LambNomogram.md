@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [LambNomogram](LambNomogram)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
 T = [LambNomogram](LambNomogram)(S,lambdaMax)  
   

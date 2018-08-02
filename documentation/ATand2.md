@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [ATand2](ATand2)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 ang = [ATand2](ATand2)(y,x)  
 returns angle from -180 to 180 degrees based on x an y coords  

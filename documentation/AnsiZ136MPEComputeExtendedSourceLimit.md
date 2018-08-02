@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]] &#8250; [[PsychAnsiZ136MPE]]
+# [AnsiZ136MPEComputeExtendedSourceLimit](AnsiZ136MPEComputeExtendedSourceLimit)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)[PsychAnsiZ136MPE](PsychAnsiZ136MPE)
 
 [[MPELimitIntegratedRadiance](MPELimitIntegratedRadiance)\_JoulesPerCm2Sr, ...  
  [MPELimitRadiance](MPELimitRadiance)\_WattsPerCm2S, ...  

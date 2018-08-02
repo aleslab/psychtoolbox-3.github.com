@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychObsolete]]
+# [Joystick](Joystick)
+## [Psychtoolbox](Psychtoolbox)[PsychObsolete](PsychObsolete)
 
 Adrian, this function is not yet documented.
 

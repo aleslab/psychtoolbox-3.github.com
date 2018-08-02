@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[iViewXToolbox]] &#8250; [[tcp_udp_ip]] &#8250; [[tcpip]]
+# [tcpip_write](tcpip_write)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[iViewXToolbox](iViewXToolbox)[tcp_udp_ip](tcp_udp_ip)[tcpip](tcpip)
 
 unsent = tcpip\_write(fid, arg2, arg3, . . .)  
 unsent = tcpip\_write(str, arg2 . . .)  

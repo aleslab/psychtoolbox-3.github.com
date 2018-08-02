@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [Add2DSeparableConvolutionToGLOperator](Add2DSeparableConvolutionToGLOperator)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 [Add2DSeparableConvolutionToGLOperator](Add2DSeparableConvolutionToGLOperator)(gloperator, kernel1, kernel2 [, opname] [, nrinputchannels] [, nroutchannels] [, debug] [, shadertype])  
   

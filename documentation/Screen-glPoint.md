@@ -1,5 +1,5 @@
 # [Screen('glPoint')](Screen-glPoint) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Draw a point at the specified location 'x', 'y' with the requested optional  

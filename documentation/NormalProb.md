@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [NormalProb](NormalProb)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 probs = [NormalProb](NormalProb)(center,width,u,var)  
   

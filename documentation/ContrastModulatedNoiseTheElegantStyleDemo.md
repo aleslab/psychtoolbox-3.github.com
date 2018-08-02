@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [ContrastModulatedNoiseTheElegantStyleDemo](ContrastModulatedNoiseTheElegantStyleDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [ContrastModulatedNoiseTheElegantStyleDemo](ContrastModulatedNoiseTheElegantStyleDemo)([noisesize=512] [, staticnoise=0])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PR670Toolbox]]
+# [PR670close](PR670close)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PR670Toolbox](PR670Toolbox)
 
 [PR670close](PR670close) - Closes the PR-670 connection.  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [IsEmptyRect](IsEmptyRect)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
 isEmpty = [IsEmptyRect](IsEmptyRect)(a)  
   

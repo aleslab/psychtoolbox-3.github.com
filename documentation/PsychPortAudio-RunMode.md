@@ -1,5 +1,5 @@
 # [PsychPortAudio('RunMode')](PsychPortAudio-RunMode) 
-## [[Psychtoolbox]] &#8250; [[PsychPortAudio]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Set general run mode to 'runMode' and/or return old runMode for a device  

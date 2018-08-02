@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]] &#8250; [[Utilities]]
+# [ConfirmInfo](ConfirmInfo)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)[Utilities](Utilities)
 
 Syntax: [[FigureHandle](FigureHandle)] = [ConfirmInfo](ConfirmInfo)[(TheQuestion]((TheQuestion),[[ButtonString](ButtonString)],[[TimeoutPeriod](TimeoutPeriod)])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOptics]]
+# [DiffractionMTF](DiffractionMTF)
+## [Psychtoolbox](Psychtoolbox)[PsychOptics](PsychOptics)
 
 mtf = [DiffractionMTF](DiffractionMTF)(s,pupil,nm)  
   

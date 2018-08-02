@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGamma]]
+# [MonitorGamma](MonitorGamma)
+## [Psychtoolbox](Psychtoolbox)[PsychGamma](PsychGamma)
 
 y=[MonitorGamma](MonitorGamma)(x,x0,gamma)  
   

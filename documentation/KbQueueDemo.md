@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [KbQueueDemo](KbQueueDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 % [KbQueueDemo](KbQueueDemo)([deviceIndex])  
  Shows how to detect when the user has pressed a key.  

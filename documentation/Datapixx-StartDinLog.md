@@ -1,5 +1,5 @@
 # [Datapixx('StartDinLog')](Datapixx-StartDinLog) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Start logging transitions of digital input bits 0 to 15. This will log rising  

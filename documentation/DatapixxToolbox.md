@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[DatapixxToolbox]]
+# [DatapixxToolbox](DatapixxToolbox)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[DatapixxToolbox](DatapixxToolbox)
 
 [DatapixxToolbox](DatapixxToolbox)  
 Version 0.9, Aug 2009  

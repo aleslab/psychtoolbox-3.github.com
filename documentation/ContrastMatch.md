@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [ContrastMatch](ContrastMatch)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
  weight=[ContrastMatch](ContrastMatch)(device,dimWeight,[foreColor],[backColor])  
   

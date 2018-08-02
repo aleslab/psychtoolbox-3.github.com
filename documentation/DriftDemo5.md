@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [DriftDemo5](DriftDemo5)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 function [DriftDemo5](DriftDemo5)(angle, cyclespersecond, f, drawmask)  
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  

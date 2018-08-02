@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [GetSubversionPath](GetSubversionPath)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 svnpath = [GetSubversionPath](GetSubversionPath) -- Return auto-detected installation path  
 for svn client, if any. Return empty string if auto-detection not  

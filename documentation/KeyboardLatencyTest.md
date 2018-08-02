@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [KeyboardLatencyTest](KeyboardLatencyTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [KeyboardLatencyTest](KeyboardLatencyTest)([triggerlevel=0.01][,modality=0][,submode][,portString])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [VecToImage](VecToImage)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 image = [VecToImage](VecToImage)(vec,[nRows,nCols])  
   

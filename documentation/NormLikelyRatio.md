@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [NormLikelyRatio](NormLikelyRatio)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 [likelyr,likelys,likelyn] = [NormLikelyRatio](NormLikelyRatio)(x,un,varn,us,vars)  
   

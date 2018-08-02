@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BitsPlusToolbox]] &#8250; [[BitsPlusDemos]]
+# [BitsStereoDemo](BitsStereoDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BitsPlusToolbox](BitsPlusToolbox)[BitsPlusDemos](BitsPlusDemos)
 
 [BitsStereoDemo](BitsStereoDemo)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [MeasureDpi](MeasureDpi)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 dpi=[MeasureDpi](MeasureDpi)([theScreen])  
 Helps the user to accurately measure the screen's dots per inch.  

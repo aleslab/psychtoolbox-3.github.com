@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [PsychTweak](PsychTweak)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [PsychTweak](PsychTweak)() - Apply tweaks to various Psychtoolbox parameters.  
   

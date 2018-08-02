@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Quest]]
+# [QuestP](QuestP)
+## [Psychtoolbox](Psychtoolbox)[Quest](Quest)
 
 p=[QuestP](QuestP)(q,x)  
   

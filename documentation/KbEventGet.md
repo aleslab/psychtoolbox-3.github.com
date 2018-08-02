@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [KbEventGet](KbEventGet)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [event, nremaining] = [KbEventGet](KbEventGet)([deviceIndex][, maxWaitTimeSecs=0])  
   

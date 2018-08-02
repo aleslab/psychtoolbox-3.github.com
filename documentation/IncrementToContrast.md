@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [IncrementToContrast](IncrementToContrast)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 contrast = [IncrementToContrast](IncrementToContrast)(increment,reference)  
   

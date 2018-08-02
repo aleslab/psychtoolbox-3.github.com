@@ -1,5 +1,5 @@
 # [Datapixx('StopDinLog')](Datapixx-StopDinLog) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Stop logging transitions of digital input bits 0 to 15.  

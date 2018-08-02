@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [AudioFeedbackLatencyTest](AudioFeedbackLatencyTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [AudioFeedbackLatencyTest](AudioFeedbackLatencyTest)([trigger=0.1] [, nrtrials=10] [, freq=44100][, freqout=44100][, runmode=1])  
   

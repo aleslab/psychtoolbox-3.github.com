@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOpenGL]]
+# [moglDeleteFBO](moglDeleteFBO)
+## [Psychtoolbox](Psychtoolbox)[PsychOpenGL](PsychOpenGL)
 
 moglDeleteFBO(fbo) -- Delete FBO 'fbo' and its associated buffers and textures.  
   

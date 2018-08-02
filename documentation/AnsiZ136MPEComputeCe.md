@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]] &#8250; [[PsychAnsiZ136MPE]]
+# [AnsiZ136MPEComputeCe](AnsiZ136MPEComputeCe)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)[PsychAnsiZ136MPE](PsychAnsiZ136MPE)
 
 Ce = [AnsiZ136MPEComputeCe](AnsiZ136MPEComputeCe)(stimulusSizeDeg)  
   

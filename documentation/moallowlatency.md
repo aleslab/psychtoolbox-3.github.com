@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSound]]
+# [moallowlatency](moallowlatency)
+## [Psychtoolbox](Psychtoolbox)[PsychSound](PsychSound)
 
 Establish key mapping: [ESCape](ESCape) aborts, Space toggles between auto-  
 movement of sound source or user mouse controlled movement:  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [DoNothing](DoNothing)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 function [empty1,etc]=[DoNothing](DoNothing)([arg1],[etc])  
   

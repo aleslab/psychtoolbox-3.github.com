@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [DrawManuallyAntiAliasedTextDemo](DrawManuallyAntiAliasedTextDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [DrawManuallyAntiAliasedTextDemo](DrawManuallyAntiAliasedTextDemo)([textSize=96]) - Manually anti-alias text for special purpose applications.  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[OpenGL4MatlabDemos]] &#8250; [[MorphDemo]]
+# [MorphTextureDemo](MorphTextureDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[OpenGL4MatlabDemos](OpenGL4MatlabDemos)[MorphDemo](MorphDemo)
 
 function [MorphTextureDemo](MorphTextureDemo)([dotson][, normalson][,stereomode][, usefastoffscreenwindows])  
   

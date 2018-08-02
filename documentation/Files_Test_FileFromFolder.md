@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]] &#8250; [[UnitTests]]
+# [Files_Test_FileFromFolder](Files_Test_FileFromFolder)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)[UnitTests](UnitTests)
 
 Adrian, this function is not yet documented.
 

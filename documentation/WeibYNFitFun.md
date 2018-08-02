@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [WeibYNFitFun](WeibYNFitFun)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 [f,g] = [WeibYNFitFun](WeibYNFitFun)(x,level,nYes,nNo)  
   

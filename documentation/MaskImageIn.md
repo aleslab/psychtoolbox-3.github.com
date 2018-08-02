@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychAlphaBlending]]
+# [MaskImageIn](MaskImageIn)
+## [Psychtoolbox](Psychtoolbox)[PsychAlphaBlending](PsychAlphaBlending)
 
 mMasked=[MaskImageIn](MaskImageIn)(m [,alphaIn])  
   

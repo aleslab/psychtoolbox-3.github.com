@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[MovieDemos]]
+# [LoadMovieIntoTexturesDemo](LoadMovieIntoTexturesDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[MovieDemos](MovieDemos)
 
   
 [LoadMovieIntoTexturesDemo](LoadMovieIntoTexturesDemo)(moviename [, fromTime=0][, toTime=end][, indexisFrames=0][, benchmark=0][, async=0][, preloadSecs=1][, specialflags=0][, pixelFormat=4])  

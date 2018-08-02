@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PR705Toolbox]]
+# [PR705read](PR705read)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PR705Toolbox](PR705Toolbox)
 
 [PR705read](PR705read) - Read data from the PR-705.  
   

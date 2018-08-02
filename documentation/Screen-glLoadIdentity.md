@@ -1,5 +1,5 @@
 # [Screen('glLoadIdentity')](Screen-glLoadIdentity) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Reset an [OpenGL](OpenGL) matrix to its default identity setting. See  

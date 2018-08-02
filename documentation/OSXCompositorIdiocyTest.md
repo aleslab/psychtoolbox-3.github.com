@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [OSXCompositorIdiocyTest](OSXCompositorIdiocyTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [OSXCompositorIdiocyTest](OSXCompositorIdiocyTest) - Test for potential OSX compositor brokeness.  
   

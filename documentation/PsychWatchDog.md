@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [PsychWatchDog](PsychWatchDog)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [PsychWatchDog](PsychWatchDog) - Watchdog mechanism and error handler for Psychtoolbox.  
   

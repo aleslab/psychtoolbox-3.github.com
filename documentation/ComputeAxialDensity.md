@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [ComputeAxialDensity](ComputeAxialDensity)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 [axialOpticalDensity] = [ComputeAxialDensity](ComputeAxialDensity)(specificDensity, outSegmentLength)  
   

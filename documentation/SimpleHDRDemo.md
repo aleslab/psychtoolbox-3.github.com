@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BrightSideDisplay]]
+# [SimpleHDRDemo](SimpleHDRDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BrightSideDisplay](BrightSideDisplay)
 
 [SimpleHDRDemo](SimpleHDRDemo)([imfilename][, dummymode][, sf]) -- Load and show a high dynamic range image  
 on the [BrightSide](BrightSide) Technologies High Dynamic Range display device.  

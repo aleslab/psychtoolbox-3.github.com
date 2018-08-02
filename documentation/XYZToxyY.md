@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [XYZToxyY](XYZToxyY)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 [xyY] = [XYZToxyY](XYZToxyY)(XYZ)  
   

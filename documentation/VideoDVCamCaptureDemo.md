@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [VideoDVCamCaptureDemo](VideoDVCamCaptureDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 Demonstrate simple use of built-in video capture engine with DV consumer cameras.  
   

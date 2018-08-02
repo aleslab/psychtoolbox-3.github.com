@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [VideoCaptureStressTest](VideoCaptureStressTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 Demonstrate simple use of built-in video capture engine.  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]] &#8250; [[EyelinkOneLiners]]
+# [EyelinkGetTime](EyelinkGetTime)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkOneLiners](EyelinkOneLiners)
 
 USAGE: eltime=[EyelinkGetTime](EyelinkGetTime)(el [, maxwait])  
 Get tracker time  

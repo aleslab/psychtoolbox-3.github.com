@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [PsychHelperCreateGenericLuminanceToRGBA8LUT](PsychHelperCreateGenericLuminanceToRGBA8LUT)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 luttex = [PsychHelperCreateGenericLuminanceToRGBA8LUT](PsychHelperCreateGenericLuminanceToRGBA8LUT)(lut);  
   

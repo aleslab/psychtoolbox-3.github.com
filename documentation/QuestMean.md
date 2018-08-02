@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Quest]]
+# [QuestMean](QuestMean)
+## [Psychtoolbox](Psychtoolbox)[Quest](Quest)
 
 t=[QuestMean](QuestMean)(q)  
   

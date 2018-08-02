@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]] &#8250; [[UnitTests]]
+# [UnitTests](UnitTests)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)[UnitTests](UnitTests)
 
 list of m-files that come with PTB, current as of revision 2302,  
 September 19th, 2011.  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDocumentation]]
+# [GStreamer](GStreamer)
+## [Psychtoolbox](Psychtoolbox)[PsychDocumentation](PsychDocumentation)
 
 [[GStreamer](GStreamer)][(GStreamer)]((GStreamer)) - Installation instructions for the [[GStreamer](GStreamer)][(GStreamer)]((GStreamer)) media framework.  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [CreateUniformDotsIn3DFrustum](CreateUniformDotsIn3DFrustum)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [x,y,z] = [CreateUniformDotsIn3DFrustum](CreateUniformDotsIn3DFrustum)(ndots,FOV,aspectr,depthrangen,depthrangef,eyeheight)  
   

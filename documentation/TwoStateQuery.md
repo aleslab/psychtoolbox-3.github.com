@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]] &#8250; [[Utilities]]
+# [TwoStateQuery](TwoStateQuery)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)[Utilities](Utilities)
 
 Syntax: [UserResponse](UserResponse) = [TwoStateQuery](TwoStateQuery)[(TheQuestion]((TheQuestion),[[TheChoices](TheChoices)])  
   

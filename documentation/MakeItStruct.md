@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [MakeItStruct](MakeItStruct)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 wlstruct = [MakeItStruct](MakeItStruct)(S)  
   

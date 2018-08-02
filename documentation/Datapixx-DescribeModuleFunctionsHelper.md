@@ -1,5 +1,5 @@
 # [Datapixx('DescribeModuleFunctionsHelper')](Datapixx-DescribeModuleFunctionsHelper) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Return a cell array of strings naming all subfunctions supported by this module  

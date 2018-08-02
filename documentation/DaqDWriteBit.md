@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqDWriteBit](DaqDWriteBit)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 err=[DaqDReadBit](DaqDReadBit)[(DeviceIndex]((DeviceIndex),[BitNumber](BitNumber),value)  
 USB-1608FS: Write bit to digital port.   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Quest]]
+# [QuestQuantile](QuestQuantile)
+## [Psychtoolbox](Psychtoolbox)[Quest](Quest)
 
 intensity=[QuestQuantile](QuestQuantile)(q,[quantileOrder])  
   

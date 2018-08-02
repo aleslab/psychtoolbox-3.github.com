@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [uvYToXYZ](uvYToXYZ)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 XYZ = [uvYToXYZ](uvYToXYZ)(uvY,[compute1960])  
   

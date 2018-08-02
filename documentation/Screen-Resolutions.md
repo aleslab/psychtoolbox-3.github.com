@@ -1,5 +1,5 @@
 # [Screen('Resolutions')](Screen-Resolutions) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Query a list of all supported and valid display settings for screen  

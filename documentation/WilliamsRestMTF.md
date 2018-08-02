@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOptics]]
+# [WilliamsRestMTF](WilliamsRestMTF)
+## [Psychtoolbox](Psychtoolbox)[PsychOptics](PsychOptics)
 
 WILLIAMSRESTMTF  Utility function for WILLIAMSMTF  
    mtf = WILLIAMSRESTMTF(s)  

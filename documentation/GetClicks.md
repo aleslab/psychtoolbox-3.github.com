@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [GetClicks](GetClicks)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [clicks,x,y,whichButton] = [GetClicks](GetClicks)([windowPtrOrScreenNumber][, interclickSecs][, mouseDev])  
   

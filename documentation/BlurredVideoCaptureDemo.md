@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [BlurredVideoCaptureDemo](BlurredVideoCaptureDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [BlurredVideoCaptureDemo](BlurredVideoCaptureDemo) - Show application of image filters to videocaptured images.  
   

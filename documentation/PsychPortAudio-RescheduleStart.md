@@ -1,5 +1,5 @@
 # [PsychPortAudio('RescheduleStart')](PsychPortAudio-RescheduleStart) 
-## [[Psychtoolbox]] &#8250; [[PsychPortAudio]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Modify requested start time 'when' of an already started [PortAudio](PortAudio) audio device.  

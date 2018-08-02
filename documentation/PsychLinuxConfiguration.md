@@ -1,4 +1,5 @@
-## [[Psychtoolbox]]
+# [PsychLinuxConfiguration](PsychLinuxConfiguration)
+## [Psychtoolbox](Psychtoolbox)
 
 [PsychLinuxConfiguration](PsychLinuxConfiguration)([answers]) -- Optimize setup of Linux system.  
   

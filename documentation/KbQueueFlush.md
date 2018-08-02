@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [KbQueueFlush](KbQueueFlush)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
  nflushed = [KbQueueFlush](KbQueueFlush)([deviceIndex][flushType=1])  
   

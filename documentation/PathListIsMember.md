@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [PathListIsMember](PathListIsMember)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 If no pathList set was passed to the function we'll just grab the one  
 from Matlab.  

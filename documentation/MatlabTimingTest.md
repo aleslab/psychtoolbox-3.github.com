@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [MatlabTimingTest](MatlabTimingTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [MatlabTimingTest](MatlabTimingTest)  
   

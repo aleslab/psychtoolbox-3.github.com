@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [Color3DLUTTest](Color3DLUTTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 A simple test/demo of use of 3D CLUT color correction.  
   

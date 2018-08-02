@@ -1,5 +1,5 @@
 # [Datapixx('RegWrPixelSync')](Datapixx-RegWrPixelSync) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Write local register cache modifications to Datapixx when the specified pixel  

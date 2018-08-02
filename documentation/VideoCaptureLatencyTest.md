@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [VideoCaptureLatencyTest](VideoCaptureLatencyTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [VideoCaptureLatencyTest](VideoCaptureLatencyTest)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [PsychOneliners](PsychOneliners)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 Psychtoolbox:[PsychOneliners](PsychOneliners).  
   

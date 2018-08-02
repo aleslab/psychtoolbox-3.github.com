@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]] &#8250; [[EyelinkOneLiners]]
+# [EyelinkInit](EyelinkInit)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkOneLiners](EyelinkOneLiners)
 
 USAGE: [result dummy]=[EyelinkInit](EyelinkInit)([dummy=0][enableCallbacks=1])  
   

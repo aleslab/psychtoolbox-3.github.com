@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [GetMouse](GetMouse)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [x,y,buttons,focus,valuators,valinfo] = [GetMouse](GetMouse)([windowPtrOrScreenNumber][, mouseDev])  
   

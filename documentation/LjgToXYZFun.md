@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [LjgToXYZFun](LjgToXYZFun)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 [f,g] = [LjgToXYZFun](LjgToXYZFun)(XYZ,Ljg)  
   

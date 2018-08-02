@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [FitConeFundamentalsWithNomogram](FitConeFundamentalsWithNomogram)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
 [fitFundamentals,params,fitError] = [FitConeFundamentalsWithNomogram](FitConeFundamentalsWithNomogram)(T\_targetQuantal,staticParams,params0)  
   

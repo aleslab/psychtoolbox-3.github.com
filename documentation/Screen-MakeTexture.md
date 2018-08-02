@@ -1,5 +1,5 @@
 # [Screen('MakeTexture')](Screen-MakeTexture) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Convert the 2D or 3D matrix 'imageMatrix' into an [OpenGL](OpenGL) texture and return an  

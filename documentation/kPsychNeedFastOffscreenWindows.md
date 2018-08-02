@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [kPsychNeedFastOffscreenWindows](kPsychNeedFastOffscreenWindows)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 rval = kPsychNeedFastOffscreenWindows  
 Return a flag that you can pass to the 'imagingmode' parameter of  

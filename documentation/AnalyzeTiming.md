@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [AnalyzeTiming](AnalyzeTiming)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 Adrian, this function is not yet documented.
 

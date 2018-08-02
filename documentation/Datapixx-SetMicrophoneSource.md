@@ -1,5 +1,5 @@
 # [Datapixx('SetMicrophoneSource')](Datapixx-SetMicrophoneSource) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Set Datapixx audio input source.  

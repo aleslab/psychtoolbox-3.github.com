@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSound]] &#8250; [[MOAL]] &#8250; [[source]]
+# [oalconst](oalconst)
+## [Psychtoolbox](Psychtoolbox)[PsychSound](PsychSound)[MOAL](MOAL)[source](source)
 
 OGLCONST  Collect AL, ALU, and AAL constants from C header files, and  
           store them in oalconst.mat  

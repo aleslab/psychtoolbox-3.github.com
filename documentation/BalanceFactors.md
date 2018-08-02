@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [BalanceFactors](BalanceFactors)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 [BalanceFactors](BalanceFactors) balances a set of factors given the factor levels.  It is  
 identical to [BalanceTrials](BalanceTrials) except that the first argument in this  

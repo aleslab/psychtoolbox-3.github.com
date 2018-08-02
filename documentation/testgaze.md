@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[iViewXToolbox]] &#8250; [[iviewxtests]]
+# [testgaze](testgaze)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[iViewXToolbox](iViewXToolbox)[iviewxtests](iviewxtests)
 
 Adrian, this function is not yet documented.
 

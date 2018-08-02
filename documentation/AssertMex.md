@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [AssertMex](AssertMex)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 Handle missing or dysfunctional MEX files on Matlab or Octave.  
   

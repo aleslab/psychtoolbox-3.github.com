@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Quest]]
+# [QuestTrials](QuestTrials)
+## [Psychtoolbox](Psychtoolbox)[Quest](Quest)
 
 trial=[QuestTrials](QuestTrials)(q,[binsize])  
   

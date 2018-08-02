@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [ChiSqrCumulative](ChiSqrCumulative)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 prob = [ChiSqrCumulative](ChiSqrCumulative)(X2,v)  
   

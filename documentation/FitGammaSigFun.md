@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGamma]]
+# [FitGammaSigFun](FitGammaSigFun)
+## [Psychtoolbox](Psychtoolbox)[PsychGamma](PsychGamma)
 
 [err,con] = [FitGammaSigFun](FitGammaSigFun)(x,values,measurements)  
   

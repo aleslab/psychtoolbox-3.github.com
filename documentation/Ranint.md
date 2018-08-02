@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [Ranint](Ranint)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 i = [Ranint](Ranint)([dim],n)  
   

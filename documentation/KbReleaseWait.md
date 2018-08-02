@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [KbReleaseWait](KbReleaseWait)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [secs, keyCode, deltaSecs] = [KbReleaseWait](KbReleaseWait)([deviceNumber][, untilTime=inf][, more optional args for [KbWait](KbWait)]);  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [IsACell](IsACell)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 bool = [IsACell](IsACell)(input,fhndl)  
   

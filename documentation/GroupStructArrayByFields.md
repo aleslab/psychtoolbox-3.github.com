@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [GroupStructArrayByFields](GroupStructArrayByFields)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 theGroupedArray = [GroupStructArrayByFields](GroupStructArrayByFields)(theStructArray,theFields)  
   

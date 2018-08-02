@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [BitsPlusPlus](BitsPlusPlus)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 [BitsPlusPlus](BitsPlusPlus)(cmd [, arg1][, arg2, ...]) -- Psychtoolbox interface to  
 Cambridge Research Systems Bits++ and Bits\# boxes for high precision  

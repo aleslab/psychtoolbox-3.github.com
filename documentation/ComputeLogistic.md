@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [ComputeLogistic](ComputeLogistic)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 y = [ComputeLogistic](ComputeLogistic)(x,a,b)  
   

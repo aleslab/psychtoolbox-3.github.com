@@ -1,5 +1,5 @@
 # [Datapixx('GetError')](Datapixx-GetError) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Get the low-level library global error state.  

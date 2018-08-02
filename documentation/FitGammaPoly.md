@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGamma]]
+# [FitGammaPoly](FitGammaPoly)
+## [Psychtoolbox](Psychtoolbox)[PsychGamma](PsychGamma)
 
 [fit\_out,x,err] = [FitGammaPoly](FitGammaPoly)(values\_in,measurements,values\_out)  
   

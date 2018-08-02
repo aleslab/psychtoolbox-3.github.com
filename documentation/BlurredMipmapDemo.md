@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [BlurredMipmapDemo](BlurredMipmapDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [BlurredMipmapDemo](BlurredMipmapDemo) - Show blurring of live video or movies via adaptive mipmapping.  
   

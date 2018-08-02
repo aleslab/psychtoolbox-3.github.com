@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BitsPlusToolbox]] &#8250; [[BitsPlusTests]]
+# [BitsPlusImagingPipelineTest](BitsPlusImagingPipelineTest)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BitsPlusToolbox](BitsPlusToolbox)[BitsPlusTests](BitsPlusTests)
 
 [BitsPlusImagingPipelineTest](BitsPlusImagingPipelineTest)([whichScreen=max][,plotdiffs=0][, forcesuccess=0][, winrect=[]][, bitsSharpPortName][, acceptableerror=1])  
   

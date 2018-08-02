@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [ProceduralGaborDemo](ProceduralGaborDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [ProceduralGaborDemo](ProceduralGaborDemo)([benchmark=0][, nonsymmetric=0])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOpenGL]]
+# [moglMakeGLHDRTexture](moglMakeGLHDRTexture)
+## [Psychtoolbox](Psychtoolbox)[PsychOpenGL](PsychOpenGL)
 
 gltexId = moglMakeGLHDRTexture(hdrImage, gltextarget [, halffloat])  
   

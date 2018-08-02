@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BitsPlusToolbox]]
+# [CreateBitsSharpEDID](CreateBitsSharpEDID)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BitsPlusToolbox](BitsPlusToolbox)
 
 [CreateBitsSharpEDID](CreateBitsSharpEDID) - Create proper EDID file for connected display for CRS Bits\#  
   

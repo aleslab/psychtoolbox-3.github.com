@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [ExpandingRingsDemo](ExpandingRingsDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [ExpandingRingsDemo](ExpandingRingsDemo)([ringtype=0]) -- Generate an "expanding rings"  
 stimulus by use of GLSL shaders and Psychtoolbox procedural textures.  

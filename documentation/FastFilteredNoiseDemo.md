@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [FastFilteredNoiseDemo](FastFilteredNoiseDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [FastFilteredNoiseDemo](FastFilteredNoiseDemo)([validate=1][, filtertype=1][, rectSize=128][, kwidth=5][, scale=1][, syncToVBL=1][, dontclear=0])  
   

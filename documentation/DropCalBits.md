@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [DropCalBits](DropCalBits)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 cal = [DropCalBits](DropCalBits)(cal,whichScreen,[forceBit])  
   

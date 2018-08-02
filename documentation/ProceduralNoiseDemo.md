@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [ProceduralNoiseDemo](ProceduralNoiseDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [ProceduralNoiseDemo](ProceduralNoiseDemo)([benchmark=0])  
   

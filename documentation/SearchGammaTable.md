@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [SearchGammaTable](SearchGammaTable)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
  values = [SearchGammaTable](SearchGammaTable)(targets, input, table)  
   

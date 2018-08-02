@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]] &#8250; [[EyelinkBasic]]
+# [EyelinkBasic](EyelinkBasic)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkBasic](EyelinkBasic)
 
 collection of essential functions for the eyelink toolbox  
 [EyelinkToolbox](EyelinkToolbox):[EyelinkBasic](EyelinkBasic)  

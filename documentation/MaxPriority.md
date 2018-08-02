@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychPriority]]
+# [MaxPriority](MaxPriority)
+## [Psychtoolbox](Psychtoolbox)[PsychPriority](PsychPriority)
 
 priorityLevel=[MaxPriority](MaxPriority)([windowPtrOrScreenNumber],['WaitBlanking'],['PeekBlanking'],...  
                             ['BlankingInterrupt'],['SetClut'],['ClutMovie'],...  

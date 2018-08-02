@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGPGPU]]
+# [GPUTypeFromToGL](GPUTypeFromToGL)
+## [Psychtoolbox](Psychtoolbox)[PsychGPGPU](PsychGPGPU)
 
 outObj = [GPUTypeFromToGL](GPUTypeFromToGL)(cmd, inObj [, glObjType][, outObj][, keepmapped][, mapflags])  
   

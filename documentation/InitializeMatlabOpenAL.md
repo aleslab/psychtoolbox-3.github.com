@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSound]] &#8250; [[MOAL]] &#8250; [[core]]
+# [InitializeMatlabOpenAL](InitializeMatlabOpenAL)
+## [Psychtoolbox](Psychtoolbox)[PsychSound](PsychSound)[MOAL](MOAL)[core](core)
 
 [InitializeMatlabOpenAL](InitializeMatlabOpenAL)([debuglevel] [,snddevicename] [, openal\_c\_style])  
   

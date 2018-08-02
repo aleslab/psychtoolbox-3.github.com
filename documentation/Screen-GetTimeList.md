@@ -1,5 +1,5 @@
 # [Screen('GetTimeList')](Screen-GetTimeList) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Return a vector of doubles holding times as reported by [GetSecs](GetSecs).  When debugging  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOptics]]
+# [AiryPattern](AiryPattern)
+## [Psychtoolbox](Psychtoolbox)[PsychOptics](PsychOptics)
 
 AIRYPATTERN  Comptue the radial Airy pattern  
    intensity = [AiryPattern](AiryPattern)((angles,pupil,nm)  

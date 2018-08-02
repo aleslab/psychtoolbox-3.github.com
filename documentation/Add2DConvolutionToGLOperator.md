@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [Add2DConvolutionToGLOperator](Add2DConvolutionToGLOperator)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 [Add2DConvolutionToGLOperator](Add2DConvolutionToGLOperator)(gloperator, kernel [, opname] [, nrinputchannels] [, nroutchannels] [, debug] [, shadertype])  
   

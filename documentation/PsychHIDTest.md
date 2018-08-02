@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [PsychHIDTest](PsychHIDTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [PsychHIDTest](PsychHIDTest)([doStupidTests=0])  
   

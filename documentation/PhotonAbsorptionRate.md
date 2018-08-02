@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [PhotonAbsorptionRate](PhotonAbsorptionRate)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
  [photonAbsorptionRate] =...  
         [PhotonAbsorptionRate](PhotonAbsorptionRate) (irradianceInQuanta, irradianceS, absorptanceSpectra, absorptanceSpectraS, collectingDiameter)  

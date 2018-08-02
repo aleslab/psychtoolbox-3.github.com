@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqGetStatus](DaqGetStatus)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 status=[DaqGetStatus](DaqGetStatus)[(DeviceIndex)]((DeviceIndex))  
 USB-1208FS: Retrieve device status.  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [Interleave](Interleave)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [vec] = [Interleave](Interleave)(varargin)  
 Interleaves any number of vectors and scalars  

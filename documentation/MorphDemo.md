@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[OpenGL4MatlabDemos]] &#8250; [[MorphDemo]]
+# [MorphDemo](MorphDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[OpenGL4MatlabDemos](OpenGL4MatlabDemos)[MorphDemo](MorphDemo)
 
 function [MorphDemo](MorphDemo)([textureon][, dotson][, normalson][, stereomode])  
 [MorphDemo](MorphDemo) -- Demonstrates use of "[moglmorpher](moglmorpher)" for fast morphing  

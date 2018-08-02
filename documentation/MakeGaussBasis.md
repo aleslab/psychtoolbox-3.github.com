@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [MakeGaussBasis](MakeGaussBasis)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 [B] = [MakeGaussBasis](MakeGaussBasis)(wls,means,vars);  
   

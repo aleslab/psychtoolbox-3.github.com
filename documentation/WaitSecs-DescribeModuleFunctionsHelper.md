@@ -1,5 +1,5 @@
 # [WaitSecs('DescribeModuleFunctionsHelper')](WaitSecs-DescribeModuleFunctionsHelper) 
-## [[Psychtoolbox]] &#8250; [[WaitSecs]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[WaitSecs](WaitSecs).{mex*} subfunction
 
 
 Return a cell array of strings naming all subfunctions supported by this module  

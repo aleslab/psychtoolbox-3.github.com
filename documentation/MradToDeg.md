@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [MradToDeg](MradToDeg)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 angleInDegrees = [MradToDeg](MradToDeg)(angleInMradians)  
   

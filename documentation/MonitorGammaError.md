@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGamma]]
+# [MonitorGammaError](MonitorGammaError)
+## [Psychtoolbox](Psychtoolbox)[PsychGamma](PsychGamma)
 
 err=[MonitorGammaError](MonitorGammaError)(p,x,y)  
 Returns mean squared error of fit of y data by [MonitorGamma](MonitorGamma) function of x. The  

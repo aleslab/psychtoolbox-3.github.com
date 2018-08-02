@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [MatMin](MatMin)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 [minval] = [MatMin](MatMin)(image)  
 Find the minumum value in a matrix.  

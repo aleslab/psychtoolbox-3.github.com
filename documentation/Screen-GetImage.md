@@ -1,5 +1,5 @@
 # [Screen('GetImage')](Screen-GetImage) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Slowly copy an image from a window or texture to Matlab/Octave, by default  

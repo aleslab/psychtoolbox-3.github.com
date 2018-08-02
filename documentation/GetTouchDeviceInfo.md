@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [GetTouchDeviceInfo](GetTouchDeviceInfo)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
 info = [GetTouchDeviceInfo](GetTouchDeviceInfo)(deviceIndex)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [GetTouchValuators](GetTouchValuators)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
 event = [GetTouchValuators](GetTouchValuators)(event, deviceInfo)  
   

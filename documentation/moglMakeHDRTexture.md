@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOpenGL]]
+# [moglMakeHDRTexture](moglMakeHDRTexture)
+## [Psychtoolbox](Psychtoolbox)[PsychOpenGL](PsychOpenGL)
 
 textureId = moglMakeHDRTexture(win, hdrImage [, halffloat][, poweroftwo])  
   

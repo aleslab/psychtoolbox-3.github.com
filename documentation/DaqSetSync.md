@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqSetSync](DaqSetSync)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 err=[DaqSetSync](DaqSetSync)[(DeviceIndex]((DeviceIndex),type)  
 USB-1208FS: Configure sync input/output.   

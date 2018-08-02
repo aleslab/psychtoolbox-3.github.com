@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [ImagingStereoMoviePlayer](ImagingStereoMoviePlayer)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [ImagingStereoMoviePlayer](ImagingStereoMoviePlayer)(moviefile [,stereoMode=8] [,imaging=1] [,anaglyphmode=0] [,screenid=max])  
   

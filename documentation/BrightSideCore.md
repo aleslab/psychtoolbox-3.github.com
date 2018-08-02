@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BrightSideDisplay]]
+# [BrightSideCore](BrightSideCore)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BrightSideDisplay](BrightSideDisplay)
 
 [BrightSideCore](BrightSideCore) -- Matlab MEX file for low-level interfacing with  
 [BrightSide](BrightSide) technologies HDR display controller library.  

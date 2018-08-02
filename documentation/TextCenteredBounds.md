@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [TextCenteredBounds](TextCenteredBounds)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 bounds=[TextCenteredBounds](TextCenteredBounds)(window, string [, yPositionIsBaseline=0])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [GetNTP](GetNTP)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
 [GetNTP](GetNTP) - Query time from NTP server  
   

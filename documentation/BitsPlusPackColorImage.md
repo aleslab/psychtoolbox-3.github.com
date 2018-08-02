@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BitsPlusToolbox]]
+# [BitsPlusPackColorImage](BitsPlusPackColorImage)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BitsPlusToolbox](BitsPlusToolbox)
 
 [outImage,inImage] = [BitsPlusPackColorImage](BitsPlusPackColorImage)(inImage,[SPACESCALE],[COLORSCALE]))  
   

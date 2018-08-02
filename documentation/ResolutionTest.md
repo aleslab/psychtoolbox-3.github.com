@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [ResolutionTest](ResolutionTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [ResolutionTest](ResolutionTest) prints screen resolutions reported by [Screen](Screen) 'Resolution'  
 and 'Resolutions'.  

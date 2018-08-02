@@ -1,5 +1,5 @@
 # [PsychPortAudio('RefillBuffer')](PsychPortAudio-RefillBuffer) 
-## [[Psychtoolbox]] &#8250; [[PsychPortAudio]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Refill part of an audio data playback buffer of a [PortAudio](PortAudio) audio device.  

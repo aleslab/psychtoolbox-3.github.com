@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [CenterMatOnPoint](CenterMatOnPoint)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [xinds yinds] = [CenterMatOnPoint](CenterMatOnPoint)(mat,x,y)  
   

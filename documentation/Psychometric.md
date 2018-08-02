@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [Psychometric](Psychometric)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 Psychtoolbox:[Psychometric](Psychometric).  
   

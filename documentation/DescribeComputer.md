@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [DescribeComputer](DescribeComputer)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [DescribeComputer](DescribeComputer) prints out several lines of text about the computing  
 environment that your programs are running in. It is called by many of  

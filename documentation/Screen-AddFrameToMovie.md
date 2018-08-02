@@ -1,5 +1,5 @@
 # [Screen('AddFrameToMovie')](Screen-AddFrameToMovie) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Get an image from a window or texture and add it as a new video frame to a  

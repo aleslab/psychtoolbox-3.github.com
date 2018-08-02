@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [CombVec](CombVec)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 [CombVec](CombVec) Generate all possible combinations of input vectors.  
   

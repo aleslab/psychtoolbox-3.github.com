@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [GetKeyboardIndices](GetKeyboardIndices)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
 [keyboardIndices, productNames, allInfos] = [GetKeyboardIndices](GetKeyboardIndices)([productName][, serialNumber][, locationID])  
   

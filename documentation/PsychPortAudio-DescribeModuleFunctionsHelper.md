@@ -1,5 +1,5 @@
 # [PsychPortAudio('DescribeModuleFunctionsHelper')](PsychPortAudio-DescribeModuleFunctionsHelper) 
-## [[Psychtoolbox]] &#8250; [[PsychPortAudio]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Return a cell array of strings naming all subfunctions supported by this module  

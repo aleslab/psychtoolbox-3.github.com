@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]] &#8250; [[PsychAnsiZ136MPE]]
+# [AnsiZ136MPEPrintConditionalComparison](AnsiZ136MPEPrintConditionalComparison)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)[PsychAnsiZ136MPE](PsychAnsiZ136MPE)
 
 [AnsiZ136MPEPrintConditionalComparison](AnsiZ136MPEPrintConditionalComparison)(string,compareFormat,mainVal,compareVal,[LOG10FLAG])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [ComputeWeibTAFC](ComputeWeibTAFC)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 pCorrect = [ComputeWeibTAFC](ComputeWeibTAFC)(x,alpha,beta)  
   

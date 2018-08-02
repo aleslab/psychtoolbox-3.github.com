@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[ECVP2013]]
+# [HelloAnimationDemo](HelloAnimationDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[ECVP2013](ECVP2013)
 
 [HelloAnimationDemo](HelloAnimationDemo) -- Show a simple sinusoidal movement animation.  
 

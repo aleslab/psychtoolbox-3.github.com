@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [FitLogitYN](FitLogitYN)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 [a,b,thresh50] = [FitLogistic](FitLogistic)(inputs,nYes,nNo)  
   

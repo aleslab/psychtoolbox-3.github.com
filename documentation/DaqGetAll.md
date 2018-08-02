@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqGetAll](DaqGetAll)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 data=[DaqGetAll](DaqGetAll)[(DeviceIndex)]((DeviceIndex))  
 USB-1208FS: Retrieve all analog and digital input values. This command  

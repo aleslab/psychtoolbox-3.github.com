@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]] &#8250; [[EyelinkDemos]] &#8250; [[EyelinkShortDemos]]
+# [EyelinkGetTrackerImageDemo](EyelinkGetTrackerImageDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkDemos](EyelinkDemos)[EyelinkShortDemos](EyelinkShortDemos)
 
 This shows you how to register a callback m-file that can display the tracker's eye image in PTB  
 

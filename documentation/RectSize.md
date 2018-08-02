@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [RectSize](RectSize)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
 [width,height] = [RectSize](RectSize)(rect)  
   

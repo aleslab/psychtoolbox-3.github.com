@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [SensorToSettings](SensorToSettings)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 [settings,badIndex] = [SensorToSettings](SensorToSettings)(cal,sensor)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[OpenGL4MatlabDemos]]
+# [FDFDemo](FDFDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[OpenGL4MatlabDemos](OpenGL4MatlabDemos)
 
 [FDFDemo](FDFDemo)(dotDensity, dotLifetime) - Demo of "formless dot field" stimulus  
 via moglFDF.  

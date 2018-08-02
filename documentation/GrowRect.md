@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [GrowRect](GrowRect)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
 r = [GrowRect](GrowRect)(r,horizontalPixels,verticalPixels)  
   

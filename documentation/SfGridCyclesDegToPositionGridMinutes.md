@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOptics]]
+# [SfGridCyclesDegToPositionGridMinutes](SfGridCyclesDegToPositionGridMinutes)
+## [Psychtoolbox](Psychtoolbox)[PsychOptics](PsychOptics)
 
 [SfGridCyclesDegreeToPositionGridMinutes](SfGridCyclesDegreeToPositionGridMinutes)  Convert mesh sf coords to mesh position coords  
     [xGridMinutes,yGridMinutes] = [SfGridCyclesDegToPositionGridMinutes](SfGridCyclesDegToPositionGridMinutes)(xSfGridCyclesDeg,ySfGridCyclesDeg)  

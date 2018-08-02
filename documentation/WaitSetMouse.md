@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[AlphaImageDemo]]
+# [WaitSetMouse](WaitSetMouse)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[AlphaImageDemo](AlphaImageDemo)
 
 set and wait for new cursor position to take effect  
 

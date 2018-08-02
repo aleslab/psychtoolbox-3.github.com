@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [ConvolutionKernelTest](ConvolutionKernelTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [passed difference speedup] = [ConvolutionKernelTest](ConvolutionKernelTest)(win, nrinchannels, nroutchannels, kernel1, kernel2, imgsize, shadertype, debug)  
   

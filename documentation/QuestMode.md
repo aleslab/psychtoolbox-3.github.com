@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Quest]]
+# [QuestMode](QuestMode)
+## [Psychtoolbox](Psychtoolbox)[Quest](Quest)
 
 [t,p]=[QuestMode](QuestMode)(q)  
   

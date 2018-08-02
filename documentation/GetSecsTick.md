@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [GetSecsTick](GetSecsTick)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 tickDuration=[GetSecsTick](GetSecsTick)  
   

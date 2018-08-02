@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[AlphaImageDemo]]
+# [WindowSize](WindowSize)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[AlphaImageDemo](AlphaImageDemo)
 
 [width,height] = [WindowSize](WindowSize)(window)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [ReceivingTriggerFromSerialPortDemo](ReceivingTriggerFromSerialPortDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 Template for asynchronous trigger collection and timestamping from serial port.  
   

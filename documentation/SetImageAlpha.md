@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychAlphaBlending]]
+# [SetImageAlpha](SetImageAlpha)
+## [Psychtoolbox](Psychtoolbox)[PsychAlphaBlending](PsychAlphaBlending)
 
 Accept a matrix holding an image and set the alpha plane of the image  
 to value "alpha".   

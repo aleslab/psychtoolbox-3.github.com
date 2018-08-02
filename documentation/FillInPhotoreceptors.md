@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [FillInPhotoreceptors](FillInPhotoreceptors)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
 photoreceptors = [FillInPhotoreceptors](FillInPhotoreceptors)(photoreceptors)  
   

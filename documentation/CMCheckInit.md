@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [CMCheckInit](CMCheckInit)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
 [CMCheckInit](CMCheckInit)([meterType], [[PortString](PortString)])  
   

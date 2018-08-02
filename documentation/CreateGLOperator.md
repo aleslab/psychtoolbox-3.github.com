@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [CreateGLOperator](CreateGLOperator)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 gloperator = [CreateGLOperator](CreateGLOperator)(windowPtr [, imagingmode] [, shaderhandle] [, opname] [,..shader options])  
   

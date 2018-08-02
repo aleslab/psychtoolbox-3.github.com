@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [ComputeOptimalBeta](ComputeOptimalBeta)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 beta = [ComputeOptimalBeta](ComputeOptimalBeta)(ps,pn,Vh,Vfa,Vm,Vcr)  
   

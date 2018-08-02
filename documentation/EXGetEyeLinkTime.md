@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]] &#8250; [[EyelinkTests]]
+# [EXGetEyeLinkTime](EXGetEyeLinkTime)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkTests](EyelinkTests)
 
 time = [EXGetEyeLinkTime](EXGetEyeLinkTime) returns the timestamp from the [EyeLink](EyeLink).  
 John Palmer  

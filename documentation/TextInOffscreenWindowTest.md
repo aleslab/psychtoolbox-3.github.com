@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [TextInOffscreenWindowTest](TextInOffscreenWindowTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [TextInOffscreenWindowTest](TextInOffscreenWindowTest)  
   

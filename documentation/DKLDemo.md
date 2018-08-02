@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [DKLDemo](DKLDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [[DKLDemo](DKLDemo)][(DKLDemo)]((DKLDemo))  
   

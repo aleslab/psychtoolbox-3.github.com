@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [SimpleImageMixingDemo](SimpleImageMixingDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [SimpleImageMixingDemo](SimpleImageMixingDemo)([morphType=gaussian][, showMaskOnly=0])  
   

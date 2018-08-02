@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [PerceptualVBLSyncTestFlipInfo2](PerceptualVBLSyncTestFlipInfo2)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [PerceptualVBLSyncTestFlipInfo2](PerceptualVBLSyncTestFlipInfo2)(screen, stereomode, fullscreen, doublebuffer, maxduration, vblSync, testdualheadsync)  
   

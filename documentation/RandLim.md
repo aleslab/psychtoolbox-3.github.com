@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [RandLim](RandLim)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 returns pseudo-random values drawn from a uniform distribution with lower  
 and upper limits LOWER and UPPER.  

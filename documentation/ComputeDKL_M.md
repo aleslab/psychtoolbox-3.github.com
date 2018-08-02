@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [ComputeDKL_M](ComputeDKL_M)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 [M,[LMLumWeights](LMLumWeights)] = [ComputeDKL](ComputeDKL)\_M(bg,T\_cones,T\_Y)  
   

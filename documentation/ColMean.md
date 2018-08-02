@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [ColMean](ColMean)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 theMean = [ColMean](ColMean)(matrix)  
   

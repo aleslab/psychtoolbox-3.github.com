@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychContributed]] &#8250; [[WinTab]]
+# [wintabslowLoop](wintabslowLoop)
+## [Psychtoolbox](Psychtoolbox)[PsychContributed](PsychContributed)[WinTab](WinTab)
 
  function slowLoop(samplingRate)  
   

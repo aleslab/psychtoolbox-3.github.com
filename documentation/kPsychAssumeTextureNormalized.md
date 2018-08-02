@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [kPsychAssumeTextureNormalized](kPsychAssumeTextureNormalized)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 rc = kPsychAssumeTextureNormalized  
   

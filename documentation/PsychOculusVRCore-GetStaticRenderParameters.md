@@ -1,5 +1,5 @@
 # [PsychOculusVRCore('GetStaticRenderParameters')](PsychOculusVRCore-GetStaticRenderParameters) 
-## [[Psychtoolbox]] &#8250; [[PsychOculusVRCore]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
 
 
 Retrieve static rendering parameters for Oculus device 'oculusPtr' at current  

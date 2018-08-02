@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [DrawingToTextureVsOffscreenWindowTest](DrawingToTextureVsOffscreenWindowTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 Draws some line into an offscreen window, displays it,  
 then does the same drawing into a texture.  

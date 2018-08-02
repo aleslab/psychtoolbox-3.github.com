@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [psychrethrow](psychrethrow)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [psychrethrow](psychrethrow)(msg) - Replacement for Matlab 6.5s builtin rethrow().  
 This is hopefully useful for older Matlab installations and  

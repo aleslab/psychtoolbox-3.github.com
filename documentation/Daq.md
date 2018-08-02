@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [Daq](Daq)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 Psychtoolbox/[PsychHardware](PsychHardware)/Daq/  
 The Daq Toolbox  

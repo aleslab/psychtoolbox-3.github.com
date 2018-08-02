@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [TextureTest](TextureTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [TextureTest](TextureTest)  
   

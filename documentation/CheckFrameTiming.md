@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [CheckFrameTiming](CheckFrameTiming)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
  [times, badOut, misses]=[CheckFrameTiming](CheckFrameTiming)([rectSize=128][, scale=1][, dur=30][, thresh=0.05][, runPriority=[MaxPriority](MaxPriority)('KbCheck')][, useWhen=0][,useDrawingFinished=1])  
   

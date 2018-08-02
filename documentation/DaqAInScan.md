@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqAInScan](DaqAInScan)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 [data,params]=[DaqAInScan](DaqAInScan)[(DeviceIndex]((DeviceIndex),options)  
   

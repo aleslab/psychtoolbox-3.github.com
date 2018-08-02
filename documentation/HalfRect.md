@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [HalfRect](HalfRect)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 output = [HalfRect](HalfRect)(input)  
   

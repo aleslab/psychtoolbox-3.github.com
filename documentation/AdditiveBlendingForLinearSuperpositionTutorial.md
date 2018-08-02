@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[PsychTutorials]]
+# [AdditiveBlendingForLinearSuperpositionTutorial](AdditiveBlendingForLinearSuperpositionTutorial)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[PsychTutorials](PsychTutorials)
 
 [AdditiveBlendingForLinearSuperpositionTutorial](AdditiveBlendingForLinearSuperpositionTutorial)([outputdevice='None'] [, overlay=1] [, colorclut=0] [, doGainCorrection=0]);  
   

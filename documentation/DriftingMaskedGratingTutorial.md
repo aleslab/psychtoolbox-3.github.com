@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[PsychTutorials]]
+# [DriftingMaskedGratingTutorial](DriftingMaskedGratingTutorial)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[PsychTutorials](PsychTutorials)
 
 function [DriftDemo2](DriftDemo2)(angle, cyclespersecond, f, drawmask)  
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  

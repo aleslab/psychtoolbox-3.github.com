@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [Expand](Expand)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 B=[Expand](Expand)(A,horizontalFactor,[verticalFactor])  
   

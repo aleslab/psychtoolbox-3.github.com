@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [Gestalt](Gestalt)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 gestaltBits = [Gestalt](Gestalt)(selector)  
   

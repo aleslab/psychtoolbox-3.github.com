@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychVideoCapture]]
+# [PsychVideoCapture](PsychVideoCapture)
+## [Psychtoolbox](Psychtoolbox)[PsychVideoCapture](PsychVideoCapture)
 
 [PsychVideoCapture](PsychVideoCapture) -- Video capture support  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [MandelbrotDemo](MandelbrotDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [MandelbrotDemo](MandelbrotDemo) -- GPU visualization of the fractal Mandelbrot set.  
   

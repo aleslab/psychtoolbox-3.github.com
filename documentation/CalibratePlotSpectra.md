@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [CalibratePlotSpectra](CalibratePlotSpectra)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 fig = [CalibratePlotSpectra](CalibratePlotSpectra)(cal,[fig])  
   

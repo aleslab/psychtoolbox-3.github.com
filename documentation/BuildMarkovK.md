@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [BuildMarkovK](BuildMarkovK)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 K = [BuildMarkovK](BuildMarkovK)(n,r,var)  
 K = [BuildMarkovK](BuildMarkovK)(r,var)  

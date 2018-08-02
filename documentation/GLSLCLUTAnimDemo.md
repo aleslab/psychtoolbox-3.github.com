@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [GLSLCLUTAnimDemo](GLSLCLUTAnimDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
   
 Demonstrates GLSL shader based CLUT animation via moglClutblit()  

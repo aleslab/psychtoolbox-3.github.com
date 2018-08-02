@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [GetWithDefault](GetWithDefault)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 inputVal = [GetWithDefault](GetWithDefault)(prompt,defaultVal)  
   

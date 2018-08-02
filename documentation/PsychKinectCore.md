@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [PsychKinectCore](PsychKinectCore)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [PsychKinectCore](PsychKinectCore) is a MEX file for precise control of the Microsoft XBOX  
 Kinect. [PsychKinectCore](PsychKinectCore) has many functions; type "[PsychKinectCore](PsychKinectCore)" for a  

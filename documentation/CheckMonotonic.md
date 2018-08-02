@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGamma]]
+# [CheckMonotonic](CheckMonotonic)
+## [Psychtoolbox](Psychtoolbox)[PsychGamma](PsychGamma)
 
 bool = [CheckMonotonic](CheckMonotonic)(vector)  
   

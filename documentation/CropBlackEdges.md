@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [CropBlackEdges](CropBlackEdges)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 coords = croblackedges(image)  
 returns coordinates that can be used to cut the black edges from an image  

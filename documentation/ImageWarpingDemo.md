@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychAlpha]]
+# [ImageWarpingDemo](ImageWarpingDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychAlpha](PsychAlpha)
 
 PTB-3 properly installed and working?  
 

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [NameBytes](NameBytes)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 bytesName=[NameBytes](NameBytes)(numBytes [,abbreviateFlag])  
   

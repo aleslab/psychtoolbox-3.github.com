@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOpenGL]]
+# [PsychOpenGL](PsychOpenGL)
+## [Psychtoolbox](Psychtoolbox)[PsychOpenGL](PsychOpenGL)
 
 [PsychOpenGL](PsychOpenGL) -- [OpenGL](OpenGL) support for Matlab.  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [FontInfo](FontInfo)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 numFonts=[FontInfo](FontInfo)('NumFonts');        % Return the number of installed fonts  
 fontInfoStructArray=[FontInfo](FontInfo)('Fonts');% Return an array of font info structs  

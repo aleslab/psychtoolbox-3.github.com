@@ -1,5 +1,5 @@
 # [Screen('glPopMatrix')](Screen-glPopMatrix) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Restore an [OpenGL](OpenGL) matrix by fetching it from the matrix stack. See  

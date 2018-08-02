@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [PsychImaging](PsychImaging)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 rc = [PsychImaging](PsychImaging)(subcommand [,arg1][,arg2][....,argn]) - Control common  
 functions of the Psychtoolbox GPU image processing pipeline.  

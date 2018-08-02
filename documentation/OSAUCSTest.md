@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [OSAUCSTest](OSAUCSTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [[OSAUCSTest](OSAUCSTest)][(OSAUCSTest)]((OSAUCSTest))  
   

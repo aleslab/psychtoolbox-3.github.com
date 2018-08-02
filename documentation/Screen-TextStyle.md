@@ -1,5 +1,5 @@
 # [Screen('TextStyle')](Screen-TextStyle) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Get/set the font style for future text draws in this window. Useful values for  

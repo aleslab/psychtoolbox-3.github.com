@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]]
+# [TrolandsToLum](TrolandsToLum)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)
 
 luminance = [TrolandsToLum](TrolandsToLum)(trolands,pupilAreaMM)  
   

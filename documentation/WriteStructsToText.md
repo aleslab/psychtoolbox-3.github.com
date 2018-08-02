@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychFiles]]
+# [WriteStructsToText](WriteStructsToText)
+## [Psychtoolbox](Psychtoolbox)[PsychFiles](PsychFiles)
 
 [WriteStructsToText](WriteStructsToText)(filename,theStructs)  
   

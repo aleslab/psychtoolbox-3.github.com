@@ -1,5 +1,5 @@
 # [Screen('Computer')](Screen-Computer) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Get information about the computer. The result is a struct holding information  

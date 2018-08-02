@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [IsOctave](IsOctave)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 resultFlag = [IsOctave](IsOctave)  
   

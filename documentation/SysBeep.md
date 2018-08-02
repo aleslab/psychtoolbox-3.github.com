@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychObsolete]]
+# [SysBeep](SysBeep)
+## [Psychtoolbox](Psychtoolbox)[PsychObsolete](PsychObsolete)
 
 [SysBeep](SysBeep)([n],[delay])  
   

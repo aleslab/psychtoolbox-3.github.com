@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOpenGL]]
+# [moglmorpher](moglmorpher)
+## [Psychtoolbox](Psychtoolbox)[PsychOpenGL](PsychOpenGL)
 
   
 Matlab [OpenGL](OpenGL) Morpher - Performs linear morphs between different 3D shapes and  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [CovToCorr](CovToCorr)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 corr = [CovToCorr](CovToCorr)(K)  
   

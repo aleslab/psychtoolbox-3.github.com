@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PR650Toolbox]]
+# [PR650init](PR650init)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PR650Toolbox](PR650Toolbox)
 
 retval = [PR650init](PR650init)(portNumber, [enableHandshaking])  
   

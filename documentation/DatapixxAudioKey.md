@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[DatapixxToolbox]] &#8250; [[DatapixxBasic]]
+# [DatapixxAudioKey](DatapixxAudioKey)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[DatapixxToolbox](DatapixxToolbox)[DatapixxBasic](DatapixxBasic)
 
 [DatapixxAudioKey](DatapixxAudioKey) - A prototype implementation of a [DataPixx](DataPixx)  
 audio-key/voice-key.  

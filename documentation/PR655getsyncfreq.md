@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PR655Toolbox]]
+# [PR655getsyncfreq](PR655getsyncfreq)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PR655Toolbox](PR655Toolbox)
 
 syncFreq = [PR655getsyncfreq](PR655getsyncfreq)  
   

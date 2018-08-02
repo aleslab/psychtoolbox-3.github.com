@@ -1,5 +1,5 @@
 # [Screen('Screens')](Screen-Screens) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Return an array of screenNumbers. If this command is executed on Microsoft  

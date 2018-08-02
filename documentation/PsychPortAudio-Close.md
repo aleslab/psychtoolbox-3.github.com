@@ -1,5 +1,5 @@
 # [PsychPortAudio('Close')](PsychPortAudio-Close) 
-## [[Psychtoolbox]] &#8250; [[PsychPortAudio]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 [Close](Close) a [PortAudio](PortAudio) audio device. The optional 'pahandle' is the handle of the  

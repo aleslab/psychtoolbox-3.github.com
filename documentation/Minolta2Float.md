@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[ColorCal2]]
+# [Minolta2Float](Minolta2Float)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[ColorCal2](ColorCal2)
 
 floatValue = [Minolta2Float](Minolta2Float)(minoltaMatrix)  
   

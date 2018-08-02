@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BrightSideDisplay]]
+# [BrightSideDisplay](BrightSideDisplay)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BrightSideDisplay](BrightSideDisplay)
 
 Psychtoolbox:[PsychHardware](PsychHardware):[BrightSideDisplay](BrightSideDisplay)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [GarboriumDemo](GarboriumDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [GarboriumDemo](GarboriumDemo)([ngabors=200] [, internalRotation=0]) -- An aquarium full of cute little gabors!  
   

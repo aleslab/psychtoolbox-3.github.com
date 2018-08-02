@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [LoadCalFile](LoadCalFile)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 [cal, cals, fullFilename] = [LoadCalFile](LoadCalFile)([filespec], [whichCal], [dir])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [IsGUI](IsGUI)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [IsGUI](IsGUI) - Is the Matlab or Octave GUI enabled in this session?  
   

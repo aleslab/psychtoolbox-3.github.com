@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqAIn](DaqAIn)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 v=[DaqAIn](DaqAIn)[(DeviceIndex]((DeviceIndex),channel,range,[[DoNotCalibrate](DoNotCalibrate)])  
 Analog input.  

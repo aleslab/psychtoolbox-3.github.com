@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [AudioTunnel3DDemo](AudioTunnel3DDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [AudioTunnel3DDemo](AudioTunnel3DDemo) -- A very sketchy and raw demo of how to use [OpenAL](OpenAL) to  
 create the illusion of walking through a tunnel which has different sound  

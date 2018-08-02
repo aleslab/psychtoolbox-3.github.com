@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [UnpackColorImage](UnpackColorImage)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [red,green,blue] = [UnpackColorImage](UnpackColorImage)(image)    
   

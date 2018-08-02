@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [PsychHelperCreateRGB111110RemapCLUTAMDDCE8](PsychHelperCreateRGB111110RemapCLUTAMDDCE8)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 remapCLUTId = [PsychHelperCreateRGB111110RemapCLUTAMDDCE8](PsychHelperCreateRGB111110RemapCLUTAMDDCE8);  
   

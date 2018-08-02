@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [StdAll](StdAll)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 [s] = [StdAll](StdAll)(in)  
 returns the standard deviation of input IN. IN can be anything from a  

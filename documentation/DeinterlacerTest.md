@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [DeinterlacerTest](DeinterlacerTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [DeinterlacerTest](DeinterlacerTest)([sf][,imgname][,method])  
   

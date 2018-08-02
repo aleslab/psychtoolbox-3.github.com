@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSound]]
+# [psychwavwrite](psychwavwrite)
+## [Psychtoolbox](Psychtoolbox)[PsychSound](PsychSound)
 
 psychwavwrite - Replacement for wavwrite().  
   

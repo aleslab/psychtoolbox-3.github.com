@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BitsPlusToolbox]]
+# [BitsPlusSetClut](BitsPlusSetClut)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BitsPlusToolbox](BitsPlusToolbox)
 
  [BitsPlusSetClut](BitsPlusSetClut)(windowPtr, clutOrTexturePtr, [rect], [doFlip])  
   

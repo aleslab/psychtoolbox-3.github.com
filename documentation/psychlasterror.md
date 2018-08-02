@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [psychlasterror](psychlasterror)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [psychlasterror](psychlasterror) - Replacement for Matlab-7 'lasterror'.  
 This is hopefully useful for older Matlab installations and  

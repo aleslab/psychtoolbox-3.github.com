@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGamma]]
+# [InitialXPolyR](InitialXPolyR)
+## [Psychtoolbox](Psychtoolbox)[PsychGamma](PsychGamma)
 
  x = [InitialXPolyR](InitialXPolyR)(values\_in,measurements)  
   

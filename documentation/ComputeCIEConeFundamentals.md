@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [ComputeCIEConeFundamentals](ComputeCIEConeFundamentals)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
 [T\_quantalAbsorptionsNormalized,T\_quantalAbsorptions,T\_quantalIsomerizations,adjIndDiffParams,params,staticParams] = ...  
   [ComputeCIEConeFundamentals](ComputeCIEConeFundamentals)(S,fieldSizeDegrees,ageInYears,pupilDiameterMM,[lambdaMax],[whichNomogram],[[LserWeight](LserWeight)], ...  

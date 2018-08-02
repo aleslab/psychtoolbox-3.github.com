@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [FunctionFolder](FunctionFolder)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 filePath=[FunctionFolder](FunctionFolder)(functionName)  
   

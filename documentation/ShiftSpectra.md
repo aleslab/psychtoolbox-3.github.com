@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [ShiftSpectra](ShiftSpectra)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 out = [ShiftSpectra](ShiftSpectra)(in,Sin,shift)  
   

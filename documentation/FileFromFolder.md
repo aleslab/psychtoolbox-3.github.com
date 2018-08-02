@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychFiles]]
+# [FileFromFolder](FileFromFolder)
+## [Psychtoolbox](Psychtoolbox)[PsychFiles](PsychFiles)
 
 [file,nfile] = [FileFromFolder](FileFromFolder)(folder,mode,ext)  
   

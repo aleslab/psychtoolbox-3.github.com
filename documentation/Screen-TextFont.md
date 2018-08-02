@@ -1,5 +1,5 @@
 # [Screen('TextFont')](Screen-TextFont) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Get/Set the font for future text draws in this window.  

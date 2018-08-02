@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOpenGL]]
+# [AddNormalsToOBJ](AddNormalsToOBJ)
+## [Psychtoolbox](Psychtoolbox)[PsychOpenGL](PsychOpenGL)
 
 obj = [AddNormalsToOBJ](AddNormalsToOBJ)(obj [, flipDir=0]);  
 Adds surface normal vectors to the vertices of the given input 'obj' 3D  

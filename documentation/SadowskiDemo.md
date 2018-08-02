@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [SadowskiDemo](SadowskiDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [SadowskiDemo](SadowskiDemo)([imgName]);  
   

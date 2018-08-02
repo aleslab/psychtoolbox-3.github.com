@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [KbEventFlush](KbEventFlush)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 nflushed = [KbEventFlush](KbEventFlush)([deviceIndex])  
   

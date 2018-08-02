@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [BasicToneMapCalFormat](BasicToneMapCalFormat)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 outputXYZCalFormat = [BasicToneMapCalFormat](BasicToneMapCalFormat)(inputXYZCalFormat, maxLum)  
   

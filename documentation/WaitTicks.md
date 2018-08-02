@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [WaitTicks](WaitTicks)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [WaitTicks](WaitTicks)(wait)  
   

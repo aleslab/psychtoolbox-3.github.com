@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDocumentation]]
+# [BeampositionQueries](BeampositionQueries)
+## [Psychtoolbox](Psychtoolbox)[PsychDocumentation](PsychDocumentation)
 
 [BeampositionQueries](BeampositionQueries) -- What they are used for, and what can go wrong.  
   

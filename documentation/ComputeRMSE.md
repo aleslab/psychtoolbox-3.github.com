@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGamma]]
+# [ComputeRMSE](ComputeRMSE)
+## [Psychtoolbox](Psychtoolbox)[PsychGamma](PsychGamma)
 
 rmse = [ComputeRMSE](ComputeRMSE)(data,predict,SUPRESS\_WARNING)  
   

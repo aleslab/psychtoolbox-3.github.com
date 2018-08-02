@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychPriority]]
+# [MachGetPriorityMex](MachGetPriorityMex)
+## [Psychtoolbox](Psychtoolbox)[PsychPriority](PsychPriority)
 
 priorityStruct = [MachGetPriorityMex](MachGetPriorityMex)(policyFlavorString, defaultFlag)  
   

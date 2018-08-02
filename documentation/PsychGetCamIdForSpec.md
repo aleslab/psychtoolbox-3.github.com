@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychVideoCapture]]
+# [PsychGetCamIdForSpec](PsychGetCamIdForSpec)
+## [Psychtoolbox](Psychtoolbox)[PsychVideoCapture](PsychVideoCapture)
 
 Return deviceIndex of a specified camera, one that matches given criteria.  
   

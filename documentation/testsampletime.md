@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]] &#8250; [[EyelinkTests]]
+# [testsampletime](testsampletime)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkTests](EyelinkTests)
 
 Routine to test timing of functions that sample eye position  
 John Palmer, last revised 6/6/01  

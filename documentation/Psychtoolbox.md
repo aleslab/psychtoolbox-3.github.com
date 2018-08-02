@@ -1,4 +1,5 @@
-## [[Psychtoolbox]]
+# [Psychtoolbox](Psychtoolbox)
+## [Psychtoolbox](Psychtoolbox)
 
 Psychtoolbox.  
 Version 3.0.14      30 December 2016  

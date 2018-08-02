@@ -1,5 +1,5 @@
 # [Screen('Flip')](Screen-Flip) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 [Flip](Flip) front and back display surfaces in sync with vertical retrace and return  

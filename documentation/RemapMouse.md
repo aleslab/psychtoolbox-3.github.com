@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [RemapMouse](RemapMouse)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [xo, yo] = [RemapMouse](RemapMouse)(win, viewId, xm, ym); -- Map mouse position to stimulus position.  
   

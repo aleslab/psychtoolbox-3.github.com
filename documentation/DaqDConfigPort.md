@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqDConfigPort](DaqDConfigPort)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 err=[DaqDConfigPort](DaqDConfigPort)[(DeviceIndex]((DeviceIndex),port,direction)  
 USB-1208FS: Configure digital port. This command sets the direction of  

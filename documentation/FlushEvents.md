@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [FlushEvents](FlushEvents)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [FlushEvents](FlushEvents)(['mouseUp'],['mouseDown'],['keyDown'],['autoKey'],['update'],...)  
   

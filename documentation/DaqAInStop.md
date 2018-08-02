@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqAInStop](DaqAInStop)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 err=[DaqAInStop](DaqAInStop)[(DeviceIndex)]((DeviceIndex))  
 USB-1208FS stop analog input scan. You probably will never need to  

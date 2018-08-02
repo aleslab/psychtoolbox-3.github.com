@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [DriftDemo4](DriftDemo4)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 function [DriftDemo4](DriftDemo4)([angle=0][, cyclespersecond=1][, freq=1/360][, gratingsize=360][, internalRotation=0])  
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  

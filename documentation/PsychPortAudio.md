@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [PsychPortAudio](PsychPortAudio)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [PsychPortAudio](PsychPortAudio) - High precision sound driver for Psychtoolbox-3.  
   
@@ -72,7 +73,7 @@ you omit that call, initialization of the driver may fail with some
   <code>Psychtoolbox/PsychBasic/PsychPortAudio.m</code>
 </div>
 
-Handle=0][, repetitions=1][, startSample=0][, endSample=max][, UnitIsSeconds=0][, specialFlags=0]);  
+tSample=0][, endSample=max][, UnitIsSeconds=0][, specialFlags=0]);  
   
 
   [PsychPortAudio](PsychPortAudio) - High precision sound driver for Psychtoolbox-3.  

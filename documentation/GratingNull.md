@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [GratingNull](GratingNull)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 foreWeight=[GratingNull](GratingNull)(device,message,forePart,blendPeriodPix,[foreColor],[backColor],[viewingDistanceM],[dpi])  
 [GratingNull](GratingNull) obtains visual matches that allow calibration of a video monitor's gamma.  

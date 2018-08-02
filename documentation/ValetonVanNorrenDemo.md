@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [ValetonVanNorrenDemo](ValetonVanNorrenDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [ValetonVanNorrenDemo](ValetonVanNorrenDemo)  
   

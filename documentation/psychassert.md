@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [psychassert](psychassert)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [psychassert](psychassert)(expression, ...) - Replacement for Matlab 7 builtin assert().  
 This is hopefully useful for older Matlab installations and  

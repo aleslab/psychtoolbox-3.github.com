@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [SetStereoBlueLineSyncParameters](SetStereoBlueLineSyncParameters)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 Change parameters for drawing of frame-sequential stereo blue line sync lines for shutter glasses (stereo goggles).  
   

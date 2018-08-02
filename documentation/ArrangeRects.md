@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [ArrangeRects](ArrangeRects)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
 cellRects=[ArrangeRects](ArrangeRects)(n,objectRect,windowRect,[rightToLeft]);  
   

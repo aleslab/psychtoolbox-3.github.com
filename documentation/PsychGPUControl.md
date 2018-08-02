@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [PsychGPUControl](PsychGPUControl)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [rc,rcExt] = [PsychGPUControl](PsychGPUControl)(cmd, arg); -- Control low-level GPU settings.  
   

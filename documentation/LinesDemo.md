@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [LinesDemo](LinesDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 Line motion demo using SCREEN('DrawLines') subfunction  
 Derived from [DotDemo](DotDemo), whose original author was Keith Schneider, 12/13/04  

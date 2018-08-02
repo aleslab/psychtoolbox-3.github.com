@@ -1,5 +1,5 @@
 # [IOPort('BytesAvailable')](IOPort-BytesAvailable) 
-## [[Psychtoolbox]] &#8250; [[IOPort]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[IOPort](IOPort).{mex*} subfunction
 
 
 Return number 'navailable' of data bytes available for readout from device  

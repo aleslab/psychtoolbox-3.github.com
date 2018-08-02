@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [GetSecs](GetSecs)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 s=[GetSecs](GetSecs)  
   

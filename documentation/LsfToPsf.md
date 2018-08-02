@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOptics]]
+# [LsfToPsf](LsfToPsf)
+## [Psychtoolbox](Psychtoolbox)[PsychOptics](PsychOptics)
 
 [LSFToPSF](LSFToPSF)  Convert a line spread function to a point spread function.  
    psf = LSFTOPSF(lsf,varargin)  

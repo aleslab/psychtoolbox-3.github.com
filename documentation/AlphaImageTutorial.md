@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[PsychTutorials]]
+# [AlphaImageTutorial](AlphaImageTutorial)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[PsychTutorials](PsychTutorials)
 
 [AlphaImageTutorial](AlphaImageTutorial)  
   

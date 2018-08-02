@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqScanDumbTest](DaqScanDumbTest)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 [DaqScanDumbTest](DaqScanDumbTest) - Minimal test of [DaqAInScan](DaqAInScan)() functionality.  
 Tries 1 channel acquisition of samples from channel 0 with  

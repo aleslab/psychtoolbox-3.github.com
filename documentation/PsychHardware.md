@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [PsychHardware](PsychHardware)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
 Psychtoolbox:[PsychHardware](PsychHardware)  
 Sense and control the world outside the computer. For keyboard and mouse   

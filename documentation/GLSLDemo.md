@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[OpenGL4MatlabDemos]]
+# [GLSLDemo](GLSLDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[OpenGL4MatlabDemos](OpenGL4MatlabDemos)
 
 [GLSLDemo](GLSLDemo) - Demonstrate use of the GLSL [OpenGL](OpenGL) Shading language in the  
 Psychtoolbox.  

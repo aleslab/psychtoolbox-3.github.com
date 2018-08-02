@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [TouchQueueRelease](TouchQueueRelease)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [TouchQueueRelease](TouchQueueRelease)(deviceIndex)  
   

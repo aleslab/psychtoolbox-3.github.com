@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[DatapixxToolbox]] &#8250; [[DatapixxBasic]]
+# [ResponsePixx](ResponsePixx)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[DatapixxToolbox](DatapixxToolbox)[DatapixxBasic](DatapixxBasic)
 
 [ResponsePixx](ResponsePixx) - Control and use the [ResponsePixx](ResponsePixx) response button box.  
   

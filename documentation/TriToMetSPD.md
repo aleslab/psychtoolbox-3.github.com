@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [TriToMetSPD](TriToMetSPD)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 output = [TriToMetSPD](TriToMetSPD)(input,T,B)  
   

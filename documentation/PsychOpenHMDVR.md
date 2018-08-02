@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PsychVRToolbox]]
+# [PsychOpenHMDVR](PsychOpenHMDVR)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PsychVRToolbox](PsychVRToolbox)
 
 [PsychOpenHMDVR](PsychOpenHMDVR) - A high level driver for VR hardware supported via [OpenHMD](OpenHMD).  
   

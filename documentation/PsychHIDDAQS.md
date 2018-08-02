@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [PsychHIDDAQS](PsychHIDDAQS)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 daqdevs = [PsychHIDDAQS](PsychHIDDAQS) -- Enumerate and preprocess HID-DAQ device list.  
   

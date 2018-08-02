@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]]
+# [WattsToRetIrradiance](WattsToRetIrradiance)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)
 
  [irradiance, irradianceS] =...  
         [WattsToRetIrradiance](WattsToRetIrradiance)(relativeSpectrum, relativeSpectrumS, readingInWatts, [radiometer])  

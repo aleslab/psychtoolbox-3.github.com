@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]]
+# [CornIrradianceAndDegrees2ToRadiance](CornIrradianceAndDegrees2ToRadiance)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)
 
 radiance\_PowerPerSrArea = [CornIrradianceAndDegrees2ToRadiance](CornIrradianceAndDegrees2ToRadiance)(cornealIrradiance\_PowerPerArea,stimulusAreaDegrees2)  
   

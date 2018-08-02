@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychAlpha]]
+# [OpenEyesDemo](OpenEyesDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychAlpha](PsychAlpha)
 
 Adrian, this function is not yet documented.
 

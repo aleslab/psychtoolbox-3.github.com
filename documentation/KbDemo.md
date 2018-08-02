@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [KbDemo](KbDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 % [KbDemo](KbDemo)  
  Shows how to detect when the user has pressed a key.  

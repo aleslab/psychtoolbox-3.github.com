@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGamma]]
+# [InitialXSig](InitialXSig)
+## [Psychtoolbox](Psychtoolbox)[PsychGamma](PsychGamma)
 
 x = [InitialXSig](InitialXSig)(xp)  
   

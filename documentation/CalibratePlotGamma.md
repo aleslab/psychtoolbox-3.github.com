@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [CalibratePlotGamma](CalibratePlotGamma)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 fig = [CalibratePlotGamma](CalibratePlotGamma)(cal,[fig])  
   

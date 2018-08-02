@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [log10nw](log10nw)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 y=[log10nw](log10nw)(x)  
 "nw" stands for "No Warnings". Equivalent to Matlab's built-in LOG10 function, but suppresses warnings,   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [SetCompressedStereoSideBySideParameters](SetCompressedStereoSideBySideParameters)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 [SetCompressedStereoSideBySideParameters](SetCompressedStereoSideBySideParameters)(win, [0, 0], [0.5, 1], [0.5, 0], [0.5, 1]);  
   

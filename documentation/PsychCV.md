@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [PsychCV](PsychCV)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [PsychCV](PsychCV) is a MEX file for computer-vision applications. [PsychCV](PsychCV) has  
 many functions; type "[PsychCV](PsychCV)" for a list:  

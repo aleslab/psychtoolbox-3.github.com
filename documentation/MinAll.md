@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [MinAll](MinAll)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 [s] = [MinAll](MinAll)(in)  
 returns the minimum of input IN. IN can be anything from a scalar to an N-D  

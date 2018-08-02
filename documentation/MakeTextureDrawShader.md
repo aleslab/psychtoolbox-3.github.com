@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [MakeTextureDrawShader](MakeTextureDrawShader)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 glsl = [MakeTextureDrawShader](MakeTextureDrawShader)(windowPtr, shadertype [, backgroundColorOffset = [0,0,0,0]]);  
   

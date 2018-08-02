@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [NetStationDebug](NetStationDebug)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
   
  [NetStation](NetStation) - Basic control of the EGI/[NetStation](NetStation) EEG recording system via  

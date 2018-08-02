@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychStairCase]]
+# [PsychStairCase](PsychStairCase)
+## [Psychtoolbox](Psychtoolbox)[PsychStairCase](PsychStairCase)
 
 Psychtoolbox:[PsychStairCase](PsychStairCase).  
   

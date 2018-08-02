@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [OSName](OSName)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 sysNameStr = [[OSName](OSName)][(OSName)]((OSName))  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychObsolete]]
+# [PsychObsolete](PsychObsolete)
+## [Psychtoolbox](Psychtoolbox)[PsychObsolete](PsychObsolete)
 
   
  Psychtoolbox:[PsychObsolete](PsychObsolete)  

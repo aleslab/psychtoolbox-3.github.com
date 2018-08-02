@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqAInScanEnd](DaqAInScanEnd)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 [data,params]=[DaqAInScanEnd](DaqAInScanEnd)[(DeviceIndex]((DeviceIndex),options)  
 Calls [DaqAInScan](DaqAInScan) with the options set to just end the scan, returning the  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDocumentation]]
+# [HybridGraphics](HybridGraphics)
+## [Psychtoolbox](Psychtoolbox)[PsychDocumentation](PsychDocumentation)
 
 [HybridGraphics](HybridGraphics) -- Support for hybrid graphics laptops.  
   

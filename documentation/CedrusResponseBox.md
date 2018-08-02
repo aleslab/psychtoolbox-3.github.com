@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [CedrusResponseBox](CedrusResponseBox)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
 [CedrusResponseBox](CedrusResponseBox) - Interface to Cedrus Response Boxes.  
   

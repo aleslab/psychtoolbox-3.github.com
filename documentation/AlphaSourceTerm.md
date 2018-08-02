@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychAlphaBlending]]
+# [AlphaSourceTerm](AlphaSourceTerm)
+## [Psychtoolbox](Psychtoolbox)[PsychAlphaBlending](PsychAlphaBlending)
 
 newSourceMat=[AlphaSourceTerm](AlphaSourceTerm)(sourceFactorStr, sourceMat, destinationMat)  
   

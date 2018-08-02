@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqDOut](DaqDOut)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 err=[DaqDOut](DaqDOut)[(DeviceIndex]((DeviceIndex),port,data)  
 USB-1208FS: Write digital port. This command writes data to the DIO port  

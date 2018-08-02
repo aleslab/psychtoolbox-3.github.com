@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychVideoCapture]]
+# [PsychOpenEyes](PsychOpenEyes)
+## [Psychtoolbox](Psychtoolbox)[PsychVideoCapture](PsychVideoCapture)
 
 result = [PsychOpenEyes](PsychOpenEyes)(cmd, handle [, arg1, arg2, ...]);  
   

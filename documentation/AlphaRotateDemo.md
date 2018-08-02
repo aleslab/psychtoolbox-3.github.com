@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [AlphaRotateDemo](AlphaRotateDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [AlphaRotateDemo](AlphaRotateDemo)(numFrames, ifis)  
   

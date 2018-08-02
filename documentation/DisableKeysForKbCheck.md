@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [DisableKeysForKbCheck](DisableKeysForKbCheck)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 olddisabledkeys = [DisableKeysForKbCheck](DisableKeysForKbCheck)([disablekeys])  
   

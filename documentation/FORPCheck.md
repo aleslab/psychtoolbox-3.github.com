@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[FORP]]
+# [FORPCheck](FORPCheck)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[FORP](FORP)
 
 [FORPCheck](FORPCheck) Checks if a button of a FORP device (HH-5-CYL) is pressed.  
   

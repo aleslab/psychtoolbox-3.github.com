@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [TurnTableDemo](TurnTableDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [TurnTableDemo](TurnTableDemo) - A simulated turntable to nurture your inner DJ.  
   

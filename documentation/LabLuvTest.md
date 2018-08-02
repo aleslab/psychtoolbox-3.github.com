@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [LabLuvTest](LabLuvTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [LabLuvTest](LabLuvTest)  
   

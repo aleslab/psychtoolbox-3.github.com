@@ -1,5 +1,5 @@
 # [Screen('FillArc')](Screen-FillArc) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Draw a filled arc inscribed within the rect. 'color' is the clut index (scalar  

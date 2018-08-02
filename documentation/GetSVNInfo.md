@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [GetSVNInfo](GetSVNInfo)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
  svnInfo = [GetSVNInfo](GetSVNInfo)(directoryOrFile)  
   

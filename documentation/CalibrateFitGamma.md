@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [CalibrateFitGamma](CalibrateFitGamma)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 cal = [CalibrateFitGamma](CalibrateFitGamma)(cal,[nInputLevels])  
   

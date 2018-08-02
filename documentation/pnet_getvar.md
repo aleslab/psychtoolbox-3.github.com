@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[iViewXToolbox]] &#8250; [[tcp_udp_ip]]
+# [pnet_getvar](pnet_getvar)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[iViewXToolbox](iViewXToolbox)[tcp_udp_ip](tcp_udp_ip)
 
 PNET\_GETVAR - Gets any matlab variable (number-, cell-, struct- or object -array) from pnet.  
   

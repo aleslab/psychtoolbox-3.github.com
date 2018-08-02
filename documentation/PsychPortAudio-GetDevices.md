@@ -1,5 +1,5 @@
 # [PsychPortAudio('GetDevices')](PsychPortAudio-GetDevices) 
-## [[Psychtoolbox]] &#8250; [[PsychPortAudio]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Returns 'devices', an array of structs, one struct for each available [PortAudio](PortAudio)  

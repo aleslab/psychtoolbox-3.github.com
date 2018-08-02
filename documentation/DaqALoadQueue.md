@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqALoadQueue](DaqALoadQueue)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 err=[DaqALoadQueue](DaqALoadQueue)[(DeviceIndex]((DeviceIndex),channel,range)  
 USB-1208FS: Load the channel/gain queue. The USB-1208FS can scan an  

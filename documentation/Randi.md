@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [Randi](Randi)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 i=[Randi](Randi)(n,[dims])  
 Returns a random integer sample from 1:n. The optional second argument  

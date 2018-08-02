@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [ImageToCalFormat](ImageToCalFormat)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 [calFormat,nX,nY] = [ImageToCalFormat](ImageToCalFormat)(image)  
   

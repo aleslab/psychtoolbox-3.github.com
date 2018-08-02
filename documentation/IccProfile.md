@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [IccProfile](IccProfile)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 icc=[IccProfile](IccProfile)(command,file,icc)  
   

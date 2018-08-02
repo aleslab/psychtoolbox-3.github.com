@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]] &#8250; [[EyelinkTests]]
+# [testbutton](testbutton)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkTests](EyelinkTests)
 
 John Palmer  
 test button input of eyelink.  Simple version w/o file i/o  

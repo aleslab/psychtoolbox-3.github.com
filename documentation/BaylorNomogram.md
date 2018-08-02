@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [BaylorNomogram](BaylorNomogram)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
 T = [BaylorNomogram](BaylorNomogram)(S,lambdaMax)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[GPGPUDemos]]
+# [GPUFFTVideoCaptureDemo](GPUFFTVideoCaptureDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[GPGPUDemos](GPGPUDemos)
 
 [GPUFFTVideoCaptureDemo](GPUFFTVideoCaptureDemo) - Demonstrate use of GPGPU computing for live filtering via 2D-FFT.  
   

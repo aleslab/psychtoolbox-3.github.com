@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [GetEchoNumber](GetEchoNumber)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 number = [GetEchoNumber](GetEchoNumber)(window, msg, x, y [, textColor][, bgColor][, deviceIndex][, untilTime=inf][, [KbCheck](KbCheck) args...])  
   

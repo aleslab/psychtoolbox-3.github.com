@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSound]] &#8250; [[MOAL]]
+# [MOAL](MOAL)
+## [Psychtoolbox](Psychtoolbox)[PsychSound](PsychSound)[MOAL](MOAL)
 
 Psychtoolbox:[PsychSound](PsychSound):MOAL Contents of MOAL Matlab-[OpenAL](OpenAL) toolbox  
   

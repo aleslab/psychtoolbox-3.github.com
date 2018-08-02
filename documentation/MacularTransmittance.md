@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [MacularTransmittance](MacularTransmittance)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
 [macTransmit,macDensity] = [MacularTransmittance](MacularTransmittance)(S,[species],[source],[fieldSizeDegrees])  
   

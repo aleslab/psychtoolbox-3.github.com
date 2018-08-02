@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]] &#8250; [[Obsolete]]
+# [RadianceToRetIrradiance](RadianceToRetIrradiance)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)[Obsolete](Obsolete)
 
 irradianceWattsPerUm2 = [RadianceToRetIrradiance](RadianceToRetIrradiance)(radianceWattsPerM2Sr,radianceS,pupilAreaMm2,eyeLengthMm)  
   

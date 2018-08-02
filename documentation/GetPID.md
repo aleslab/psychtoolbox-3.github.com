@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [GetPID](GetPID)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 pid=[GetPID](GetPID)  
   

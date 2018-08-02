@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [Kinect3DDemo](Kinect3DDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [Kinect3DDemo](Kinect3DDemo) - Capture and display video and depths data from a Kinect box.  
   

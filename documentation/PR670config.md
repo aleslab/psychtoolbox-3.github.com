@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PR670Toolbox]]
+# [PR670config](PR670config)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PR670Toolbox](PR670Toolbox)
 
 [PR670config](PR670config) - Update the PR-670 configuration.  
   

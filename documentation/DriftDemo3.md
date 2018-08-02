@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [DriftDemo3](DriftDemo3)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 function [DriftDemo3](DriftDemo3)([cyclespersecond=1][, p=32])  
   

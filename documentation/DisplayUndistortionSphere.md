@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [DisplayUndistortionSphere](DisplayUndistortionSphere)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 Create geometric display calibration file for projection onto a sphere.  
   

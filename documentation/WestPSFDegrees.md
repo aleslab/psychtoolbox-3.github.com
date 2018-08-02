@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOptics]]
+# [WestPSFDegrees](WestPSFDegrees)
+## [Psychtoolbox](Psychtoolbox)[PsychOptics](PsychOptics)
 
 psf = [WestPSFDegrees](WestPSFDegrees)(radius)  
   

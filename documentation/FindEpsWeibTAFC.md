@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [FindEpsWeibTAFC](FindEpsWeibTAFC)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 epsilon = [FindEpsWeibTAFC](FindEpsWeibTAFC)(pCorrect,beta)  
   

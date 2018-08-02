@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[iViewXToolbox]]
+# [iviewexample](iviewexample)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[iViewXToolbox](iViewXToolbox)
 
 Short MATLAB example program that uses the iViewX and Psychophysics  
 Toolboxes to create a short eyetracking experiment. This example could  

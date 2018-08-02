@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOptics]]
+# [WestLSFMinutes](WestLSFMinutes)
+## [Psychtoolbox](Psychtoolbox)[PsychOptics](PsychOptics)
 
 WESTLSFMINUTES  Compute Westheimer estimate of human LSF  
    lsf = [WestLSFMinutes](WestLSFMinutes)(distance)  

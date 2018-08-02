@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [RetinalMMToDegrees](RetinalMMToDegrees)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
 degs = [RetinalMMToDegrees](RetinalMMToDegrees)(mm,eyeLengthMM,[fulltrig])  
   

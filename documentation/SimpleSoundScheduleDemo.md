@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [SimpleSoundScheduleDemo](SimpleSoundScheduleDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [SimpleSoundScheduleDemo](SimpleSoundScheduleDemo) - Show simple application of sound schedules.  
   

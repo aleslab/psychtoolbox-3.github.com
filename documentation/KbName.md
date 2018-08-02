@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [KbName](KbName)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 kbNameResult = [KbName](KbName)(arg)  
   

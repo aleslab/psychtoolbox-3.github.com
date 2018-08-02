@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [CompareMonCal](CompareMonCal)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 isSame = [CompareMonCal](CompareMonCal)(cal1,cal2,[IGNOREDATE])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [Shuffle](Shuffle)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
  [Y,index] = [Shuffle](Shuffle)(X [, bindDim])  
   

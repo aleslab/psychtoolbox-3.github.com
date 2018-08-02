@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychJava]]
+# [psychusejava](psychusejava)
+## [Psychtoolbox](Psychtoolbox)[PsychJava](PsychJava)
 
 rc = psychusejava(level) -- Psychtoolbox wrapper for usejava  
 When running under a Matlab with support for the function 'usejava', we  

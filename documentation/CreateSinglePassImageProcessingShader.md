@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [CreateSinglePassImageProcessingShader](CreateSinglePassImageProcessingShader)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 Create a single-pass image processing shader for direct use with [Screen](Screen)('DrawTexture')  
   

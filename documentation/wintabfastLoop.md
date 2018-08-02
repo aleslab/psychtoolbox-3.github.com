@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychContributed]] &#8250; [[WinTab]]
+# [wintabfastLoop](wintabfastLoop)
+## [Psychtoolbox](Psychtoolbox)[PsychContributed](PsychContributed)[WinTab](WinTab)
 
  function fastLoop  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [PsychtoolboxRegistration](PsychtoolboxRegistration)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [PsychtoolboxRegistration](PsychtoolboxRegistration) - This function does nothing.  
 

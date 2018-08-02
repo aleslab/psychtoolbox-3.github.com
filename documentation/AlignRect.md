@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [AlignRect](AlignRect)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
 rect=[AlignRect](AlignRect)(rect,fixedRect,side1,[side2])  
   

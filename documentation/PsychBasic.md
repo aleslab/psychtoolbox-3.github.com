@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [PsychBasic](PsychBasic)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
   
 Psychtoolbox:[PsychBasic](PsychBasic)  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [GetString](GetString)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 string = [GetString](GetString)([useKbCheck=0][, deviceIndex][, untilTime=inf][, optional [KbCheck](KbCheck) arguments...])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [LumToRadiance](LumToRadiance)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
  [radiance, radianceS] =...  
     [LumToRadiance](LumToRadiance)(relativeSpectrum, relativeSpectrumS, luminance, [photopic])  

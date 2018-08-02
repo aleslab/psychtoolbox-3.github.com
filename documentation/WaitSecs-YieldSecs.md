@@ -1,5 +1,5 @@
 # [WaitSecs('YieldSecs')](WaitSecs-YieldSecs) 
-## [[Psychtoolbox]] &#8250; [[WaitSecs]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[WaitSecs](WaitSecs).{mex*} subfunction
 
 
 Wait for at least "waitPeriodSecs", don't care if it takes a few milliseconds  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [GetNumber](GetNumber)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 number = [GetNumber](GetNumber)([deviceIndex][, untilTime=inf][, optional [KbCheck](KbCheck) arguments...])  
   

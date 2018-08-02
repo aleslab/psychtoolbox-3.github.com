@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychObsolete]]
+# [SleepSecs](SleepSecs)
+## [Psychtoolbox](Psychtoolbox)[PsychObsolete](PsychObsolete)
 
 [SleepSecs](SleepSecs)(s)  
   

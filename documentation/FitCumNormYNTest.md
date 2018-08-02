@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [FitCumNormYNTest](FitCumNormYNTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [FitCumNormYNTest](FitCumNormYNTest)  
   

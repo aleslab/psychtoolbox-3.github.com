@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [GovardovskiiNomogram](GovardovskiiNomogram)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
 T\_absorbance = [GovardovskiiNomogram](GovardovskiiNomogram)(S,lambdaMax)  
   

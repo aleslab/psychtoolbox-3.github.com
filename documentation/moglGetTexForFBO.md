@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOpenGL]]
+# [moglGetTexForFBO](moglGetTexForFBO)
+## [Psychtoolbox](Psychtoolbox)[PsychOpenGL](PsychOpenGL)
 
 texid = moglGetTexForFBO(fbo, bufferid) -- Return texture name of texture which is  
 bound to the specified 'fbo' Framebuffer object as color buffer number 'bufferid'.  

@@ -1,5 +1,5 @@
 # [GetSecs('DescribeModuleFunctionsHelper')](GetSecs-DescribeModuleFunctionsHelper) 
-## [[Psychtoolbox]] &#8250; [[GetSecs]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[GetSecs](GetSecs).{mex*} subfunction
 
 
 Return a cell array of strings naming all subfunctions supported by this module  

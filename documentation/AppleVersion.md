@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [AppleVersion](AppleVersion)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 versionString=[AppleVersion](AppleVersion)(gestaltString)  
   

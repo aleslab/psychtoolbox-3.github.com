@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [PsychtoolboxRoot](PsychtoolboxRoot)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 path=[PsychtoolboxRoot](PsychtoolboxRoot)  
 Returns the path to the Psychtoolbox folder, even if it's been renamed.  

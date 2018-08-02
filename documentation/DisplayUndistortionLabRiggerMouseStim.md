@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [DisplayUndistortionLabRiggerMouseStim](DisplayUndistortionLabRiggerMouseStim)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 scal = [DisplayUndistortionLabRiggerMouseStim](DisplayUndistortionLabRiggerMouseStim)(caliboutfilename[, screenid])  
   

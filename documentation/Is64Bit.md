@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [Is64Bit](Is64Bit)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 result = [Is64Bit](Is64Bit);  
   

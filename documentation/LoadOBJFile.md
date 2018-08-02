@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOpenGL]]
+# [LoadOBJFile](LoadOBJFile)
+## [Psychtoolbox](Psychtoolbox)[PsychOpenGL](PsychOpenGL)
 
 objobject=[LoadOBJFile](LoadOBJFile)(modelname [, debug] [, preparse])  
   

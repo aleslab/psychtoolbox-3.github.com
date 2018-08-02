@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [PsychDrawSprites2D](PsychDrawSprites2D)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 Draw little texture in multiple places, with a similar syntax as  
 [Screen](Screen)('DrawDots').  

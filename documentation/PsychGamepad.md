@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PsychGamepad]]
+# [PsychGamepad](PsychGamepad)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PsychGamepad](PsychGamepad)
 
 Psychtoolbox:[PsychHardware](PsychHardware):[PsychGamepad](PsychGamepad).  
   

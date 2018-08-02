@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [ClutAnimDemo](ClutAnimDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [ClutAnimDemo](ClutAnimDemo)([method=2])  
   

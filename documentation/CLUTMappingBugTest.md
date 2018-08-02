@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [CLUTMappingBugTest](CLUTMappingBugTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [CLUTMappingBugTest](CLUTMappingBugTest)([[CLUTMapLength](CLUTMapLength)=[256, 2048]])  
   

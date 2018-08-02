@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [SyncedCLUTUpdateTest](SyncedCLUTUpdateTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [SyncedCLUTUpdateTest](SyncedCLUTUpdateTest)  
   

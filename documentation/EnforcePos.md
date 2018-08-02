@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [EnforcePos](EnforcePos)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
  out = [EnforcePos](EnforcePos)(in)  
   

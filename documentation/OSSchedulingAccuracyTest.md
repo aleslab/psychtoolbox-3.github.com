@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [OSSchedulingAccuracyTest](OSSchedulingAccuracyTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [OSSchedulingAccuracyTest](OSSchedulingAccuracyTest)(configFile [, duration=60])  
 

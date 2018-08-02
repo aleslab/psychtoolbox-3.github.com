@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [TextBoundsTest](TextBoundsTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [TextBoundsTest](TextBoundsTest)([string] [, font] [, textSize] [, rotAngle])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [AddImageWarpToGLOperator](AddImageWarpToGLOperator)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 [warpmap warpmapgltexid] = [AddImageWarpToGLOperator](AddImageWarpToGLOperator)(gloperator [, warprectangle])  
   

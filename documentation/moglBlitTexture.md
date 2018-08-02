@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOpenGL]]
+# [moglBlitTexture](moglBlitTexture)
+## [Psychtoolbox](Psychtoolbox)[PsychOpenGL](PsychOpenGL)
 
 moglBlitTexture(texid, x, y, w, h, fastblit, clamping)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [TouchEventFlush](TouchEventFlush)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 nflushed = [TouchEventFlush](TouchEventFlush)(deviceIndex)  
   

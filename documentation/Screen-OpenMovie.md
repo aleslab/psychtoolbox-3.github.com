@@ -1,5 +1,5 @@
 # [Screen('OpenMovie')](Screen-OpenMovie) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Try to open the multimediafile 'moviefile' for playback in onscreen window  

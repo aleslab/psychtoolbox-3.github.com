@@ -1,5 +1,5 @@
 # [Screen('glScale')](Screen-glScale) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Define a scale transform by (sx, sy, sz) in space, relative to the enclosing  

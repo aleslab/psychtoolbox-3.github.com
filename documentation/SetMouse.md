@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [SetMouse](SetMouse)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [SetMouse](SetMouse)(x, y [, windowPtrOrScreenNumber][, mouseid][, detachFromMouse=0])  
   

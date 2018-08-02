@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [IsomerizationsInDishDemo](IsomerizationsInDishDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [IsomerizationsInDishDemo](IsomerizationsInDishDemo)  
   

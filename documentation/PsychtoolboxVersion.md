@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [PsychtoolboxVersion](PsychtoolboxVersion)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 OS X, Windows, Linux: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
   

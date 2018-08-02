@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[iViewXToolbox]] &#8250; [[tcp_udp_ip]]
+# [pnet_putvar](pnet_putvar)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[iViewXToolbox](iViewXToolbox)[tcp_udp_ip](tcp_udp_ip)
 
 PNET\_PUTVAR - Send matlab variable(s) of any type over PNET connection.  
   

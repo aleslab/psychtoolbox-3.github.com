@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychObsolete]]
+# [IsWinMatlabR11Style](IsWinMatlabR11Style)
+## [Psychtoolbox](Psychtoolbox)[PsychObsolete](PsychObsolete)
 
 resultFlag = [IsWinMatlabR11Style](IsWinMatlabR11Style)  
   

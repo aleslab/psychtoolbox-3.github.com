@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychPriority]]
+# [MachSetTimeConstraintPriority](MachSetTimeConstraintPriority)
+## [Psychtoolbox](Psychtoolbox)[PsychPriority](PsychPriority)
 
 [MachSetTimeConstraintPriority](MachSetTimeConstraintPriority)(periodSecs,computationSecs, constraintSecs, preemptibleFlag)  
   

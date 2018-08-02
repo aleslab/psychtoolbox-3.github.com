@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [IsWinVista](IsWinVista)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [IsWinVista](IsWinVista) - Return if this is a MS-Windows Vista OS or later.  
   

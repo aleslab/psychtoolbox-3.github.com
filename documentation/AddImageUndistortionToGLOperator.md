@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [AddImageUndistortionToGLOperator](AddImageUndistortionToGLOperator)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 [AddImageUndistortionToGLOperator](AddImageUndistortionToGLOperator)(gloperator, exampleImage, calibrationStructureOrFile [, showCalibOutput=0][, varargin])  
   

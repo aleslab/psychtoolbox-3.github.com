@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [CalibrateFitLinMod](CalibrateFitLinMod)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 cal = [CalibrateFitLinMod](CalibrateFitLinMod)(cal)  
   

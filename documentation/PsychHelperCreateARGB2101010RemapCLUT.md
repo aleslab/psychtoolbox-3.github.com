@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [PsychHelperCreateARGB2101010RemapCLUT](PsychHelperCreateARGB2101010RemapCLUT)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 remapCLUTId = [PsychHelperCreateARGB2101010RemapCLUT](PsychHelperCreateARGB2101010RemapCLUT);  
   

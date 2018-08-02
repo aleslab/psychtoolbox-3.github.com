@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [IsWin](IsWin)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 resultFlag = [IsWin](IsWin)([is64=0])  
   

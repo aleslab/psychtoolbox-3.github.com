@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]] &#8250; [[EyelinkDemos]] &#8250; [[EyelinkShortDemos]]
+# [EyelinkQueuedDataDemo](EyelinkQueuedDataDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkDemos](EyelinkDemos)[EyelinkShortDemos](EyelinkShortDemos)
 
 Demos use of Eyelink('GetQueuedData')  
 records for a while, then plots samples, events, and execution  

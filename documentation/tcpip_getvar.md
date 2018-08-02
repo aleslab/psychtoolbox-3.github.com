@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[iViewXToolbox]] &#8250; [[tcp_udp_ip]] &#8250; [[tcpip]]
+# [tcpip_getvar](tcpip_getvar)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[iViewXToolbox](iViewXToolbox)[tcp_udp_ip](tcp_udp_ip)[tcpip](tcpip)
 
   
  ret = tcpip\_getvar(ip\_fid)  

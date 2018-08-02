@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychVideoCapture]]
+# [PsychSetupCamera](PsychSetupCamera)
+## [Psychtoolbox](Psychtoolbox)[PsychVideoCapture](PsychVideoCapture)
 
 [PsychSetupCamera](PsychSetupCamera)(camsettingsfile, rate)  
   

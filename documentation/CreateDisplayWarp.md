@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [CreateDisplayWarp](CreateDisplayWarp)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 [warpstruct, filterMode] = [CreateDisplayWarp](CreateDisplayWarp)(window, calibfilename [, showCalibOutput=0]);  
   

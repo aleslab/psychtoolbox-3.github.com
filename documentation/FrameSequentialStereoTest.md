@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [FrameSequentialStereoTest](FrameSequentialStereoTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [FrameSequentialStereoTest](FrameSequentialStereoTest)(screenid)  
   

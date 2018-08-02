@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[iViewXToolbox]] &#8250; [[tcp_udp_ip]] &#8250; [[tcpip]]
+# [tcpip_servopen](tcpip_servopen)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[iViewXToolbox](iViewXToolbox)[tcp_udp_ip](tcp_udp_ip)[tcpip](tcpip)
 
 TCPIP\_SERVOPEN opens a blocking TCPIP server socket.  
   

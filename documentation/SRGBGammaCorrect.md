@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [SRGBGammaCorrect](SRGBGammaCorrect)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 RGB = [SRGBGammaCorrect](SRGBGammaCorrect)(rgb,[SCALE])  
   

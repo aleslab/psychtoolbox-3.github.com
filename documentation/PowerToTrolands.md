@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]]
+# [PowerToTrolands](PowerToTrolands)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)
 
 trolands = [PowerToTrolands](PowerToTrolands)(wl,power,S\_vLambda,vLambda)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGPGPU]]
+# [PsychGPGPU](PsychGPGPU)
+## [Psychtoolbox](Psychtoolbox)[PsychGPGPU](PsychGPGPU)
 
 Psychtoolbox:[PsychGPGPU](PsychGPGPU)  
   

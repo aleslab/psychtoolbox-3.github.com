@@ -1,5 +1,5 @@
 # [Screen('ClearTimeList')](Screen-ClearTimeList) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Clears the list of times held by [Screen](Screen).  Time values, as returned by [GetSecs](GetSecs),  

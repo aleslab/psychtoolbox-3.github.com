@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [streq](streq)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 equal=streq(a,b)  
 Are strings equal? Equivalent to strcmp(a,b), but easier to read.  

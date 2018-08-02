@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [AlphaMultiplicationAccuracyTest](AlphaMultiplicationAccuracyTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [maximumError, roundTypeStr, independentFlag]=[AlphaMultiplicationAccuracyTest](AlphaMultiplicationAccuracyTest)([screenNumber])  
   

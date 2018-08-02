@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [Trunc](Trunc)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 [output] = [Trunc](Trunc)(input)  
 Truncate to range [0-1].  

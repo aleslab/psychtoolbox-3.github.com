@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [CalToggleBitsPlusPlus](CalToggleBitsPlusPlus)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 [CalToggleBitsPlusPlus](CalToggleBitsPlusPlus)(enableBitsPP)  
   This function toggles the use of Bits++ in the calibration functions.  

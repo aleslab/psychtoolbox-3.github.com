@@ -1,5 +1,5 @@
 # [Screen('glRotate')](Screen-glRotate) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Define a rotation transform by an angle of 'angle' degrees around the axis  

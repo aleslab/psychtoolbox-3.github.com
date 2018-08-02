@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychFiles]]
+# [PsychSaveAsEps](PsychSaveAsEps)
+## [Psychtoolbox](Psychtoolbox)[PsychFiles](PsychFiles)
 
 [SaveAsEps](SaveAsEps)(filename,m,[pageRect],[resolution]);  
 Based on [WindowToEps](WindowToEps).c of the [VideoToolbox](VideoToolbox).  

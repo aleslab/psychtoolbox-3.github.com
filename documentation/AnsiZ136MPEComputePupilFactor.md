@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]] &#8250; [[PsychAnsiZ136MPE]]
+# [AnsiZ136MPEComputePupilFactor](AnsiZ136MPEComputePupilFactor)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)[PsychAnsiZ136MPE](PsychAnsiZ136MPE)
 
 P = [AnsiZ136MPEComputePupilFactor](AnsiZ136MPEComputePupilFactor)(stimulusDurationSeconds,stimulusWavelengthNm)  
   

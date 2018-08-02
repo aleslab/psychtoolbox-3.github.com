@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [UniqueNoSorting](UniqueNoSorting)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 output = [UniqueNoSorting](UniqueNoSorting)(sequence,mode)  
   

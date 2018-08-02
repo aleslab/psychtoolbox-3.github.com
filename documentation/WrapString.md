@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [WrapString](WrapString)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 wrappedString=[WrapString](WrapString)(string,[maxLineLength])  
   

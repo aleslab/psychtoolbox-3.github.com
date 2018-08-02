@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychFiles]]
+# [QuoteString](QuoteString)
+## [Psychtoolbox](Psychtoolbox)[PsychFiles](PsychFiles)
 
 string=[QuoteString](QuoteString)(string)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDocumentation]]
+# [DrawTextEncodingLocaleSettings](DrawTextEncodingLocaleSettings)
+## [Psychtoolbox](Psychtoolbox)[PsychDocumentation](PsychDocumentation)
 
 [DrawTextEncodingLocaleSettings](DrawTextEncodingLocaleSettings)  
   

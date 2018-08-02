@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [AbsorbanceToAbsorbtance](AbsorbanceToAbsorbtance)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 [absorbtanceSpectra, absorbtanceSpectraWls] =...  
   [AbsorbanceToAbsorbtance](AbsorbanceToAbsorbtance)(absorbanceSpectra, absorbanceSpectraWls, axialOpticalDensities)  

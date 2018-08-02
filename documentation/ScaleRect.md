@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [ScaleRect](ScaleRect)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
 r = [ScaleRect](ScaleRect)(r,horizontalFactor,verticalFactor)  
   

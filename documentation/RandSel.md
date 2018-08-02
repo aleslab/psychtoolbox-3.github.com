@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [RandSel](RandSel)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 sel = [RandSel](RandSel)(in,n)  
   if N is a scalar  

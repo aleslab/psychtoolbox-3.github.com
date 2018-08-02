@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqWriteSerialNumber](DaqWriteSerialNumber)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 err=[DaqWriteSerialNumber](DaqWriteSerialNumber)[(DeviceIndex]((DeviceIndex),serialstring)  
 USB-1208FS: Write a new serial number (an 8-character string) to the  

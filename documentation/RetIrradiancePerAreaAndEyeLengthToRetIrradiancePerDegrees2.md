@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]]
+# [RetIrradiancePerAreaAndEyeLengthToRetIrradiancePerDegrees2](RetIrradiancePerAreaAndEyeLengthToRetIrradiancePerDegrees2)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)
 
 retIrradiance\_PerDegrees2 = [RetIrradiancePerAreaAndEyeLengthToRetIrradiancePerDegrees2](RetIrradiancePerAreaAndEyeLengthToRetIrradiancePerDegrees2)(retIrradiance\_PerArea,eyeLength)  
   

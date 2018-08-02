@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [DiskRoot](DiskRoot)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [DiskName](DiskName) = [DiskRoot](DiskRoot)  
   

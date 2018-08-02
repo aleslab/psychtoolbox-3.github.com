@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychPriority]]
+# [PsychPriority](PsychPriority)
+## [Psychtoolbox](Psychtoolbox)[PsychPriority](PsychPriority)
 
 Psychtoolbox:[PsychPriority](PsychPriority)  
   

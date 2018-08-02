@@ -1,5 +1,5 @@
 # [Screen('AsyncFlipEnd')](Screen-AsyncFlipEnd) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Wait for completion of a previously scheduled asynchronous flip operation (see  

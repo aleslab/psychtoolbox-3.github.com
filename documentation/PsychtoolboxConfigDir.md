@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychFiles]]
+# [PsychtoolboxConfigDir](PsychtoolboxConfigDir)
+## [Psychtoolbox](Psychtoolbox)[PsychFiles](PsychFiles)
 
 Syntax: path=[PsychtoolboxConfigDir](PsychtoolboxConfigDir)([subDir])  
   

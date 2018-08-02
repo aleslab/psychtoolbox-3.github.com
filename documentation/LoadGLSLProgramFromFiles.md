@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOpenGL]]
+# [LoadGLSLProgramFromFiles](LoadGLSLProgramFromFiles)
+## [Psychtoolbox](Psychtoolbox)[PsychOpenGL](PsychOpenGL)
 
 handle = [LoadGLSLProgramFromFiles](LoadGLSLProgramFromFiles)(filenames [, debug=0] [, extraShaders])  
 Loads a GLSL [OpenGL](OpenGL) shading language program. All shader definition files in  

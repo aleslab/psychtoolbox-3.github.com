@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [RectBottom](RectBottom)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
 yBottom = rect[(RectBottom)]((RectBottom))  
   

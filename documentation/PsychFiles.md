@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychFiles]]
+# [PsychFiles](PsychFiles)
+## [Psychtoolbox](Psychtoolbox)[PsychFiles](PsychFiles)
 
 Psychtoolbox:[PsychFiles](PsychFiles).  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BrightSideDisplay]]
+# [SimpleHDROfflineCaptureTest](SimpleHDROfflineCaptureTest)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BrightSideDisplay](BrightSideDisplay)
 
 [SimpleHDROfflineCaptureTest](SimpleHDROfflineCaptureTest)([imfilename][, dummymode][, sf])  
   

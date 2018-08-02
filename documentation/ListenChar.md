@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [ListenChar](ListenChar)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 function [ListenChar](ListenChar)([listenFlag])  
   

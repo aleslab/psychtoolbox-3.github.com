@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [PsychNumel](PsychNumel)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 PTB-Replacement for numel() on older Matlab versions that don't support it.  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [MultiNormalDraw](MultiNormalDraw)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 x = [MultiNormalDraw](MultiNormalDraw)(n,u,K)  
   

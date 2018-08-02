@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCalDemoData]]
+# [PsychCalDemoData](PsychCalDemoData)
+## [Psychtoolbox](Psychtoolbox)[PsychCalDemoData](PsychCalDemoData)
 
 Psychtoolbox:[PsychCalDemoData](PsychCalDemoData).  
   

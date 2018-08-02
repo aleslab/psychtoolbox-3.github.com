@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [CoinFlipPDF](CoinFlipPDF)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 px\_p = [CoinFlipPDF](CoinFlipPDF)(x,p)  
   

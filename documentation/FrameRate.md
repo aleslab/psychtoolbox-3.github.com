@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [FrameRate](FrameRate)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 hz=[FrameRate](FrameRate)([windowOrScreenNumber])  
   

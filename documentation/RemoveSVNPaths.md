@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [RemoveSVNPaths](RemoveSVNPaths)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 newPathList = [RemoveSVNPaths](RemoveSVNPaths)(pathList)  
 Removes any .svn paths from the pathList.  If no pathList is specified,  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PR670Toolbox]]
+# [PR670parsespdstr](PR670parsespdstr)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PR670Toolbox](PR670Toolbox)
 
 [PR670parsespdstr](PR670parsespdstr) - Parses the  spectral power distribution string returned by the PR-670.  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BitsPlusToolbox]] &#8250; [[BitsPlusDemos]]
+# [BitsPlusCSFDemo](BitsPlusCSFDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BitsPlusToolbox](BitsPlusToolbox)[BitsPlusDemos](BitsPlusDemos)
 
 [BitsPlusCSFDemo](BitsPlusCSFDemo)([screenid=max] [, gamma = 2.2][, method=0][, charttype=0])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDocumentation]]
+# [RetinaDisplay](RetinaDisplay)
+## [Psychtoolbox](Psychtoolbox)[PsychDocumentation](PsychDocumentation)
 
 [RetinaDisplay](RetinaDisplay) - How to deal with [HiDPI](HiDPI) "Retina" displays.  
   

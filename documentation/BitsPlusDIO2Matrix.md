@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BitsPlusToolbox]]
+# [BitsPlusDIO2Matrix](BitsPlusDIO2Matrix)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BitsPlusToolbox](BitsPlusToolbox)
 
 encodedDIOdata = [BitsPlusDIO2Matrix](BitsPlusDIO2Matrix)(mask, data, command);  
   

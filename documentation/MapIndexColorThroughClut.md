@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [MapIndexColorThroughClut](MapIndexColorThroughClut)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 framebufferTrue = [MapIndexColorThroughClut](MapIndexColorThroughClut)(framebufferIndex,clut)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [ErrorCatchDemo](ErrorCatchDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
   
 Show how to use try and catch to clean up after an error.  

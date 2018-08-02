@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [Beeper](Beeper)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 function [Beeper](Beeper)(frequency, [fVolume], [durationSec]);  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[iViewXToolbox]]
+# [iViewX](iViewX)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[iViewXToolbox](iViewXToolbox)
 
 USAGE: [result, ivx]=iViewX(cstr, ivx [, params])  
   

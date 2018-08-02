@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [GetCharTest](GetCharTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [GetCharTest](GetCharTest)([startAt])  
   

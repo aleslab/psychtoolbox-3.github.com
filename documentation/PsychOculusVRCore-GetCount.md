@@ -1,5 +1,5 @@
 # [PsychOculusVRCore('GetCount')](PsychOculusVRCore-GetCount) 
-## [[Psychtoolbox]] &#8250; [[PsychOculusVRCore]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
 
 
 Returns count of currently connected [HMDs](HMDs).  

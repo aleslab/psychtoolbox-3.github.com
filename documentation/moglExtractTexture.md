@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [moglExtractTexture](moglExtractTexture)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 moglExtractTexture(cmd [, arg1][, arg2][, ...]) - "MOGL Video texture extraction"  
   

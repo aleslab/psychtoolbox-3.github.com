@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [GenerateBlackBody](GenerateBlackBody)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 [spd] = [GenerateBlackBody](GenerateBlackBody)(T,wls\_in)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqMemWrite](DaqMemWrite)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 err=[DaqMemWrite](DaqMemWrite)[(DeviceIndex]((DeviceIndex),address,data)  
 USB-1208FS: Write memory. This command writes to the nonvolatile EEPROM  

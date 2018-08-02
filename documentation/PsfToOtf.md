@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOptics]]
+# [PsfToOtf](PsfToOtf)
+## [Psychtoolbox](Psychtoolbox)[PsychOptics](PsychOptics)
 
 Convert a 2D point spread function to a 2D optical transfer fucntion.  
    [xSfGridCyclesDeg,ySfGridCyclesDeg,otf] = [PsfToOtf](PsfToOtf)([xGridMinutes,yGridMinutes],psf,varargin)  

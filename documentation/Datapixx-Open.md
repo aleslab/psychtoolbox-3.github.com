@@ -1,5 +1,5 @@
 # [Datapixx('Open')](Datapixx-Open) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Call this function before calling any other Datapixx functions.  

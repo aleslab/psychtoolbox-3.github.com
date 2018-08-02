@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [FindNeighborCorr](FindNeighborCorr)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 corr = [FindNeighborCorr](FindNeighborCorr)(X)  
   

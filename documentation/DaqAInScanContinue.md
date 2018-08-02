@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqAInScanContinue](DaqAInScanContinue)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 [params, data] = [DaqAInScanContinue](DaqAInScanContinue)[(DeviceIndex]((DeviceIndex), options [, wantLiveData=0])  
   

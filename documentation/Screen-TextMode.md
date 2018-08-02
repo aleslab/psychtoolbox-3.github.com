@@ -1,5 +1,5 @@
 # [Screen('TextMode')](Screen-TextMode) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Set or get the text mode for the specified window. This function currently  

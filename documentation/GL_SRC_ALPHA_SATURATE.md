@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychAlphaBlending]]
+# [GL_SRC_ALPHA_SATURATE](GL_SRC_ALPHA_SATURATE)
+## [Psychtoolbox](Psychtoolbox)[PsychAlphaBlending](PsychAlphaBlending)
 
 constantString=GL\_SRC\_ALPHA\_SATURATE  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [DriftTexturePrecisionTest](DriftTexturePrecisionTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [DriftTexturePrecisionTest](DriftTexturePrecisionTest)([highprecision=0][, verbose=0][, filterMode=1])  
   

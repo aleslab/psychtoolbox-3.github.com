@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [OMLBasicTest](OMLBasicTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [OMLBasicTest](OMLBasicTest)([screenid=max][, querystresstest = 0]) - Test basic correctness of [OpenML](OpenML) timestamping.  
   

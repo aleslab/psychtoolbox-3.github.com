@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [AddToGLOperator](AddToGLOperator)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 [AddToGLOperator](AddToGLOperator)(gloperator, opname, shaderhandle [, blittercfg] [, luttexid])  
   

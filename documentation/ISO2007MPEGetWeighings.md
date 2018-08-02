@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]] &#8250; [[PsychISO2007MPE]]
+# [ISO2007MPEGetWeighings](ISO2007MPEGetWeighings)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)[PsychISO2007MPE](PsychISO2007MPE)
 
 [wls,weightingR,weightingA,weightingS,wls\_R,rawWeigtingR,wls\_A,rawWeightingA,wls\_S,rawWeightingS] = [ISO2007MPEGetWeighings](ISO2007MPEGetWeighings)(S)  
   

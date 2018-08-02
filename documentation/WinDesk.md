@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [WinDesk](WinDesk)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 minimizes all windows, thus shows windows desktop.  
 Not the same as Win+D, the same as Win+M  

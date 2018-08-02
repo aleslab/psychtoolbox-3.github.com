@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [MakeGrid](MakeGrid)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [raster] = [MakeGrid](MakeGrid)(nrow,ncol,xres,yres,plxres,plyres)  
   

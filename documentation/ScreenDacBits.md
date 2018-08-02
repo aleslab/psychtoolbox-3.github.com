@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [ScreenDacBits](ScreenDacBits)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 dacBits = [ScreenDacBits](ScreenDacBits)(windowPtrOrScreenNumber)  
   

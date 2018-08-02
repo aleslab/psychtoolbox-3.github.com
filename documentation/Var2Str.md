@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychFiles]]
+# [Var2Str](Var2Str)
+## [Psychtoolbox](Psychtoolbox)[PsychFiles](PsychFiles)
 
 str = [Var2Str](Var2Str)(in,name)  
   

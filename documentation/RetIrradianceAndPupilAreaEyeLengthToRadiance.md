@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]]
+# [RetIrradianceAndPupilAreaEyeLengthToRadiance](RetIrradianceAndPupilAreaEyeLengthToRadiance)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)
 
 radiance\_PowerPerAreaSr = [RetIrradianceAndPupilAreaEyeLengthToRadiance](RetIrradianceAndPupilAreaEyeLengthToRadiance)(irradiance\_PowerPerArea,irradianceS,pupilArea,eyeLength)  
   

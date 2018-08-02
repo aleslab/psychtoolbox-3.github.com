@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [TouchEventAvail](TouchEventAvail)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 navail = [TouchEventAvail](TouchEventAvail)(deviceIndex)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PsychVRToolbox]]
+# [PsychOculusVR](PsychOculusVR)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PsychVRToolbox](PsychVRToolbox)
 
 [PsychOculusVR](PsychOculusVR) - A high level driver for Oculus VR hardware.  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychStairCase]]
+# [MinExpEntStair](MinExpEntStair)
+## [Psychtoolbox](Psychtoolbox)[PsychStairCase](PsychStairCase)
 
 Minimum Expected Entropy Staircase  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [Sample](Sample)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
  [Y,index] = [Sample](Sample)(X)  
   

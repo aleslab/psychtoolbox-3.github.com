@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [AddToMatlabPathDynamically](AddToMatlabPathDynamically)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [AddToMatlabPathDynamically](AddToMatlabPathDynamically)(directory)  
   

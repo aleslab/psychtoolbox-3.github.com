@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]] &#8250; [[EyelinkDemos]] &#8250; [[SR-ResearchDemo]]
+# [EyeLinkPicture](EyeLinkPicture)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkDemos](EyelinkDemos)[SR-ResearchDemo](SR-ResearchDemo)
 
  Short MATLAB example that uses the Eyelink and Psychophysics Toolboxes  
  This is the example as shown in the [EyelinkToolbox](EyelinkToolbox) article in BRMIC  

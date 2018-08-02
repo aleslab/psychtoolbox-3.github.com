@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [LMSToMacBoyn](LMSToMacBoyn)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 ls = [LMSToMacBoyn](LMSToMacBoyn)(LMS,[T\_cones,T\_lum])  
   

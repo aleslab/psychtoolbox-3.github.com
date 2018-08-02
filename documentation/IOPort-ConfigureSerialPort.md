@@ -1,5 +1,5 @@
 # [IOPort('ConfigureSerialPort')](IOPort-ConfigureSerialPort) 
-## [[Psychtoolbox]] &#8250; [[IOPort]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[IOPort](IOPort).{mex*} subfunction
 
 
 (Re-)Configure a serial port device, specified by 'handle'.  

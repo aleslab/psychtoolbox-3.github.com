@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [SetRect](SetRect)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
  newRect = [SetRect](SetRect)(left,top,right,bottom);  
   

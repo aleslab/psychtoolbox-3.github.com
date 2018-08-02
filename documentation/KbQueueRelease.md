@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [KbQueueRelease](KbQueueRelease)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
  [KbQueueRelease](KbQueueRelease)([deviceIndex])  
   

@@ -1,5 +1,5 @@
 # [WaitSecs('UntilTime')](WaitSecs-UntilTime) 
-## [[Psychtoolbox]] &#8250; [[WaitSecs]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[WaitSecs](WaitSecs).{mex*} subfunction
 
 
 Wait until at least system time "whenSecs" has been reached. Optionally, return  

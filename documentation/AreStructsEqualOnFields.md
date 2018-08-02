@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [AreStructsEqualOnFields](AreStructsEqualOnFields)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 areEqual = [AreStructsEqualOnFields](AreStructsEqualOnFields)(struct1,struct2,theFields)  
   

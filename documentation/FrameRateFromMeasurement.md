@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [FrameRateFromMeasurement](FrameRateFromMeasurement)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 ifi = [VideoRefreshFromMeasurement](VideoRefreshFromMeasurement)(window, samples)  
   

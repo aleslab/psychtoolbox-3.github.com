@@ -1,5 +1,5 @@
 # [PsychOculusVRCore('SetDynamicPrediction')](PsychOculusVRCore-SetDynamicPrediction) 
-## [[Psychtoolbox]] &#8250; [[PsychOculusVRCore]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
 
 
 Enable or disable dynamic prediction mode on Oculus device 'oculusPtr'.  

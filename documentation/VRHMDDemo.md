@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [VRHMDDemo](VRHMDDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
   
 [VRHMDDemo](VRHMDDemo)([stereoscopic=1][, checkerboard=0][, deviceindex=0])  

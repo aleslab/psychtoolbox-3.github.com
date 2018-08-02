@@ -1,5 +1,5 @@
 # [Screen('DrawText')](Screen-DrawText) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Draw text. "text" may include Unicode characters (e.g. Chinese).  

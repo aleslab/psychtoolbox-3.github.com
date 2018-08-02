@@ -1,5 +1,5 @@
 # [PsychHID('Version')](PsychHID-Version) 
-## [[Psychtoolbox]] &#8250; [[PsychHID]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychHID](PsychHID).{mex*} subfunction
 
 
 return the version of [PsychHID](PsychHID) in a struct  

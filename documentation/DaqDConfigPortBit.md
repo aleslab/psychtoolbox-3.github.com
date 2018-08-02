@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqDConfigPortBit](DaqDConfigPortBit)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 err=[DaqDConfigPortBit](DaqDConfigPortBit)[(DeviceIndex]((DeviceIndex),[BitNumber](BitNumber),direction)  
 USB-1608FS: Configure digital port. This command sets the direction of  

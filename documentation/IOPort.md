@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [IOPort](IOPort)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [IOPort](IOPort) is a MEX file for precise control of input/output hardware, e.g.,  
 Serial ports (or emulated serial ports like Serial-over-USB etc.),  
@@ -46,10 +47,7 @@ mark "?". E.g. for 'OpenSerialPort', try either of these equivalent forms:
   <code>Psychtoolbox/PsychBasic/IOPort.m</code>
 </div>
 
-ases of  
-  the driver.  
-   
-  Usage: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+sage: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
    
   [IOPort](IOPort) has many functions; type "[IOPort](IOPort)" for a list:  
     [IOPort](IOPort)  

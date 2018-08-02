@@ -1,5 +1,5 @@
 # [Screen('TextBackgroundColor')](Screen-TextBackgroundColor) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Read/Set the text background color for the specified window.  

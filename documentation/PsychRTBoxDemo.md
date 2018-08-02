@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [PsychRTBoxDemo](PsychRTBoxDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 A demonstration of basic usage and functionality of the [RTBox](RTBox) reaction time box.  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [SetSensorColorSpace](SetSensorColorSpace)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 [cal,errorRet] = [SetSensorColorSpace](SetSensorColorSpace)(cal, T\_sensor, S\_sensor, [quiet])  
   

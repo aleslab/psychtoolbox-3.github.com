@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [WavelengthSamplingTest](WavelengthSamplingTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [WavelengthSamplingTest](WavelengthSamplingTest)  
   

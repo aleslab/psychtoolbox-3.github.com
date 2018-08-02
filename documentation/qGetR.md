@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOpenGL]]
+# [qGetR](qGetR)
+## [Psychtoolbox](Psychtoolbox)[PsychOpenGL](PsychOpenGL)
 
 qGetR: get a 3x3 rotation matrix R from a Quaternion Qrotation.  
   

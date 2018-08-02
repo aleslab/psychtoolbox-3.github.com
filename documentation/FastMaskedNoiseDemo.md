@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [FastMaskedNoiseDemo](FastMaskedNoiseDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [FastMaskedNoiseDemo](FastMaskedNoiseDemo)([numRects=1][, rectSize=128][, scale=1])  
   

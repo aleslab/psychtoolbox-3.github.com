@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [RenderDemo](RenderDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
  [RenderDemo](RenderDemo)  
   

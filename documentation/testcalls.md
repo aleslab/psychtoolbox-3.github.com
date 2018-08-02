@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[EyelinkToolbox]] &#8250; [[EyelinkTests]]
+# [testcalls](testcalls)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[EyelinkToolbox](EyelinkToolbox)[EyelinkTests](EyelinkTests)
 
 quick test program for eyelinktoolbox.  
 John Palmer, last revised 6/02/01  

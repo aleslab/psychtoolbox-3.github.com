@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDocumentation]]
+# [MultiDisplaySetups](MultiDisplaySetups)
+## [Psychtoolbox](Psychtoolbox)[PsychDocumentation](PsychDocumentation)
 
 [MultiDisplaySetups](MultiDisplaySetups) -- Information for users of multidisplay setups.  
   

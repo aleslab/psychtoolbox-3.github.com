@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [MatMax](MatMax)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 [maxval] = [MatMax](MatMax)(image)  
 Find the maximum value in a matrix.  

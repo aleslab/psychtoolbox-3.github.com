@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [IsGLES1](IsGLES1)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 Returns 1 if active rendering api is [OpenGL](OpenGL)-ES1.x,  
 0 otherwise.  

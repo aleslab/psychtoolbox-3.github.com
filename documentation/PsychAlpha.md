@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychAlpha]]
+# [PsychAlpha](PsychAlpha)
+## [Psychtoolbox](Psychtoolbox)[PsychAlpha](PsychAlpha)
 
 Psychtoolbox:[PsychAlpha](PsychAlpha)  
   

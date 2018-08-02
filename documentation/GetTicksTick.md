@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [GetTicksTick](GetTicksTick)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
  tickPeriod = [GetTicksTick](GetTicksTick)  
   

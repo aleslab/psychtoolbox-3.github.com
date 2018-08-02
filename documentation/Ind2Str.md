@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [Ind2Str](Ind2Str)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 str = [Ind2Str](Ind2Str)(p)  
 converts indices (numbers) to characters (base 10 to base 26 conversion):  

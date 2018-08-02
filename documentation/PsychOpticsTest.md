@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOptics]]
+# [PsychOpticsTest](PsychOpticsTest)
+## [Psychtoolbox](Psychtoolbox)[PsychOptics](PsychOptics)
 
 Basic tests and comparisons of [PsychOptics](PsychOptics) routines  
   

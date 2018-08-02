@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [ExpandSettings](ExpandSettings)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 settingsE = [ExpandSettings](ExpandSettings)(settings,nBases)  
   

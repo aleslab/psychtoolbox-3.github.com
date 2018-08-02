@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]] &#8250; [[PsychMunsell]]
+# [MunsellGriddata3](MunsellGriddata3)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)[PsychMunsell](PsychMunsell)
 
  [w,X,tri] = [MunsellGriddata3](MunsellGriddata3)(x,y,z,v,xi,yi,zi,method,options,X,tri)  
   

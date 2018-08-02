@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSound]]
+# [InitializePsychSound](InitializePsychSound)
+## [Psychtoolbox](Psychtoolbox)[PsychSound](PsychSound)
 
 [InitializePsychSound](InitializePsychSound)([reallyneedlowlatency=0])  
   

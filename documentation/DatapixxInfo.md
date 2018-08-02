@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[DatapixxToolbox]] &#8250; [[DatapixxBasic]]
+# [DatapixxInfo](DatapixxInfo)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[DatapixxToolbox](DatapixxToolbox)[DatapixxBasic](DatapixxBasic)
 
 [DatapixxInfo](DatapixxInfo)()  
   

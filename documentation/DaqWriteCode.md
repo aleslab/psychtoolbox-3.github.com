@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqWriteCode](DaqWriteCode)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 err=[DaqWriteCode](DaqWriteCode)[(DeviceIndex]((DeviceIndex),address,data)  
 USB-1208FS: Write program memory. This command writes to the program  

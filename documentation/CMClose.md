@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [CMClose](CMClose)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
 [CMClose](CMClose)([meterType])  
   

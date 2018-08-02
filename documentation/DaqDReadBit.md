@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqDReadBit](DaqDReadBit)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 [BitValue](BitValue)=[DaqDReadBit](DaqDReadBit)[(DeviceIndex]((DeviceIndex),[BitNumber)](BitNumber))  
 USB-1608FS: Write digital port. This command writes data to the DIO port  

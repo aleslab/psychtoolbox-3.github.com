@@ -1,5 +1,5 @@
 # [Datapixx('DisableDinDebounce')](Datapixx-DisableDinDebounce) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Disable the 30 millisecond debounce interval on the digital inputs. This is  

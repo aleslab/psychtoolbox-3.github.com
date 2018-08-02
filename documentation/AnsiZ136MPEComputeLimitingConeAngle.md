@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]] &#8250; [[PsychAnsiZ136MPE]]
+# [AnsiZ136MPEComputeLimitingConeAngle](AnsiZ136MPEComputeLimitingConeAngle)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)[PsychAnsiZ136MPE](PsychAnsiZ136MPE)
 
 limitingConeAngleMrad = [AnsiZ136MPEComputeLimitingConeAngle](AnsiZ136MPEComputeLimitingConeAngle)(stimulusDurationSec)  
   

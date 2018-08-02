@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychAlpha]]
+# [PrintStruct](PrintStruct)
+## [Psychtoolbox](Psychtoolbox)[PsychAlpha](PsychAlpha)
 
 function [PrintStruct](PrintStruct)(dataStruct, [filePtr], [indentChar], [numIndentSpaces], [numberFormat])  
   

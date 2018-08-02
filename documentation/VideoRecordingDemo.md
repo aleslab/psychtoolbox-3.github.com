@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [VideoRecordingDemo](VideoRecordingDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [VideoRecordingDemo](VideoRecordingDemo)(moviename [, codec=0] [, withsound=1] [, showit=1] [, windowed=1])  
   

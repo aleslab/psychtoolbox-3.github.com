@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOptics]]
+# [GeislerLSFMinutes](GeislerLSFMinutes)
+## [Psychtoolbox](Psychtoolbox)[PsychOptics](PsychOptics)
 
 [GeislerLSFMinutes](GeislerLSFMinutes)  Compute Geisler estimate of 2mm pupil human LSF  
    lsf = [GeislerLSFMinutes](GeislerLSFMinutes)(distance)  

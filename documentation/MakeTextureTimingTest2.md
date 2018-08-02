@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [MakeTextureTimingTest2](MakeTextureTimingTest2)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [MakeTextureTimingTest2](MakeTextureTimingTest2)([screenid=max][,width=1024][,height=1024][,channels=4][,nSamples=100][,preload=1][,specialFlags=0][,precision=0]);  
   

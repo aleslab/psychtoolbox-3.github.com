@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [InsetRect](InsetRect)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
 r = [InsetRect](InsetRect)(r,dh,dv)  
   

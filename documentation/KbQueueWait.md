@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [KbQueueWait](KbQueueWait)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 secs=[KbQueueWait](KbQueueWait)([deviceIndex][, forWhat=0][, untilTime=inf])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [overrideBuiltInFunction](overrideBuiltInFunction)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 Method to override a MATLAB built-in function with a user-supplied function   
 with the same name. The way this works is that it replaces the built-in function  

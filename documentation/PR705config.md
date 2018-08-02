@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[PR705Toolbox]]
+# [PR705config](PR705config)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[PR705Toolbox](PR705Toolbox)
 
 [PR705config](PR705config) - Update the PR-705 configuration.  
   

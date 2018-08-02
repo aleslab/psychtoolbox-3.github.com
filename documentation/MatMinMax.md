@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [MatMinMax](MatMinMax)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 [min,max] = [MatMinMax](MatMinMax)(image)  
   

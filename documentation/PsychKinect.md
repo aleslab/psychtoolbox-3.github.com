@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [PsychKinect](PsychKinect)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [PsychKinect](PsychKinect) -- Control and access the Microsoft Kinect depth camera.  
   

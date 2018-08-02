@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [InvertGammaTable](InvertGammaTable)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 iGammaTable = [InvertGammaTable](InvertGammaTable)(gammaInput,gammaTable,precision)  
   

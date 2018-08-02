@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDocumentation]]
+# [SyncTrouble](SyncTrouble)
+## [Psychtoolbox](Psychtoolbox)[PsychDocumentation](PsychDocumentation)
 
 [SyncTrouble](SyncTrouble) -- Causes and solutions for synchronization problems.  
   

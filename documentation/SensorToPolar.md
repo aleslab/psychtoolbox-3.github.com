@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [SensorToPolar](SensorToPolar)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
  [pol] = [SensorToPolar](SensorToPolar)(sensor)  
   

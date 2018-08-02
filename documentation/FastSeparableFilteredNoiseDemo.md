@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychAlpha]]
+# [FastSeparableFilteredNoiseDemo](FastSeparableFilteredNoiseDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychAlpha](PsychAlpha)
 
 [FastSeparableFilteredNoiseDemo](FastSeparableFilteredNoiseDemo)([filtertype=1][, rectSize=128][, kwidth=5][, scale=1][, syncToVBL=1][, dontclear=0][, validate=0])  
   

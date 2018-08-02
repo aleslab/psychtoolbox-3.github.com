@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [AreaUnderROC](AreaUnderROC)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 area = [AreaUnderROC](AreaUnderROC)(ROC)  
   

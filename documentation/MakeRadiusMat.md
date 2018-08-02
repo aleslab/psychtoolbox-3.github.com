@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOptics]]
+# [MakeRadiusMat](MakeRadiusMat)
+## [Psychtoolbox](Psychtoolbox)[PsychOptics](PsychOptics)
 
 radius = [MakeRadiusMat](MakeRadiusMat)(nx,ny,centerx,[centery])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [PsychtoolboxDate](PsychtoolboxDate)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [PsychtoolboxDate](PsychtoolboxDate) returns the release date, e.g. '1 August 1998'.  
 You can supply this string as an argument to DATNUM.  

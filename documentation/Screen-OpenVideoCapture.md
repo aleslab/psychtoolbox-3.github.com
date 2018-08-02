@@ -1,5 +1,5 @@
 # [Screen('OpenVideoCapture')](Screen-OpenVideoCapture) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Try to open the video source 'deviceIndex' for video capture into onscreen  

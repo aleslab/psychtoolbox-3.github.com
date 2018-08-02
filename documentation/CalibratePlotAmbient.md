@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [CalibratePlotAmbient](CalibratePlotAmbient)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 fig = [CalibratePlotAmbient](CalibratePlotAmbient)(cal,[fig])  
   

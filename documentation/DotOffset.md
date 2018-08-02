@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [DotOffset](DotOffset)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [dx,dy,dz,a,e] = [DotOffset](DotOffset)(r,d,ndots)  
 computes DX, DY and DZ offsets to move a point in a direction specified  

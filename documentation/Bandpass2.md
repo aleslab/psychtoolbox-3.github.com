@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [Bandpass2](Bandpass2)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 w=Bandpass2(size,fLow,fHigh) returns a "window", i.e. a matrix meant to be  
 used as a band-pass filter. The matrix size is mxn if "size" is [m,n],  

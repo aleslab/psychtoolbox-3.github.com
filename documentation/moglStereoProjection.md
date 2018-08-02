@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOpenGL]]
+# [moglStereoProjection](moglStereoProjection)
+## [Psychtoolbox](Psychtoolbox)[PsychOpenGL](PsychOpenGL)
 
 moglStereoProjection(left, top, right, bottom, near, far, zero\_plane, dist, eye)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [CedrusResponseBoxTest](CedrusResponseBoxTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 Test for proper operation of the Cedrus RB-x30 response pad driver  
 "[CedrusResponseBox](CedrusResponseBox)".  

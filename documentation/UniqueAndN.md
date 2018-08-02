@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [UniqueAndN](UniqueAndN)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 [uniques,n] = [UniqueAndN](UniqueAndN)(input,[operateByRow=false])  
   

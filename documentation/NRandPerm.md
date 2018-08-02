@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [NRandPerm](NRandPerm)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 [NRandPerm](NRandPerm) Random permutation.  
    [NRandPerm](NRandPerm)(n,nret) is a random permutation of the integers from 1 to n,  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [IsMinimumOSXVersion](IsMinimumOSXVersion)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 rc = [IsMinimumOSXVersion](IsMinimumOSXVersion)(major, minor, point);  
   

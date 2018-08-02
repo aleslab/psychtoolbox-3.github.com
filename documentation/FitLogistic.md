@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [FitLogistic](FitLogistic)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 [a,b] = [FitLogistic](FitLogistic)(x,y)  
   

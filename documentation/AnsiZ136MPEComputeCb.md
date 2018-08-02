@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]] &#8250; [[PsychAnsiZ136MPE]]
+# [AnsiZ136MPEComputeCb](AnsiZ136MPEComputeCb)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)[PsychAnsiZ136MPE](PsychAnsiZ136MPE)
 
 Cb = [AnsiZ136MPEComputeCb](AnsiZ136MPEComputeCb)(stimulusWavelengthNm)  
   

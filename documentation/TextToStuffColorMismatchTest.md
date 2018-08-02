@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [TextToStuffColorMismatchTest](TextToStuffColorMismatchTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [TextToStuffColorMismatchTest](TextToStuffColorMismatchTest) - Test if text is drawn  
 in the color it was requested to be drawn.  

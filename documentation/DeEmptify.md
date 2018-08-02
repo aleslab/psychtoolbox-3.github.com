@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [DeEmptify](DeEmptify)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 in = [DeEmptify](DeEmptify)(in,column)  
 deletes empty cells or rows from cellarray:  

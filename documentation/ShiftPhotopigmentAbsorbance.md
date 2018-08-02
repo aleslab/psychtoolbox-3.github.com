@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [ShiftPhotopigmentAbsorbance](ShiftPhotopigmentAbsorbance)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
 absorbance = [ShiftPhotopigmentAbsorbance](ShiftPhotopigmentAbsorbance)(S,absorbance,lambdaMaxShift,shiftMode)  
   

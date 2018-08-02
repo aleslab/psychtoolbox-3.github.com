@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]] &#8250; [[PsychColorimetricMatFiles]]
+# [PsychColorimetricMatFiles](PsychColorimetricMatFiles)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)[PsychColorimetricMatFiles](PsychColorimetricMatFiles)
 
 Psychtoolbox:[PsychColorimetricData](PsychColorimetricData):[PsychColorimetricMatFiles](PsychColorimetricMatFiles).  
   

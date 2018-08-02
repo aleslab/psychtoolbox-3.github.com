@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [PsychTests](PsychTests)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 Psychtoolbox/[PsychTests](PsychTests)/Contents.m  
   

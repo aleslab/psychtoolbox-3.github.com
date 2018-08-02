@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [CumNormYNFitFun](CumNormYNFitFun)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 [f,g] = [CumulativeFitFun](CumulativeFitFun)(x,level,nYes,nNo)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSound]]
+# [PsychSound](PsychSound)
+## [Psychtoolbox](Psychtoolbox)[PsychSound](PsychSound)
 
 Psychtoolbox:[PsychSound](PsychSound) -- Psychtoolbox sound functions, based on [OpenAL](OpenAL)  
 and [PsychPortAudio](PsychPortAudio).  

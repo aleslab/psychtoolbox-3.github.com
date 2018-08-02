@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[MovieDemos]]
+# [PlayMoviesDemo](PlayMoviesDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[MovieDemos](MovieDemos)
 
 [PlayMoviesDemo](PlayMoviesDemo)(moviename [, backgroundMaskOut][, tolerance][, pixelFormat=4][, maxThreads=-1])  
   

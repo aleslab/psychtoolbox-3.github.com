@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [ClipRect](ClipRect)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
 newRect = [ClipRect](ClipRect)(a,b)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [MakeFourierBasis](MakeFourierBasis)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 [B] = [MakeFourierBasis](MakeFourierBasis)(wls,nbasis);  
   

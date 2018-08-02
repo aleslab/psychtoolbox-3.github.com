@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychFiles]]
+# [LogVar](LogVar)
+## [Psychtoolbox](Psychtoolbox)[PsychFiles](PsychFiles)
 
 fname = [LogVar](LogVar)(var,name,dirnm)  
   

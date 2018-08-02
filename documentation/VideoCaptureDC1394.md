@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychVideoCapture]]
+# [VideoCaptureDC1394](VideoCaptureDC1394)
+## [Psychtoolbox](Psychtoolbox)[PsychVideoCapture](PsychVideoCapture)
 
 [VideoCaptureDC1394](VideoCaptureDC1394) - Setup instructions for IEEE-1394 firewire video  
 capture.  

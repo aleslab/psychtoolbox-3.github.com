@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDocumentation]]
+# [NVision3D](NVision3D)
+## [Psychtoolbox](Psychtoolbox)[PsychDocumentation](PsychDocumentation)
 
 [NVision3D](NVision3D) - Support for [NVidia](NVidia) [NVision](NVision) stereo goggles.  
   

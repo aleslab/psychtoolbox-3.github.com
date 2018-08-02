@@ -1,5 +1,5 @@
 # [IOPort('Purge')](IOPort-Purge) 
-## [[Psychtoolbox]] &#8250; [[IOPort]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[IOPort](IOPort).{mex*} subfunction
 
 
 Purge all data queued for reading or writing from/to device specified by  

@@ -1,5 +1,5 @@
 # [Screen('FrameRate')](Screen-FrameRate) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Returns or sets the nominal video frame rate in Hz, as reported by your  

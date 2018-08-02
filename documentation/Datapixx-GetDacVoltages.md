@@ -1,5 +1,5 @@
 # [Datapixx('GetDacVoltages')](Datapixx-GetDacVoltages) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns list of programmed voltages for all DAC output channels.  

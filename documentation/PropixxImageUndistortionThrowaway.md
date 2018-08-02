@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychAlpha]]
+# [PropixxImageUndistortionThrowaway](PropixxImageUndistortionThrowaway)
+## [Psychtoolbox](Psychtoolbox)[PsychAlpha](PsychAlpha)
 
 [PropixxImageUndistortionThrowaway](PropixxImageUndistortionThrowaway)(calibfilename [, flipmethod=0][, corrmethod=0][, imagefilename])  
   

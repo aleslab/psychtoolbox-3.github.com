@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [FitWeibTAFC](FitWeibTAFC)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
  [alpha,beta,thresh92] = [FitWeibTAFC](FitWeibTAFC)(inputs,nCorrect,nError,...  
       [alpha0],[beta0])  

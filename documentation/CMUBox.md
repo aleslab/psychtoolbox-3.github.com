@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [CMUBox](CMUBox)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
 [CMUBox](CMUBox) - Access CMU response button box or PST serial response button box as well as fORP and Bitwhacker devices.  
   

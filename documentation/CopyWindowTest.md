@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [CopyWindowTest](CopyWindowTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [CopyWindowTest](CopyWindowTest)([uselegacy=0][, sf=1][, sd=1])  
   

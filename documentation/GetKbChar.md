@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [GetKbChar](GetKbChar)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [ch, when] = [GetKbChar](GetKbChar)([deviceIndex][, untilTime=inf][, optional [KbCheck](KbCheck) arguments...]);  
   

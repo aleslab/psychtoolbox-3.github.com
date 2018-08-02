@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychObsolete]]
+# [SoundTrigger](SoundTrigger)
+## [Psychtoolbox](Psychtoolbox)[PsychObsolete](PsychObsolete)
 
 Basic test and demo of the sound recording/capture functionality of the  
 new [PsychSound](PsychSound)() function.  

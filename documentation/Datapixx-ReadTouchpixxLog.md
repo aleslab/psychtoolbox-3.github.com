@@ -1,5 +1,5 @@
 # [Datapixx('ReadTouchpixxLog')](Datapixx-ReadTouchpixxLog) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Upload [TOUCHPixx](TOUCHPixx) touch panel activity from a Datapixx internal log buffer to the  

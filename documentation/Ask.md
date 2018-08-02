@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [Ask](Ask)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 reply = [Ask](Ask)(window,message,[textColor],[bgColor],[replyFun],[rectAlign1],[rectAlign2],[fontSize=30])  
   

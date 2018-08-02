@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [Snd](Snd)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 err = [Snd](Snd)(command,[signal],[rate],[sampleSize])  
   

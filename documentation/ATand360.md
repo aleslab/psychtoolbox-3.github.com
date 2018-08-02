@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [ATand360](ATand360)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 ang = [ATand360](ATand360)(y,x)  
 returns angle from 0 to 360 based on x an y coords  

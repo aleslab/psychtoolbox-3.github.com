@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]]
+# [RadianceAndDistanceAreaToCornIrradiance](RadianceAndDistanceAreaToCornIrradiance)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)
 
 cornealIrradiance\_PowerPerArea = [RadianceAndDistanceAreaToCornIrradiance](RadianceAndDistanceAreaToCornIrradiance)(radiance\_PowerPerSrArea,stimulusDistance,stimulusArea)  
   

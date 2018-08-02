@@ -1,5 +1,5 @@
 # [Screen('WaitBlanking')](Screen-WaitBlanking) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Wait for specified number of monitor refresh intervals, stopping PTB's execution  

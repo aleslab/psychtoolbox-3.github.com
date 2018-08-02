@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychFiles]]
+# [ReadStructsFromText](ReadStructsFromText)
+## [Psychtoolbox](Psychtoolbox)[PsychFiles](PsychFiles)
 
 theStructs = [ReadStructsFromText](ReadStructsFromText)(filename)  
   

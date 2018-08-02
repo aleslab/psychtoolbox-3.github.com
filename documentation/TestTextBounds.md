@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [TestTextBounds](TestTextBounds)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [TestTextBounds](TestTextBounds) - Test function of the [TextBounds](TextBounds)() function.  
 

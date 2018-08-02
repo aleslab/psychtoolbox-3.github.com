@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGamma]]
+# [NormalizeGamma](NormalizeGamma)
+## [Psychtoolbox](Psychtoolbox)[PsychGamma](PsychGamma)
 
 [gammaOut] = [NormalizeGamma](NormalizeGamma)(gamma)  
   

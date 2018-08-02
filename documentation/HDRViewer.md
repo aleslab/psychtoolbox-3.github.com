@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BrightSideDisplay]]
+# [HDRViewer](HDRViewer)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BrightSideDisplay](BrightSideDisplay)
 
 [HDRViewer](HDRViewer)([imfilepattern][, dummymode][, scalefactor]) -- Load and show high  
 dynamic range images on the [BrightSide](BrightSide) Technologies High Dynamic Range  

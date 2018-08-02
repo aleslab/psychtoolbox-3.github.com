@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [BasicSoundFeedbackDemo](BasicSoundFeedbackDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [BasicSoundFeedbackDemo](BasicSoundFeedbackDemo)([reqlatency=7.5 ms] [,duplex=0])  
   

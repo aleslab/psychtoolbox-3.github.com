@@ -1,5 +1,5 @@
 # [Screen('TransformTexture')](Screen-TransformTexture) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Apply an image processing operation to a texture 'sourceTexture' and store the  

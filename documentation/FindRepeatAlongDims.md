@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [FindRepeatAlongDims](FindRepeatAlongDims)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 find repeated rows or columns in a matrix.  
 inds = [FindRepeatAlongDims](FindRepeatAlongDims)(in,dim)  

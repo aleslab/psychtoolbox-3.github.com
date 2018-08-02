@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [PsychDefaultSetup](PsychDefaultSetup)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [PsychDefaultSetup](PsychDefaultSetup)(featureLevel) - Perform standard setup for Psychtoolbox.  
   

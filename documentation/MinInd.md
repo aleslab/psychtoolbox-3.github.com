@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [MinInd](MinInd)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 [m,inds] = [MinInd](MinInd)(mat)  
 returns minimum of an N-D matrix and the indices at which this minimum  

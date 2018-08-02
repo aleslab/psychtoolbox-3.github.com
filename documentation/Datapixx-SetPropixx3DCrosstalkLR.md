@@ -1,5 +1,5 @@
 # [Datapixx('SetPropixx3DCrosstalkLR')](Datapixx-SetPropixx3DCrosstalkLR) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Set observed 3D left -\> right-eye crosstalk (range 0-1). The [PROPixx](PROPixx) will  

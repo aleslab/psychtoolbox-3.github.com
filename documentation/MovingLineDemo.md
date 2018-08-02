@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [MovingLineDemo](MovingLineDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [MovingLineDemo](MovingLineDemo)([xv=10][, twolines=0][, screenid=max])  
   

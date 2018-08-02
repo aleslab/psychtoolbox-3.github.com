@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychAlphaBlending]]
+# [SetSourceAlpha](SetSourceAlpha)
+## [Psychtoolbox](Psychtoolbox)[PsychAlphaBlending](PsychAlphaBlending)
 
 [newSourceMat, newDestinationMat]=[SetSourceAlpha](SetSourceAlpha)[(SourceFactorStr]((SourceFactorStr), alpha, sourceImage, destinationImage)  
   

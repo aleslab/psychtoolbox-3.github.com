@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [ShrinkMatrix](ShrinkMatrix)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 out = [ShrinkMatrix](ShrinkMatrix)(IN, FAC)  
 Shrinks a 2-D or 3-D matrix IN (an image) by a factor FAC.  

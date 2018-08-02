@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychInitialize]]
+# [IsPsychStartupImplantedInStartup](IsPsychStartupImplantedInStartup)
+## [Psychtoolbox](Psychtoolbox)[PsychInitialize](PsychInitialize)
 
 isImplanted = [IsPsychStartupImplantedInStartup](IsPsychStartupImplantedInStartup)  
   

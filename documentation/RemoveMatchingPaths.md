@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [RemoveMatchingPaths](RemoveMatchingPaths)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 newPathList = [RemoveMatchingPaths](RemoveMatchingPaths)(pathList, matchString)  
   

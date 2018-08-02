@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRadiometric]]
+# [WavelengthNmToFrequencyTHz](WavelengthNmToFrequencyTHz)
+## [Psychtoolbox](Psychtoolbox)[PsychRadiometric](PsychRadiometric)
 
 [frequencyTHz] = [WavelengthInNmToFrequencyInTHz](WavelengthInNmToFrequencyInTHz)(wavelengthNm)  
   

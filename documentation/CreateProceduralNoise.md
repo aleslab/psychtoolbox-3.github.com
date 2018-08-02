@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [CreateProceduralNoise](CreateProceduralNoise)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 [noiseid, noiserect] = [CreateProceduralNoise](CreateProceduralNoise)(windowPtr, width, height [, noiseType='ClassicPerlin'][, backgroundColorOffset =(0,0,0,0)][, param1][, param2, ...])  
   

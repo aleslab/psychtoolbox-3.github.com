@@ -1,5 +1,5 @@
 # [IOPort('Verbosity')](IOPort-Verbosity) 
-## [[Psychtoolbox]] &#8250; [[IOPort]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[IOPort](IOPort).{mex*} subfunction
 
 
 Set level of verbosity for error/warning/status messages. 'level' optional, new  

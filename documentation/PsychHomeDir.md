@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychFiles]]
+# [PsychHomeDir](PsychHomeDir)
+## [Psychtoolbox](Psychtoolbox)[PsychFiles](PsychFiles)
 
 Purpose: Look for the home directory of the user.  
   

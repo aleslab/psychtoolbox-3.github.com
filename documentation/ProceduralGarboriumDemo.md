@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [ProceduralGarboriumDemo](ProceduralGarboriumDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 [ProceduralGarboriumDemo](ProceduralGarboriumDemo)([ngabors=200]) -- An aquarium full of cute little procedural gabors!  
   

@@ -1,5 +1,5 @@
-# [[Screen]]
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+# [Screen](Screen)
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen)
 
 Usage:  
   

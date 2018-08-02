@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychFiles]]
+# [ReplaceLineTerminators](ReplaceLineTerminators)
+## [Psychtoolbox](Psychtoolbox)[PsychFiles](PsychFiles)
 
 newStr=[ReplaceLineTerminators](ReplaceLineTerminators)(str, newTerminator)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [InvertLogistic](InvertLogistic)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 x = [InvertLogistic](InvertLogistic)(y,a,b);  
   

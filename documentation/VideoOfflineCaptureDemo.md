@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [VideoOfflineCaptureDemo](VideoOfflineCaptureDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 Demonstrate use of built-in [[GStreamer](GStreamer)][(GStreamer)]((GStreamer)) video capture engine to capture first  
 into memory, then retrieve corresponding video textures after end of capture.  

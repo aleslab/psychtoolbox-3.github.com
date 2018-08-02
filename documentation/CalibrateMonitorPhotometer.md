@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [CalibrateMonitorPhotometer](CalibrateMonitorPhotometer)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 [gammaTable1, gammaTable2, displayBaseline, displayRange. displayGamma, maxLevel ] = [CalibrateMonitorPhotometer](CalibrateMonitorPhotometer)([numMeasures=9][, screenid=max])  
   

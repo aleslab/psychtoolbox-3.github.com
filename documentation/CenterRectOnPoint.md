@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [CenterRectOnPoint](CenterRectOnPoint)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
 newRect = [CenterRectOnPoint](CenterRectOnPoint)(rect,x,y)  
   

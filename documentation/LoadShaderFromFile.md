@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOpenGL]]
+# [LoadShaderFromFile](LoadShaderFromFile)
+## [Psychtoolbox](Psychtoolbox)[PsychOpenGL](PsychOpenGL)
 
 handle = [LoadShaderFromFile](LoadShaderFromFile)(filename [, shadertype] [, debug=0])  
   

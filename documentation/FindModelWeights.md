@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [FindModelWeights](FindModelWeights)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 output = [FindModelWeights](FindModelWeights)(input,B)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [PsychRandSample](PsychRandSample)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 x=[PsychRandSample](PsychRandSample)(list,[dims])  
   

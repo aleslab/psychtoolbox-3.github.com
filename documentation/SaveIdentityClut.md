@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [SaveIdentityClut](SaveIdentityClut)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 savedClut = [SaveIdentityClut](SaveIdentityClut)(windowPtr [, LUT])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOpenGL]]
+# [PsychGetPositionYawMatrix](PsychGetPositionYawMatrix)
+## [Psychtoolbox](Psychtoolbox)[PsychOpenGL](PsychOpenGL)
 
 M = [PsychGetPositionYawMatrix](PsychGetPositionYawMatrix)(translation, yawRotation);  
   

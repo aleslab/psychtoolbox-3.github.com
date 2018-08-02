@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [GenerateCIEDay](GenerateCIEDay)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 [spd,xd,yd] = [GenerateCIEDay](GenerateCIEDay)(Temp,[B])  
   

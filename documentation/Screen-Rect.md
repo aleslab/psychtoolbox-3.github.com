@@ -1,5 +1,5 @@
 # [Screen('Rect')](Screen-Rect) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Get local rect of window or screen. This has its top-left corner always at (0,0)  

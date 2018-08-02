@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [DatarecordingFromSerialPortDemo](DatarecordingFromSerialPortDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 Template for asynchronous data collection and timestamping from serial port.  
   

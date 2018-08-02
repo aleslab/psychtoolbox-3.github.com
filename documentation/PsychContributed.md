@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychContributed]]
+# [PsychContributed](PsychContributed)
+## [Psychtoolbox](Psychtoolbox)[PsychContributed](PsychContributed)
 
 Psychtoolbox:[PsychContributed](PsychContributed)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [SettingsToPrimary](SettingsToPrimary)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 [primary] = [SettingsToPrimary](SettingsToPrimary)(cal,settings)  
   

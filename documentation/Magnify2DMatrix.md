@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [Magnify2DMatrix](Magnify2DMatrix)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 destination = [Magnify2DMatrix](Magnify2DMatrix)(sourceMatrix, scalingFactor)  
   

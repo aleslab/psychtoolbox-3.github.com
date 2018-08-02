@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychPriority]]
+# [MachSetStandardPriority](MachSetStandardPriority)
+## [Psychtoolbox](Psychtoolbox)[PsychPriority](PsychPriority)
 
 [MachSetStandardPriority](MachSetStandardPriority)  
   

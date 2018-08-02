@@ -1,4 +1,5 @@
-## [[Psychtoolbox]]
+# [DownloadAdditionsForLinux](DownloadAdditionsForLinux)
+## [Psychtoolbox](Psychtoolbox)
 
 [DownloadAdditionsForLinux](DownloadAdditionsForLinux)(targetdirectory [, flavor]);  
   

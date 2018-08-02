@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [FlushCalFile](FlushCalFile)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 [FlushCalFile](FlushCalFile)([filespec],[nKeep])  
   

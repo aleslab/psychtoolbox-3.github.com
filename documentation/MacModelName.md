@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [MacModelName](MacModelName)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 modelName=[MacModelName](MacModelName)  
 Return the model name of the Macintosh.   

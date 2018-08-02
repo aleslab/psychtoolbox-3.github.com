@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [BasicAMAndMixScheduleDemo](BasicAMAndMixScheduleDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 Demonstrates basic use of sound schedules, volume controls, amplitude  
 modulation and audio mixing of multiple voices.  

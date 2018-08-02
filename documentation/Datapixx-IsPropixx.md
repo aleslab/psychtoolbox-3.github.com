@@ -1,5 +1,5 @@
 # [Datapixx('IsPropixx')](Datapixx-IsPropixx) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns non-0 for a [PROPixx](PROPixx) projector (not controller).  

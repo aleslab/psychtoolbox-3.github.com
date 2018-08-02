@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [GetTouchDeviceIndices](GetTouchDeviceIndices)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
 [touchIndices, productNames, allInfo] = [GetTouchDeviceIndices](GetTouchDeviceIndices)([typeOnly][, touchTypeOnly][, productName][, serialNumber][, locationID])  
   

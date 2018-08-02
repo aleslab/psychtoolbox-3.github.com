@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BitsPlusToolbox]]
+# [BitsPlusEncodeClutRow](BitsPlusEncodeClutRow)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BitsPlusToolbox](BitsPlusToolbox)
 
 bitsPlusClutRow = [BitsPlusEncodeClutRow](BitsPlusEncodeClutRow)(theClut)  
   

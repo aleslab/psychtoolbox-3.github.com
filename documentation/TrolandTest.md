@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [TrolandTest](TrolandTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [TrolandTest](TrolandTest)  
   

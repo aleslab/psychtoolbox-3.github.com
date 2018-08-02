@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [KbEventAvail](KbEventAvail)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 navail = [KbEventAvail](KbEventAvail)([deviceIndex])  
   

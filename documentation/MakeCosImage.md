@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [MakeCosImage](MakeCosImage)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [image] = [MakeCosImage](MakeCosImage)(freqi,freqj,nRowPixels,[nColPixels])  
   

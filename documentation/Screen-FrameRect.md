@@ -1,5 +1,5 @@
 # [Screen('FrameRect')](Screen-FrameRect) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Draw the outline of a rectangle "rect". "color" is the clut index (scalar or [r  

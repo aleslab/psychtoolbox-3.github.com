@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychJava]]
+# [AssignGetCharJava](AssignGetCharJava)
+## [Psychtoolbox](Psychtoolbox)[PsychJava](PsychJava)
 
 [AssignGetCharJava](AssignGetCharJava) - Helper function for Java based [GetChar](GetChar).  
   

@@ -1,5 +1,5 @@
 # [PsychPortAudio('CreateBuffer')](PsychPortAudio-CreateBuffer) 
-## [[Psychtoolbox]] &#8250; [[PsychPortAudio]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Create a new dynamic audio data playback buffer for a [PortAudio](PortAudio) audio device and  

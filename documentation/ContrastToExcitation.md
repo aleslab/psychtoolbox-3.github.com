@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [ContrastToExcitation](ContrastToExcitation)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 excitation = [ContrastToExcitation](ContrastToExcitation)(contrast,reference)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [ChooseKFromN](ChooseKFromN)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
  choice = [ChooseKFromN](ChooseKFromN)(n,k,[unique])  
   

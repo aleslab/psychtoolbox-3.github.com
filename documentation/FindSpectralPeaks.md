@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [FindSpectralPeaks](FindSpectralPeaks)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 peaks = [FindSpectralPeaks](FindSpectralPeaks)(spectrum,[S],[noiseLevel])  
   

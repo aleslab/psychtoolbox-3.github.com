@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [LoadIdentityClut](LoadIdentityClut)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 oldClut = [LoadIdentityClut](LoadIdentityClut)(windowPtr [, loadOnNextFlip=0][, lutType=auto][, disableDithering=1])  
   

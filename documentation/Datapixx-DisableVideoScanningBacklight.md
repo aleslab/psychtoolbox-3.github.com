@@ -1,5 +1,5 @@
 # [Datapixx('DisableVideoScanningBacklight')](Datapixx-DisableVideoScanningBacklight) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Sets the [VIEWPixx](VIEWPixx) LED backlight to remain on continuously. See  

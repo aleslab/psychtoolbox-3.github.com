@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSound]] &#8250; [[MOAL]] &#8250; [[core]]
+# [CloseOpenAL](CloseOpenAL)
+## [Psychtoolbox](Psychtoolbox)[PsychSound](PsychSound)[MOAL](MOAL)[core](core)
 
 [CloseOpenAL](CloseOpenAL) - Shutdown [OpenAL](OpenAL) based audio subsystem.  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [XYZToSRGBPrimary](XYZToSRGBPrimary)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 [rgb,M] = [XYZToSRGBPrimary](XYZToSRGBPrimary)(XYZ)  
   

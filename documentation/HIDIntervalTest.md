@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [HIDIntervalTest](HIDIntervalTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [HIDIntervalTest](HIDIntervalTest) -- Illustrate human interface device sampling interval.  
   

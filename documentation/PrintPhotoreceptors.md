@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [PrintPhotoreceptors](PrintPhotoreceptors)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
 [PrintPhotoreceptors](PrintPhotoreceptors)(photoreceptors)  
   

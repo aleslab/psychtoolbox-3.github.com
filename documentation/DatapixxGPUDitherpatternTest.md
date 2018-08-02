@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [DatapixxGPUDitherpatternTest](DatapixxGPUDitherpatternTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [DatapixxGPUDitherpatternTest](DatapixxGPUDitherpatternTest)([fullscreen=1])  
   

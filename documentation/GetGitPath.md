@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [GetGitPath](GetGitPath)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 gitpath = [GetGitPath](GetGitPath) -- Return auto-detected installation path  
 for git client, if any. Return empty string if auto-detection not  

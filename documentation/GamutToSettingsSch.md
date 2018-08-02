@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [GamutToSettingsSch](GamutToSettingsSch)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
 settings = [GamutToSettingsSch](GamutToSettingsSch)(gammaInput, gammaTable, gamut)  
   

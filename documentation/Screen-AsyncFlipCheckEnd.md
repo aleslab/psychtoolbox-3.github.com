@@ -1,5 +1,5 @@
 # [Screen('AsyncFlipCheckEnd')](Screen-AsyncFlipCheckEnd) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 Check if a previously scheduled asynchronous flip operation has completed (see  

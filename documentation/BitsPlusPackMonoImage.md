@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[BitsPlusToolbox]]
+# [BitsPlusPackMonoImage](BitsPlusPackMonoImage)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[BitsPlusToolbox](BitsPlusToolbox)
 
 [theColorImage,reconNewWay,reconOldWay] = [BitsPlusPackMonoImage](BitsPlusPackMonoImage)(theMonoImage)  
   

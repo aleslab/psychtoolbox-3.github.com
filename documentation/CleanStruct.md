@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [CleanStruct](CleanStruct)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 out = [CleanStruct](CleanStruct)(temp,qrec)  
   

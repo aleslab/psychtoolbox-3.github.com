@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]] &#8250; [[PsychMunsell]]
+# [PsychMunsell](PsychMunsell)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)[PsychMunsell](PsychMunsell)
 
 Psychtoolbox:[PsychColorimetric](PsychColorimetric):[PsychMunsell](PsychMunsell).  
   

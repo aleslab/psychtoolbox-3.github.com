@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[GPGPUDemos]]
+# [GPGPUDemos](GPGPUDemos)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[GPGPUDemos](GPGPUDemos)
 
 Psychtoolbox:[PsychDemos](PsychDemos):[GPGPUDemos](GPGPUDemos)  
   

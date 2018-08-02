@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [DisplayUndistortionCSV](DisplayUndistortionCSV)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 scal = [DisplayUndistortionCSV](DisplayUndistortionCSV)(calibinfilename [, caliboutfilename][, screenid])  
   

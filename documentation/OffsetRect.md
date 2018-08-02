@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychRects]]
+# [OffsetRect](OffsetRect)
+## [Psychtoolbox](Psychtoolbox)[PsychRects](PsychRects)
 
 newRect = [OffsetRect](OffsetRect)(oldRect,x,y)  
   

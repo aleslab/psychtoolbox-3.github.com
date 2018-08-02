@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [kPsychGUIWindow](kPsychGUIWindow)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 kPsychGUIWindow -- Create onscreen windows with behaviour of normal GUI windows.  
   

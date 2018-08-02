@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [AddStructs](AddStructs)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 OUTSTRUCT = [AddStructs](AddStructs)(BASE,A,B,...)  
 Appends fields of structs A and B, etc to struct BASE  

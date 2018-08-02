@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDocumentation]]
+# [AntiAliasing](AntiAliasing)
+## [Psychtoolbox](Psychtoolbox)[PsychDocumentation](PsychDocumentation)
 
 [AntiAliasing](AntiAliasing) -- Psychtoolbox facilities for Anti-Aliasing.  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychJava]]
+# [PsychJavaSwingCleanup](PsychJavaSwingCleanup)
+## [Psychtoolbox](Psychtoolbox)[PsychJava](PsychJava)
 
 [PsychJavaSwingCleanup](PsychJavaSwingCleanup) - Clean up some internal Java stuff.  
   

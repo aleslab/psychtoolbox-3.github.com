@@ -1,5 +1,5 @@
 # [Datapixx('StopAllSchedules')](Datapixx-StopAllSchedules) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Stop running all DAC/ADC/DOUT/DIN/AUD/AUX/MIC schedules. Any running schedules  

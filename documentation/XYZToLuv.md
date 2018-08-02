@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [XYZToLuv](XYZToLuv)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 luv = [XYZToLuv](XYZToLuv)(xyz,whiteXYZ)  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychPriority]]
+# [Rush](Rush)
+## [Psychtoolbox](Psychtoolbox)[PsychPriority](PsychPriority)
 
 [Rush](Rush)(rushedCode, priorityLevel)  
   

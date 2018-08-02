@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [MakeBeep](MakeBeep)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [beep,samplingRate] = [MakeBeep](MakeBeep)(freq,duration,[samplingRate])  
   

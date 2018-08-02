@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]]
+# [PsychGPUTestAndTweakGammaTables](PsychGPUTestAndTweakGammaTables)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)
 
   
 [PsychGPUTestAndTweakGammaTables](PsychGPUTestAndTweakGammaTables) - Test and tweak GPU hardware gamma tables.  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychContributed]]
+# [read_rle_rgbe](read_rle_rgbe)
+## [Psychtoolbox](Psychtoolbox)[PsychContributed](PsychContributed)
 
 read\_rle\_rgbe  
   

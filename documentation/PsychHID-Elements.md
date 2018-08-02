@@ -1,5 +1,5 @@
 # [PsychHID('Elements')](PsychHID-Elements) 
-## [[Psychtoolbox]] &#8250; [[PsychHID]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychHID](PsychHID).{mex*} subfunction
 
 
 Return a struct array describing each element of a connected USB HID device.  

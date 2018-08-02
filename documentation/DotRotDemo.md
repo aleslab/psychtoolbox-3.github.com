@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [DotRotDemo](DotRotDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 dot motion demo using SCREEN('DrawDots') subfunction  
 author: Keith Schneider, 12/13/04  

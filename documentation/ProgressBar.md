@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [ProgressBar](ProgressBar)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 [ProgressBar](ProgressBar)    Ascii progress bar.  
    progBar = [ProgressBar](ProgressBar)(nMax,str) creates a progress bar and returns a  

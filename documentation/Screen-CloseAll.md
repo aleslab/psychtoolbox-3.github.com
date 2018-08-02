@@ -1,5 +1,5 @@
 # [Screen('CloseAll')](Screen-CloseAll) 
-## [[Psychtoolbox]] &#8250; [[Screen]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen).{mex*} subfunction
 
 
 [Close](Close) all open onscreen and offscreen windows and textures, movies and video  

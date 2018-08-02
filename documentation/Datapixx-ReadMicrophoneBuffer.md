@@ -1,5 +1,5 @@
 # [Datapixx('ReadMicrophoneBuffer')](Datapixx-ReadMicrophoneBuffer) 
-## [[Psychtoolbox]] &#8250; [[Datapixx]].{mex*,dll} subfunction
+## [Psychtoolbox](Pyschtoolbox)&#8250;[Datapixx](Datapixx).{mex*} subfunction
 
 
 Upload audio input data from a Datapixx internal acquisition buffer to the local  

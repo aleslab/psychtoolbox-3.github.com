@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOneliners]]
+# [Explode](Explode)
+## [Psychtoolbox](Psychtoolbox)[PsychOneliners](PsychOneliners)
 
 outputcell = [Explode](Explode)(vect,splitvect,mode)  
 [out1,out2,...] = [Explode](Explode)(vect,splitvect,mode)  

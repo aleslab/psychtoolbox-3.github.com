@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [VignettingCorrectionDemo](VignettingCorrectionDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 Demonstrate how to do display devignetting aka per-pixel gain correction.  
   

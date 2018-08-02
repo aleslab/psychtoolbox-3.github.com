@@ -1,4 +1,5 @@
-## [[Psychtoolbox]]
+# [DownloadLegacyPsychtoolbox](DownloadLegacyPsychtoolbox)
+## [Psychtoolbox](Psychtoolbox)
 
 [DownloadLegacyPsychtoolbox](DownloadLegacyPsychtoolbox)  
   

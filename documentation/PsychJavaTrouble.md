@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychJava]]
+# [PsychJavaTrouble](PsychJavaTrouble)
+## [Psychtoolbox](Psychtoolbox)[PsychJava](PsychJava)
 
 [PsychJavaTrouble](PsychJavaTrouble) -- What to do if Java-based Psychtoolbox functions fail?  
   

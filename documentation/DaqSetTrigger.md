@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqSetTrigger](DaqSetTrigger)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 err=[DaqSetTrigger](DaqSetTrigger)[(DeviceIndex]((DeviceIndex),rising)  
 USB-1208FS: Configure the external trigger. This function configures the  

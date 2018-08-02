@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]] &#8250; [[PsychTutorials]]
+# [ImageMixingTutorial](ImageMixingTutorial)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)[PsychTutorials](PsychTutorials)
 
 [ImageMixingTutorial](ImageMixingTutorial)([mode=1][, ms=200][, myimgfile])  
   

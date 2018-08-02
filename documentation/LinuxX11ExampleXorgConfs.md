@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[LinuxX11ExampleXorgConfs]]
+# [LinuxX11ExampleXorgConfs](LinuxX11ExampleXorgConfs)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[LinuxX11ExampleXorgConfs](LinuxX11ExampleXorgConfs)
 
 Psychtoolbox/[PsychHardware](PsychHardware)/[LinuxX11ExampleXorgConfs](LinuxX11ExampleXorgConfs)  
   

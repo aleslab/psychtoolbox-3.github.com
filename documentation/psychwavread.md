@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSound]]
+# [psychwavread](psychwavread)
+## [Psychtoolbox](Psychtoolbox)[PsychSound](PsychSound)
 
 psychwavread - Replacement for wavread().  
   

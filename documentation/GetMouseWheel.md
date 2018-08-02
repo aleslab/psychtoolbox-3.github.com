@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [GetMouseWheel](GetMouseWheel)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 wheelDelta = [GetMouseWheel](GetMouseWheel)([mouseIndex])  
   

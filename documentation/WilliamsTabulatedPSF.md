@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOptics]]
+# [WilliamsTabulatedPSF](WilliamsTabulatedPSF)
+## [Psychtoolbox](Psychtoolbox)[PsychOptics](PsychOptics)
 
 WILLIAMSTABULATEDPSF  Tabulated PSF from Williams et al. 1994  
    function [positionMinutes,psf] = WILLIAMSTABULATEDPSF  

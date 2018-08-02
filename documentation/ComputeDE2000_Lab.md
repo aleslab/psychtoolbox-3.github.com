@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [ComputeDE2000_Lab](ComputeDE2000_Lab)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 Computes the deltaE values (CIEDE2000) for color pairs given in CIELAB coordinates (L\*a\*b\*).  
   

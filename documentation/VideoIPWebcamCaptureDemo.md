@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychDemos]]
+# [VideoIPWebcamCaptureDemo](VideoIPWebcamCaptureDemo)
+## [Psychtoolbox](Psychtoolbox)[PsychDemos](PsychDemos)
 
 Demonstrate use of built-in video capture engine with the Android [IPWebcam](IPWebcam) app,  
 or with a local videoloopback source, e.g., a [[GStreamer](GStreamer)][(GStreamer)]((GStreamer)) screencast.  

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychCal]]
+# [MeasMonSpd](MeasMonSpd)
+## [Psychtoolbox](Psychtoolbox)[PsychCal](PsychCal)
 
  [spd,S] = [MeasMonSpd](MeasMonSpd)(window, settings, [S], [syncMode], [whichMeterType], [bitsppClut])  
   

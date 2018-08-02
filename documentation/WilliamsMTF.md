@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychOptics]]
+# [WilliamsMTF](WilliamsMTF)
+## [Psychtoolbox](Psychtoolbox)[PsychOptics](PsychOptics)
 
 WILLIAMSMTF  Compute the MTF measured by Williams et. al.  
    mtf = WILLIAMSMTF(s)  

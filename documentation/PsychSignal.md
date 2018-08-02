@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychSignal]]
+# [PsychSignal](PsychSignal)
+## [Psychtoolbox](Psychtoolbox)[PsychSignal](PsychSignal)
 
 Psychtoolbox:[PsychSignal](PsychSignal).  
   

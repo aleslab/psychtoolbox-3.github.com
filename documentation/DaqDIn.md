@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqDIn](DaqDIn)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 data=[DaqDIn](DaqDIn)([[DeviceIndex](DeviceIndex)],[[NumberOfPorts](NumberOfPorts)])  
 USB-1208FS: Read digital ports. This command reads the current state of  

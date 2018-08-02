@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [DirectInputMonitoringTest](DirectInputMonitoringTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [DirectInputMonitoringTest](DirectInputMonitoringTest) - Test "Zero latency direct input monitoring" feature of some sound cards.  
   

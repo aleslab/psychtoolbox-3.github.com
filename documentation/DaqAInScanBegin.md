@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[Daq]]
+# [DaqAInScanBegin](DaqAInScanBegin)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[Daq](Daq)
 
 params=[DaqAInScanBegin](DaqAInScanBegin)[(DeviceIndex]((DeviceIndex),options)  
 Calls [DaqAInScan](DaqAInScan) with the options set to only begin, and not continue or  

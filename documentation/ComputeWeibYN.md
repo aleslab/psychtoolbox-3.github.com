@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [ComputeWeibYN](ComputeWeibYN)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 pyes = [ComputeWeibYN](ComputeWeibYN)(x,alpha,beta)  
   

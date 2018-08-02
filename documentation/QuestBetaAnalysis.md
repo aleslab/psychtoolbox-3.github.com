@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Quest]]
+# [QuestBetaAnalysis](QuestBetaAnalysis)
+## [Psychtoolbox](Psychtoolbox)[Quest](Quest)
 
 betaEstimate=[QuestBetaAnalysis](QuestBetaAnalysis)(q,[fid]);  
   

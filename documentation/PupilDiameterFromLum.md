@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetricData]]
+# [PupilDiameterFromLum](PupilDiameterFromLum)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetricData](PsychColorimetricData)
 
  [diam,area,trolands] = [PupilDiameterFromLum](PupilDiameterFromLum)(lum,[source])  
   

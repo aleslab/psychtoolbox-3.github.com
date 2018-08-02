@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychBasic]]
+# [CharAvail](CharAvail)
+## [Psychtoolbox](Psychtoolbox)[PsychBasic](PsychBasic)
 
 [avail, numChars] = [CharAvail](CharAvail)  
   

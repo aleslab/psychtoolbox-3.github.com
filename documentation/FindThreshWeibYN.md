@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[Psychometric]]
+# [FindThreshWeibYN](FindThreshWeibYN)
+## [Psychtoolbox](Psychtoolbox)[Psychometric](Psychometric)
 
 threshold = [FindThreshWeibYN](FindThreshWeibYN)(pcorrect, alpha, beta)  
   

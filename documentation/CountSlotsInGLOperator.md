@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychGLImageProcessing]]
+# [CountSlotsInGLOperator](CountSlotsInGLOperator)
+## [Psychtoolbox](Psychtoolbox)[PsychGLImageProcessing](PsychGLImageProcessing)
 
 nrslots = [CountSlotsInGLOperator](CountSlotsInGLOperator)(gloperator)  
   

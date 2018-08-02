@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychTests]]
+# [GraphicsDisplaySyncAcrossDualHeadsTest](GraphicsDisplaySyncAcrossDualHeadsTest)
+## [Psychtoolbox](Psychtoolbox)[PsychTests](PsychTests)
 
 [GraphicsDisplaySyncAcrossDualHeadsTest](GraphicsDisplaySyncAcrossDualHeadsTest)([screenids] [, nrtrials=6000] [, driftsync=0])  
   

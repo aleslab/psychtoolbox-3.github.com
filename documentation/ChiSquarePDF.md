@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychProbability]]
+# [ChiSquarePDF](ChiSquarePDF)
+## [Psychtoolbox](Psychtoolbox)[PsychProbability](PsychProbability)
 
 pdf = [ChiSquarePDF](ChiSquarePDF)(x,df)  
   

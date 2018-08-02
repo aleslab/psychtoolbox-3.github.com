@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [SplineSpd](SplineSpd)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 [spd\_out] = [SplineSpd](SplineSpd)(wls\_in, spd\_in, wls\_out, [extend])  
   

@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychHardware]] &#8250; [[DatapixxToolbox]] &#8250; [[DatapixxBasic]]
+# [PsychDataPixx](PsychDataPixx)
+## [Psychtoolbox](Psychtoolbox)[PsychHardware](PsychHardware)[DatapixxToolbox](DatapixxToolbox)[DatapixxBasic](DatapixxBasic)
 
 [PsychDataPixx](PsychDataPixx) - High level control driver for the [VPixx](VPixx) - [DataPixx](DataPixx) device.  
   

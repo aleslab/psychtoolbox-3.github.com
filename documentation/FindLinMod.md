@@ -1,4 +1,5 @@
-## [[Psychtoolbox]] &#8250; [[PsychColorimetric]]
+# [FindLinMod](FindLinMod)
+## [Psychtoolbox](Psychtoolbox)[PsychColorimetric](PsychColorimetric)
 
 [B,A] = [FindLinMod](FindLinMod)(X,n\_dimension)  
   
