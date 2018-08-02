@@ -32,3 +32,5 @@ defaults:
       layout: "post"
       categories: "news"
       is_post: true
+
+theme: jekyll-theme-minimal
