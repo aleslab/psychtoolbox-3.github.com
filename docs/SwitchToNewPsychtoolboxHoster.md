@@ -1,4 +1,5 @@
-###### >[Psychtoolbox](Psychtoolbox)
+# [SwitchToNewPsychtoolboxHoster](SwitchToNewPsychtoolboxHoster)
+##### >[Psychtoolbox](Psychtoolbox)
 
 Switch a installed Psychtoolbox working copy to our new host [GoogleCode](GoogleCode).  
   

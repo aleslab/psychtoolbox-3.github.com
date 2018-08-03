@@ -1,4 +1,5 @@
-###### >[Psychtoolbox](Psychtoolbox)
+# [SetupPsychtoolbox](SetupPsychtoolbox)
+##### >[Psychtoolbox](Psychtoolbox)
 
 [SetupPsychtoolbox](SetupPsychtoolbox) - In-place setup of PTB without network access.  
   

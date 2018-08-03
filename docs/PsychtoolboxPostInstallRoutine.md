@@ -1,4 +1,5 @@
-###### >[Psychtoolbox](Psychtoolbox)
+# [PsychtoolboxPostInstallRoutine](PsychtoolboxPostInstallRoutine)
+##### >[Psychtoolbox](Psychtoolbox)
 
 [PsychtoolboxPostInstallRoutine](PsychtoolboxPostInstallRoutine)(isUpdate [, flavor])  
   
