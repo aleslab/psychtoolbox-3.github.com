@@ -268,8 +268,11 @@ hr {
 footer {
   width: 370px;
   position: absolute;
+  right: 0;
   bottom: 0px;
+  left: 0;
   font-size: 75%;
+  text-align: right;
 }
 
 footer p {
@@ -285,7 +288,7 @@ footer p {
   
   aside, section#content, footer {
     float: none;
-    position: static;
+    position: absolute;
     width: auto;
   }
   
