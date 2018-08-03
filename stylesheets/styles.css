@@ -267,7 +267,7 @@ hr {
 
 footer {
   width: 370px;
-  position: absolute;
+  position: relative;
   right: 0;
   bottom: 0px;
   left: 0;
