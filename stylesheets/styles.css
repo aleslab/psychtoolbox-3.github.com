@@ -267,9 +267,10 @@ hr {
 
 footer {
   width: 370px;
-  position: fixed;
+  position: relative;
   bottom: 50 px;
   font-size: 75%;
+  text-align: right;
   clear: both;
 }
 
