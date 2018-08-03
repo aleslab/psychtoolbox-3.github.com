@@ -267,12 +267,10 @@ hr {
 
 footer {
   width: 370px;
-  position: relative;
-  right: 0;
-  bottom: 0px;
-  left: 0;
+  float: left;
+  position: fixed;
+  bottom: 50 px;
   font-size: 75%;
-  text-align: right;
 }
 
 footer p {
