@@ -286,7 +286,7 @@ footer p {
   
   aside, section#content, footer {
     float: none;
-    position: absolute;
+    position: static;
     width: auto;
   }
   
