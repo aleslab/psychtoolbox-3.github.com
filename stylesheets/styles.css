@@ -271,6 +271,7 @@ footer {
   position: fixed;
   bottom: 50 px;
   font-size: 75%;
+  clear: both;
 }
 
 footer p {
