@@ -1,6 +1,6 @@
 name: Psychtoolbox-3
 url: https://aleslab.github.io/
-/*baseurl: /psychtoolbox-3.github.com*/
+#baseurl: /psychtoolbox-3.github.com
 permalink:  /:title.html
 pygments: false
 markdown: kramdown
