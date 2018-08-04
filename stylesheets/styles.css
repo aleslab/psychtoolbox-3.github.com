@@ -86,8 +86,9 @@ a small {
 }
 
 .wrapper {
-  width: 960px;
-  margin: 0 auto;
+ /* width: 960px;*/
+ margin: 0 auto;
+ overflow: auto;
 }
 
 blockquote {
@@ -227,9 +228,10 @@ aside ul.buttons a strong {
 }
 
 section#content {
-  width: 500px;
+  width: auto;
   float: right;
   padding-bottom: 50px;
+  padding-left: 400px;
 }
 
 h4#contents {
@@ -300,6 +302,7 @@ footer p {
     border-width: 1px 0;
     padding: 20px 0;
     margin: 0 0 20px;
+    width: auto;
   }
   
   aside a small {
@@ -348,3 +351,4 @@ footer p {
     color: #444;
   }
 }
+
