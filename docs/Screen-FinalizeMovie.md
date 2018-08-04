@@ -1,5 +1,5 @@
 # [Screen('FinalizeMovie')](Screen-FinalizeMovie) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Finish creating a new movie file with handle 'moviePtr' and store it to  

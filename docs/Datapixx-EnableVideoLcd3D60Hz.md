@@ -1,5 +1,5 @@
 # [Datapixx('EnableVideoLcd3D60Hz')](Datapixx-EnableVideoLcd3D60Hz) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Liquid crystal displays can exhibit an artifact when presenting 2 static images  

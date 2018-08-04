@@ -1,5 +1,5 @@
 # [Screen](Screen)
-## [Psychtoolbox](Pyschtoolbox)&#8250;[Screen](Screen)
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen)
 
 Usage:  
   

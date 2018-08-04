@@ -1,5 +1,5 @@
 # [PsychOculusVRCore('StartRender')](PsychOculusVRCore-StartRender) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
 
 
 Mark start of a new 3D head tracked render cycle for Oculus device 'oculusPtr'.  

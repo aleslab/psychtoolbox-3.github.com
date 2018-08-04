@@ -1,5 +1,5 @@
 # [Screen('DrawingFinished')](Screen-DrawingFinished) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Tell Psychtoolbox that no further drawing commands will be issued to 'windowPtr'  

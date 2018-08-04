@@ -1,5 +1,5 @@
 # [PsychOculusVRCore('Version')](PsychOculusVRCore-Version) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
 
 
 return the version of [PsychOculusVRCore](PsychOculusVRCore) in a struct  

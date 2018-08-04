@@ -1,5 +1,5 @@
 # [PsychOculusVRCore('GetTrackingState')](PsychOculusVRCore-GetTrackingState) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
 
 
 Return current state of head position and orientation tracking for Oculus device  

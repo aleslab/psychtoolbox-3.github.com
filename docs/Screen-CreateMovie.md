@@ -1,5 +1,5 @@
 # [Screen('CreateMovie')](Screen-CreateMovie) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Create a new movie file with filename 'movieFile' and according to given  

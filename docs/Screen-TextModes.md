@@ -1,5 +1,5 @@
 # [Screen('TextModes')](Screen-TextModes) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Return a cell array of strings naming allowable text modes for  

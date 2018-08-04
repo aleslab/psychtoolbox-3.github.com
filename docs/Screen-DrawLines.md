@@ -1,5 +1,5 @@
 # [Screen('DrawLines')](Screen-DrawLines) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Quickly draw an array of lines into the specified window "windowPtr".  

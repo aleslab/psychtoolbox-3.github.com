@@ -1,5 +1,5 @@
 # [Datapixx('SetAudioVolume')](Datapixx-SetAudioVolume) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Set volume of audio playback. -"volume" can have two columns, or a single  

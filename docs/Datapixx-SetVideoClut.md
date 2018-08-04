@@ -1,5 +1,5 @@
 # [Datapixx('SetVideoClut')](Datapixx-SetVideoClut) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Send a 256 row \* 3 column color lookup table to the Datapixx.  

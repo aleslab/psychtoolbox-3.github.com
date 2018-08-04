@@ -1,5 +1,5 @@
 # [Datapixx('GetDinValues')](Datapixx-GetDinValues) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns the values of the 24 digital input bits.  

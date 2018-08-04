@@ -1,5 +1,5 @@
 # [Datapixx('GetDinStatus')](Datapixx-GetDinStatus) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns a struct containing the following digital input status information:  

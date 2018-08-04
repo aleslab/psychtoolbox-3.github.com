@@ -1,5 +1,5 @@
 # [Screen('GlobalRect')](Screen-GlobalRect) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Get global rect of window or screen. This is the real position / rectangular  

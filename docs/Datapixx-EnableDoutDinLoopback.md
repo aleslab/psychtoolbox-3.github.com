@@ -1,5 +1,5 @@
 # [Datapixx('EnableDoutDinLoopback')](Datapixx-EnableDoutDinLoopback) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Enable an internal loopback from the digital outputs to the digital inputs. This  

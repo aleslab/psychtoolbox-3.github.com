@@ -1,5 +1,5 @@
 # [PsychOculusVRCore('GetFovTextureSize')](PsychOculusVRCore-GetFovTextureSize) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
 
 
 Return recommended size of client renderbuffers for Oculus device 'oculusPtr'.  

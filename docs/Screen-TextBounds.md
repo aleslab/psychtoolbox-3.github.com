@@ -1,5 +1,5 @@
 # [Screen('TextBounds')](Screen-TextBounds) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Accepts a window pointer and a 'text' string.  Return in 'normBoundsRect' a rect  

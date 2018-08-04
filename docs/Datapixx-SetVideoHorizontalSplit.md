@@ -1,5 +1,5 @@
 # [Datapixx('SetVideoHorizontalSplit')](Datapixx-SetVideoHorizontalSplit) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 The Datapixx has two independant analog video outputs, VGA1 and VGA2. There are  

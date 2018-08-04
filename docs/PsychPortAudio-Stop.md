@@ -1,5 +1,5 @@
 # [PsychPortAudio('Stop')](PsychPortAudio-Stop) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Stop a [PortAudio](PortAudio) audio device. The 'pahandle' is the handle of the device to  

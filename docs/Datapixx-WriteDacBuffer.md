@@ -1,5 +1,5 @@
 # [Datapixx('WriteDacBuffer')](Datapixx-WriteDacBuffer) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Download DAC data from local host to a Datapixx internal waveform buffer.  

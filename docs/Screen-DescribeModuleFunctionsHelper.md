@@ -1,5 +1,5 @@
 # [Screen('DescribeModuleFunctionsHelper')](Screen-DescribeModuleFunctionsHelper) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Return a cell array of strings naming all subfunctions supported by this module  

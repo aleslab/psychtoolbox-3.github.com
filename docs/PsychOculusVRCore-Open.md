@@ -1,5 +1,5 @@
 # [PsychOculusVRCore('Open')](PsychOculusVRCore-Open) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
 
 
 Open connection to Oculus VR HMD, return a 'oculusPtr' handle to it.  

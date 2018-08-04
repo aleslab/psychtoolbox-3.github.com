@@ -1,5 +1,5 @@
 # [Screen('DrawArc')](Screen-DrawArc) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Draw an arc inscribed within the rect. 'color' is the clut index (scalar or [r g  

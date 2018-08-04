@@ -1,5 +1,5 @@
 # [Screen('AddAudioBufferToMovie')](Screen-AddAudioBufferToMovie) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Add a buffer filled with audio data samples to movie 'moviePtr'.  

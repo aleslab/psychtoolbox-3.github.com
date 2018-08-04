@@ -1,5 +1,5 @@
 # [Datapixx('EnableTouchpixxLogContinuousMode')](Datapixx-EnableTouchpixxLogContinuousMode) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 During a panel touch, continuous position/timetag updates will be logged at  

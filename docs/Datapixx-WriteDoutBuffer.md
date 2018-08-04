@@ -1,5 +1,5 @@
 # [Datapixx('WriteDoutBuffer')](Datapixx-WriteDoutBuffer) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Download digital output data from local host to a Datapixx internal digital  

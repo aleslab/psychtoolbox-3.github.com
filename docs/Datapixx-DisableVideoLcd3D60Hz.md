@@ -1,5 +1,5 @@
 # [Datapixx('DisableVideoLcd3D60Hz')](Datapixx-DisableVideoLcd3D60Hz) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Return to normal pixel polarity inversion. See [EnableVideoLcd3D60Hz](EnableVideoLcd3D60Hz) for more  

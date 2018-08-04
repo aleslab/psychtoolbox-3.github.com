@@ -1,5 +1,5 @@
 # [Datapixx('DisableTouchpixx')](Datapixx-DisableTouchpixx) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Disable the [TOUCHPixx](TOUCHPixx) touch panel hardware subsystem.  

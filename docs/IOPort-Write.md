@@ -1,5 +1,5 @@
 # [IOPort('Write')](IOPort-Write) 
-##### [Psychtoolbox](Pyschtoolbox)>[IOPort](IOPort).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[IOPort](IOPort).{mex*} subfunction
 
 
 Write data to device, specified by 'handle'.  

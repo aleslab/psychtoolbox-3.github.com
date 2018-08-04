@@ -1,5 +1,5 @@
 # [IOPort('OpenSerialPort')](IOPort-OpenSerialPort) 
-##### [Psychtoolbox](Pyschtoolbox)>[IOPort](IOPort).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[IOPort](IOPort).{mex*} subfunction
 
 
 Open a serial port device, return a 'handle' to it.  

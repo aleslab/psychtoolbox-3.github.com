@@ -1,5 +1,5 @@
 # [Datapixx('ReadDinLog')](Datapixx-ReadDinLog) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Upload digital input data from a Datapixx internal log buffer to the local host.  

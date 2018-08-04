@@ -1,5 +1,5 @@
 # [Datapixx('EnableTouchpixx')](Datapixx-EnableTouchpixx) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Enable the [TOUCHPixx](TOUCHPixx) touch panel hardware subsystem. The [TOUCHPixx](TOUCHPixx) is a 5-wire  

@@ -1,5 +1,5 @@
 # [Screen('DrawTexture')](Screen-DrawTexture) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Draw the texture specified via 'texturePointer' into the target window specified  

@@ -1,5 +1,5 @@
 # [Screen('PixelSize')](Screen-PixelSize) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Return the current pixel size of a screen or window. pixel size refers to the  

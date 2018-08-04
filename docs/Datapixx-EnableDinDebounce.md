@@ -1,5 +1,5 @@
 # [Datapixx('EnableDinDebounce')](Datapixx-EnableDinDebounce) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Enable a 30 millisecond debounce interval on the digital inputs. The first DIN  

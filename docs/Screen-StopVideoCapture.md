@@ -1,5 +1,5 @@
 # [Screen('StopVideoCapture')](Screen-StopVideoCapture) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Stop video capture device specified by 'capturePtr'. The function returns the  

@@ -1,5 +1,5 @@
 # [Datapixx('IsPropixxCtrl')](Datapixx-IsPropixxCtrl) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns non-0 if [DATAPixx](DATAPixx) is embedded in a [PROPixx](PROPixx) controller.  

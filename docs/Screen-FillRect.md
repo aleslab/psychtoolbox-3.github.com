@@ -1,5 +1,5 @@
 # [Screen('FillRect')](Screen-FillRect) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Fill "rect". "color" is the clut index (scalar or [r g b] triplet or [r g b a]  

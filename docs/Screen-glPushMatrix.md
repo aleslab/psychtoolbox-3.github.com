@@ -1,5 +1,5 @@
 # [Screen('glPushMatrix')](Screen-glPushMatrix) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Store a backup copy of active current [OpenGL](OpenGL) matrix on the matrix stack for  

@@ -1,5 +1,5 @@
 # [Datapixx('EnablePropixxCeilingMount')](Datapixx-EnablePropixxCeilingMount) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 [PROPixx](PROPixx) flips image horizontally and vertically.  

@@ -1,5 +1,5 @@
 # [Datapixx('SetMarker')](Datapixx-SetMarker) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Latch the current Datapixx time value into the marker register. This could be  

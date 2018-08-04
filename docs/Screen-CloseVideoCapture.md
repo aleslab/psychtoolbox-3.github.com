@@ -1,5 +1,5 @@
 # [Screen('CloseVideoCapture')](Screen-CloseVideoCapture) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 [Close](Close) video capture device specified by 'capturePtr' and release all associated  

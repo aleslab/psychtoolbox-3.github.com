@@ -1,5 +1,5 @@
 # [Screen('Preference')](Screen-Preference) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Get or set a Psychtoolbox preference.[Preference](Preference) settings are global - they  

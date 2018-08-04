@@ -1,5 +1,5 @@
 # [PsychOculusVRCore('EndFrameTiming')](PsychOculusVRCore-EndFrameTiming) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
 
 
 Mark end of a new 3D head tracked render and presentation cycle for Oculus  

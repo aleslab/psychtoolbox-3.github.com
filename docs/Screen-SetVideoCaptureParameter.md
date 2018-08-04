@@ -1,5 +1,5 @@
 # [Screen('SetVideoCaptureParameter')](Screen-SetVideoCaptureParameter) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Set video capture parameter 'parameterName' on video capture device  

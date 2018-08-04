@@ -1,5 +1,5 @@
 # [Screen('AsyncFlipBegin')](Screen-AsyncFlipBegin) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Schedule an asynchronous flip of front and back display surfaces for given  

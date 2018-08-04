@@ -1,5 +1,5 @@
 # [Datapixx('IsDatapixx')](Datapixx-IsDatapixx) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns non-0 for the original [DATAPixx](DATAPixx) CRT driver.  

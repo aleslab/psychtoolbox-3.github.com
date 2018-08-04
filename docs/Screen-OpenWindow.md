@@ -1,5 +1,5 @@
 # [Screen('OpenWindow')](Screen-OpenWindow) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Open an onscreen window. Specify a screen by a windowPtr or a screenNumber (0 is  

@@ -1,5 +1,5 @@
 # [Screen('SetOpenGLTexture')](Screen-SetOpenGLTexture) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Provides information about an external [OpenGL](OpenGL) texture to make it acessible for  

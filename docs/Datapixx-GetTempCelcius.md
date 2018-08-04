@@ -1,5 +1,5 @@
 # [Datapixx('GetTempCelcius')](Datapixx-GetTempCelcius) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns temperature inside of Datapixx chassis, in degrees Celcius. Operating  

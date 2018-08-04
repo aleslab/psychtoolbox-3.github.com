@@ -1,5 +1,5 @@
 # [Datapixx('SetTouchpixxLog')](Datapixx-SetTouchpixxLog) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Configure [TOUCHPixx](TOUCHPixx) touch panel logging. The [TOUCHPixx](TOUCHPixx) controller polls the  

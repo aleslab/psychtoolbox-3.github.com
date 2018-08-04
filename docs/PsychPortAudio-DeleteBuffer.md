@@ -1,5 +1,5 @@
 # [PsychPortAudio('DeleteBuffer')](PsychPortAudio-DeleteBuffer) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Delete an existing dynamic audio data playback buffer.  

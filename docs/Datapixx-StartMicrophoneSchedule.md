@@ -1,5 +1,5 @@
 # [Datapixx('StartMicrophoneSchedule')](Datapixx-StartMicrophoneSchedule) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Start running an audio acquisition schedule. The actual hardware schedule will  

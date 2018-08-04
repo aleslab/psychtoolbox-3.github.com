@@ -1,5 +1,5 @@
 # [Datapixx('StopAdcSchedule')](Datapixx-StopAdcSchedule) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Stop running an ADC analog acquisition schedule. The actual hardware schedule  

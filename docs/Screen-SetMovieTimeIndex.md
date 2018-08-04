@@ -1,5 +1,5 @@
 # [Screen('SetMovieTimeIndex')](Screen-SetMovieTimeIndex) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Set current time index for movie object with handle 'moviePtr'.  

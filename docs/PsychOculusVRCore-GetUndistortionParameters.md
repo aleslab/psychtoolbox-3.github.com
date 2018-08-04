@@ -1,5 +1,5 @@
 # [PsychOculusVRCore('GetUndistortionParameters')](PsychOculusVRCore-GetUndistortionParameters) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
 
 
 Return parameters needed for rendering and undistortion for Oculus device  

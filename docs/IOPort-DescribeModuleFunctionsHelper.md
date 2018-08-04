@@ -1,5 +1,5 @@
 # [IOPort('DescribeModuleFunctionsHelper')](IOPort-DescribeModuleFunctionsHelper) 
-##### [Psychtoolbox](Pyschtoolbox)>[IOPort](IOPort).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[IOPort](IOPort).{mex*} subfunction
 
 
 Return a cell array of strings naming all subfunctions supported by this module  

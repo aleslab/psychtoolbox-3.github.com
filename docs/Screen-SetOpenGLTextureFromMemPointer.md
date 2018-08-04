@@ -1,5 +1,5 @@
 # [Screen('SetOpenGLTextureFromMemPointer')](Screen-SetOpenGLTextureFromMemPointer) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 DANGEROUS! C-PROGRAMMING EXPERTS ONLY! OTHERS STAY AWAY! Convert raw image data,  

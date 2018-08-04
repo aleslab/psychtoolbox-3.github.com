@@ -1,5 +1,5 @@
 # [Screen('BeginOpenGL')](Screen-BeginOpenGL) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Prepare window 'windowPtr' for [OpenGL](OpenGL) rendering by external [OpenGL](OpenGL) code. This  

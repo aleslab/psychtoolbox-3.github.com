@@ -1,5 +1,5 @@
 # [Screen('GetFlipInterval')](Screen-GetFlipInterval) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Returns an estimate of the monitor flip interval for the specified onscreen  

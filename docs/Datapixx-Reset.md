@@ -1,5 +1,5 @@
 # [Datapixx('Reset')](Datapixx-Reset) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Invokes the following sequence:  

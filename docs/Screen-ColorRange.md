@@ -1,5 +1,5 @@
 # [Screen('ColorRange')](Screen-ColorRange) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Set or return the maximum color component value that PTB should allow for  

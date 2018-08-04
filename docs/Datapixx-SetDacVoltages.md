@@ -1,5 +1,5 @@
 # [Datapixx('SetDacVoltages')](Datapixx-SetDacVoltages) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Set the voltages for a list of DAC channels. -"channelVoltagePairs" is a list of  

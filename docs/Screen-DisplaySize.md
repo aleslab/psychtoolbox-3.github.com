@@ -1,5 +1,5 @@
 # [Screen('DisplaySize')](Screen-DisplaySize) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Return the physical width and height of the output display device associated  

@@ -1,5 +1,5 @@
 # [Screen('GetOpenGLTexture')](Screen-GetOpenGLTexture) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Returns information about the [OpenGL](OpenGL) texture corresponding to a Psychtoolbox  

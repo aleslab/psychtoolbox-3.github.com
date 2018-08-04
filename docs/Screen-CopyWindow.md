@@ -1,5 +1,5 @@
 # [Screen('CopyWindow')](Screen-CopyWindow) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Copy images, quickly, between two windows (on- or off- screen).  

@@ -1,5 +1,5 @@
 # [Datapixx('StartDoutSchedule')](Datapixx-StartDoutSchedule) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Start running a digital output waveform playback schedule. The actual hardware  

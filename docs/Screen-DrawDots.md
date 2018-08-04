@@ -1,5 +1,5 @@
 # [Screen('DrawDots')](Screen-DrawDots) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Quickly draw an array of dots.  "xy" is a two-row vector containing the x and y  

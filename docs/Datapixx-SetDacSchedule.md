@@ -1,5 +1,5 @@
 # [Datapixx('SetDacSchedule')](Datapixx-SetDacSchedule) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Configure a schedule for autonomous DAC waveform playback.  

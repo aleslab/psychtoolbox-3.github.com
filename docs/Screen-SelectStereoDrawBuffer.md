@@ -1,5 +1,5 @@
 # [Screen('SelectStereoDrawBuffer')](Screen-SelectStereoDrawBuffer) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Select the target buffer for drawing commands in stereo display mode and or  

@@ -1,5 +1,5 @@
 # [Datapixx('SetVideoVerticalStereo')](Datapixx-SetVideoVerticalStereo) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Configure doubling refresh rate to generate left/right eye images on successive  

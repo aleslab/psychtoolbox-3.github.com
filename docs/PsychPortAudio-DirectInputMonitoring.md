@@ -1,5 +1,5 @@
 # [PsychPortAudio('DirectInputMonitoring')](PsychPortAudio-DirectInputMonitoring) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Change the current settings for the "direct input monitoring" feature on device  

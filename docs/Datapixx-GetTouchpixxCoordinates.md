@@ -1,5 +1,5 @@
 # [Datapixx('GetTouchpixxCoordinates')](Datapixx-GetTouchpixxCoordinates) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns 2-element vector containing [TOUCHPixx](TOUCHPixx) x/y location currently being  

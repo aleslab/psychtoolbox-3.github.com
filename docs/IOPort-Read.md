@@ -1,5 +1,5 @@
 # [IOPort('Read')](IOPort-Read) 
-##### [Psychtoolbox](Pyschtoolbox)>[IOPort](IOPort).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[IOPort](IOPort).{mex*} subfunction
 
 
 Read data from device, specified by 'handle'.  

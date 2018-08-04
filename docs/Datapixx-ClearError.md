@@ -1,5 +1,5 @@
 # [Datapixx('ClearError')](Datapixx-ClearError) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Clear the low-level library global error state.  

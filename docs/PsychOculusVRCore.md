@@ -1,5 +1,5 @@
 # [PsychOculusVRCore](PsychOculusVRCore)
-## [Psychtoolbox](Pyschtoolbox)&#8250;[PsychOculusVRCore](PsychOculusVRCore)
+##### [Psychtoolbox](Psychtoolbox)>[PsychOculusVRCore](PsychOculusVRCore)
 
 PsychOculusVRCore - A Psychtoolbox driver for Oculus VR hardware.  
   

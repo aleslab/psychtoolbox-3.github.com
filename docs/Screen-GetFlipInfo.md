@@ -1,5 +1,5 @@
 # [Screen('GetFlipInfo')](Screen-GetFlipInfo) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Returns a struct with miscellaneous info about finished flips on the specified  

@@ -1,5 +1,5 @@
 # [Datapixx('SetAudioSchedule')](Datapixx-SetAudioSchedule) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Configure a schedule for autonomous audio waveform playback.  

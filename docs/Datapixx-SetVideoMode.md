@@ -1,5 +1,5 @@
 # [Datapixx('SetVideoMode')](Datapixx-SetVideoMode) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Set Datapixx video processing mode.  

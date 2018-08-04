@@ -1,5 +1,5 @@
 # [Screen('TextTransform')](Screen-TextTransform) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Query or assign a 2D matrix defining a 2D affine transformation to apply to  

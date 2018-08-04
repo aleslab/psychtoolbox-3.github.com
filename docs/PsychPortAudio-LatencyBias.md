@@ -1,5 +1,5 @@
 # [PsychPortAudio('LatencyBias')](PsychPortAudio-LatencyBias) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Set audio output latency bias in seconds to 'biasSecs' and/or return old bias  

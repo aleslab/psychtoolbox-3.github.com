@@ -1,5 +1,5 @@
 # [Screen('ShowCursorHelper')](Screen-ShowCursorHelper) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 This is a helper function called by [ShowCursor](ShowCursor).  Do not call  

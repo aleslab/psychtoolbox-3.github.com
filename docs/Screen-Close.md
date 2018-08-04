@@ -1,5 +1,5 @@
 # [Screen('Close')](Screen-Close) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 [Close](Close) an onscreen or offscreen window or a texture. If the optional  

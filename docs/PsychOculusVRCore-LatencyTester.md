@@ -1,5 +1,5 @@
 # [PsychOculusVRCore('LatencyTester')](PsychOculusVRCore-LatencyTester) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
 
 
 Drive or query latency tester for Oculus Rift DK2 device 'oculusPtr'.  

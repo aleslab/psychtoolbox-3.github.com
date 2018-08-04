@@ -1,5 +1,5 @@
 # [PsychPortAudio('SetLoop')](PsychPortAudio-SetLoop) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Restrict audio playback to a subrange of sound samples in the current audio  

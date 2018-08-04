@@ -1,5 +1,5 @@
 # [Datapixx('WriteAudioBuffer')](Datapixx-WriteAudioBuffer) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Download audio data from local host to a Datapixx internal waveform buffer.  

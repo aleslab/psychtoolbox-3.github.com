@@ -1,5 +1,5 @@
 # [Screen('FillPoly')](Screen-FillPoly) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Fill polygon. "color" is the clut index (scalar or [r g b] or [r g b a] vector)  

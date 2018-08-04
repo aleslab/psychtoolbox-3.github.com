@@ -1,5 +1,5 @@
 # [Datapixx('SetVideoStereoEye')](Datapixx-SetVideoStereoEye) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Manually set the VESA stereo connector to output either Left or Right eye  

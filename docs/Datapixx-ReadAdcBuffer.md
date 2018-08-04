@@ -1,5 +1,5 @@
 # [Datapixx('ReadAdcBuffer')](Datapixx-ReadAdcBuffer) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Upload ADC data from a Datapixx internal acquisition buffer to the local host.  

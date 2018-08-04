@@ -1,5 +1,5 @@
 # [Datapixx('SetTouchpixxStabilizeDuration')](Datapixx-SetTouchpixxStabilizeDuration) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Set duration in seconds that [TOUCHPixx](TOUCHPixx) panel coordinates must be stable before  

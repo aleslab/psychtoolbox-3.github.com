@@ -1,5 +1,5 @@
 # [Datapixx('DisableVideoStereoBlueline')](Datapixx-DisableVideoStereoBlueline) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 VESA 3D output is not dependent on video content. See [EnableVideoStereoBlueline](EnableVideoStereoBlueline)  

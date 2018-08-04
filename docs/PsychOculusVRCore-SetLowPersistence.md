@@ -1,5 +1,5 @@
 # [PsychOculusVRCore('SetLowPersistence')](PsychOculusVRCore-SetLowPersistence) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
 
 
 Enable or disable low persistence mode on display panel of Oculus device  

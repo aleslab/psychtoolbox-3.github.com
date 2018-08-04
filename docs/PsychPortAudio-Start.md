@@ -1,5 +1,5 @@
 # [PsychPortAudio('Start')](PsychPortAudio-Start) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Start a [PortAudio](PortAudio) audio device. The 'pahandle' is the handle of the device to  

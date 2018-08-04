@@ -1,5 +1,5 @@
 # [Datapixx('GetDacNumChannels')](Datapixx-GetDacNumChannels) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns the number of DAC (Digital to Analog Converter) output channels in the  

@@ -1,5 +1,5 @@
 # [Datapixx('DisableTouchpixxLogContinuousMode')](Datapixx-DisableTouchpixxLogContinuousMode) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 [TOUCHPixx](TOUCHPixx) logging only returns initial press and release events.  

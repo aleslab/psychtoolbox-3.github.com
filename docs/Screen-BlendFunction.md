@@ -1,5 +1,5 @@
 # [Screen('BlendFunction')](Screen-BlendFunction) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Return or set the current alpha-blending mode and the color buffer writemask for  

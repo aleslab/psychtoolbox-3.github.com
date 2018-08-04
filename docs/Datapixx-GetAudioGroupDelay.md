@@ -1,5 +1,5 @@
 # [Datapixx('GetAudioGroupDelay')](Datapixx-GetAudioGroupDelay) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns Datapixx Audio OUT group delay in seconds.  

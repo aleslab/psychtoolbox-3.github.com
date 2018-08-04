@@ -1,5 +1,5 @@
 # [Screen('OpenOffscreenWindow')](Screen-OpenOffscreenWindow) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Open an offscreen window. This is simply an [OpenGL](OpenGL) texture that is treated as a  

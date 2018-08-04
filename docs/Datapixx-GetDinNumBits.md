@@ -1,5 +1,5 @@
 # [Datapixx('GetDinNumBits')](Datapixx-GetDinNumBits) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns number of digital input bits in the Datapixx. Currently the Datapixx has  

@@ -1,5 +1,5 @@
 # [Screen('PixelSizes')](Screen-PixelSizes) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 List all possible pixelSizes for this screen available at the current height and  

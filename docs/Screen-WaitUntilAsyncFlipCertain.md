@@ -1,5 +1,5 @@
 # [Screen('WaitUntilAsyncFlipCertain')](Screen-WaitUntilAsyncFlipCertain) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Wait until it is certain that a previously initiated  

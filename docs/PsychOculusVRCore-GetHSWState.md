@@ -1,5 +1,5 @@
 # [PsychOculusVRCore('GetHSWState')](PsychOculusVRCore-GetHSWState) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
 
 
 Return if health and safety warnings popup should be displayed for Oculus device  

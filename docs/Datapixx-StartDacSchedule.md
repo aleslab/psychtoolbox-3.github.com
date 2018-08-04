@@ -1,5 +1,5 @@
 # [Datapixx('StartDacSchedule')](Datapixx-StartDacSchedule) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Start running a DAC waveform playback schedule. The actual hardware schedule  

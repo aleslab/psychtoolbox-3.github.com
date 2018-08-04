@@ -1,5 +1,5 @@
 # [Datapixx('RegWrRd')](Datapixx-RegWrRd) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Write local register cache modifications to Datapixx immediately, then read back  

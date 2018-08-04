@@ -1,5 +1,5 @@
 # [Screen('LoadNormalizedGammaTable')](Screen-LoadNormalizedGammaTable) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Load the gamma table of the specified screen or window  

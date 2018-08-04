@@ -1,5 +1,5 @@
 # [Screen('GetWindowInfo')](Screen-GetWindowInfo) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Returns a struct with miscellaneous info for the specified onscreen window.  

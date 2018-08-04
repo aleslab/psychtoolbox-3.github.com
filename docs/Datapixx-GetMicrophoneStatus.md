@@ -1,5 +1,5 @@
 # [Datapixx('GetMicrophoneStatus')](Datapixx-GetMicrophoneStatus) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns a struct containing the following audio input status information:  

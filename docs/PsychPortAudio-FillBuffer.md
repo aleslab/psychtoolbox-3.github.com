@@ -1,5 +1,5 @@
 # [PsychPortAudio('FillBuffer')](PsychPortAudio-FillBuffer) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Fill audio data playback buffer of a [PortAudio](PortAudio) audio device. 'pahandle' is the  

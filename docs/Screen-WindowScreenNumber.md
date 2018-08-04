@@ -1,5 +1,5 @@
 # [Screen('WindowScreenNumber')](Screen-WindowScreenNumber) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Get screenNumber, the number of the screen on which the window appears.  If the  

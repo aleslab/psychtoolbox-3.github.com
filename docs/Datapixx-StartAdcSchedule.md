@@ -1,5 +1,5 @@
 # [Datapixx('StartAdcSchedule')](Datapixx-StartAdcSchedule) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Start running an ADC analog acquisition schedule. The actual hardware schedule  

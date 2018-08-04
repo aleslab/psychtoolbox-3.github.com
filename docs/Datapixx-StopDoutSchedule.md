@@ -1,5 +1,5 @@
 # [Datapixx('StopDoutSchedule')](Datapixx-StopDoutSchedule) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Stop running a digital output waveform playback schedule. The actual hardware  

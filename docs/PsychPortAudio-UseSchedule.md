@@ -1,5 +1,5 @@
 # [PsychPortAudio('UseSchedule')](PsychPortAudio-UseSchedule) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Enable or disable use of a preprogrammed schedule for audio playback on audio  

@@ -1,5 +1,5 @@
 # [Screen('FillOval')](Screen-FillOval) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Fills an ellipse with the given color, inscribed within "rect"."color" is the  

@@ -1,5 +1,5 @@
 # [Screen('HideCursorHelper')](Screen-HideCursorHelper) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 This is a helper function called by [HideCursor](HideCursor).  Do not call  

@@ -1,5 +1,5 @@
 # [Datapixx('SetPropixxDlpSequenceProgram')](Datapixx-SetPropixxDlpSequenceProgram) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Set [PROPixx](PROPixx) DLP sequencer.  

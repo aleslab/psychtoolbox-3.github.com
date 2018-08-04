@@ -1,5 +1,5 @@
 # [Screen('StartVideoCapture')](Screen-StartVideoCapture) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Start video capture device specified by 'capturePtr'. If 'captureRateFPS' is  

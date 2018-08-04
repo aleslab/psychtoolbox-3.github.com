@@ -1,5 +1,5 @@
 # [Datapixx('StartTouchpixxLog')](Datapixx-StartTouchpixxLog) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Start logging [TOUCHPixx](TOUCHPixx) touch panel activity. The [TOUCHPixx](TOUCHPixx) controller polls the  

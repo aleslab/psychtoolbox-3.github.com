@@ -1,5 +1,5 @@
 # [Datapixx('SetVideoPixelSyncLine')](Datapixx-SetVideoPixelSyncLine) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Configure pixel sync raster line operation.  

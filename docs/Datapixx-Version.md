@@ -1,5 +1,5 @@
 # [Datapixx('Version')](Datapixx-Version) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 return the version of Datapixx in a struct  

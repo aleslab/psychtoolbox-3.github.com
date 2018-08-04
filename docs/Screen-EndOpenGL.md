@@ -1,5 +1,5 @@
 # [Screen('EndOpenGL')](Screen-EndOpenGL) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Finish [OpenGL](OpenGL) rendering by external [OpenGL](OpenGL) code, prepare 2D drawing into window  

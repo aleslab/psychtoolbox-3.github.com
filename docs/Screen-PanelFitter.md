@@ -1,5 +1,5 @@
 # [Screen('PanelFitter')](Screen-PanelFitter) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Change operating parameters of builtin panel fitter.  

@@ -1,5 +1,5 @@
 # [Datapixx('SetDoutValues')](Datapixx-SetDoutValues) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 For each of the 24 bits set in "bitMask", set the digital output to the value in  

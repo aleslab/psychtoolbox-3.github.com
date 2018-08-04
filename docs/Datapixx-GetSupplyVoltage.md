@@ -1,5 +1,5 @@
 # [Datapixx('GetSupplyVoltage')](Datapixx-GetSupplyVoltage) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns voltage being supplied from external +5V AC adaptor. Nominal range for  

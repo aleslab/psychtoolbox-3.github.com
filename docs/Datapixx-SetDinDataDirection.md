@@ -1,5 +1,5 @@
 # [Datapixx('SetDinDataDirection')](Datapixx-SetDinDataDirection) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Although DIN is primarily intended to be a digital \_input\_ system, it is  

@@ -1,5 +1,5 @@
 # [PsychPortAudio('Open')](PsychPortAudio-Open) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Open a [PortAudio](PortAudio) audio device and initialize it. Returns a 'pahandle' device  

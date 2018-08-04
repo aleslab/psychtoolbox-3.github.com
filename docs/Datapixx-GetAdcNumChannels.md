@@ -1,5 +1,5 @@
 # [Datapixx('GetAdcNumChannels')](Datapixx-GetAdcNumChannels) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns the number of ADC (Analog to Digital Converter) input channels in the  

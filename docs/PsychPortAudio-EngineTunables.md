@@ -1,5 +1,5 @@
 # [PsychPortAudio('EngineTunables')](PsychPortAudio-EngineTunables) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Return, and optionally set low-level tuneable driver parameters.  

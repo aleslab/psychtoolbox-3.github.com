@@ -1,5 +1,5 @@
 # [Screen('Windows')](Screen-Windows) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Return a vector of windowPtrs, including on- and off-screen windows.  

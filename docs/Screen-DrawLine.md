@@ -1,5 +1,5 @@
 # [Screen('DrawLine')](Screen-DrawLine) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Draw a line. "color" is the clut index (scalar or [r g b a] vector) that you  

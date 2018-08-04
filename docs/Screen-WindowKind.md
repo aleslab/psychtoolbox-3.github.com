@@ -1,5 +1,5 @@
 # [Screen('WindowKind')](Screen-WindowKind) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 What kind of windowPtr is this? Returns 0 if it's invalid, -1 an offscreen  

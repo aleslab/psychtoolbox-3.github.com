@@ -1,5 +1,5 @@
 # [Screen('GetCapturedImage')](Screen-GetCapturedImage) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Try to fetch a new image from video capture device 'capturePtr' for visual  

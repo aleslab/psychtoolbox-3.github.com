@@ -1,5 +1,5 @@
 # [PsychHID('CalibratedState')](PsychHID-CalibratedState) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychHID](PsychHID).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychHID](PsychHID).{mex*} subfunction
 
 
 Return the calibrated immediate state of the specified element on the specified  

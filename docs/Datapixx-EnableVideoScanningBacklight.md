@@ -1,5 +1,5 @@
 # [Datapixx('EnableVideoScanningBacklight')](Datapixx-EnableVideoScanningBacklight) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 The [VIEWPixx](VIEWPixx) includes an LED backlight which can be scanned in synchrony with  

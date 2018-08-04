@@ -1,5 +1,5 @@
 # [Screen('PreloadTextures')](Screen-PreloadTextures) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Try to preload textures into VRAM to facilitate fast drawing. This method tries  

@@ -1,5 +1,5 @@
 # [Screen('LoadCLUT')](Screen-LoadCLUT) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Load or query the hardware gamma table of the specified screen. If you pass a  

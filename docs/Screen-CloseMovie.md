@@ -1,5 +1,5 @@
 # [Screen('CloseMovie')](Screen-CloseMovie) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 [Close](Close) movie object specified by 'moviePtr' and release all associated  

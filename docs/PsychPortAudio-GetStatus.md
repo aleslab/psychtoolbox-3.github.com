@@ -1,5 +1,5 @@
 # [PsychPortAudio('GetStatus')](PsychPortAudio-GetStatus) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Returns 'status', a struct with status information about the current state of  

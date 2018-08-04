@@ -1,5 +1,5 @@
 # [PsychPortAudio('Volume')](PsychPortAudio-Volume) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychPortAudio](PsychPortAudio).{mex*} subfunction
 
 
 Set audio output volume(s) and/or return old volumes for a device 'pahandle'.  

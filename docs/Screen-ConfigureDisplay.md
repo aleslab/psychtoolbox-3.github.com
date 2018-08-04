@@ -1,5 +1,5 @@
 # [Screen('ConfigureDisplay')](Screen-ConfigureDisplay) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Query or change 'setting' for display output 'outputId' of screen  

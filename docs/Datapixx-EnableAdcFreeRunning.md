@@ -1,5 +1,5 @@
 # [Datapixx('EnableAdcFreeRunning')](Datapixx-EnableAdcFreeRunning) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Enable free-running mode for the analog-to-digital converters. In free-running  

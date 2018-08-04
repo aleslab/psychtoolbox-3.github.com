@@ -1,5 +1,5 @@
 # [PsychOculusVRCore('GetEyeTimewarpMatrices')](PsychOculusVRCore-GetEyeTimewarpMatrices) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
 
 
 Return eye warp rotation matrices for timewarped undistortion for Oculus device  

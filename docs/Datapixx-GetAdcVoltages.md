@@ -1,5 +1,5 @@
 # [Datapixx('GetAdcVoltages')](Datapixx-GetAdcVoltages) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns list of voltages last sampled on all ADC input channels.  

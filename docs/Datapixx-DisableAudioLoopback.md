@@ -1,5 +1,5 @@
 # [Datapixx('DisableAudioLoopback')](Datapixx-DisableAudioLoopback) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Disable internal loopback from the audio outputs to the audio inputs. This  

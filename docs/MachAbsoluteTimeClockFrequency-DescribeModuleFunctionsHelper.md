@@ -1,5 +1,5 @@
 # [MachAbsoluteTimeClockFrequency('DescribeModuleFunctionsHelper')](MachAbsoluteTimeClockFrequency-DescribeModuleFunctionsHelper) 
-##### [Psychtoolbox](Pyschtoolbox)>[MachAbsoluteTimeClockFrequency](MachAbsoluteTimeClockFrequency).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[MachAbsoluteTimeClockFrequency](MachAbsoluteTimeClockFrequency).{mex*} subfunction
 
 
 Return a cell array of strings naming all subfunctions supported by this module  

@@ -1,5 +1,5 @@
 # [PsychOculusVRCore('DescribeModuleFunctionsHelper')](PsychOculusVRCore-DescribeModuleFunctionsHelper) 
-##### [Psychtoolbox](Pyschtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[PsychOculusVRCore](PsychOculusVRCore).{mex*} subfunction
 
 
 Return a cell array of strings naming all subfunctions supported by this module  

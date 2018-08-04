@@ -1,5 +1,5 @@
 # [Screen('HookFunction')](Screen-HookFunction) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Manage [Screen](Screen) processing hook chains. Hook chains are a way to extend [PTBs](PTBs)  

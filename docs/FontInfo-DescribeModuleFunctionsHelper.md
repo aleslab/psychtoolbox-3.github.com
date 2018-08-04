@@ -1,5 +1,5 @@
 # [FontInfo('DescribeModuleFunctionsHelper')](FontInfo-DescribeModuleFunctionsHelper) 
-##### [Psychtoolbox](Pyschtoolbox)>[FontInfo](FontInfo).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[FontInfo](FontInfo).{mex*} subfunction
 
 
 Return a cell array of strings naming all subfunctions supported by this module  

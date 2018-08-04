@@ -1,5 +1,5 @@
 # [Datapixx('DisableDacAdcLoopback')](Datapixx-DisableDacAdcLoopback) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Disable internal loopback from the DAC outputs to the ADC inputs. This causes  

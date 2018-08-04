@@ -1,5 +1,5 @@
 # [Datapixx('GetMicrophoneGroupDelay')](Datapixx-GetMicrophoneGroupDelay) 
-##### [Psychtoolbox](Pyschtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Datapixx](Datapixx).{mex*} subfunction
 
 
 Returns Datapixx Microphone IN group delay in seconds.  

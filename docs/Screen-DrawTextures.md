@@ -1,5 +1,5 @@
 # [Screen('DrawTextures')](Screen-DrawTextures) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 Draw many textures at once, either one texture to many locations or many  

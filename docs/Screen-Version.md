@@ -1,5 +1,5 @@
 # [Screen('Version')](Screen-Version) 
-##### [Psychtoolbox](Pyschtoolbox)>[Screen](Screen).{mex*} subfunction
+##### [Psychtoolbox](Psychtoolbox)>[Screen](Screen).{mex*} subfunction
 
 
 return the version of [Screen](Screen) in a struct  
